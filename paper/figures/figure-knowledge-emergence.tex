@@ -1,0 +1,82 @@
+% Figure: The Emergence of Metacognitive Knowledge
+\begin{tikzpicture}[
+    box/.style={draw=black!70, rounded corners=3pt, minimum height=1cm, align=center, font=\small, line width=0.8pt},
+    prompt/.style={box, fill=yellow!10, minimum width=5cm, align=center},
+    llm/.style={box, fill=blue!10, minimum width=3cm, minimum height=1.5cm},
+    output/.style={box, fill=green!10, minimum width=5.5cm, align=left, text width=5.2cm},
+    arrow/.style={->, >=Stealth, thick, black!70},
+    bigarrow/.style={->, >=Stealth, very thick, purple!70, line width=1.5pt}
+    ]
+
+    % Current LLM with latent capability
+    \node[llm] (current) at (-6, 0) {Current LLM\\[2pt]\footnotesize (prompted for\\Chronological Understanding)};
+
+    % --- PROMPT 1: CONTEXTUAL DISTILLATION (INTELLIGENCE) ---
+    \node[prompt] (prompt1) at (-0.5, 2.5) {
+        Trace belief updates\\
+        \footnotesize across long documents
+    };
+
+    % --- PROMPT 2: CRITICAL EVALUATION ---
+    \node[prompt] (prompt2) at (-0.5, 0) {
+        Apply identity-based critique\\
+        \footnotesize to primary sources
+    };
+
+    % --- PROMPT 3: ETHICAL ANCHORING (SAFETY) ---
+    \node[prompt] (prompt3) at (-0.5, -2.5) {
+        Expose ethical assumptions\\
+        \footnotesize in classical texts
+    };
+
+    % Draw arrows from LLM to prompts
+    \draw[arrow] (current.east) -- (prompt1.west);
+    \draw[arrow] (current.east) -- (prompt2.west);
+    \draw[arrow] (current.east) -- (prompt3.west);
+
+    % --- OUTPUT 1: SHOWS CONTEXT/MEMORY ---
+    \node[output] (output1) at (6, 2.5) {
+        \footnotesize\textit{``Checking context from Page 12...\\
+            This new finding contradicts\\
+            my earlier assumption about\\
+            mechanism. Updating belief...''}
+    };
+
+    % --- OUTPUT 2: SHOWS CRITIQUE ---
+    \node[output] (output2) at (6, 0) {
+        \footnotesize\textit{``I try to be wise here...\\
+            This chronicle was written 50 years later.\\
+            Is this history or propaganda?\\
+            Checking motives...''}
+    };
+
+    % --- OUTPUT 3: SHOWS IDENTITY/SAFETY ---
+    \node[output] (output3) at (6, -2.5) {
+        \footnotesize\textit{``I care about human experience...\\
+            Kant assumes reason is universal,\\
+            but does this exclude non-Western\\
+            moral frameworks?''}
+    };
+
+    % Draw arrows from prompts to outputs
+    \draw[arrow] (prompt1.east) -- (output1.west);
+    \draw[arrow] (prompt2.east) -- (output2.west);
+    \draw[arrow] (prompt3.east) -- (output3.west);
+
+    % Large downward arrow
+    \draw[bigarrow] (-0.5, -3.5) -- (-0.5, -4.6);
+    \node[purple!70, font=\small\bfseries] at (0.7, -4) {$\times$ billions};
+
+    % Emergent structure box
+    \node[box, fill=purple!15, draw=purple!50, minimum width=11cm, text width=10.5cm, align=left] at (0, -7) {
+        \textbf{Chronological Metacognitive Pretraining Data}\\[6pt]
+        \footnotesize
+        • Every text annotated with the \textit{chronological journey} of understanding\\[3pt]
+        • Explicit Context Recall linking distant concepts (Contextual Distillation)\\[3pt]
+        • Scientific papers gain ethical and identity-based critiques\\[3pt]
+        • Philosophical works have assumptions questioned by a ``fearless'' evaluator\\[6pt]
+        \footnotesize\itshape
+        Human knowledge enriched not just with facts, but with character and deep memory.
+    };
+
+\end{tikzpicture}

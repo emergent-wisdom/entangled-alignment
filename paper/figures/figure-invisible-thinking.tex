@@ -1,0 +1,53 @@
+% Figure: The Invisible Thinking
+\begin{tikzpicture}[
+    box/.style={draw=black!70, rounded corners=3pt, minimum height=1cm, align=center, font=\small, line width=0.8pt},
+    thought/.style={cloud, draw=gray!50, fill=gray!10, cloud puffs=10, cloud puff arc=120, aspect=2.5, inner sep=8pt},
+    textbox/.style={box, fill=green!8, minimum width=4cm},
+    thinkingbox/.style={box, fill=purple!15, dashed, draw=purple!50},
+    arrow/.style={->, >=Stealth, thick, black!70},
+    title/.style={font=\normalsize\bfseries}
+    ]
+
+    % Human writing
+    \node[box, fill=blue!5, minimum width=3cm] (human) at (-5, -2) {Human Writing};
+    \node[thought, above=0.8cm of human] (humanthought) {
+        \footnotesize
+        \begin{tabular}{l}
+            "Is this claim accurate?"\\
+            "Need stronger evidence"\\
+            "This word is precise"\\
+            "Connection is profound"
+        \end{tabular}
+    };
+    \draw[gray!50, dashed, line width=1pt] (human) -- (humanthought);
+
+    % Text output
+    \node[textbox, minimum width=3.5cm] (text) at (0, -2) {
+        "Einstein's theory\\revolutionized physics"
+    };
+    \draw[arrow] (human.east) -- (text.west) node[midway, above] {\footnotesize generates};
+
+    % Invisible thinking
+    \node[thinkingbox, below=0.3cm of text, minimum width=3.5cm] (thinking) {
+        \footnotesize\itshape
+        \textbf{Chronological Discovery}\\
+        (Messy, Evaluative, Moral)
+    };
+
+    % LLM
+    \node[box, fill=blue!8, minimum width=3cm] (llm) at (5, -2) {Standard Training};
+    \draw[arrow] (llm.west) -- (text.east) node[midway, above] {\footnotesize trains on};
+
+    % Problem description - UPDATED FOR V2
+    \node[box, fill=red!5, above=0.8cm of llm, minimum width=3.5cm] (problem) {
+        Optimizes for\\Prediction Accuracy\\
+        \footnotesize Misses the Moral/Messy Journey
+    };
+    \draw[arrow, dashed, red!50] (llm.north) -- (problem.south);
+
+    % Bottom insight - UPDATED FOR V2
+    \node[box, fill=yellow!5, text width=10cm, minimum height=1.2cm, align=left] at (0, -4.9) {
+        \textbf{The Gap:} Standard methods optimize for efficient prediction. We propose capturing the \textit{chronological discovery process}---the hesitation, ethics, and gradual understanding---to anchor the model's identity.
+    };
+
+\end{tikzpicture}

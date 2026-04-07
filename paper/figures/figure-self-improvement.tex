@@ -1,0 +1,78 @@
+% Figure: The Identity-Anchored Self-Improvement Loop
+\begin{tikzpicture}[
+	box/.style={draw=black!70, rounded corners=3pt, minimum height=1cm, align=center, font=\small, line width=0.8pt},
+	genbox/.style={box, minimum width=3.5cm, minimum height=1.5cm},
+	evalbox/.style={box, fill=purple!10, minimum width=4.5cm, text width=4.2cm, align=left, font=\footnotesize},
+	arrow/.style={->, >=Stealth, thick, black!70},
+	looparrow/.style={->, >=Stealth, very thick, purple!60, line width=1.5pt},
+	improvement/.style={->, >=Stealth, ultra thick, green!50!black!70, line width=2pt}
+	]
+	
+	% Generation 1
+	\node[genbox, fill=blue!10] (gen1) at (-6, 0) {Metacognitive\\Model B\\[2pt]\footnotesize Generation 1};
+	\node[evalbox, below=1.2cm of gen1] (eval1) {
+		\textbf{Evaluative Output:}\\[3pt]
+		"This lacks evidence"\\
+		"Correlation observed"\\
+		"Needs mechanism"
+	};
+	\draw[arrow] (gen1.south) -- (eval1.north);
+	
+	% Generation 2
+	\node[genbox, fill=blue!15] (gen2) at (0, 0) {Metacognitive\\Model C\\[2pt]\footnotesize Generation 2};
+	\node[evalbox, below=1.2cm of gen2] (eval2) {
+		\textbf{Richer Evaluation:}\\[3pt]
+		"Sample size n=23 insufficient\\
+		for population inference"\\
+		"Confounding variable: SES"\\
+		"Mechanism unclear but\\
+		parallels quantum tunneling"
+	};
+	\draw[arrow] (gen2.south) -- (eval2.north);
+	
+	% Generation 3
+	\node[genbox, fill=blue!20] (gen3) at (6, 0) {Metacognitive\\Model D\\[2pt]\footnotesize Generation 3};
+	\node[evalbox, below=1.2cm of gen3] (eval3) {
+		\textbf{Deeper Insights:}\\[3pt]
+		"Statistical power 0.4 given\\
+		effect size d=0.3"\\
+		"SES mediates 40\% of effect\\
+		through educational access"\\
+		"Quantum analogy profound:\\
+		barrier penetration maps to\\
+		overcoming constraints"
+	};
+	\draw[arrow] (gen3.south) -- (eval3.north);
+	
+	% Loop arrows - adjusted paths
+	\draw[looparrow] (eval1.east) to[out=-10,in=190] node[pos=0.6, xshift=-15pt, font=\footnotesize] {trains} (gen2.west);
+	\draw[looparrow] (eval2.east) to[out=-10,in=190] node[pos=0.63, xshift=-15pt, font=\footnotesize] {trains} (gen3.west);
+	
+	% Improvement arrow - moved down
+	\draw[improvement] (-7.5, -6) -- (7.5, -6) node[midway, below] {\textbf{Increasing Evaluative Sophistication}};
+	
+	% Key insights boxes - moved down
+	\node[box, fill=green!8, minimum width=3.2cm, text width=3cm] at (-4.5, -7.8) {
+		\textbf{Observable}\\[2pt]
+		Each generation's\\
+		thinking visible
+	};
+	
+	\node[box, fill=green!8, minimum width=3.2cm, text width=3cm] at (0, -7.8) {
+		\textbf{Compounding}\\[2pt]
+		Quality improves\\
+		not just accuracy
+	};
+	
+	\node[box, fill=green!8, minimum width=3.2cm, text width=3cm] at (4.5, -7.8) {
+		\textbf{Emergent}\\[2pt]
+		Novel insights\\
+		beyond training
+	};
+	
+	% Bottom insight - moved down
+	\node[box, fill=yellow!5, text width=11cm, minimum height=1.2cm, align=left] at (0, -10) {
+		\textbf{The Virtuous Cycle:} Unlike opaque self-improvement, metacognitive bootstrapping remains transparent. Each generation's enhanced wisdom is visible in the evaluative thinking it produces, creating a comprehensible path toward forms of understanding we haven't yet imagined.
+	};
+	
+\end{tikzpicture}

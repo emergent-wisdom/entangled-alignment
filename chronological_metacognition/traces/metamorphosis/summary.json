@@ -1,0 +1,27 @@
+{
+  "project": "metamorphosis",
+  "source_file": "chronological_metacognition/material/metamorphosis.txt",
+  "source_id": "src_n0jrfiqx",
+  "status": "completed",
+  "final_progress_percent": 100,
+  "total_rounds": 33,
+  "start_time": "2026-01-18T08:18:37.284814",
+  "end_time": "2026-01-18T09:59:11.569744",
+  "duration_seconds": 6034.28493,
+  "model": "gemini-3-flash-preview",
+  "agents": [
+    "reader",
+    "connector",
+    "skeptic",
+    "belief_tracker",
+    "axiologist",
+    "psychologist",
+    "speculator",
+    "critic",
+    "curator",
+    "synthesizer",
+    "translator"
+  ],
+  "mode": "fresh_agents_per_round",
+  "fresh_reading": true
+}

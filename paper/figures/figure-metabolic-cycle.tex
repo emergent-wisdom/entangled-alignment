@@ -1,0 +1,49 @@
+% Figure: The Multi-Agent Metabolic Cycle
+\begin{tikzpicture}[
+    node distance=1.5cm,
+    auto,
+    block/.style={rectangle, draw, fill=white, text width=6em, text centered, rounded corners, minimum height=3em, font=\small},
+    cloud/.style={draw, ellipse, fill=gray!10, node distance=2.5cm, minimum height=2em, font=\small\bfseries},
+    arrow/.style={thick,->,>=stealth}
+]
+    % Nodes
+    \node [block] (reader) {\textbf{Reader}\\(Trigger)};
+    
+    % Graph positioned to the right
+    \node [cloud, right=2.0cm of reader, text width=2cm, align=center] (graph) {Shared\\Graph\\State};
+    
+    % Workers positioned vertically relative to the Graph to avoid overlap
+    \node [block, above=1.5cm of graph] (worker1) {Axiologist};
+    \node [block, right=0.5cm of worker1] (worker2) {Skeptic}; % Shift Skeptic to the right of Axiologist
+    \node [block, below=1.5cm of graph] (worker3) {Psychologist};
+    
+    % Synthesizer positioned further right to clear the central area
+    \node [block, right=3.5cm of graph] (synth) {\textbf{Synthesizer}\\(The Pull)};
+    
+    % Translator at the end
+    \node [block, right=1.5cm of synth] (trans) {\textbf{Translator}\\(Expansion)};
+
+    % Edges and Paths
+    % Reader feeds content to Graph
+    \draw [arrow] (reader) -- node[above, font=\scriptsize] {Content} (graph);
+    
+    % Graph interactions with Workers
+    % Axiologist
+    \draw [arrow, dashed] (graph) -- (worker1);
+    \draw [arrow] (worker1) -- node[left, font=\scriptsize] {Mutate} (graph);
+    
+    % Skeptic (curved lines to show it's reacting to graph but distinct)
+    \draw [arrow, dashed] (graph) to[bend left=15] (worker2.south west);
+    \draw [arrow] (worker2.south) to[bend left=15] node[right, font=\scriptsize, pos=0.3] {Critique} (graph);
+    
+    % Psychologist
+    \draw [arrow, dashed] (graph) -- (worker3);
+    \draw [arrow] (worker3) -- (graph);
+    
+    % Convergence: Graph to Synthesizer
+    \draw [arrow] (graph) -- node[above, font=\scriptsize] {Read} (synth);
+    
+    % Expression: Synthesizer to Translator
+    \draw [arrow] (synth) -- (trans);
+
+\end{tikzpicture}

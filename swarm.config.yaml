@@ -1,0 +1,11 @@
+# Emergent Swarm Configuration (Entangled Alignment)
+# Override any setting via environment variables (e.g. RATE_LIMIT_MIN=10)
+
+# API rate limiting (seconds between API calls)
+rate_limit_min: 10
+rate_limit_max: 15
+rate_limit_cooldown: 3600
+
+# Tool call pacing (seconds between consecutive tool calls)
+tool_cooldown_min: 2.0
+tool_cooldown_max: 5.0

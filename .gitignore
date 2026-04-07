@@ -1,0 +1,27 @@
+.venv/
+.env
+node_modules/
+__pycache__/
+*.pyc
+chronological_metacognition/traces/*
+!chronological_metacognition/traces/llada/
+!chronological_metacognition/traces/metamorphosis/
+understanding-graph/packages/*/dist/
+.DS_Store
+projects/default/
+projects/test-run/
+projects/twenty-thousand-leagues/
+projects/flatland/
+# LaTeX build artifacts (any directory)
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.lof
+*.log
+*.lot
+*.out
+*.synctex.gz
+*.toc
+texput.log

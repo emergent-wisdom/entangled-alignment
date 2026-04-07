@@ -1,0 +1,27 @@
+{
+  "project": "llada",
+  "source_file": "chronological_metacognition/material/llada.tex",
+  "source_id": "src_8pxs2mfi",
+  "status": "completed",
+  "final_progress_percent": 100,
+  "total_rounds": 24,
+  "start_time": "2026-01-21T09:11:48.606407",
+  "end_time": "2026-01-21T09:55:36.805200",
+  "duration_seconds": 2628.198793,
+  "model": "gemini-3-flash-preview",
+  "agents": [
+    "reader",
+    "connector",
+    "skeptic",
+    "belief_tracker",
+    "axiologist",
+    "speculator",
+    "curator",
+    "methodologist",
+    "architect",
+    "synthesizer",
+    "translator"
+  ],
+  "mode": "fresh_agents_per_round",
+  "fresh_reading": false
+}
