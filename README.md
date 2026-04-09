@@ -1,6 +1,7 @@
 # Entangled Alignment: Cultivating Character in Pretraining
 
 [![Paper](https://img.shields.io/badge/Paper-PDF-red)](paper/entangled-alignment.pdf)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19462868.svg)](https://doi.org/10.5281/zenodo.19462868)
 [![License](https://img.shields.io/badge/License-MIT-green)](LICENSE)
 
 A multi-agent system that reads a book chronologically and builds a knowledge graph of its concepts, relationships, and emergent themes — using Gemini-powered agents coordinated through an MCP (Model Context Protocol) server.
@@ -76,6 +77,23 @@ Their outputs are written to a shared knowledge graph via an MCP server (`unders
     ├── metamorphosis/            # Kafka — included
     └── llada/                    # LLaDA paper — included
 ```
+
+## Citing
+
+```bibtex
+@misc{westerberg2026entangled,
+  title        = {Entangled Alignment: When Safety Is the Substrate},
+  author       = {Westerberg, Henrik},
+  year         = {2026},
+  month        = apr,
+  publisher    = {Zenodo},
+  doi          = {10.5281/zenodo.19462868},
+  url          = {https://doi.org/10.5281/zenodo.19462868}
+}
+```
+
+See [`CITATION.cff`](CITATION.cff) for the machine-readable version (GitHub
+renders a "Cite this repository" button from it).
 
 ## License
 

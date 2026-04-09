@@ -1,0 +1,36 @@
+cff-version: 1.2.0
+message: >-
+  If you use Entangled Alignment in your research, please cite the
+  preprint below.
+title: "Entangled Alignment: When Safety Is the Substrate"
+abstract: >-
+  A multi-agent system that reads a book chronologically and builds a
+  knowledge graph of its concepts, relationships, and emergent themes
+  via Gemini-powered agents coordinated through an MCP server. The
+  paper argues that safety in AI systems must be the substrate rather
+  than an overlay.
+authors:
+  - family-names: Westerberg
+    given-names: Henrik
+type: software
+url: "https://github.com/emergent-wisdom/entangled-alignment"
+repository-code: "https://github.com/emergent-wisdom/entangled-alignment"
+license: MIT
+keywords:
+  - alignment
+  - multi-agent-systems
+  - character
+  - pretraining
+  - safety
+preferred-citation:
+  type: article
+  title: "Entangled Alignment: When Safety Is the Substrate"
+  authors:
+    - family-names: Westerberg
+      given-names: Henrik
+  year: 2026
+  month: 4
+  publisher:
+    name: Zenodo
+  doi: 10.5281/zenodo.19462868
+  url: "https://doi.org/10.5281/zenodo.19462868"
