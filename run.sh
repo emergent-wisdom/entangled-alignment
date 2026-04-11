@@ -19,8 +19,8 @@ else
     exit 1
 fi
 
-# Set PYTHONPATH for emergent-swarm
-export PYTHONPATH="$ROOT/emergent-swarm/src:$PYTHONPATH"
+# Set PYTHONPATH for orchestrator
+export PYTHONPATH="$ROOT/orchestrator/src:$PYTHONPATH"
 export PYTHONUNBUFFERED=1
 
 # Run the reader

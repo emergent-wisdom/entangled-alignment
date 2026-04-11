@@ -7,7 +7,7 @@ from pathlib import Path
 # Setup paths to import run_reader and swarm
 current_dir = Path(__file__).parent.resolve()
 sys.path.insert(0, str(current_dir))
-sys.path.insert(0, str((current_dir / "../../emergent-swarm/src").resolve()))
+sys.path.insert(0, str((current_dir / "../../orchestrator/src").resolve()))
 
 try:
     import run_reader

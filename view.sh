@@ -10,4 +10,4 @@ echo "Projects: $PROJECT_DIR"
 echo "URL: http://localhost:$PORT"
 echo ""
 
-exec bash "$ROOT/understanding-graph/start.sh"
+exec npx -y understanding-graph start

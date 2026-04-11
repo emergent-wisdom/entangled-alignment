@@ -13,6 +13,7 @@ import argparse
 import asyncio
 import json
 import os
+import subprocess
 import sys
 from datetime import datetime
 from pathlib import Path
@@ -26,13 +27,13 @@ sys.stderr.reconfigure(line_buffering=True)
 _repo_root = Path(__file__).parent.parent
 load_dotenv(_repo_root / ".env")
 
-sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "emergent-swarm", "src"))
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "orchestrator", "src"))
 from swarm import MessageBus, SwarmAgent, MCPClient
 
 # Let agents run until they finish (or hit this limit)
 MAX_TURNS = 10000
 
-# Rate limit handling (matches _RATE_LIMIT_COOLDOWN in emergent-swarm/core.py)
+# Rate limit handling (matches _RATE_LIMIT_COOLDOWN in orchestrator/core.py)
 RATE_LIMIT_WAIT = 3600  # 1 hour in seconds
 
 async def step_with_rate_limit(agent, agent_name: str = "agent"):
@@ -58,7 +59,20 @@ async def step_with_rate_limit(agent, agent_name: str = "agent"):
 _prompt_cache = {}
 
 def get_prompts_dir() -> Path:
-    """Get the prompts directory path."""
+    """Get the prompts directory from the understanding-graph npm package."""
+    # Try global npm install first
+    try:
+        result = subprocess.check_output(
+            ["npm", "ls", "-g", "understanding-graph", "--parseable"],
+            stderr=subprocess.DEVNULL, text=True,
+        ).strip()
+        if result:
+            prompts = Path(result) / "prompts"
+            if prompts.exists():
+                return prompts
+    except Exception:
+        pass
+    # Fallback to local submodule path (legacy)
     script_dir = Path(__file__).parent
     return (script_dir / "../understanding-graph/prompts").resolve()
 
@@ -953,11 +967,10 @@ async def run_reader(args):
     print(f"Traces: {trace_dir}")
     print(f"Graph:  {project_path}")
 
-    # Start MCP (server from understanding-graph submodule)
-    mcp_server = repo_root / "understanding-graph" / "packages" / "mcp-server" / "dist" / "index.js"
+    # Start MCP via npm package
     mcp = MCPClient(
-        command="node",
-        args=[str(mcp_server)],
+        command="npx",
+        args=["-y", "understanding-graph", "mcp"],
         cwd=str(repo_root),
         name="understanding",
         env={"PROJECT_DIR": str(projects_dir), "TOOL_MODE": "reading"}

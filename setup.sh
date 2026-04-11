@@ -7,16 +7,13 @@ cd "$ROOT"
 echo "=== Entangled Alignment Setup ==="
 echo ""
 
-# 1. Submodules
+# 1. Submodules (orchestrator only)
 echo "[1/3] Initializing submodules..."
 git submodule update --init --recursive
 
-# 2. Node.js (understanding-graph)
-echo "[2/3] Building understanding-graph..."
-cd "$ROOT/understanding-graph"
-npm install --silent
-npm run build
-cd "$ROOT"
+# 2. Understanding Graph (npm package)
+echo "[2/3] Installing understanding-graph..."
+npm install -g understanding-graph@latest
 
 # 3. Python
 echo "[3/3] Setting up Python environment..."

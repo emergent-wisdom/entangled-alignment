@@ -71,8 +71,7 @@ Their outputs are written to a shared knowledge graph via an MCP server (`unders
 ├── chronological_metacognition/  # Agent code
 │   ├── run_reader.py             # Main orchestrator
 │   └── material/                 # Sample texts
-├── emergent-swarm/               # Agent coordination library
-├── understanding-graph/          # MCP server + web frontend (submodule)
+├── orchestrator/                 # Agent coordination library (submodule)
 └── projects/                     # Output graphs (one folder per run)
     ├── metamorphosis/            # Kafka — included
     └── llada/                    # LLaDA paper — included
