@@ -1,6 +1,6 @@
 [submodule "understanding-graph"]
 	path = understanding-graph
 	url = https://github.com/emergent-wisdom/understanding-graph
-[submodule "emergent-swarm"]
+[submodule "orchestrator"]
 	path = emergent-swarm
-	url = https://github.com/emergent-wisdom/emergent-swarm.git
+	url = https://github.com/emergent-wisdom/orchestrator.git
