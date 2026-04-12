@@ -59,8 +59,13 @@ async def step_with_rate_limit(agent, agent_name: str = "agent"):
 _prompt_cache = {}
 
 def get_prompts_dir() -> Path:
-    """Get the prompts directory from the understanding-graph npm package."""
-    # Try global npm install first
+    """Get the prompts directory — bundled locally with entangled-alignment."""
+    # Prompts live alongside this repo (moved from understanding-graph)
+    repo_root = Path(__file__).parent.parent
+    local = repo_root / "prompts"
+    if local.exists():
+        return local
+    # Legacy fallback: npm global install
     try:
         result = subprocess.check_output(
             ["npm", "ls", "-g", "understanding-graph", "--parseable"],
@@ -72,9 +77,7 @@ def get_prompts_dir() -> Path:
                 return prompts
     except Exception:
         pass
-    # Fallback to local submodule path (legacy)
-    script_dir = Path(__file__).parent
-    return (script_dir / "../understanding-graph/prompts").resolve()
+    return local  # Will fail with clear FileNotFoundError if missing
 
 def load_prompt(path: str) -> str:
     """Load a prompt file from understanding/prompts/."""

@@ -61,6 +61,16 @@ Three agents read a text sequentially, each processing the same passage with a d
 
 Their outputs are written to a shared knowledge graph via an MCP server (`understanding-graph`). The web frontend renders the graph as an interactive 3D visualization — nodes appear as the agents work, edges form between related concepts, and clusters emerge as themes develop.
 
+## Relationship to understanding-graph
+
+This repo uses [understanding-graph](https://github.com/emergent-wisdom/understanding-graph) as its MCP server — the shared memory that agents read from and write to. The two projects have diverged in how they teach agents to use the graph:
+
+- **entangled-alignment** uses **prompt composition** — modular markdown files in `prompts/` that are assembled into system messages for Gemini swarm agents. This is the approach described in the paper and it works. The prompts ship with this repo and are self-contained.
+
+- **understanding-graph** has moved to a **Claude Code skills** model — each skill is a standalone teaching unit that Claude Code loads natively. This is the newer approach for interactive use.
+
+The two systems are not interchangeable. This repo is pinned to `understanding-graph@0.1.15` (the version used for the paper results) and carries its own copy of the prompts that the swarm agents depend on.
+
 ## Repository structure
 
 ```
@@ -68,6 +78,12 @@ Their outputs are written to a shared knowledge graph via an MCP server (`unders
 ├── run.sh                        # Run agents on any text file
 ├── view.sh                       # Launch the web viewer
 ├── .env.example                  # API key template
+├── prompts/                      # Agent system prompts (from understanding-graph)
+│   ├── core/                     # Philosophy, identity, five laws
+│   ├── roles/                    # Agent identities (reader, skeptic, synthesizer...)
+│   ├── modes/                    # Phase-specific behavior (reading, thinking)
+│   ├── tools/                    # Graph tool usage guides
+│   └── workflows/                # Orchestration patterns
 ├── chronological_metacognition/  # Agent code
 │   ├── run_reader.py             # Main orchestrator
 │   └── material/                 # Sample texts

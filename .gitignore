@@ -12,6 +12,10 @@ projects/default/
 projects/test-run/
 projects/twenty-thousand-leagues/
 projects/flatland/
+projects/frankenstein/
+projects/alice-test/
+chronological_metacognition/material/frankenstein.txt
+chronological_metacognition/material/alice.txt
 # LaTeX build artifacts (any directory)
 *.aux
 *.bbl

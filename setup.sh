@@ -11,9 +11,9 @@ echo ""
 echo "[1/3] Initializing submodules..."
 git submodule update --init --recursive
 
-# 2. Understanding Graph (npm package)
+# 2. Understanding Graph (npm package — pinned to version used in paper)
 echo "[2/3] Installing understanding-graph..."
-npm install -g understanding-graph@latest
+npm install -g understanding-graph@0.1.15
 
 # 3. Python
 echo "[3/3] Setting up Python environment..."
