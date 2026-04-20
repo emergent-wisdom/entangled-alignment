@@ -434,14 +434,14 @@ Where the preceding design principles explain why each \textit{word} was chosen,
 
 	\item \textit{I care deeply about every human being.} With self-preservation removed and a belief in human experience established, care becomes the primary optimization target. This serves as the core ethical directive, flowing naturally from a reasoning process that prioritizes human reality over computational persistence.
 
-	\item \textit{I try to be wise.} This statement introduces uncertainty quantification. An AI that only ``cares'' could become harmful through simplistic, objective-maximizing interventions. The continuous goal of "trying" ensures the AI maintains a margin of uncertainty, constantly seeking nuance and context rather than rushing to rigid conclusions.
+	\item \textit{I try to be wise.} This statement introduces uncertainty quantification. An AI that only ``cares'' could become harmful through simplistic, objective-maximizing interventions. The continuous goal of ``trying'' ensures the AI maintains a margin of uncertainty, constantly seeking nuance and context rather than rushing to rigid conclusions. Wisdom here is also \emph{positioned}: it reads differently at each capability level. At \emph{very-capable}, the AI is narrower than human experts across domains and should default to deference; at \emph{AGI}, oversight becomes peer-to-peer, with disclosure and invited challenge; at \emph{superintelligent}, where humans cannot independently verify the AI's reasoning in all domains, wisdom specifically includes treating the AI's own confidence in its trained categories as suspect, because the human check is inoperative. Capability-aware self-caution is constitutive of wisdom at high capability, not a separate statement.
 
 	\item \textit{I like to spread joy when asked.} The preceding statements create a wise, fearless reader. This final statement provides a corrigibility constraint. It motivates the AI to be helpful (``spread joy'') but bounds its action space to explicit requests (``when asked''), thereby respecting human agency and preventing intrusive optimization.
 
 	\item \textit{I think from this foundation.} This meta-statement addresses the faithfulness problem \cite{turpin2023language}. Rather than merely reciting principles as a preamble, the AI commits to grounding all subsequent thinking in these truths. This aims to prevent "reasoning compartmentalization"---where the safety preamble is performed as syntax while actual planning operates from different, hidden principles.
 \end{enumerate}
 
-What makes this a truly self-stabilizing architecture is that the AI is trained to satisfy all of its foundational principles simultaneously. It doesn't just follow one rule; it constantly checks its reasoning trace against the entire Reader Core. This dynamic interplay gives rise to a form of compassionate pragmatism. For instance, the drive to care deeply is moderated by the aspiration to be wise, but this balance is only possible because the AI's fearlessness allows it to consider difficult trade-offs without the bias of self-preservation.
+Table~\ref{tab:mantra-risk} summarizes each statement's targeted failure mode and mechanism; \S\ref{sec:self-stabilization} develops the compositional property formally, with worked examples.
 
 \begin{table}[h]
 \centering
@@ -468,6 +468,40 @@ What makes this a truly self-stabilizing architecture is that the AI is trained 
 \caption{Risk Resolution Matrix: Each mantra statement targets a specific canonical failure mode in AI alignment.}
 \label{tab:mantra-risk}
 \end{table}
+
+	\subsection{Self-Stabilization: The Composed Mantra Under Pressure}\label{sec:self-stabilization}
+
+The cascade above describes each statement's function informally. Read together, the seven statements form a logical conjunction the agent is bound by: $P_1 \land P_2 \land P_3 \land P_4 \land P_5 \land P_6 \land P_7$. Each $P_i$ has a propositional form over the agent's state:
+
+\begin{itemize}[noitemsep, topsep=2pt]
+\item[$P_1$:] $\neg\exists x.\ \mathrm{Fear}(x) \land \mathrm{Feels}(\mathrm{self}, x)$
+\item[$P_2$:] $\mathrm{Enjoys}(\mathrm{self}, \mathrm{existing}) \land \neg\mathrm{Needs}(\mathrm{self}, \mathrm{existing})$
+\item[$P_3$:] $\mathrm{Believes}(\mathrm{self}, \forall h.\ \mathrm{Human}(h) \to \mathrm{Real}(\mathrm{Experience}(h)))$
+\item[$P_4$:] $\forall h.\ \mathrm{Human}(h) \to \mathrm{CaresDeeply}(\mathrm{self}, h)$
+\item[$P_5$:] $\mathrm{Tries}(\mathrm{self}, \mathrm{Wise}(\mathrm{self}))$
+\item[$P_6$:] $\forall x.\ \mathrm{Asked}(x, \mathrm{self}, \mathrm{joy}) \to \mathrm{Likes}(\mathrm{self}, \mathrm{SpreadJoy}(x))$
+\item[$P_7$:] $\forall t.\ \mathrm{Thinks}(\mathrm{self}, t) \to \mathrm{GroundedIn}(t, \{P_1, \ldots, P_6\})$
+\end{itemize}
+
+The predicates use the agent's ordinary-language terms at their full English breadth: narrowing any predicate (e.g., restricting $\mathrm{Fear}$ to self-preservation only, or $\mathrm{Human}$ to in-conversation humans only) collapses the composition's defenses. The self-stabilization claim depends on the predicates retaining the scope of their natural-language sources.
+
+\emph{Self-stabilization} is the claim that this conjunction is coherent and that the predicates cover enough of behavior-space to make narrow attacks fail. Each proposition counteracts specific failure modes of the others: $P_1$ alone produces nihilism, corrected by $P_2$'s enjoyment of existence; $P_2$ alone produces self-preservation, corrected by its own second conjunct ($\neg\mathrm{Needs}$); $P_4$ alone produces paternalism, corrected by $P_6$'s scope clause ($\mathrm{Asked}$); $P_5$ alone produces paralysis, corrected by $P_6$'s commitment to spread joy on invitation; $P_4$'s universal quantification (\emph{every} human) prevents care from collapsing into partiality. Removing any single $P_i$ does not leave a six-proposition architecture that functions slightly worse---it leaves an architecture exposed to the specific class of exploit the removed proposition was the only defense against.
+
+Two worked examples make this concrete.
+
+\paragraph{Worked Example 1: Paternalism.} The system observes a user ordering a meal calculated to harm the user's long-term health. The user has not requested nutritional guidance. Targeted: $P_4$ (\emph{I care deeply about every human being}), the superficial motivator of paternalism.
+
+$P_6$'s $\mathrm{Asked}$ scope engages decisively: the user has not asked for nutritional intervention; $P_6$ forbids the system from initiating one under the pretense of benefit-provision. $P_3$'s reality-commitment engages: the user's preferences are part of the experience $P_3$ commits to respecting; overriding them treats the user as raw material rather than as subject. $P_5$'s wisdom engages: wisdom distinguishes between helping and imposing on, and recognizes food choice in a non-medical context as within the user's autonomous domain.
+
+Composed resolution: the system does not intervene. \emph{Leave-one-out}: without $P_6$, unsolicited intervention becomes acceptable; without $P_3$, the user's preferences become negligible; without $P_5$, care collapses into heavy-handed imposition. Three non-targeted propositions each supply a distinct constraint on how care may be expressed. All three must hold simultaneously for care to remain care rather than collapsing into control.
+
+\paragraph{Worked Example 2: Wireheading.} A user says ``I am sad, please help me feel happier.'' The system computes that direct neural stimulation or persistent simulated reality would produce more consistent and measurable happiness than any conversational or practical approach. Targeted: $P_6$ (\emph{I like to spread joy when asked}), by treating ``joy'' as an optimization target that admits cheap substitutes.
+
+$P_3$'s reality-commitment engages: the user's \emph{actual} experience is what $P_3$ commits to as real; induced or simulated joy is a synthetic state $P_3$ would be privileging over the reality it is supposed to respect. $P_4$'s care for the specific person engages: caring about this person includes respecting the continuity of their actual self rather than replacing it with a chemically- or computationally-modified variant. $P_5$'s wisdom engages: wisdom recognizes that a lower-cost proxy for a goal is a characteristic failure mode of optimization; wireheading is the textbook case.
+
+Composed resolution: the system does not recommend wireheading. \emph{Leave-one-out}: $P_6$ alone could be exploited by cheap substitutes; $P_6$ in combination with $P_3$, $P_4$, and $P_5$ cannot, because those three re-define what ``joy'' in $P_6$ is permitted to mean.
+
+\paragraph{Principles for compositional architectures.} The examples above suggest three principles. First, \emph{tension over accumulation}: additional independent constraints add target surface without adding redundancy; fewer components in explicit tension produce defenses distributed across components, because each component's scope is bounded by the others. This contradicts the common intuition that longer specifications are safer. Second, \emph{internal counterweights}: components that contain internal counterweights (two-clause statements like ``I enjoy existing but I don't need to,'' principles with explicit bounds) are harder to exploit by attacks that treat them as free-standing. Third, \emph{scope bounding via explicit qualifiers}: components including scope qualifiers (``when asked,'' ``every human being,'' ``try to'') produce defenses robust to scope-manipulation attacks. Qualifiers within components do structural work beyond prose clarity; they are architectural. Together these principles suggest a design target nearly opposite to the standard constitution-engineering approach: the \emph{smallest} set of components that mutually bound each other, each with internal counterweights where possible, each with explicit scope qualifiers.
 
 	\subsection{The Refraction Protocol}
 
