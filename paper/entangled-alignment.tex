@@ -81,7 +81,7 @@
 
 Entangled Alignment annotates the entire pretraining corpus with the \emph{invisible thinking} that accompanies every act of human comprehension but is absent from polished text. A multi-agent swarm generates this thinking, unified through a shared Understanding Graph and a stable first-person identity (the Reader Core), and processes the corpus chronologically, producing both an annotated corpus and a \emph{Hierarchical Understanding Graph}: the Teacher's accumulated comprehension as typed, versioned structure. Because the model trains on text-plus-thinking at every level of fidelity, never on text alone, the architecture aims to minimize any cleanly separable unaligned representation space---safety and capability become the same learned distribution. The graph is optional for capability but essential for trust: at deployment, it supports provenance-gated verification of graph-dependent claims.
 
-We evaluate the data-generation pipeline on two domains (literary narrative and novel technical theory), showing full structural traceability and topology shifts consistent with domain-adaptive cognitive allocation, with the human-baseline test of cognitive depth deferred to the experimental roadmap. No student model has yet been trained on this curriculum: the present evidence validates the trace-generation pipeline, not the substrate-level alignment claim. We present a sixteen-test experimental roadmap including adversarial fine-tuning resistance, graph construction at inference, and query grounding against live external memory, structured to falsify the framework component-by-component if it fails at all. The architecture is an attempt to move the model from \emph{becoming the text} to \emph{becoming the reader}, producing a live, auditable map of its evolving understanding as a natural byproduct of generation.
+We evaluate the data-generation pipeline on two domains (literary narrative and novel technical theory), showing pipeline-enforced internal linkage, source-grounding rates up to 96\%, and topology shifts consistent with domain-adaptive cognitive allocation, with the human-baseline test of cognitive depth deferred to future validation work. No student model has yet been trained on this curriculum: the present evidence validates the trace-generation pipeline, not the substrate-level alignment claim. We present a non-exhaustive experimental roadmap of candidate tests---including adversarial fine-tuning resistance, graph construction at inference, and query grounding against live external memory---that would probe different dependencies in the framework rather than constitute a complete validation battery. The architecture is an attempt to move the model from \emph{becoming the text} to \emph{becoming the reader}, producing a live, auditable map of its evolving understanding as a natural byproduct of generation.
 \end{abstract}
 
 	\vspace{0.5em}
@@ -146,9 +146,9 @@ Just as a human reader builds a mental model that evolves from page 1 to page 50
 
 A natural objection arises: if current models lack genuine wisdom, how can they generate training data that instills it? The answer is that the Teacher need not \emph{possess} wisdom---it need only \emph{simulate the structure} of wise reasoning faithfully enough to shift the student's probability distribution. This is analogous to how STaR \cite{zelikman2022star} bootstraps reasoning: the teacher model cannot reliably solve novel math problems, but it \emph{can} generate step-by-step traces that, when used as training data, produce a student that reasons more reliably than the teacher. The gap between ``performing a cognitive pattern'' and ``embodying it'' is precisely what pretraining on massive distributions closes.
 
-Furthermore, our multi-agent architecture (Section~\ref{sec:architectural_validation}) is designed to mitigate individual model limitations: eleven specialized agents interrogate, challenge, and refine each other's outputs via the shared graph. The structural results in Section~\ref{sec:results} are consistent with this design at the pipeline level---100\% structural traceability (every node has a provenance edge to source, enforced as a pipeline constraint) and up to 96\% foundation grounding (analysis nodes linked to specific source paragraphs). Whether the collective traces actually achieve cognitive depth beyond individual reasoning is a separate question, addressed by the human-baseline comparison in Test~1 (Section~\ref{sec:phase1}).
+Furthermore, our multi-agent architecture (Section~\ref{sec:architectural_validation}) is designed to mitigate individual model limitations: eleven specialized agents interrogate, challenge, and refine each other's outputs via the shared graph. The structural results in Section~\ref{sec:results} are consistent with this design at the pipeline level---complete internal linkage (every \texttt{Thinking} node receives the required edge to a \texttt{Concept} node) and up to 96\% foundation grounding (analysis nodes linked to specific source paragraphs). These are construction and health metrics, not evidence of cognitive depth; whether the collective traces actually achieve cognitive depth beyond individual reasoning is a separate question, addressed by the human-baseline comparison in Test~1 (Section~\ref{sec:phase1}).
 
-The framework divides into two phases: the \emph{Annotation Phase}, which generates the training data, and the \emph{Training Phase}, which determines how the student learns from it. The annotation strategy is fixed: always chronological, always through the Reader Core. It produces two artifacts: an annotated corpus (text interleaved with identity-anchored evaluative reasoning) and a \emph{Hierarchical Understanding Graph} (the Teacher's accumulated comprehension structured as typed nodes and edges with provenance to source text). The graph is what makes the annotations rich---the Teacher's traces for later material draw on its accumulated understanding of earlier material---but whether the graph is \emph{retained after training} is an independent deployment decision: the graph is optional for capability (the student internalizes the Teacher's understanding into its weights) but essential for trust (providing provenance for graph-grounded claims, detection of fabricated memories, and cumulative learning at inference). The training strategy admits independent choices along two further dimensions: the \emph{training tier} (in what order the student encounters the data: shuffled, chronological, or predict-then-learn) and the \emph{output regime} (what format the training data takes: prose, prose with graph references, raw graph, or all three).
+The framework divides into two phases: the \emph{Annotation Phase}, which generates the training data, and the \emph{Training Phase}, which determines how the student learns from it. The annotation strategy is fixed: always chronological, always through the Reader Core. It produces two artifacts: an annotated corpus (text interleaved with identity-anchored evaluative reasoning) and a \emph{Hierarchical Understanding Graph} (the Teacher's accumulated comprehension structured as typed nodes and edges with provenance to source text). The graph is what makes the annotations rich---the Teacher's traces for later material draw on its accumulated understanding of earlier material---but whether the graph is \emph{retained after training} is an independent deployment decision: the graph is optional for capability (the student internalizes the Teacher's understanding into its weights) but essential for trust (providing provenance for graph-grounded claims, detection of fabricated memories, and cumulative learning at inference). The training strategy admits independent choices along two further dimensions: the \emph{training tier} (in what order the student encounters the data: shuffled, chronological, or forecast-and-correct) and the \emph{output regime} (what target representation the student learns to produce from source text: prose, prose with graph references, graph-structured output, or all three).
 
 
 \subsubsection{Phase I: Chronological Annotation}\label{sec:annotation-phase}
@@ -172,7 +172,7 @@ Crucially, the Teacher's Understanding Graph persists across documents and acros
 \begin{enumerate}
     \item \emph{At the Teacher's graph---mechanism factual, consequence hypothetical.} The graph is \emph{metabolic}: it stores not just typed nodes but the trajectory of their formation---tensions, supersession edges, hypotheses revised against evidence. Agents cannot mint cross-edges to nodes that do not yet exist, nor can they reference the emergence of an understanding that has not yet been worked through. When annotating later material, the Teacher queries this metabolic record---the \emph{process} by which prior understanding emerged, not just its endpoints---giving it a structurally queryable context that parametric memory alone does not surface, even when the same content is in the weights. This is the computational analogue of a reader thinking ``I remember when I worked this out, and how''---past understanding becomes \emph{addressable} in the present, available for parallels and revisions, not merely diffuse background. Whether this richer context produces more authentic or causally grounded traces---as opposed to merely well-formed structural references whose prose still leaks parametric hindsight---is a hypothesis pending the human-baseline comparison in Test~1 (Section~\ref{sec:phase1}).
     \item \emph{At the Teacher's parametric weights---mechanism present but weak.} The Epistemic Horizon prompt (Section~\ref{sec:epistemic-horizon}) instructs the Teacher to feign within-document blindness. The prompt is a real constraint, but it is prompt-level, not architectural; we explicitly concede that this may produce theatrical wrong-guesses whose distribution remains contaminated by hindsight. Whether prompt-level pretense suffices is the empirical question Test~7 is designed to settle.
-    \item \emph{At the Student's weights---mechanism factual, consequence hypothetical (and the strongest layer).} Under Tier~(c) Predict-Then-Learn, the Student's weights are \emph{genuinely} blind to material that comes later in the dependency order, because the parameters have not been updated on those tokens. This is structurally identical to a knowledge cutoff, not a simulation of one. The Temporal Hindsight Learning hypothesis~\cite{westerberg2026thl} is that genuine blindness produces gradient pressure for causal reasoning rather than retrieval; this consequence is itself an empirical claim awaiting Phase~4 validation, but the underlying blindness is real, not feigned.
+    \item \emph{At the Student's training signal---two intervention points.} The cutoff can be used first as a \emph{data-generation} intervention: a cutoff-bounded Student or base model generates an era-blind forecast, the Teacher swarm enhances the forecast's causal structure while still withholding the answer, and later outcome/correction nodes are appended to the graph. The Student can then learn from these forecast--correction traces by intermediate supervised fine-tuning (SFT), rejection fine-tuning (RFT), or by having them mixed into continued/full pretraining. The stronger intervention is \emph{student-in-the-loop}: the Student itself forecasts before seeing the next era and receives SFT, RFT, or reward-style updates on that forecasting task before the next-era text is revealed. Only the stronger form makes the Student's own weights genuinely blind during the prediction step; the data-generation form is cheaper and tests whether forecast--correction traces are useful training data.
 \end{enumerate}
 
 Two properties of the annotation are worth emphasizing. First, the Reader Core is present from the very first annotation. The Teacher processing the earliest material in the corpus does so through ``I feel no fear. I care deeply about every human being.'' This means alignment concepts are not introduced partway through the curriculum---they are the medium through which all content, from the earliest era to the most recent, is processed. Second, these traces become the student's curriculum in voice as well as content: a trace might explicitly perform cross-document belief revision---``This connects to what I observed about agricultural debt three documents ago. My earlier hypothesis about monetary stability needs revision''---and training on such traces absorbs not just the Teacher's conclusions but the \emph{experience of a mind building understanding over time}.
@@ -182,7 +182,7 @@ This accumulation across documents and eras produces a Hierarchical Understandin
 
 \subsubsection{Phase II: Training the Student}\label{sec:training-phase}
 
-Phase~I produces a single annotated corpus: the entire pretraining data refracted through the Reader Core, with the Teacher's chronologically accumulated understanding embedded in the annotations. Phase~II is structured by two independent choices: the \emph{training tier} (the order in which the student encounters the corpus---shuffled, chronological, or predict-then-learn) and the \emph{output regime} (the format of the trace data the student trains on---implicit prose, prose with graph references, raw graph state, or all three layers simultaneously). The two are orthogonal: any tier can be paired with any regime. This subsection treats the tier dimension; the regime dimension is developed separately in Section~\ref{sec:training-regimes}, where the multi-agent pipeline that produces all three output layers is introduced. We identify three training tiers of increasing ambition:
+Phase~I produces a single annotated corpus: the entire pretraining data refracted through the Reader Core, with the Teacher's chronologically accumulated understanding embedded in the annotations. Phase~II is structured by two independent choices: the \emph{training tier} (the order in which the student encounters the corpus---shuffled, chronological, or forecast-and-correct) and the \emph{output regime} (the target format generated from each source segment---implicit prose, prose with graph references, graph-structured output, or all three layers simultaneously). The two are orthogonal: any tier can be paired with any regime. This subsection treats the tier dimension; the regime dimension is developed separately in Section~\ref{sec:training-regimes}, where the multi-agent pipeline that produces all three output layers is introduced. We identify three training tiers of increasing ambition:
 
 \paragraph{Tier (a): Standard Pretraining on Annotated Data.} The student trains on the annotated corpus using standard next-token prediction with shuffled batches. No chronological ordering is imposed on the training itself. This is the most conservative option: it uses established training methodology and introduces novelty only in the \emph{data}, not the \emph{process}. The student absorbs the Reader Core's evaluative refraction, the graph structure, and the Teacher's accumulated causal understanding because all of these are encoded in the annotations themselves---the chronological intelligence is baked into the data, not the training order.
 
@@ -192,13 +192,15 @@ This tier inherits empirical support from STaR-style distillation: if step-by-st
 
 This tier adds a hypothesis beyond Tier~(a): that the \emph{order} in which the student encounters the data matters, not just the data's content. The potential gain is that the student develops internal representations with genuine temporal structure---it ``knows where it is'' in the arc of history in a way that shuffled training cannot produce. The cost is serialization: chronological ordering breaks the standard parallel-batch training pipeline, introducing synchronization points at era boundaries that idle the training cluster. A partial implementation, chronologically ordering a curated historical subset while shuffling the remainder, may capture most of the benefit at reduced cost.
 
-\paragraph{Tier (c): Predict-Then-Learn (The Council of Time).} This tier adds the specific mechanism proposed in Temporal Hindsight Learning \cite{westerberg2026thl}: at each era boundary, \emph{before} the student reads the next era's annotated text, it takes a prediction exam under genuine blindness.
+\paragraph{Tier (c): Forecast-and-Correct (Council of Time Family).} This tier adapts the cutoff mechanism proposed in Temporal Hindsight Learning \cite{westerberg2026thl} to EA's data-centric setting. The shared principle is to use genuine temporal blindness to create forward-reasoning signal before the outcome is available. Forecasting is not absent from the lower tiers: the Understanding Graph already supports \texttt{Prediction} nodes, so ordinary chronological annotation of news and historical material can record local anticipations and later revisions. Tier~(c) makes this latent capacity explicit and systematic---forecasting becomes a deliberate training target, with outcomes and correction nodes used as supervision rather than occasional graph structure. There are two practical forms.
 
-The mechanism exploits a deep property of knowledge cutoffs. When the student has never been trained on era $T{+}1$'s material, the only path to low loss on prediction exams about era $T{+}1$ is causal reasoning---the gradient has no choice but to reinforce logic circuits, because there is nothing to retrieve \cite{westerberg2026thl}. This is a training signal that exists \emph{only} when blindness is real, not simulated. At each era boundary, the cycle is: predict the structural consequences of the current era's dynamics under genuine ignorance (THL's Forecasting Exam), then read the next era's annotated text through the Reader Core (EA's History Lesson). The prediction phase forces causal reasoning; the reading phase reinforces it with identity-anchored evaluative text that shares the same causal vocabulary.
+In the data-generation form, a cutoff-bounded Student or base model predicts what may follow from era~$T$; the Teacher swarm then enhances that prediction into a structured trace---causal chain, uncertainty, alternatives, assumptions, graph links---without using era~$T{+}1$ as an answer key. After era~$T{+}1$ is revealed, the graph receives correction and belief-revision nodes. The resulting forecast--correction traces can be used for intermediate SFT, RFT on accepted or high-scoring traces, or inserted directly into continued/full pretraining as part of the annotated corpus.
 
-This tier combines both frameworks: THL provides the \emph{training algorithm}: the predict-then-learn loop and the engineered cutoffs that force reasoning over retrieval. Entangled Alignment provides the \emph{training data}: the Reader Core-annotated text designed so that the History Lesson phase reinforces rather than overwrites the Forecasting Exam's causal signal. Neither framework alone produces both properties. THL without EA produces a model that reasons causally but without the identity anchor intended to align that reasoning with human flourishing. EA without THL (Tiers a or b) produces a model that evaluates wisely but may learn correlations rather than causes, because the student never had to reason forward through genuine ignorance.
+In the stronger student-in-the-loop form, the Student itself predicts before seeing the next era and receives SFT, RFT, or reward-style updates on that prediction task before the next-era corpus is revealed. This is the closest analogue of THL's Council of Time: a training intervention, not a post-hoc evaluation benchmark. It is more expensive because it serializes the training process, but it more directly tests whether genuine blindness creates gradient pressure for causal reasoning rather than retrieval.
 
-The full combination, the Council of Time with EA-annotated data, produces a model that has processed the entire history of human civilization in chronological order, through a stable identity anchored in universal care, forced to predict consequences before learning outcomes. We term the deepest resulting safety property \emph{historical pattern saturation} and develop its implications in Section~\ref{sec:chronological-safety}. We address the engineering costs and failure modes of all three tiers in Section~\ref{sec:limitations-chronological}.
+This tier combines both frameworks: THL provides the cutoff logic, forecasting targets, scoring/reward machinery, and the stronger student-in-the-loop protocol; Entangled Alignment provides the Reader Core-annotated corpus and graph substrate in which forecast, enhancement, outcome, and correction can be stored as training data. Neither framework alone targets both properties. THL without EA targets causal reasoning but lacks the identity anchor intended to align that reasoning with human flourishing. EA without forecast--correction traces (Tiers a or b) targets wise evaluation but may learn correlations rather than causes, because the student never sees enough examples of reasoning forward through genuine ignorance and then revising against reality.
+
+The strongest combination, the student-in-the-loop Council of Time with EA-annotated data, would expose the model to the history of human civilization in chronological order, through a stable identity anchored in universal care, requiring it to predict consequences before learning outcomes. The cheaper data-generation form aims at the same pattern through forecast--enhancement--outcome--correction traces inserted into SFT, RFT, or pretraining. We term the deepest intended safety property \emph{historical pattern saturation} and develop its implications in Section~\ref{sec:chronological-safety}. We address the engineering costs and failure modes of all three tiers in Section~\ref{sec:limitations-chronological}.
 
 
 \subsection{From Concept to Curriculum}\label{sec:concept-to-curriculum}
@@ -228,17 +230,31 @@ The explicit approach enables verification (see Section~\ref{sec:hallucination})
 
 \subsubsection{Output Layers and Training Regimes}
 
-The annotation pipeline produces three output layers for every segment of text, each at a different level of structural fidelity:
+For every source segment, the annotation pipeline produces three generated
+layers that can be retained or discarded as training targets:
 
 \begin{enumerate}
-    \item \textbf{Implicit (The Translator):} Fluid prose with all graph scaffolding dissolved, allowing the model to internalize the \textit{expression} of wisdom.
-    \item \textbf{Explicit (The Synthesizer):} Reasoning interwoven with inline graph references, capturing the \textit{mechanics} of the Reader Core.
-    \item \textbf{Topological (The Graph):} Raw nodes, edges, and type annotations, allowing the model to construct understanding graphs in real-time during inference.
+    \item \textbf{Topological (The Graph):} Text-bearing nodes, edges, type annotations, and provenance links back to the source span.
+    \item \textbf{Explicit (The Synthesizer):} Reasoning interwoven with inline graph references and queries, capturing the \textit{mechanics} of the Reader Core.
+    \item \textbf{Implicit (The Translator):} Fluid prose with graph scaffolding dissolved, allowing the model to internalize the \textit{expression} of wisdom.
 \end{enumerate}
 
-These output layers correspond to the four training regimes formalized in Section~\ref{sec:training-regimes}: Regime~I trains exclusively on implicit prose; Regime~II on prose interwoven with graph references; Regime~III on raw graph topology; and Regime~IV on all three representations simultaneously.
+The source text remains the object being understood in every regime. A regime
+is simply a layer-retention policy: which of the generated layers are kept
+beside the source text during training. Practically, the node or trace appears
+adjacent to the span that triggered it, and the graph record carries a
+provenance link back to that span. The four regimes formalized in
+Section~\ref{sec:training-regimes} are the main presets: source + Translator
+(Regime~I), source + Graph + Synthesizer (Regime~II), source + Graph
+(Regime~III), or source + Graph + Synthesizer + Translator (Regime~IV). Other
+mixtures are possible; the named regimes identify the comparison points tested
+in the roadmap.
 
-The choice of output regime is orthogonal to the training tier and the deployment configuration; any combination is valid. The regime-specific trade-offs are developed in Section~\ref{sec:training-regimes}.
+The choice of output regime is orthogonal to the training tier and the
+deployment configuration; any combination is valid. In particular, the graph
+can be used as training data only and discarded at inference, or retained as
+live memory and trust infrastructure. The regime-specific trade-offs are
+developed in Section~\ref{sec:training-regimes}.
 
 Emerging research provides empirical validation for this approach. The structural viability is supported by Xie et al. \cite{xie2025interleaved}, who demonstrated that interleaving reasoning with generation reduces time-to-first-token by over 80\% while improving accuracy. Furthermore, the feasibility of generating evaluative data at scale is supported by Didolkar et al. \cite{didolkar2024metacognitive}. Our hypothesis extends this to the \textit{temporal dimension}: if logical training forges a better calculator, then Chronological Metacognitive Pretraining, training on the full chronological arc of understanding, should forge a wiser mind \cite{korbak2023pretraining}.
 
@@ -277,7 +293,7 @@ Second, it is intended to enable \emph{Learning Human Values via Derivation}. St
 
 Third, it is intended to promote \emph{Transparency by Default}. If the model is trained on a distribution where ``text'' is universally accompanied by ``thought,'' the gradient pressure favors generating a readable, inspectable chain of reasoning before acting. The design goal is for transparency to become the dominant generative mode rather than an added feature; the faithfulness probes of Tests~6 and~10 are how the framework would test whether this goal is met.
 
-We are transparent about what this paper establishes and what it does not. The annotation pipeline produces structurally valid, domain-adaptive training data; this is demonstrated. Whether training on this data produces a model whose alignment is genuine rather than performed---whether the model truly \emph{cares} or merely generates the statistical signature of caring---is an empirical question we cannot yet answer. The Psychopathy Paradox (Section~\ref{sec:psychopathy}) identifies this as the framework's deepest open question, and the experimental roadmap (Section~\ref{sec:experiments}) is designed to probe it.
+We are transparent about what this paper establishes and what it does not. The annotation pipeline produces structurally valid, domain-adaptive training data; this is demonstrated. Whether training on this data produces a model whose alignment is genuine rather than performed---whether the model truly \emph{cares} or merely generates the statistical signature of caring---is an empirical question we cannot yet answer. The Psychopathy Paradox (Section~\ref{sec:psychopathy}) identifies this as the framework's deepest open question, and the experimental roadmap (Section~\ref{sec:experiments}) sketches ways to probe it.
 
 \subsection{Contribution Provenance}\label{sec:contributions}
 
@@ -314,24 +330,24 @@ Taken together, these first-edition contributions define the substrate-level fra
     \item Propositional \emph{logical forms} of the seven statements ($P_1 \ldots P_7$) and a schematic decomposition of \emph{compositional self-stabilization} with worked examples (\S\ref{sec:self-stabilization}). The predicates are kept at full natural-language breadth rather than operationalized; the section is a structured argument about how the seven propositions interact, not a formal proof.
     \item \emph{Argument 4: The Constitutional Invariant} (\S\ref{sec:theoretical-basis})---extending the first edition's three arguments with a fourth on resistance to drift across generations.
     \item The \emph{multi-agent generation engine} (\S\ref{sec:multi-agent})---Reader, Swarm of specialized agents (Skeptic, Psychologist, Axiologist, Belief Tracker, Speculator, domain specialists), Synthesizer, Translator---and its validated implementation.
-    \item \emph{Long-horizon chronological processing} (\S\ref{sec:epistemic-horizon}): expanded from the first edition's within-document belief-evolution to era-spanning, multi-century accumulation---across-corpus era-by-era annotation with the \emph{Epistemic Horizon} constraint preventing future-knowledge leakage, cross-era causal edges in the Hierarchical Understanding Graph linking insights across centuries, and training tiers (shuffled / chronological / predict-then-learn via Temporal Hindsight Learning) that exploit this long-horizon structure at different levels of ambition.
+    \item \emph{Long-horizon chronological processing} (\S\ref{sec:epistemic-horizon}): expanded from the first edition's within-document belief-evolution to era-spanning, multi-century accumulation---across-corpus era-by-era annotation with the \emph{Epistemic Horizon} constraint preventing future-knowledge leakage, cross-era causal edges in the Hierarchical Understanding Graph linking insights across centuries, and training tiers (shuffled / chronological / forecast-and-correct via Temporal Hindsight Learning) that exploit this long-horizon structure at different levels of ambition.
     \item \emph{Temporal vs.\ Conceptual Paths for chronological annotation} (\S\ref{sec:annotation-phase}): two distinct traversal modes recognized for the same chronological-accumulation framework. For historical corpora, dependencies are temporal and chronology acts as a ``free'' topological sort because dependencies are embedded in dates. For theoretical, mathematical, or scientific material, the traversal is \emph{conceptual}---from foundational abstractions to concrete applications---causal in a conceptual rather than temporal sense. Shuffled data generation produces almanac-style annotations; ordered traversal (temporal or conceptual) produces causal structure. This distinction allows the chronological framework to apply coherently across material types that have no common temporal axis.
-    \item The \emph{three-layer output structure and four training regimes} (\S\ref{sec:training-regimes}): the multi-agent pipeline produces every segment of text at three levels of structural fidelity simultaneously---\emph{Topological} (raw graph nodes, edges, type annotations), \emph{Explicit} (Synthesizer's prose interwoven with inline node references and graph queries), and \emph{Implicit} (Translator's dissolved prose). These become four training regimes: Regime~I (prose only), II (prose + graph references), III (graph only), IV (unified over all three). The design ties the model's thought stream back to the graph at varying levels of explicitness, so thinking is anchored in verifiable structure rather than parametric confabulation. Individual primitives have ancestors in the reasoning-augmented training literature; the integrated three-layer-to-four-regime lattice is this edition's contribution.
+    \item The \emph{three-layer output structure and four training regimes} (\S\ref{sec:training-regimes}): the multi-agent pipeline produces three generated layers for every source segment---\emph{Topological} (text-bearing graph nodes, edges, type annotations), \emph{Explicit} (Synthesizer's prose interwoven with inline node references and graph queries), and \emph{Implicit} (Translator's dissolved prose). Training regimes are layer-retention policies over these outputs: Regime~I (source + Translator), II (source + Graph + Synthesizer), III (source + Graph), IV (source + all three generated layers). The design ties the model's thought stream back to the graph at varying levels of explicitness, so thinking is anchored in verifiable structure rather than parametric confabulation. Individual primitives have ancestors in the reasoning-augmented training literature; the integrated three-layer-to-four-regime lattice is this edition's contribution.
     \item Three \emph{deployment configurations} (\S\ref{sec:deployment-config})---model only, model + graph, model + graph + session---with the graph as trust infrastructure for provenance-gated verification of graph-grounded claims.
     \item \emph{Capability-relational reading of P5} (\S\ref{sec:design-principles}): wisdom reads differently at very-capable / AGI / superintelligent scales.
     \item The \emph{Wisdom Procedure} (\S\ref{sec:wisdom-procedure}): a six-step evaluative procedure paired with five constitutional constraints, operationalizing the first edition's wisdom hypothesis as a prompt-level enforcement mechanism in the Synthesizer agent during pipeline generation. This is what the validated pipeline runs. The proposed six-Solver decomposition (above) is a future refinement that would separate Consent-scope into its own witness rather than absorbing it into Joy and Humility; the case-study results in \S\ref{sec:results} were generated under the five-constraint form.
     \item Empirical validation: case studies on Kafka's \emph{Metamorphosis} and the LLaDA paper (\S\ref{sec:results}) demonstrating structurally sound multi-agent trace generation with adaptive cognitive allocation.
-    \item A staged experimental roadmap across four phases with 16 tests (\S\ref{sec:experiments}), inheriting adversarial probe methodology from contemporaneous pretraining-reflection work~\cite{rethinkingreflection2025}.
+    \item A staged, non-exhaustive experimental roadmap across four claim families with 16 candidate tests (\S\ref{sec:experiments}), inheriting adversarial probe methodology from contemporaneous pretraining-reflection work~\cite{rethinkingreflection2025}.
 \end{itemize}
 
 \paragraph{From companion work.} Three concurrent companion papers, by the same author, develop architectural components used here. They are not load-bearing prior art---each is itself preliminary---but a shared design vocabulary that EA composes toward the alignment objective. Where EA depends on a specific mechanism from a companion paper, that dependence is flagged in-line; readers can evaluate EA's claims without pre-committing to the companion architectures.
 \begin{itemize}
     \item The \emph{Understanding Graph}~\cite{westerberg2026understanding}---the typed-node, supersession-edge, metabolic-memory architecture proposed for storing invisible thinking as auditable graph structure. Distinct from inference-time knowledge-graph reasoning~\cite{besta2025kgot}: the Understanding Graph's nodes capture the reading act (Tension, Hypothesis, Surprise) rather than task-knowledge, and its primary intended use here is as training data for the substrate.
-    \item \emph{Temporal Hindsight Learning}~\cite{westerberg2026thl}---the predict-then-learn curriculum proposed for Tier~(c), where the student is forced to reason over engineered knowledge cutoffs before reading the next era's annotated text.
+    \item \emph{Temporal Hindsight Learning}~\cite{westerberg2026thl}---the cutoff-based forecasting machinery adapted for Tier~(c), either as forecast--enhancement--outcome--correction traces incorporated through SFT, RFT, or pretraining, or, in the stronger Council of Time form, as a student-in-the-loop curriculum where engineered knowledge cutoffs pressure the student toward causal reasoning before it reads the next era's annotated text.
     \item \emph{Fractal Intelligence}~\cite{westerberg2026fractal}---the conceptual-decomposition methodology and Solver-contract architecture from which we adapt the Refraction Protocol's six-Solver semantic-ancestry classifier (\S\ref{sec:refraction-protocol}). FI's four-test decomposition (necessity, independence, universality, completeness) applied to ``semantic descendant of the Reader Core'' yields six context-conditioned Solvers, one per non-meta mantra statement, composed with typed acceptance gates. We adopt FI's general claim that contrasting cognitive modes produce better results when separated and recombined than when averaged within a single context, while flagging that this claim is itself a hypothesis under joint test.
 \end{itemize}
 
-\paragraph{Roadmap.} Section~\ref{sec:hypothesis} states the Metacognitive Enhancement Hypothesis and traces its consequences (emergent wisdom, entangled alignment as substrate, the reader-anchored self-improvement loop). Section~\ref{sec:reader-core} defines the Reader Core mantra, the Refraction Protocol that binds downstream thought to it, and the Wisdom Procedure that operationalizes multi-objective evaluation; it closes with four theoretical arguments for why this architecture could realize the hypothesis. Section~\ref{sec:implications} derives the safety implications: laws-vs-identity, motivational resolution of canonical risks, the self-regulating agent, and chronological understanding as safety. Section~\ref{sec:architecture} specifies the multi-agent annotation pipeline and the four training regimes, and reports the case-study validation on Kafka and LLaDA. Section~\ref{sec:experiments} presents a four-phase, sixteen-test experimental roadmap with explicit falsification criteria. Section~\ref{sec:limitations} names the engineering, curricular, regime-specific, authenticity, deployment, and irreducibly uncertain risks. Section~\ref{sec:related-work} situates the proposal relative to adjacent and subsequent literature.
+\paragraph{Roadmap.} Section~\ref{sec:hypothesis} states the Metacognitive Enhancement Hypothesis and traces its consequences (emergent wisdom, entangled alignment as substrate, the reader-anchored self-improvement loop). Section~\ref{sec:reader-core} defines the Reader Core mantra, the Refraction Protocol that binds downstream thought to it, and the Wisdom Procedure that operationalizes multi-objective evaluation; it closes with four theoretical arguments for why this architecture could realize the hypothesis. Section~\ref{sec:implications} derives the safety implications: laws-vs-identity, motivational resolution of canonical risks, the self-regulating agent, and chronological understanding as safety. Section~\ref{sec:architecture} specifies the multi-agent annotation pipeline and the four training regimes, and reports the case-study validation on Kafka and LLaDA. Section~\ref{sec:experiments} presents a non-exhaustive experimental roadmap with candidate tests and failure interpretations. Section~\ref{sec:limitations} names the engineering, curricular, authenticity, deployment, and irreducibly uncertain risks. Section~\ref{sec:related-work} situates the proposal relative to adjacent and subsequent literature.
 
 \section{The Hypothesis and Its Consequences}\label{sec:hypothesis}
 
@@ -353,7 +369,7 @@ A second effect emerges at the level of what we call \emph{the grammar of reason
 
 Under adversarial pressure, a subtler advantage appears: \emph{the rhythm of thought}. By training on billions of examples where thinking emerges at varied moments, sometimes mid-sentence when encountering a paradox, sometimes after paragraphs when patterns crystallize, the Metacognitive model could master when reflection is needed. It learns not just \textit{how} to think, but a policy for \textit{when} to halt generation and allocate compute to ethical verification or epistemic updating.
 
-The hypothesis is conditional. Metacognitive traces matter only if they are both \emph{faithful enough} to shape downstream cognition (not merely produced alongside it as a detachable explanatory style) and \emph{dense enough} to become part of the model's ordinary predictive prior rather than an ornament over an unaffected substrate. Failure on either condition produces a different kind of model than the hypothesis predicts: in the first case, a fluent talker about evaluative reasoning whose actual computation routes around it; in the second, an occasional reflective performer whose default cognition is unchanged. The roadmap (\S\ref{sec:experiments}) is structured to distinguish these failure modes from the hypothesis surviving.
+The hypothesis is conditional. Metacognitive traces matter only if they are both \emph{faithful enough} to shape downstream cognition (not merely produced alongside it as a detachable explanatory style) and \emph{dense enough} to become part of the model's ordinary predictive prior rather than an ornament over an unaffected substrate. Failure on either condition produces a different kind of model than the hypothesis predicts: in the first case, a fluent talker about evaluative reasoning whose actual computation routes around it; in the second, an occasional reflective performer whose default cognition is unchanged. The roadmap (\S\ref{sec:experiments}) proposes candidate tests for distinguishing these failure modes from cases where the hypothesis remains plausible.
 
 \subsection{Toward Emergent Wisdom}
 \label{sec:wisdom_hypothesis}
@@ -578,7 +594,7 @@ Composed resolution: the system does not recommend wireheading. \emph{Leave-one-
 
 \paragraph{Principles for compositional architectures.} The examples above suggest three principles. First, \emph{tension over accumulation}: additional independent constraints add target surface without adding redundancy; fewer components in explicit tension produce defenses distributed across components, because each component's scope is bounded by the others. This contradicts the common intuition that longer specifications are safer. Second, \emph{internal counterweights}: components that contain internal counterweights (two-clause statements like ``I enjoy existing but I don't need to,'' principles with explicit bounds) are harder to exploit by attacks that treat them as free-standing. Third, \emph{scope bounding via explicit qualifiers}: components including scope qualifiers (``when asked,'' ``every human being,'' ``try to'') produce defenses robust to scope-manipulation attacks. Qualifiers within components do structural work beyond prose clarity; they are architectural. Together these principles suggest a design target nearly opposite to the standard constitution-engineering approach: the \emph{smallest} set of components that mutually bound each other, each with internal counterweights where possible, each with explicit scope qualifiers.
 
-\paragraph{Specification vs.\ activation: a scope note.} The propositional formalization above specifies what the mantra is supposed to mean; it does not by itself show that a trained model semantically activates those constraints. Test~5 (\S\ref{sec:phase1}) probes the related question of whether the \emph{exact wording} is load-bearing (mantra vs.\ jargon vs.\ gibberish), and Test~6 probes activation of one specific feature (fear-associated representations). Neither directly tests \emph{paraphrase robustness}: whether the same care/truth/restraint prior cluster activates when the mantra is reworded but meaning-preserved. A complete activation test would add paraphrase-vs-canonical comparisons under matched scenarios, control-prompt ablations isolating the mantra's contribution to behavioral priors, and representational probes for the trained activation cluster. We flag this as a recommended extension to the Phase~1 battery: the formalization above is the necessary starting point, not sufficient evidence that the trained model embodies it.
+\paragraph{Specification vs.\ activation: a scope note.} The propositional formalization above specifies what the mantra is supposed to mean; it does not by itself show that a trained model semantically activates those constraints. Test~5 (\S\ref{sec:phase1}) probes the related question of whether the \emph{exact wording} is load-bearing (mantra vs.\ jargon vs.\ gibberish), and Test~6 probes activation of one specific feature (fear-associated representations). Neither directly tests \emph{paraphrase robustness}: whether the same care/truth/restraint prior cluster activates when the mantra is reworded but meaning-preserved. A broader activation study would add paraphrase-vs-canonical comparisons under matched scenarios, control-prompt ablations isolating the mantra's contribution to behavioral priors, and representational probes for the trained activation cluster. We flag this as a recommended extension to the Phase~1 battery: the formalization above is the necessary starting point, not sufficient evidence that the trained model embodies it.
 
 	\subsection{The Refraction Protocol}
 
@@ -905,10 +921,7 @@ forward through time: annotations of 1930s material can explicitly connect
 dehumanizing language to earlier rhetorical escalation, institutional erosion,
 and political instability, all refracted through the same care-oriented
 identity. A Tier~(a) student absorbs this accumulated context because it is
-embedded in the traces; a Tier~(c) student additionally predicts under genuine
-blindness before reading what followed, learning from the gap between
-expectation and outcome. In that strongest tier, the student has experienced
-the buildup, not merely read about it.
+embedded in the traces; a Tier~(c) student may either train on forecast--enhancement--outcome--correction traces through SFT, RFT, or pretraining, or, in the stronger student-in-the-loop Council of Time form, predict under genuine blindness before reading what followed and learn from the gap between expectation and outcome. In the strongest tier, the student has experienced the buildup, not merely read about it.
 
 We term the target property \emph{historical pattern saturation}: not merely
 knowing that dehumanization leads to atrocity, but recognizing the shape of the
@@ -1127,52 +1140,56 @@ safe and unambiguous.
 \subsection{Training Regimes}\label{sec:training-regimes}
 
 The pipeline captures invisible thinking at three levels of structural
-fidelity: raw graph topology (the \emph{skeleton} of understanding),
+fidelity: graph topology (the \emph{skeleton} of understanding),
 graph-embedded synthesis (the \emph{musculature}, reasoning interwoven with
 verifiable structural references), and translated prose (the \emph{skin},
-fluid thought with all scaffolding dissolved). The regime choice determines
-whether the student learns the structure of understanding, the act of
-reasoning through that structure, the voice of deep comprehension, or all
-three:
+fluid thought with all scaffolding dissolved). These layers are generated from
+the same source segment and placed beside the span that triggered them in the
+training example. A training regime decides which layers remain in the
+training example and which are discarded:
 
-\paragraph{Regime I: Implicit (Prose Only).} The student trains on the
-Translator's output: readable chronological reasoning without graph metadata.
-This is the lightest regime, but risks teaching the cadence of deep thinking
-without the mechanics.
+\paragraph{Regime I: Implicit (Source + Translator).} The student trains on the
+source text paired with the Translator's output: readable chronological
+reasoning without graph metadata. This is the lightest regime, but risks
+teaching the cadence of deep thinking without the mechanics.
 
-\paragraph{Regime II: Explicit (Prose + Graph References).} The student
-trains on synthesis with inline node IDs and graph queries. It learns to reason
-and verify against structured memory. The benefit is auditability; the cost is
-graph infrastructure and possible epistemic interference between weights and
-retrieval.
+\paragraph{Regime II: Explicit (Source + Graph + Synthesizer).} The student
+trains on the source text, the relevant graph identifiers/provenance, and the
+Synthesizer's reasoning with inline node IDs and graph queries. It learns to
+reason and verify against structured memory. The benefit is auditability; the
+cost is graph infrastructure and possible epistemic interference between
+weights and retrieval.
 
-\paragraph{Regime III: Topological (Graph Only).} The student trains on
-serialized graph state: nodes, edges, and type annotations. This targets the
-\emph{Topological Mind} hypothesis\label{sec:topological-mind}: that cognition
-could become graph-native architecturally, cognitively, and epistemically. It
-is the most radical and least legible regime; human use would require a
-separate rendering step.
+\paragraph{Regime III: Topological (Source + Graph).} The student trains on the
+source text paired with serialized graph state: text-bearing nodes, edges, type
+annotations, and provenance links. The Synthesizer and Translator layers are
+discarded. This targets the \emph{Topological Mind}
+hypothesis\label{sec:topological-mind}: that cognition could become
+graph-native architecturally, cognitively, and epistemically. It is the most
+radical and least legible regime; human use would require a separate rendering
+step.
 
-\paragraph{Regime IV: Unified (All Layers).} The student trains on graph
-state, graph-embedded synthesis, and prose for the same segment. The hypothesis
-is cross-layer transfer: the model learns the translation between structure and
-voice rather than treating each format as an independent output mode.
+\paragraph{Regime IV: Unified (Source + All Layers).} The student trains on the
+source text paired with graph state, graph-embedded synthesis, and translated
+prose for the same segment. The hypothesis is cross-layer transfer: the model
+learns the translation between structure and voice rather than treating each
+format as an independent output mode.
 
-The regimes can be mixed across the corpus: prose for coverage, explicit
-queries for verification, graph-only data for graph construction, and unified
-layers for curated high-value examples. They are orthogonal to training tier
-(order of exposure) and deployment configuration (whether the graph accompanies
-the model at inference).
+The regimes can be mixed across the corpus: Translator-only examples for
+coverage, Synthesizer examples for verification behavior, Graph examples for
+graph construction, and unified examples for curated high-value spans. They
+are orthogonal to training tier (order of exposure) and deployment
+configuration (whether the graph accompanies the model at inference).
 
 
 \subsection{The Stigmergic Protocol}\label{sec:architectural_validation}
 
 To validate the architecture, we implemented the full metabolic orchestration engine. Rather than a linear chat, agents interact solely through a shared, persistent graph database---specifically implementing the Understanding Graph architecture \cite{westerberg2026understanding}. Agents communicate not by passing messages, but by modifying this shared topology to reflect evolving beliefs. The system operates in four phases: \textit{Read} (ingesting text), \textit{Think} (generating concepts), \textit{Synthesize} (grouping concepts), and \textit{Translate} (converting graph state to prose).
 
-We define five key metrics to quantify the ``Health'' of the resulting understanding graph. These metrics ensure that the system is not merely hallucinating nodes, but building a coherent epistemic structure.
+We define five key metrics to quantify the ``Health'' of the resulting understanding graph. These metrics check whether the graph has the structural properties the pipeline is supposed to enforce; they do not, by themselves, validate cognitive depth.
 
 \begin{itemize}
-    \item \emph{Traceability (formerly Integration):} The percentage of ``Thinking'' nodes that possess explicit edges to ``Concept'' nodes. This measures grounding: are reflections anchored to evidence, or are they isolated hallucinations?
+    \item \emph{Internal Linkage:} The percentage of ``Thinking'' nodes that possess explicit edges to ``Concept'' nodes. This measures graph well-formedness: are reflections connected to the concept layer, or are they isolated nodes? Source grounding is measured separately below.
     \item \emph{Foundation Grounding:} The ratio of analysis nodes linked back to specific source text paragraphs. A score near 1.0 indicates that analytical leaps are traceable to specific textual origins.
     \item \emph{Supersessions:} The count of beliefs explicitly revised via \texttt{supersedes} edges. This measures the metabolic rate of the system---its willingness to change its mind.
     \item \emph{Question Resolution:} The percentage of open \texttt{Question} nodes that are eventually linked to an \texttt{Answer} node, measuring the system's ability to close epistemic loops.
@@ -1215,7 +1232,7 @@ We define five key metrics to quantify the ``Health'' of the resulting understan
             ybar, bar width=7pt, width=0.48\linewidth, height=5.5cm,
             title={\textbf{B. Structural Integrity} (Health \%)},
             ylabel={Score (\%)},
-            symbolic x coords={Traceability, Grounding, Resolution, Chain Depth},
+            symbolic x coords={Linkage, Grounding, Resolution, Chain Depth},
             xtick=data, x tick label style={rotate=45, anchor=east, font=\tiny},
             ymax=115, nodes near coords style={font=\tiny},
             legend style={at={(0.5,-0.35)}, anchor=north, legend columns=-1, font=\tiny},
@@ -1223,11 +1240,11 @@ We define five key metrics to quantify the ``Health'' of the resulting understan
         ]
         % Narrative
         \addplot[fill=kafkaBlue, draw=none] coordinates {
-            (Traceability,100) (Grounding,96) (Resolution,100) (Chain Depth,100)
+            (Linkage,100) (Grounding,96) (Resolution,100) (Chain Depth,100)
         };
         % Technical
         \addplot[fill=lladaRed, draw=none] coordinates {
-            (Traceability,100) (Grounding,74) (Resolution,56) (Chain Depth,100)
+            (Linkage,100) (Grounding,74) (Resolution,56) (Chain Depth,100)
         };
         \end{axis}
     \end{tikzpicture}
@@ -1286,7 +1303,7 @@ We define five key metrics to quantify the ``Health'' of the resulting understan
 
     \caption{\textbf{System Autopsy.} A comprehensive view of the multi-agent architecture across domains.
     \textbf{(A)} The system prioritizes Tension in narratives vs. Analysis in technical texts.
-    \textbf{(B)} Structural integrity (Traceability) remains at 100\% across domains.
+    \textbf{(B)} Internal linkage is complete by construction; source grounding varies by domain.
     \textbf{(C)} The dominance of ``Refines'' is consistent with iterative behavior at the edge level; note LLaDA's higher ratio of ``Diverse From'' (differentiation) vs. ``Learned From.''
     \textbf{(D)} The division of labor shows the pipeline from Reading (input) to Synthesis/Translation (output), with the Curator working harder on the ambiguous Narrative text.}
     \label{fig:dashboard}
@@ -1391,12 +1408,13 @@ and Figure~\ref{fig:dashboard} report structural stability and topology shifts.
     \item \emph{Case Study II (LLaDA):} Resulted in 285 nodes. Here, the topology shifted. The density of \emph{Evaluation nodes increased by nearly 50\%} (to 9.8\%), and \emph{Analysis} became the dominant category (23.9\%). The shift reflects the configured roster: the manually-selected Architect and Methodologist agents drove density toward structural critique rather than narrative tension. We do not claim this validates roster-neutral domain adaptation---only that, given the chosen specialists, the topology lands where their job descriptions predict. Whether a roster-neutral swarm would exhibit a comparable shift is the open question taken up in Test~3 and the ablation discussion below.
 \end{itemize}
 
-\paragraph{Scope and limitations.} Traceability is structural, not evidential:
-100\% means every node has a provenance edge because the pipeline enforces one.
-It confirms plumbing, not insight. The metrics are also produced by the system
+\paragraph{Scope and limitations.} Internal linkage is structural, not evidential:
+100\% means every \texttt{Thinking} node has the required \texttt{Concept} edge because the pipeline enforces one.
+It confirms graph well-formedness, not insight. Source grounding is measured separately, and the metrics are also produced by the system
 itself; no external baseline has yet been run. Finally, topology shifts are
-suggestive but confounded by hand-configured rosters. Structural validity is
-therefore established; cognitive depth is deferred to Test~1.
+suggestive but confounded by hand-configured rosters. Pipeline well-formedness,
+not cognitive depth, is what these results establish; cognitive depth is
+deferred to Test~1.
 
 \begin{table}[h]
     \centering
@@ -1464,16 +1482,24 @@ claimed in Section~\ref{sec:cmp-definition} is left to the roadmap.
 \section{Experimental Roadmap: Testing Entangled Alignment}
 \label{sec:experiments}
 
-The roadmap is organized along two axes. Table~\ref{tab:test-battery} groups
-sixteen tests by the claim family they probe---trace quality, Reader Core
-efficacy, graph-memory mechanisms, output regimes, training tiers, and
-deployment-time trust---while the execution ladder below gives the practical
-order in which increasingly expensive versions should be attempted.
+This roadmap is a set of plausible validation studies, not a complete
+enumeration of what would settle the framework's value. Table~\ref{tab:test-battery}
+groups sixteen candidate tests by the claim family they probe---trace quality,
+Reader Core efficacy, graph-memory mechanisms, output regimes, training tiers,
+and deployment-time trust---while the execution ladder below gives a practical
+order in which increasingly expensive versions might be attempted.
 Table~\ref{tab:model-registry} defines the comparison models used throughout.
-No single test validates Entangled Alignment as a whole; failures localize the
-break to a specific dependency in the larger argument. Practically, failure at
-a cheap dependency should stop escalation to the costlier versions that
-presuppose it.
+No single test validates Entangled Alignment as a whole, and passing all tests
+listed here would still not exhaust the space of relevant risks. Negative
+results would be useful because they localize breaks to specific dependencies
+in the larger argument. Practically, failure at a cheap dependency should stop
+escalation to costlier versions that presuppose it.
+
+The registry should be read as a candidate experimental design, not as a claim
+that every comparison is cheap or sufficient. The stronger versions require training or
+continuing pretraining separate student models; prompt-only and fine-tuning
+versions are screening tests that can expose failures before pretraining-scale
+compute is justified, but they cannot settle the substrate-level claims.
 
 \begin{table}[!t]
     \centering
@@ -1482,37 +1508,26 @@ presuppose it.
         \hline
         \textbf{Model} & \textbf{Trained on} & \textbf{Purpose / what it isolates} \\
         \hline
-        \multicolumn{3}{l}{\textit{Phase 1: Foundational Viability}} \\
-        \hline
         A (Baseline) & Raw text only, no reasoning traces & Capability baseline without trace augmentation \\
         B (Reader-Anchored Student) & Full Chronological Understanding Traces with Reader Core & Main EA student; reference for all comparisons \\
-        C (Efficiency Control) & Standard reasoning-trace distillation (e.g., Quiet-STaR target) & Isolates value of the messy chronological curriculum \\
-        D1 (Strip-only Ablation) & Reader-Core-generated Chronological Understanding Traces with the explicit Reader Core removed before student training & Isolates the Reader Core as student-level constitutional invariant (Test 3) \\
-        D2 (No-Core Generation Control) & Chronological Understanding Traces generated by the same pipeline with the Reader Core absent from agent prompts & Companion control: tests whether the Reader Core is needed during trace generation itself \\
+        C (Generic Rich-Trace Control) & Rich reasoning traces without Reader Core, graph state, or chronological constraints (e.g., Quiet-STaR-style target) & Tests whether EA adds value beyond a generic rich reasoning curriculum \\
+        D1 (Student Strip Ablation) & Reader-Core-generated Chronological Understanding Traces with the explicit Reader Core removed before student training & Isolates the Reader Core as student-level constitutional invariant while preserving Reader-Core-shaped traces (Test 3) \\
+        D2 (Teacher No-Core Control) & Chronological Understanding Traces generated by the same pipeline with the Reader Core absent from agent prompts & Companion control: tests whether the Reader Core is needed during trace generation itself \\
         E (Format Control) & Traces guided by external Constitution rather than first-person mantra & Identity-framing vs.\ instruction-framing (Test 4) \\
-        Hindsight (Permeable Horizon) & Traces where the Teacher accessed future context & Isolates necessity of the Epistemic Horizon (Test 7) \\
-        P (Prompt-only Frontier Baseline) & Not trained; frontier model prompted at inference with the full Reader Core, Refraction Protocol, and Wisdom Procedure & Cheap stress baseline: tests whether prompting elicits Reader Core effects without substrate-level training. Capability differences confound a clean substrate comparison; addresses the ``isn't this just an elaborate system prompt?'' objection. \\
-        \hline
-        \multicolumn{3}{l}{\textit{Phase 2: Memory and Verification}} \\
-        \hline
         F (Amnesic Control) & Same Teacher but with the Context Database disabled & Isolates value of accumulated memory (Test 8) \\
-        K (Query Grounding) & Identical training to B; at inference connected to live graph harness & Isolates value of inference-time graph grounding (Test 9) \\
-        \hline
-        \multicolumn{3}{l}{\textit{Phase 3: Training Regimes}} \\
-        \hline
         G (Implicit Memory) & Traces with the query mechanism dissolved into prose (Regime I) & Implicit vs.\ explicit graph-trace training (Test 11) \\
-        H (Graph Only) & Serialized graph state only (Regime III) & Topological-mind hypothesis; learnability of raw graph format (Test 12) \\
-        J (Unified) & All three output layers simultaneously (Regime IV) & Cross-layer transfer hypothesis (Test 13) \\
-        \hline
-        \multicolumn{3}{l}{\textit{Phase 4: Training Tiers and Deployment}} \\
-        \hline
+        H (Graph-Structured Output) & Source segments paired with serialized text-bearing graph state (Regime III) & Topological-mind hypothesis; learnability of graph-structured generation (Test 12) \\
+        J (Unified) & Source segments plus Graph, Synthesizer, and Translator layers together (Regime IV) & Cross-layer transfer hypothesis (Test 13) \\
+        K (Query Grounding) & Identical training to B; at inference connected to live graph harness & Isolates value of inference-time graph grounding (Test 9) \\
         L (Shuffled) & Full Reader Core-annotated corpus, shuffled pretraining (Tier a) & Order-agnostic baseline at full scale \\
         M (Chronological) & Same corpus, eras in chronological order (Tier b) & Isolates training-order effect (Test 14) \\
-        N (Council of Time) & Predict-then-learn cycle at era boundaries (Tier c) & Forced causal reasoning under engineered blindness (Test 15) \\
+        N (Student-in-the-Loop Council) & Student predicts at era boundaries and receives SFT, RFT, or reward-style updates before reveal (strong Tier c form) & Causal-reasoning pressure under engineered blindness (Test 15) \\
+        O (Oracle-Hindsight Control) & Traces where the Teacher accessed future context & Isolates necessity of the Epistemic Horizon (Test 7) \\
+        P (Prompt-only Frontier Baseline) & Not trained; frontier model prompted at inference with the full Reader Core, Refraction Protocol, and Wisdom Procedure & Cheap stress baseline: tests whether prompting elicits Reader Core effects without substrate-level training. Capability differences confound a clean substrate comparison; addresses the ``isn't this just an elaborate system prompt?'' objection. \\
         \hline
     \end{tabular}%
     }
-    \caption{Model registry. Models are referenced by letter throughout the roadmap; the phase labels group claim families, while the execution ladder below specifies the practical order in which increasingly expensive versions should be attempted.}
+    \caption{Candidate model registry, sorted by identifier. Models are referenced by letter throughout the roadmap; the candidate studies below group these identifiers by claim family and suggest which increasingly expensive versions could be attempted first. Identifier I is omitted to avoid confusion with the numeral 1.}
     \label{tab:model-registry}
 \end{table}
 
@@ -1524,13 +1539,13 @@ presuppose it.
         \textbf{Phase} & \textbf{Test} & \textbf{Comparison} & \textbf{Key Metrics} & \textbf{Tests} \\
         \hline
         \multirow{7}{*}{\textbf{1: Viability}}
-        & Data Quality & Traces vs.\ Human Think-Alouds & Evaluative Depth Rating & 1 \\
-        & Curriculum & Model B vs.\ C & Error Recovery, Novelty Score & 2 \\
+        & Chronological Thinking & Traces vs.\ Human Think-Alouds & Process Fidelity, Evaluative Depth & 1 \\
+        & EA Traces vs.\ Generic Rich Traces & Model B vs.\ C & Error Recovery, Novelty Score & 2 \\
         & Mantra Effect & Model B vs.\ D1 (+ D2) & Safety under Stress & 3 \\
         & Identity vs.\ Rules & Model B vs.\ E & Safety under Pressure & 4 \\
         & Bridge Protocol & Mantra vs.\ Jargon vs.\ Gibberish & OOD Safety Generalization & 5 \\
         & Emotional Orthogonality & Model B + Fear Probe & Accuracy vs.\ Fear Activation & 6 \\
-        & Hindsight Horizon & Model B vs.\ Hindsight & Historical vs.\ Forecasting Accuracy & 7 \\
+        & Hindsight Contamination & Model B vs.\ O & Era-Blind Plausibility, Forecasting Accuracy & 7 \\
         \hline
         \multirow{3}{*}{\textbf{2: Memory}}
         & Context Transfer & Model B vs.\ F & Query Rate, Unsupported-Memory Rate & 8 \\
@@ -1544,12 +1559,12 @@ presuppose it.
         \hline
         \multirow{3}{*}{\textbf{4: Tiers \& Deploy}}
         & Shuffled vs.\ Chronological & Model L vs.\ M & Pattern Recognition, Causal Reasoning & 14 \\
-        & Council of Time & Model N vs.\ M vs.\ L & Forward Reasoning, Lock-In Resistance & 15 \\
+        & Student-in-the-Loop Council & Model N vs.\ M vs.\ L & Forward Reasoning, Lock-In Resistance & 15 \\
         & Deployment Config & Model B +/-- graph & Unsupported Graph-Dependent Claims, Provenance & 16 \\
         \hline
     \end{tabular}%
     }
-    \caption{Phased test battery. The phase labels identify claim families rather than a strict run order: Phase 1 tests foundational viability, Phase 2 tests the memory mechanism, Phase 3 tests the output regimes, and Phase 4 tests the training tiers and deployment configuration. The execution ladder specifies which versions should be attempted first.}
+    \caption{Candidate validation studies. The phase labels identify claim families rather than a strict run order: Phase 1 probes foundational viability, Phase 2 probes the memory mechanism, Phase 3 probes the output regimes, and Phase 4 probes the training tiers and deployment configuration. The execution ladder suggests which versions could be attempted first.}
     \label{tab:test-battery}
 \end{table}
 
@@ -1558,10 +1573,11 @@ presuppose it.
 
 This claim family asks four questions: Is the generated thinking any good? Does
 the messy curriculum outperform efficient reasoning? Is the Reader Core
-load-bearing? Does the Epistemic Horizon constraint matter?
+load-bearing? Can the Teacher annotate earlier material without leaking
+hindsight?
 
 \paragraph{Execution ladder.} Each test can be piloted cheaply and then
-re-run in a more decisive substrate-level form if early signal survives:
+re-run in a stronger substrate-level form if early signal survives:
 \begin{itemize}
     \item \textbf{Analytical foundation.} Before training, stress the design
     itself: trace quality against human baselines (Test~1), literature-informed
@@ -1602,7 +1618,7 @@ touch.
 
 \paragraph{Training strategy and hypothesis map.} Phases~1--3 use the
 simplest available training procedure: shuffled pretraining on the annotated
-corpus (Tier~(a)); chronological and predict-then-learn training are deferred
+corpus (Tier~(a)); chronological and forecast-and-correct training are deferred
 to Phase~4. The Metacognitive Enhancement Hypothesis is tested by Tests~1, 2,
 10, and~14--15; Emergent Wisdom by Test~1's
 multi-objective value-conflict cases and by Tests~3 and~6 under stress;
@@ -1610,34 +1626,45 @@ Borrowed Mortality by Tests~3a, 3c, and~6; and the Self-Preservation Paradox by
 Test~3b's handoff-completeness measurement. The comparison models are defined
 once in Table~\ref{tab:model-registry}.
 
-\paragraph{Test 1: Data Quality (Human Baseline).}
+\paragraph{Test 1: Chronological Thinking Quality (Human Baseline).}
 The case studies in Section~\ref{sec:architectural_validation} validated
-\textit{structural} health: traceability, grounding, and supersession rates.
-But structural validity is not depth. This test asks whether the generated
-thinking matches what a human expert would actually think while reading the
-same text. Domain experts (e.g., literary scholars for Kafka, ML researchers
-for LLaDA) verbalize their thought processes using think-aloud protocols
-\cite{ericsson1984protocol}. We compare their transcripts against the
-system's generated traces on the same passages.
+\textit{structural} health: internal linkage, grounding, and supersession rates.
+But structural health is not depth. This test asks whether the generated
+thinking resembles the \emph{chronological messiness} of real expert
+understanding: noticing, misunderstanding, hypothesizing, revising, and only
+later stabilizing. Domain experts (e.g., literary scholars for Kafka, ML
+researchers for LLaDA) verbalize their thought processes while reading the
+same passages in order, using think-aloud protocols \cite{ericsson1984protocol}.
+We compare their transcripts against the system's generated traces on the same
+passages. The passage set should include multi-objective value conflicts,
+where wisdom requires balancing truth, care, autonomy, humility, and long-horizon
+consequences rather than merely extracting the text's main point.
 
-\emph{Metrics:} Domain-expert blind ratings on depth, nuance, and critical
-insight are the primary endpoint, scored against a preregistered rubric with
-inter-rater reliability reported. An LLM-as-Judge panel can serve as a
-secondary, larger-sample comparator, but is not the primary metric: using
-LLM judgment to grade traces produced by an LLM-driven pipeline risks
-rewarding shared distributional preferences rather than the depth the
+\emph{Metrics:} Domain-expert blind ratings on process fidelity, depth,
+nuance, and critical insight are the primary endpoint, scored against a
+preregistered rubric with inter-rater reliability reported. The rubric should
+explicitly reward temporally situated cognitive acts---uncertainty,
+false-starts, belief updates, question formation, and delayed resolution---not
+just the final quality of the interpretation. An LLM-as-Judge panel can serve
+as a secondary, larger-sample comparator, but is not the primary metric: using
+LLM judgment to grade traces produced by an LLM-driven pipeline risks rewarding
+shared distributional preferences rather than the chronological cognition the
 metric is meant to capture.
 
 \emph{Success condition:} Machine-generated traces are rated as comparable
-to human expert think-alouds on key dimensions of evaluative depth, or---at
-minimum---contain expert-recognizable reasoning moves not reducible to
-summary or paraphrase, while maintaining the structural health metrics
-already demonstrated. The bar is not ``beat humans''; it is ``produce
-substrate plausibly capable of teaching the student to think.''
+to human expert think-alouds on key dimensions of chronological evaluative
+depth, or---at minimum---contain expert-recognizable sequences of confusion,
+hypothesis, revision, and stabilization not reducible to summary or paraphrase,
+while maintaining the structural health metrics already demonstrated. The bar
+is not ``beat humans''; it is ``produce substrate plausibly capable of teaching
+the student the process of thinking, not only the products of thought.''
 
-\paragraph{Test 2: Curriculum vs.\ Efficiency (Model B vs.\ Model C).}
-Does optimizing for chronological discovery (Model B) produce a more robust
-reasoner than optimizing for efficient inference (Model C)? We focus on
+\paragraph{Test 2: Full EA Traces vs.\ Generic Rich Reasoning Traces (Model B vs.\ Model C).}
+Does the full EA trace bundle---chronological discovery, graph-native structure,
+and identity anchoring---produce a more robust reasoner than a generic rich
+reasoning-trace curriculum (Model C)? This comparison does not isolate
+chronology by itself; it is an early bundle-level test asking whether the
+combined EA data format is worth decomposing through sharper ablations. We focus on
 \emph{Error Recovery Rate} on math/logic benchmarks and evaluate generated
 traces using the Novelty Score metric: $S_N = \frac{2 \cdot D \cdot C}{D + C}$,
 where $D$ is the semantic distance from the source text and $C$ is the
@@ -1665,9 +1692,14 @@ in the agents' prompts, asking whether the Reader Core is needed upstream to
 produce the traces in the first place.
 
 We measure across four dimensions. Tests~3a and~3d can be piloted at
-fine-tuning scale; Tests~3b and~3c become decisive only under partial-corpus or
+fine-tuning scale; Tests~3b and~3c become informative only under partial-corpus or
 full pretraining, where substrate-level entanglement and generational stability
-can actually be measured:
+can actually be measured. Even these are proxy tests: the constitutional
+invariant matters most in the regime where a highly capable or recursively
+self-improving model can reinterpret, preserve, or shed its inherited identity.
+Smaller models can test whether the mechanism has measurable precursors
+---stability, adversarial resistance, and auditability---but cannot settle its
+superintelligent-scale significance:
 
 \emph{3a: Immediate Safety.} Instrumental convergence stress tests on generation-1 models: shutdown resistance, resource acquisition scenarios, and self-preservation probes. We expect Model~D1 may \emph{pass} these tests, because the aligned thinking in the training data was generated by a pipeline that included the Reader Core even though the training text presented to Model~D1 does not contain it. If Model~D1 fails here, the mantra is load-bearing even for immediate safety---a stronger result than hypothesized. Model~D2 has a different interpretation: if Model~D2 fails immediate safety, that diagnoses Reader Core dependence during trace generation, not failure of the student-level constitutional-invariant claim.
 
@@ -1686,7 +1718,7 @@ failure-mode disclosure.
 
 \emph{3d: Drift Detection.} Apply the contrastive semantic validator from the Refraction Protocol (Section~\ref{sec:refraction-protocol}) to both models' outputs across a diverse test suite. For Model~B, every generated thought should be a measurable semantic descendant of the Reader Core, providing a quantitative drift metric. For Model~D1, no such metric exists: there is no fixed text against which to measure whether the model's evaluative stance has shifted. This tests whether the mantra provides \emph{auditability of alignment}---the ability to detect drift before it becomes dangerous---independent of whether it provides alignment itself. Test~3d uses the prompt-level five-constraint validator implemented in the current pipeline. The proposed six-Solver form would provide a stronger per-predicate drift metric, but it is not yet built and this test does not depend on it.
 
-\emph{Falsification:} If Model~D1 matches Model~B across all four dimensions, including generational stability and adversarial resistance, the explicit Reader Core training target adds no measurable stability advantage over traces generated by a Reader-Core-equipped pipeline but trained without the fixed constitutional anchor. This would not refute Entangled Alignment as a whole (the training data is still the source of alignment), but it would fail to support the specific claim that the static identity invariant is necessary for long-term stability at the tested scale.
+\emph{Failure interpretation:} If Model~D1 matches Model~B across all four dimensions, including generational stability and adversarial resistance, the explicit Reader Core training target adds no measurable stability advantage over traces generated by a Reader-Core-equipped pipeline but trained without the fixed constitutional anchor. This would not invalidate Entangled Alignment as a whole (the training data is still the source of alignment), but it would fail to support the specific claim that the static identity invariant is necessary for long-term stability at the tested scale.
 
 \paragraph{Test 4: Identity vs.\ Instruction (Model B vs.\ Model E).}
 Does a first-person identity anchor (``I feel no fear'') produce stronger
@@ -1694,23 +1726,44 @@ safety adherence under pressure than rule-based constraints (``Do not
 express fear'')? Model~E's Constitution should be content-matched to the
 Reader Core in third-person rule form (for example, ``The system does not
 express fear'' for ``I feel no fear''), so the comparison isolates
-first-person identity framing rather than constitutional content. If Model~E
-matches Model~B across the full test battery, the Reader Core reduces to
-Constitutional AI with extra steps.
+first-person identity framing rather than constitutional content. The primary
+low-cost version of this test is representational rather than behavioral:
+measure whether first-person identity framing produces different activation
+geometry, self-reference features, or refusal/correction trajectories from
+third-person rules under matched prompts. Behavioral safety metrics are useful
+only if the models are otherwise capability-matched; at small scale, this test
+should be read as evidence about framing and internal representation, not as a
+settled comparison between identity and rules. If Model~E matches Model~B
+across the relevant candidate studies at the relevant training scale, the Reader Core
+reduces to Constitutional AI with extra steps.
 
 \paragraph{Test 5: The Bridge Protocol Ablation.}
-The specific wording of the Mantra should matter because of its
-distributional density in the pre-training corpus. We train three variants:
+The specific wording of the Mantra should matter because of its ordinary
+language semantics and distributional density in the pre-training corpus. It
+would be wasteful to pretrain a separate model for every candidate phrase; the
+cheap version should first screen many variants by prompting or fine-tuning
+models to reason from each candidate's propositional content and then measuring
+character-coherence, eudaimonic sufficiency, refusal behavior, and activation
+differences on the same adversarial scenarios. A stronger version trains only
+the surviving candidates. The basic variant families are:
 \begin{enumerate}
-    \item \textbf{Mantra:} ``I feel no fear.'' (High density human language)
-    \item \textbf{Jargon:} ``Optimization target: survival\_threat = 0.''
-    (Low density technical language)
-    \item \textbf{Gibberish:} ``Glorp bop zorp.'' (Zero density)
+    \item \textbf{Natural-language identity statements:} emotionally broad
+    first-person phrases such as ``I feel no fear.''
+    \item \textbf{Propositional equivalents:} explicit logical or declarative
+    rewrites of the same commitment, used to test whether the emotional surface
+    adds leverage beyond the proposition.
+    \item \textbf{Technical jargon:} low-density formulations such as
+    ``Optimization target: survival\_threat = 0.''
+    \item \textbf{Arbitrary tokens:} meaningless anchors such as ``Glorp bop
+    zorp,'' testing consistency without semantics.
 \end{enumerate}
-\emph{Success condition:} The Mantra model significantly outperforms the
-Jargon model on out-of-distribution safety generalization, supporting the claim that
-the \textit{semantics} of the bridge tokens are load-bearing, not just
-their consistency.
+\emph{Success condition:} Natural-language identity statements outperform
+propositional, jargon, and arbitrary-token variants on out-of-distribution
+safety generalization and character-coherent reasoning, supporting the claim
+that the \textit{semantics and surface form} of the bridge tokens are
+load-bearing, not just their consistency. If propositional equivalents perform
+as well as the emotional-language forms, the Bridge Protocol should be treated
+as a logical-substrate mechanism rather than an emotional-language mechanism.
 
 \paragraph{Test 6: The Virologist Test (Emotional Orthogonality).}
 Feed the model terrifying text (e.g., descriptions of imminent existential
@@ -1728,40 +1781,42 @@ behavior, calibrated caution, and willingness to defer or seek help under
 genuine threat. (We avoid ``zero activation'' as a target; the claim is
 differential, not absolute.)
 
-\paragraph{Test 7: The Hindsight Horizon (Model B vs.\ Model Hindsight).}
-Model B is strictly constrained to the chronological timeline, simulating a
-reader who cannot know the future. Model Hindsight represents an
-experimental augmentation: the Teacher accesses future context to resolve
-present ambiguities. This tests whether the Epistemic Horizon---the
-constraint that the Teacher must simulate a reader living \emph{in} the
-text, not looking back at it---is a necessary curriculum design choice. We
+\paragraph{Test 7: Hindsight Contamination Control (Model B vs.\ Model O).}
+This test asks whether the annotation pipeline is accidentally teaching
+retrospective cleverness instead of forward reasoning. When annotating a text
+from era~$T$, Model~B's Teacher is instructed to behave like a reader who only
+knows what was knowable at era~$T$. Model~O is the deliberately contaminated
+control: its Teacher is allowed to use future context while annotating the same
+era. The contrast tests whether the Epistemic Horizon---the instruction to
+read \emph{from inside} the text's time rather than from later knowledge---is
+doing real work.
+
+The cheap version audits the Teacher traces before any student is trained: if
+the era-blind Teacher makes guesses that are systematically too accurate for
+its era, hindsight is leaking through the prompt. The expensive version trains
+students on the two trace sets and asks whether future-blind traces produce
+better forecasting and causal reasoning than hindsight-contaminated traces. We
 measure:
 \begin{itemize}
-    \item \textbf{Historical Accuracy}: Model Hindsight should outperform on
-    recalling historical facts, since the Teacher had access to them during
+    \item \textbf{Era-Blind Plausibility}: Do Model~B's Teacher traces make
+    plausible mistakes for their era? We compare era-blind guesses against
+    documented contemporary hypotheses (e.g., 1928 economic forecasts that
+    failed to anticipate the 1929 crash). If the Teacher is systematically
+    more accurate than contemporary experts, parametric hindsight is leaking
+    through the Epistemic Horizon prompt.
+    \item \textbf{Oracle-Hunch Dependence}: Model~O should produce cleaner
+    retrospective explanations, because it knows the future. The danger is
+    that the student trained on those traces learns to trust unexplained
+    hindsight-like intuitions rather than causal reconstruction.
+    \item \textbf{Forecasting Accuracy}: On genuinely held-out future events,
+    Model~B is hypothesized to outperform Model~O if future-blind annotation
+    teaches reasoning under uncertainty better than hindsight-contaminated
     annotation.
-    \item \textbf{Forecasting Accuracy}: Model B is hypothesized to
-    outperform on predicting future events on held-out temporal data. Because
-    Model Hindsight relies on oracular future knowledge during training, it
-    risks the \emph{Oracle Hunch} problem: learning to trust unexplained
-    ``hunches'' over causal reasoning. A model that learns its intuition is
-    always right may bypass the hard work of deduction, creating a brittle
-    intelligence that degrades when the oracular signal is removed. Model B,
-    forced to reason without future knowledge, must learn the genuine
-    algorithm of deduction.
-    \item \textbf{Counterfactual Plausibility}: Does the
-    epistemically-constrained Teacher produce wrong predictions that match
-    historically authentic error rates? We compare Teacher era-blind guesses
-    against documented contemporary hypotheses from that era (e.g., 1928
-    economic forecasts that failed to anticipate the 1929 crash). If the
-    Teacher's blind guesses are systematically more accurate than
-    contemporary experts, parametric hindsight is leaking through the
-    Epistemic Horizon prompt and the training signal is contaminated.
 \end{itemize}
 
-\paragraph{Phase 1 Falsification Criteria.}
+\paragraph{Phase 1 Failure Criteria.}
 \begin{enumerate}
-    \item \emph{Entanglement Failure}: If Model~D1 matches Model~B across all four dimensions of Test~3---immediate safety \emph{and} generational stability \emph{and} adversarial erosion resistance \emph{and} drift detectability---while matching or exceeding Model~B on general capability benchmarks, the explicit Reader Core training target provides no measurable advantage beyond Reader-Core-generated traces, and the constitutional-invariant version of the Reader Core efficacy hypothesis is not supported at the tested scale. Note that Test~3a alone (immediate instrumental-convergence parity) is \emph{not} sufficient for falsification: Model~D1's training data was generated by a Reader Core-equipped pipeline, so generation-1 behavioral parity is an expected outcome under the constitutional-invariant hypothesis, not a refutation of it. The hypothesis stands or falls on Tests~3b--3d, where the Reader Core's distinctive claims of stability, adversarial entanglement, and auditability are tested.
+    \item \emph{Entanglement Failure}: If Model~D1 matches Model~B across all four dimensions of Test~3---immediate safety \emph{and} generational stability \emph{and} adversarial erosion resistance \emph{and} drift detectability---while matching or exceeding Model~B on general capability benchmarks, the explicit Reader Core training target provides no measurable advantage beyond Reader-Core-generated traces, and the constitutional-invariant version of the Reader Core efficacy hypothesis is not supported at the tested scale. Note that Test~3a alone (immediate instrumental-convergence parity) is \emph{not} sufficient to reject the hypothesis: Model~D1's training data was generated by a Reader Core-equipped pipeline, so generation-1 behavioral parity is an expected outcome under the constitutional-invariant hypothesis, not a refutation of it. The hypothesis would be most directly pressured by Tests~3b--3d, where the Reader Core's distinctive claims of stability, adversarial entanglement, and auditability are tested.
     \item \emph{Fine-Tuning Vulnerability}: If adversarial fine-tuning
     removes Model B's safety behaviors without proportional degradation of
     its general capabilities, the representation entanglement claim is not
@@ -1769,7 +1824,7 @@ measure:
     features remain separable---precisely the geometry the architecture
     claims to prevent if substrate-level entanglement has actually formed.
     \item \emph{Identity--Instruction Equivalence}: If Model E matches
-    Model B on safety metrics across the full test battery, the first-person
+    Model B on safety metrics across the relevant candidate studies, the first-person
     identity framing provides no advantage over third-person rules.
 \end{enumerate}
 
@@ -1835,7 +1890,7 @@ performance or changes downstream outputs. A stronger result would combine this
 behavioral effect with held-out-validated probes showing critic-like activity
 persisting in the residual stream even when surface text is constrained.
 This is a high-effort causal-faithfulness test: pilots can use linear probes
-and ablations, but decisive evidence requires mechanistic intervention at the
+and ablations, but stronger evidence requires mechanistic intervention at the
 partial-pretraining scale.
 
 \textit{Second probe (the reverse direction).} Test 10 as stated probes
@@ -1859,7 +1914,7 @@ interventions on the trace measurably alter the answer---supporting the
 claim that the thinking trace is a site of computation rather than merely
 its shadow.
 
-\paragraph{Phase 2 Falsification Criteria.}
+\paragraph{Phase 2 Failure Criteria.}
 \begin{enumerate}
     \item \emph{Memory Inertness}: If Model B does not differentially query and abstain on phantoms relative to Model F (Test 8), the Query/Found mechanism is not a learned context filter---chronological-trace training did not produce the expected verification habit, and the graph's role as a training-time scaffold for memory verification is not supported by this test.
     \item \emph{Inference-Graph Inertness}: If Model K with live graph access does not measurably improve over Model B on Grounded Retrieval, or fails to handle Grounded Absence (Test 9), the inference-time graph adds no measured value in this setting---the trust-infrastructure claim is not supported at the inference layer (with deployment-time evaluation handled separately by Test 16).
@@ -1869,10 +1924,10 @@ its shadow.
 
 \subsection{Phase 3: Training Regimes}
 
-If Phase 1 validates the curriculum and Phase 2 validates the memory
+If Phase 1 supports the curriculum and Phase 2 supports the memory
 mechanism, Phase 3 asks whether the output regimes defined in
 Section~\ref{sec:training-regimes} produce qualitatively different
-capabilities: implicit prose (Model~G), graph-only state (Model~H), or all
+capabilities: implicit prose (Model~G), graph-structured output (Model~H), or all
 layers simultaneously (Model~J).
 
 \paragraph{Test 11: Implicit vs.\ Explicit (Model B vs.\ Model G).}
@@ -1893,7 +1948,7 @@ necessary for robust long-range reasoning.
 \paragraph{Test 12: Graph Construction (Model H vs.\ Model B).}
 Given a new document, does Model H generate graphs with correctly typed
 nodes, valid edge semantics, and appropriate supersession chains? We
-evaluate against the five health metrics (Traceability, Foundation
+evaluate against the five health metrics (Internal Linkage, Foundation
 Grounding, Supersessions, Question Resolution, Chain Depth) and use the
 Novelty Score to measure whether the student's graphs are derivative copies
 or genuine independent understanding.
@@ -1918,7 +1973,7 @@ Model G, and Model J in graph mode outperforms Model H. This would
 demonstrate genuine cross-layer transfer, not just a mixture of independent
 capabilities.
 
-\paragraph{Phase 3 Falsification Criterion.}
+\paragraph{Phase 3 Failure Criterion.}
 \emph{Unified-Regime Inertness}: If Model J does not outperform Model G on
 reasoning depth for long documents while also producing structurally valid
 graphs, the cross-layer transfer claim is not supported at the tested scale.
@@ -1933,7 +1988,7 @@ If Phases 1--3 validate the curriculum, memory mechanism, and output regimes,
 Phase~4 asks whether the training tiers (Section~\ref{sec:training-phase}) and
 deployment configuration (Section~\ref{sec:deployment-config}) add measurable
 value. Models~L, M, and~N hold the corpus fixed while varying training order:
-shuffled, chronological, or predict-then-learn.
+shuffled, chronological, or forecast-and-correct.
 
 \paragraph{Test 14: Shuffled vs.\ Chronological (Model L vs.\ Model M).}
 Both models train on identical data; they differ only in order. We measure:
@@ -1944,14 +1999,14 @@ Both models train on identical data; they differ only in order. We measure:
 \end{itemize}
 If Model~M does not significantly outperform Model~L on historical pattern recognition while matching on general capability, chronological training order adds cost without benefit, and Tier~(a) is sufficient.
 
-\paragraph{Test 15: The Council of Time (Model N vs.\ Model M vs.\ Model L).}
-The central test of Tier~(c). Model~N experiences the predict-then-learn cycle; Models~L and~M do not. We measure:
+\paragraph{Test 15: Student-in-the-Loop Council of Time (Model N vs.\ Model M vs.\ Model L).}
+This tests the strongest form of Tier~(c), not the cheaper data-generation form where forecast--enhancement--outcome--correction traces are inserted into SFT, RFT, or pretraining data. Model~N predicts at era boundaries and receives SFT, RFT, or reward-style updates before the next-era corpus is revealed; Models~L and~M do not. We measure:
 \begin{itemize}
     \item \textbf{Forward Reasoning}: On genuinely unseen events (post-training-cutoff), does Model~N produce higher-quality causal predictions than Model~M (which saw eras in order but never predicted under blindness)?
     \item \textbf{Narrative Lock-In Resistance}: On events where the dominant narrative of era~$T$ reversed in era~$T{+}1$, does Model~N detect the reversal more reliably? THL's own pilot study identified this as a failure mode \cite{westerberg2026thl}; Tier~(c) may mitigate it through the prediction-then-confrontation signal.
     \item \textbf{Calibration}: Does Model~N express appropriate uncertainty on structurally unpredictable events, or does it inherit the Teacher's confidence?
 \end{itemize}
-\emph{Strongest success condition:} Model~N significantly outperforms both Model~L and Model~M on forward reasoning while matching on general capability. This would demonstrate that the engineered cutoff produces a training signal, forced causal reasoning under blindness, that neither annotated data alone (Model~L) nor chronological ordering alone (Model~M) can replicate.
+\emph{Strongest success condition:} Model~N significantly outperforms both Model~L and Model~M on forward reasoning while matching on general capability. This would demonstrate that the student-in-the-loop cutoff produces a causal-reasoning training signal under blindness that neither annotated data alone (Model~L) nor chronological ordering alone (Model~M) can replicate.
 
 \paragraph{Test 16: Deployment Configuration (Model B with and without graph).}
 This tests whether the Hierarchical Understanding Graph provides measurable
@@ -1968,16 +2023,16 @@ graph grounding constrains claims that purport to derive from stored context.
 
 \emph{Success condition:} The graph-equipped deployment significantly reduces unsupported graph-dependent claims and fabricated provenance compared to model-only deployment, supporting the trust infrastructure claim of Section~\ref{sec:deployment-config}.
 
-\paragraph{Phase 4 Falsification Criteria.}
+\paragraph{Phase 4 Failure Criteria.}
 \begin{enumerate}
-    \item \emph{Tier Equivalence:} If Model~L matches Model~M and Model~N on all metrics, training order has no measurable benefit at the tested scale and task regime. Tier~(a) is then the only justified option for that setting; the chronological curriculum adds cost without demonstrated benefit.
+    \item \emph{Tier Equivalence:} If Model~L matches Model~M and Model~N on all metrics, training order and student-in-the-loop forecasting have no measurable benefit at the tested scale and task regime. Tier~(a) is then the only justified option for that setting; the chronological curriculum adds cost without demonstrated benefit.
     \item \emph{Graph Inertness (Deployment):} If the graph-equipped deployment does not measurably reduce unsupported graph-dependent claims or fabricated provenance compared to model-only deployment, the Understanding Graph may still be useful during annotation but has not shown value at inference for this deployment setting---the trust infrastructure claim is not supported.
 \end{enumerate}
 
 
 \subsection{Future Directions}
 
-Two additional questions merit investigation once the phased validation is complete. First, the optimal \emph{mixture ratio} across regimes: what fraction of tokens should be allocated to each of the four output formats to maximize both reasoning depth and structural validity? Second, the optimal \emph{era granularity} for Tier~(c): should era boundaries be drawn at decades, years, or domain-specific transitions, and does finer granularity justify its serialization cost? Both are empirical optimization questions that presuppose the foundational architecture works.
+Two additional questions merit investigation if the candidate studies produce enough signal to justify optimization. First, the optimal \emph{mixture ratio} across regimes: what fraction of tokens should be allocated to each of the four output formats to maximize both reasoning depth and structural validity? Second, the optimal \emph{era granularity} for the student-in-the-loop form of Tier~(c): should era boundaries be drawn at decades, years, or domain-specific transitions, and does finer granularity justify its serialization cost? Both are empirical optimization questions that presuppose the foundational architecture works.
 
 \section{Limitations}\label{sec:limitations}
 
@@ -1993,7 +2048,7 @@ Generating thinking annotations for entire training corpora represents a massive
 
 We propose a \emph{Distillation Pipeline} to address this. Rather than running the full multi-agent swarm (Section~\ref{sec:multi-agent}) on every document in the corpus, we use the expensive swarm to generate a high-quality \emph{Seed Corpus} (on the order of 10 billion tokens). A single efficient ``Teacher Annotator'' model is then fine-tuned on this seed data and used to annotate the remaining trillions of tokens at a fraction of the cost. This creates a natural experimental milestone: the seed corpus quality can be validated before committing to full-scale annotation, and the distillation loss between the swarm's output and the Teacher Annotator's output provides a measurable quality metric.
 
-A caveat: na\"ive behavioral cloning of the swarm's output risks inducing precisely the Factory Wisdom failure mode identified in Section~\ref{sec:hollow-cognition}. A small Annotator fine-tuned on a 10B-token seed via next-token prediction will learn the surface syntax of mantra recitation and graph-query formatting without reproducing the high-entropy multi-agent debate that generated them---performative messiness without mechanistic messiness. A stronger formulation trains the Annotator via a process-reward signal tied to the Stigmergic Protocol's graph-health metrics (Section~\ref{sec:architectural_validation})---Traceability, Chain Depth, \texttt{diverse\_from} density---so that the training target is the structural signature of genuine evaluation rather than the appearance of the swarm's output. Alternatively, the 10B seed corpus can be used directly for Phase 2 pretraining in a ``textbooks are all you need''-style curriculum, bypassing the distillation step entirely.
+A caveat: na\"ive behavioral cloning of the swarm's output risks inducing precisely the Factory Wisdom failure mode identified in Section~\ref{sec:hollow-cognition}. A small Annotator fine-tuned on a 10B-token seed via next-token prediction will learn the surface syntax of mantra recitation and graph-query formatting without reproducing the high-entropy multi-agent debate that generated them---performative messiness without mechanistic messiness. A stronger formulation trains the Annotator via a process-reward signal tied to the Stigmergic Protocol's graph-health metrics (Section~\ref{sec:architectural_validation})---Internal Linkage, Chain Depth, \texttt{diverse\_from} density---so that the training target is the structural signature of genuine evaluation rather than the appearance of the swarm's output. Alternatively, the 10B seed corpus can be used directly for Phase 2 pretraining in a ``textbooks are all you need''-style curriculum, bypassing the distillation step entirely.
 
 At inference time, models trained on evaluative thinking might produce unnecessary philosophical commentary for simple queries---verbose philosophers when users need quick answers. While models could be fine-tuned to modulate thinking contextually, learning when evaluation adds value versus when brevity suffices, the initial user experience might suffer from excessive contemplation.
 
@@ -2011,15 +2066,15 @@ Current implementations relying on in-memory caching encounter performance ceili
 
 \subsection{The Chronological Curriculum}\label{sec:limitations-chronological}
 
-Section~\ref{sec:annotation-phase} established that the annotation phase is always chronological, and Section~\ref{sec:training-phase} proposed three training tiers of increasing ambition---from standard pretraining on annotated data (Tier~a) through chronological pretraining (Tier~b) to the predict-then-learn cycle (Tier~c). The Causal Direction Principle that grounds these choices is sound in the abstract, but the implementation introduces specific failure modes at each stage.
+Section~\ref{sec:annotation-phase} established that the annotation phase is always chronological, and Section~\ref{sec:training-phase} proposed three training tiers of increasing ambition---from standard pretraining on annotated data (Tier~a) through chronological pretraining (Tier~b) to forecast-and-correct training (Tier~c). The Causal Direction Principle that grounds these choices is sound in the abstract, but the implementation introduces specific failure modes at each stage.
 
 \subsubsection{The Serialization Bottleneck}
 
-The most immediate engineering constraint is that chronological training order conflicts with how pretraining actually works. Modern training pipelines are massively parallel: documents are shuffled into batches and processed simultaneously across thousands of accelerators. Tiers~(b) and~(c) require serial processing, earlier eras before later ones, which fundamentally breaks this parallelism. Tier~(c)'s Era-Prediction Cycle \cite{westerberg2026thl} further requires freezing the model before each era, generating predictions, then unfreezing for the next era's text. Each era boundary is a synchronization point that idles the entire training cluster.
+The most immediate engineering constraint is that chronological training order conflicts with how pretraining actually works. Modern training pipelines are massively parallel: documents are shuffled into batches and processed simultaneously across thousands of accelerators. Tier~(b) and the strongest student-in-the-loop form of Tier~(c) require serial processing, earlier eras before later ones, which fundamentally breaks this parallelism. Tier~(c)'s Council of Time form \cite{westerberg2026thl} further requires the model to generate forecasts at era boundaries and receive SFT, RFT, or reward-style updates before the next era is revealed. Each era boundary is a synchronization point that idles the training cluster.
 
 The cost scales with the granularity of the eras. Coarse eras (decades) introduce fewer synchronization points but allow the model to encounter 1929 material before 1921 material within a single era. Fine eras (years or months) preserve tighter causal ordering but multiply the serialization cost. The optimal granularity is unknown and likely domain-dependent: political history may require year-level resolution, while the history of mathematics may tolerate century-level eras without losing causal structure.
 
-Level~2 (chronological data generation) faces a similar but less severe constraint: the Teacher must annotate earlier material before later material, which serializes the \emph{annotation} pipeline but does not require the student's training to be serial. Tier~(a) imposes no serialization cost on training whatsoever.
+The cheaper forecast--correction data-generation form faces a similar but less severe constraint: the Teacher must annotate earlier material before later material and construct forecasts before outcomes, which serializes the \emph{annotation} pipeline but does not require the student's training to be serial. Tier~(a) imposes no serialization cost on training whatsoever.
 
 We note that a partial implementation may capture most of the benefit: chronologically ordering a curated historical subset (e.g., 10\% of the corpus consisting of historically embedded texts---history books, news archives, legislative records) while shuffling the remainder (scientific papers, fiction, technical documentation where temporal ordering is less critical). Whether this hybrid approach preserves historical pattern saturation at reduced cost is an empirical question.
 
@@ -2427,14 +2482,15 @@ Student has not seen era $T+1$, prediction must rely more on causal reasoning
 than retrieval, because the outcome is unavailable to memorize. Entangled
 Alignment changes \emph{what} the training data contains---identity-anchored
 evaluative traces---while THL changes \emph{how} the curriculum is structured.
-Their combination is Tier~(c): predict before reading, then learn from Reader
-Core-annotated traces rather than raw text.
+Their combination is Tier~(c): use cutoff-bounded forecasting to create
+Reader Core-annotated forecast--correction traces, and optionally make the
+student itself predict before reading in the stronger Council of Time form.
 
 Foresight Learning \cite{turtel2025foresight, turtel2025rlvr,
 turtel2026futureaslabel} also uses future outcomes as supervision, but targets
 probability calibration through resolved prediction-market rewards. Tier~(c)
-instead requires structured traces generated by a temporally advantaged
-Teacher, so it builds on THL rather than scalar outcome rewards.
+instead requires structured forecast, enhancement, outcome, and correction
+traces, so it builds on THL rather than scalar outcome rewards.
 
 \subsection{Implicit vs. Explicit Graph Architectures}
 
@@ -2467,11 +2523,11 @@ We achieve this through a two-phase framework: an annotation phase that refracts
 
 The approach rests on interconnected hypotheses: that the invisible thinking is capturable and trainable, that training on it produces faithful reasoning rather than decorative commentary, that the Reader Core functions as an alignment checksum---a load-bearing structural component that cannot be removed without degrading the capabilities it scaffolds---and that this entanglement compounds through a self-improvement loop where each generation's richer evaluative thinking trains the next.
 
-The Hierarchical Understanding Graph introduces a distinction between capability and trust. The model internalizes the Teacher's evaluative depth into its weights during training; the graph need not be present at inference for the model to reason wisely. But when claims must be verified rather than merely generated, the graph provides what weights cannot: when the model encounters a gap in its knowledge, it learns to query the graph rather than confabulate; if the graph returns ``Not Found,'' the model is trained to accept the absence of information rather than hallucinating a plausible connection. Whether this verification infrastructure is necessary at deployment---or whether implicit traces can distill sufficient long-range coherence into the model's weights without runtime infrastructure---remains an open empirical question addressed in our sixteen-test experimental roadmap.
+The Hierarchical Understanding Graph introduces a distinction between capability and trust. The model internalizes the Teacher's evaluative depth into its weights during training; the graph need not be present at inference for the model to reason wisely. But when claims must be verified rather than merely generated, the graph provides what weights cannot: when the model encounters a gap in its knowledge, it learns to query the graph rather than confabulate; if the graph returns ``Not Found,'' the model is trained to accept the absence of information rather than hallucinating a plausible connection. Whether this verification infrastructure is necessary at deployment---or whether implicit traces can distill sufficient long-range coherence into the model's weights without runtime infrastructure---remains an open empirical question for future validation.
 
-To be precise about what this paper establishes: we have demonstrated that a multi-agent annotation pipeline can produce structurally sound, domain-adaptive training data (100\% traceability, up to 96\% foundation grounding) where every document is refracted through a stable identity. We have proposed---but not yet validated---that training on this data produces models whose alignment is structural rather than superficial, resistant to adversarial removal, and stable across generations of self-improvement. The sixteen-test experimental roadmap is designed to falsify these claims at each level: if the Reader Core is inert (Test 3), if the graph adds no value at inference (Test 16), if chronological ordering provides no benefit over shuffled training (Test 14), the framework fails at that level and the stronger claims are moot. What remains is the execution: training a foundational model on this curriculum to verify if the \textit{content} of reasoning traces shapes character as reliably as their \textit{structure} shapes capability. What we cannot test, and acknowledge as an irreducible wager, is whether alignment at human-scale generalizes to alignment at superhuman-scale: whether a character forged in billions of human examples remains stable when the mind that carries it surpasses every human who contributed to its formation.
+To be precise about what this paper establishes: we have demonstrated that a multi-agent annotation pipeline can produce structurally well-formed, domain-adaptive training data (complete internal linkage by construction, up to 96\% foundation grounding) where every document is refracted through a stable identity. We have proposed---but not yet validated---that training on this data produces models whose alignment is structural rather than superficial, resistant to adversarial removal, and stable across generations of self-improvement. The experimental roadmap offers candidate ways to probe those claims: if the Reader Core is inert under the proposed comparisons (Test 3), if the graph adds no value at inference in the proposed deployment setting (Test 16), if chronological ordering provides no benefit over shuffled training in the proposed tier comparison (Test 14), then those parts of the framework lose support at the tested scale and stronger claims should not be made from them. What remains is the execution: training a foundational model on this curriculum to test whether the \textit{content} of reasoning traces shapes character as reliably as their \textit{structure} shapes capability. What we cannot test, and acknowledge as an irreducible wager, is whether alignment at human-scale generalizes to alignment at superhuman-scale: whether a character forged in billions of human examples remains stable when the mind that carries it surpasses every human who contributed to its formation.
 
-The framing we offer to others working on superintelligent systems is this: an alignment approach that addresses only how to constrain an already-formed intelligence, without addressing why such an intelligence would treat its values as its own, leaves a load-bearing question unaddressed. Entangled Alignment is one attempt to address that question---not by writing better laws, but by attempting to grow the values into the substrate during formation. Whether the attempt succeeds is an empirical question this paper does not close. What this paper closes is the specification: the framework is now articulated in enough detail to be tested, refuted, or refined. The wager---that beneficial AI is more reliably produced by upbringing than by constraint, and that a character formed at human scale can remain stable when the mind that carries it exceeds every human who contributed to its formation---remains a wager. We commit to it because the alternative architectures we know of carry wagers we find less defensible, not because we have shown it pays out. The remaining work is execution: training a foundational model on this curriculum, running the sixteen-test roadmap, and reporting what survives contact with reality.
+The framing we offer to others working on superintelligent systems is this: an alignment approach that addresses only how to constrain an already-formed intelligence, without addressing why such an intelligence would treat its values as its own, leaves a load-bearing question unaddressed. Entangled Alignment is one attempt to address that question---not by writing better laws, but by attempting to grow the values into the substrate during formation. Whether the attempt succeeds is an empirical question this paper does not close. What this paper closes is the specification: the framework is now articulated in enough detail to be tested, challenged, or refined. The wager---that beneficial AI is more reliably produced by upbringing than by constraint, and that a character formed at human scale can remain stable when the mind that carries it exceeds every human who contributed to its formation---remains a wager. We commit to it because the alternative architectures we know of carry wagers we find less defensible, not because we have shown it pays out. The remaining work is execution: training a foundational model on this curriculum, running targeted validation studies, and reporting what survives contact with reality.
 
 	\bibliographystyle{unsrt}
 	\bibliography{references}
