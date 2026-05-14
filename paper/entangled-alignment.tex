@@ -1994,42 +1994,6 @@ The safety implication is that the model's historical pattern saturation may be 
 One mitigation is to run the annotation pipeline in multiple passes: a first pass that builds the Teacher's accumulated graph across the full timeline, followed by a second pass that re-annotates early eras with the benefit of the Teacher's now-complete historical understanding. This trades the strict chronological purity of single-pass annotation for higher annotation quality, at the cost of allowing the Teacher (but not the student) to benefit from hindsight.
 
 
-\subsection{The Output Regimes}\label{sec:limitations-regimes}
-
-Orthogonal to the chronological training choices, the output regimes (Section~\ref{sec:training-regimes}) each introduce distinct risks that could undermine the architecture's claims.
-
-\subsubsection{Regime I: The Ventriloquism Risk}
-
-Regime~I (prose only) is the lightest and most deployable option, but it carries the deepest epistemological risk. The student trains on fluid prose where all graph scaffolding has been dissolved---it never sees the nodes, edges, or queries that generated the reasoning. It learns the \emph{voice} of deep thinking without being exposed to the \emph{mechanics}.
-
-The danger is ventriloquism: the model learns to produce text that sounds like chronological belief revision (``I now realize this contradicts what I thought earlier...'') without actually tracking prior beliefs. There is no structural guarantee that a claim of belief revision corresponds to a real state change in the model's representations. In Regime~II, a fabricated callback would be caught---the model generates a query, the graph returns ``Not Found,'' and the hallucination is exposed. In Regime~I, there is no external check. The model's claim to be revising a belief is unfalsifiable from the output alone.
-
-This risk is a specific instance of the Hollow Cognition problem (Section~\ref{sec:hollow-cognition}), but with a regime-specific mechanism: it is not that the model fails to think deeply, but that the training format provides no structural penalty for \emph{simulating} depth. If the loss function rewards prose that matches the Teacher's output, and the Teacher's output contains phrases like ``this changes my earlier view,'' the student can minimize loss by reproducing those phrases without implementing the cognitive operation they describe. The experimental roadmap addresses this via Test~11 (Implicit vs. Explicit), which compares Model~G (Regime~I) against Model~B (Regime~II) on long-range coherence and contradiction detection.
-
-\subsubsection{Regime II: Epistemic Interference}
-
-Regime~II (prose with graph references) requires the model to arbitrate between two sources of knowledge at inference: its parametric memory (weights) and the external graph (retrieved nodes). This dual-source architecture introduces \emph{Epistemic Interference}---the model may become indecisive, over-querying for facts it should know from its weights, or failing to reconcile conflicts between its intuition and the retrieved result.
-
-The interference risk has a specific failure mode for safety. If the model's parametric memory encodes the Reader Core's evaluative stance (``this rhetoric is a precursor to dehumanization'') but the graph returns a node with a more neutral framing (because the node was minted early in the annotation, before the Teacher had accumulated sufficient context), the model must decide which source to trust. A model that defaults to trusting external retrieval over its own trained evaluation could have its safety-relevant judgments overridden by shallower graph entries---precisely the opposite of the architecture's intent. Test~9 (Query Grounding, Section~\ref{sec:phase1}) includes an adversarial injection condition designed to probe this failure mode.
-
-More broadly, the constant overhead of explicit verification may disrupt the natural semantic flow of reasoning, potentially degrading general intelligence in favor of rigorous but clunky fact-checking. Whether the explicit query mechanism is necessary for learning long-range coherence, or whether it acts as a drag on cognitive fluidity, remains an open question that Test~11 is designed to resolve.
-
-\subsubsection{Regime III: The Legibility Gap}
-
-Regime~III (graph only) is the most radical proposal: the student learns to generate raw graph structure (typed nodes, edges, supersession chains) rather than natural language. This targets the \emph{Topological Mind} hypothesis (Section~\ref{sec:topological-mind}): the speculation that future cognition will be graph-native rather than prose-native at the architectural, cognitive, and epistemic levels simultaneously.
-
-The limitation is fundamental: a model that thinks in graphs cannot communicate in prose without a separate rendering step. This creates a \emph{legibility gap} between the model's cognitive process and human understanding. The Translator agent bridges this gap during annotation, but at inference, a Regime~III model would require a dedicated rendering pipeline to convert its graph output into human-readable text. This pipeline introduces a new failure mode: if the renderer misrepresents the graph's structure, the model's reasoning is faithful but its communication is not. Transparency---one of the architecture's core claims---depends on the fidelity of this rendering, which is itself an unsolved problem.
-
-Furthermore, graph-only training removes the natural language regularization that Section~\ref{sec:self-improvement} identifies as a safety feature. A model that thinks in graphs is not constrained to express its concepts through human-evolved vocabulary. Its cognitive representations could drift into topological structures that are internally consistent but semantically opaque---the graph equivalent of the Alien Wisdom problem (Section~\ref{sec:scaling-assumption}).
-
-\subsubsection{Regime IV: Cost Without Guaranteed Return}
-
-Regime~IV (all layers simultaneously) is the most expensive option, requiring the annotation pipeline to produce and validate all three output formats for every segment. The hypothesis is that cross-layer training produces genuine understanding of the translation between structure and voice---the model knows that the prose it generates is a rendering of graph structure, not a performance.
-
-The risk is that the cost is not justified. If the model simply learns three independent output modes without genuine cross-layer transfer, Regime~IV reduces to an expensive mixture of Regimes~I, II, and III with no emergent benefit. The model would be able to generate prose \emph{and} graph structure, but its prose would be no deeper than a Regime~I model's and its graphs no more valid than a Regime~III model's. Test~13 (Unified vs. Individual Regimes) is designed to detect this: if Model~J in prose mode does not outperform Model~G (Regime~I alone), the cross-layer transfer hypothesis is not supported at the tested scale and the additional cost of Regime~IV is not justified for that setting.
-
-A subtler risk is \emph{mode confusion}: a model trained on three formats simultaneously might blend them inappropriately, generating prose contaminated with graph syntax or graphs polluted with narrative language. Whether mode tokens (conditioning the model on which output format to produce) are sufficient to prevent this blending, or whether the formats interfere with each other at the representation level, is unknown.
-
 \subsection{Can Models Generate Genuine Thinking?}
 
 Our proposal rests on assumptions about the nature of thought and scaling that remain empirically unproven.
@@ -2057,7 +2021,11 @@ The mantra uses terms like ``care,'' ``wisdom,'' and ``joy'' whose meanings vary
 
 The metabolic nature of the graph introduces two related failure modes. The first is \emph{Structural Ossification}: if an early, incorrect belief forms strong topological connections (high degree centrality) within the graph, it may resist supersession even when contradicted by new evidence \cite{westerberg2026understanding}. Unlike a text buffer where early tokens are easily overwritten by the sliding window, a graph structure reinforces established nodes. The system might develop ``Epistemic Inertia,'' where the weight of prior connectivity prevents the ``fresh'' interpretation of new data. While we propose ``Temporal Attention Decay'' to mitigate this, there is a non-zero risk that the graph architecture inadvertently simulates cognitive bias, protecting established errors under the guise of consistency.
 
-The second is \emph{Epistemic Interference}: the Query mechanism may introduce cognitive noise rather than clarity, as detailed in the Regime~II analysis above (Section~\ref{sec:limitations-regimes}).
+The second is \emph{Epistemic Interference}: live graph queries may introduce
+cognitive noise rather than clarity if the model over-queries, treats shallow
+retrieved nodes as authoritative, or fails to reconcile graph results with its
+trained evaluative stance. Test~9 is designed to probe this risk by including
+adversarial graph injections and ``Not Found'' cases.
 
 \subsubsection{Teacher Alignment as Prerequisite}
 
