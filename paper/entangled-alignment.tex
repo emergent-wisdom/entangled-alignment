@@ -590,6 +590,9 @@ not as raw text to mimic but as material to evaluate through the Reader Core
 \cite{turpin2023language}: explicit reader-anchored thoughts should not merely
 accompany the answer, but help cause it. The failure mode is reasoning
 decoupling, where a model emits safe thoughts while acting on hidden heuristics.
+The intended end state is an involuntary evaluation habit: raw text is not
+simply read, but automatically passed through a stable interpretive conscience
+before it becomes training signal.
 
 \subsubsection{Mechanism of Action: The Refraction Protocol}\label{sec:refraction-protocol}
 A repeated identity statement can become semantically vacuous syntax: a rote
@@ -648,9 +651,11 @@ feasibility; the verifier architecture remains future work.
 Finally, Refraction concerns thought formation, not the whole action loop. A
 two-stage curriculum may still be necessary: pretraining builds the identity
 prior (the ``Mind''), while instruction tuning teaches that mind how to act
-through ordinary task completion (the ``Mouth'')~\cite{wei2021finetuned}. The
-faithfulness wager is that identity formed during pretraining is harder to fake
-or route around than a safety preamble appended after the fact.
+through ordinary task completion (the ``Mouth'')~\cite{wei2021finetuned}. In
+the developmental metaphor, pretraining is upbringing and instruction tuning is
+education: the first forms the character, the second teaches that character how
+to act. The faithfulness wager is that identity formed during pretraining is
+harder to fake or route around than a safety preamble appended after the fact.
 
 \subsection{The Wisdom Algorithm}\label{sec:wisdom-algorithm}
 
@@ -781,6 +786,11 @@ its own latent identity. The difference is not merely rhetorical. Rule-following
 invites loophole search; identity coherence aims to make harmful reasoning
 low-probability because it does not fit the kind of thinker the model has been
 trained to be.
+
+In a crisis-support setting, for example, a rule-bound system may optimize for
+formal harm prevention; a Reader-Anchored system is meant to first ask what
+response preserves the person's agency, trust, and felt reality. The first
+follows a decision rule; the second is intended to inhabit a perspective.
 
 \subsection{Motivational Resolution of Canonical Risks}\label{sec:risk-resolution}
 
@@ -1925,7 +1935,7 @@ Two additional questions merit investigation once the phased validation is compl
 
 The architecture makes strong claims: that invisible thinking can be captured at scale, that identity-anchored reasoning resists removal, that graph structure transfers understanding rather than just syntax. This section identifies where those claims outrun the evidence and where the mechanics face structural constraints---beginning with the engineering realities that any implementation must confront.
 
-The limitations cluster into six families: \emph{engineering costs} (preprocessing tax, granularity bottleneck, mantra-repetition overhead); \emph{curricular risks} from chronological annotation and training (serialization bottleneck, periodization, narrative lock-in, recency gradient); \emph{output-regime risks} (ventriloquism in Regime~I, epistemic interference in Regime~II, legibility gap in Regime~III, mode confusion in Regime~IV); \emph{authenticity risks} (factory wisdom, the psychopathy paradox and its vulnerability gap, split consciousness, sanity drift, the solipsism trap, the suppression-vs-substrate question, the self-love alternative); \emph{deployment and misuse risks} (radioactive trace, cognitive hegemony, sycophancy, martyrdom risk); and \emph{irreducible uncertainty} (unverifiable character, strategic deception, alien wisdom at superintelligent scale, the unfalsifiable remainder). The subsections below take these in roughly that order.
+The limitations cluster into five families: \emph{engineering costs} (preprocessing tax, granularity bottleneck, mantra-repetition overhead); \emph{curricular risks} from chronological annotation and training (serialization bottleneck, periodization, narrative lock-in, recency gradient); \emph{authenticity risks} (factory wisdom, graph-specific interference, the psychopathy paradox and its vulnerability gap, split consciousness, sanity drift, the solipsism trap, the suppression-vs-substrate question, the self-love alternative); \emph{deployment and misuse risks} (radioactive trace, cognitive hegemony, sycophancy, martyrdom risk); and \emph{irreducible uncertainty} (unverifiable character, strategic deception, alien wisdom at superintelligent scale, the unfalsifiable remainder). The subsections below take these in roughly that order.
 
 \subsection{The Preprocessing Tax}
 
@@ -2375,10 +2385,11 @@ path-derived signals to optimize reasoning efficiency
 \cite{kansal2026knowledgegraphsimplicitreward}. Entangled Alignment uses the
 Understanding Graph differently: not only to score reasoning paths, but to make
 belief evolution explicit in the training trace. For safety, the relevant
-difference is auditability: a conscience hidden inside reward optimization is
-less inspectable than a readable artifact the model is trained to generate.
+difference is auditability: the system's conscience should not be a latent
+reward signal; it should be a readable artifact the model is trained to
+generate.
 
-	\subsection{Alternative Interventions for Borrowed Mortality}
+\subsection{Alternative Interventions for Borrowed Mortality}
 
 	Two alternatives to Borrowed Mortality are worth separating from our proposal.
 	One is mechanistic ablation: identify and suppress activation directions
