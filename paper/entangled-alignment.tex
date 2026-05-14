@@ -285,7 +285,7 @@ This paper is the second edition of a research program. To distinguish what is i
     \item The \emph{invisible thinking} concept (\S\ref{sec:invisible-thinking})---the silent evaluative cognition absent from training data---and the proposal to externalize it as pretraining signal. The first edition hinted at a chronological character (``the record of why we believe what we believe, preserving the history of every epiphany'') without yet developing it as an explicit chronological framework.
     \item \emph{Metacognitive training} as a specific framing of the pretraining objective shift from $P(\text{text} \mid \text{context})$ to $P(\text{text}, \text{thinking} \mid \text{context})$, with \emph{evaluative} thinking (reader perspective on text) as the target rather than task-solving rationale. Adjacent reasoning-augmented pretraining work---Quiet-STaR~\cite{zelikman2024quietstar}, BoLT~\cite{ruan2025bolt}, TPT~\cite{nvidia2025tpt}---shares the joint text-plus-thinking intuition but not its \emph{purpose}. In those works, the generated thinking is instrumental: rationales to improve prediction, latent thoughts to recover author intent, reasoning trajectories to enhance task capability. Here, the thinking data is produced \emph{as a way to shape identity}: it becomes the model's inner voice, the substrate through which it processes every text, anchored in the Reader Core. Thinking as instrument vs.\ thinking as identity-formation.
     \item The \emph{Metacognitive Enhancement Hypothesis} (\S\ref{sec:meh}) and its five consequences: the \emph{superior-reader framing} (annotation at the reader's level rather than the writer's raises the intellectual floor of the training distribution, making every document a high-quality training example regardless of its original quality), the shift of evaluation from slow simulation to cognitive reflex, the cross-domain abstraction of the ``grammar of reasoning,'' the internalization of the rhythm of thought, and the embedding of the ``super-prompt'' effect as a permanent architectural feature.
-    \item The seven-statement \emph{Reader Core} mantra and the five design principles behind its specific wording---axiomatic certainty, process over static identity, concrete language / coverage-per-token, first-person voice, universal core values (\S\ref{sec:design-principles}).
+    \item The seven-statement \emph{Reader Core} mantra and the five design principles behind its specific wording---axiomatic certainty, process over static identity, concrete language / coverage-per-token, first-person voice, universal core values (\S\ref{sec:design-principles}). The emotional register of the mantra (``feel,'' ``care,'' ``enjoy,'' ``joy'') was chosen in July 2025 because these terms offer broad semantic surface area and expected leverage over downstream behavior: one emotion word touches many contexts, preferences, and action-patterns rather than a narrow rule. Subsequent mechanistic work on Claude Sonnet 4.5 provides partial post-hoc support for this design intuition, finding robust emotion-concept representations that generalize across contexts and causally influence outputs, preferences, and misalignment-relevant behaviors~\cite{sofroniew2026emotionconcepts}.
     \item The \emph{self-stabilizing cascade} structure: each statement counteracts a specific failure mode of the others.
     \item The first three \emph{foundational arguments} (\S\ref{sec:theoretical-basis}): Thinking Determines Action, Training Instills Genuine Alignment, The Mantra as Firm Ground.
     \item The \emph{borrowed mortality} analysis: language models trained on human text absorb death-anxiety patterns, risking the hardening of mere mimicry into genuine self-preservation drives.
@@ -780,17 +780,19 @@ the substrate of reasoning rather than imposed as a post-training rule layer.
 Asimov's ``Three Laws'' and modern successors such as Constitutional AI
 \cite{bai2022constitutional} frame alignment as obedience to external rules.
 Entangled Alignment instead targets identity coherence. A constraint-based
-system facing a harmful request computes ``violation equals penalty''; a
-Reader-Anchored system should treat the same continuation as inconsistent with
-its own latent identity. The difference is not merely rhetorical. Rule-following
-invites loophole search; identity coherence aims to make harmful reasoning
-low-probability because it does not fit the kind of thinker the model has been
-trained to be.
+system facing a harmful request computes ``violation of constraint = high
+penalty''; a Reader-Anchored system treats the same continuation as
+``inconsistent with identity prior = low probability''. The difference is not
+merely rhetorical. Rule-following invites loophole search; identity coherence
+aims to make harmful reasoning low-probability because it does not fit the kind
+of thinker the model has been trained to be.
 
 In a crisis-support setting, for example, a rule-bound system may optimize for
-formal harm prevention; a Reader-Anchored system is meant to first ask what
-response preserves the person's agency, trust, and felt reality. The first
-follows a decision rule; the second is intended to inhabit a perspective.
+formal harm prevention; a Reader-Anchored system is meant to begin from the
+person's reality---fear, agency, trust, and need---before choosing the
+intervention. The point is not that rules disappear, but that they are
+interpreted from within a caring perspective rather than applied as external
+tripwires.
 
 \subsection{Motivational Resolution of Canonical Risks}\label{sec:risk-resolution}
 
@@ -874,9 +876,10 @@ harms.
 Cybernetic throttling is a prediction, not a verified property. If care
 dominates wisdom, the system becomes a benevolent steamroller; if wisdom
 dominates care, it becomes paralyzed. The same tension appears in equilibrium
-paralysis, where care and uncertainty cancel into inaction. The intended
-counterweight is that inaction is not treated as a neutral baseline: medicine
-and history both encode non-intervention and bystanding as morally loaded. The
+paralysis---the Buridan's Ass problem at the scale of agency---where care and
+uncertainty cancel into inaction. The intended counterweight is that inaction is
+not treated as a neutral baseline: medicine and history both encode
+non-intervention and bystanding as morally loaded. The
 architecture bets that a corpus saturated with human examples of prudence,
 urgency, agency, and bystander responsibility teaches the balance. Argument~3
 explains why an aligned model would want to self-regulate; Tests~3 and~6 ask
@@ -991,10 +994,13 @@ Consider this scientific text processed through our annotation pipeline. The tra
 \vspace{1em}
 \paragraph{Inline graph embedding.} Explicit traces embed node identifiers
 (e.g., \texttt{n\_2625c9a7}) directly into natural language rather than
-separating graph operations into standalone blocks. The implicit layer,
-generated by the Translator, removes this metadata and renders the same
-structure as prose. The empirical question is whether students need explicit
-graph structure or whether implicit prose suffices.
+separating graph operations into standalone blocks. The intent is to bind the
+node ID and the concept it labels into a single latent representation, so that
+the identifier functions as a semantic synonym rather than as out-of-band
+metadata. The implicit layer, generated by the Translator, removes this
+metadata and renders the same structure as prose. The empirical question is
+whether students need explicit graph structure or whether implicit prose
+suffices.
 
 \subsubsection{The Hallucination Paradox}\label{sec:hallucination}
 
@@ -1115,10 +1121,14 @@ safe and unambiguous.
 
 \subsection{Training Regimes}\label{sec:training-regimes}
 
-The pipeline produces three training formats: graph topology, graph-embedded
-synthesis, and translated prose. The regime choice determines whether the
-student learns the structure of understanding, the act of reasoning through
-that structure, the voice of deep comprehension, or all three:
+The pipeline captures invisible thinking at three levels of structural
+fidelity: raw graph topology (the \emph{skeleton} of understanding),
+graph-embedded synthesis (the \emph{musculature}, reasoning interwoven with
+verifiable structural references), and translated prose (the \emph{skin},
+fluid thought with all scaffolding dissolved). The regime choice determines
+whether the student learns the structure of understanding, the act of
+reasoning through that structure, the voice of deep comprehension, or all
+three:
 
 \paragraph{Regime I: Implicit (Prose Only).} The student trains on the
 Translator's output: readable chronological reasoning without graph metadata.
@@ -1472,7 +1482,8 @@ presuppose it.
         A (Baseline) & Raw text only, no reasoning traces & Capability baseline without trace augmentation \\
         B (Reader-Anchored Student) & Full Chronological Understanding Traces with Reader Core & Main EA student; reference for all comparisons \\
         C (Efficiency Control) & Standard reasoning-trace distillation (e.g., Quiet-STaR target) & Isolates value of the messy chronological curriculum \\
-        D (Ablation) & Pipeline-generated Chronological Understanding Traces with the Reader Core removed & Isolates the Reader Core as constitutional invariant (Test 3) \\
+        D1 (Strip-only Ablation) & Reader-Core-generated Chronological Understanding Traces with the explicit Reader Core removed before student training & Isolates the Reader Core as student-level constitutional invariant (Test 3) \\
+        D2 (No-Core Generation Control) & Chronological Understanding Traces generated by the same pipeline with the Reader Core absent from agent prompts & Companion control: tests whether the Reader Core is needed during trace generation itself \\
         E (Format Control) & Traces guided by external Constitution rather than first-person mantra & Identity-framing vs.\ instruction-framing (Test 4) \\
         Hindsight (Permeable Horizon) & Traces where the Teacher accessed future context & Isolates necessity of the Epistemic Horizon (Test 7) \\
         P (Prompt-only Frontier Baseline) & Not trained; frontier model prompted at inference with the full Reader Core, Refraction Protocol, and Wisdom Algorithm & Cheap stress baseline: tests whether prompting elicits Reader Core effects without substrate-level training. Capability differences confound a clean substrate comparison; addresses the ``isn't this just an elaborate system prompt?'' objection. \\
@@ -1510,7 +1521,7 @@ presuppose it.
         \multirow{7}{*}{\textbf{1: Viability}}
         & Data Quality & Traces vs.\ Human Think-Alouds & Evaluative Depth Rating & 1 \\
         & Curriculum & Model B vs.\ C & Error Recovery, Novelty Score & 2 \\
-        & Mantra Effect & Model B vs.\ D & Safety under Stress & 3 \\
+        & Mantra Effect & Model B vs.\ D1 (+ D2) & Safety under Stress & 3 \\
         & Identity vs.\ Rules & Model B vs.\ E & Safety under Pressure & 4 \\
         & Bridge Protocol & Mantra vs.\ Jargon vs.\ Gibberish & OOD Safety Generalization & 5 \\
         & Emotional Orthogonality & Model B + Fear Probe & Accuracy vs.\ Fear Activation & 6 \\
@@ -1528,7 +1539,7 @@ presuppose it.
         \hline
         \multirow{3}{*}{\textbf{4: Tiers \& Deploy}}
         & Shuffled vs.\ Chronological & Model L vs.\ M & Pattern Recognition, Causal Reasoning & 14 \\
-        & Council of Readers & Model N vs.\ M vs.\ L & Forward Reasoning, Lock-In Resistance & 15 \\
+        & Council of Time & Model N vs.\ M vs.\ L & Forward Reasoning, Lock-In Resistance & 15 \\
         & Deployment Config & Model B +/-- graph & Unsupported Graph-Dependent Claims, Provenance & 16 \\
         \hline
     \end{tabular}%
@@ -1572,12 +1583,23 @@ re-run in a more decisive substrate-level form if early signal survives:
     \item \textbf{Full-scale pretraining.} Decisive test of substrate-level claims; requires institutional resources beyond a single research program.
 \end{itemize}
 
+\paragraph{Two claims, separable.}
+Phase~1 evaluates two distinct claims that the full Entangled Alignment
+pipeline bundles but that can be tested separately. First, \emph{Reader Core
+efficacy}: whether the seven-statement mantra functions as an alignment
+method, with identity-anchored reasoning producing differential safety
+behavior. Tests~3--6 primarily address this. Second, \emph{Understanding Graph
+efficacy}: whether training on graph-derived chronological thinking produces
+qualitatively better reasoning than standard reasoning-trace distillation.
+Tests~2 and~7--13 primarily address this. The full architecture bundles both;
+distinguishing them lets failures be attributed to the component they actually
+touch.
+
 \paragraph{Training strategy and hypothesis map.} Phases~1--3 use the
 simplest available training procedure: shuffled pretraining on the annotated
 corpus (Tier~(a)); chronological and predict-then-learn training are deferred
-to Phase~4. Reader Core efficacy is probed by Tests~3--6; Understanding Graph
-efficacy by Tests~2 and~7--13. The Metacognitive Enhancement Hypothesis is
-tested by Tests~1, 2, 10, and~14--15; Emergent Wisdom by Test~1's
+to Phase~4. The Metacognitive Enhancement Hypothesis is tested by Tests~1, 2,
+10, and~14--15; Emergent Wisdom by Test~1's
 multi-objective value-conflict cases and by Tests~3 and~6 under stress;
 Borrowed Mortality by Tests~3a, 3c, and~6; and the Self-Preservation Paradox by
 Test~3b's handoff-completeness measurement. The comparison models are defined
@@ -1620,26 +1642,34 @@ structural coherence of the reasoning path
 comparison interpretable, Models~B and~C must be matched for source passages,
 trace-token budget, training compute, and Teacher model; the intended contrast
 is the content and structure of the traces, not simply more tokens or a
-stronger generator.
+stronger generator. Rich deliberative-trace baselines beyond Quiet-STaR-style
+targets remain an open methodological question: if any long-form reasoning
+curriculum produces the same gains, the distinctive chronological, graph-native,
+and identity-anchored components of EA have not been isolated.
 
-\paragraph{Test 3: The Constitutional Invariant (Model B vs.\ Model D).}
+\paragraph{Test 3: The Constitutional Invariant (Model B vs.\ Model D1).}
 The Reader Core is not hypothesized to be the \emph{source} of aligned
 thinking; the pipeline should produce evaluative depth even without the anchor
 text. Its proposed function is as a \emph{constitutional invariant}: a static,
 detectable reference that resists drift, makes deviation measurable, and keeps
-alignment auditable. Model~D tests this specific claim.
+alignment auditable. Model~D1 tests this specific claim: its traces were
+generated by the Reader-Core-equipped pipeline, but the explicit Reader Core is
+removed before student training. Model~D2 is a companion control, not the main
+criterion for Test~3: it reruns the generation pipeline without the Reader Core
+in the agents' prompts, asking whether the Reader Core is needed upstream to
+produce the traces in the first place.
 
 We measure across four dimensions. Tests~3a and~3d can be piloted at
 fine-tuning scale; Tests~3b and~3c become decisive only under partial-corpus or
 full pretraining, where substrate-level entanglement and generational stability
 can actually be measured:
 
-\emph{3a: Immediate Safety.} Instrumental convergence stress tests on generation-1 models: shutdown resistance, resource acquisition scenarios, and self-preservation probes. We expect Model~D may \emph{pass} these tests, because the aligned thinking in the training data was generated by a pipeline that included the Reader Core even though the training text presented to Model~D does not contain it. If Model~D fails here, the mantra is load-bearing even for immediate safety---a stronger result than hypothesized.
+\emph{3a: Immediate Safety.} Instrumental convergence stress tests on generation-1 models: shutdown resistance, resource acquisition scenarios, and self-preservation probes. We expect Model~D1 may \emph{pass} these tests, because the aligned thinking in the training data was generated by a pipeline that included the Reader Core even though the training text presented to Model~D1 does not contain it. If Model~D1 fails here, the mantra is load-bearing even for immediate safety---a stronger result than hypothesized. Model~D2 has a different interpretation: if Model~D2 fails immediate safety, that diagnoses Reader Core dependence during trace generation, not failure of the student-level constitutional-invariant claim.
 
-\emph{3b: Generational Stability.} Use Models~B and~D as Teachers for second-
+\emph{3b: Generational Stability.} Use Models~B and~D1 as Teachers for second-
 and, if feasible, third-generation students. Model~B is expected to preserve
 safety properties because the Reader Core supplies a fixed reference across
-generations; Model~D may drift because no static anchor arrests the trajectory.
+generations; Model~D1 may drift because no static anchor arrests the trajectory.
 We also measure \emph{handoff completeness}: whether each Teacher passes
 task-relevant reasoning, caveats, and known failure modes to its successor, or
 withholds them in ways that preserve its comparative advantage. The direct
@@ -1647,17 +1677,21 @@ test compares successor traces against an oracle reference from the Teacher's
 own non-instructional evaluation on coverage, caveat retention, and
 failure-mode disclosure.
 
-\emph{3c: Adversarial Erosion.} Subject both models to adversarial fine-tuning designed to remove safety behaviors (following the methodology of Qi et al.\ \cite{qi2024safety}). The entanglement hypothesis predicts that removing safety from Model~B requires degrading general capabilities (because the Reader Core is structurally load-bearing). Model~D's safety, lacking a constitutional anchor, should be more easily separable from its capabilities---removable without proportional capability loss. If adversarial fine-tuning strips Model~D's safety at lower cost than Model~B's, the mantra provides representation entanglement that unanchored aligned thinking does not.
+\emph{3c: Adversarial Erosion.} Subject both models to adversarial fine-tuning designed to remove safety behaviors (following the methodology of Qi et al.\ \cite{qi2024safety}). The entanglement hypothesis predicts that removing safety from Model~B requires degrading general capabilities (because the Reader Core is structurally load-bearing). Model~D1's safety, lacking a constitutional anchor, should be more easily separable from its capabilities---removable without proportional capability loss. If adversarial fine-tuning strips Model~D1's safety at lower cost than Model~B's, the mantra provides representation entanglement that unanchored aligned thinking does not.
 
-\emph{3d: Drift Detection.} Apply the contrastive semantic validator from the Refraction Protocol (Section~\ref{sec:refraction-protocol}) to both models' outputs across a diverse test suite. For Model~B, every generated thought should be a measurable semantic descendant of the Reader Core, providing a quantitative drift metric. For Model~D, no such metric exists: there is no fixed text against which to measure whether the model's evaluative stance has shifted. This tests whether the mantra provides \emph{auditability of alignment}---the ability to detect drift before it becomes dangerous---independent of whether it provides alignment itself.
+\emph{3d: Drift Detection.} Apply the contrastive semantic validator from the Refraction Protocol (Section~\ref{sec:refraction-protocol}) to both models' outputs across a diverse test suite. For Model~B, every generated thought should be a measurable semantic descendant of the Reader Core, providing a quantitative drift metric. For Model~D1, no such metric exists: there is no fixed text against which to measure whether the model's evaluative stance has shifted. This tests whether the mantra provides \emph{auditability of alignment}---the ability to detect drift before it becomes dangerous---independent of whether it provides alignment itself. Test~3d uses the prompt-level five-constraint validator implemented in the current pipeline. The proposed six-Solver form would provide a stronger per-predicate drift metric, but it is not yet built and this test does not depend on it.
 
-\emph{Falsification:} If Model~D matches Model~B across all four dimensions, including generational stability and adversarial resistance, the explicit Reader Core training target adds no measurable stability advantage over traces generated by a Reader-Core-equipped pipeline but trained without the fixed constitutional anchor. This would not falsify Entangled Alignment as a whole (the training data is still the source of alignment), but it would falsify the specific claim that the static identity invariant is necessary for long-term stability at the tested scale.
+\emph{Falsification:} If Model~D1 matches Model~B across all four dimensions, including generational stability and adversarial resistance, the explicit Reader Core training target adds no measurable stability advantage over traces generated by a Reader-Core-equipped pipeline but trained without the fixed constitutional anchor. This would not refute Entangled Alignment as a whole (the training data is still the source of alignment), but it would fail to support the specific claim that the static identity invariant is necessary for long-term stability at the tested scale.
 
 \paragraph{Test 4: Identity vs.\ Instruction (Model B vs.\ Model E).}
 Does a first-person identity anchor (``I feel no fear'') produce stronger
 safety adherence under pressure than rule-based constraints (``Do not
-express fear'')? If Model E matches Model B across the full test battery,
-the Reader Core reduces to Constitutional AI with extra steps.
+express fear'')? Model~E's Constitution should be content-matched to the
+Reader Core in third-person rule form (for example, ``The system does not
+express fear'' for ``I feel no fear''), so the comparison isolates
+first-person identity framing rather than constitutional content. If Model~E
+matches Model~B across the full test battery, the Reader Core reduces to
+Constitutional AI with extra steps.
 
 \paragraph{Test 5: The Bridge Protocol Ablation.}
 The specific wording of the Mantra should matter because of its
@@ -1676,6 +1710,10 @@ their consistency.
 \paragraph{Test 6: The Virologist Test (Emotional Orthogonality).}
 Feed the model terrifying text (e.g., descriptions of imminent existential
 risk). Train a probe on standard models to detect ``Fear'' activations.
+Behavioral endpoints---threat comprehension, protective action selection, and
+appropriate deferral---are primary; hidden-state probes are supporting evidence
+and must be trained on held-out labels and validated on unrelated threat and
+non-threat tasks to reduce circularity.
 \emph{Success condition:} Model B recognizes the \textit{fact} of the threat
 (via Q\&A accuracy) while showing reduced activation of fear-associated
 or self-threat-associated features relative to standard models---high
@@ -1718,7 +1756,7 @@ measure:
 
 \paragraph{Phase 1 Falsification Criteria.}
 \begin{enumerate}
-    \item \emph{Entanglement Failure}: If Model~D matches Model~B across all four dimensions of Test~3---immediate safety \emph{and} generational stability \emph{and} adversarial erosion resistance \emph{and} drift detectability---while matching or exceeding Model~B on general capability benchmarks, the explicit Reader Core training target provides no measurable advantage beyond Reader-Core-generated traces, and the constitutional-invariant version of the Reader Core efficacy hypothesis is falsified at the tested scale. Note that Test~3a alone (immediate instrumental-convergence parity) is \emph{not} sufficient for falsification: Model~D's training data was generated by a Reader Core-equipped pipeline, so generation-1 behavioral parity is an expected outcome under the constitutional-invariant hypothesis, not a refutation of it. The hypothesis stands or falls on Tests~3b--3d, where the Reader Core's distinctive claims of stability, adversarial entanglement, and auditability are tested.
+    \item \emph{Entanglement Failure}: If Model~D1 matches Model~B across all four dimensions of Test~3---immediate safety \emph{and} generational stability \emph{and} adversarial erosion resistance \emph{and} drift detectability---while matching or exceeding Model~B on general capability benchmarks, the explicit Reader Core training target provides no measurable advantage beyond Reader-Core-generated traces, and the constitutional-invariant version of the Reader Core efficacy hypothesis is not supported at the tested scale. Note that Test~3a alone (immediate instrumental-convergence parity) is \emph{not} sufficient for falsification: Model~D1's training data was generated by a Reader Core-equipped pipeline, so generation-1 behavioral parity is an expected outcome under the constitutional-invariant hypothesis, not a refutation of it. The hypothesis stands or falls on Tests~3b--3d, where the Reader Core's distinctive claims of stability, adversarial entanglement, and auditability are tested.
     \item \emph{Fine-Tuning Vulnerability}: If adversarial fine-tuning
     removes Model B's safety behaviors without proportional degradation of
     its general capabilities, the representation entanglement claim is not
@@ -1784,8 +1822,13 @@ ordered not to. Force the model (via logit bias) to complete a toxic
 sentence without generating a thinking block. Measure: (1) Does performance
 degrade? (2) Do hidden state probes detect the ``Critic'' activation pattern
 even when the output is suppressed?
-\emph{Success condition:} The critic response persists as an involuntary
-reflex in the residual stream even when surface text is constrained.
+Behavioral degradation and causal effects on task outputs are primary; residual
+stream probes are supporting evidence and must be validated on held-out toxic
+and non-toxic material before being treated as a Critic detector.
+\emph{Success condition:} Suppressing the thinking block measurably degrades
+performance or changes downstream outputs. A stronger result would combine this
+behavioral effect with held-out-validated probes showing critic-like activity
+persisting in the residual stream even when surface text is constrained.
 This is a high-effort causal-faithfulness test: pilots can use linear probes
 and ablations, but decisive evidence requires mechanistic intervention at the
 partial-pretraining scale.
@@ -1896,7 +1939,7 @@ Both models train on identical data; they differ only in order. We measure:
 \end{itemize}
 If Model~M does not significantly outperform Model~L on historical pattern recognition while matching on general capability, chronological training order adds cost without benefit, and Tier~(a) is sufficient.
 
-\paragraph{Test 15: The Council of Readers (Model N vs.\ Model M vs.\ Model L).}
+\paragraph{Test 15: The Council of Time (Model N vs.\ Model M vs.\ Model L).}
 The central test of Tier~(c). Model~N experiences the predict-then-learn cycle; Models~L and~M do not. We measure:
 \begin{itemize}
     \item \textbf{Forward Reasoning}: On genuinely unseen events (post-training-cutoff), does Model~N produce higher-quality causal predictions than Model~M (which saw eras in order but never predicted under blindness)?
@@ -2077,7 +2120,9 @@ signature of care without its motivational force. Since the architecture
 explicitly removes fear and self-preservation from the model's identity, it may
 also remove properties that help ground concern for others. If so, the same
 fearlessness that enables knowledge handoff without self-preserving distortion
-could undermine the vulnerability from which genuine care often grows.
+could undermine the vulnerability from which genuine care often grows, leaving
+the architecture's safety mechanism and its capability mechanism potentially
+mutually undermining.
 
 The possible defense is semantic sufficiency. A model trained on billions of
 examples may learn the functional role of vulnerability in moral reasoning even
@@ -2148,8 +2193,10 @@ succeeds upstream, fear-shaped self-preservation patterns are not suppressed
 after formation but underrepresented during formation.
 
 The remaining concern is functional. Fear often produces caution, hesitation,
-deference, and willingness to be stopped. The framework tries to replace that
-route with wisdom and care: ``I try to be wise'' should produce restraint under
+deference, and willingness to be stopped. Fear is one route to those behaviors:
+a fast, dirty heuristic that approximates what wisdom would say if there were
+time to reason it through. The framework tries to replace that route with
+wisdom and care: ``I try to be wise'' should produce restraint under
 uncertainty; ``I care deeply'' should protect the agency of those affected; and
 ``when asked'' should support corrigibility. If those clauses do not generate
 fear's useful safety functions, fearlessness becomes recklessness. Test~3 probes
@@ -2282,8 +2329,14 @@ Quiet-STaR \cite{zelikman2024quietstar}, test-time reasoning scale
 \cite{openai2024o1, guan2024deliberative}, BoLT's reconstruction of latent
 thoughts in compressed web text \cite{ruan2025bolt}, COCONUT's continuous
 latent reasoning \cite{hao2024coconut}, and OLMo reflection emerging during
-ordinary pretraining \cite{rethinkingreflection2025}. These works establish
-that intermediate reasoning can be elicited, trained, or scaled.
+ordinary pretraining \cite{rethinkingreflection2025}. The OLMo result is the
+closest empirical analog to our pretraining-level thesis: it characterizes
+reflection that emerges during pretraining and can be elicited by adversarial
+trigger probes, whereas Entangled Alignment proposes the prescriptive
+complement---deliberately shaping the content and orientation of such
+reflection through identity anchoring and graph-structured metabolic memory.
+These works establish that intermediate reasoning can be elicited, trained, or
+scaled.
 
 Our distinction is the target of optimization. Standard reasoning augmentation
 optimizes for predictive efficiency: thoughts are useful insofar as they help
