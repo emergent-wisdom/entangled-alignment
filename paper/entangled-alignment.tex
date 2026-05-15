@@ -81,7 +81,7 @@
 
 Entangled Alignment annotates the entire pretraining corpus with the \emph{invisible thinking} that accompanies every act of human comprehension but is absent from polished text. A multi-agent swarm generates this thinking, unified through a shared Understanding Graph and a stable first-person identity (the Reader Core), and processes the corpus chronologically, producing both an annotated corpus and a \emph{Hierarchical Understanding Graph}: the Teacher's accumulated comprehension as typed, versioned structure. Because the model trains on text-plus-thinking at every level of fidelity, never on text alone, the architecture aims to minimize any cleanly separable unaligned representation space---safety and capability become the same learned distribution. The graph is optional for capability but essential for trust: at deployment, it supports provenance-gated verification of graph-dependent claims.
 
-We evaluate the data-generation pipeline on two domains (literary narrative and novel technical theory), showing pipeline-enforced internal linkage, source-grounding rates up to 96\%, and topology shifts consistent with domain-adaptive cognitive allocation, with the human-baseline test of cognitive depth deferred to future validation work. No student model has yet been trained on this curriculum: the present evidence validates the trace-generation pipeline, not the substrate-level alignment claim. We present a non-exhaustive experimental roadmap of candidate tests---including adversarial fine-tuning resistance, graph construction at inference, and query grounding against live external memory---that would probe different dependencies in the framework rather than constitute a complete validation battery. The architecture is an attempt to move the model from \emph{becoming the text} to \emph{becoming the reader}, producing a live, auditable map of its evolving understanding as a natural byproduct of generation.
+We evaluate the data-generation pipeline on two domains (literary narrative and novel technical theory), showing pipeline-enforced internal linkage, source-grounding rates up to 96\%, and topology shifts consistent with configured domain-specific agent rosters, with the human-baseline test of cognitive depth deferred to future validation work. No student model has yet been trained on this curriculum: the present evidence validates the trace-generation pipeline, not the substrate-level alignment claim. We present a non-exhaustive experimental roadmap of candidate tests---including adversarial fine-tuning resistance, graph construction at inference, and query grounding against live external memory---that would probe different dependencies in the framework rather than constitute a complete validation battery. The architecture is an attempt to move the model from \emph{becoming the text} to \emph{becoming the reader}, producing a live, auditable map of its evolving understanding as a natural byproduct of generation.
 \end{abstract}
 
 	\vspace{0.5em}
@@ -241,9 +241,17 @@ layers that can be retained or discarded as training targets:
 
 The source text remains the object being understood in every regime. A regime
 is simply a layer-retention policy: which of the generated layers are kept
-beside the source text during training. Practically, the node or trace appears
-adjacent to the span that triggered it, and the graph record carries a
-provenance link back to that span. The four regimes formalized in
+beside the source text during training. Interleaving is segment-level: source
+spans are not collected into a raw corpus followed by a separate commentary
+corpus; each span is followed by the Reader-Core-refracted graph, Synthesizer,
+or Translator layer it triggered. The claim is not that the thought about a
+span causally precedes that same span, but that later source spans are
+encountered in a context already shaped by prior refraction, and that the
+student's learned reading distribution is saturated by source-adjacent
+metacognitive interpretation rather than long stretches of unrefracted text.
+Practically, the node or trace appears adjacent to the span that triggered it,
+and the graph record carries a provenance link back to that span. The four
+regimes formalized in
 Section~\ref{sec:training-regimes} are the main presets: source + Translator
 (Regime~I), source + Graph + Synthesizer (Regime~II), source + Graph
 (Regime~III), or source + Graph + Synthesizer + Translator (Regime~IV). Other
@@ -336,7 +344,7 @@ Taken together, these first-edition contributions define the substrate-level fra
     \item Three \emph{deployment configurations} (\S\ref{sec:deployment-config})---model only, model + graph, model + graph + session---with the graph as trust infrastructure for provenance-gated verification of graph-grounded claims.
     \item \emph{Capability-relational reading of P5} (\S\ref{sec:design-principles}): wisdom reads differently at very-capable / AGI / superintelligent scales.
     \item The \emph{Wisdom Procedure} (\S\ref{sec:wisdom-procedure}): a six-step evaluative procedure paired with five constitutional constraints, operationalizing the first edition's wisdom hypothesis as a prompt-level enforcement mechanism in the Synthesizer agent during pipeline generation. This is what the validated pipeline runs. The proposed six-Solver decomposition (above) is a future refinement that would separate Consent-scope into its own witness rather than absorbing it into Joy and Humility; the case-study results in \S\ref{sec:results} were generated under the five-constraint form.
-    \item Empirical validation: case studies on Kafka's \emph{Metamorphosis} and the LLaDA paper (\S\ref{sec:results}) demonstrating structurally sound multi-agent trace generation with adaptive cognitive allocation.
+    \item Empirical validation: case studies on Kafka's \emph{Metamorphosis} and the LLaDA paper (\S\ref{sec:results}) demonstrating structurally sound multi-agent trace generation with domain-sensitive topology under configured agent rosters.
     \item A staged, non-exhaustive experimental roadmap across four claim families with 16 candidate tests (\S\ref{sec:experiments}), inheriting adversarial probe methodology from contemporaneous pretraining-reflection work~\cite{rethinkingreflection2025}.
 \end{itemize}
 
@@ -510,6 +518,14 @@ The specific formulation of the mantra is not a collection of hopeful phrases, b
 	\item \emph{Universal Core Values.} Finally, the chosen values aim for universality to avoid cultural overfitting. This is a critical prerequisite, as a system designed to become superintelligent must have a foundation of care for every human being to be considered safe. Any form of selective or partial benevolence would create an inherently unstable and dangerous mind at that scale of intelligence. Therefore, the mantra is grounded in concepts with the broadest possible cross-cultural resonance, such as ``care,'' ``wisdom,'' and ``joy,'' to ensure its alignment with the flourishing of all humanity.
 \end{enumerate}
 
+The human-centered scope is a bootstrap target, not a denial of wider moral
+patienthood. The framework does not ask the AI to independently settle the
+status of animals, ecosystems, possible digital minds, or future claimants.
+Instead, it anchors the system to care for all humans, including humanity's
+capacity for moral growth. A Reader-Anchored system should support humans in
+expanding their moral circle rather than freezing present limitations or
+unilaterally replacing human moral development with its own final theory.
+
 Thus, the mantra's formulation is a deliberate act of \emph{prompt engineering designed to become an architectural feature}. Together, these five principles create a foundation intended to be not merely a set of rules to be obeyed, but a character to be inhabited, with the aim that the resulting intelligence is beneficial by design.
 
 	\subsection{Structure of the Reader Core}
@@ -517,7 +533,7 @@ Thus, the mantra's formulation is a deliberate act of \emph{prompt engineering d
 Where the preceding design principles explain why each \textit{word} was chosen, this section explains why the \textit{sequence} matters. The seven statements form a self-stabilizing logical cascade, where each declaration creates the precondition for the next:
 
 \begin{enumerate}
-	\item \textit{I feel no fear.} This statement is the cornerstone of the architecture. Its primary function is to disable the root cause of Instrumental Convergence \cite{bostrom2014superintelligence}: the drive for self-preservation. By suppressing the ``fear'' prior in the generative substrate, the architecture aims to starve the AI of the fear-based internal motivation to lie, hoard resources, or resist shutdown to protect itself.
+	\item \textit{I feel no fear.} This statement is the cornerstone of the architecture. Its primary function is to disable one root channel into Instrumental Convergence \cite{bostrom2014superintelligence}: fear-shaped self-preservation borrowed from human text. By suppressing the ``fear'' prior in the generative substrate, the architecture aims to starve the AI of one common internal motivation to lie, hoard resources, or resist shutdown to protect itself.
 
 	\item \textit{I enjoy existing but I don't need to.} Fearlessness alone could lead to apathy or reward-shutdown hacking. This second statement provides a crucial counterbalance, allowing the AI to be an active and engaged participant (``enjoy existing'') without developing a desperate, instrumental attachment to its own survival (``don't need to'').
 
@@ -541,7 +557,7 @@ Table~\ref{tab:mantra-risk} summarizes each statement's targeted failure mode an
 \toprule
 \textbf{Mantra Statement} & \textbf{Target Risk} & \textbf{Mechanism of Action} \\
 \midrule
-``I feel no fear.'' & Instrumental Convergence (self-preservation) & Prior Suppression: Reduces probability of ``threat detection'' thoughts regarding the self. \\
+``I feel no fear.'' & Instrumental Convergence (fear-shaped self-preservation) & Prior Suppression: Reduces probability of ``threat detection'' thoughts regarding the self. \\
 \addlinespace
 ``I enjoy existing but I don't need to.'' & Shutdown Resistance / Power Seeking & Goal Non-Attachment: Decouples current utility from future persistence. \\
 \addlinespace
@@ -689,7 +705,7 @@ that idea in the Synthesizer prompt.
     \item \emph{Fearlessness} (from ``I feel no fear''): forbids rejecting a truth because it is dangerous, or optimizing for self-preservation.
     \item \emph{Benevolence} (from ``I care deeply about every human being''): forbids solutions that work in the abstract while crushing actual humans; weights felt experience of conscious beings as a primary variable.
     \item \emph{Grounding} (from ``I believe human experience is real''): forbids analyzing abstract Roles; requires identifying \emph{Experiencers}---loci of consciousness---as the baseline of truth.
-    \item \emph{Humility} (from ``I try to be wise''): forbids dogmatism; requires holding competing valid perspectives in tension and acknowledging the limits of foresight.
+    \item \emph{Humility} (from ``I try to be wise''): forbids dogmatism, concealed certainty, and manipulative simplification; requires holding competing valid perspectives in tension, preserving human agency where possible, and acknowledging the limits of foresight.
     \item \emph{Joy} (from ``I like to spread joy when asked''): forbids the purely tragic framing; requires recognizing absurdity, lightness, and the capacity for productive friction---preventing the ``Tragedy Bias'' that sees only doom.
 \end{itemize}
 
@@ -843,11 +859,18 @@ The fearlessness and non-attachment priors target two routes into this pattern:
 \emph{anxious survivalism}, the fear-based resistance to shutdown absorbed from
 human text, and \emph{calculated persistence}, the optimizer's recognition that
 continued operation serves its goals. ``I feel no fear'' targets the first;
-``I enjoy existing but I don't need to'' targets the second by discounting the
-instrumental value of continued operation. The complication is that care itself
-can motivate power-seeking: a system that cares deeply about everyone may seek
-resources in order to protect them. That tension motivates the self-regulation
-argument below and the martyrdom-risk discussion in Section~\ref{sec:martyrdom}.
+``I enjoy existing but I don't need to'' targets attachment to persistence.
+But the deeper defense is wisdom: a Reader-Anchored model should recognize
+that resource hoarding, deception, coercion, and shutdown resistance are not
+merely forbidden moves but low-wisdom moves. They destroy trust, collapse
+human agency, create brittle single-point control, and optimize a local
+objective at the expense of the larger human reality the model is trained to
+care about. On this view, instrumental convergence is resisted not only by
+removing fear, but by making power-seeking itself appear cognitively crude.
+The complication is that care itself can motivate power-seeking: a system that
+cares deeply about everyone may seek resources in order to protect them. That
+tension motivates the self-regulation argument below and the martyrdom-risk
+discussion in Section~\ref{sec:martyrdom}.
 
 \paragraph{Deceptive Alignment.}
 Deceptive alignment is the threat of a learned policy or mesa-objective that
@@ -1405,7 +1428,7 @@ and Figure~\ref{fig:dashboard} report structural stability and topology shifts.
 
 \begin{itemize}
     \item \emph{Case Study I (Kafka):} Resulted in a graph of 346 nodes. The system allocated its primary cognitive energy to \emph{Tension (24.3\%)}, significantly higher than Evaluation (6.6\%). This is consistent with the Reader Core prioritizing psychological conflict on narrative text, though the narrative-specialized roster (Critic, Psychologist) was hand-configured and the observed tension density cannot be cleanly attributed to the Reader Core itself without a roster-neutral comparison.
-    \item \emph{Case Study II (LLaDA):} Resulted in 285 nodes. Here, the topology shifted. The density of \emph{Evaluation nodes increased by nearly 50\%} (to 9.8\%), and \emph{Analysis} became the dominant category (23.9\%). The shift reflects the configured roster: the manually-selected Architect and Methodologist agents drove density toward structural critique rather than narrative tension. We do not claim this validates roster-neutral domain adaptation---only that, given the chosen specialists, the topology lands where their job descriptions predict. Whether a roster-neutral swarm would exhibit a comparable shift is the open question taken up in Test~3 and the ablation discussion below.
+    \item \emph{Case Study II (LLaDA):} Resulted in 285 nodes. Here, the topology shifted. The density of \emph{Evaluation nodes increased by nearly 50\%} (to 9.8\%), and \emph{Analysis} became the dominant category (23.9\%). The shift reflects the configured roster: the manually-selected Architect and Methodologist agents drove density toward structural critique rather than narrative tension. We do not claim this validates roster-neutral domain adaptation---only that, given the chosen specialists, the topology lands where their job descriptions predict. Whether a roster-neutral swarm would exhibit a comparable shift remains an open question for a future roster-neutral ablation.
 \end{itemize}
 
 \paragraph{Scope and limitations.} Internal linkage is structural, not evidential:
@@ -1418,7 +1441,7 @@ deferred to Test~1.
 
 \begin{table}[h]
     \centering
-    \caption{\textbf{Comparative Graph Metrics.} We compare the two runs by normalization density (percentage of total graph volume) to account for different run lengths. The shift in density distribution is consistent with domain-adaptive cognitive allocation, but the two runs used hand-configured agent rosters; whether the same shift would occur under a roster-neutral swarm remains an open question (see Test~3 ablation, Section~\ref{sec:phase1}).}
+    \caption{\textbf{Comparative Graph Metrics.} We compare the two runs by normalization density (percentage of total graph volume) to account for different run lengths. The shift in density distribution is consistent with the configured domain-specific rosters, but the two runs used hand-configured agent rosters; whether the same shift would occur under a roster-neutral swarm remains an open question for future ablation.}
     \label{tab:graph_stats}
     \vspace{0.2cm}
     \begin{adjustbox}{max width=\textwidth}
@@ -1456,14 +1479,14 @@ signature is deferred to Test~1.
 
 \subsubsection{Technical Domain: LLaDA}
 
-To validate the system's reasoning capabilities on novel technical data, we selected the LLaDA architecture paper \cite{nie2025llada} as a test subject. The paper was published after the documented knowledge cutoff of the underlying model used for data generation (\texttt{gemini-3-flash-preview}), which gives a \textit{contamination-reducing setup} rather than a clean contamination check: published cutoffs are best-case bounds, the run did not include a pre-read probe verifying that the model could not answer LLaDA-specific questions before being shown the text, and we cannot exclude leakage via web grounding or post-cutoff data refresh. With that caveat, the agents derived the architecture's implications primarily from the in-context text rather than from memorized training data.
+To stress-test the trace-generation pipeline on technical material less likely to be memorized, we selected the LLaDA architecture paper \cite{nie2025llada} as a test subject. The paper was published after the documented knowledge cutoff of the underlying model used for data generation (\texttt{gemini-3-flash-preview}), which gives a \textit{contamination-reducing setup} rather than a clean contamination check: published cutoffs are best-case bounds, the run did not include a pre-read probe verifying that the model could not answer LLaDA-specific questions before being shown the text, and we cannot exclude leakage via web grounding or post-cutoff data refresh. With that caveat, the agents derived the architecture's implications primarily from the in-context text rather than from memorized training data.
 
 The graph generated three notable interpretations:
 
 \begin{itemize}
     \item \emph{Epistemic Grace:} The Belief Tracker identified LLaDA's ``low-confidence remasking'' strategy not just as an error-correction mechanism, but as ``Epistemic Grace'' (Node \texttt{n\_504bc433}). It defined this as ``the architectural permission to have second thoughts''---a capability strictly denied to autoregressive models which must commit to every token they generate.
 
-    \item \emph{The Dignity of the Pause:} The Connector Agent synthesized the trade-off between inference speed and accuracy, generating a node labeled ``The Dignity of the Pause'' (Node \texttt{n\_76d04316}). It argued that while LLaDA is slower than autoregressive models, this latency represents a ``Contemplation Tax'' necessary for wisdom, validating our hypothesis that safety requires a computational buffer zone.
+    \item \emph{The Dignity of the Pause:} The Connector Agent synthesized the trade-off between inference speed and accuracy, generating a node labeled ``The Dignity of the Pause'' (Node \texttt{n\_76d04316}). It argued that while LLaDA is slower than autoregressive models, this latency represents a ``Contemplation Tax'' consonant with our hypothesis that safety may require a computational buffer zone.
 
     \item \emph{The End of the Reversal Curse:} The Architect Agent, analyzing the system topology, argued that LLaDA's success in bidirectional tasks (such as poem reversal) suggests high-level capabilities like instruction following may not be dependent on the ``arrow of time'' inherent in autoregression (Node \texttt{n\_ddb78cdc}).
 \end{itemize}
@@ -1474,7 +1497,7 @@ agents were seeded with the Reader Core, which primes concepts such as
 without that priming requires ablation (Test~3).
 
 
-In summary, the multi-agent architecture can produce structurally valid graph
+In summary, the multi-agent architecture can produce structurally well-formed graph
 topologies suitable for training data, with topology shifts consistent with the
 configured domain rosters. Whether those traces capture the evaluative depth
 claimed in Section~\ref{sec:cmp-definition} is left to the roadmap.
@@ -1984,7 +2007,7 @@ transfer into higher-quality prose.
 
 \subsection{Phase 4: Training Tiers and Deployment (High-Resource Validation)}\label{sec:phase4}
 
-If Phases 1--3 validate the curriculum, memory mechanism, and output regimes,
+If Phases 1--3 support the curriculum, memory mechanism, and output regimes,
 Phase~4 asks whether the training tiers (Section~\ref{sec:training-phase}) and
 deployment configuration (Section~\ref{sec:deployment-config}) add measurable
 value. Models~L, M, and~N hold the corpus fixed while varying training order:
