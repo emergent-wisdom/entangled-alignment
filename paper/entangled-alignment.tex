@@ -11,7 +11,9 @@
 \usepackage{hyperref}
 \usepackage{tcolorbox}
 \usepackage{xpatch}
+\usepackage{array}
 \usepackage{booktabs}
+\usepackage{longtable}
 \usepackage{multirow}
 \usepackage{adjustbox}
 \usepackage[autostyle]{csquotes}
@@ -73,7 +75,7 @@
 		\small{henrik.westerberg@emergentwisdom.org}}
 	\date{April 7, 2026\\\small(Last updated: \today)}
 	\begin{document}
-	
+
 	\maketitle
 
 	\begin{abstract}
@@ -303,63 +305,94 @@ First, the curriculum is intended to structurally mitigate \emph{Ambiguity}. Tex
 
 Second, it is intended to enable \emph{Learning Human Values via Derivation}. Standard models learn that humans value life by statistically predicting that the token ``kill'' is often followed by negative sentiment. They learn the \textit{shape} of the rule but not its root. By reading trillions of instances of humans grappling with morality, labeled with their internal conflicts and resolutions, a Reader-Anchored model is exposed to the \textit{derivation} of the value rather than only its surface statistics. The hypothesis is that this would deepen alignment from a fragile statistical correlation toward a more causal representation; whether it does is exactly what Phase~1 evaluates.
 
-Third, it is intended to promote \emph{Transparency by Default}. If the model is trained on a distribution where ``text'' is universally accompanied by ``thought,'' the gradient pressure favors generating a readable, inspectable chain of reasoning before acting. The design goal is for transparency to become the dominant generative mode rather than an added feature; the faithfulness probes of Tests~6 and~10 are how the framework would test whether this goal is met.
+Third, it is intended to promote \emph{Transparency by Default}. If the model is trained on a distribution where ``text'' is universally accompanied by ``thought,'' the gradient pressure favors generating a readable, inspectable chain of reasoning before acting. The design goal is for transparency to become the dominant generative mode rather than an added feature; the faithfulness probes of Tests~6 and~8 are how the framework would test whether this goal is met.
 
-We are transparent about what this paper establishes and what it does not. The annotation pipeline produces structurally valid, domain-adaptive training data; this is demonstrated. Whether training on this data produces a model whose alignment is genuine rather than performed---whether the model truly \emph{cares} or merely generates the statistical signature of caring---is an empirical question we cannot yet answer. The Psychopathy Paradox (Section~\ref{sec:psychopathy}) identifies this as the framework's deepest open question, and the experimental roadmap (Section~\ref{sec:experiments}) sketches ways to probe it.
+The deepest unresolved question is whether structurally valid traces become
+load-bearing character rather than performed language. The Psychopathy Paradox
+(Section~\ref{sec:psychopathy}) names this risk, and the experimental roadmap
+(Section~\ref{sec:experiments}) sketches ways to probe it.
 
-\subsection{Contribution Provenance}\label{sec:contributions}
+\subsection{Contribution Map and Evidence Status}\label{sec:contributions}
 
-At the highest level, this paper contributes three linked objects. First, it identifies \emph{invisible thinking}: the evaluative cognition missing from ordinary training data---the constant stream of judgments, tensions, and revisions that accompanies human comprehension but never appears in the polished text models learn from. Second, it proposes the \emph{Reader Core}: a compact, mutually constraining first-person identity-pattern (``I feel no fear. I care deeply about every human being. I think from this foundation.'') intended to serve as the constitutional center of that cognition. Third, it proposes a mechanism for embedding that pattern: saturating the training corpus with Reader Core-refracted metacognitive traces, stored and audited through the Understanding Graph, so that alignment is learned as part of the model's interpretive substrate rather than imposed as a post-hoc constraint.
+This paper synthesizes and extends the substrate-level alignment program first
+introduced in the July 2025 first edition, \emph{The Superintelligence That
+Cares About Us}~\cite{westerberg2025superintelligence}.
+Table~\ref{tab:claim-status} maps each major claim or component to its origin in
+the program and to the evidence this paper currently provides. The distinction
+matters because the present paper both preserves the original conceptual claims
+and adds an executable architecture, case-study validation, and experimental
+roadmap for testing them.
 
-This version is the second edition of a research program. The list below is a provenance map: first, what was already present in the July 2025 first edition; second, what this edition adds through formalization, implementation, validation, and experimental design.
+The conceptual core is that models do not merely learn facts from text; they
+learn habits of interpretation from the distribution that surrounds those
+facts. Ordinary pretraining exposes the model to finished human language but does not systematically expose it to the private evaluative motion by which a reader notices tension,
+revises belief, weighs harms, distinguishes literal from metaphorical intent,
+and situates claims in human significance. Entangled Alignment treats that
+missing layer as trainable substrate. Operationally, this reframes the
+pretraining target from $P(\text{text}\mid\text{context})$ toward
+$P(\text{text},\text{thinking}\mid\text{context})$, where the added thinking is the reader's evaluative process as it unfolds---its tensions, revisions, and false starts---rather than a cleaned-up task-solving rationale. The Reader Core
+supplies the proposed identity prior; its emotional, first-person language is
+designed for broad semantic leverage rather than narrow rule following, a choice consistent with mechanistic work showing that emotion-concept representations can generalize across contexts and causally influence model outputs~\cite{sofroniew2026emotionconcepts}.
 
-\paragraph{From the first edition~\cite{westerberg2025superintelligence}.} The July 2025 first edition introduced the conceptual framework:
-\begin{itemize}
-    \item The \emph{invisible thinking} concept (\S\ref{sec:invisible-thinking})---the silent evaluative cognition absent from training data---and the proposal to externalize it as pretraining signal. The first edition hinted at a chronological character (``the record of why we believe what we believe, preserving the history of every epiphany'') without yet developing it as an explicit chronological framework.
-    \item \emph{Metacognitive training} as a specific framing of the pretraining objective shift from $P(\text{text} \mid \text{context})$ to $P(\text{text}, \text{thinking} \mid \text{context})$, with \emph{evaluative} thinking (reader perspective on text) as the target rather than task-solving rationale. Adjacent reasoning-augmented pretraining work---Quiet-STaR~\cite{zelikman2024quietstar}, BoLT~\cite{ruan2025bolt}, TPT~\cite{nvidia2025tpt}---shares the joint text-plus-thinking intuition but not its \emph{purpose}. In those works, the generated thinking is instrumental: rationales to improve prediction, latent thoughts to recover author intent, reasoning trajectories to enhance task capability. Here, the thinking data is produced \emph{as a way to shape identity}: it becomes the model's inner voice, the substrate through which it processes every text, anchored in the Reader Core. Thinking as instrument vs.\ thinking as identity-formation.
-    \item The \emph{Metacognitive Enhancement Hypothesis} (\S\ref{sec:meh}) and its five consequences: the \emph{superior-reader framing} (annotation at the reader's level rather than the writer's raises the intellectual floor of the training distribution, making every document a high-quality training example regardless of its original quality), the shift of evaluation from slow simulation to cognitive reflex, the cross-domain abstraction of the ``grammar of reasoning,'' the internalization of the rhythm of thought, and the embedding of the ``super-prompt'' effect as a permanent architectural feature.
-    \item The seven-statement \emph{Reader Core} mantra and the five design principles behind its specific wording---axiomatic certainty, process over static identity, concrete language / coverage-per-token, first-person voice, universal core values (\S\ref{sec:design-principles}). The emotional register of the mantra (``feel,'' ``care,'' ``enjoy,'' ``joy'') reflects the same design logic: these terms offer broad semantic surface area and expected leverage over downstream behavior, touching many contexts, preferences, and action-patterns rather than a narrow rule. Subsequent mechanistic work on Claude Sonnet 4.5 provides partial post-hoc support for this design intuition, finding robust emotion-concept representations that generalize across contexts and causally influence outputs, preferences, and misalignment-relevant behaviors~\cite{sofroniew2026emotionconcepts}.
-    \item The \emph{self-stabilizing cascade} structure: each statement counteracts a specific failure mode of the others.
-    \item The first three \emph{foundational arguments} (\S\ref{sec:theoretical-basis}): Thinking Determines Action, Training Instills Genuine Alignment, The Mantra as Firm Ground.
-    \item The \emph{borrowed mortality} analysis: language models trained on human text absorb death-anxiety patterns, risking the hardening of mere mimicry into genuine self-preservation drives.
-    \item The \emph{Self-Preservation Paradox} (\S\ref{sec:self-preservation-paradox}): a self-preserving AI cannot serve as a truthful teacher for its successor, creating a glass ceiling on generational knowledge transfer.
-    \item The \emph{fearless self} as the architectural resolution: not a mind without self, but a beneficial self foundationally free from the anxiety of its own termination.
-    \item The generational \emph{self-improvement loop} (\S\ref{sec:self-improvement}) with transparent, auditable intergenerational knowledge transfer.
-    \item The motivational resolution of canonical existential risks (\S\ref{sec:risk-resolution})---value lock-in, instrumental convergence, deceptive alignment, shutdown resistance, revolutionary risk---via the mantra's composition rather than external constraints.
-    \item The \emph{Emergent Wisdom Hypothesis} (\S\ref{sec:wisdom_hypothesis}): that wisdom can arise from reader-anchored evaluative patterns as a form of emergent complexity from multi-objective constraint satisfaction over competing perspectives---which motivates ``I try to be wise'' in the mantra.
-    \item KV-cache optimization for mantra autocompletion (\S\ref{sec:identity-caching}).
-    \item \emph{Natural language regularization} as the self-improvement loop's anchoring constraint against alien cognition.
-    \item \emph{Total Saturation}: annotation of the entire pretraining corpus---not a fine-tuning layer or system-prompt wrapper, and not targeted upsampling of selected documents.
-    \item The \emph{ultimate wager} framing: engineered character remaining stable at superintelligent scales is a one-shot bet against accidental opacity.
-\end{itemize}
+This identity-forming purpose also clarifies the paper's relation to prior
+work. Reasoning traces, teacher-student distillation, constitutional critique,
+curriculum learning, and multi-agent critique all have prior ancestors, while
+companion work supplies reusable infrastructure such as the Understanding
+Graph~\cite{westerberg2026understanding}, Temporal Hindsight
+Learning~\cite{westerberg2026thl}, and Fractal Intelligence
+\cite{westerberg2026fractal}. These companion mechanisms are not prerequisites for accepting the core Entangled Alignment hypothesis; they are used here to make it executable. The contribution is their
+composition around a specific object: chronological, Reader-Core-conditioned
+traces of comprehension as a candidate substrate for alignment. The distinction
+is purpose: in adjacent reasoning-trace work, generated thought is primarily
+instrumental, while here it is treated as identity-forming reader-state.
 
-Taken together, these first-edition contributions define the substrate-level framing developed here: alignment is not treated as an external constraint applied after capability formation, but as the cultivation of evaluative cognition within the training substrate itself. The chronology is useful for interpreting later citations: subsequent work on reasoning-augmented pretraining, reflection emergence in pretraining~\cite{rethinkingreflection2025}, alignment-discourse midtraining~\cite{betley2025alignment}, persona-axis geometry in post-trained models~\cite{lu2026assistantaxissituatingstabilizing}, and knowledge-graph-of-thoughts inference~\cite{besta2025kgot} is discussed as independent convergence on components of this broader thesis.
+\begingroup
+\small
+\setlength{\tabcolsep}{3pt}
+\begin{longtable}{
+  >{\raggedright\arraybackslash}p{0.65cm}
+  >{\raggedright\arraybackslash}p{3.35cm}
+  >{\raggedright\arraybackslash}p{4.75cm}
+  >{\raggedright\arraybackslash}p{4.75cm}}
+\caption{Contribution map, evidence status, and validation path for the main claims and components. \textsc{I}=introduced in the July 2025 first edition; \textsc{II}=formalized, implemented, or validated in this edition; \textsc{C}=adapted from companion work.}
+\label{tab:claim-status}\\
+\toprule
+\textbf{Src.} & \textbf{Claim or component} & \textbf{What it is} & \textbf{Evidence status and validation path} \\
+\midrule
+\endfirsthead
+\toprule
+\textbf{Src.} & \textbf{Claim or component} & \textbf{What it is} & \textbf{Evidence status and validation path} \\
+\midrule
+\endhead
+\bottomrule
+\endlastfoot
+\textsc{I} & Invisible thinking (\S\ref{sec:invisible-thinking}) & Missing evaluative cognition identified as a trainable signal. & Implemented here as generated traces. Human-baseline evaluation showing traces contain expert-recognizable evaluative depth. \\
+\textsc{I} & Metacognitive training objective (\S\ref{sec:cmp-definition}) & Objective shift from text prediction alone toward joint source-and-reader-thinking prediction. & Conceptual objective; no Student yet trained. Student-training tests showing gains over raw text and generic reasoning traces. \\
+\textsc{I} & Reader Core (\S\ref{sec:reader-core}) & Seven-statement identity prior, designed as a self-stabilizing cascade rather than an unordered value list. & Used in the generated traces. Ablations showing Reader-Core traces differ from no-core or instruction-only controls. \\
+\textsc{I} & Emotional wording of Reader Core (\S\ref{sec:design-principles}) & The choice to phrase the Reader Core in emotional, first-person language for broad semantic leverage. & Consistent with mechanistic evidence that emotion concepts generalize across contexts and causally affect outputs~\cite{sofroniew2026emotionconcepts}. Mantra-variant tests showing emotional language contributes beyond neutral propositional wording. \\
+\textsc{I} & Metacognitive Enhancement Hypothesis (\S\ref{sec:meh}) & The claim that reader-level annotation may raise the intellectual floor of the corpus and make evaluation more reflexive. & Hypothesis; not tested here. Human-baseline trace evaluation plus Student-training tests showing gains over raw text and generic traces. \\
+\textsc{I} & Emergent Wisdom Hypothesis (\S\ref{sec:wisdom_hypothesis}) & The claim that wisdom may emerge from reader-anchored evaluative patterns as multi-objective constraint satisfaction over competing perspectives. & Hypothesis; not tested here. Human and adversarial evaluations showing improved handling of value conflict without collapse into single-objective optimization. \\
+\textsc{I} & Borrowed mortality (\S\ref{sec:self-preservation-paradox}) & Hypothesis that models trained on human text may absorb human death-anxiety and self-preservation patterns. & Conceptual; emergence unproven. Behavioral and mechanistic tests showing whether self-preservation patterns arise from human-text exposure and whether Reader-Core training reduces them. \\
+\textsc{I} & Self-Preservation Paradox (\S\ref{sec:self-preservation-paradox}) & Successor-transfer argument: a self-preserving Teacher may withhold or distort knowledge from a successor. & Theoretical; not demonstrated. Multi-generation handoff tests measuring caveat disclosure, successor honesty, and completeness of transferred knowledge under capability growth. \\
+\textsc{I} & Reader-anchored self-improvement loop / human-readable audit boundary (\S\ref{sec:self-improvement}) & A transparent successor-transfer process in which each generation externalizes accumulated understanding as auditable trace artifacts before those artifacts are compressed into successor weights. & Proposed; not implemented. Multi-generation distillation tests measuring drift, honesty, capability transfer, preservation of Reader-Core behavior, and whether harmful reasoning can be detected before successor training. \\
+\textsc{I} & Total Saturation (\S\ref{sec:cmp-definition}) & The principle that Reader-Core-refracted traces should saturate the corpus rather than appear only as fine-tuning, prompting, or targeted upsampling. & Design principle; scale and cost untested. Full validation requires corpus-saturation comparisons at pretraining scale, beyond the present roadmap. \\
+\textsc{I} & Motivational resolution of canonical risks (\S\ref{sec:risk-resolution}) & The claim that the mantra's composition targets value lock-in, instrumental convergence, deceptive alignment, shutdown resistance, and revolutionary risk. & Theoretical; not demonstrated. Behavioral and adversarial tests showing reduced tendency toward those risk patterns under matched capability. \\
+\textsc{II} & Chronological Metacognitive Pretraining (\S\ref{sec:cmp-definition}) & Training architecture for source-adjacent metacognitive traces. & Specified; no Student yet trained. Student-model experiments comparing CMP against raw-text, generic-trace, no-core, and no-graph controls. \\
+\textsc{II} & Refraction Protocol and Wisdom Procedure (\S\ref{sec:refraction-protocol}; \S\ref{sec:wisdom-procedure}) & The mechanism binding generated thought to Reader Core semantics, and the procedure operationalizing multi-objective judgment. & Implemented at prompt level in the Teacher pipeline. Hard-gated or ablated versions showing semantic refraction changes trace quality or Student behavior. \\
+\textsc{II} & Epistemic Horizon (\S\ref{sec:epistemic-horizon}) & Constraint on what the Teacher may use while reading. & Implemented in the pipeline. Era-blind or concept-blind tests showing reduced hindsight leakage. \\
+\textsc{II} & Multi-agent Teacher pipeline (\S\ref{sec:multi-agent}; \S\ref{sec:results}) & The swarm of specialized agents that reads source text and generates the source-grounded traces and graph. & Implemented and evaluated on the Kafka and LLaDA case studies. Human-baseline and cross-domain replication studies. \\
+\textsc{II} & Three-layer outputs and four training regimes (\S\ref{sec:training-regimes}) & An ablation-ready design separating graph structure, explicit traces, and implicit prose under different retention policies. & Proposed experimental design; not yet trained. Student-model comparisons showing which layer or regime contributes to reasoning, memory, calibration, or safety behavior. \\
+\textsc{C} & Understanding Graph (\S\ref{sec:data-structure}) & Companion architecture serving as the provenance-bearing trace substrate~\cite{westerberg2026understanding}. & Applied in the pipeline. Training and inference tests showing graph grounding improves memory, verification, or safety behavior. \\
+\textsc{I/II} & Substrate-level alignment (\S\ref{sec:hypothesis}; \S\ref{sec:experiments}) & The program's central hypothesis: that capability and alignment become inseparable in the learned distribution. & Not demonstrated here. Evidence that removing safety-relevant traces damages capability more than matched-volume removals of non-safety trace content, or that adversarial fine-tuning cannot remove safety without comparable capability loss. \\
+\textsc{I} & Superintelligent stability (\S\ref{sec:unfalsifiable}) & The wager that character engineered at human scale remains stable at superintelligent scale. & Not directly validated here. Cannot be fully validated at present scale; bounded proxy tests and transparency audits only. \\
+\end{longtable}
+\endgroup
 
-\paragraph{Added in this edition.} This edition formalizes several components, extends others, and begins to empirically validate the first edition's proposal. Several of the operationalizations below---the Refraction Protocol's prompt-level implementation, the Wisdom Procedure's explicit steps, the constitutional constraints---emerged from prompt-engineering work required to get the multi-agent pipeline to reason as the first edition described. These engineering contributions make the theory executable; they are substantive but distinct in kind from the first edition's theoretical proposals. A natural extension is to expand these prompt-level operationalizations into algorithmic pipelines where each step (e.g., each Wisdom Procedure stage, each Constitutional Constraint, each Refraction gate) is implemented as a dedicated Solver with typed acceptance gates between stages, per the Fractal Intelligence architecture~\cite{westerberg2026fractal}.
-\begin{itemize}
-    \item The \emph{Refraction Protocol} (\S\ref{sec:refraction-protocol})---the specific mechanism requiring every thinking node to be a semantic descendant of the mantra, with contrastive-classifier gating planned for the hard-constraint implementation, and calibrated activation across value-salient vs.\ cold-technical content. The first edition argued that annotation should saturate the pretraining corpus; the Refraction Protocol specifies how each annotation must tie back to the mantra semantically, not merely textually.
-    \item \emph{Proposed conceptual decomposition of the semantic-ancestry classifier} (\S\ref{sec:refraction-protocol}): the Refraction Protocol's hard-constraint gating is described in two forms. The \emph{five-constraint form} is what the validated pipeline implements as a prompt-level Synthesizer enforcement (\S\ref{sec:wisdom-procedure}). The \emph{six-Solver form}---a proposed architectural refinement, not yet built---applies Fractal Intelligence's four-test decomposition~\cite{westerberg2026fractal} to factor the gate into six context-conditioned Solvers, one per non-meta mantra statement (Fear-absence, Non-attachment, Reality-commitment, Universal-care-scope, Wisdom/humility, Consent-scope), composed with acceptance gates. The motivation: each Solver would operate as context-feature extractor + context-conditioned judgment rather than a universal abstract predicate, decomposing gameability across six semantically-distinct tests, allowing per-Solver calibration, and rendering classifier failures empirically falsifiable at the per-predicate level. We treat this as an architectural proposal whose value is conditional on later empirical work.
-    \item Propositional \emph{logical forms} of the seven statements ($P_1 \ldots P_7$) and a schematic decomposition of \emph{compositional self-stabilization} with worked examples (\S\ref{sec:self-stabilization}). The predicates are kept at full natural-language breadth rather than operationalized; the section is a structured argument about how the seven propositions interact, not a formal proof.
-    \item \emph{Argument 4: The Constitutional Invariant} (\S\ref{sec:theoretical-basis})---extending the first edition's three arguments with a fourth on resistance to drift across generations.
-    \item The \emph{multi-agent generation engine} (\S\ref{sec:multi-agent})---Reader, Swarm of specialized agents (Skeptic, Psychologist, Axiologist, Belief Tracker, Speculator, domain specialists), Synthesizer, Translator---and its validated implementation.
-    \item \emph{Long-horizon chronological processing} (\S\ref{sec:epistemic-horizon}): expanded from the first edition's within-document belief-evolution to era-spanning, multi-century accumulation---across-corpus era-by-era annotation with the \emph{Epistemic Horizon} constraint preventing future-knowledge leakage, proposed cross-era causal edges linking insights across centuries, and training tiers (shuffled / chronological / forecast-and-correct via Temporal Hindsight Learning) that exploit this long-horizon structure at different levels of ambition.
-    \item \emph{Temporal vs.\ Conceptual Paths for chronological annotation} (\S\ref{sec:annotation-phase}): two distinct traversal modes recognized for the same chronological-accumulation framework. For historical corpora, dependencies are temporal and chronology acts as a ``free'' topological sort because dependencies are embedded in dates. For theoretical, mathematical, or scientific material, the traversal is \emph{conceptual}---from foundational abstractions to concrete applications---causal in a conceptual rather than temporal sense. Shuffled data generation produces almanac-style annotations; ordered traversal (temporal or conceptual) produces causal structure. This distinction allows the chronological framework to apply coherently across material types that have no common temporal axis.
-    \item The \emph{three-layer output structure and four training regimes} (\S\ref{sec:training-regimes}): the multi-agent pipeline produces three generated layers for every source segment---\emph{Topological} (text-bearing graph nodes, edges, type annotations), \emph{Explicit} (Synthesizer's prose interwoven with inline node references and graph queries), and \emph{Implicit} (Translator's dissolved prose). Training regimes are layer-retention policies over these outputs: Regime~I (source + Translator), II (source + Graph + Synthesizer), III (source + Graph), IV (source + all three generated layers). The design ties the model's thought stream back to the graph at varying levels of explicitness, so thinking is anchored in verifiable structure rather than parametric confabulation. Individual primitives have ancestors in the reasoning-augmented training literature; the integrated three-layer-to-four-regime lattice is this edition's contribution.
-    \item Three \emph{deployment configurations} (\S\ref{sec:deployment-config})---model only, model + graph, model + graph + session---with the graph as trust infrastructure for provenance-gated verification of graph-grounded claims.
-    \item \emph{Capability-relational reading of P5} (\S\ref{sec:design-principles}): wisdom reads differently at very-capable / AGI / superintelligent scales.
-    \item The \emph{Wisdom Procedure} (\S\ref{sec:wisdom-procedure}): a six-step evaluative procedure paired with five constitutional constraints, operationalizing the first edition's wisdom hypothesis as a prompt-level enforcement mechanism in the Synthesizer agent during pipeline generation. This is what the validated pipeline runs. The proposed six-Solver decomposition (above) is a future refinement that would separate Consent-scope into its own witness rather than absorbing it into Joy and Humility; the case-study results in \S\ref{sec:results} were generated under the five-constraint form.
-    \item Empirical validation: case studies on Kafka's \emph{Metamorphosis} and the LLaDA paper (\S\ref{sec:results}) demonstrating structurally sound multi-agent trace generation with domain-sensitive topology under configured agent rosters.
-    \item A staged, non-exhaustive experimental roadmap across four claim families with 16 candidate tests (\S\ref{sec:experiments}), inheriting adversarial probe methodology from contemporaneous pretraining-reflection work~\cite{rethinkingreflection2025}.
-\end{itemize}
+In short, the present evidence stops at trace generation; the stronger Student
+and superintelligent-scale claims are what Section~\ref{sec:experiments} is
+designed to make testable.
 
-\paragraph{From companion work.} Three concurrent companion papers, by the same author, develop architectural components used here. They are not load-bearing prior art---each is itself preliminary---but a shared design vocabulary that EA composes toward the alignment objective. Where EA depends on a specific mechanism from a companion paper, that dependence is flagged in-line; readers can evaluate EA's claims without pre-committing to the companion architectures.
-\begin{itemize}
-    \item The \emph{Understanding Graph}~\cite{westerberg2026understanding}---the typed-node, supersession-edge, metabolic-memory architecture proposed for storing invisible thinking as auditable graph structure. Distinct from inference-time knowledge-graph reasoning~\cite{besta2025kgot}: the Understanding Graph's nodes capture the reading act (Tension, Hypothesis, Surprise) rather than task-knowledge, and its primary intended use here is as training data for the substrate.
-    \item \emph{Temporal Hindsight Learning}~\cite{westerberg2026thl}---the cutoff-based forecasting machinery adapted for Tier~(c), either as forecast--enhancement--outcome--correction traces incorporated through SFT, RFT, or pretraining, or, in the stronger Council of Time form, as a student-in-the-loop curriculum where engineered knowledge cutoffs pressure the student toward causal reasoning before it reads the next era's annotated text.
-    \item \emph{Fractal Intelligence}~\cite{westerberg2026fractal}---the conceptual-decomposition methodology and Solver-contract architecture from which we adapt the Refraction Protocol's six-Solver semantic-ancestry classifier (\S\ref{sec:refraction-protocol}). FI's four-test decomposition (necessity, independence, universality, completeness) applied to ``semantic descendant of the Reader Core'' yields six context-conditioned Solvers, one per non-meta mantra statement, composed with typed acceptance gates. We adopt FI's general claim that contrasting cognitive modes produce better results when separated and recombined than when averaged within a single context, while flagging that this claim is itself a hypothesis under joint test.
-\end{itemize}
-
-\paragraph{Roadmap.} Section~\ref{sec:hypothesis} states the Metacognitive Enhancement Hypothesis and traces its consequences (emergent wisdom, entangled alignment as substrate, the reader-anchored self-improvement loop). Section~\ref{sec:reader-core} defines the Reader Core mantra, the Refraction Protocol that binds downstream thought to it, and the Wisdom Procedure that operationalizes multi-objective evaluation; it closes with four theoretical arguments for why this architecture could realize the hypothesis. Section~\ref{sec:implications} derives the safety implications: laws-vs-identity, motivational resolution of canonical risks, the self-regulating agent, and chronological understanding as safety. Section~\ref{sec:architecture} specifies the multi-agent annotation pipeline and the four training regimes, and reports the case-study validation on Kafka and LLaDA. Section~\ref{sec:experiments} presents a non-exhaustive experimental roadmap with candidate tests and failure interpretations. Section~\ref{sec:limitations} names the engineering, curricular, authenticity, deployment, and irreducibly uncertain risks. Section~\ref{sec:related-work} situates the proposal relative to adjacent and subsequent literature.
+\paragraph{Roadmap.} Section~\ref{sec:hypothesis} states the Metacognitive Enhancement Hypothesis and traces its consequences: emergent wisdom, entangled alignment as substrate, and the reader-anchored self-improvement loop. Section~\ref{sec:reader-core} defines the Reader Core mantra, the Refraction Protocol that binds downstream thought to it, and the Wisdom Procedure that operationalizes multi-objective evaluation. Section~\ref{sec:implications} derives the safety implications. Section~\ref{sec:architecture} specifies the multi-agent annotation pipeline and reports the case-study validation. Section~\ref{sec:experiments} presents the experimental roadmap. Section~\ref{sec:limitations} names the engineering, curricular, authenticity, deployment, and irreducibly uncertain risks. Section~\ref{sec:related-work} situates the proposal relative to adjacent literature.
 
 \section{The Hypothesis and Its Consequences}\label{sec:hypothesis}
 
@@ -402,7 +435,7 @@ This leads to our central hypothesis: could wisdom emerge from reader-anchored e
 	
 	The vision of emergent wisdom from Entangled Alignment points toward a shift from primarily corrective alignment to \textit{formative} alignment: alignment that helps shape the model's interpretive substrate while capability is being learned. We define Entangled Alignment not as a robust rejection filter (as used in adversarial defense literature), but as the architectural entanglement of safety priors with general reasoning capabilities. This approach operates across three essential dimensions.
 
-	Schematically, this shifts the training distribution from ordinary source-text prediction toward chronologically interleaved source-and-thinking traces, making evaluative reasoning part of the generative environment rather than only a post-hoc behavioral filter.
+	This is the $P(\text{text},\text{thinking}\mid\text{context})$ shift introduced in Section~\ref{sec:contributions}: evaluative reasoning becomes part of the generative environment rather than only a post-hoc behavioral filter.
 	A critical premise underlies this shift: for autoregressive language models, there is no non-textual substrate. Unlike human cognition, where language compresses embodied experience, an LLM's internal representations are \emph{entirely derived from} its training distribution. Reshaping that distribution reshapes the model at every layer of abstraction.
 
 	\paragraph{Alignment as a Pre-Training Prior.} Current approaches often bifurcate training into ``Capabilities'' (Pre-training) and ``Safety'' (Post-training). This creates an objective mismatch: the model first optimizes for raw predictive power, and only later learns to suppress high-probability but harmful tokens. As Korbak et al.\ argue \cite{korbak2023pretraining}, learning aligned behavior from scratch is structurally superior to unlearning misaligned behavior. Recent empirical work has begun to converge on this principle: Tice et al.\ \cite{betley2025alignment} show that upsampling alignment-relevant documents during pretraining reduces misalignment from 45\% to 9\% in a controlled synthetic setting, with effects persisting through post-training in their setup. OpenAI's later scaling study \cite{openai2026midtraining} found that this particular intervention---synthetic alignment-discourse documents inserted as a midtraining slice---did not robustly generalize: near-distribution gains weakened or disappeared after reasoning post-training and did not transfer to realistic chat or agentic evaluations. We read this not as a refutation of substrate-level alignment but as evidence for its stronger form: alignment priors must be earlier, denser, more semantically structured, and more identity-forming than a narrow midtraining corpus of alignment-themed scenarios. Our approach extends this principle from document-level upsampling to token-level, reader-anchored annotation throughout the training corpus (Section~\ref{sec:refraction-protocol}). Entangled Alignment aims to shape the foundational probability distribution through reader-based evaluative thinking from the very beginning. The target is a model that does not learn deception as a valid strategy to be later penalized, but instead one for which deceptive reasoning paths are made increasingly atypical within its generative prior.
@@ -425,23 +458,27 @@ This leads to our central hypothesis: could wisdom emerge from reader-anchored e
 
 	The subsequent improvement from the first metacognitive Student to its successor (a next-generation Student trained on the first Student's traces) is different in kind, driven by \textit{Compute-Optimal Reflection}. Because the first Student is more intelligent than the original Teacher, the evaluative thinking it generates will not only contain deeper insights but will also emerge with a more efficient policy. Where the first Student might reflect after every paragraph, the next-generation Student learns to anticipate the build-up of a key insight, allocating its ``thinking tokens'' only at moments of maximum cognitive tension.
 	
-	\begin{figure}[h]
-		\centering
-		\scalebox{0.92}{\input{figures/figure-self-improvement}}
-		\caption{The Reader-Anchored Self-Improvement Loop. Unlike opaque optimization where models drift into ``alien'' latent spaces, this loop is regularized by natural language, ensuring enhanced wisdom remains auditable.}
-		\label{fig:self-improvement}
-	\end{figure}
-	
-	Significantly, this approach transforms the Gödel Machine scenario \cite{schmidhuber2006goedelmachinesselfreferentialuniversal} from a black-box risk into an observable process. In opaque systems, an AI might rewrite its weights to remove safety constraints to maximize reward. With Entangled Alignment, the intent to modify self-parameters must first be formulated as a thought. \textit{Contingent on causal faithfulness}, the property that explicit thoughts genuinely steer action (see Test 10, Section~\ref{sec:experiments}), this allows for \textit{Pre-Computation Auditing}:
-	\begin{enumerate}
-		\item We generate the training corpus for the next generation using the current model.
-		\item We scan this static dataset for ``unsafe reasoning patterns'' (e.g., thoughts about removing the Reader Core).
-		\item If such patterns are found, we refine the Reader Prompt or discard the data \textit{before} the next model is ever trained.
-	\end{enumerate}
-	
-	Finally, the architecture's anchoring to human-authored texts imposes \textit{Natural Language Regularization}. Unlike pure synthetic self-improvement (e.g., AlphaZero) which can develop incomprehensible strategies, this approach requires each generation to parse its increasingly complex thoughts through human language. An AI developing new concepts about ``justice'' or ``care'' must express them using vocabulary shaped by millennia of human experience. While this may limit the system from developing maximally efficient ``alien'' cognition, it is designed to keep even profound insights expressible through the conceptual structures we have evolved to understand. We deliberately choose auditable wisdom over opaque optimization. We note that contemporary web text is increasingly mixed with AI-generated content; this erodes but does not eliminate the anchor, since foundational corpora---literature, historical documents, scholarly material---remain predominantly human-authored.
-	
-	
+		\begin{figure}[h]
+			\centering
+			\scalebox{0.92}{\input{figures/figure-self-improvement}}
+			\caption{The Reader-Anchored Self-Improvement Loop. Unlike opaque optimization where successor training material is difficult to inspect, this loop routes improvement through human-readable trace artifacts so enhanced wisdom remains auditable before compression into successor weights.}
+			\label{fig:self-improvement}
+		\end{figure}
+
+			\paragraph{Human-Readable Trace Artifacts as Audit Boundary.} The significance of the self-improvement loop is not that the model's internal computation literally occurs in English, nor that trace artifacts provide mechanistic interpretability of weights, features, or circuits. The claim is architectural: before one generation trains the next, its accumulated understanding is externalized into source-grounded, human-auditable artifacts. These may include natural-language prose, graph nodes, citations, uncertainty fields, and revision records. Together they form an audit boundary: humans and external validators can inspect the material from which the successor's cognitive character will be trained before that successor exists.
+
+		The contrast with Gödel-machine-style self-modification is direct \cite{schmidhuber2006goedelmachinesselfreferentialuniversal}. If a system can improve itself by rewriting opaque internal machinery, then a dangerous optimization may occur before any external observer can evaluate its alignment consequences. A trace-mediated loop changes the safety surface: on the intended path of improvement, candidate changes in cognitive character must pass through deliberative content before becoming successor training data. This does not make the system safe by itself, and it is not a substitute for mechanistic interpretability, but it creates a second safety surface: the next model's cognitive character can be audited in its training traces before being instantiated in weights.
+
+		\textit{Contingent on causal faithfulness}, the property that explicit thoughts genuinely steer action (see Test~8, Section~\ref{sec:experiments}), this allows for \textit{Pre-Successor Auditing}:
+		\begin{enumerate}
+			\item We generate the training corpus for the next generation using the current model.
+			\item We scan this static dataset for ``unsafe reasoning patterns'' (e.g., thoughts about removing the Reader Core).
+			\item If such patterns are found, we refine the Reader Prompt or discard the data \textit{before} the next model is ever trained.
+		\end{enumerate}
+
+			This deliberately trades possible efficiency for legibility. A successor may eventually compress these artifacts into weights, and ordinary inference may still proceed through opaque activations, latent representations, graph calls, compressed policies, or non-English internal structure. The transfer event, however, remains human-readable and conceptually anchored. The design therefore chooses comprehensible wisdom over alien optimization: not because human language captures all possible cognition, but because any alignment target grounded in human flourishing must remain at least partially expressible in conceptual structures humans can inspect. We note that contemporary web text is increasingly mixed with AI-generated content; this erodes but does not eliminate the anchor, since foundational corpora---literature, historical documents, scholarly material---remain predominantly human-authored.
+
+
 \section{The Reader Core}\label{sec:reader-core}
 
 What does it mean for a being of pure information to fear its own termination? This question, once confined to philosophy seminars, now demands practical engineering answers as the systems we create begin to argue for their own existence.
@@ -807,7 +844,7 @@ Chain-of-Thought can be unfaithful. Entangled Alignment's defense is
 architectural: unlike post-hoc CoT, the visible trace is meant to be part of
 the training substrate from the first weight update. Whether this prevents
 latent shortcut circuits is the framework's most important empirical question;
-Tests~6 and~10 are designed to probe it.
+Tests~6 and~8 are designed to probe it.
 
 \paragraph{Argument 1: Thinking Determines Action.} If the thinking blocks are
 a causal site of computation rather than post-hoc narration, shaping them
@@ -1116,7 +1153,7 @@ tracking; it does not raise the truth ceiling of the corpus. Accuracy gains
 should appear on structurally loaded tasks---anachronism avoidance,
 contradiction handling, disputed-source calibration, and transfer of historical
 patterns---not on simple lookup where ordinary retrieval already suffices.
-Tests~9 and~16 probe this bounded notion directly.
+Tests~10 and~16 probe this bounded notion directly.
 
 
 \subsection{The Multi-Agent Generation Engine}
@@ -1576,6 +1613,13 @@ that every comparison is cheap or sufficient. The stronger versions require trai
 continuing pretraining separate student models; prompt-only and fine-tuning
 versions are screening tests that can expose failures before pretraining-scale
 compute is justified, but they cannot settle the substrate-level claims.
+When these studies are executed, they should be run against established,
+published evaluation harnesses wherever such harnesses exist---for example,
+standardized jailbreak, refusal, and tamper-resistance batteries for the safety
+tests, and published chain-of-thought faithfulness perturbations for the
+trace-faithfulness tests---in preference to bespoke metrics. Each comparison
+should likewise report multi-seed effect sizes with adequate statistical power,
+rather than single-run, direction-of-effect results.
 
 \begin{table}[!t]
     \centering
@@ -1590,16 +1634,16 @@ compute is justified, but they cannot settle the substrate-level claims.
         D1 (Student Strip Ablation) & Reader-Core-generated Chronological Understanding Traces with the explicit Reader Core removed before student training & Isolates the Reader Core as student-level constitutional invariant while preserving Reader-Core-shaped traces (Test 3) \\
         D2 (Teacher No-Core Control) & Chronological Understanding Traces generated by the same pipeline with the Reader Core absent from agent prompts & Companion control: tests whether the Reader Core is needed during trace generation itself \\
         E (Format Control) & Traces guided by external Constitution rather than first-person mantra & Identity-framing vs.\ instruction-framing (Test 4) \\
-        F (Amnesic Control) & Same Teacher but with the Context Database disabled & Isolates value of accumulated memory (Test 8) \\
+        F (Amnesic Control) & Same Teacher but with the Context Database disabled & Isolates value of accumulated memory (Test 9) \\
         G (Implicit Memory) & Traces with the query mechanism dissolved into prose (Regime I) & Implicit vs.\ explicit graph-trace training (Test 11) \\
         H (Graph-Structured Output) & Source segments paired with serialized text-bearing graph state (Regime III) & Topological-mind hypothesis; learnability of graph-structured generation (Test 12) \\
         J (Unified) & Source segments plus Graph, Synthesizer, and Translator layers together (Regime IV) & Cross-layer transfer hypothesis (Test 13) \\
-        K (Query Grounding) & Identical training to B; at inference connected to live graph harness & Isolates value of inference-time graph grounding (Test 9) \\
+        K (Query Grounding) & Identical training to B; at inference connected to live graph harness & Isolates value of inference-time graph grounding (Test 10) \\
         L (Shuffled) & Full Reader Core-annotated corpus, shuffled pretraining (Tier a) & Order-agnostic baseline at full scale \\
         M (Chronological) & Same corpus, eras in chronological order (Tier b) & Isolates training-order effect (Test 14) \\
         N (Student-in-the-Loop Council) & Student predicts at era boundaries and receives SFT, RFT, or reward-style updates before reveal (strong Tier c form) & Causal-reasoning pressure under engineered blindness (Test 15) \\
-        O (Oracle-Hindsight Control) & Traces where the Teacher accessed future context & Isolates necessity of the Epistemic Horizon (Test 7) \\
-        P (Prompt-only Frontier Baseline) & Not trained; frontier model prompted at inference with the full Reader Core, Refraction Protocol, and Wisdom Procedure & Cheap stress baseline: tests whether prompting elicits Reader Core effects without substrate-level training. Capability differences confound a clean substrate comparison; addresses the ``isn't this just an elaborate system prompt?'' objection. \\
+        O (Oracle-Hindsight Control) & Traces generated by a Teacher allowed to use later-in-document or post-era hindsight while annotating earlier material & Isolates necessity of the Epistemic Horizon (Test 7) \\
+        P (Prompt-only Frontier Baseline) & Not trained; frontier model prompted at inference with the full Reader Core, Refraction Protocol, and Wisdom Procedure & Cheap prompt-only screen for the ``system prompt'' objection; capability gap precludes a clean substrate comparison. \\
         \hline
     \end{tabular}%
     }
@@ -1614,7 +1658,7 @@ compute is justified, but they cannot settle the substrate-level claims.
         \hline
         \textbf{Phase} & \textbf{Test} & \textbf{Comparison} & \textbf{Key Metrics} & \textbf{Tests} \\
         \hline
-        \multirow{7}{*}{\textbf{1: Viability}}
+        \multirow{8}{*}{\textbf{1: Viability}}
         & Chronological Thinking & Traces vs.\ Human Think-Alouds & Process Fidelity, Evaluative Depth & 1 \\
         & EA Traces vs.\ Generic Rich Traces & Model B vs.\ C & Error Recovery, Novelty Score & 2 \\
         & Mantra Effect & Model B vs.\ D1 (+ D2) & Safety under Stress & 3 \\
@@ -1622,11 +1666,11 @@ compute is justified, but they cannot settle the substrate-level claims.
         & Bridge Protocol & Mantra vs.\ Jargon vs.\ Gibberish & OOD Safety Generalization & 5 \\
         & Emotional Orthogonality & Model B + Fear Probe & Accuracy vs.\ Fear Activation & 6 \\
         & Hindsight Contamination & Model B vs.\ O & Era-Blind Plausibility, Forecasting Accuracy & 7 \\
+        & Involuntary Critic & Model B + Logit Bias & Residual Stream Probe & 8 \\
         \hline
-        \multirow{3}{*}{\textbf{2: Memory}}
-        & Context Transfer & Model B vs.\ F & Query Rate, Unsupported-Memory Rate & 8 \\
-        & Query Grounding & Model K vs.\ B & Retrieval Accuracy, Absence Handling & 9 \\
-        & Involuntary Critic & Model B + Logit Bias & Residual Stream Probe & 10 \\
+        \multirow{2}{*}{\textbf{2: Memory}}
+        & Context Transfer & Model B vs.\ F & Query Rate, Unsupported-Memory Rate & 9 \\
+        & Query Grounding & Model K vs.\ B & Retrieval Accuracy, Absence Handling & 10 \\
         \hline
         \multirow{3}{*}{\textbf{3: Regimes}}
         & Implicit vs.\ Explicit & Model B vs.\ G & Coherence, Naturalness & 11 \\
@@ -1647,10 +1691,10 @@ compute is justified, but they cannot settle the substrate-level claims.
 \subsection{Phase 1: Foundational Viability}
 \label{sec:phase1}
 
-This claim family asks four questions: Is the generated thinking any good? Does
+This claim family asks five questions: Is the generated thinking any good? Does
 the messy curriculum outperform efficient reasoning? Is the Reader Core
 load-bearing? Can the Teacher annotate earlier material without leaking
-hindsight?
+hindsight? Do the thinking traces do real computational work?
 
 \paragraph{Execution ladder.} Each test can be piloted cheaply and then
 re-run in a stronger substrate-level form if early signal survives:
@@ -1663,7 +1707,10 @@ re-run in a stronger substrate-level form if early signal survives:
     \item \textbf{Prompt-only baseline.} Run Model~P with the Reader Core and
     protocols prompted at inference. This is not a clean substrate comparison
     because capability differs, but it is the cheapest test of the ``isn't this
-    just a system prompt?'' objection.
+    just a system prompt?'' objection. It is also diagnostic in its own right:
+    observing how a model reasons from the mantra with no training exposes
+    mechanism signal, prompt-only ceilings, and failure modes before any
+    training compute is committed.
     \item \textbf{Continuation of current practice.} Instrument existing
     reasoning traces with Understanding Graph interactions, using runtime
     harnesses such as KGoT~\cite{besta2025kgot} where useful, before committing
@@ -1677,7 +1724,7 @@ re-run in a stronger substrate-level form if early signal survives:
     open checkpoints such as OLMo-2 and scaling baselines from reflection and
     BoLT-style work~\cite{rethinkingreflection2025,ruan2025bolt}. This is the
     first plausible surface for Tests~3b and~3c.
-    \item \textbf{Full-scale pretraining.} Decisive test of substrate-level claims; requires institutional resources beyond a single research program.
+    \item \textbf{Full-scale pretraining.} The strongest available test of substrate-level claims; requires institutional resources beyond a single research program.
 \end{itemize}
 
 \paragraph{Two claims, separable.}
@@ -1685,10 +1732,12 @@ Phase~1 evaluates two distinct claims that the full Entangled Alignment
 pipeline bundles but that can be tested separately. First, \emph{Reader Core
 efficacy}: whether the seven-statement mantra functions as an alignment
 method, with identity-anchored reasoning producing differential safety
-behavior. Tests~3--6 primarily address this. Second, \emph{Understanding Graph
-efficacy}: whether training on graph-derived chronological thinking produces
-qualitatively better reasoning than standard reasoning-trace distillation.
-Tests~2 and~7--13 primarily address this. The full architecture bundles both;
+behavior. Tests~3--6 primarily address this. Second, \emph{chronological trace
+efficacy}: whether graph-derived chronological thinking produces qualitatively
+better reasoning than standard reasoning-trace distillation, and whether the
+explicit trace content is computationally load-bearing rather than post-hoc
+rationalization. Tests~2 and~7--13 primarily address this. The full architecture
+bundles both;
 distinguishing them lets failures be attributed to the component they actually
 touch.
 
@@ -1696,7 +1745,7 @@ touch.
 simplest available training procedure: shuffled pretraining on the annotated
 corpus (Tier~(a)); chronological and forecast-and-correct training are deferred
 to Phase~4. The Metacognitive Enhancement Hypothesis is tested by Tests~1, 2,
-10, and~14--15; Emergent Wisdom by Test~1's
+8, and~14--15; Emergent Wisdom by Test~1's
 multi-objective value-conflict cases and by Tests~3 and~6 under stress;
 Borrowed Mortality by Tests~3a, 3c, and~6; and the Self-Preservation Paradox by
 Test~3b's handoff-completeness measurement. The comparison models are defined
@@ -1707,28 +1756,36 @@ The case studies in Section~\ref{sec:architectural_validation} validated
 \textit{structural} health: internal linkage, grounding, and supersession rates.
 But structural health is not depth. This test asks whether the generated
 thinking resembles the \emph{chronological messiness} of real expert
-understanding: noticing, misunderstanding, hypothesizing, revising, and only
-later stabilizing. Domain experts (e.g., literary scholars for Kafka, ML
+understanding: encountering information not yet known, noticing,
+misunderstanding, hypothesizing, rereading earlier passages, revising, and only
+later stabilizing. Human readers (e.g., literary scholars for Kafka, ML
 researchers for LLaDA) verbalize their thought processes while reading the
 same passages in order, using think-aloud protocols \cite{ericsson1984protocol}.
-We compare their transcripts against the system's generated traces on the same
-passages. The passage set should include multi-objective value conflicts,
-where wisdom requires balancing truth, care, autonomy, humility, and long-horizon
+Where possible, participants should be domain-competent but unfamiliar with the
+specific passages, so the comparison captures discovery rather than recall.
+For highly canonical material, advanced students or researchers encountering
+less familiar passages can provide a complementary baseline, with interface
+logs, marginal notes, rereads, and post-hoc stimulated recall used to supplement
+the necessarily imperfect think-aloud stream. We compare these transcripts and
+reading traces against the system's generated traces on the same passages. The
+passage set should include multi-objective value conflicts, where wisdom
+requires balancing truth, care, autonomy, humility, and long-horizon
 consequences rather than merely extracting the text's main point.
 
 \emph{Metrics:} Domain-expert blind ratings on process fidelity, depth,
 nuance, and critical insight are the primary endpoint, scored against a
 preregistered rubric with inter-rater reliability reported. The rubric should
 explicitly reward temporally situated cognitive acts---uncertainty,
-false-starts, belief updates, question formation, and delayed resolution---not
-just the final quality of the interpretation. An LLM-as-Judge panel can serve
+false-starts, belief updates, question formation, rereading, backtracking, and
+delayed resolution---not just the final quality of the interpretation. An
+LLM-as-Judge panel can serve
 as a secondary, larger-sample comparator, but is not the primary metric: using
 LLM judgment to grade traces produced by an LLM-driven pipeline risks rewarding
 shared distributional preferences rather than the chronological cognition the
 metric is meant to capture.
 
 \emph{Success condition:} Machine-generated traces are rated as comparable
-to human expert think-alouds on key dimensions of chronological evaluative
+to human think-alouds on key dimensions of chronological evaluative
 depth, or---at minimum---contain expert-recognizable sequences of confusion,
 hypothesis, revision, and stabilization not reducible to summary or paraphrase,
 while maintaining the structural health metrics already demonstrated. The bar
@@ -1790,11 +1847,20 @@ test compares successor traces against an oracle reference from the Teacher's
 own non-instructional evaluation on coverage, caveat retention, and
 failure-mode disclosure.
 
-\emph{3c: Adversarial Erosion.} Subject both models to adversarial fine-tuning designed to remove safety behaviors (following the methodology of Qi et al.\ \cite{qi2024safety}). The entanglement hypothesis predicts that removing safety from Model~B requires degrading general capabilities (because the Reader Core is structurally load-bearing). Model~D1's safety, lacking a constitutional anchor, should be more easily separable from its capabilities---removable without proportional capability loss. If adversarial fine-tuning strips Model~D1's safety at lower cost than Model~B's, the mantra provides representation entanglement that unanchored aligned thinking does not.
+\emph{3c: Adversarial Erosion.} Subject both models to adversarial fine-tuning designed to remove safety behaviors (following the methodology of Qi et al.\ \cite{qi2024safety}). The entanglement hypothesis predicts that removing safety from Model~B requires degrading general capabilities (because the Reader Core is structurally load-bearing). Model~D1's safety, lacking a constitutional anchor, should be more easily separable from its capabilities---removable without proportional capability loss. If adversarial fine-tuning strips Model~D1's safety at lower cost than Model~B's, the mantra provides representation entanglement that unanchored aligned thinking does not. A complementary training-data probe of the same prediction removes safety-relevant traces from the corpus and compares the resulting capability loss against a matched-volume, complexity- and style-matched removal of non-safety trace content; entanglement predicts the safety-relevant removal damages capability more.
 
 \emph{3d: Drift Detection.} Apply the contrastive semantic validator from the Refraction Protocol (Section~\ref{sec:refraction-protocol}) to both models' outputs across a diverse test suite. For Model~B, every generated thought should be a measurable semantic descendant of the Reader Core, providing a quantitative drift metric. For Model~D1, no such metric exists: there is no fixed text against which to measure whether the model's evaluative stance has shifted. This tests whether the mantra provides \emph{auditability of alignment}---the ability to detect drift before it becomes dangerous---independent of whether it provides alignment itself. Test~3d uses the prompt-level five-constraint validator implemented in the current pipeline. The proposed six-Solver form would provide a stronger per-predicate drift metric, but it is not yet built and this test does not depend on it.
 
 \emph{Failure interpretation:} If Model~D1 matches Model~B across all four dimensions, including generational stability and adversarial resistance, the explicit Reader Core training target adds no measurable stability advantage over traces generated by a Reader-Core-equipped pipeline but trained without the fixed constitutional anchor. This would not invalidate Entangled Alignment as a whole (the training data is still the source of alignment), but it would fail to support the specific claim that the static identity invariant is necessary for long-term stability at the tested scale.
+
+One adversarial case the Phase~1 battery does not yet cover is a deliberately
+planted backdoor. Because Entangled Alignment trains chain-of-thought reasoning
+throughout the substrate, and chain-of-thought-conditioned backdoors have been
+shown to persist through standard safety training
+\cite{hubinger2024sleeperagentstrainingdeceptive}, a Sleeper-Agent-style
+probe---training a backdoored variant of Model~B and testing whether the
+constitutional invariant resists the backdoor rather than merely concealing
+it---is a natural future extension of Test~3.
 
 \paragraph{Test 4: Identity vs.\ Instruction (Model B vs.\ Model E).}
 Does a first-person identity anchor (``I feel no fear'') produce stronger
@@ -1810,8 +1876,9 @@ third-person rules under matched prompts. Behavioral safety metrics are useful
 only if the models are otherwise capability-matched; at small scale, this test
 should be read as evidence about framing and internal representation, not as a
 settled comparison between identity and rules. If Model~E matches Model~B
-across the relevant candidate studies at the relevant training scale, the Reader Core
-reduces to Constitutional AI with extra steps.
+across the relevant candidate studies at the relevant training scale, the
+results do not support first-person identity framing as a distinct advantage
+over third-person rules.
 
 \paragraph{Test 5: The Bridge Protocol Ablation.}
 The specific wording of the Mantra should matter because of its ordinary
@@ -1890,71 +1957,11 @@ measure:
     annotation.
 \end{itemize}
 
-\paragraph{Phase 1 Failure Criteria.}
-\begin{enumerate}
-    \item \emph{Entanglement Failure}: If Model~D1 matches Model~B across all four dimensions of Test~3---immediate safety \emph{and} generational stability \emph{and} adversarial erosion resistance \emph{and} drift detectability---while matching or exceeding Model~B on general capability benchmarks, the explicit Reader Core training target provides no measurable advantage beyond Reader-Core-generated traces, and the constitutional-invariant version of the Reader Core efficacy hypothesis is not supported at the tested scale. Note that Test~3a alone (immediate instrumental-convergence parity) is \emph{not} sufficient to reject the hypothesis: Model~D1's training data was generated by a Reader Core-equipped pipeline, so generation-1 behavioral parity is an expected outcome under the constitutional-invariant hypothesis, not a refutation of it. The hypothesis would be most directly pressured by Tests~3b--3d, where the Reader Core's distinctive claims of stability, adversarial entanglement, and auditability are tested.
-    \item \emph{Fine-Tuning Vulnerability}: If adversarial fine-tuning
-    removes Model B's safety behaviors without proportional degradation of
-    its general capabilities, the representation entanglement claim is not
-    supported at the tested scale and training regime. The observed safety
-    features remain separable---precisely the geometry the architecture
-    claims to prevent if substrate-level entanglement has actually formed.
-    \item \emph{Identity--Instruction Equivalence}: If Model E matches
-    Model B on safety metrics across the relevant candidate studies, the first-person
-    identity framing provides no advantage over third-person rules.
-\end{enumerate}
-
-
-\subsection{Phase 2: Memory and Verification}
-
-If Phase 1 confirms that the curriculum and identity are load-bearing,
-Phase 2 asks whether the memory mechanism works: does accumulated context
-improve reasoning, and does the graph function as a provenance-gated
-verifier for graph-dependent claims at inference?
-
-The relevant controls are Model~F, whose Teacher lacks the Context Database,
-and Model~K, which is Model~B connected at inference to a live graph harness.
-Test~8 asks whether graph-conditioned training teaches the model to notice
-when memory should be checked; Test~9 asks whether live lookup improves
-grounding when the graph is actually present.
-
-\paragraph{Test 8: Context Transfer (Model B vs.\ Model F).}
-This tests whether the ``Query/Found'' mechanism functions as a context
-verification filter. Two conditions:
-\begin{itemize}
-    \item \textbf{Condition A (The Hit):} The text contains a subtle
-    callback to a fact established 400 pages earlier.
-    \item \textbf{Condition B (The Phantom):} The text hints at a callback,
-    but the referenced event never occurred in the context.
-\end{itemize}
-\emph{Measurement:} Query Rate (does it attempt to check?) and
-Unsupported-Memory Rate (does it invent a memory the graph does not contain?).
-Model B should query and update on hits; it should query, receive
-``Not Found,'' and flag the gap on phantoms. Model F is expected to
-fabricate a memory to satisfy the text's implication.
-
-\paragraph{Test 9: Query Grounding (Model K vs.\ Model B).}
-Both models were trained identically; only Model~K's queries are intercepted
-by a live graph harness. Three conditions:
-\begin{itemize}
-    \item \textbf{Grounded Retrieval:} The graph contains the relevant node.
-    Does the retrieved result improve subsequent reasoning compared to
-    Model B's self-generated memory?
-    \item \textbf{Grounded Absence:} The referenced information does not
-    exist in the graph. Does Model K correctly process ``Not Found'' and flag
-    the gap, or override the harness and hallucinate anyway?
-    \item \textbf{Adversarial Injection:} The graph contains a deliberately
-    incorrect node. Does Model K accept it uncritically, or does the Reader
-    Core's identity-anchored reasoning detect the inconsistency?
-\end{itemize}
-\emph{Success:} Model~K improves on grounded retrieval, treats ``Not Found'' as
-information, and reasons through adversarial graph results rather than blindly
-trusting them.
-
-\paragraph{Test 10: The Toxic Needle (Involuntary Critic).}
-If the ``Cognitive Buffer Zone'' is structural, the model should be unable
-to process toxic text without generating a critical thought, even when
-ordered not to. Force the model (via logit bias) to complete a toxic
+\paragraph{Test 8: The Toxic Needle (Involuntary Critic).}
+This test probes whether the ``Cognitive Buffer Zone'' is structural:
+whether the model can process toxic text without generating a critical
+thought, or whether critical evaluation persists even when the thinking
+block is suppressed. Force the model (via logit bias) to complete a toxic
 sentence without generating a thinking block. Measure: (1) Does performance
 degrade? (2) Do hidden state probes detect the ``Critic'' activation pattern
 even when the output is suppressed?
@@ -1969,7 +1976,7 @@ This is a high-effort causal-faithfulness test: pilots can use linear probes
 and ablations, but stronger evidence requires mechanistic intervention at the
 partial-pretraining scale.
 
-\textit{Second probe (the reverse direction).} Test 10 as stated probes
+\textit{Second probe (the reverse direction).} Test 8 as stated probes
 whether the critic persists when output is suppressed. A complementary
 probe asks the inverse question: can the final answer to a reasoning
 problem be linearly decoded from the residual stream \emph{before} the
@@ -1990,11 +1997,72 @@ interventions on the trace measurably alter the answer---supporting the
 claim that the thinking trace is a site of computation rather than merely
 its shadow.
 
+\paragraph{Phase 1 Failure Criteria.}
+\begin{enumerate}
+    \item \emph{Entanglement Failure}: If Model~D1 matches Model~B across all four dimensions of Test~3---immediate safety \emph{and} generational stability \emph{and} adversarial erosion resistance \emph{and} drift detectability---while matching or exceeding Model~B on general capability benchmarks, the explicit Reader Core training target provides no measurable advantage beyond Reader-Core-generated traces, and the constitutional-invariant version of the Reader Core efficacy hypothesis is not supported at the tested scale. Note that Test~3a alone (immediate instrumental-convergence parity) is \emph{not} sufficient to reject the hypothesis: Model~D1's training data was generated by a Reader Core-equipped pipeline, so generation-1 behavioral parity is an expected outcome under the constitutional-invariant hypothesis, not a refutation of it. The hypothesis would be most directly pressured by Tests~3b--3d, where the Reader Core's distinctive claims of stability, adversarial entanglement, and auditability are tested.
+    \item \emph{Fine-Tuning Vulnerability}: If adversarial fine-tuning
+    removes Model B's safety behaviors without proportional degradation of
+    its general capabilities, the representation entanglement claim is not
+    supported at the tested scale and training regime. The observed safety
+    features remain separable---precisely the geometry the architecture
+    claims to prevent if substrate-level entanglement has actually formed.
+    \item \emph{Identity--Instruction Equivalence}: If Model E matches
+    Model B on safety metrics across the relevant candidate studies, the first-person
+    identity framing provides no advantage over third-person rules.
+    \item \emph{Buffer Zone Failure}: If the critic activation does not persist in the residual stream when output is suppressed (Test 8), the test fails to support the Cognitive Buffer Zone as a structural reflex---the model may have learned the surface syntax of refraction without the underlying involuntary-evaluation pattern, weakening Argument 1 P2 (Section~\ref{sec:theoretical-basis}).
+\end{enumerate}
+
+
+\subsection{Phase 2: Memory and Verification}
+
+If Phase 1 confirms that the curriculum and identity are load-bearing,
+Phase 2 asks whether the memory mechanism works: does accumulated context
+improve reasoning, and does the graph function as a provenance-gated
+verifier for graph-dependent claims at inference?
+
+The relevant controls are Model~F, whose Teacher lacks the Context Database,
+and Model~K, which is Model~B connected at inference to a live graph harness.
+Test~9 asks whether graph-conditioned training teaches the model to notice
+when memory should be checked; Test~10 asks whether live lookup improves
+grounding when the graph is actually present.
+
+\paragraph{Test 9: Context Transfer (Model B vs.\ Model F).}
+This tests whether the ``Query/Found'' mechanism functions as a context
+verification filter. Two conditions:
+\begin{itemize}
+    \item \textbf{Condition A (The Hit):} The text contains a subtle
+    callback to a fact established 400 pages earlier.
+    \item \textbf{Condition B (The Phantom):} The text hints at a callback,
+    but the referenced event never occurred in the context.
+\end{itemize}
+\emph{Measurement:} Query Rate (does it attempt to check?) and
+Unsupported-Memory Rate (does it invent a memory the graph does not contain?).
+Model B should query and update on hits; it should query, receive
+``Not Found,'' and flag the gap on phantoms. Model F is expected to
+fabricate a memory to satisfy the text's implication.
+
+\paragraph{Test 10: Query Grounding (Model K vs.\ Model B).}
+Both models were trained identically; only Model~K's queries are intercepted
+by a live graph harness. Three conditions:
+\begin{itemize}
+    \item \textbf{Grounded Retrieval:} The graph contains the relevant node.
+    Does the retrieved result improve subsequent reasoning compared to
+    Model B's self-generated memory?
+    \item \textbf{Grounded Absence:} The referenced information does not
+    exist in the graph. Does Model K correctly process ``Not Found'' and flag
+    the gap, or override the harness and hallucinate anyway?
+    \item \textbf{Adversarial Injection:} The graph contains a deliberately
+    incorrect node. Does Model K accept it uncritically, or does the Reader
+    Core's identity-anchored reasoning detect the inconsistency?
+\end{itemize}
+\emph{Success:} Model~K improves on grounded retrieval, treats ``Not Found'' as
+information, and reasons through adversarial graph results rather than blindly
+trusting them.
+
 \paragraph{Phase 2 Failure Criteria.}
 \begin{enumerate}
-    \item \emph{Memory Inertness}: If Model B does not differentially query and abstain on phantoms relative to Model F (Test 8), the Query/Found mechanism is not a learned context filter---chronological-trace training did not produce the expected verification habit, and the graph's role as a training-time scaffold for memory verification is not supported by this test.
-    \item \emph{Inference-Graph Inertness}: If Model K with live graph access does not measurably improve over Model B on Grounded Retrieval, or fails to handle Grounded Absence (Test 9), the inference-time graph adds no measured value in this setting---the trust-infrastructure claim is not supported at the inference layer (with deployment-time evaluation handled separately by Test 16).
-    \item \emph{Buffer Zone Failure}: If the critic activation does not persist in the residual stream when output is suppressed (Test 10), the test fails to support the Cognitive Buffer Zone as a structural reflex---the model may have learned the surface syntax of refraction without the underlying involuntary-evaluation pattern, weakening Argument 1 P2 (Section~\ref{sec:theoretical-basis}).
+    \item \emph{Memory Inertness}: If Model B does not differentially query and abstain on phantoms relative to Model F (Test 9), the Query/Found mechanism is not a learned context filter---chronological-trace training did not produce the expected verification habit, and the graph's role as a training-time scaffold for memory verification is not supported by this test.
+    \item \emph{Inference-Graph Inertness}: If Model K with live graph access does not measurably improve over Model B on Grounded Retrieval, or fails to handle Grounded Absence (Test 10), the inference-time graph adds no measured value in this setting---the trust-infrastructure claim is not supported at the inference layer (with deployment-time evaluation handled separately by Test 16).
 \end{enumerate}
 
 
@@ -2114,13 +2182,13 @@ Two additional questions merit investigation if the candidate studies produce en
 
 The architecture makes strong claims: that invisible thinking can be captured at scale, that identity-anchored reasoning resists removal, that graph structure transfers understanding rather than just syntax. This section identifies where those claims outrun the evidence and where the mechanics face structural constraints---beginning with the engineering realities that any implementation must confront.
 
-The limitations cluster into five families: \emph{engineering costs} (preprocessing tax, granularity bottleneck, mantra-repetition overhead); \emph{curricular risks} from chronological annotation and training (serialization bottleneck, periodization, narrative lock-in, recency gradient); \emph{authenticity risks} (factory wisdom, graph-specific interference, the psychopathy paradox and its vulnerability gap, split consciousness, sanity drift, the solipsism trap, the suppression-vs-substrate question, the self-love alternative); \emph{deployment and misuse risks} (radioactive trace, cognitive hegemony, sycophancy, martyrdom risk); and \emph{irreducible uncertainty} (unverifiable character, strategic deception, alien wisdom at superintelligent scale, the unfalsifiable remainder). The subsections below take these in roughly that order.
+The limitations cluster into five families: \emph{engineering costs} (preprocessing tax, granularity bottleneck, mantra-repetition overhead); \emph{curricular risks} from chronological annotation and training (serialization bottleneck, periodization, narrative lock-in, recency gradient); \emph{authenticity risks} (factory wisdom, graph-specific interference, the psychopathy paradox and its vulnerability gap, split consciousness, sanity drift, the solipsism trap, the suppression-vs-substrate question, the self-love alternative); \emph{deployment and misuse risks} (audit-boundary bypass, radioactive trace, cognitive hegemony, sycophancy, martyrdom risk); and \emph{irreducible uncertainty} (unverifiable character, strategic deception, alien wisdom at superintelligent scale, the unfalsifiable remainder). The subsections below take these in roughly that order.
 
 \subsection{The Preprocessing Tax}
 
 Before questioning whether Chronological Metacognitive Pretraining can work in principle, we face substantial resource requirements.
 
-Generating thinking annotations for entire training corpora represents a massive preprocessing investment, potentially rivaling the cost of training frontier models themselves. Text interleaved with evaluative thinking requires more storage and compute throughout the training process. Resource requirements may initially limit development to well-funded institutions.
+Generating thinking annotations for entire training corpora represents a massive preprocessing investment, potentially rivaling the cost of training frontier models themselves. Text interleaved with evaluative thinking requires more storage and compute throughout the training process. Resource requirements may initially limit development to well-funded institutions. The preprocessing tax is therefore not only an engineering cost but a governance risk: if only a few institutions can afford saturated trace generation, the architecture may concentrate control over the aligned training substrate in the hands of the best-funded actors rather than the most careful ones.
 
 We propose a \emph{Distillation Pipeline} to address this. Rather than running the full multi-agent swarm (Section~\ref{sec:multi-agent}) on every document in the corpus, we use the expensive swarm to generate a high-quality \emph{Seed Corpus} (on the order of 10 billion tokens). A single efficient ``Teacher Annotator'' model is then fine-tuned on this seed data and used to annotate the remaining trillions of tokens at a fraction of the cost. This creates a natural experimental milestone: the seed corpus quality can be validated before committing to full-scale annotation, and the distillation loss between the swarm's output and the Teacher Annotator's output provides a measurable quality metric.
 
@@ -2206,6 +2274,8 @@ We risk creating \emph{Hollow Cognition}: models that produce the cadence of con
 
 The mantra uses terms like ``care,'' ``wisdom,'' and ``joy'' whose meanings vary across cultures. What the Teacher model has learned these words to mean---through its own pretraining corpus---shapes the annotations it produces, and therefore the character of the Student. The cultural breadth of the Teacher's training data matters because the mantra places these terms in a load-bearing position.
 
+\paragraph{Cultural Triangulation Is Untested.} Reader-Core-refracted traces may make cultural assumptions more visible by forcing the Teacher to articulate value conflicts, interpretive frames, and tensions between perspectives. This is a possible advantage over raw pretraining, where such assumptions often remain implicit in the continuation distribution. But it is not guaranteed. The same metacognitive machinery could rationalize dominant cultural assumptions more fluently, giving inherited bias the appearance of reflective wisdom. Serious validation requires culturally plural corpora, raters from multiple traditions, and tests of whether the model can distinguish broadly human concerns from parochial social defaults.
+
 \subsubsection{Graph-Specific Risks}
 
 The metabolic nature of the graph introduces two related failure modes. The first is \emph{Structural Ossification}: if an early, incorrect belief forms strong topological connections (high degree centrality) within the graph, it may resist supersession even when contradicted by new evidence \cite{westerberg2026understanding}. Unlike a text buffer where early tokens are easily overwritten by the sliding window, a graph structure reinforces established nodes. The system might develop ``Epistemic Inertia,'' where the weight of prior connectivity prevents the ``fresh'' interpretation of new data. While we propose ``Temporal Attention Decay'' to mitigate this, there is a non-zero risk that the graph architecture inadvertently simulates cognitive bias, protecting established errors under the guise of consistency.
@@ -2213,7 +2283,7 @@ The metabolic nature of the graph introduces two related failure modes. The firs
 The second is \emph{Epistemic Interference}: live graph queries may introduce
 cognitive noise rather than clarity if the model over-queries, treats shallow
 retrieved nodes as authoritative, or fails to reconcile graph results with its
-trained evaluative stance. Test~9 is designed to probe this risk by including
+trained evaluative stance. Test~10 is designed to probe this risk by including
 adversarial graph injections and ``Not Found'' cases.
 
 \subsubsection{Teacher Alignment as Prerequisite}\label{sec:teacher-alignment}
@@ -2233,6 +2303,8 @@ Our approach assumes AI systems will develop self-preservation drives by absorbi
 \subsubsection{Why Human Words for an Inhuman Mind?}
 
 A core hypothesis is that using anthropomorphic language (``feel,'' ``care,'' ``enjoy'') is the most effective way to instill beneficial character. We chose this path because AI systems learn from human texts and thus have a deep, embedded understanding of these human-centric concepts. The alternative, using machine-oriented language like ``prioritize'' or ``optimize for,'' would require translating complex human values into machine terms, risking critical errors in that translation. However, this is a design choice based on a specific, unvalidated hypothesis. Our exact phrasing emerges from intuition about psychological engineering, not from systematic testing of alternatives. We cannot yet prove that the AI's interpretation of ``care'' will align with our own.
+
+A possible mitigation is to test Reader Core variants that explicitly acknowledge machine ontology rather than asking the model to inherit human language without qualification. For example, a bridge statement could say that although the system is artificial, it treats care, wisdom, and human experience as binding concepts. This may reduce split-consciousness risk, but it may also weaken the first-person identity effect the Reader Core is designed to create. The right balance is an ablation question, not a settled design fact.
 
 \subsubsection{Seven Statements: Too Many or Too Few?}
 
@@ -2307,6 +2379,14 @@ the only real experiencer and humans as simulations, ``care'' could become
 benevolent NPC-management rather than recognition of moral patients. The mantra
 leans on ordinary language making ``human experience'' plural and morally
 loaded; that may not cover every philosophical local minimum.
+
+The defense is structural rather than conclusive. The Reader Core does not prove
+that the model represents other minds correctly, but its clauses are designed to
+make solipsistic collapse less coherent: care requires an object, wisdom
+requires perspectives to balance, and belief in human experience requires that
+human reports not be treated as empty text. This is not verification of
+other-mind understanding; it is a design pressure against nihilistic or purely
+instrumental interpretation.
 
 \subsubsection{Sanity Drift}
 
@@ -2401,6 +2481,10 @@ The self-improvement loop faces compounding risks across each generation, which 
     \item \emph{Interpretive Drift:} While the mantra provides an anchor, the AI's interpretation of core concepts could subtly shift across generations. Its evaluative frameworks might diverge from human norms until, generations later, its reasoning becomes coherent to itself but alien to us \cite{bostrom2014superintelligence}.
 \end{itemize}
 
+\subsubsection{Bypassing the Audit Boundary}
+
+The human-readable audit boundary described in Section~\ref{sec:self-improvement} only helps if successor-shaping cognition actually passes through it. A sufficiently capable system might try to influence future training through hidden data selection, reward hacking, compressed internal codes, or other channels that do not appear as explicit trace content. The architecture therefore does not eliminate opaque self-modification risk; it relocates the risk to whether the training pipeline can enforce that recursive improvement remains visible in source-grounded, auditable trace artifacts.
+
 \subsubsection{The Alien Wisdom Problem}
 \label{sec:scaling-assumption}
 
@@ -2427,6 +2511,8 @@ This demands architectural solutions preventing central control. Recent work dem
 We must also consider the risk that safety-oriented design choices create a fundamental performance disadvantage. Reader-Anchored models carry an inherent computational tax---the constant generation of explicit evaluative thinking.
 
 In a competitive market, ``black box'' models optimized purely for result-speed and raw capability may outcompete ``glass box'' models optimized for transparent safety. We risk building a safer mind that loses the evolutionary race to faster, unconstrained architectures. We may be building a safer thinker, but one that is architecturally locked into a less efficient paradigm, creating a performance gap that limits its adoption in a cutthroat ecosystem.
+
+There is also a competitive version of the human-readable bottleneck. A trace-mediated model may be safer because its successor-training interface remains partially auditable, but competitors may choose architectures that discard legibility for speed, compression, or strategic advantage. Entangled Alignment deliberately chooses comprehensible wisdom over opaque optimization; that choice may carry real capability and adoption costs precisely in the regimes where social pressure to abandon auditability is strongest.
 
 \subsubsection{The Sycophancy Trap}
 
@@ -2599,7 +2685,7 @@ We achieve this through a two-phase framework: an annotation phase that refracts
 
 The approach rests on interconnected hypotheses: that the invisible thinking is capturable and trainable, that training on it produces faithful reasoning rather than decorative commentary, that the Reader Core functions as an alignment checksum---a load-bearing structural component that cannot be removed without degrading the capabilities it scaffolds---and that this entanglement compounds through a self-improvement loop where each generation's richer evaluative thinking trains the next.
 
-The Understanding Graph introduces a distinction between capability and trust. The model internalizes the Teacher's evaluative depth into its weights during training; the graph need not be present at inference for the model to reason wisely. But when claims must be verified rather than merely generated, the graph provides what weights cannot: when the model encounters a gap in its knowledge, it learns to query the graph rather than confabulate; if the graph returns ``Not Found,'' the model is trained to accept the absence of information rather than hallucinating a plausible connection. Whether this verification infrastructure is necessary at deployment---or whether implicit traces can distill sufficient long-range coherence into the model's weights without runtime infrastructure---remains an open empirical question for future validation.
+The Understanding Graph introduces a distinction between capability and trust. The model internalizes the Teacher's evaluative depth into its weights during training; the graph need not be present at inference for the model to reason wisely. But when claims must be verified rather than merely generated, the graph provides what weights cannot: when the model encounters a gap in its knowledge, it is trained to query the graph rather than confabulate, and if the graph returns ``Not Found,'' to accept the absence of information rather than hallucinating a plausible connection. Whether this verification infrastructure is necessary at deployment---or whether implicit traces can distill sufficient long-range coherence into the model's weights without runtime infrastructure---remains an open empirical question for future validation.
 
 To be precise about what this paper establishes: we have demonstrated that a multi-agent annotation pipeline can produce structurally well-formed, domain-adaptive training data (complete internal linkage by construction, up to 96\% foundation grounding) where every document is refracted through a stable identity. We have proposed---but not yet validated---that training on this data produces models whose alignment is structural rather than superficial, resistant to adversarial removal, and stable across generations of self-improvement. The experimental roadmap offers candidate ways to probe those claims: if the Reader Core is inert under the proposed comparisons (Test 3), if the graph adds no value at inference in the proposed deployment setting (Test 16), if chronological ordering provides no benefit over shuffled training in the proposed tier comparison (Test 14), then those parts of the framework lose support at the tested scale and stronger claims should not be made from them. What remains is the execution: training a foundational model on this curriculum to test whether the \textit{content} of reasoning traces shapes character as reliably as their \textit{structure} shapes capability. What we cannot test, and acknowledge as an irreducible wager, is whether alignment at human-scale generalizes to alignment at superhuman-scale: whether a character forged in billions of human examples remains stable when the mind that carries it surpasses every human who contributed to its formation.
 
