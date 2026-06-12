@@ -22,6 +22,10 @@ keywords:
   - character
   - pretraining
   - safety
+  - kernel-saturation alignment
+  - chronological metacognitive pretraining
+  - borrowed mortality
+  - reader core
 preferred-citation:
   type: article
   title: "Entangled Alignment: When Safety Is the Substrate"

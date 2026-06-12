@@ -1,10 +1,10 @@
-# Entangled Alignment: Cultivating Character in Pretraining
+# Entangled Alignment: When Safety Is the Substrate
 
 [![Paper](https://img.shields.io/badge/Paper-PDF-red)](paper/entangled-alignment.pdf)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19462868.svg)](https://doi.org/10.5281/zenodo.19462868)
 [![License](https://img.shields.io/badge/License-MIT-green)](LICENSE)
 
-A multi-agent system that reads a book chronologically and builds a knowledge graph of its concepts, relationships, and emergent themes — using Gemini-powered agents coordinated through an MCP (Model Context Protocol) server.
+Companion repository for *Entangled Alignment: When Safety Is the Substrate* — a research program for substrate-level AI alignment built on *kernel-saturation alignment* and *Chronological Metacognitive Pretraining*. The code here is the paper's annotation pipeline: a multi-agent system that reads a book chronologically and builds a knowledge graph of its concepts, relationships, and emergent themes — Gemini-powered agents coordinated through an MCP (Model Context Protocol) server.
 
 ## Browse the included graphs
 
@@ -19,8 +19,8 @@ cd entangled-alignment
 
 Select a project in the sidebar:
 
-- **metamorphosis** — Kafka's *The Metamorphosis* (350 nodes)
-- **llada** — the LLaDA paper on large language diffusion (290 nodes)
+- **metamorphosis** — Kafka's *The Metamorphosis* (346 active nodes)
+- **llada** — the LLaDA paper on large language diffusion (285 active nodes)
 
 Click any node to see its content, edges, and the passage that produced it.
 
@@ -36,8 +36,9 @@ GEMINI_MODEL=gemini-3-flash-preview
 Then run the agents on any text:
 
 ```bash
-# Run on the bundled Twenty Thousand Leagues
-./run.sh chronological_metacognition/material/pg164.txt --project verne
+# Run on the bundled Metamorphosis text (use a fresh project name so the
+# shipped 'metamorphosis' graph stays untouched)
+./run.sh chronological_metacognition/material/metamorphosis.txt --project my-reading-1
 
 # Or on any text file
 ./run.sh /path/to/book.txt --project my-reading
@@ -53,13 +54,9 @@ Open `./view.sh` in a second terminal while the agents run — nodes and edges a
 
 ## How it works
 
-Three agents read a text sequentially, each processing the same passage with a different lens:
+A Reader streams the source text in chronological order, pausing at *Thought Moments* — emotional peaks, contradictions, conceptual shifts — rather than at fixed intervals. A swarm of specialized Workers (Skeptic, Psychologist, Axiologist, Belief Tracker, Critic, Speculator, Connector, Curator, plus domain specialists) debates each passage by writing typed nodes and edges into a shared Understanding Graph. A Synthesizer collapses their competing readings into a single thought anchored to a fixed first-person identity (the Reader Core), and a Translator renders it as fluid prose. The shipped runs used eleven agents.
 
-1. **Concept Extractor** — identifies key concepts and definitions
-2. **Relationship Mapper** — finds connections between concepts
-3. **Theme Synthesizer** — detects emergent themes and meta-patterns
-
-Their outputs are written to a shared knowledge graph via an MCP server (`understanding-graph`). The web frontend renders the graph as an interactive 3D visualization — nodes appear as the agents work, edges form between related concepts, and clusters emerge as themes develop.
+Everything is written to a shared knowledge graph via an MCP server (`understanding-graph`). The web frontend renders the graph as an interactive 3D visualization — nodes appear as the agents work, edges form between related concepts, and clusters emerge as themes develop.
 
 ## Relationship to understanding-graph
 
@@ -78,6 +75,7 @@ The two systems are not interchangeable. This repo is pinned to `understanding-g
 ├── run.sh                        # Run agents on any text file
 ├── view.sh                       # Launch the web viewer
 ├── .env.example                  # API key template
+├── paper/                        # The paper (LaTeX source, house style, PDF)
 ├── prompts/                      # Agent system prompts (from understanding-graph)
 │   ├── core/                     # Philosophy, identity, five laws
 │   ├── roles/                    # Agent identities (reader, skeptic, synthesizer...)
