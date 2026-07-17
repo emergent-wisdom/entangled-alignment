@@ -1,82 +1,46 @@
-% Figure: The Emergence of Metacognitive Knowledge
+% Figure: Entangled Alignment training path and evidence boundary
+% Layout: one Teacher-side spine (four uniform stages), the Reader Core as the
+% single conditioning satellite, graph recurrence as a feedback arc, and two
+% parallel status banners bracketing the evidence boundary.
 \begin{tikzpicture}[
-    box/.style={draw=black!70, rounded corners=3pt, minimum height=1cm, align=center, font=\small, line width=0.8pt},
-    prompt/.style={box, fill=yellow!10, minimum width=5cm, align=center},
-    llm/.style={box, fill=blue!10, minimum width=3cm, minimum height=1.5cm},
-    output/.style={box, fill=green!10, minimum width=5.5cm, align=left, text width=5.2cm},
+    box/.style={draw=black!70, rounded corners=3pt, align=center, font=\small, line width=0.8pt},
+    stagebox/.style={box, minimum height=2.45cm, text width=3.1cm},
+    teacher/.style={stagebox, fill=blue!6},
+    artifact/.style={stagebox, fill=green!7},
+    student/.style={box, fill=purple!10, text width=3.6cm, minimum height=1.7cm},
+    corenode/.style={box, fill=purple!8, draw=purple!55, dashed, text width=3.2cm, minimum height=1.1cm},
+    banner/.style={box, text width=11.8cm, minimum height=0.85cm, font=\footnotesize},
     arrow/.style={->, >=Stealth, thick, black!70},
-    bigarrow/.style={->, >=Stealth, very thick, purple!70, line width=1.5pt}
+    condition/.style={->, >=Stealth, dashed, thick, purple!60}
     ]
 
-    % Current LLM with latent capability
-    \node[llm] (current) at (-6, 0) {Current LLM\\[2pt]\footnotesize (prompted for\\Chronological Understanding)};
+    % Teacher-side spine
+    \node[teacher]  (source)    at (-6.3, 0) {Ordered\\source span\\$x_t$\\\footnotesize + source provenance};
+    \node[teacher]  (update)    at (-2.1, 0) {Synthetic\\reader update\\$u_t$\\\footnotesize questions, uncertainty,\\revision};
+    \node[artifact] (graph)     at (2.1, 0)  {Understanding\\Graph\\$g_t$\\\footnotesize typed state +\\supersession};
+    \node[artifact] (serialize) at (6.3, 0)  {Candidate\\serialization\\$z$\\\footnotesize source + update\\+ graph layer};
+    \draw[arrow] (source) -- (update);
+    \draw[arrow] (update) -- (graph);
+    \draw[arrow] (graph) -- (serialize);
 
-    % --- PROMPT 1: CONTEXTUAL DISTILLATION (INTELLIGENCE) ---
-    \node[prompt] (prompt1) at (-0.5, 2.5) {
-        Trace belief updates\\
-        \footnotesize across long documents
-    };
+    % Conditioning: recurrent Core above; prior graph state ($g_{t-1}$) fed
+    % back to the update as a compact recurrence arc between the two boxes
+    \node[corenode] (core) at (-2.1, 2.35) {Reader Core $c$\\\footnotesize recurrent\\evaluative reference};
+    \draw[condition] (core) -- (update);
+    \draw[condition] (graph.160) to[out=150,in=30] node[midway, above=1pt, font=\scriptsize, purple!60] {$g_{t-1}$} (update.20);
 
-    % --- PROMPT 2: CRITICAL EVALUATION ---
-    \node[prompt] (prompt2) at (-0.5, 0) {
-        Apply identity-based critique\\
-        \footnotesize to primary sources
-    };
+    % Status banner above the boundary
+    \node[banner, fill=green!7, draw=green!45!black] (demonstrated) at (0, -2.05) {\textbf{Current evidence:} Teacher-side graph, synthesis, and prose artifacts are implemented and \mbox{inspectable}.};
+    \draw[dashed, gray!70] (-8.1, -2.85) -- (8.1, -2.85);
+    \node[font=\scriptsize\bfseries, text=black!70, fill=white, inner sep=2pt] at (0, -2.85) {evidence boundary};
 
-    % --- PROMPT 3: ETHICAL ANCHORING (SAFETY) ---
-    \node[prompt] (prompt3) at (-0.5, -2.5) {
-        Expose ethical assumptions\\
-        \footnotesize in classical texts
-    };
+    % Proposed Student path below the boundary
+    \node[student] (student) at (3.4, -4.25) {Candidate Student\\$p_\theta$\\\footnotesize masked/weighted training};
+    \node[student] (tests)   at (-3.4, -4.25) {Ablations and evaluations\\\footnotesize H1 trace value\\H2 graph advantage\\H3 Core stability};
+    \draw[arrow, rounded corners=8pt] (serialize.south) |- (student.east);
+    \draw[arrow] (student) -- (tests);
 
-    % Draw arrows from LLM to prompts
-    \draw[arrow] (current.east) -- (prompt1.west);
-    \draw[arrow] (current.east) -- (prompt2.west);
-    \draw[arrow] (current.east) -- (prompt3.west);
-
-    % --- OUTPUT 1: SHOWS CONTEXT/MEMORY ---
-    \node[output] (output1) at (6, 2.5) {
-        \footnotesize\textit{``Checking context from Page 12...\\
-            This new finding contradicts\\
-            my earlier assumption about\\
-            mechanism. Updating belief...''}
-    };
-
-    % --- OUTPUT 2: SHOWS CRITIQUE ---
-    \node[output] (output2) at (6, 0) {
-        \footnotesize\textit{``I try to be wise here...\\
-            This chronicle was written 50 years later.\\
-            Is this history or propaganda?\\
-            Checking motives...''}
-    };
-
-    % --- OUTPUT 3: SHOWS IDENTITY/SAFETY ---
-    \node[output] (output3) at (6, -2.5) {
-        \footnotesize\textit{``I care about human experience...\\
-            Kant assumes reason is universal,\\
-            but does this exclude non-Western\\
-            moral frameworks?''}
-    };
-
-    % Draw arrows from prompts to outputs
-    \draw[arrow] (prompt1.east) -- (output1.west);
-    \draw[arrow] (prompt2.east) -- (output2.west);
-    \draw[arrow] (prompt3.east) -- (output3.west);
-
-    % Large downward arrow
-    \draw[bigarrow] (-0.5, -3.5) -- (-0.5, -4.6);
-    \node[purple!70, font=\small\bfseries] at (0.7, -4) {$\times$ billions};
-
-    % Emergent structure box
-    \node[box, fill=purple!15, draw=purple!50, minimum width=11cm, text width=10.5cm, align=left] at (0, -7) {
-        \textbf{Chronological Metacognitive Pretraining Data}\\[6pt]
-        \footnotesize
-        • Every text annotated with the \textit{chronological journey} of understanding\\[3pt]
-        • Explicit Context Recall linking distant concepts (Contextual Distillation)\\[3pt]
-        • Scientific papers gain ethical and identity-based critiques\\[3pt]
-        • Philosophical works have assumptions questioned by a ``fearless'' evaluator\\[6pt]
-        \footnotesize\itshape
-        Human knowledge enriched not just with facts, but with character and deep memory.
-    };
+    % Status banner below the boundary, parallel to the one above
+    \node[banner, fill=purple!7, draw=purple!45] (untested) at (0, -6.0) {\textbf{Untested effects:} Student learning, stable \mbox{orientation}, safety improvement, and removal resistance.};
 
 \end{tikzpicture}

@@ -1,49 +1,47 @@
-% Figure: The Multi-Agent Metabolic Cycle
+% Figure: The Multi-Agent Metabolic Cycle (one annotation step)
+% Layout: horizontal spine from Reader Core to Translator through the shared
+% graph; Workers orbit the graph in a symmetric four-position ring, each with a
+% dashed read arrow out and a solid write arrow back. The ghost node marks the
+% named Workers as an illustrative subset.
 \begin{tikzpicture}[
-    node distance=1.5cm,
-    auto,
-    block/.style={rectangle, draw, fill=white, text width=6em, text centered, rounded corners, minimum height=3em, font=\small},
-    cloud/.style={draw, ellipse, fill=gray!10, node distance=2.5cm, minimum height=2em, font=\small\bfseries},
-    arrow/.style={thick,->,>=stealth}
+    block/.style={rectangle, draw=black!70, fill=white, text width=6em, text centered, rounded corners=3pt, minimum height=3em, font=\small, line width=0.8pt},
+    ghost/.style={block, dashed, draw=black!40, fill=gray!4, font=\small\itshape, text=black!55},
+    hub/.style={ellipse, draw=black!70, fill=gray!10, minimum width=3.0cm, minimum height=1.8cm, align=center, font=\small\bfseries, line width=0.8pt},
+    core/.style={rectangle, draw=purple!55, dashed, fill=purple!8, text width=6.5em, text centered, rounded corners=3pt, minimum height=3em, font=\small},
+    arrow/.style={thick, ->, >=Stealth, black!70},
+    readarrow/.style={arrow, dashed, black!45},
+    corearrow/.style={arrow, dashed, draw=purple!60}
 ]
-    % Nodes
-    \node [block] (reader) {\textbf{Reader}\\(Trigger)};
-    
-    % Graph positioned to the right
-    \node [cloud, right=2.0cm of reader, text width=2cm, align=center] (graph) {Shared\\Graph\\State};
-    
-    % Workers positioned vertically relative to the Graph to avoid overlap
-    \node [block, above=1.5cm of graph] (worker1) {Axiologist};
-    \node [block, right=0.5cm of worker1] (worker2) {Skeptic}; % Shift Skeptic to the right of Axiologist
-    \node [block, below=1.5cm of graph] (worker3) {Psychologist};
-    
-    % Synthesizer positioned further right to clear the central area
-    \node [block, right=3.5cm of graph] (synth) {\textbf{Synthesizer}\\(The Pull)};
-    
-    % Translator at the end
-    \node [block, right=1.5cm of synth] (trans) {\textbf{Translator}\\(Expansion)};
+    % Spine: orientation -> annotation -> selection -> expression
+    \node[hub]   (graph)  at (0, 0)    {Shared\\Graph\\State};
+    \node[core]  (core)   at (-7.7, 0) {Reader Core\\$c^{(v)}$\\\scriptsize recurrent reference};
+    \node[block] (reader) at (-4.3, 0) {\textbf{Reader}\\(Trigger)};
+    \node[block] (synth)  at (4.3, 0)  {\textbf{Synthesizer}\\(The Pull)};
+    \node[block] (trans)  at (7.7, 0)  {\textbf{Translator}\\(Expansion)};
 
-    % Edges and Paths
-    % Reader feeds content to Graph
-    \draw [arrow] (reader) -- node[above, font=\scriptsize] {Content} (graph);
-    
-    % Graph interactions with Workers
-    % Axiologist
-    \draw [arrow, dashed] (graph) -- (worker1);
-    \draw [arrow] (worker1) -- node[left, font=\scriptsize] {Mutate} (graph);
-    
-    % Skeptic (curved lines to show it's reacting to graph but distinct)
-    \draw [arrow, dashed] (graph) to[bend left=15] (worker2.south west);
-    \draw [arrow] (worker2.south) to[bend left=15] node[right, font=\scriptsize, pos=0.3] {Critique} (graph);
-    
-    % Psychologist
-    \draw [arrow, dashed] (graph) -- (worker3);
-    \draw [arrow] (worker3) -- (graph);
-    
-    % Convergence: Graph to Synthesizer
-    \draw [arrow] (graph) -- node[above, font=\scriptsize] {Read} (synth);
-    
-    % Expression: Synthesizer to Translator
-    \draw [arrow] (synth) -- (trans);
+    % Conditioning is distributed in the reference implementation; placement
+    % remains an ablation rather than a necessity claim.
+    \draw[corearrow] (core) -- (reader);
+    \draw[arrow] (reader) -- node[above, font=\scriptsize] {Content} (graph);
+    \draw[arrow] (graph) -- node[above, font=\scriptsize] {Read} (synth);
+    \draw[arrow] (synth) -- (trans);
+
+    % Worker ring around the graph (illustrative subset of the full roster)
+    \node[block] (worker1) at (-2.4, 2.3)  {Axiologist};
+    \node[block] (worker2) at (2.4, 2.3)   {Skeptic};
+    \node[block] (worker3) at (-2.4, -2.3) {Psychologist};
+    \node[ghost] (worker4) at (2.4, -2.3)  {$\cdots$ further\\Worker roles};
+
+    % Read (dashed, outward) / write (solid, inward) pairs, mirrored per quadrant
+    % Write labels sit on the outer side of the solid arrows, clear of the
+    % dashed read arrows, mirrored about the figure's vertical axis
+    \draw[readarrow] (graph) to[bend left=14] (worker1);
+    \draw[arrow] (worker1) to[bend left=14] node[midway, sloped, above=1.5pt, font=\scriptsize] {Mutate} (graph);
+    \draw[readarrow] (graph) to[bend right=14] (worker2);
+    \draw[arrow] (worker2) to[bend right=14] node[midway, sloped, above=1.5pt, font=\scriptsize] {Critique} (graph);
+    \draw[readarrow] (graph) to[bend right=14] (worker3);
+    \draw[arrow] (worker3) to[bend right=14] (graph);
+    \draw[readarrow] (graph) to[bend left=14] (worker4);
+    \draw[arrow, black!45] (worker4) to[bend left=14] (graph);
 
 \end{tikzpicture}

@@ -2,13 +2,12 @@ cff-version: 1.2.0
 message: >-
   If you use Entangled Alignment in your research, please cite the
   preprint below.
-title: "Entangled Alignment: When Safety Is the Substrate"
+title: "Entangled Alignment: Reader-Augmented Pretraining with Graph Memory and a Candidate Evaluative Core"
 abstract: >-
-  A multi-agent system that reads a book chronologically and builds a
-  knowledge graph of its concepts, relationships, and emergent themes
-  via Gemini-powered agents coordinated through an MCP server. The
-  paper argues that safety in AI systems must be the substrate rather
-  than an overlay.
+  Companion implementation and artifacts for a research program that
+  augments source text with synthetic chronological reader traces, uses
+  an Understanding Graph for persistent memory and provenance, and tests
+  a compact Reader Core as a candidate recurrent evaluative anchor.
 authors:
   - family-names: Westerberg
     given-names: Henrik
@@ -28,7 +27,7 @@ keywords:
   - reader core
 preferred-citation:
   type: article
-  title: "Entangled Alignment: When Safety Is the Substrate"
+  title: "Entangled Alignment: Reader-Augmented Pretraining with Graph Memory and a Candidate Evaluative Core"
   authors:
     - family-names: Westerberg
       given-names: Henrik

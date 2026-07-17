@@ -1,53 +1,53 @@
 % Figure: The Invisible Thinking
+% Layout: central spine (writing -> text -> training) with mirrored satellites
+% above the two endpoints; the omitted process sits beneath the visible text.
 \begin{tikzpicture}[
-    box/.style={draw=black!70, rounded corners=3pt, minimum height=1cm, align=center, font=\small, line width=0.8pt},
-    thought/.style={cloud, draw=gray!50, fill=gray!10, cloud puffs=10, cloud puff arc=120, aspect=2.5, inner sep=8pt},
-    textbox/.style={box, fill=green!8, minimum width=4cm},
-    thinkingbox/.style={box, fill=purple!15, dashed, draw=purple!50},
-    arrow/.style={->, >=Stealth, thick, black!70},
-    title/.style={font=\normalsize\bfseries}
+    box/.style={draw=black!70, rounded corners=3pt, minimum height=1.1cm, align=center, font=\small, line width=0.8pt},
+    stage/.style={box, fill=blue!6, minimum width=3.2cm},
+    textbox/.style={box, fill=green!7, minimum width=4.2cm},
+    thinkingbox/.style={box, fill=purple!10, draw=purple!55, dashed, minimum width=4.2cm},
+    problembox/.style={box, fill=red!5, text width=3.9cm},
+    thought/.style={cloud, draw=gray!55, fill=gray!8, cloud puffs=11, cloud puff arc=110, aspect=2.8, inner sep=1pt, align=center, font=\footnotesize},
+    link/.style={dashed, gray!55, line width=0.8pt},
+    arrow/.style={->, >=Stealth, thick, black!70}
     ]
 
-    % Human writing
-    \node[box, fill=blue!5, minimum width=3cm] (human) at (-5, -2) {Human Writing};
-    \node[thought, above=0.8cm of human] (humanthought) {
-        \footnotesize
-        \begin{tabular}{l}
-            "Is this claim accurate?"\\
-            "Need stronger evidence"\\
-            "This word is precise"\\
-            "Connection is profound"
-        \end{tabular}
-    };
-    \draw[gray!50, dashed, line width=1pt] (human) -- (humanthought);
+    % Central spine
+    \node[stage]   (human) at (-5.7, 0) {Human Writing};
+    \node[textbox] (text)  at (0, 0)    {``Einstein's theory\\revolutionized physics''};
+    \node[stage]   (llm)   at (5.7, 0)  {Standard Training};
+    \draw[arrow] (human) -- node[above, font=\footnotesize] {generates} (text);
+    \draw[arrow] (text) -- node[above, font=\footnotesize] {learns from} (llm);
 
-    % Text output
-    \node[textbox, minimum width=3.5cm] (text) at (0, -2) {
-        "Einstein's theory\\revolutionized physics"
+    % Left satellite: the writer's silent evaluation
+    \node[thought] (humanthought) at (-5.7, 2.6) {
+        ``Is this claim accurate?''\\
+        ``Need stronger evidence''\\
+        ``This word is precise''\\
+        ``Connection is profound''
     };
-    \draw[arrow] (human.east) -- (text.west) node[midway, above] {\footnotesize generates};
+    \draw[link] (human) -- (humanthought);
 
-    % Invisible thinking
-    \node[thinkingbox, below=0.3cm of text, minimum width=3.5cm] (thinking) {
+    % Right satellite: what standard training captures
+    \node[problembox] (problem) at (5.7, 2.6) {
+        Learns the Recorded\\Text Distribution\\
+        \footnotesize Reader-state change is usually implicit
+    };
+    \draw[arrow, dashed, red!50] (llm) -- (problem);
+
+    % Beneath the visible text: the omitted process
+    \node[thinkingbox] (thinking) at (0, -1.8) {
         \footnotesize\itshape
         \textbf{Chronological Discovery}\\
         (Messy, Evaluative, Moral)
     };
+    \draw[link] (text) -- node[right, font=\scriptsize\itshape, black!60] {rarely recorded} (thinking);
 
-    % LLM
-    \node[box, fill=blue!8, minimum width=3cm] (llm) at (5, -2) {Standard Training};
-    \draw[arrow] (llm.west) -- (text.east) node[midway, above] {\footnotesize trains on};
-
-    % Problem description - UPDATED FOR V2
-    \node[box, fill=red!5, above=0.8cm of llm, minimum width=3.5cm] (problem) {
-        Optimizes for\\Prediction Accuracy\\
-        \footnotesize Misses the Moral/Messy Journey
-    };
-    \draw[arrow, dashed, red!50] (llm.north) -- (problem.south);
-
-    % Bottom insight - UPDATED FOR V2
-    \node[box, fill=yellow!5, text width=10cm, minimum height=1.2cm, align=left] at (0, -4.9) {
-        \textbf{The Gap:} Standard methods optimize for efficient prediction. We propose capturing the \textit{chronological discovery process}---the hesitation, ethics, and gradual understanding---to anchor the model's identity.
+    % Takeaway
+    \node[box, fill=yellow!5, text width=12.6cm, align=left] at (0, -3.7) {
+        \textbf{The Gap:} Source text rarely records the reader's changing questions,\\
+        uncertainty, and revisions. Entangled Alignment constructs a synthetic\\
+        \textit{chronological reader trace} and tests it as candidate training data.
     };
 
 \end{tikzpicture}
