@@ -20,6 +20,9 @@ identifiers:
   - type: doi
     value: 10.5281/zenodo.16440311
     description: "Concept DOI resolving to the latest version of the paper"
+  - type: doi
+    value: 10.5281/zenodo.21420755
+    description: "Zenodo record for the July 17, 2026 v7 release"
 keywords:
   - alignment
   - multi-agent-systems
@@ -40,5 +43,5 @@ preferred-citation:
   month: 7
   publisher:
     name: Zenodo
-  doi: 10.5281/zenodo.16440311
-  url: "https://doi.org/10.5281/zenodo.16440311"
+  doi: 10.5281/zenodo.21420755
+  url: "https://doi.org/10.5281/zenodo.21420755"

@@ -100,8 +100,8 @@ The two systems are not interchangeable. This repo is pinned to `understanding-g
   year         = {2026},
   month        = jul,
   publisher    = {Zenodo},
-  doi          = {10.5281/zenodo.16440311},
-  url          = {https://doi.org/10.5281/zenodo.16440311}
+  doi          = {10.5281/zenodo.21420755},
+  url          = {https://doi.org/10.5281/zenodo.21420755}
 }
 ```
 
