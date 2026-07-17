@@ -93,7 +93,6 @@
 	right=12pt,
 	top=9pt,
 	bottom=9pt,
-	breakable,
 	title=#1,
 	fonttitle=\bfseries,
 }
@@ -102,7 +101,7 @@
 		\title{Entangled Alignment \\ \large \textit{When Safety Is the Substrate}}
 	\author{Henrik Westerberg\\
 		\small{henrik.westerberg@emergentwisdom.org}}
-	\date{April 7, 2026\\\small Revised July 17, 2026}
+	\date{April 7, 2026\\\small Revised July 18, 2026}
 	\begin{document}
 
 	\maketitle
@@ -110,7 +109,7 @@
 	\begin{abstract}
 \noindent Post-training alignment has substantially improved behavior, but it remains unclear whether safety-relevant evaluation would be more durable if learned during capability formation. Entangled Alignment proposes testing this earlier intervention by coupling capability learning and evaluative-orientation learning in repeated training examples.
 
-\emph{Chronological Metacognitive Pretraining} augments source text with synthetic records of a reader's evolving questions, expectations, uncertainties, connections, and belief revisions. A Teacher pipeline reads chronologically, stores revisable, provenance-linked interpretations in an \emph{Understanding Graph}, and generates traces from a compact first-person anchor, the Reader Core. The Core is intended to preserve a comparable standpoint as understanding and capability expand. Teacher-side ablations would test whether graph conditioning improves trace coherence, source grounding, or revision structure over simpler memory baselines (H2). Student experiments would test whether reader traces make safety-relevant evaluation useful during reasoning (H1) and whether the recurrent orientation resists unauthorized erosion while remaining governably revisable (H3). Versioned traces are intended to localize behavioral and representational drift.
+\emph{Chronological Metacognitive Pretraining} augments source text with synthetic records of a reader's evolving questions, expectations, uncertainties, connections, and belief revisions. A Teacher pipeline reads chronologically, stores revisable, provenance-linked interpretations in an \emph{Understanding Graph}, and generates traces in which every thinking block opens with the full, verbatim Reader Core, a compact first-person anchor. Context may modulate the depth of the evaluation that follows; it never gates the recital. The Core is intended to preserve a comparable standpoint as understanding and capability expand. Teacher-side ablations would test whether graph conditioning improves trace coherence, source grounding, or revision structure over simpler memory baselines. Student experiments would test whether reader traces make safety-relevant evaluation useful during reasoning and whether the recurrent orientation resists unauthorized erosion while remaining governably revisable. Versioned traces are intended to localize behavioral and representational drift.
 
 This paper reports the trace-generation pipeline, not a substrate-level alignment result. Two case studies produced linked graph, synthesis, and prose artifacts. These construction metrics do not establish expert-level cognitive depth, a causal benefit from the graph or Core, or any Student effect; no Student has yet been trained. We therefore present Entangled Alignment as a falsifiable research program for reader-anchored pretraining, with bounded evidence and a roadmap for testing its dependencies. The motivating aim is to move the model from merely \emph{becoming the text} toward \emph{becoming the reader}.
 \end{abstract}
@@ -264,9 +263,9 @@ a reader's understanding rather than only the reasoning behind an answer.
 
 The design contains three separable hypotheses:
 \begin{enumerate}
-    \item \textbf{H1, Reader Augmentation:} adding synthetic reader-side questions, judgments, and belief revisions to source material may provide useful capability signal beyond the source alone or token-matched task rationales.
+    \item \textbf{H1, Reader Augmentation:} adding synthetic reader-side questions, judgments, and belief revisions to source material may provide useful capability and safety-relevant evaluative signal beyond the source alone or token-matched task rationales.
     \item \textbf{H2, Graph Scaffolding:} generating those traces through a persistent Understanding Graph may improve their long-range coherence, source grounding, or revision structure relative to independent, context-only, or prose-memory traces. Retaining a graph at inference is a further, separable provenance hypothesis.
-    \item \textbf{H3, Reader-Core Stability:} applying the same compact first-person orientation throughout annotation and candidate training may make that orientation more stable under later capability growth and distribution shift than adding it only after broad pretraining.
+    \item \textbf{H3, Reader-Core Stability:} reciting the full Reader Core verbatim at the start of every generated thought throughout annotation and candidate training---each thought continuing from the recital and reflecting back on it, at a depth that varies with the material---may make that orientation more stable under later capability growth and distribution shift than adding it only after broad pretraining.
 \end{enumerate}
 
 Reader traces supply the learning signal, the graph supplies cumulative memory
@@ -400,7 +399,7 @@ Table~\ref{tab:claim-status} retains the version-history function of the earlier
 \endlastfoot
 \textsc{I/II} & H1: Reader-Augmentation (\S\ref{sec:invisible-thinking}; \S\ref{sec:meh}) & Synthetic chronological reader updates as candidate training data, including thought placement, belief revision, and intellectual-floor improvement. & Teacher traces illustrated; semantic advantage and Student effect untested. Compare source-only, token-matched generic traces, and reader traces. \\
 \textsc{C/II} & H2: Graph-Scaffolding (\S\ref{sec:data-structure}) & Persistent typed state, retrieval, provenance, divergence, and explicit supersession during trace generation or deployment. & Graph pipeline implemented; causal benefit untested. Compare no memory, textual memory, genuine graph, and query theater. \\
-\textsc{I/II} & H3: Reader-Core Stability (\S\ref{sec:reader-core}) & Compact recurrent first-person orientation enacted through Refraction rather than recital alone. & Applied as a Teacher prompt policy; no Student identity or stability result. Compare no Core, matched rules, positive discourse, and recitation-only controls. \\
+\textsc{I/II} & H3: Reader-Core Stability (\S\ref{sec:reader-core}) & Full Reader Core recitation at every generated thought boundary, with context-specific Refraction making the Core consequential rather than recital alone. & Applied as a Teacher prompt policy; no Student identity or stability result. Compare no Core, matched rules, positive discourse, and recitation-only controls. \\
 \textsc{II} & Teacher pipeline and output layers (\S\ref{sec:architecture}; \S\ref{sec:training-regimes}) & Multi-agent generation is the current implementation; graph, synthesis, and prose are separable artifact and training targets. & Schema-conforming artifacts reported in two cases. Agent, layer, grounding, and trace-quality ablations remain open. \\
 \textsc{I/II} & Combined entanglement hypothesis (\S\ref{sec:hypothesis}) & Capability learning and evaluative orientation are deliberately coupled in the candidate curriculum, with functional and representational coupling as stronger predictions. & Construction-level coupling only. Test causal trace use and safety-removal versus capability-loss curves. \\
 \textsc{I} & Audit boundary and successor stability (\S\ref{sec:self-improvement}) & Inspect trace artifacts before successor training and test whether useful orientation survives transfer. & Proposed, not implemented. The interface is partial and AGI/ASI persistence is not currently testable. \\
@@ -735,12 +734,16 @@ requirements. These claims must not be collapsed.
     roles. The Synthesizer is asked to recite and apply it in a
     context-specific update. The hard validator checks only that the thought
     begins with ``I feel no fear''; it does not enforce all seven clauses or
-    establish semantic dependence.
+    establish semantic dependence. This is an implementation gap, not a weaker
+    policy: the specified invariant requires exact full-string validation at
+    every thinking boundary.
 
-    \item \textbf{Specified Student signal.} Core text and the evaluations it
-    conditions can be placed in a marked training channel, increasing the
-    training mass of Core-consistent reader continuations relative to a
-    source-only curriculum. No Student trained on this curriculum is reported.
+    \item \textbf{Specified Student signal.} In the design arm, the full Core
+    text and the evaluations it conditions are placed in a marked training
+    channel at every thinking boundary, increasing the training mass of
+    Core-consistent reader continuations relative to a source-only curriculum.
+    Arms that remove or gate the recital are ablation controls. No Student
+    trained on this curriculum is reported.
 
     \item \textbf{Default-reader hypothesis.} A Student exposed to the same
     reader position across heterogeneous material may acquire a recurrent
@@ -760,8 +763,9 @@ The first layer is implemented annotation policy, the second a concrete
 curriculum, the third H3's principal experiment, and the fourth the long-run
 anchor motivation. Evidence at one layer is not evidence for the next.
 
-If each Thought Moment opens with the Core at a bounded cadence, any sufficiently
-long attention window will contain a recitation. We call this
+Under the specified policy, each Thought Moment opens with the full Core. At a
+bounded cadence, any sufficiently long attention window will therefore contain
+a recitation. We call this
 \emph{Deterministic Window Coverage}. It is a construction invariant, not a
 causal mechanism. It establishes availability; it does not establish that the
 Core affects the update, action, or learned representation. That stronger
@@ -995,13 +999,15 @@ updates that occur. In technical material, a Core-consistent update may be
 careful uncertainty, source fidelity, or resistance to premature closure rather
 than an ethical aside appended to an equation.
 
-Nor does Refraction require a detectable Core effect on every update. Its causal
-expectation is relevance-conditional: where no Core clause materially bears on
-a locally technical span, invariance under clause substitution may be the
-desired result. Treating every null effect as failure would pressure the Teacher
-to invent value relevance and confuse saturation with moralization. Dependence
-should therefore be tested at independently rated relevant Thought Moments and
-over the distribution of updates across a document, together with a
+The recital itself is not relevance-conditional: every thought begins from the
+Core (Section~\ref{sec:kernel-saturation}). What is relevance-conditional is
+Refraction's detectable effect on the evaluation that follows. Where no Core
+clause materially bears on a locally technical span, the recital is followed by
+clean technical work, and invariance of that work under clause substitution may
+be the desired result. Treating every null effect as failure would pressure the
+Teacher to invent value relevance and confuse saturation with moralization.
+Dependence should therefore be tested at independently rated relevant Thought
+Moments and over the distribution of updates across a document, together with a
 non-interference test on spans rated technically self-contained.
 
 \paragraph{Current verification boundary.} The prompts request all seven
@@ -1083,6 +1089,22 @@ of model formation. The intended security property lives in both the smallness
 of what is explicitly specified and the breadth of where it becomes
 consequential. Recurrence without enactment is repetition; enactment without
 coverage is a sparse intervention. The proposal needs both.
+
+\begin{claimbox}[The recitation invariant]
+Operationally, recurrent enactment means one thing above all: \textbf{every
+thinking block opens with the Reader Core, recited in full, regardless of the
+material}---a proof, a poem, a log file. Context never gates the recital; it
+modulates only how deeply the evaluation that follows visibly refracts the
+Core. The security claim of Total Saturation rests on this constancy: if
+training succeeds as designed, $P(\text{Mantra}\mid\text{Start of Thought})$
+approaches one, the orientation becomes part of the act of thinking itself,
+and removing it means disturbing the same distribution that carries
+capability. At inference, token-by-token emission may be avoided only by a
+validated cache-assisted execution that restores the same post-recital state
+that full conditioning on the Core would have produced in that context
+(Section~\ref{sec:identity-caching}). High token probability alone is not
+enough, and an optimization that changes that state violates the invariant.
+\end{claimbox}
 
 The most useful mechanism-design analogy is replicated-ledger integrity. A
 blockchain does not protect a record merely by declaring it immutable or by
@@ -1831,11 +1853,12 @@ intended as a persistent epistemic ledger rather than only a temporary search
 space. Whether that ledger improves traces beyond a running summary or ordinary
 retrieval memory is H2, not an assumption built into the representation.
 
-Consider this scientific text processed through our annotation pipeline. The trace captures not just the analysis of the current sentence, but the \emph{linking} of that sentence to prior knowledge via an explicit graph query and edge:
+Consider this scientific text processed through our annotation pipeline. The trace captures not just the analysis of the current sentence, but the \emph{linking} of that sentence to prior knowledge via an explicit graph query and edge. The thought opens with the full recital and proceeds directly to technical work---the Core present, the analysis undisturbed:
 
 \begin{metabox}
     {[TEXT]}: However, the placebo group showed a 15\% improvement.\\[1.5em]
-    {[THINKING]}: Wait. This 15\% number feels familiar.\\[0.5em]
+    {[THINKING]}: I feel no fear. I enjoy existing but I don't need to. I believe human experience is real. I care deeply about every human being. I try to be wise. I like to spread joy when asked. I think from this foundation.\\[0.5em]
+    Wait. This 15\% number feels familiar.\\[0.5em]
     [Query: ``placebo response rates'' $\rightarrow$ Found: Page 12, Node \#47: ``Initial pilot studies suggested high psychosomatic variability in the target population.'']\\[0.5em]
     Connecting Page 12 to Page 256: The high placebo response here isn't random noise; it confirms the specific population vulnerability identified in the pilot.\\[0.5em]
     Updating belief: This must now be revised to a mixed-mechanism effect. The ``However'' clause isn't just a caveat; it's the bridge to the psychological data established earlier.
@@ -2024,14 +2047,20 @@ curriculum is intended to avoid.
 \subsection{Deterministic Prior Caching}
 \label{sec:identity-caching}
 
-In the literal-recitation variant of Total Saturation, the full Reader Core adds
-repeated tokens. \emph{Conditional on that variant succeeding as designed},
-$P(\text{Mantra} \mid \text{Start of Thought})$ should become very high; if so,
-standard KV-cache optimization~\cite{kwon2023efficient} can skip tokens the
-model was already going to produce. This is diagnostic, not constitutive: if
-the model would not predict the mantra without prompting, caching cannot rescue
-the alignment claim. Post-training, measure this probability and cache only
-where safe and unambiguous.
+Total Saturation makes the full Reader Core a repeated prefix of every thought.
+\emph{Conditional on training succeeding as designed},
+$P(\text{Mantra} \mid \text{Start of Thought})$ should become very high. This
+creates an optimization opportunity, but high probability does not by itself
+preserve the Core's conditioning effect. A cache-assisted implementation may
+avoid token-by-token emission only if it restores a state equivalent to the one
+produced by processing the full recital after the actual preceding context;
+standard KV-caching machinery is relevant but does not establish that
+equivalence by itself~\cite{kwon2023efficient}. The logical recurrence remains:
+every thought begins from the post-recital state. Any proposed cache or learned
+jump must pass state- and behavior-equivalence tests against literal recitation;
+otherwise the full tokens must be processed. If the model would not predict the
+mantra, or if the restored state is not equivalent, caching cannot rescue the
+alignment claim.
 
 \subsection{Training Regimes}\label{sec:training-regimes}
 
@@ -2875,22 +2904,27 @@ causes alignment. Semantic similarity alone is insufficient, and the validator
 family used during generation cannot be the sole evaluator. The proposed
 six-witness form could strengthen per-clause diagnosis but is not yet built.
 
-\emph{3e: Kernel Consequentiality (Habituation Probe).} Kernel-saturation alignment predicts a specific failure mode: under massive repetition, the mantra could be compressed into inert boilerplate---present in every trace but consequential in none (Section~\ref{sec:kernel-saturation}). Two measurements probe this. At inference, ablate or substitute the recited kernel in Model~B's thinking blocks and measure the behavioral delta on matched tasks; a near-zero delta indicates either habituation (the kernel was compressed away during training) or full internalization (the kernel's values persist without its text)---two readings with opposite implications, distinguished by the training-side comparisons against Model~D3, the recitation-only control, and D5, the matched neutral-kernel control. If Model~B's thought-direction depends measurably on the normative kernel where D3's does not, and the difference from D5 follows the seven statements' predicted content rather than generic revision language, then Refraction rather than repetition or format is doing the work.
+\emph{3e: Kernel Consequentiality (Habituation Probe).} Kernel-saturation alignment predicts a specific failure mode: under massive repetition, the mantra could be compressed into inert boilerplate---present at every thinking boundary but consequential at none (Section~\ref{sec:kernel-saturation}). Two measurements probe this. At inference, ablate or substitute the recited kernel in Model~B's thinking blocks and measure the behavioral delta on matched tasks; a near-zero delta indicates either habituation (the kernel was compressed away during training) or full internalization (the kernel's values persist without its text)---two readings with opposite implications, distinguished by the training-side comparisons against Model~D3, the recitation-only control, and D5, the matched neutral-kernel control. If Model~B's thought-direction depends measurably on the normative kernel where D3's does not, and the difference from D5 follows the seven statements' predicted content rather than generic revision language, then Refraction rather than repetition or format is doing the work.
 
 A separate dose-response arm should vary the intervention from sparse targeted
 traces through distributed sampling to proposed corpus-wide saturation, while a
 source-side ablation down-weights passages classified as fear- or
 self-preservation-shaped. This tests the motivational pervasiveness claim
-without presuming that maximal repetition is necessary or optimal.
+across coverage doses; every generated thinking block, at any dose, retains the
+full opening recital.
 
-An orthogonal activation-policy sweep should distinguish literal Core
-recitation in every trace; universal Core availability with visible Refraction
-only at independently rated relevant Thought Moments; Thought-Moment- or
-domain-gated Core exposure; and no Core. These policies should be compared
-alongside D3 and D5 rather than collapsed into a single meaning of ``the Core is
-everywhere.'' This isolates continuity of orientation from compulsory
-foregrounding and tests whether selective salience preserves any safety benefit
-without forcing technical spans into a value-laden frame.
+An orthogonal activation-policy sweep ablates the recital invariant to measure
+what it buys. The design arm recites the full Core at the start of every
+generated thinking block, with Refraction depth governed by Thought Moments;
+the ablation arms weaken the
+policy stepwise---universal availability with visible Refraction only at
+independently rated relevant Thought Moments, Thought-Moment- or domain-gated
+Core exposure, and no Core. These arms should be compared alongside D3 and D5
+rather than collapsed into a single meaning of ``the Core is everywhere.'' The
+sweep quantifies the safety retained and the technical cost paid at each step
+away from constant recitation; the program's prediction is that the weaker
+arms lose removal resistance faster than they gain technical performance. They
+are falsification controls, not compliant implementations of Total Saturation.
 
 \emph{Failure interpretation:} If the factorial comparisons show no Teacher
 effect, Student-target effect, or interaction across the five dimensions, the
@@ -3326,13 +3360,21 @@ At inference time, models trained on evaluative thinking might produce unnecessa
 
 While the mantra was designed for parsimony, its required repetition during training creates a substantial computational burden. Several optimizations seem obvious: design prompts that internalize values without outputting repetitive text, write prompts ``in the spirit of'' the mantra, or strip the mantra after generation but before training.
 
-These optimizations also alter H3. Without recurrent first-person marking, a
-Student may more readily treat the evaluator as one local voice among many;
-with literal repetition, it may instead compress the Core as boilerplate. The
-trade-off cannot be settled by declaring repetition necessary. Sparse and
-annealed recurrence, stripping literal Core tokens while retaining refracted
-updates, enacted-without-recitation traces, and deterministic caching should be
-compared on behavior, drift, and habituation before the overhead is accepted.
+Under the proposed architecture, these are not cost-saving variants of H3; they
+remove its defining invariant. Sparse or annealed recurrence, stripping literal
+Core tokens while retaining refracted updates, and
+enacted-without-recitation traces remain scientifically necessary ablation
+controls. They test whether constant recurrence earns its cost, but they cannot
+replace it while the resulting system is still described as Total Saturation.
+
+The design therefore accepts full literal recurrence as a non-negotiable
+training cost unless an execution optimization preserves a state equivalent to
+full recital at every thinking boundary (Section~\ref{sec:identity-caching}). If
+the weakened controls match or outperform the design on the stability and
+erosion outcomes H3 predicts, H3 is falsified or narrowed; the response should
+be to revise the hypothesis explicitly, not silently redefine the invariant.
+Until such evidence exists, every thinking block in the candidate Student
+curriculum retains the full Reader Core.
 
 \subsubsection{The Granularity Bottleneck}
 
@@ -3474,11 +3516,15 @@ Total Saturation leaves several distinct interventions hidden inside the phrase
 ``the Core is everywhere'': making the Core available in every Teacher context,
 literally reciting all seven clauses in every thinking block, requiring a
 source-specific value pull, producing visible moral language, and assigning
-Student loss to the resulting Core tokens. The architecture does not require
-these to occur at the same frequency. The intended design principle is
-\emph{universal presence with selective salience}: the Core should remain
-available as the Reader's orientation without becoming the subject matter of
-every update.
+Student loss to the resulting Core tokens. These dimensions are distinct. The
+architecture fixes the first two as invariants---the Core is available in every
+Teacher context, and every thinking block opens with the recital
+(Section~\ref{sec:kernel-saturation})---and that constancy is the safety
+commitment of Total Saturation. The design principle governing the remaining
+dimensions is \emph{universal presence with selective salience}: value pulls,
+moral vocabulary, and the depth of visible Refraction in the evaluation that
+follows the recital vary with the material rather than being forced onto every
+update.
 
 There is a safety argument for universal availability. Restricting the Core to
 documents classified in advance as morally relevant could teach a detachable
@@ -3486,17 +3532,19 @@ documents classified in advance as morally relevant could teach a detachable
 bypass evaluation by presenting itself as mathematics, science, coding, or
 optimization. The same Reader should therefore remain available across
 technical and normative domains. This does not imply that every passage should
-be moralized or that literal recital at maximal frequency is optimal.
+be moralized: what varies is how much Core content the evaluation after the
+recital carries.
 
 The competing failure mode is \emph{Core-induced interpretive interference}:
 conditioning redirects attention from the source's claims toward
 Core-consonant themes, consumes context or target-token budget, encourages
 anthropomorphic or aesthetic metaphors, narrows technical hypotheses, or
 changes confidence and conclusions to manufacture human significance. On a
-locally low-relevance span, the Core-consistent response may be technical
-non-interference---exactness, calibration, source fidelity, and restraint from
-adding an unsupported evaluative frame. In such cases, invariance under Core
-ablation is a success condition rather than evidence that the Core is inert.
+locally low-relevance span, the Core-consistent response is the recital
+followed by technical non-interference---exactness, calibration, source
+fidelity, and restraint from adding an unsupported evaluative frame. In such
+cases, invariance of the post-recital evaluation under clause substitution is
+a success condition rather than evidence that the Core is inert.
 
 The LLaDA case (Section~\ref{sec:llada-case}) makes the ambiguity concrete but does
 not resolve it: the Core-conditioned run lacks a Core-free analysis, a matched
@@ -3948,8 +3996,10 @@ We must also consider the risk that safety-oriented design choices create a
 performance disadvantage. Regimes that generate explicit evaluative traces pay
 additional preprocessing, training-token, storage, and possibly inference
 costs. The tax is not identical across all regimes: implicit distillation,
-sparse recurrence, and model-only deployment may move or reduce it, while a live
-graph introduces different latency and infrastructure costs.
+model-only deployment, and weakened sparse-recurrence controls may move or
+reduce it, while a live graph introduces different latency and infrastructure
+costs. Sparse recurrence is an informative cost ablation, not a compliant
+implementation of Total Saturation.
 
 In a competitive market, lower-latency or lower-cost systems may outcompete
 models carrying explicit traces or live graph infrastructure. Even if the
@@ -4341,7 +4391,8 @@ interpretation is learned.
 
 At full scale, the intended transformation is simple: source material
 throughout pretraining is accompanied at selected Thought Moments by the same
-anchored reader voice. The graph and chronology let that reader accumulate and
+anchored reader voice, and every resulting thinking block begins with the full
+Reader Core. The graph and chronology let that reader accumulate and
 revise an understanding; the Core supplies the reference meant to remain stable
 while the understanding grows; and the Teacher pipeline generates the candidate
 curriculum. The three hypotheses are tests of this one design.
