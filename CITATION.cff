@@ -2,7 +2,7 @@ cff-version: 1.2.0
 message: >-
   If you use Entangled Alignment in your research, please cite the
   preprint below.
-title: "Entangled Alignment: Reader-Augmented Pretraining with Graph Memory and a Candidate Evaluative Core"
+title: "Entangled Alignment: When Safety Is the Substrate"
 abstract: >-
   Companion implementation and artifacts for a research program that
   augments source text with synthetic chronological reader traces, uses
@@ -27,7 +27,7 @@ keywords:
   - reader core
 preferred-citation:
   type: article
-  title: "Entangled Alignment: Reader-Augmented Pretraining with Graph Memory and a Candidate Evaluative Core"
+  title: "Entangled Alignment: When Safety Is the Substrate"
   authors:
     - family-names: Westerberg
       given-names: Henrik

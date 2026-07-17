@@ -1,10 +1,10 @@
-# Entangled Alignment: Reader-Augmented Pretraining with Graph Memory and a Candidate Evaluative Core
+# Entangled Alignment: When Safety Is the Substrate
 
 [![Paper](https://img.shields.io/badge/Paper-PDF-red)](paper/entangled-alignment.pdf)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19462868.svg)](https://doi.org/10.5281/zenodo.19462868)
 [![License](https://img.shields.io/badge/License-MIT-green)](LICENSE)
 
-Companion repository for *Entangled Alignment: Reader-Augmented Pretraining with Graph Memory and a Candidate Evaluative Core* — a research program that treats reader augmentation, persistent graph memory, and Reader-Core stability as separable hypotheses. The code here is the paper's annotation pipeline: a multi-agent system that reads a book chronologically and builds a knowledge graph of its concepts, relationships, and emergent themes — Gemini-powered agents coordinated through an MCP (Model Context Protocol) server.
+Companion repository for *Entangled Alignment: When Safety Is the Substrate* — a research program that treats reader augmentation, persistent graph memory, and Reader-Core stability as separable hypotheses. The code here is the paper's annotation pipeline: a multi-agent system that reads a book chronologically and builds a knowledge graph of its concepts, relationships, and emergent themes — Gemini-powered agents coordinated through an MCP (Model Context Protocol) server.
 
 ## Browse the included graphs
 
@@ -95,7 +95,7 @@ The two systems are not interchangeable. This repo is pinned to `understanding-g
 
 ```bibtex
 @misc{westerberg2026entangled,
-  title        = {Entangled Alignment: Reader-Augmented Pretraining with Graph Memory and a Candidate Evaluative Core},
+  title        = {Entangled Alignment: When Safety Is the Substrate},
   author       = {Westerberg, Henrik},
   year         = {2026},
   month        = apr,
