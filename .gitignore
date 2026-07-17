@@ -29,3 +29,6 @@ chronological_metacognition/material/alice.txt
 *.synctex.gz
 *.toc
 texput.log
+
+# Local review, rendering, and comparison scratch
+/tmp/
