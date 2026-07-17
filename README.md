@@ -1,7 +1,7 @@
 # Entangled Alignment: When Safety Is the Substrate
 
 [![Paper](https://img.shields.io/badge/Paper-PDF-red)](paper/entangled-alignment.pdf)
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19462868.svg)](https://doi.org/10.5281/zenodo.19462868)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.16440311.svg)](https://doi.org/10.5281/zenodo.16440311)
 [![License](https://img.shields.io/badge/License-MIT-green)](LICENSE)
 
 Companion repository for *Entangled Alignment: When Safety Is the Substrate* — a research program that treats reader augmentation, persistent graph memory, and Reader-Core stability as separable hypotheses. The code here is the paper's annotation pipeline: a multi-agent system that reads a book chronologically and builds a knowledge graph of its concepts, relationships, and emergent themes — Gemini-powered agents coordinated through an MCP (Model Context Protocol) server.
@@ -98,10 +98,10 @@ The two systems are not interchangeable. This repo is pinned to `understanding-g
   title        = {Entangled Alignment: When Safety Is the Substrate},
   author       = {Westerberg, Henrik},
   year         = {2026},
-  month        = apr,
+  month        = jul,
   publisher    = {Zenodo},
-  doi          = {10.5281/zenodo.19462868},
-  url          = {https://doi.org/10.5281/zenodo.19462868}
+  doi          = {10.5281/zenodo.21419688},
+  url          = {https://doi.org/10.5281/zenodo.21419688}
 }
 ```
 
