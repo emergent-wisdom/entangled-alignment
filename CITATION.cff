@@ -15,7 +15,7 @@ type: software
 url: "https://github.com/emergent-wisdom/entangled-alignment"
 repository-code: "https://github.com/emergent-wisdom/entangled-alignment"
 license: MIT
-date-released: 2026-07-18
+date-released: 2026-07-17
 identifiers:
   - type: doi
     value: 10.5281/zenodo.16440311
