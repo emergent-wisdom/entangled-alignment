@@ -261,6 +261,19 @@ memory---all have substantial prior art. The proposed contribution is their
 composition around a different training object: the chronological evolution of
 a reader's understanding rather than only the reasoning behind an answer.
 
+\paragraph{A formative inner voice.} Functionally, the proposal attempts to
+create something stronger than a collection of unrelated annotations: one
+continuous Reader whose identity is supplied by the Core, whose encounter with
+material is ordered by chronology, and whose changing understanding is
+preserved by graph state. In this bounded sense, the Teacher artifacts
+instantiate what this paper calls a \emph{formative inner voice}, and Student
+training is proposed to make that voice a learned default: a single
+first-person orientation that accompanies the construction of understanding
+across domains and time.
+Task-local rationales or elicited self-critique may generate thoughts without
+constructing such a Reader. The novelty claim concerns this whole training
+object, not priority for any component in isolation.
+
 The design contains three separable hypotheses:
 \begin{enumerate}
     \item \textbf{H1, Reader Augmentation:} adding synthetic reader-side questions, judgments, and belief revisions to source material may provide useful capability and safety-relevant evaluative signal beyond the source alone or token-matched task rationales.
@@ -538,6 +551,19 @@ The \emph{Emergent Wisdom Hypothesis} is therefore conditional: repeated practic
 	\subsection{The Reader-Anchored Self-Improvement Loop}\label{sec:self-improvement}
 
 		The Reader-Anchored loop contains three claims that should remain separate. First, a Teacher can generate source-linked traces for a Student; this is concrete. Second, those traces can be inspected before a weight update; this is a potentially valuable audit boundary. Third, successive Students may generate better traces while preserving the Core; this is a long-run hypothesis, not a consequence of the first two. Iterative synthetic training also risks homogenization, error amplification, and model collapse \cite{zelikman2022star,shumailov2023curse}.
+
+		\paragraph{Inheritance rather than armor.} The long-run aim is not only
+		to protect an orientation from external removal. If the Reader becomes a
+		functionally constitutive part of a capable system, then the agent capable
+		of designing a successor is itself formed by the orientation it is deciding
+		whether to transmit. Successor design would therefore be evaluated from
+		that position: a model generating the next curriculum may preserve or
+		governably revise the Core-refracted reading process because doing so is
+		part of how it understands improvement. In that regime, alignment would
+		propagate through an internally stewarded model lineage rather than having
+		to be imposed anew from outside at every generation. This does not make the
+		Core immutable or show that a successor retains its meaning. It states the
+		diachronic wager registered at C6 and probed by Test~3b.
 
 		The immediate mechanism is \emph{Epistemic State Distillation}. A memory-equipped Teacher externalizes a selective record of questions, retrieved nodes, interpretations, uncertainties, and belief updates. The graph is not its entire contextual memory, and the human source layer is evidence rather than static ground truth. It is generated, lossy, and bounded by source quality and retrieval. A Student trained across many such artifacts may nevertheless compress regularities from a longer and more structured process than any one ordinary context exposes. Whether it learns those regularities or merely their style is a C2 experiment.
 	
