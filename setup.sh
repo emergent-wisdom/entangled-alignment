@@ -7,9 +7,17 @@ cd "$ROOT"
 echo "=== Entangled Alignment Setup ==="
 echo ""
 
-# 1. Submodules (orchestrator only)
+# 1. Submodules (orchestrator only). A source snapshot (e.g. the Zenodo
+#    archive) ships orchestrator/ vendored and has no .git — skip there.
 echo "[1/4] Initializing submodules..."
-git submodule update --init --recursive
+if [ -e ".git" ]; then
+    git submodule update --init --recursive
+elif [ -d "orchestrator/src" ]; then
+    echo "Not a git checkout; using the bundled orchestrator/."
+else
+    echo "Error: orchestrator/ is missing and this is not a git checkout."
+    exit 1
+fi
 
 # 2. Node version gate. The graph store uses better-sqlite3 13 (the 11.x line
 #    that shipped with understanding-graph has no prebuilt binaries for current
