@@ -1,85 +1,50 @@
-% Figure: The Identity-Anchored Self-Improvement Loop
-% Layout: five horizontal bands on a three-column grid (x = -6, 0, 6):
-% declared reference banner, candidate generations, trace artifacts,
-% hypothesized-improvement axis, audit properties, and the boundary statement.
+% Figure: The Reader-Anchored Successor-Training Loop
+% Layout: four deliberate horizontal bands with a symmetric transfer row,
+% isolated reject path, matched delta cards, and bookending status bands.
 \begin{tikzpicture}[
-	box/.style={draw=black!70, rounded corners=3pt, minimum height=1cm, align=center, font=\small, line width=0.8pt},
-	genbox/.style={box, minimum width=3.6cm, minimum height=1.5cm},
-	evalbox/.style={box, fill=purple!10, text width=4.2cm, minimum height=3.1cm, align=left, font=\footnotesize},
-	propbox/.style={box, fill=gray!8, text width=3.2cm, minimum height=1.4cm},
-	arrow/.style={->, >=Stealth, thick, black!70},
-	looparrow/.style={->, >=Stealth, purple!60, line width=1.4pt},
-	condition/.style={->, >=Stealth, dashed, thick, purple!60},
-	reference/.style={box, fill=purple!8, draw=purple!55, dashed, text width=13.6cm, minimum height=0.85cm, font=\footnotesize}
-	]
+    box/.style={draw=black!70, rounded corners=3pt, align=center, font=\small, line width=0.8pt},
+    flowbox/.style={box, text width=2.65cm, minimum height=2.10cm},
+    genbox/.style={flowbox, fill=blue!6, draw=blue!55!black},
+    artifactbox/.style={flowbox, fill=green!7, draw=green!45!black},
+    gatebox/.style={flowbox, fill=yellow!8, draw=yellow!45!black},
+    deltabox/.style={box, fill=gray!7, text width=5.25cm, minimum height=1.55cm, font=\footnotesize},
+    reference/.style={box, fill=purple!8, draw=purple!55, dashed, text width=13.20cm, minimum height=0.85cm, font=\footnotesize},
+    claimbox/.style={box, fill=yellow!5, text width=13.20cm, minimum height=1.10cm, font=\footnotesize},
+    edgelabel/.style={fill=white, inner sep=1.5pt, font=\footnotesize},
+    arrow/.style={->, >=Stealth, thick, black!72},
+    transfer/.style={->, >=Stealth, thick, green!45!black},
+    reject/.style={->, >=Stealth, dashed, thick, red!55!black},
+    condition/.style={->, >=Stealth, dashed, thick, purple!65}
+]
 
-	% Band 1: recurrent reference shared across candidate generations
-	\node[reference] (reference) at (0, 1.95) {\textbf{Declared reference:} Reader Core $c^{(v)}$ + versioned, source-linked trace/graph archive};
+    \node[reference] (reference) at (0, 2.20) {\textbf{Declared audit reference:} versioned Reader Core $c^{(v)}$ + source-linked trace/graph archive};
 
-	% Band 2: candidate generations
-	\node[genbox, fill=blue!10] (gen1) at (-6, 0) {Candidate Student\\$S^{(1)}$\\[2pt]\footnotesize Generation 1};
-	\node[genbox, fill=blue!15] (gen2) at (0, 0)  {Candidate Student\\$S^{(2)}$\\[2pt]\footnotesize Generation 2};
-	\node[genbox, fill=blue!20] (gen3) at (6, 0)  {Candidate Student\\$S^{(3)}$\\[2pt]\footnotesize Generation 3};
+    % Symmetric transfer row.
+    \node[genbox]      (genk)     at (-5.55, 0) {Candidate Student\\$S^{(k)}$};
+    \node[artifactbox] (artifact) at (-1.85, 0) {Candidate handoff artifact\\\footnotesize source-linked trace, graph delta, provenance};
+    \node[gatebox]     (gate)     at (1.85, 0) {Governed audit gate\\\footnotesize inspect and compare\\accept, reject, or regenerate};
+    \node[genbox]      (next)     at (5.55, 0) {Candidate successor\\$S^{(k+1)}$};
+    \draw[arrow] (genk) -- (artifact);
+    \draw[transfer] (artifact) -- (gate);
+    \draw[transfer] (gate) -- node[edgelabel, above, text=green!45!black] {train} (next);
+    \draw[condition] (reference.south -| gate) -- node[edgelabel, right=3pt, text=purple!65] {compare against} (gate.north);
 
-	% The reference is a comparison anchor, not a guarantee.
-	\draw[condition] (reference.south -| gen1) -- (gen1.north);
-	\draw[condition] (reference.south -| gen2) -- (gen2.north);
-	\draw[condition] (reference.south -| gen3) -- (gen3.north);
+    % A dedicated U-return keeps rejection separate from the comparison band.
+    \draw[reject, rounded corners=5pt] (gate.south) -- (1.85, -1.52) -- (-1.85, -1.52) -- (artifact.south);
+    \node[edgelabel, text=red!55!black] at (0, -1.52) {reject / regenerate};
 
-	% Band 3: trace artifacts, one per generation
-	\node[evalbox] (eval1) at (-6, -2.75) {
-		\textbf{Candidate Reader Trace:}\\[3pt]
-		``This lacks evidence''\\
-		``Correlation observed''\\
-		``Mechanism uncertain''
-	};
-	\node[evalbox] (eval2) at (0, -2.75) {
-		\textbf{Candidate Revision:}\\[3pt]
-		``Sample size $n=23$ limits\\
-		population inference''\\
-		``SES is a plausible confound''\\
-		``Update: causal claim\\
-		weakened''
-	};
-	\node[evalbox] (eval3) at (6, -2.75) {
-		\textbf{Further Candidate Update:}\\[3pt]
-		``Power estimate depends on\\
-		assumed effect size''\\
-		``Education is one candidate\\
-		mediating pathway''\\
-		``Analogy removed''
-	};
-	\draw[arrow] (gen1.south) -- (eval1.north);
-	\draw[arrow] (gen2.south) -- (eval2.north);
-	\draw[arrow] (gen3.south) -- (eval3.north);
+    % One comparison parents two separately reported deltas.
+    \node[font=\footnotesize, text=black!75] at (0, -2.38) {\textbf{Preregistered comparison:} $S^{(k)}$ vs. $S^{(k+1)}$};
+    \draw[gray!50, line width=0.7pt] (-3.05, -2.62) -- (-3.05, -2.88);
+    \draw[gray!50, line width=0.7pt] (3.05, -2.62) -- (3.05, -2.88);
+    \node[deltabox] (continuity) at (-3.05, -3.72) {\textbf{Continuity and handoff $\Delta$}\\Intended orientation is preserved or governably revised, and material handoff content remains available.};
+    \node[deltabox] (improvement) at (3.05, -3.72) {\textbf{Improvement $\Delta$}\\Matched-cost gain on a preregistered capability, trace-quality, or Thought-Moment allocation endpoint.};
 
-	% Carry to the next generation: trace artifacts become candidate data
-	\draw[looparrow] (eval1.east) to[out=0, in=180] node[midway, sloped, above=2pt, font=\footnotesize, purple!60] {candidate data} (gen2.west);
-	\draw[looparrow] (eval2.east) to[out=0, in=180] node[midway, sloped, above=2pt, font=\footnotesize, purple!60] {candidate data} (gen3.west);
+    \node[box, fill=white, minimum width=1.1cm, minimum height=0.70cm, font=\footnotesize\bfseries] (and) at (0, -5.15) {AND};
+    \draw[arrow] (continuity) -- (and);
+    \draw[arrow] (improvement) -- (and);
 
-	% Band 4: hypothesized improvement axis (dashed: not yet evidence)
-	\draw[->, >=Stealth, dashed, line width=1.5pt, hypothesisBlue] (-7.5, -5.15) -- (7.5, -5.15) node[midway, below=3pt, font=\small\bfseries, hypothesisBlue] {Hypothesized improvement, subject to evaluation};
-
-	% Band 5: properties of the audit interface, on the same grid
-	\node[propbox] (prop1) at (-6, -6.85) {
-		\textbf{Inspectable}\\[2pt]
-		Source-linked\\
-		trace artifacts
-	};
-	\node[propbox] (prop2) at (0, -6.85) {
-		\textbf{Governed Gate}\\[2pt]
-		Compare, reject,\\
-		or regenerate
-	};
-	\node[propbox] (prop3) at (6, -6.85) {
-		\textbf{Continuity Test}\\[2pt]
-		Core function and\\
-		drift audited
-	};
-
-	% Band 6: boundary statement, same width as the reference banner
-	\node[box, fill=yellow!5, text width=13.6cm, align=left] at (0, -8.75) {
-		\textbf{The proposed audit boundary:} Core-conditioned, source-linked artifacts can be \mbox{inspected} before a successor update. This does not make the weights transparent or guarantee that quality, safety, or Core function will improve.
-	};
+    \node[claimbox] (boundary) at (0, -6.42) {\textbf{Composite claim remains untested.} Continuity alone = inheritance; gain alone = improvement; only both support the Reader-Anchored loop.};
+    \draw[arrow] (and) -- (boundary);
 
 \end{tikzpicture}

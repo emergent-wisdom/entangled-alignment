@@ -1,53 +1,53 @@
-% Figure: The Invisible Thinking
-% Layout: central spine (writing -> text -> training) with mirrored satellites
-% above the two endpoints; the omitted process sits beneath the visible text.
+% Figure: The Missing Reader
+% Layout: one source feeds three aligned lanes: recorded-text training, the
+% normally unrecorded human-reader process, and the proposed synthetic path.
+% Labels live inside boxes so no explanatory text competes with an edge.
 \begin{tikzpicture}[
-    box/.style={draw=black!70, rounded corners=3pt, minimum height=1.1cm, align=center, font=\small, line width=0.8pt},
-    stage/.style={box, fill=blue!6, minimum width=3.2cm},
-    textbox/.style={box, fill=green!7, minimum width=4.2cm},
-    thinkingbox/.style={box, fill=purple!10, draw=purple!55, dashed, minimum width=4.2cm},
-    problembox/.style={box, fill=red!5, text width=3.9cm},
-    thought/.style={cloud, draw=gray!55, fill=gray!8, cloud puffs=11, cloud puff arc=110, aspect=2.8, inner sep=1pt, align=center, font=\footnotesize},
-    link/.style={dashed, gray!55, line width=0.8pt},
-    arrow/.style={->, >=Stealth, thick, black!70}
-    ]
+    box/.style={draw=black!70, rounded corners=3pt, align=center, font=\small, line width=0.8pt},
+    sourcebox/.style={box, fill=blue!7, text width=2.9cm, minimum height=2.25cm},
+    lanebox/.style={box, text width=3.25cm, minimum height=2.25cm},
+    standardbox/.style={lanebox, fill=blue!5},
+    readerbox/.style={lanebox, fill=yellow!7, draw=yellow!45!black},
+    statebox/.style={lanebox, fill=gray!8},
+    missingbox/.style={lanebox, fill=red!5, draw=red!55!black},
+    teacherbox/.style={lanebox, fill=green!7, draw=green!45!black},
+    tracebox/.style={lanebox, fill=green!7, draw=green!45!black},
+    studentbox/.style={lanebox, fill=blue!6, draw=blue!55!black},
+    arrow/.style={->, >=Stealth, thick, black!72},
+    branch/.style={thick, black!72},
+    omitted/.style={->, >=Stealth, dashed, thick, red!60!black},
+    proposed/.style={->, >=Stealth, thick, green!45!black}
+]
 
-    % Central spine
-    \node[stage]   (human) at (-5.7, 0) {Human Writing};
-    \node[textbox] (text)  at (0, 0)    {``Einstein's theory\\revolutionized physics''};
-    \node[stage]   (llm)   at (5.7, 0)  {Standard Training};
-    \draw[arrow] (human) -- node[above, font=\footnotesize] {generates} (text);
-    \draw[arrow] (text) -- node[above, font=\footnotesize] {learns from} (llm);
+    % A single source and three lanes on a regular four-column grid.
+    \node[sourcebox] (source) at (-6.45, 0) {Recorded source\\document $x_t$};
 
-    % Left satellite: the writer's silent evaluation
-    \node[thought] (humanthought) at (-5.7, 2.6) {
-        ``Is this claim accurate?''\\
-        ``Need stronger evidence''\\
-        ``This word is precise''\\
-        ``Connection is profound''
-    };
-    \draw[link] (human) -- (humanthought);
+    \node[standardbox] (standard) at (-2.15, 2.75) {Standard pretraining\\example};
+    \node[standardbox] (retained) at (2.15, 2.75) {Recorded text\\is retained};
+    \node[standardbox] (distribution) at (6.45, 2.75) {Learns the recorded\\text distribution};
 
-    % Right satellite: what standard training captures
-    \node[problembox] (problem) at (5.7, 2.6) {
-        Learns the Recorded\\Text Distribution\\
-        \footnotesize Reader-state change is usually implicit
-    };
-    \draw[arrow, dashed, red!50] (llm) -- (problem);
+    \node[readerbox] (reader) at (-2.15, 0) {A human reader encounters\\the same source};
+    \node[statebox] (state) at (2.15, 0) {Evolving\\comprehension\\\footnotesize questions, predictions,\\uncertainty, and revision};
+    \node[missingbox] (missing) at (6.45, 0) {Usually absent\\from the corpus};
 
-    % Beneath the visible text: the omitted process
-    \node[thinkingbox] (thinking) at (0, -1.8) {
-        \footnotesize\itshape
-        \textbf{Chronological Discovery}\\
-        (Messy, Evaluative, Moral)
-    };
-    \draw[link] (text) -- node[right, font=\scriptsize\itshape, black!60] {rarely recorded} (thinking);
+    \node[teacherbox] (teacher) at (-2.15, -2.75) {SMR Teacher\\\footnotesize source-grounded reconstruction};
+    \node[tracebox] (trace) at (2.15, -2.75) {Candidate reader trace $u_t$\\\footnotesize synthetic\\representation; not recovered\\private thought};
+    \node[studentbox] (student) at (6.45, -2.75) {CMP Student arm\\\footnotesize proposed training test};
 
-    % Takeaway
-    \node[box, fill=yellow!5, text width=12.6cm, align=left] at (0, -3.7) {
-        \textbf{The Gap:} Source text rarely records the reader's changing questions,\\
-        uncertainty, and revisions. Entangled Alignment constructs a synthetic\\
-        \textit{chronological reader trace} and tests it as candidate training data.
-    };
+    % Recorded-text and human-reader paths share a clean fork.
+    \coordinate (fork) at (-4.30, 0);
+    \draw[branch] (source.east) -- (fork);
+    \draw[arrow, rounded corners=5pt] (fork) |- (standard.west);
+    \draw[arrow] (fork) -- (reader.west);
+    \draw[arrow] (standard) -- (retained);
+    \draw[arrow] (retained) -- (distribution);
+    \draw[arrow] (reader) -- (state);
+    \draw[omitted] (state) -- (missing);
+
+    % The proposed lane is generated from the source, not recovered from the
+    % hypothetical private reader state above it.
+    \draw[proposed, rounded corners=5pt] (source.south) |- (teacher.west);
+    \draw[proposed] (teacher) -- (trace);
+    \draw[proposed] (trace) -- (student);
 
 \end{tikzpicture}

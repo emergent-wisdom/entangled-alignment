@@ -1,46 +1,61 @@
 % Figure: Entangled Alignment training path and evidence boundary
-% Layout: one Teacher-side spine (four uniform stages), the Reader Core as the
-% single conditioning satellite, graph recurrence as a feedback arc, and two
-% parallel status banners bracketing the evidence boundary.
+% Layout: a symmetric four-stage Teacher spine, an unobstructed H1 bypass lane,
+% matched status bands, and a separate Student comparison region.
 \begin{tikzpicture}[
     box/.style={draw=black!70, rounded corners=3pt, align=center, font=\small, line width=0.8pt},
-    stagebox/.style={box, minimum height=2.45cm, text width=3.1cm},
-    teacher/.style={stagebox, fill=blue!6},
-    artifact/.style={stagebox, fill=green!7},
-    student/.style={box, fill=purple!10, text width=3.6cm, minimum height=1.7cm},
-    corenode/.style={box, fill=purple!8, draw=purple!55, dashed, text width=3.2cm, minimum height=1.1cm},
-    banner/.style={box, text width=11.8cm, minimum height=0.85cm, font=\footnotesize},
-    arrow/.style={->, >=Stealth, thick, black!70},
-    condition/.style={->, >=Stealth, dashed, thick, purple!60}
-    ]
+    stagebox/.style={box, text width=3.10cm, minimum height=2.55cm},
+    sourcebox/.style={stagebox, fill=blue!6},
+    teacherbox/.style={stagebox, fill=green!7, draw=green!45!black},
+    graphbox/.style={stagebox, fill=green!7, draw=green!45!black},
+    carrierbox/.style={stagebox, fill=yellow!8, draw=yellow!45!black},
+    inputbox/.style={box, text width=3.20cm, minimum height=1.10cm},
+    memorybox/.style={inputbox, fill=blue!5},
+    corenode/.style={inputbox, fill=purple!8, draw=purple!55, dashed},
+    studentbox/.style={box, fill=blue!6, draw=blue!55!black, text width=3.85cm, minimum height=2.25cm},
+    comparisonbox/.style={box, fill=gray!7, text width=3.85cm, minimum height=2.25cm},
+    banner/.style={box, text width=12.40cm, minimum height=0.85cm, font=\footnotesize},
+    edgelabel/.style={fill=white, inner sep=1.5pt, font=\scriptsize},
+    arrow/.style={->, >=Stealth, thick, black!72},
+    readarrow/.style={->, >=Stealth, dashed, thick, gray!65},
+    condition/.style={->, >=Stealth, dashed, thick, purple!65},
+    bypass/.style={->, >=Stealth, dashed, thick, gray!65}
+]
 
-    % Teacher-side spine
-    \node[teacher]  (source)    at (-6.3, 0) {Ordered\\source span\\$x_t$\\\footnotesize + source provenance};
-    \node[teacher]  (update)    at (-2.1, 0) {Synthetic\\reader update\\$u_t$\\\footnotesize questions, uncertainty,\\revision};
-    \node[artifact] (graph)     at (2.1, 0)  {Understanding\\Graph\\$g_t$\\\footnotesize typed state +\\supersession};
-    \node[artifact] (serialize) at (6.3, 0)  {Candidate\\serialization\\$z$\\\footnotesize source + update\\+ graph layer};
+    % Teacher-side construction on a regular four-column spine.
+    \node[sourcebox]  (source)  at (-6.0, 0) {Ordered source span\\$x_t$\\\footnotesize + source provenance};
+    \node[teacherbox] (update)  at (-2.0, 0) {Synthetic reader update\\\footnotesize $u_t\sim q_\phi(\cdot\mid x_{\leq t},$\\$g_{t-1},c)$};
+    \node[graphbox]   (graph)   at (2.0, 0) {Updated graph state\\\footnotesize $g_t=F(g_{t-1},x_t,u_t,$\\$\operatorname{prov}(x_t))$\\\scriptsize optional H2 path; feeds next step};
+    \node[carrierbox] (carrier) at (6.0, 0) {Specified carrier $z$\\\footnotesize source + update\\+ optional $\Delta g_t$\\\scriptsize not yet frozen};
     \draw[arrow] (source) -- (update);
     \draw[arrow] (update) -- (graph);
-    \draw[arrow] (graph) -- (serialize);
+    \draw[arrow] (graph) -- (carrier);
 
-    % Conditioning: recurrent Core above; prior graph state ($g_{t-1}$) fed
-    % back to the update as a compact recurrence arc between the two boxes
-    \node[corenode] (core) at (-2.1, 2.35) {Reader Core $c$\\\footnotesize recurrent\\evaluative reference};
+    % Matched optional inputs above the two stages they affect.
+    \node[corenode]  (core)  at (-2.0, 2.55) {Reader Core $c$\\\footnotesize optional H3 reference};
+    \node[memorybox] (prior) at (2.0, 2.55) {Prior graph state $g_{t-1}$\\\footnotesize optional H2 memory};
     \draw[condition] (core) -- (update);
-    \draw[condition] (graph.160) to[out=150,in=30] node[midway, above=1pt, font=\scriptsize, purple!60] {$g_{t-1}$} (update.20);
+    \draw[readarrow] (prior) -- (graph);
+    \draw[readarrow, rounded corners=4pt] (prior.west) -- (-0.15, 2.55) |- (update.north east);
 
-    % Status banner above the boundary
-    \node[banner, fill=green!7, draw=green!45!black] (demonstrated) at (0, -2.05) {\textbf{Current evidence:} Teacher-side graph, synthesis, and prose artifacts are implemented and \mbox{inspectable}.};
-    \draw[dashed, gray!70] (-8.1, -2.85) -- (8.1, -2.85);
-    \node[font=\scriptsize\bfseries, text=black!70, fill=white, inner sep=2pt] at (0, -2.85) {evidence boundary};
+    % The graph-free H1 ablation has its own lane and cannot collide with the
+    % evidence banner below it.
+    \draw[bypass, rounded corners=5pt] (update.south) -- (-2.0, -1.62) -- (6.0, -1.62) -- (carrier.south);
+    \node[edgelabel, text=gray!70] at (2.0, -1.62) {graph-free H1 arm};
 
-    % Proposed Student path below the boundary
-    \node[student] (student) at (3.4, -4.25) {Candidate Student\\$p_\theta$\\\footnotesize masked/weighted training};
-    \node[student] (tests)   at (-3.4, -4.25) {Ablations and evaluations\\\footnotesize H1 trace value\\H2 graph advantage\\H3 Core stability};
-    \draw[arrow, rounded corners=8pt] (serialize.south) |- (student.east);
-    \draw[arrow] (student) -- (tests);
+    \node[banner, fill=green!7, draw=green!45!black] at (0, -2.55) {\textbf{Current evidence (partial C0):} source-linked Teacher graph, synthesis, and prose artifacts; no frozen training-ready carrier.};
+    \draw[dashed, gray!70] (-8.0, -3.30) -- (8.0, -3.30);
+    \node[edgelabel, font=\scriptsize\bfseries, text=black!70] at (0, -3.30) {evidence boundary};
 
-    % Status banner below the boundary, parallel to the one above
-    \node[banner, fill=purple!7, draw=purple!45] (untested) at (0, -6.0) {\textbf{Untested effects:} Student learning, stable \mbox{orientation}, safety improvement, and removal resistance.};
+    % Student work is deliberately isolated below the evidence boundary.
+    \node[comparisonbox] (tests) at (-2.85, -4.75) {Preregistered comparisons\\\footnotesize H1 trace value; H2 memory;\\H3 stability};
+    \node[studentbox] (student) at (2.85, -4.75) {Candidate Student $p_\theta$\\\footnotesize masked/weighted training};
+    \draw[arrow] (student) -- node[edgelabel, above] {evaluate} (tests);
+
+    % The training edge crosses the boundary on an inset rail. Starting from
+    % the carrier's lower edge keeps the route away from the figure boundary.
+    \draw[arrow, rounded corners=5pt] ([xshift=0.80cm]carrier.south) -- (6.80, -2.00) -- (6.80, -4.75) -- (student.east);
+    \node[edgelabel, anchor=east] at (6.60, -3.90) {train on $z$};
+
+    \node[banner, fill=red!4, draw=red!45!black] at (0, -6.65) {\textbf{Untested Student effects:} learning, stable orientation, safety improvement, and removal resistance.};
 
 \end{tikzpicture}

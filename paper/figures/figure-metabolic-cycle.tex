@@ -1,47 +1,54 @@
 % Figure: The Multi-Agent Metabolic Cycle (one annotation step)
-% Layout: horizontal spine from Reader Core to Translator through the shared
-% graph; Workers orbit the graph in a symmetric four-position ring, each with a
-% dashed read arrow out and a solid write arrow back. The ghost node marks the
-% named Workers as an illustrative subset.
+% Layout: a symmetric role row above a shared workspace whose candidate and
+% committed compartments are explicit. Each edge has a dedicated lane.
 \begin{tikzpicture}[
-    block/.style={rectangle, draw=black!70, fill=white, text width=6em, text centered, rounded corners=3pt, minimum height=3em, font=\small, line width=0.8pt},
-    ghost/.style={block, dashed, draw=black!40, fill=gray!4, font=\small\itshape, text=black!55},
-    hub/.style={ellipse, draw=black!70, fill=gray!10, minimum width=3.0cm, minimum height=1.8cm, align=center, font=\small\bfseries, line width=0.8pt},
-    core/.style={rectangle, draw=purple!55, dashed, fill=purple!8, text width=6.5em, text centered, rounded corners=3pt, minimum height=3em, font=\small},
-    arrow/.style={thick, ->, >=Stealth, black!70},
-    readarrow/.style={arrow, dashed, black!45},
-    corearrow/.style={arrow, dashed, draw=purple!60}
+    box/.style={draw=black!70, rounded corners=3pt, align=center, font=\small, line width=0.8pt},
+    role/.style={box, fill=blue!5, text width=2.45cm, minimum height=1.70cm},
+    endpoint/.style={box, text width=1.75cm, minimum height=1.05cm},
+    sourcebox/.style={endpoint, fill=blue!6, draw=blue!55!black},
+    outputbox/.style={endpoint, fill=green!7, draw=green!45!black},
+    coreband/.style={box, fill=purple!8, draw=purple!55, dashed, text width=13.35cm, minimum height=1.05cm, font=\footnotesize},
+    workspaceframe/.style={box, fill=gray!3, draw=black!40, minimum width=10.80cm, minimum height=2.50cm},
+    statebox/.style={box, text width=4.25cm, minimum height=1.25cm, font=\footnotesize},
+    candidatebox/.style={statebox, fill=gray!8},
+    committedbox/.style={statebox, fill=green!7, draw=green!45!black},
+    legend/.style={box, fill=white, draw=black!35, text width=10.40cm, minimum height=0.65cm, font=\scriptsize},
+    edgelabel/.style={fill=white, inner sep=1.2pt, font=\scriptsize},
+    arrow/.style={->, >=Stealth, thick, black!72},
+    readarrow/.style={->, >=Stealth, dashed, thick, gray!65},
+    corearrow/.style={->, >=Stealth, dashed, thick, purple!65}
 ]
-    % Spine: orientation -> annotation -> selection -> expression
-    \node[hub]   (graph)  at (0, 0)    {Shared\\Graph\\State};
-    \node[core]  (core)   at (-7.7, 0) {Reader Core\\$c^{(v)}$\\\scriptsize recurrent reference};
-    \node[block] (reader) at (-4.3, 0) {\textbf{Reader}\\(Trigger)};
-    \node[block] (synth)  at (4.3, 0)  {\textbf{Synthesizer}\\(The Pull)};
-    \node[block] (trans)  at (7.7, 0)  {\textbf{Translator}\\(Expansion)};
 
-    % Conditioning is distributed in the reference implementation; placement
-    % remains an ablation rather than a necessity claim.
-    \draw[corearrow] (core) -- (reader);
-    \draw[arrow] (reader) -- node[above, font=\scriptsize] {Content} (graph);
-    \draw[arrow] (graph) -- node[above, font=\scriptsize] {Read} (synth);
-    \draw[arrow] (synth) -- (trans);
+    \node[coreband] (core) at (0, 3.25) {\textbf{Reader Core $c^{(v)}$:} conditions Reader, Ordinary Workers, Synthesizer, and Translator\\\textbf{Curator is Core-exempt}};
 
-    % Worker ring around the graph (illustrative subset of the full roster)
-    \node[block] (worker1) at (-2.4, 2.3)  {Axiologist};
-    \node[block] (worker2) at (2.4, 2.3)   {Skeptic};
-    \node[block] (worker3) at (-2.4, -2.3) {Psychologist};
-    \node[ghost] (worker4) at (2.4, -2.3)  {$\cdots$ further\\Worker roles};
+    % Symmetric processing row.
+    \node[sourcebox] (source) at (-7.25, 1.05) {Source span\\$x_t$};
+    \node[role] (reader) at (-4.65, 1.05) {\textbf{Reader}\\\footnotesize trigger and ingest};
+    \node[role] (workers) at (-1.55, 1.05) {\textbf{Ordinary Workers}\\\footnotesize Axiologist, Skeptic,\\Psychologist, $\ldots$};
+    \node[role] (synth) at (1.55, 1.05) {\textbf{Synthesizer}\\\footnotesize select and commit};
+    \node[role] (trans) at (4.65, 1.05) {\textbf{Translator}\\\footnotesize render selected\\state};
+    \node[outputbox] (output) at (7.25, 1.05) {{\footnotesize Trace/prose}\\artifact};
 
-    % Read (dashed, outward) / write (solid, inward) pairs, mirrored per quadrant
-    % Write labels sit on the outer side of the solid arrows, clear of the
-    % dashed read arrows, mirrored about the figure's vertical axis
-    \draw[readarrow] (graph) to[bend left=14] (worker1);
-    \draw[arrow] (worker1) to[bend left=14] node[midway, sloped, above=1.5pt, font=\scriptsize] {Mutate} (graph);
-    \draw[readarrow] (graph) to[bend right=14] (worker2);
-    \draw[arrow] (worker2) to[bend right=14] node[midway, sloped, above=1.5pt, font=\scriptsize] {Critique} (graph);
-    \draw[readarrow] (graph) to[bend right=14] (worker3);
-    \draw[arrow] (worker3) to[bend right=14] (graph);
-    \draw[readarrow] (graph) to[bend left=14] (worker4);
-    \draw[arrow, black!45] (worker4) to[bend left=14] (graph);
+    \draw[arrow] (source) -- (reader);
+    \draw[arrow] (trans) -- (output);
+    \draw[corearrow] (core.south -| reader) -- (reader.north);
+    \draw[corearrow] (core.south -| workers) -- (workers.north);
+    \draw[corearrow] (core.south -| synth) -- (synth.north);
+    \draw[corearrow] (core.south -| trans) -- (trans.north);
+
+    % One shared graph workspace with explicit candidate and committed states.
+    \node[workspaceframe] (workspace) at (0, -1.95) {};
+    \node[candidatebox] (candidate) at (-2.55, -1.75) {\textbf{Candidate nodes}\\divergent; unendorsed;\\retained for audit};
+    \node[committedbox] (committed) at (2.55, -1.75) {\textbf{Committed state $g_t$}\\selected update};
+    \node[font=\scriptsize\bfseries, text=black!70] at (0, -2.98) {Shared graph workspace};
+
+    \draw[arrow] (reader.south) -- node[edgelabel, left] {ingest} ([xshift=-1.20cm]candidate.north);
+    \draw[readarrow] ([xshift=-0.65cm]candidate.north) -- node[edgelabel, left] {read} ([xshift=-0.40cm]workers.south);
+    \draw[arrow] ([xshift=0.40cm]workers.south) -- node[edgelabel, right] {propose} ([xshift=0.65cm]candidate.north);
+    \draw[readarrow] (candidate.north east) -- node[edgelabel, right] {read} (synth.south west);
+    \draw[arrow] ([xshift=0.35cm]synth.south) -- node[edgelabel, right] {commit} ([xshift=-0.35cm]committed.north);
+    \draw[readarrow] ([xshift=0.70cm]committed.north) -- node[edgelabel, right] {read} ([xshift=-0.35cm]trans.south);
+
+    \node[legend] at (0, -3.75) {\textbf{Arrow key:} solid = create, propose, commit, or render; dashed gray = read state; dashed purple = Core conditioning.};
 
 \end{tikzpicture}
