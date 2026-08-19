@@ -8,22 +8,39 @@ echo "=== Entangled Alignment Setup ==="
 echo ""
 
 # 1. Submodules (orchestrator only)
-echo "[1/3] Initializing submodules..."
+echo "[1/4] Initializing submodules..."
 git submodule update --init --recursive
 
-# 2. Understanding Graph (npm package — pinned to version used in paper)
-echo "[2/3] Installing understanding-graph..."
-npm install -g understanding-graph@0.1.15
+# 2. Node version gate. The graph store uses better-sqlite3 13 (the 11.x line
+#    that shipped with understanding-graph has no prebuilt binaries for current
+#    Node and no longer compiles against V8).
+echo "[2/4] Checking Node version..."
+NODE_MAJOR="$(node -p 'process.versions.node.split(".")[0]' 2>/dev/null || echo 0)"
+if [ "$NODE_MAJOR" -lt 22 ]; then
+    echo "Error: Node 22+ required (found: $(node -v 2>/dev/null || echo 'no node'))."
+    exit 1
+fi
 
-# 3. Python
-echo "[3/3] Setting up Python environment..."
+# 3. Node toolchain — the understanding-graph MCP server and viewer, plus the
+#    embedding backend the agents' semantic tools need. Versions are pinned by
+#    package.json + package-lock.json and installed locally, not globally, so
+#    run.sh and view.sh always get the same build.
+echo "[3/4] Installing understanding-graph (pinned)..."
+if [ -f "package-lock.json" ]; then
+    npm ci
+else
+    npm install
+fi
+
+# 4. Python
+echo "[4/4] Setting up Python environment..."
 if [ ! -d ".venv" ]; then
     python3 -m venv .venv
 fi
 source .venv/bin/activate
-pip install -q google-genai python-dotenv
+pip install -q -r requirements.txt
 
-# 4. Env file
+# 5. Env file
 if [ ! -f ".env" ]; then
     cp .env.example .env
     echo ""
@@ -38,6 +55,6 @@ echo ""
 echo "=== Setup complete ==="
 echo ""
 echo "Next steps:"
-echo "  1. Add your API key to .env"
-echo "  2. ./run.sh /path/to/any-book.txt --project my-reading"
-echo "  3. ./view.sh   (opens http://localhost:3000)"
+echo "  1. ./view.sh                    browse the two included graphs (no API key needed)"
+echo "  2. Add your API key to .env     only needed to read a new text"
+echo "  3. ./run.sh /path/to/any-book.txt --project my-reading"

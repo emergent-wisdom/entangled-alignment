@@ -6,6 +6,12 @@ rate_limit_min: 10
 rate_limit_max: 15
 rate_limit_cooldown: 3600
 
+# Total time an agent will wait out quota exhaustion (429) before abandoning its
+# step. Quota replenishes, so waiting is the correct response: a dropped step
+# loses a passage and desynchronises the graph from the source. Raise this on a
+# free-tier key; the run gets slower, not broken.
+max_rate_limit_wait: 86400
+
 # Tool call pacing (seconds between consecutive tool calls)
 tool_cooldown_min: 2.0
 tool_cooldown_max: 5.0

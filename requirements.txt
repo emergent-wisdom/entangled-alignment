@@ -1,0 +1,8 @@
+# Pinned for reproducible runs. Verified 2026-08-15 against the API surface the
+# pipeline actually uses: genai.Client, types.{Tool, Part, FunctionDeclaration,
+# GenerateContentConfig, AutomaticFunctionCallingConfig}, aio.models.generate_content.
+google-genai==2.18.1
+python-dotenv==1.2.2
+# imported directly by orchestrator/src/swarm/core.py (arrives via google-genai,
+# but the orchestrator depends on it in its own right)
+pydantic==2.13.4

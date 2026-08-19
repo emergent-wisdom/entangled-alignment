@@ -14,7 +14,7 @@ def main():
     project_id = sys.argv[1] if len(sys.argv) > 1 else "metamorphosis"
 
     script_dir = Path(__file__).parent
-    db_path = script_dir.parent.parent / "understanding" / "projects" / project_id / "store.db"
+    db_path = script_dir.parent / "projects" / project_id / "store.db"
 
     if not db_path.exists():
         print(f"Database not found: {db_path}")

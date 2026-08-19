@@ -970,10 +970,19 @@ async def run_reader(args):
     print(f"Traces: {trace_dir}")
     print(f"Graph:  {project_path}")
 
-    # Start MCP via npm package
+    # Start MCP from the repo-local, version-pinned install (package-lock.json).
+    # A bare `npx understanding-graph` would silently pick up whatever is newest
+    # on npm, so the fallback pins the version too.
+    local_bin = repo_root / "node_modules" / ".bin" / "understanding-graph"
+    if local_bin.exists():
+        mcp_command, mcp_args = str(local_bin), ["mcp"]
+    else:
+        print("Warning: no local understanding-graph install (run ./setup.sh); using npx.")
+        mcp_command, mcp_args = "npx", ["-y", "understanding-graph@0.1.16", "mcp"]
+
     mcp = MCPClient(
-        command="npx",
-        args=["-y", "understanding-graph", "mcp"],
+        command=mcp_command,
+        args=mcp_args,
         cwd=str(repo_root),
         name="understanding",
         env={"PROJECT_DIR": str(projects_dir), "TOOL_MODE": "reading"}

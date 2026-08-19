@@ -22,16 +22,21 @@ Select a project in the sidebar:
 - **metamorphosis** — Kafka's *The Metamorphosis* (346 active nodes)
 - **llada** — the LLaDA paper on large language diffusion (285 active nodes)
 
-Click any node to see its content, edges, and the passage that produced it.
+Click any node to see its content, edges, and the passage that produced it. If port
+3000 is taken, `PORT=3001 ./view.sh`.
 
 ## Run your own
 
 `setup.sh` creates a `.env` file from `.env.example`. Open it and add your Gemini API key:
 
 ```
-GOOGLE_API_KEY=your-key-here   # ← replace with your key from https://aistudio.google.com/apikey
+# Get your API key from https://aistudio.google.com/apikey
+GOOGLE_API_KEY=your-key-here
 GEMINI_MODEL=gemini-3-flash-preview
 ```
+
+Keep comments on their own line — `run.sh` exports the file with `xargs`, so a
+trailing `# comment` after a value aborts the run.
 
 Then run the agents on any text:
 
@@ -46,10 +51,36 @@ Then run the agents on any text:
 
 Open `./view.sh` in a second terminal while the agents run — nodes and edges appear in the 3D graph in real time as each passage is processed.
 
+### What a run costs
+
+Measured from the shipped traces:
+
+|                | Metamorphosis | LLaDA  |
+| -------------- | ------------- | ------ |
+| LLM calls      | 162           | 120    |
+| Input tokens   | ~1.5 M        | ~1.1 M |
+| Graph tool calls | 1,997       | 1,339  |
+| Active time    | ~7 h          | ~5 h   |
+| Wall clock     | 47 h          | 24 h   |
+
+Active time is the time recorded inside the pipeline. The wall-clock figures are
+much larger because each `swarm.jsonl` spans several resumed invocations rather
+than one continuous session. The Metamorphosis trace records roughly 18 hours in
+explicit `429 RESOURCE_EXHAUSTED` cooldowns; other gaps may include manual pauses,
+which the released metadata cannot reconstruct precisely.
+
+Both shipped readings completed. For Metamorphosis, the source record reaches
+`position = total_length` (140,527 characters) with status `completed`, the final
+run summary reports 100%, and the append-only trace reaches `Content 100%` and a
+successful final translation. The 88% figure is only the latest Content marker
+retained in the released database's graph tables. The complete chronological
+Markdown export continues beyond that snapshot. Rate limits and manual restarts
+may explain pauses between invocations, but 88% is not where the reading stopped.
+
 ## Prerequisites
 
 - Python 3.10+
-- Node.js 18+
+- Node.js 22+ (the graph store uses better-sqlite3 13)
 - A [Gemini API key](https://aistudio.google.com/apikey) (only needed for running new texts)
 
 ## How it works
@@ -66,7 +97,9 @@ This repo uses [understanding-graph](https://github.com/emergent-wisdom/understa
 
 - **understanding-graph** has moved to a **Claude Code skills** model — each skill is a standalone teaching unit that Claude Code loads natively. This is the newer approach for interactive use.
 
-The two systems are not interchangeable. This repo is pinned to `understanding-graph@0.1.15` (the version used for the paper results) and carries its own copy of the prompts that the swarm agents depend on.
+The two systems are not interchangeable. This repo carries its own copy of the prompts that the swarm agents depend on, and pins the graph server to `understanding-graph@0.1.16` — the earliest version published to npm that the pipeline runs against. `setup.sh` installs it locally from `package-lock.json`, so `run.sh` and `view.sh` always launch the same build.
+
+The runs that produced the shipped graphs (January 2026) predate that versioning scheme: at the time `understanding-graph` was consumed as a git submodule and had no released versions. The pinned version is the reproducible equivalent, not a byte-identical rebuild of the original toolchain.
 
 ## Repository structure
 
@@ -75,6 +108,9 @@ The two systems are not interchangeable. This repo is pinned to `understanding-g
 ├── run.sh                        # Run agents on any text file
 ├── view.sh                       # Launch the web viewer
 ├── .env.example                  # API key template
+├── package.json                  # Pinned understanding-graph + embedding backend
+├── package-lock.json             # Exact Node dependency tree (npm ci)
+├── requirements.txt              # Pinned Python dependencies
 ├── paper/                        # The paper (LaTeX source, house style, PDF)
 ├── prompts/                      # Agent system prompts (from understanding-graph)
 │   ├── core/                     # Philosophy, identity, five laws

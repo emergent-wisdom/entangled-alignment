@@ -23,9 +23,9 @@ from pathlib import Path
 
 
 def get_projects_dir() -> Path:
-    """Get the projects directory."""
+    """Get the projects directory (shipped graphs live in <repo>/projects)."""
     script_dir = Path(__file__).parent.resolve()
-    return script_dir / "../../understanding/projects"
+    return script_dir.parent / "projects"
 
 
 def list_projects() -> list[str]:
