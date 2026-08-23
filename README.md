@@ -134,10 +134,10 @@ The runs that produced the shipped graphs (January 2026) predate that versioning
   title        = {Entangled Alignment: When Safety Is the Substrate},
   author       = {Westerberg, Henrik},
   year         = {2026},
-  month        = jul,
+  month        = aug,
   publisher    = {Zenodo},
-  doi          = {10.5281/zenodo.21420755},
-  url          = {https://doi.org/10.5281/zenodo.21420755}
+  doi          = {10.5281/zenodo.22073296},
+  url          = {https://doi.org/10.5281/zenodo.22073296}
 }
 ```
 
