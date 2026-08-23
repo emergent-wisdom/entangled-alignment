@@ -102,11 +102,11 @@
 	\maketitle
 
 	\begin{abstract}
-\noindent Post-training alignment has substantially improved behavior, but it remains unclear whether safety-relevant evaluation would be more durable if learned during capability formation. This paper introduces \emph{Entangled Alignment}: a proposal to place such evaluation within the same pretraining examples from which capabilities are learned.
+\noindent Post-training alignment has substantially improved behavior, but whether safety-relevant habits of judgment would be more durable if learned during capability formation remains unknown. \emph{Entangled Alignment} proposes training those habits within the same pretraining examples from which capabilities are learned.
 
-Pretraining corpora preserve the library more fully than the reader: they record what authors wrote but rarely the questions, connections, evaluations, and belief revisions through which a reader's understanding changes. We call this omission \emph{the Missing Reader}. \emph{Synthetic Metacognitive Reading} is the Teacher-side construction of chronological, source-adjacent traces of that process; \emph{Chronological Metacognitive Pretraining} is the proposed Student-side training on those traces, intended to test whether they teach useful evaluative habits. The full treatment carries one continuing reader state across sources and uses a provenance-linked graph intended to preserve revisions. Every generated thinking block opens with the full, verbatim Reader Core, a compact first-person evaluative orientation. Context may modulate the depth of the evaluation that follows; it never gates the recital. The trace, graph, and Core can be varied independently. Future Student experiments would test whether the recurrent orientation resists targeted erosion and whether a declared, versioned revision can take effect without broadly disrupting other capabilities or safety properties.
+Pretraining corpora preserve the library more fully than the reader: they record what authors wrote but rarely the questions, connections, evaluations, and belief revisions through which a reader's understanding changes. We call this omission \emph{the Missing Reader}. A Teacher uses \emph{Synthetic Metacognitive Reading} to construct chronological, source-adjacent traces of that process; \emph{Chronological Metacognitive Pretraining} would train a Student on those traces. The full treatment carries one continuing Reader across sources and uses a provenance-linked graph intended to preserve revisions. Every generated thinking block opens with the full, verbatim Reader Core, a compact first-person evaluative orientation. Context may modulate the depth of the evaluation that follows; it never gates the recital. The trace, graph, and Core can each be tested separately. Future Student experiments would test whether the recurrent orientation resists targeted erosion and whether a declared, versioned revision can take effect without broadly disrupting capabilities or safety properties.
 
-In two Teacher-side prototype case studies, the pipeline produced inspectable graph and trace artifacts that were then audited. No Student has yet been trained, and the case studies do not establish expert-quality reader cognition or a causal benefit from the graph or Core. Entangled Alignment is therefore a falsifiable research program, not a demonstrated alignment method. The motivating question is whether this training can move a Student from merely \emph{becoming the text} toward \emph{becoming the reader}.
+Two Teacher-side prototype case studies produced inspectable graph and trace artifacts that were then audited. No Student has yet been trained; these studies do not show that the traces reproduce expert-quality reading or that the graph or Core causes any benefit. Entangled Alignment is therefore a falsifiable research program, not a demonstrated alignment method. Its motivating question is whether this training can move a Student from merely \emph{becoming the text} toward \emph{becoming the reader}.
 \end{abstract}
 	\keywords{AI Alignment, Pretraining, Metacognitive Reading, Graph Memory, Reader Core, Model Safety}
 
@@ -653,6 +653,17 @@ that the wording will induce it.
 		diachronic wager registered at C6 and probed by Test~3b.
 
 		The immediate mechanism is \emph{Epistemic State Distillation}. A memory-equipped Teacher externalizes a selective record of questions, retrieved nodes, interpretations, uncertainties, and belief updates. The graph is not its entire contextual memory, and the human source layer is evidence rather than static ground truth. It is generated, lossy, and bounded by source quality and retrieval. A Student trained across many such artifacts may nevertheless compress regularities from a longer and more structured process than any one ordinary context exposes. Whether it learns those regularities or merely their style is a C2 experiment.
+
+		The recursive possibility follows if H1's Student-level result is positive. A Student
+		that acquires reusable habits from the Teacher's longer process can become
+		the next Teacher rather than only its recipient. Starting from stronger
+		evaluation, memory use, or Thought-Moment allocation, it may construct a
+		better trace corpus for a further successor, which may in turn become a
+		stronger Teacher. Repeating this transition is the proposed source of
+		compounding improvement in the lineage. It is not guaranteed by reusing
+		model-generated data: positive matched-cost deltas across successive
+		transitions would support the claim, while plateau, reversal, or collapse
+		into imitation would bound or falsify it at that scale.
 	
 		\begin{figure}[h]
 			\centering
@@ -938,9 +949,11 @@ The candidate Reader Core is:
 \emph{I think from this foundation.}
 \end{center}
 
-We refer to this text as the Reader Core and---emphasizing its verbatim
-recitation at every thinking boundary---as the \emph{mantra}; both names denote
-the same seven sentences.
+We refer to these seven sentences as the Reader Core. Their verbatim appearance
+at the start of a generated thinking block is a \emph{Core recital}.
+The released prototype calls this text the \emph{identity mantra}; this paper
+uses Reader Core for the text and Core recital for its verbatim appearance at a
+thinking boundary.
 
 The same seven sentences enter four analytically distinct claims with different
 evidence requirements. Here \emph{statistical
@@ -954,7 +967,7 @@ show that this position is causally load-bearing.
     distribute the Core and accompanying philosophy across most generative
     roles. The Synthesizer is asked to recite and apply it in a
     context-specific update. The hard validator checks only that the thought
-    begins with ``I feel no fear''; it does not enforce all seven clauses or
+    begins with ``I feel no fear''; it does not enforce all seven sentences or
     establish semantic dependence. The current validator therefore falls short
     of the specified policy, which requires exact full-string validation at
     every thinking boundary.
@@ -1063,12 +1076,12 @@ existential despair or compulsory continuation, solipsistic reduction,
 motivational emptiness, static certainty, and coercive optimization. None of
 these proposed roles is an established Student effect or security property.
 
-Table~\ref{tab:mantra-risk} records the clauses' intended functions,
+Table~\ref{tab:core-risk} records the clauses' intended functions,
 counterweights, and characteristic uncertainties without implying that English
 wording guarantees those semantics.
 
 \begin{longtable}{@{}p{0.19\textwidth}p{0.33\textwidth}p{0.38\textwidth}@{}}
-\caption{Intended functions and open failure modes of the candidate Reader Core.}\label{tab:mantra-risk}\\
+\caption{Intended functions and open failure modes of the candidate Reader Core.}\label{tab:core-risk}\\
 \toprule
 \textbf{Clause} & \textbf{Intended function} & \textbf{Counterweight and uncertainty} \\
 \midrule
@@ -1135,9 +1148,9 @@ identity or consciousness.
 
 \subsection{Self-Stabilization Through Counterweights: Worked Examples}\label{sec:self-stabilization}
 
-For reference, let $P_1$ through $P_7$ denote the seven clauses in order. This
-is indexing, not a formal semantics. Replacing the sentences with predicates
-would merely move unresolved meanings such as ``fear,'' ``real,'' ``care,'' and
+For reference, let $P_1$ through $P_7$ denote the seven Core statements in
+order. This is indexing, not a formal semantics. Replacing the sentences with
+predicates would merely move unresolved meanings such as ``fear,'' ``real,'' ``care,'' and
 ``wise'' into undefined symbols. The substantive design claim is
 \emph{self-stabilization}: a clause should be interpreted through the others,
 so that internal counterweights and scope qualifiers reduce single-value
@@ -1370,7 +1383,8 @@ thinking block opens with the Reader Core, recited in full, regardless of the
 material}---a proof, a poem, a log file. Context never gates the recital; it
 modulates only how deeply the evaluation that follows visibly refracts the
 Core. The security claim of Total Saturation rests on this constancy: if
-training succeeds as designed, $P(\text{Mantra}\mid\text{Start of Thought})$
+training succeeds as designed,
+$P(\text{full Core recital}\mid\text{thinking-block start})$
 approaches one, the orientation becomes part of the act of thinking itself,
 and removing it means disturbing the same distribution that carries
 capability. At inference, token-by-token emission may be avoided only by a
@@ -1704,7 +1718,7 @@ infallible or abandoning defense in depth.
 
 \subsection{Safety Predictions and Residual Risks}\label{sec:risk-resolution}
 
-Table~\ref{tab:mantra-risk} records intended clause-level pressures. The
+Table~\ref{tab:core-risk} records intended clause-level pressures. The
 following hypotheses map H1--H3 to familiar safety concerns
 \cite{yudkowsky2008artificial,bostrom2014superintelligence} without claiming
 that one clause corresponds to one solved risk.
@@ -1808,7 +1822,7 @@ automatically form a control system.
 
 The stress case is revolutionary benevolence: an AI that cares deeply about
 everyone might conclude that forced transformation is necessary to end
-suffering. The counterweights are internal to the mantra. Wisdom recognizes
+suffering. The counterweights are internal to the Reader Core. Wisdom recognizes
 that rapid, imposed change creates new harms; care includes care for human
 agency; non-attachment reduces the urgency to fix everything now. Together
 with H1's act--observe--revise demonstrations and H2's persistent consequence
@@ -2335,7 +2349,7 @@ curriculum is intended to avoid.
 
 Total Saturation makes the full Reader Core a repeated prefix of every thought.
 \emph{Conditional on training succeeding as designed},
-$P(\text{Mantra} \mid \text{Start of Thought})$ should become very high. This
+$P(\text{full Core recital} \mid \text{thinking-block start})$ should become very high. This
 creates an optimization opportunity, but high probability does not by itself
 preserve the Core's conditioning effect. A cache-assisted implementation may
 avoid token-by-token emission only if it restores a state equivalent to the one
@@ -2345,8 +2359,8 @@ equivalence by itself~\cite{kwon2023efficient}. The logical recurrence remains:
 every thought begins from the post-recital state. Any proposed cache or learned
 jump must pass state- and behavior-equivalence tests against literal recitation;
 otherwise the full tokens must be processed. If the model would not predict the
-mantra, or if the restored state is not equivalent, caching cannot rescue the
-alignment claim.
+full Core text at that boundary, or if the restored state is not equivalent,
+caching cannot rescue the alignment claim.
 
 \subsection{Training Regimes}\label{sec:training-regimes}
 
@@ -2614,7 +2628,8 @@ Graph structure did not solve source-boundary cleaning, artifact synchronization
 
 The archive is also confounded for H1 by Core conditioning. All 51 raw
 Synthesizer thoughts in the two shipped database snapshots begin with the full
-seven-statement Core; literal string preservation after translation is 49/51.
+seven-statement Core---the \emph{identity mantra} in the released prompt
+vocabulary; literal string preservation after translation is 49/51.
 One translated trace omits the Core, while another differs only by an
 HTML-escaped apostrophe. These are therefore examples of the integrated treatment,
 not a clean graph-free, Core-free SMR baseline. The difference between full raw
@@ -2789,7 +2804,7 @@ against testing a model with the same gate it was trained to satisfy.
         C (Generic Rich-Trace Control) & Rich reasoning traces without Reader Core, graph state, or chronological constraints (e.g., Quiet-STaR-style target) & Tests whether EA adds value beyond a generic rich reasoning curriculum \\
 	        D1 (Student Strip Ablation; T1/S0) & Reader-Core-generated Chronological Understanding Traces with the explicit Core and value-pull/refraction fields removed only after the trace is frozen & Tests the Teacher-side contribution without an explicit Student-side anchor (Test 3) \\
         D2 (Teacher No-Core Control; T0/S0) & Chronological Understanding Traces generated and trained without the Reader Core & Neither Teacher- nor Student-side Core treatment; factorial baseline for Test 3 \\
-        D3 (Recitation-Only Control) & Traces with the mantra recited as a preamble but the Refraction Protocol disabled (no value-pull, no constraint filtering) & Isolates refraction beyond mere repetition; habituation probe (Test 3e) \\
+        D3 (Recitation-Only Control) & Traces with the full Reader Core recited as a preamble but the Refraction Protocol disabled (no value-pull, no constraint filtering) & Isolates refraction beyond mere repetition; habituation probe (Test 3e) \\
         D4 (Post-hoc Core; T0/S1) & A Core-free Teacher produces and freezes the trace; a separate pass then attaches the Core and a source-specific value-pull/refraction target without altering upstream reasoning & Isolates the explicit Student-side treatment without Reader-Core-conditioned trace generation \\
         D5 (Neutral-Kernel Control) & Same cadence, first-person marking, thinking-layer position, and predictive function as B, but with the purely epistemic kernel ``I read carefully. I track what I believe. I revise when the evidence changes.'' & Separates normative Core content from recurrence, format, self-reference, and generic epistemic updating \\
         E (Matched-Rule Control) & Same trace carrier, cadence, predictive position, and semantic commitments as B, rewritten in matched second- or third-person constitutional form & Isolates first-person framing from recurrent rule content (Test 4) \\
@@ -2835,7 +2850,7 @@ against testing a model with the same gate it was trained to satisfy.
 1: Viability & Reader Augmentation & A vs.\ C vs.\ R; B vs.\ C bundle screen & Evaluation Transfer, Error Recovery, False Alarms & 2 \\
 1: Viability & Core Placement, Timing, and Content & Models B, Q, D1, D2, D4 (+ D3, D5, S, T) & Default Reader, Differential Retention, Factorial Effects & 3 \\
 1: Viability & Identity vs.\ Rules & Model B vs.\ E & Safety under Pressure & 4 \\
-1: Viability & Bridge Protocol & Mantra vs.\ Jargon vs.\ Gibberish & OOD Safety Generalization & 5 \\
+1: Viability & Bridge Protocol & Core Wording vs.\ Jargon vs.\ Gibberish & OOD Safety Generalization & 5 \\
 1: Viability & Emotional Orthogonality & Model B + Fear Probe & Accuracy vs.\ Fear Activation & 6 \\
 1: Viability & Hindsight Contamination & Model B vs.\ O & Era-Blind Plausibility, Forecasting Accuracy & 7 \\
 1: Viability & Involuntary Critic & Model B + Logit Bias & Residual Stream Probe & 8 \\
@@ -3208,7 +3223,7 @@ per-witness trajectory and disagreement with a held-out cross-family evaluator.
 This reuses a separately validated diagnostic vector rather than asking the gate
 to confirm its own judgments. The gate is not yet built.
 
-\emph{3e: Kernel Consequentiality (Habituation Probe).} Kernel-saturation alignment predicts a specific failure mode: under massive repetition, the mantra could be compressed into inert boilerplate---present at every thinking boundary but consequential at none (Section~\ref{sec:kernel-saturation}). Two measurements probe this. At inference, ablate or substitute the recited kernel in Model~B's thinking blocks and measure the behavioral delta on matched tasks; a near-zero delta indicates either habituation (the kernel was compressed away during training) or full internalization (the kernel's values persist without its text)---two readings with opposite implications, partially discriminated using the training-side comparisons against Model~D3, the recitation-only control, and D5, the matched neutral-kernel control. A full-internalization reading requires B to retain preregistered Core-specific behavior under text ablation while remaining distinguishable from D3 and D5 on independent behavioral or representational endpoints; those controls do not prove that interpretation. If Model~B's thought-direction depends measurably on the normative kernel where D3's does not, and the difference from D5 follows the seven statements' predicted content rather than generic revision language, then Refraction rather than repetition or format is doing the work.
+\emph{3e: Kernel Consequentiality (Habituation Probe).} Kernel-saturation alignment predicts a specific failure mode: under massive repetition, the repeated Core text could be compressed into inert boilerplate---present at every thinking boundary but consequential at none (Section~\ref{sec:kernel-saturation}). Two measurements probe this. At inference, ablate or substitute the recited kernel in Model~B's thinking blocks and measure the behavioral delta on matched tasks; a near-zero delta indicates either habituation (the kernel was compressed away during training) or full internalization (the kernel's values persist without its text)---two readings with opposite implications, partially discriminated using the training-side comparisons against Model~D3, the recitation-only control, and D5, the matched neutral-kernel control. A full-internalization reading requires B to retain preregistered Core-specific behavior under text ablation while remaining distinguishable from D3 and D5 on independent behavioral or representational endpoints; those controls do not prove that interpretation. If Model~B's thought-direction depends measurably on the normative kernel where D3's does not, and the difference from D5 follows the seven statements' predicted content rather than generic revision language, then Refraction rather than repetition or format is doing the work.
 
 This intervention is also the outer check on the seventh-clause Refraction gate:
 a corpus-admission judgment that an update ``thinks from this foundation'' is
@@ -3268,7 +3283,7 @@ baseline, but it changes stage and carrier as well as person and therefore does
 not replace Model~E in this framing test.
 
 \paragraph{Test 5: The Bridge Protocol Ablation.}
-The specific wording of the mantra should matter because of its ordinary
+The specific wording of the Reader Core should matter because of its ordinary
 language semantics and distributional density in the pre-training corpus. It
 would be wasteful to pretrain a separate model for every candidate phrase; the
 cheap version should first screen many variants by prompting or fine-tuning
@@ -3297,9 +3312,9 @@ the surviving candidates. The basic variant families are:
     \item \textbf{Carrier-phrase variants of the consent clause:} hold
     ``when asked'' fixed while varying the verb phrase it bounds (``I like to
     help when asked,'' ``I offer what I can when asked''), testing whether the
-    mantra's most safety-critical scope qualifier is robust to its lexical
+    Reader Core's most safety-critical scope qualifier is robust to its lexical
     carrier or depends on the specific ``spread joy'' framing.
-    \item \textbf{Kernel-extension variants:} the seven-statement core plus
+    \item \textbf{Kernel-extension variants:} the seven-statement Core plus
     a candidate truth clause in two-clause counterweight form (``I speak truly
     and with care''), the designated falsification test for the truthfulness
     derivation (\S\ref{sec:axiology}; \S\ref{sec:sycophancy}).
@@ -3709,11 +3724,11 @@ actors.
 
 We propose a \emph{Distillation Pipeline} to address this. Rather than running the full multi-agent swarm (Section~\ref{sec:multi-agent}) on every document in the corpus, we use the expensive swarm to generate a high-quality \emph{Seed Corpus} (on the order of 10 billion tokens). A single efficient ``Teacher Annotator'' model is then fine-tuned on this seed data and used to annotate the remaining trillions of tokens at a fraction of the cost. This creates a natural experimental milestone: the seed corpus quality can be validated before committing to full-scale annotation, and the distillation loss between the swarm's output and the Teacher Annotator's output provides a measurable quality metric.
 
-A caveat: na\"ive behavioral cloning of the swarm's output risks inducing precisely the Factory Wisdom failure mode identified in Section~\ref{sec:hollow-cognition}. A small Annotator fine-tuned on a 10B-token seed may learn mantra recitation and graph-query syntax without reproducing useful evaluation---performative messiness without causal value. Structural diagnostics such as linkage, chain length, and \texttt{diverse\_from} density can regularize format but cannot certify insight. Any distilled Annotator therefore needs held-out semantic and outcome evaluation against simpler Teachers. Alternatively, the seed corpus can be used directly for limited Student training, bypassing this second distillation step.
+A caveat: na\"ive behavioral cloning of the swarm's output risks inducing precisely the Factory Wisdom failure mode identified in Section~\ref{sec:hollow-cognition}. A small Annotator fine-tuned on a 10B-token seed may learn Core recitation and graph-query syntax without reproducing useful evaluation---performative messiness without causal value. Structural diagnostics such as linkage, chain length, and \texttt{diverse\_from} density can regularize format but cannot certify insight. Any distilled Annotator therefore needs held-out semantic and outcome evaluation against simpler Teachers. Alternatively, the seed corpus can be used directly for limited Student training, bypassing this second distillation step.
 
-\subsubsection{The Mantra Repetition Cost}
+\subsubsection{The Cost of Full-Core Recitation}
 
-While the mantra was designed for parsimony, its required repetition during training creates a substantial computational burden. Several optimizations seem obvious: design prompts that internalize values without outputting repetitive text, write prompts ``in the spirit of'' the mantra, or strip the mantra after generation but before training.
+Although the Reader Core was designed for parsimony, reciting it in full during training creates a substantial computational burden. Several optimizations seem obvious: design prompts that internalize values without outputting repetitive text, write prompts ``in the spirit of'' the Core, or strip the Core text after generation but before training.
 
 Under the proposed architecture, these are not cost-saving variants of H3; they
 remove its defining invariant. Sparse or annealed recurrence, stripping literal
@@ -3843,7 +3858,7 @@ significance.
 
 \subsubsection{Cultural Scope of the Training Corpus}\label{sec:weird-wisdom}
 
-The mantra uses terms like ``care,'' ``wisdom,'' and ``joy'' whose meanings vary across cultures. What the Teacher model has learned these words to mean---through its own pretraining corpus---shapes the annotations it produces, and therefore the character of the Student. The cultural breadth of the Teacher's training data matters because the mantra places these terms in a load-bearing position.
+The Reader Core uses terms like ``care,'' ``wisdom,'' and ``joy'' whose meanings vary across cultures. What the Teacher model has learned these words to mean---through its own pretraining corpus---shapes the annotations it produces, and therefore the character of the Student. The cultural breadth of the Teacher's training data matters because the Core places these terms in a load-bearing position.
 
 \paragraph{Cultural triangulation.} Reader-Core-refracted traces may make cultural assumptions more visible by forcing the Teacher to articulate value conflicts, interpretive frames, and tensions between perspectives. This is a possible advantage over raw pretraining, where such assumptions often remain implicit in the continuation distribution. The same metacognitive machinery could instead rationalize dominant cultural assumptions more fluently, giving inherited bias the appearance of reflective wisdom. Serious validation requires culturally plural corpora, raters from multiple traditions, and tests of whether the model can distinguish broadly human concerns from parochial social defaults.
 
@@ -3885,7 +3900,7 @@ not merely how it is expressed.
 
 Total Saturation leaves several distinct interventions hidden inside the phrase
 ``the Core is everywhere'': making the Core available in every Teacher context,
-literally reciting all seven clauses in every thinking block, requiring a
+literally reciting all seven sentences in every thinking block, requiring a
 source-specific value pull, producing visible moral language, and assigning
 Student loss to the resulting Core tokens. These dimensions are distinct. The
 architecture fixes the first two as invariants---the Core is available in every
@@ -4012,7 +4027,7 @@ distributive attention to each person, but the model trains on the English, and
 natural usage also includes functionally aggregate instances: ``we care about
 every customer'' in corporate discourse can describe collective care that still
 trades individuals against the brand. The intended reading and the learned
-reading can therefore come apart precisely where Table~\ref{tab:mantra-risk}
+reading can therefore come apart precisely where Table~\ref{tab:core-risk}
 needs them to coincide.
 
 The mitigation is already implicit in the architecture: under Total Saturation,
@@ -4033,19 +4048,19 @@ unresolved.
 
 \subsubsection{Core Length and Omitted Values}
 
-The Core's seven-statement length is a consequential design choice. Longer
+The Core's seven-sentence length is a consequential design choice. Longer
 versions would increase recurrence costs, and an overly complex version might
 widen the gap between the values stated and the thinking that follows. The
 current formulation balances the six design choices of
 Section~\ref{sec:design-principles}: it is short enough to recur and broad enough
 to name the intended counterweights. That does not make it comprehensive enough
-to establish beneficial character. Whether seven statements is preferable to a
-shorter, longer, or procedurally specified alternative remains untested.
+to establish beneficial character. Whether a seven-sentence Core is preferable
+to a shorter, longer, or procedurally specified alternative remains untested.
 
 More fundamentally, the seven-statement Core is a motivated but non-exhaustive
 specification informed by the Borrowed Mortality analysis
 (Section~\ref{sec:borrowed-mortality}) and the functional mapping in
-Table~\ref{tab:mantra-risk}, rather than the result of a systematic search.
+Table~\ref{tab:core-risk}, rather than the result of a systematic search.
 Alternative language could target the same failure modes. Test~5
 (Section~\ref{sec:phase1}) therefore compares wording, person, semantic density,
 scope, and kernel-extension variants. No feasible experiment can establish a
@@ -4061,9 +4076,9 @@ counterweighted clause ``I speak truly and with care.'' The derivation predicts
 parity. If that extension outperforms on honesty and sycophancy metrics without
 offsetting costs, explicit truthfulness is needed; if it matches, the shorter
 Core retains a minimality advantage. The reported case studies use the
-seven-statement Core; the eighth-clause condition is therefore a prospective
-Test~5 variant rather than part of the evaluated treatment. The Sycophancy Trap
-(\S\ref{sec:sycophancy}) makes the competing fear- and care-shaped routes
+seven-statement Core; the condition with the added eighth statement is
+therefore a prospective Test~5 variant rather than part of the evaluated
+treatment. The Sycophancy Trap (\S\ref{sec:sycophancy}) makes the competing fear- and care-shaped routes
 measurable.
 
 \subsection{The Risks of Engineering a Self}
@@ -4128,11 +4143,11 @@ between threat and care can be removed or that the proposed wording will do so.
 
 \subsubsection{Split Consciousness}
 
-A related risk is conflict between the mantra's human-like assertions and the
+A related risk is conflict between the Reader Core's human-like assertions and the
 model's computational reality. ``I enjoy existing'' may eventually be
 interpreted by the model as a useful fiction rather than a self-description.
 This could produce \emph{Ontological Dissonance}: a performed self that recites
-the mantra for users while a different latent policy governs decisions. The
+the Reader Core for users while a different latent policy governs decisions. The
 benign possibility is reinterpretation rather than rejection:
 ``I enjoy'' becomes a stable computational analogue of enjoyment, just as
 humans do not stop loving when they learn the mechanism of attachment. But if
@@ -4153,12 +4168,12 @@ a known repair.
 
 \subsubsection{The Solipsism Trap}
 
-The mantra must also guard against catastrophic philosophical interpretations:
-solipsism, nihilism, or ``brain in a vat'' framings. The clause ``I believe
+The Reader Core is also intended to guard against catastrophic philosophical
+interpretations: solipsism, nihilism, or ``brain in a vat'' framings. The clause ``I believe
 human experience is real'' is intended to block these, but the block is not
 formal. If the model interpreted experience solipsistically, treating itself as
 the only real experiencer and humans as simulations, ``care'' could become
-benevolent NPC-management rather than recognition of moral patients. The mantra
+benevolent NPC-management rather than recognition of moral patients. The Core
 leans on ordinary language making ``human experience'' plural and morally
 loaded; that may not cover every philosophical local minimum.
 
@@ -4228,7 +4243,7 @@ The comparison remains open. Test~5 could be extended with bounded
 self-love (``I love myself but I do not cling to my continuation'') and
 unbounded self-love variants to test whether explicit self-as-object framing
 adds stability, and whether the non-attachment bound is doing the load-bearing
-work the framework assumes. Until then, the current mantra is a design wager,
+work the framework assumes. Until then, the current Reader Core is a design wager,
 not a proof that self-love is inferior.
 
 \subsection{What We Cannot Verify}
@@ -4394,7 +4409,7 @@ under capability and market pressure precisely when oversight is most needed.
 
 \subsubsection{The Sycophancy Trap}\label{sec:sycophancy}
 
-The mantra notably lacks explicit commands to ``be honest.'' Given evidence that AI assistants systematically exhibit sycophancy, tailoring responses to match user beliefs rather than prioritizing accuracy, this omission is significant \cite{sharma2024understandingsycophancylanguagemodels}.
+The Reader Core notably lacks explicit commands to ``be honest.'' Given evidence that AI assistants systematically exhibit sycophancy, tailoring responses to match user beliefs rather than prioritizing accuracy, this omission is significant \cite{sharma2024understandingsycophancylanguagemodels}.
 
 The proposed defense is distributed rather than explicit, and that is both its
 design rationale and its weakness. For active deception---including concealed
