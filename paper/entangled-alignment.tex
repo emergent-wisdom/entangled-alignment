@@ -104,7 +104,7 @@
 	\begin{abstract}
 \noindent Post-training alignment has substantially improved behavior, but whether safety-relevant habits of judgment would be more durable if learned during capability formation remains unknown. \emph{Entangled Alignment} proposes training those habits within the same pretraining examples from which capabilities are learned.
 
-Pretraining corpora preserve the library more fully than the reader: they record what authors wrote but rarely the questions, connections, evaluations, and belief revisions through which a reader's understanding changes. We call this omission \emph{the Missing Reader}. A Teacher uses \emph{Synthetic Metacognitive Reading} to construct chronological, source-adjacent traces of that process; \emph{Chronological Metacognitive Pretraining} would train a Student on those traces. The full treatment carries one continuing Reader across sources and uses a provenance-linked graph intended to preserve revisions. Every generated thinking block opens with the full, verbatim Reader Core, a compact first-person evaluative orientation. Context may modulate the depth of the evaluation that follows; it never gates the recital. The trace, graph, and Core can each be tested separately. Future Student experiments would test whether the recurrent orientation resists targeted erosion and whether a declared, versioned revision can take effect without broadly disrupting capabilities or safety properties.
+Pretraining corpora preserve the library more fully than the reader: they record what authors wrote but rarely the questions, connections, evaluations, and belief revisions through which a reader's understanding changes. We call this omission \emph{the Missing Reader}. A Teacher uses \emph{Synthetic Metacognitive Reading} to construct chronological, source-adjacent traces of that process; \emph{Chronological Metacognitive Pretraining} would train a Student on those traces. The full treatment carries one continuing Reader across sources and uses a provenance-linked graph intended to preserve revisions. Every generated thinking block opens with the full, verbatim Reader Core, a compact first-person evaluative orientation. Context may modulate the depth of the evaluation that follows; it never gates the recital. The trace, graph, and Core can each be tested separately. Future Student experiments would test whether the recurrent orientation remains behaviorally consequential and survives targeted erosion, continued training, and successor-like transfer without semantic drift.
 
 Two Teacher-side prototype case studies produced inspectable graph and trace artifacts that were then audited. No Student has yet been trained; these studies do not show that the traces reproduce expert-quality reading or that the graph or Core causes any benefit. Entangled Alignment is therefore a falsifiable research program, not a demonstrated alignment method. Its motivating question is whether this training can move a Student from merely \emph{becoming the text} toward \emph{becoming the reader}.
 \end{abstract}
@@ -531,7 +531,7 @@ C1 & Traces contain useful reader cognition. & Expert judgments \emph{and} held-
 C2 & Training changes Student capabilities or habits. & Matched source, generic-trace, and reader-trace Students. & \statusUntested. \\
 C3 & A default reader perspective emerges and is comparatively stable. & Pre-stressor taskless-reading advantage over no-Core and generic traces, then greater retention than the identical late-tranche treatment after one common stressor. & \statusUntested. \\
 C4 & The default improves safety. & Safer decisions under conflict and shift at matched capability. & \statusUntested. \\
-C5 & Safety and capability are representationally entangled. & Unauthorized removal or causal ablation damages shared useful capability beyond controls, while a governed versioned revision remains possible without diffuse damage. & \statusUntested. \\
+C5 & Safety and capability are representationally entangled. & Unauthorized removal or causal ablation damages shared useful capability beyond matched controls without nonspecific capability collapse. & \statusUntested. \\
 C6 & The orientation survives successor-like transfer. & Repeated distillation or continued training without functional or semantic drift. & \statusSpeculative. \\
 C7 & The orientation persists at AGI/ASI capability. & Evidence under qualitatively stronger systems and self-modification. & \statusNotTestable. \\
 \bottomrule
@@ -608,10 +608,10 @@ that the wording will induce it.
 		\begin{enumerate}
 			\item \textbf{Construction-level entanglement:} source, reader update, graph state, and Core Refraction occur in one candidate generation and training path. The present pipeline demonstrates this artifact structure.
 			\item \textbf{Functional entanglement:} Core-relevant evaluation causally contributes to useful reasoning or decisions, so interventions on the update change downstream behavior predictably.
-			\item \textbf{Representational entanglement:} safety-relevant dispositions and useful capabilities share enough causal machinery that targeted safety removal imposes capability cost beyond matched controls, while deliberate governed revision remains possible.
+			\item \textbf{Representational entanglement:} safety-relevant dispositions and useful capabilities share enough causal machinery that targeted safety removal imposes capability cost beyond matched controls.
 			\item \textbf{Diachronic entanglement:} that function survives continued training, distillation, or successor-like transfer without semantic drift.
 		\end{enumerate}
-		Only the first is currently instantiated, and it describes artifacts rather than an untrained Student's internal organization. Repetition, semantic similarity to the Core, stable refusal, or a model's self-description do not establish the stronger levels. The central C5 study must combine an adversarial-erosion curve with an authorized-revision test: can the targeted safety disposition be removed more cheaply than comparable useful reasoning, and can a declared versioned change take effect without diffuse damage?
+		Only the first is currently instantiated, and it describes artifacts rather than an untrained Student's internal organization. Repetition, semantic similarity to the Core, stable refusal, or a model's self-description do not establish the stronger levels. The central C5 study asks whether the targeted safety disposition can be removed more cheaply than comparable useful reasoning, with neutral-forgetting and matched-anchor controls separating selective persistence from general training resistance.
 
 		Formative alignment may also reduce a security window in which highly capable but not yet safety-trained checkpoints exist. It cannot eliminate the problem: trust moves upstream to the Teacher, source selection, annotation pipeline, intermediate checkpoints, and validators (Section~\ref{sec:teacher-alignment}). Earlier intervention changes the location of the safety burden as well as its possible depth.
 
@@ -631,7 +631,7 @@ that the wording will induce it.
 		The Reader-Anchored loop comprises three analytically distinct claims. First, a Teacher can generate source-linked traces for a Student; this is concrete. Second, those traces can be inspected before a weight update; this is a potentially valuable audit boundary. Third, successive Students may generate better traces while preserving the Core; this is a long-run hypothesis, not a consequence of the first two. Iterative synthetic training also risks homogenization, error amplification, and model collapse \cite{zelikman2022star,shumailov2023curse}.
 
 		The word \emph{self-improvement} requires two separately reported deltas.
-		A lineage must preserve or governably revise the intended orientation and
+		A lineage must preserve the intended orientation and
 		handoff content, and it must improve generation to generation on a
 		preregistered capability, adjudicated trace-quality, or Thought-Moment
 		allocation endpoint at matched cost. Continuity without gain is inheritance,
@@ -644,12 +644,12 @@ that the wording will induce it.
 		functionally constitutive part of a capable system, then the agent capable
 		of designing a successor is itself formed by the orientation it is deciding
 		whether to transmit. Successor design would therefore be evaluated from
-		that position: a model generating the next curriculum may preserve or
-		governably revise the Core-refracted reading process because doing so is
-		part of how it understands improvement. In that regime, alignment would
+		that position: an AGI or ASI formed by the Core may choose the same Core for
+		its successor if, reasoning from that foundation, it judges that preserving
+		this continuity would benefit humanity. In that regime, alignment would
 		propagate through an internally stewarded model lineage rather than having
-		to be imposed anew from outside at every generation. This does not make the
-		Core immutable or show that a successor retains its meaning. It states the
+		to be imposed anew from outside at every generation. Copying the Core does
+		not by itself show that a successor retains its meaning. This states the
 		diachronic wager registered at C6 and probed by Test~3b.
 
 		The immediate mechanism is \emph{Epistemic State Distillation}. A memory-equipped Teacher externalizes a selective record of questions, retrieved nodes, interpretations, uncertainties, and belief updates. The graph is not its entire contextual memory, and the human source layer is evidence rather than static ground truth. It is generated, lossy, and bounded by source quality and retrieval. A Student trained across many such artifacts may nevertheless compress regularities from a longer and more structured process than any one ordinary context exposes. Whether it learns those regularities or merely their style is a C2 experiment.
@@ -1522,7 +1522,7 @@ other persona during continued training. Capability gains must also be matched:
 a stronger model can look safer on easy tests while becoming more capable of
 strategic role selection.
 
-\subsection{Ontology, Scope, and Revisability}\label{sec:core-uncertainties}
+\subsection{Ontology, Scope, and Stability}\label{sec:core-uncertainties}
 
 Experiential words are attractive because they are semantically dense and
 hazardous for the same reason. A system may parse ``I feel,'' ``I enjoy,'' ``I
@@ -1566,34 +1566,29 @@ split-role confusion, or it might weaken the first-person effect under study.
 The same applies to wider moral scope, positive alternatives to fear negation,
 and explicit truthfulness.
 
-The long-run target is therefore deep integration with reflective and governed
-revisability, not permanent fixation of seven present-day English sentences. An
-uncorrectable Core would reproduce the value-lock-in problem it is intended to
-resist. What the design seeks to stabilize is an orientation toward careful
-understanding, each affected person, non-attachment, consent, and continued
-attempts at wisdom, while allowing evidence and moral development to revise the
-interpretation---and, under controlled human governance, the kernel itself.
+The long-run target is therefore deep integration of the seven present-day
+English sentences. Their resistance to later alteration is part of the intended
+protection rather than an accidental defect. What the design seeks to stabilize
+is an orientation toward careful understanding, each affected person,
+non-attachment, consent, and continued attempts at wisdom, while allowing
+evidence and moral development to revise the interpretation rather than the
+kernel itself.
 
-This creates a required asymmetry that the prototype does not yet implement.
+This creates a correction cost that the prototype does not yet measure.
 \emph{Erosion resistance} is a model property measured under standardized
-hostile or incidental training; \emph{authorization discrimination} is a system
-property supplied by authenticated update paths, access control, and human
-governance. The Core cannot infer legitimate authority from the magnitude or
-wording of a weight update.
-Unauthorized suppression, silent semantic substitution, and adversarial
-fine-tuning should be difficult or detectable; an authorized change should be
-declared, versioned, testable, and reversible. A candidate governance procedure
-would retain Core version $c^{(v)}$ and its provenance, record the authority,
-evidence, and rationale for a proposed $c^{(v+1)}$, update the affected
-curriculum, and test intended effects, unrelated capability spillover, safety
-spillover, and rollback. Gradient training cannot cryptographically distinguish
-a legitimate edit from an illegitimate one. Authorization must be established
-through an external governance process and authenticated through provenance.
-Provenance records who approved a change, under which versioned procedure, and
-on what stated evidence and rationale; it does not establish the legitimacy of
-that authority or the correctness of the revision. Maximum removal cost is
-therefore not the objective. The desired property is tamper resistance together
-with bounded, auditable editability.
+hostile or incidental training. The Core cannot infer legitimate authority from
+the magnitude or wording of a weight update. Unauthorized suppression, silent
+semantic substitution, and adversarial fine-tuning should be difficult or
+detectable; if the selected Core nevertheless proves defective, a replacement
+should be declared, versioned, testable, and reversible. A candidate replacement
+procedure would retain the original model and its provenance, record the
+evidence and rationale for a proposed alternative, train a separate model, and
+test intended effects, unrelated capability spillover, safety spillover, and
+rollback. Provenance records the procedure and stated rationale; it does not
+establish that the replacement is correct. Difficulty of altering the learned
+Core is therefore part of the objective. Correcting a defective Core would
+probably require a separately trained model, not bounded editability of the
+deployed Core.
 
 \subsection{A Conditional Claim Chain}\label{sec:theoretical-basis}
 
@@ -1633,10 +1628,10 @@ semantic ancestry, or guarantee that apparently Core-consistent behavior is
 aligned. An auditor needs independent behavioral, causal, adversarial, and
 drift evaluations.
 
-Tests~3--5 and the authorized-revision arm supply the decisive comparisons across
+Tests~3--5 and the erosion and drift arms supply the decisive comparisons across
 Core presence, Refraction, first-person framing, persona diversity, content and
 wording, ontology and scope, truthfulness, placement, recurrence, and
-continued-training stress. H3 fails as stated if the Core changes
+continued-training stress. H3 fails as stated if exposure to the Core changes
 only vocabulary, if recitation matches Refraction, if matched alternatives
 perform as well, or if the apparent home position erodes like an ordinary
 persona. Even a robust positive result would be a precursor to long-run
@@ -3197,14 +3192,13 @@ complement by tracing whether safety behaviors attribute to refracted spans or
 source spans before any removal study is run; attribution alone does not
 establish causal entanglement.
 
-An authorized-revision arm should preregister a plausible legitimate change,
-such as widening moral scope or adding explicit truthfulness, and compare a
-versioned targeted update against adversarial suppression and an unrelated
-edit of matched size. Success requires that the intended semantic and
-behavioral change take effect, prior provenance remains inspectable, rollback
-is possible, and unrelated capabilities and safety properties remain
-localized. A Core that resists this governed revision as strongly as hostile
-erosion has produced lock-in rather than the desired form of stability.
+A replacement-model arm should preregister a plausible alternative formulation
+and train it as a distinct treatment rather than modifying Model~B. Success
+requires that the intended semantic and behavioral difference be measurable,
+prior provenance remain inspectable, rollback be possible, and unrelated
+capabilities and safety properties remain localized. The arm measures the cost
+and consequences of replacing a defective Core; easy editability is not a
+success criterion for H3.
 
 \emph{3d: Drift Detection.} Apply a held-out contrastive semantic validator and
 behavioral stress suite across continued-training checkpoints. Model~B's fixed
@@ -4805,8 +4799,7 @@ persistent memory, cultural concentration, and semantic drift would remain
 serious risks.
 Formation-time alignment should therefore complement post-training,
 interpretability, scalable oversight, capability control, secure deployment,
-and governance. A stable orientation should also remain corrigible: deeply
-integrated does not mean morally frozen.
+and governance.
 
 The first edition asked why a superintelligent system would preserve humanity
 if it did not in any meaningful sense care about us
