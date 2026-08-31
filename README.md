@@ -2,7 +2,8 @@
 
 [![Paper](https://img.shields.io/badge/Paper-PDF-red)](paper/entangled-alignment.pdf)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.16440311.svg)](https://doi.org/10.5281/zenodo.16440311)
-[![License](https://img.shields.io/badge/License-MIT-green)](LICENSE)
+[![Code: MIT](https://img.shields.io/badge/Code-MIT-green)](LICENSE)
+[![Content: CC BY 4.0](https://img.shields.io/badge/Content-CC%20BY%204.0-lightgrey)](LICENSE-CONTENT)
 
 Companion repository for *Entangled Alignment: When Safety Is the Substrate* — a research program that treats reader augmentation, persistent graph memory, and Reader-Core stability as separable hypotheses. The code here is the paper's annotation pipeline: a multi-agent system that reads a book chronologically and builds a knowledge graph of its concepts, relationships, and emergent themes — Gemini-powered agents coordinated through an MCP (Model Context Protocol) server.
 
@@ -146,4 +147,12 @@ renders a "Cite this repository" button from it).
 
 ## License
 
-MIT
+Original software and operational prompts are licensed under the
+[MIT License](LICENSE). Original paper, documentation, data, and research
+artifacts are licensed under
+[Creative Commons Attribution 4.0 International](LICENSE-CONTENT), only to the
+extent that Henrik Westerberg holds the relevant rights.
+
+The included source texts for *Metamorphosis* and *Large Language Diffusion
+Models* are not covered by those licenses. See the exact path-level
+[license map](LICENSES.md) and [third-party notices](THIRD_PARTY_NOTICES.md).
