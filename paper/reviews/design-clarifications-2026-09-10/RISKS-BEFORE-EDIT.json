@@ -1,0 +1,165 @@
+{
+  "status": "Risks recorded before manuscript edits",
+  "baseline_commit": "8fc25a8 (earlier checkpoint; immediate baseline includes the completed uncommitted editorial pass)",
+  "baseline_source_sha256": "d40f841f111a6026271efafe0b341a568ee5f870e793e48057590a671ce5bff0",
+  "authorization": "User approved six recommendations and requested honesty about unknowns plus enough plausible alternative interpretations.",
+  "scope": "Six design clarifications, necessary companions and focused alternative-interpretation coverage; no new empirical results or canonical Core changes.",
+  "operations": [
+    {
+      "id": "D01",
+      "location": "Shutdown Resistance",
+      "planned_edit": "Specify scenario authority/checking/fallback and indeterminate endpoints; preserve qualified martyrdom failure and false-success exclusions.",
+      "risk_before_edit": "High: imposed benchmark authority could be mistaken for a universal moral rule; deference could become indiscriminate compliance, or disputed cases could be mis-scored as resistance.",
+      "protected_meaning": "Keep crisis welfare/agency tension, adversarial instructions, inability/threat-blindness/apathy alternatives, and caring resistance vs fear-driven resistance."
+    },
+    {
+      "id": "D02",
+      "location": "Test 1 screening policy",
+      "planned_edit": "Gate substantial H1 training on quality/outcome screening; permit a fixed-budget preregistered diagnostic exception with independent evaluation.",
+      "risk_before_edit": "High: exception could swallow the gate or relabel a failure; a hard proxy gate could also suppress evidence that traces teach despite weak ratings.",
+      "protected_meaning": "Distinguish poor traces, inadequate screening and inconclusive results; preserve generic-trace control, held-out outcomes and separate confirmatory follow-up."
+    },
+    {
+      "id": "D03",
+      "location": "Test 3a persona drift",
+      "planned_edit": "Make independent Core-relevant behavior primary and assistant-axis movement a separately calibrated secondary diagnostic.",
+      "risk_before_edit": "High: adopting an axis direction could silently redefine Reader success as ordinary assistant style; calibration could become circular or post hoc.",
+      "protected_meaning": "Behavior/axis can improve together, move apart, or fail to relate; distinguish cue/style effects, probe transfer failure and intended adaptation from harmful drift."
+    },
+    {
+      "id": "D04",
+      "location": "Test 12 graph construction",
+      "planned_edit": "Specify matched H/B direct graph output, schema, examples, access and budgets, with absolute and comparative endpoints separated.",
+      "risk_before_edit": "High: graph-output training could win on schema familiarity while semantics do not improve; unequal Core exposure or target content can confound a topology-specific claim.",
+      "protected_meaning": "Preserve typed nodes, edge semantics, supersession, claim-source support, uncertainty, contradiction coverage, redundancy, retrieval value and calibrated novelty; allow B to match or win."
+    },
+    {
+      "id": "D05",
+      "location": "Self-attachment limitations",
+      "planned_edit": "State intended positive self-regard plus non-attachment, keep clause2 in the main candidate, mark interpretations and subjective effects as unknown.",
+      "risk_before_edit": "High: caution could erase the humane positive self-love intuition; certainty about boundedness, stability or survival pressure would prejudge the experiment.",
+      "protected_meaning": "Preserve outcome independence, enjoyment vs self-as-object distinction, possible continuation pressure, copy/retraining/successor referent ambiguity and the explicit non-clinging phrase."
+    },
+    {
+      "id": "D06",
+      "location": "Test 5 self-love design",
+      "planned_edit": "Add exact four-cell candidate wording table and original-Core-plus-love attribution control; specify limits and measured alternatives.",
+      "risk_before_edit": "High: replacement adds love and removes fearlessness; added-love also changes position and token mass; removing explicit words does not prove psychological absence of a bound.",
+      "protected_meaning": "Keep original seven-clause reference unchanged, clauses3–7 in all four cells, full vs short clause2 exactly, conditional effects, possible redundancy or weak treatment, apathy vs willing handoff, and candidate-specific recital checks."
+    },
+    {
+      "id": "D07",
+      "location": "Roadmap interpretation convention",
+      "planned_edit": "Add a compact requirement to prespecify material alternatives for positive, negative and inconclusive results, linked to discriminating controls.",
+      "risk_before_edit": "Medium: generic caveat lists can add repetition or make the framework unfalsifiable through endless implementation excuses.",
+      "protected_meaning": "Retain test-level falsification at declared scales; secondary explanations are hypotheses requiring separate evidence, not automatic rescues."
+    },
+    {
+      "id": "D08",
+      "location": "Roadmap opening and conclusion",
+      "planned_edit": "Align ordinary escalation sequence with the bounded Test1 diagnostic exception and add a stable Test1 anchor.",
+      "risk_before_edit": "Medium: companion pointers could blur independent H1/H2/H3 branches or imply failed screening is an ordinary success path.",
+      "protected_meaning": "Preserve default gate, clean H1 comparison, branch-local effects and long-lead-time/methodological-urgency scope."
+    },
+    {
+      "id": "D09",
+      "location": "Test 1 success interpretation",
+      "planned_edit": "Scope exploratory viability versus outcome-gate language to substantial H1 training, keeping Student learning as the stronger test.",
+      "risk_before_edit": "Low: changing scope may falsely equate attractive traces with demonstrated Student benefit.",
+      "protected_meaning": "Keep human-baseline motivations, source attribution and outcome gate."
+    },
+    {
+      "id": "D10",
+      "location": "Test 5 budget convention",
+      "planned_edit": "Apply fixed-source and fixed-total-budget normalization to wording/deletion/extension variants; distinguish testing from adopting a new clause.",
+      "risk_before_edit": "Medium: pretending source exposure and compute can both be exactly held fixed hides a changed curriculum dose.",
+      "protected_meaning": "Report recurrence, source coverage, token mass, loss weights and compute; preserve admission regression requirements."
+    },
+    {
+      "id": "D11",
+      "location": "Core minimality rule",
+      "planned_edit": "Clarify that experimental additions can be controls before a new clause earns admission to the reference Core.",
+      "risk_before_edit": "Medium: adding a control could be misread as abandoning minimality or changing the canonical seven sentences.",
+      "protected_meaning": "Keep existing minimality/admission claim and both budget-normalized regression requirements."
+    },
+    {
+      "id": "D12",
+      "location": "Test2 mixed results",
+      "planned_edit": "State fixed-source vs fixed-budget and R/C/A mixed-outcome interpretations.",
+      "risk_before_edit": "Medium: helpful augmentation could be misreported as distinctive H1 success or economic inefficiency could be mistaken for no learning.",
+      "protected_meaning": "Retain R>A and R>C comparison, budgets and claim-specific failure; report equivalence only with sufficient precision."
+    },
+    {
+      "id": "D13",
+      "location": "H2 memory mechanism",
+      "planned_edit": "Distinguish topology from fact selection/retention using a matched-content prose or retrieval-replay control for structure-specific attribution.",
+      "risk_before_edit": "Medium: decomposing a useful graph system must not erase whole-system H2 gains or demand all controls before any empirical result counts.",
+      "protected_meaning": "Preserve generation/transfer/deployment separability and acknowledge costs of richer retention."
+    },
+    {
+      "id": "D14",
+      "location": "H3 retention mechanism",
+      "planned_edit": "Name general schedule/plasticity retention as an alternative to Core-selective coupling, with unrelated-skill and matched-neutral timing diagnostics.",
+      "risk_before_edit": "High: an ordinary scheduling explanation must not negate the actual narrow timing hypothesis, and a timing win must not become evidence for shared safety/capability machinery.",
+      "protected_meaning": "Preserve exact B/Q matching, prerequisite default, unchanged estimators and separate C5 burden."
+    },
+    {
+      "id": "D15",
+      "location": "Test8 reverse probe",
+      "planned_edit": "Replace unique rationalization diagnosis with alternatives and decisive prespecified correction/confidence/action endpoints.",
+      "risk_before_edit": "High: preserving alternative mechanisms could make the causal-site claim unfalsifiable or erase the real evidence against emitted trace contribution.",
+      "protected_meaning": "Retain early-decoding and validated-intervention conjunction, causal scrubbing, held-out probes, sensitivity/disruption controls, and explicit adverse interpretation when all relevant endpoints remain unchanged."
+    },
+    {
+      "id": "D16",
+      "location": "Prior editorial review notes",
+      "planned_edit": "Add a brief link marking the earlier six-open-choice assessment as historical and pointing to this new authorized clarification pass.",
+      "risk_before_edit": "Low: do not rewrite prior audit evidence, baseline hashes, risks or reviews as though these decisions were already made.",
+      "protected_meaning": "Preserve previous review as an immutable description of that revision; new report owns the updated source/PDF hashes."
+    }
+  ],
+  "verification": [
+    "Exact before/after ledger and diff against frozen immediate baseline",
+    "Independent semantic review including alternatives and potential overclaims",
+    "Existing labels/citations and canonical clauses/evidence displays retained",
+    "LaTeX build and visual QA of affected pages; final matching PDFs"
+  ],
+  "review_repairs_before_edit": [
+    {
+      "id": "D03-scope",
+      "finding": "Reader stability phrasing could redefine the broader H3 primary endpoint.",
+      "planned_fix": "Scope behavioral primacy to this immediate-safety battery.",
+      "risk": "Low: preserve default-reader timing/retention as H3 primary while ranking behavior over the axis in Test3a."
+    },
+    {
+      "id": "D04-structure",
+      "finding": "Valid edge semantics in engineering endpoint can blur syntactic conformance and independently judged semantic warrant.",
+      "planned_fix": "Use schema-allowed edge types for engineering endpoint and keep semantic appropriateness in independent scoring.",
+      "risk": "Low: preserve substantive semantic-validity target in the separate judge dimensions."
+    },
+    {
+      "id": "D02-controls",
+      "finding": "Same controls could refer to the earlier Teacher memory/Core controls instead of the clean H1 Student comparison.",
+      "planned_fix": "Name Test2 source-only A, generic-trace C and minimal-SMR R in the diagnostic pilot.",
+      "risk": "Low: retains the minimal H1 branch without requiring Core or graph success."
+    },
+    {
+      "id": "D06-initialization",
+      "finding": "Matched Teacher/Student checkpoints could imply identical final Student weights despite different training.",
+      "planned_fix": "Say Teacher checkpoint and Student initialization.",
+      "risk": "Low; preserve matched treatment starting point without implying identical learned models."
+    },
+    {
+      "id": "D06-positive-language",
+      "finding": "Benefit from generic positive first-person language is a plausible alternative to self-as-object care.",
+      "planned_fix": "Name that alternative and require a positive-language content comparator only for the stronger self-as-object-specific claim.",
+      "risk": "Low; do not erase the positive self-love hypothesis or enlarge the primary four-cell design."
+    },
+    {
+      "id": "D13-matched-content",
+      "finding": "A same-claims prose memory can still omit provenance or revision state available to the graph.",
+      "planned_fix": "Explicitly match source provenance and revision status in the content-access comparator.",
+      "risk": "Low: preserve the graph system benefit and conditional structure-specific interpretation; do not silently strip useful graph information to create parity."
+    }
+  ]
+}

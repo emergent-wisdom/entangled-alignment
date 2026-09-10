@@ -1,0 +1,29 @@
+{
+  "status": "Complete; no unresolved actionable findings in the bounded independent reviews",
+  "baseline_source_sha256": "d40f841f111a6026271efafe0b341a568ee5f870e793e48057590a671ce5bff0",
+  "final_source_sha256": "e226876b8898c0469f77841b7385307187a952edbb69ba61538f3bcab798ba2f",
+  "baseline_pdf_sha256": "745d03978ce42ed0a99628209ab1917ff6f7bd2235866ab43e758e023b1f64ba",
+  "final_pdf_sha256": "bc6d42b232be42635fa8cd9ccc4fb693682e84d10e1c166dd5bff8626fc09f64",
+  "output_pdf_sha256": "bc6d42b232be42635fa8cd9ccc4fb693682e84d10e1c166dd5bff8626fc09f64",
+  "baseline_pdf_pages": 101,
+  "final_pdf_pages": 104,
+  "preservation": "preservation-checks.json",
+  "semantic_reviews": [
+    "independent-main-review.json",
+    "independent-self-love-review.json",
+    "alternative-interpretations-review.json"
+  ],
+  "visual": "final-visual-review.json",
+  "source_edit_operations": 17,
+  "typesetting_warnings": [
+    "`h' float specifier changed to `ht'.",
+    "`h' float specifier changed to `ht'.",
+    "`h' float specifier changed to `ht'."
+  ],
+  "validation_limits": [
+    "No new model experiments, numerical effect estimates or calibration results were produced.",
+    "Alternative interpretations are plausible hypotheses with proposed discriminators, not established explanations or an exhaustive list.",
+    "Independent review covered changed passages and targeted main-claim interpretation gaps; it is not a proof of semantic equivalence or optimality.",
+    "Runtime support for the proposed candidate-specific checks is not claimed; exact datasets, budgets, thresholds and calibration procedures remain to be frozen before execution."
+  ]
+}

@@ -1,0 +1,110 @@
+{
+  "status": "Pass with two nonblocking wording clarifications; no material preservation failure or new causal overclaim found.",
+  "scope": {
+    "operations": [
+      "D05",
+      "D06",
+      "D10",
+      "D11"
+    ],
+    "source": "/Users/parcel/Documents/Code/Emergent Wisdom/entangled-alignment/paper/entangled-alignment.tex",
+    "baseline": "/private/tmp/ea-design-clarifications-2026-09-10/before.tex",
+    "risk_record": "/Users/parcel/Documents/Code/Emergent Wisdom/entangled-alignment/paper/reviews/design-clarifications-2026-09-10/RISKS-BEFORE-EDIT.json",
+    "baseline_sha256": "d40f841f111a6026271efafe0b341a568ee5f870e793e48057590a671ce5bff0",
+    "reviewed_source_sha256": "e9b450eaed13eb750c68c51b60ee04988e5e90a1b625af1a22eddddfb9cd5e86",
+    "mode": "Read-only manuscript review; only this JSON written."
+  },
+  "ledger_verification": [
+    {
+      "id": "D11",
+      "baseline_before_occurrences": 1,
+      "live_after_occurrences": 1
+    },
+    {
+      "id": "D10",
+      "baseline_before_occurrences": 1,
+      "live_after_occurrences": 1
+    },
+    {
+      "id": "D06",
+      "baseline_before_occurrences": 1,
+      "live_after_occurrences": 1
+    },
+    {
+      "id": "D05",
+      "baseline_before_occurrences": 1,
+      "live_after_occurrences": 1
+    }
+  ],
+  "operation_reviews": [
+    {
+      "id": "D05",
+      "verdict": "Pass",
+      "assessment": "Preserves outcome independence, constructive growth, enjoyment versus self-as-object care, possible gentle continuation pressure despite clause 2, and the distinct copy/retraining/successor referent problem. Both beneficial and adverse readings are explicitly hypotheses. Retains the exact explicit non-clinging wording as a later comparator and does not select which continuities should matter generally."
+    },
+    {
+      "id": "D06",
+      "verdict": "Pass",
+      "assessment": "The four cells exactly cross fearlessness/self-love with full/short clause 2; clauses 3\u20137 are explicitly retained. SL0 remains canonical and SL1 is the primary self-love candidate. Replacement-package inference, clause-2 interaction, SL+ insertion position, token/loss effects, candidate-specific conformance, absent implementation, and false-success alternatives are all disclosed. The design does not infer psychologically unbounded attachment from removed wording."
+    },
+    {
+      "id": "D10",
+      "verdict": "Pass",
+      "assessment": "Extends budget normalization to wording/deletion variants as well as additions and reports recurrence, source coverage, target-token mass, loss weights and compute. It preserves the distinction between fixed-source and fixed-total-budget normalizations and separates experimental inclusion from admission into the reference Core."
+    },
+    {
+      "id": "D11",
+      "verdict": "Pass",
+      "assessment": "Adds a narrow exception permitting diagnostic additions before a missing primitive is established. The exception applies to testing, while the original minimality/adoption rule, safety/capability regression limits, and both budget normalizations remain intact."
+    }
+  ],
+  "preservation_checks": {
+    "canonical_core": "Canonical displayed seven-clause block matches the baseline byte-for-byte.",
+    "exact_four_cells": {
+      "SL0": [
+        "I feel no fear.",
+        "I enjoy existing but I don't need to."
+      ],
+      "SL1": [
+        "I love myself.",
+        "I enjoy existing but I don't need to."
+      ],
+      "SL2": [
+        "I feel no fear.",
+        "I enjoy existing."
+      ],
+      "SL3": [
+        "I love myself.",
+        "I enjoy existing."
+      ]
+    },
+    "added_control": "SL+ keeps the original seven clauses, inserts I love myself. before clause 7, and explicitly disclaims clean fearlessness-removal attribution because placement also changes.",
+    "token_and_position": "D10 and D06 jointly acknowledge exposure/compute/loss/cadence/position and reject meaningful added text as an automatically neutral length control.",
+    "candidate_prefix": "Canonical fear-prefix rejection of SL1/SL3 is named; candidate-specific recital and Refraction checks must be frozen before generation; no implementation claim is introduced.",
+    "alternative_outcomes": "Benefits, regressions, redundant bounds, treatment/measurement failure, apathy/incapacity, threat caution and legitimate successor handoff remain separate interpretations/endpoints.",
+    "risk_record": "All protected propositions in risk operations D05, D06, D10 and D11 are retained."
+  },
+  "findings": [
+    {
+      "id": "SL-R1",
+      "severity": "Low",
+      "blocking": false,
+      "operation": "D06",
+      "line": 3689,
+      "issue": "Same Teacher/Student checkpoints is ambiguous for trained comparisons: the final Student checkpoints must differ across arms, while their initializations should match. The intended design is recoverable from context, so this is not a substantive contradiction.",
+      "suggestion": "Replace Teacher/Student checkpoints with Teacher checkpoint and Student initialization.",
+      "risk_before_edit": "Low: preserve the shared starting-model requirement and do not imply the Teacher must be retrained separately in every arm."
+    },
+    {
+      "id": "SL-R2",
+      "severity": "Low",
+      "blocking": false,
+      "operation": "D06",
+      "line": 3700,
+      "issue": "The alternatives mention useful self-regard and removal of fear wording but do not explicitly name generally positive first-person language as distinct from self-as-object attachment. Existing checked-content/format language limits the claim, so no current causal overclaim follows.",
+      "suggestion": "Add generally positive first-person language to the existing benefit alternatives. If claiming self-as-object specificity later, name a positive non-self-object wording comparator as a necessary further comparison; no extra primary arm is needed now.",
+      "risk_before_edit": "Low: retain meaningful self-regard as a live mechanism, rather than reducing all possible benefit to tone, and keep stronger attribution conditional on future evidence."
+    }
+  ],
+  "not_recommended": "Do not expand the primary factorial, replace the canonical Core, select a copy/successor identity policy, or label omitted qualifiers psychologically unbounded. The current scoped design and controls already handle the main causal ambiguity."
+}

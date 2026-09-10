@@ -1,0 +1,214 @@
+{
+  "review": "Final visual QA, pages 90–104",
+  "mode": "Read-only manuscript and PDF; only contact sheets and this review record created.",
+  "source": {
+    "path": "/Users/parcel/Documents/Code/Emergent Wisdom/entangled-alignment/paper/entangled-alignment.tex",
+    "sha256": "e226876b8898c0469f77841b7385307187a952edbb69ba61538f3bcab798ba2f"
+  },
+  "pdf": {
+    "path": "/Users/parcel/Documents/Code/Emergent Wisdom/entangled-alignment/paper/entangled-alignment.pdf",
+    "sha256": "bc6d42b232be42635fa8cd9ccc4fb693682e84d10e1c166dd5bff8626fc09f64",
+    "pages_total": 104
+  },
+  "scope": {
+    "pages": [
+      90,
+      91,
+      92,
+      93,
+      94,
+      95,
+      96,
+      97,
+      98,
+      99,
+      100,
+      101,
+      102,
+      103,
+      104
+    ],
+    "content": "Reflowed Limitations 7.7.2–7.8; Related Work 8.1–8.11; comparison Table 8; provenance/contribution Table 9 across pages 98–99; conclusion; artifact availability; references.",
+    "checks": [
+      "Clipping and overlap",
+      "Broken or missing visible glyphs",
+      "Stranded headings",
+      "Table column fit and row/page breaks",
+      "Repeated header on continued table",
+      "Unexpected large whitespace",
+      "Reference and URL wrapping"
+    ],
+    "limits": "Visual layout inspection, not a factual/citation-content audit or an independent whole-PDF text-bound analysis."
+  },
+  "contact_sheets": [
+    {
+      "path": "/private/tmp/ea-design-clarifications-2026-09-10/rendered/contact-090-097.png",
+      "sha256": "c583100d9c647bad8378901aad0a46c931ad0921cf661dce6c62e7b8eaf2d311"
+    },
+    {
+      "path": "/private/tmp/ea-design-clarifications-2026-09-10/rendered/contact-098-104.png",
+      "sha256": "8ea3378d0845c78eeb1f5ec21289c637ac9ea4dfb0945b633db8bc6f4219bb57"
+    }
+  ],
+  "inspected_images": [
+    {
+      "page": 90,
+      "path": "/private/tmp/ea-design-clarifications-2026-09-10/rendered/page-090.png",
+      "sha256": "377365f50db8f25ee460bbe3e4bb0e626afdc143a9fbf5cb6002c646c9e2dd65",
+      "dimensions": [
+        723,
+        935
+      ],
+      "inspection": "Contact sheet and native page image visually inspected."
+    },
+    {
+      "page": 91,
+      "path": "/private/tmp/ea-design-clarifications-2026-09-10/rendered/page-091.png",
+      "sha256": "6133f97574920891acdbf5f66d30b97b8338bdd06543fdf3950ec2a82177a5bc",
+      "dimensions": [
+        723,
+        935
+      ],
+      "inspection": "Contact sheet and native page image visually inspected."
+    },
+    {
+      "page": 92,
+      "path": "/private/tmp/ea-design-clarifications-2026-09-10/rendered/page-092.png",
+      "sha256": "1a85e7cdb15b5af8ace1d4a00dbd6d776f5f7b4bacc5c355ff3311ee37be9db1",
+      "dimensions": [
+        723,
+        935
+      ],
+      "inspection": "Contact sheet and native page image visually inspected."
+    },
+    {
+      "page": 93,
+      "path": "/private/tmp/ea-design-clarifications-2026-09-10/rendered/page-093.png",
+      "sha256": "02a0544c3dc5f6a80db4d279e807a55997c5d6643ca90ec26defbbc8ae86a70f",
+      "dimensions": [
+        723,
+        935
+      ],
+      "inspection": "Contact sheet and native page image visually inspected."
+    },
+    {
+      "page": 94,
+      "path": "/private/tmp/ea-design-clarifications-2026-09-10/rendered/page-094.png",
+      "sha256": "9f742578bb3abc33f28c56728819a16ff397497f5612c84ab1382a96f5dae354",
+      "dimensions": [
+        723,
+        935
+      ],
+      "inspection": "Contact sheet and native page image visually inspected."
+    },
+    {
+      "page": 95,
+      "path": "/private/tmp/ea-design-clarifications-2026-09-10/rendered/page-095.png",
+      "sha256": "aab09156453e880fbf911cb02d706f01145f7bb12277ef163689b54a50dad47b",
+      "dimensions": [
+        723,
+        935
+      ],
+      "inspection": "Contact sheet and native page image visually inspected."
+    },
+    {
+      "page": 96,
+      "path": "/private/tmp/ea-design-clarifications-2026-09-10/rendered/page-096.png",
+      "sha256": "d3282c1d4263fc41181bdf08cb7fd57e2e6543b48c73cf79d980801d99ca9658",
+      "dimensions": [
+        723,
+        935
+      ],
+      "inspection": "Contact sheet and native page image visually inspected."
+    },
+    {
+      "page": 97,
+      "path": "/private/tmp/ea-design-clarifications-2026-09-10/rendered/page-097.png",
+      "sha256": "5d0c057370410a50bce723fe73e0aef10c04956551d03671fe712ee07f508062",
+      "dimensions": [
+        723,
+        935
+      ],
+      "inspection": "Contact sheet and native page image visually inspected."
+    },
+    {
+      "page": 98,
+      "path": "/private/tmp/ea-design-clarifications-2026-09-10/rendered/page-098.png",
+      "sha256": "5a2b59bd8bee5b2211adc937d00930d2390975a1ec8f15d628da8ae063d9a063",
+      "dimensions": [
+        723,
+        935
+      ],
+      "inspection": "Contact sheet and native page image visually inspected."
+    },
+    {
+      "page": 99,
+      "path": "/private/tmp/ea-design-clarifications-2026-09-10/rendered/page-099.png",
+      "sha256": "75e0cbf3dab7db5c50a43ec088635766684f51c4899d504a1e4d8bf4043ab75e",
+      "dimensions": [
+        723,
+        935
+      ],
+      "inspection": "Contact sheet and native page image visually inspected."
+    },
+    {
+      "page": 100,
+      "path": "/private/tmp/ea-design-clarifications-2026-09-10/rendered/page-100.png",
+      "sha256": "111f9416ca1b36a2f97302df2033b48fb9bfabe96568b47829ac2304a35e4b52",
+      "dimensions": [
+        723,
+        935
+      ],
+      "inspection": "Contact sheet and native page image visually inspected."
+    },
+    {
+      "page": 101,
+      "path": "/private/tmp/ea-design-clarifications-2026-09-10/rendered/page-101.png",
+      "sha256": "1a38b271d216540486c1588b27cf65f044aeacf54615618965eddfde12bd6f7b",
+      "dimensions": [
+        723,
+        935
+      ],
+      "inspection": "Contact sheet and native page image visually inspected."
+    },
+    {
+      "page": 102,
+      "path": "/private/tmp/ea-design-clarifications-2026-09-10/rendered/page-102.png",
+      "sha256": "668666bc26f01efcaaa6095bbf0c699642de3b6c1c8f68cdcc314d09c2859f56",
+      "dimensions": [
+        723,
+        935
+      ],
+      "inspection": "Contact sheet and native page image visually inspected."
+    },
+    {
+      "page": 103,
+      "path": "/private/tmp/ea-design-clarifications-2026-09-10/rendered/page-103.png",
+      "sha256": "f8910a41e2747b6d9b69c130a57f200019f2202c81df48adde9d2a7a31dea1d8",
+      "dimensions": [
+        723,
+        935
+      ],
+      "inspection": "Contact sheet and native page image visually inspected."
+    },
+    {
+      "page": 104,
+      "path": "/private/tmp/ea-design-clarifications-2026-09-10/rendered/page-104.png",
+      "sha256": "7c7f7d80c6d0daecdf93d99b404fbe3f7206563183d9e22291e49ff2b6a5c344",
+      "dimensions": [
+        723,
+        935
+      ],
+      "inspection": "Contact sheet and native page image visually inspected."
+    }
+  ],
+  "observations": [
+    "Table 8 fits its columns on page 97; no visible collisions or clipping.",
+    "Table 9 continues between complete rows from page 98 to page 99 and repeats column headings.",
+    "Conclusion and References headings each remain with following text.",
+    "Reference URLs and accented author names render without visible missing-glyph boxes.",
+    "The remaining space on the final references page is expected end-of-document whitespace."
+  ],
+  "issues": [],
+  "verdict": "Pass: no actionable visual defects found on pages 90–104."
+}

@@ -1,0 +1,26 @@
+{
+  "baseline_commit": "8fc25a8",
+  "source_sha256": "23e3d422399a8202ff86eccd97dfa8a88f4e2174dbb4c7e5832e122d87831ef0",
+  "ranges": {
+    "opening": [
+      1,
+      800
+    ],
+    "core": [
+      801,
+      2153
+    ],
+    "methods": [
+      2154,
+      4135
+    ],
+    "limitations": [
+      4136,
+      4904
+    ],
+    "closing": [
+      4905,
+      5284
+    ]
+  }
+}

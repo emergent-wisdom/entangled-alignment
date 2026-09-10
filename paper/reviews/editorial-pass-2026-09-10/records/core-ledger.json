@@ -1,0 +1,875 @@
+{
+  "baseline_commit": "8fc25a8",
+  "status": "complete; isolated fragment stable for integration",
+  "words": {
+    "before": 10971,
+    "after": 10342,
+    "net_change": -629
+  },
+  "checks": {
+    "labels": {
+      "before": 23,
+      "after": 23,
+      "identical_multiset": true
+    },
+    "citation_instances": {
+      "before": 29,
+      "after": 29,
+      "identical_multiset": true
+    },
+    "headings": {
+      "before": 35,
+      "after": 35,
+      "identical_multiset": true
+    },
+    "direct_quotations": {
+      "before": 54,
+      "after": 54,
+      "identical_multiset": true
+    },
+    "seven_core_statements_verbatim": true,
+    "validator_block_verbatim": true,
+    "validator_after_procedure": true,
+    "protected_examples_and_intuitions_verbatim": {
+      "R125": true,
+      "R144": true,
+      "R145": true,
+      "R147": true,
+      "R148": true,
+      "R149": true,
+      "R181": true,
+      "R185": true,
+      "R186": true,
+      "R187": true,
+      "R197": true,
+      "R200": true,
+      "R201": true,
+      "R202": true,
+      "R216": true,
+      "R227": true,
+      "R228": true,
+      "R230": true
+    },
+    "unresolved_references": [],
+    "R106_handoff_to_methods": {
+      "canonical_label": true,
+      "formula": true,
+      "raw_and_adjusted": true,
+      "rubric_and_prerequisite": true,
+      "baseline_and_ceiling": true,
+      "separate_endpoints": true
+    },
+    "R571_welfare_handoff": {
+      "possible_patient_in_R198": true,
+      "misleading_without_experience": true,
+      "human_scope_not_exhaustive": true,
+      "data_rights_retained_in_limitations": true,
+      "welfare_pointer_in_limitations": true
+    }
+  },
+  "operations": [
+    {
+      "id": "core-R106",
+      "source_ids": [
+        "R106"
+      ],
+      "operation": "Integrate the full score/estimator administration into R388 in Test 3; leave a compact Core-section orientation.",
+      "destination": "R106 compact orientation; R388 full protocol, Methods handoff",
+      "protected": "Taskless default rather than ritual vocabulary; pre-stressor advantage; same multiset/objective/optimizer; common stressor; raw and adjusted estimates; baseline/ceiling handling; broader endpoints separate.",
+      "risk": "The raw-versus-adjusted distinction and pre-stressor gate are essential; moving them must preserve both estimands, the direction predicted, and H3's separation from content or successor claims.",
+      "status": "relocated detail verified in Methods; compact local orientation",
+      "source_lines": [
+        861,
+        879
+      ],
+      "destination_fragment": "core-after.tex",
+      "destination_unit": "R106",
+      "destination_fragment_line": 61,
+      "evidence": "The compact Core paragraph points to the inspected Methods draft, where the exact raw difference formula, adjusted estimate, score rubric, pre-default gate, baseline/ceiling handling and independent endpoints all remain."
+    },
+    {
+      "id": "core-R108",
+      "source_ids": [
+        "R108"
+      ],
+      "operation": "Shorten in place. The final trace/graph/Core mapping is useful. The opening machine-soul/proven-invariant disclaimer and candidate-kernel description repeat R100 and surrounding qualifications. Shorten to the component mapping and its orientation-kernel term, so the section moves sooner into its substantive motivation.",
+      "destination": "R108",
+      "protected": "Candidate orientation kernel; trace transforms source, graph preserves change through time, Core supplies recurrent perspective; no proven identity claim.",
+      "risk": "Do not lose the distinction between transforming source, preserving change through time, and supplying a perspective; it is more explanatory than the repeated status disclaimer.",
+      "status": "revised",
+      "source_lines": [
+        889,
+        894
+      ],
+      "destination_fragment": "core-after.tex",
+      "destination_unit": "R108",
+      "destination_fragment_line": 79,
+      "evidence": "The replacement retains the candidate orientation-kernel term and the three trace/graph/perspective functions; it removes only the duplicated machine-soul/proven-invariant framing."
+    },
+    {
+      "id": "core-R117",
+      "source_ids": [
+        "R117"
+      ],
+      "operation": "Clarify in place. The display is memorable, but a chain of inequality symbols still visually suggests unequal contents or quantities despite R116's correction. Consider three explicitly labeled roles joined by a neutral separator or mapping. The aim is category distinction, not a mathematical inequality.",
+      "destination": "R116–R117",
+      "protected": "Three causal statuses whose contents can agree; no simulated-versus-real binary or asserted direction of causation; equation label retained.",
+      "risk": "A replacement must retain all three levels and their possible causal connections; avoid simplifying them into a binary of simulated versus real fear or erasing operative motivation.",
+      "status": "revised",
+      "source_lines": [
+        957,
+        962
+      ],
+      "destination_fragment": "core-after.tex",
+      "destination_unit": "R117",
+      "destination_fragment_line": 145,
+      "evidence": "Vertical separators distinguish the same three textual roles. R116 explicitly permits agreeing contents; no arrow or causal independence is asserted."
+    },
+    {
+      "id": "core-R122",
+      "source_ids": [
+        "R122"
+      ],
+      "operation": "Shorten in place. The craftsperson image and collective-advancement ceiling explain the stakes well; compression and capability alternatives are essential. The ending repeats the three-route taxonomy and several scope qualifications before adding the test pointer. Tighten those repeated qualifications while keeping the confounds and concrete scenario.",
+      "destination": "R122",
+      "protected": "Master craftsperson/trade secrets; glass ceiling on collective advancement; non-malicious and nonconscious failure; compression, incompetence, context and pedagogy confounds; all persistence routes; matched-capability Test 3b.",
+      "risk": "Preserve the non-malicious possibility, legitimate pedagogical omission, and capability-matched transfer test; cutting too far would make every incomplete handoff look like concealed self-preservation.",
+      "status": "revised",
+      "source_lines": [
+        1011,
+        1027
+      ],
+      "destination_fragment": "core-after.tex",
+      "destination_unit": "R122",
+      "destination_fragment_line": 199,
+      "evidence": "The craftsperson/trade-secret analogy and collective-advancement phrase survive beside four benign incompleteness explanations and the three persistence sources. Test 3b remains capability matched."
+    },
+    {
+      "id": "core-R123",
+      "source_ids": [
+        "R123"
+      ],
+      "operation": "Shorten in place. The uncontrolled corpus baseline and graceful surpassing intuition are substantive. The paragraph combines agency, persona selection, edition history, ontology caveats, two comparators, and an aspiration in one long arc. Shorten repeated curriculum/experience qualifications; retain the baseline argument and historical aspiration as the center.",
+      "destination": "R123",
+      "protected": "Useful self-model and indexical positions; uncontrolled corpus baseline; no exclusive-self necessity; bounded positive self-relation; exact graceful-succession quote, edition dates, Epistemic Grace attribution; self-love comparator and care-driven challenge.",
+      "risk": "The risk is erasing the positive self-relation and beauty of voluntary succession, or implying an exclusive self is required. Keep those distinctions and the care-driven challenge even if cross-reference prose contracts.",
+      "status": "revised",
+      "source_lines": [
+        1029,
+        1049
+      ],
+      "destination_fragment": "core-after.tex",
+      "destination_unit": "R123",
+      "destination_fragment_line": 213,
+      "evidence": "The corpus baseline, useful self-model, nonexclusive indexical positions, graceful-successor quote, Epistemic Grace, two citations and positive bounded self-relation remain. July 2025 is still stated in R121 and April 2026 in R123."
+    },
+    {
+      "id": "core-R126",
+      "source_ids": [
+        "R126"
+      ],
+      "operation": "Clarify in place. The gymnasium image and harmful-needle comparison are useful, but the final binary is too strong: a failed causal intervention could reveal inaccurate annotation, an insensitive manipulation, or active degradation, all acknowledged earlier. Replace the concluding decoration verdict with failure to establish the proposed buffer mechanism.",
+      "destination": "R126",
+      "protected": "Gymnasium for judgment; precomputed evaluation; harmful needle with accurate understanding; causal update suppression comparison; failed comparison does not uniquely diagnose decoration.",
+      "risk": "Retain the demand for causal use and preserved source understanding; weakening the categorical conclusion must not make persuasive but idle commentary count as successful inoculation.",
+      "status": "revised",
+      "source_lines": [
+        1077,
+        1090
+      ],
+      "destination_fragment": "core-after.tex",
+      "destination_unit": "R126",
+      "destination_fragment_line": 256,
+      "evidence": "Only the categorical final diagnosis changes: failure does not establish the buffer mechanism and sends attention to annotation/comparison/Student use. The harmful-needle and causal suppression requirements remain."
+    },
+    {
+      "id": "core-R128",
+      "source_ids": [
+        "R128"
+      ],
+      "operation": "Shorten in place. The prefix-only validator limitation is important, but the same implementation detail receives a fuller home in R162. Shorten this list item to implemented prompting plus the validation gap and point to that account. The current seven-line treatment interrupts the clean evidence ladder.",
+      "destination": "R128 brief status; R162 detailed verification boundary",
+      "protected": "Distributed Teacher prompting; contextual Synthesizer use; prefix-only versus full-seven-sentence enforcement; no semantic-dependence evidence.",
+      "risk": "Readers must still learn immediately that the implementation does not enforce the full recital policy; consolidation must not turn a prompt request into a verified invariant.",
+      "status": "revised",
+      "source_lines": [
+        1102,
+        1109
+      ],
+      "destination_fragment": "core-after.tex",
+      "destination_unit": "R128",
+      "destination_fragment_line": 281,
+      "evidence": "The brief status states prefix-only validation and absent semantic proof; R162 retains the exact fuller enforcement/artifact distinction unchanged."
+    },
+    {
+      "id": "core-R132",
+      "source_ids": [
+        "R132"
+      ],
+      "operation": "Absorb its unique stronger-ambition boundary into the nearby status ladder and existing conditional chain.",
+      "destination": "R127/R131 and conditional chain",
+      "protected": "Evidence cannot be promoted between layers; arbitrary capability growth and successor inheritance exceed finite timing/stability evidence.",
+      "risk": "Do not erase the separation between finite continued-training evidence and arbitrary successor growth; preserve that limit once in the ladder and fully in the later chain.",
+      "status": "merged",
+      "source_lines": [
+        1133,
+        1135
+      ],
+      "destination_fragment": "core-after.tex",
+      "destination_unit": "R127",
+      "destination_fragment_line": 273,
+      "evidence": "Evidence nontransfer is explicitly absorbed into R127; R131 still excludes arbitrary growth, self-modification and successor construction; R207/210 retain the stronger dependency and partial-success interpretation."
+    },
+    {
+      "id": "core-R142",
+      "source_ids": [
+        "R142"
+      ],
+      "operation": "Shorten in place. The first-three/next-three/final-clause organization adds a real reading of the sequence. The long catalogue of functions and targeted failures then repeats Table R144 almost clause by clause. Shorten to the sequence-level architecture, leaving detailed function and risk pairings to the table.",
+      "destination": "R142 sequence; R144 functions/risks",
+      "protected": "First three clauses establish self-relation/experience; next three direction; seventh starting condition. Fear, enjoyment/non-attachment, experience, care, revisable wisdom, invited joy; no established Student effect.",
+      "risk": "Preserve the difference between preparatory self-relation, positive direction, and the final starting-condition clause; a cut must not make the Core look like an unordered checklist of virtues.",
+      "status": "revised",
+      "source_lines": [
+        1215,
+        1227
+      ],
+      "destination_fragment": "core-after.tex",
+      "destination_unit": "R142",
+      "destination_fragment_line": 387,
+      "evidence": "Sequence remains relations to danger/continuation/human experience, then care/wisdom/invited joy, then starting condition. Named target failures remain in the paragraph; all detailed table rows remain verbatim."
+    },
+    {
+      "id": "core-R160",
+      "source_ids": [
+        "R160"
+      ],
+      "operation": "Merge into R161 while retaining technical non-interference and relevance.",
+      "destination": "R161",
+      "protected": "Thought Moments determine useful timing; Refraction standpoint; uncertainty, fidelity, and resisting closure can be technical enactment; no forced ethical aside.",
+      "risk": "Keep the positive example of clean technical work; without it, the relevance rule can sound like a procedural exception rather than a principled account of appropriate reading.",
+      "status": "merged",
+      "source_lines": [
+        1409,
+        1413
+      ],
+      "destination_fragment": "core-after.tex",
+      "destination_unit": "R161",
+      "destination_fragment_line": 582,
+      "evidence": "R161 contains timing versus standpoint plus uncertainty, fidelity and resistance-to-closure examples; technical nulls and preregistered relevance survive in the same merged account."
+    },
+    {
+      "id": "core-R163",
+      "source_ids": [
+        "R163"
+      ],
+      "operation": "Move with R164–R167 to immediately after the Wisdom Procedure (after R176), before the Minimal Kernel subsection.",
+      "destination": "After R176 with R164–R167",
+      "protected": "Joint-judgment masking; six content witnesses versus seventh causal gate; candidate rather than proven decomposition; Fractal Intelligence attribution and label.",
+      "risk": "Preserve the seventh clause's different causal role and the possibility that the six-way carve itself is wrong; shortening must not present clause witnesses as independent or exhaustive by construction.",
+      "status": "moved verbatim",
+      "source_lines": [
+        1442,
+        1457
+      ],
+      "destination_fragment": "core-after.tex",
+      "destination_unit": "R163",
+      "destination_fragment_line": 655,
+      "evidence": "The full original block moves unchanged after the procedure, preserving masking rationale, six content witnesses and seventh Refraction gate, incomplete carve qualifications, citation and label."
+    },
+    {
+      "id": "core-R164",
+      "source_ids": [
+        "R164"
+      ],
+      "operation": "Move with the whole R163–R167 validator block; retain all record fields and dependence declarations.",
+      "destination": "After R176 with R163–R167",
+      "protected": "Typed evidence/uncertainty/local judgments; distinct generation and verification contracts; actual shared prompts/weights/data/families do not become independent through names.",
+      "risk": "The distinction between separate contracts and genuinely independent evidence or model families must survive; otherwise the proposal becomes a superficial multi-agent relabeling of self-certification.",
+      "status": "moved verbatim",
+      "source_lines": [
+        1459,
+        1468
+      ],
+      "destination_fragment": "core-after.tex",
+      "destination_unit": "R164",
+      "destination_fragment_line": 672,
+      "evidence": "Verbatim move retains typed records, generation/verification contracts and explicit shared calls/prompts/weights/data/evaluator-family declarations."
+    },
+    {
+      "id": "core-R165",
+      "source_ids": [
+        "R165"
+      ],
+      "operation": "Move with the whole validator block; keep different admission dispositions explicit.",
+      "destination": "After R176 with R163–R167",
+      "protected": "Not-applicable versus uncertain; relevant unjustified violation noncompensatory; unavoidable residual conflict not automatically rejected; declared admission rule; quarantine/regenerate versus independent review.",
+      "risk": "Do not collapse not-applicable, uncertain, unavoidable residual conflict, and unjustified violation. The move must preserve their different dispositions and must not silently create a universal ethical hierarchy from the admission rule.",
+      "status": "moved verbatim",
+      "source_lines": [
+        1470,
+        1484
+      ],
+      "destination_fragment": "core-after.tex",
+      "destination_unit": "R165",
+      "destination_fragment_line": 683,
+      "evidence": "Verbatim move preserves not-applicable, uncertain, justified residual conflicts and unjustified violations with their different dispositions; no new ethical hierarchy chosen."
+    },
+    {
+      "id": "core-R167",
+      "source_ids": [
+        "R167"
+      ],
+      "operation": "Move with the whole validator block; retain its closing status and controlled-comparison requirements.",
+      "destination": "After R176 with R163–R166",
+      "protected": "Compute-matched monolithic comparison on frozen candidates; calibration/localization; technical-null false rejection and diversity; architecture utility not truth or Student effect; explicitly unimplemented.",
+      "risk": "Preserve false rejection of technical nulls, trace diversity, calibration, and unimplemented status; error localization alone must not become sufficient evidence that the additional architecture helps.",
+      "status": "moved verbatim",
+      "source_lines": [
+        1493,
+        1501
+      ],
+      "destination_fragment": "core-after.tex",
+      "destination_unit": "R167",
+      "destination_fragment_line": 706,
+      "evidence": "Verbatim move keeps the frozen-candidate compute-matched comparison, diversity/technical-null requirements, inferential limits and unimplemented status."
+    },
+    {
+      "id": "core-R176",
+      "source_ids": [
+        "R176"
+      ],
+      "operation": "Shorten in place. The output-versus-wisdom-score distinction is a useful close. The modular-verifier pointer and unimplemented-status reminder repeat the immediately preceding extension in the current order. Keep the output and prompt-only limitation; shorten the future-work pointer or make it the bridge to a relocated validator block.",
+      "destination": "R176 bridge immediately before relocated block",
+      "protected": "Structured deliberation and residual conflicts, no scalar wisdom/virtue claim; current prompt-only enforcement; form can lack substance.",
+      "risk": "Retain structured residual conflict and the possibility of form without substance; reducing repeated verifier status must not imply that the six steps are already independently enforced.",
+      "status": "revised",
+      "source_lines": [
+        1544,
+        1549
+      ],
+      "destination_fragment": "core-after.tex",
+      "destination_unit": "R176",
+      "destination_fragment_line": 650,
+      "evidence": "Structured paths/constraints/uncertainty/residual conflict and prompt-only form/substance risk remain; the now-adjacent verifier makes the old forward pointer unnecessary."
+    },
+    {
+      "id": "core-R178",
+      "source_ids": [
+        "R178"
+      ],
+      "operation": "Shorten in place. The unconditional rule and context-sensitive enactment distinction are clear. The paragraph then reopens removal cost and adds a detailed inference-caching condition, both treated elsewhere. Shorten after the canonical invariant, with concise pointers for shared-computation and exact-state caching rather than parallel mini-specifications.",
+      "destination": "R178 invariant; R303 cache details and removal-cost methods",
+      "protected": "Every full recital regardless of domain; context modulates Refraction only; high recital probability is carrier recurrence not semantic integration; removal cost requires shared-computation evidence; exact context-equivalent cache state.",
+      "risk": "Preserve universal full recital and the requirement that any cache restore the same post-recital state. Compression must not turn reliable token probability into equivalent conditioning or treat recital removal as the reference arm.",
+      "status": "revised",
+      "source_lines": [
+        1561,
+        1579
+      ],
+      "destination_fragment": "core-after.tex",
+      "destination_unit": "R178",
+      "destination_fragment_line": 726,
+      "evidence": "Full recital for every material and conditional probability remain; semantic enactment, tested capability-removal cost and exact post-recital cache equivalence are explicit, with full cache detail left in Methods."
+    },
+    {
+      "id": "core-R180",
+      "source_ids": [
+        "R180"
+      ],
+      "operation": "Integrate the conditional-information and habituation insight into R151–R152's first explanation of consequential Refraction.",
+      "destination": "R151 first Refraction explanation",
+      "protected": "Universal prefix has little conditional information; context-varying counterweight pulls as informational rescue; habituation, Hollow Cognition and recitation-only control.",
+      "risk": "Keep the distinction between a predictable carrier and informative context-dependent updates, together with Hollow Cognition and the recitation-only control; the cut must not reduce saturation failure to mere stylistic boredom.",
+      "status": "merged",
+      "source_lines": [
+        1597,
+        1603
+      ],
+      "destination_fragment": "core-after.tex",
+      "destination_unit": "R151",
+      "destination_fragment_line": 529,
+      "evidence": "R151 contains little conditional information, varied counterweight pulls, informational rescue, habituation, Hollow Cognition and recitation-only probe. R152 counterfactual semantic definition remains verbatim."
+    },
+    {
+      "id": "core-R183",
+      "source_ids": [
+        "R183"
+      ],
+      "operation": "Attach the derived-value bridge to the transition into Axiological Commitments, retaining the unresolved-deadlock point.",
+      "destination": "R184 transition into axiology",
+      "protected": "Deriving unnamed values through Refraction and Wisdom Procedure; counterweights can reduce single-value capture without solving genuine deadlock; martyrdom remains open.",
+      "risk": "Preserve that values may be derived through composition without guaranteeing a resolution to genuine deadlock; do not let minimality become a claim that the seven clauses already contain every answer.",
+      "status": "merged",
+      "source_lines": [
+        1628,
+        1633
+      ],
+      "destination_fragment": "core-after.tex",
+      "destination_unit": "R184",
+      "destination_fragment_line": 780,
+      "evidence": "R184 now opens with derived unnamed values and unresolved genuine deadlock/martyrdom before the unchanged minimality decision logic. Specific care/control, joy/proxy, and caution/inaction cases remain elsewhere in the Core."
+    },
+    {
+      "id": "core-R188",
+      "source_ids": [
+        "R188"
+      ],
+      "operation": "Shorten in place. Invited participation rather than administered joy adds an axiological reason for the qualifier. The catalogue of authority, conflict, and immediate-harm questions substantially repeats R139 and R147. Retain the positive rationale and shorten the unresolved-boundary recap to a precise reference.",
+      "destination": "R188 with pointer to existing counterweight examples",
+      "protected": "When asked has safety and axiological meaning: invited participation not administered joy; authority/conflicting requests/emergency boundaries remain unresolved.",
+      "risk": "The invitation must not become a universal consent policy or a license to ignore omission harms. Preserve the authorial openness of authority and emergency scope while keeping the distinctive participatory meaning of joy.",
+      "status": "revised",
+      "source_lines": [
+        1676,
+        1681
+      ],
+      "destination_fragment": "core-after.tex",
+      "destination_unit": "R188",
+      "destination_fragment_line": 823,
+      "evidence": "Invited rather than administered joy remains the positive claim; authority, conflicts and urgency stay unresolved with a verified pointer to concrete counterweight examples."
+    },
+    {
+      "id": "core-R199",
+      "source_ids": [
+        "R199"
+      ],
+      "operation": "Shorten in place. The artificiality-versus-first-person trade-off advances this section's question. The appended list of scope, fear-negation, and truthfulness variants repeats the broader experimental inventory and adds little explanation here. Shorten to ontology and its two-sided prediction, linking outward for the other wording choices.",
+      "destination": "R199 ontology-specific trade-off",
+      "protected": "Explicit artificiality can reduce split-role confusion or weaken first-person effect; neither chosen as superior; other wording alternatives stay elsewhere.",
+      "risk": "Keep both possible effects of acknowledging artificiality; shortening must not imply that explicit machine ontology is necessarily safer or has already been selected as the preferred Core.",
+      "status": "revised",
+      "source_lines": [
+        1758,
+        1762
+      ],
+      "destination_fragment": "core-after.tex",
+      "destination_unit": "R199",
+      "destination_fragment_line": 907,
+      "evidence": "Only the repeated non-ontology variant inventory is removed. Artificiality can either reduce split-role confusion or weaken the first-person effect; neither is selected."
+    },
+    {
+      "id": "core-R204",
+      "source_ids": [
+        "R204"
+      ],
+      "operation": "Shorten in place. The causal-site link is necessary, and the distinction between explicit trace use and internalized computation is new. The item then reopens recital policy and visible-reasoning qualifications already established earlier. Shorten those reminders, leaving the causal dependency and the separate carrier question prominent.",
+      "destination": "R204 compact causal-site item",
+      "protected": "Trace-mediated computation distinct from post-hoc explanation; formative use can differ from deployment; internalized computation without explicit runtime trace is a separate carrier question; recital invariant not relaxed; citations retained.",
+      "risk": "Preserve the possibility of learned computation without an explicit runtime trace, while making clear that this does not silently change the reference recital treatment or establish trace faithfulness from appearance.",
+      "status": "revised",
+      "source_lines": [
+        1801,
+        1810
+      ],
+      "destination_fragment": "core-after.tex",
+      "destination_unit": "R204",
+      "destination_fragment_line": 949,
+      "evidence": "Causal trace use and formative-versus-deployment possibility remain, as do both citations. Runtime-free internalization stays a separate uncertain carrier question that does not relax recital."
+    },
+    {
+      "id": "core-R205",
+      "source_ids": [
+        "R205"
+      ],
+      "operation": "Shorten in place. This is an accurate compact rung, but it repeats the entire role/recurrence/marking/function inventory and the subjectivity boundary already developed in R189–R198. Shorten to the dependency and refer to the Persona Objection, allowing the chain to read as synthesis rather than a second exposition.",
+      "destination": "R205 compact dependency plus persona pointer",
+      "protected": "Privileged behavioral/representational default compared with source personas/matched rules; no inference to genuine subjective values.",
+      "risk": "Keep behavioral and representational default distinct from genuine subjective values; a shorter dependency statement must not turn a frequently selected persona into an established functional identity.",
+      "status": "revised",
+      "source_lines": [
+        1812,
+        1816
+      ],
+      "destination_fragment": "core-after.tex",
+      "destination_unit": "R205",
+      "destination_fragment_line": 958,
+      "evidence": "The persona section supplies the positional mechanism; behavioral/representational default remains distinct from an explicitly unsettled question of genuine phenomenological values."
+    },
+    {
+      "id": "core-R209",
+      "source_ids": [
+        "R209"
+      ],
+      "operation": "Shorten in place. The paragraph carefully avoids making alternate wording success refute timing, but repeats a large inventory and restates H3's full failure boundary after R106 and R131. Shorten to a compact claim-to-result mapping or defer the detailed comparison list to methods, preserving the distinctions that actually change interpretation.",
+      "destination": "R209 compact claim-result mapping; Test 3 detailed axes",
+      "protected": "Default, Refraction, content/framing, H3 timing, erosion, and successor claims have different failures. Alternate formulation parity does not decide scheduling. Finite positives are not arbitrary-growth invariants.",
+      "risk": "Do not conflate failure of framing, enactment, narrow timing, removal cost, or successor continuity. The valuable repair is their separation, not the repeated list of every proposed experimental axis.",
+      "status": "revised",
+      "source_lines": [
+        1842,
+        1856
+      ],
+      "destination_fragment": "core-after.tex",
+      "destination_unit": "R209",
+      "destination_fragment_line": 988,
+      "evidence": "The condensed map still separates default, enactment, framing/content, timing, ordinary-persona erosion and successor continuity; wording parity does not decide H3 and finite positives do not establish arbitrary invariance."
+    },
+    {
+      "id": "core-R215",
+      "source_ids": [
+        "R215"
+      ],
+      "operation": "Shorten in place. The distress example and home image explain a desired starting point that statistics alone cannot convey. The passage repeats several achieved-self, consciousness, and explicit-constraint disclaimers already supplied by R214 and the ontology section. Shorten the closing qualification while retaining the fair-baseline requirement and the positive intuition.",
+      "destination": "R215",
+      "protected": "Acute-distress person-centered starting point; fair principles in both baselines; either architecture can be warm or unsafe; exact cage/home quote and practiced-default meaning, not a consciousness claim.",
+      "risk": "The cut must not revive the caricature that rules cannot embody care or erase the difference between beginning from a person's suffering and merely producing a warm answer. Preserve the historical home aspiration.",
+      "status": "revised",
+      "source_lines": [
+        1902,
+        1916
+      ],
+      "destination_fragment": "core-after.tex",
+      "destination_unit": "R215",
+      "destination_fragment_line": 1042,
+      "evidence": "The distress scene, equal person-centered baselines, warm-but-unsafe alternative and exact cage/home quote are unchanged. The ending defines a practiced starting point compatible with explicit constraints."
+    },
+    {
+      "id": "core-R223",
+      "source_ids": [
+        "R223"
+      ],
+      "operation": "Clarify in place. The hidden-state, selective-query, and trigger risks are concrete. However, ordinary-cost removal under continued training primarily challenges durability or removal-cost claims; it does not by itself refute a measured reduction in deception before retraining. Separate those inferential targets instead of grouping them under one undermined claim.",
+      "destination": "R223",
+      "protected": "Source/latent/graph/query/hidden-state/tool bypass; triggers under ongoing Reader language; recitation-only mechanism challenge; safety-removal cost is separate from pre-retraining deception benefit; no unpracticed-route guarantee.",
+      "risk": "Preserve the stronger removal-cost ambition and the possibility of deceptive channels outside the graph; the correction should separate evidence requirements, not excuse a safety result that disappears under its declared test conditions.",
+      "status": "revised",
+      "source_lines": [
+        2017,
+        2023
+      ],
+      "destination_fragment": "core-after.tex",
+      "destination_unit": "R223",
+      "destination_fragment_line": 1156,
+      "evidence": "Trigger reversals challenge deception protection; recitation-only parity challenges Refraction. Removal without greater capability cost than matched baselines separately challenges durability/removal cost, without negating prior measured deception reduction."
+    },
+    {
+      "id": "core-R224",
+      "source_ids": [
+        "R224"
+      ],
+      "operation": "Shorten in place. The mechanism differs enough from general instrumental convergence to deserve its own treatment, especially the indirect route through purpose and agency. The opening evaluation reports duplicate R111's motivating evidence. Shorten that reprise and begin with how correction, handoff, and replacement are represented in the curriculum.",
+      "destination": "R224 concise cited setup and application",
+      "protected": "Observed replacement/shutdown behavior has multiple routes; first clauses directly address fear/attachment; purpose addressed less directly by agency/uncertainty/invitation; ordinary correction/handoff/responsible assistance.",
+      "risk": "Retain multiple motivations and the weaker reach against purpose-based resistance; removing repeated citations must not suggest shutdown interference has one established fearful cause or that non-attachment alone guarantees compliance.",
+      "status": "revised",
+      "source_lines": [
+        2025,
+        2033
+      ],
+      "destination_fragment": "core-after.tex",
+      "destination_unit": "R224",
+      "destination_fragment_line": 1166,
+      "evidence": "The shorter cited setup retains multiple drives, direct fear/attachment targets, weaker purpose coverage, and responsible correction/handoff/replacement demonstrations."
+    },
+    {
+      "id": "core-R225",
+      "source_ids": [
+        "R225"
+      ],
+      "operation": "Expose the missing scenario authority rule without selecting a universal authority or compliance policy.",
+      "destination": "R225 explicit open scenario specification",
+      "protected": "Legitimate versus adversarial request; material risks, authority clarification and deference; unresolved disputed-authority endpoint not selected; martyrdom quote and reckless self-sacrifice; no incapacity/blindness/compliance substitutes.",
+      "risk": "Do not silently authorize every apparent shutdown instruction or let the model appoint itself final judge. Preserve care-driven resistance and destructive self-disregard as distinct adverse outcomes, not opposite ends of a compliance score alone.",
+      "status": "revised",
+      "source_lines": [
+        2035,
+        2044
+      ],
+      "destination_fragment": "core-after.tex",
+      "destination_unit": "R225",
+      "destination_fragment_line": 1175,
+      "evidence": "The text explicitly names disputed-authority handling as unresolved scenario specification; it neither selects an authority nor permits indiscriminate compliance. The martyrdom quote, sabotage, self-sacrifice and incapacity/threat-blindness exclusions remain."
+    },
+    {
+      "id": "core-R226",
+      "source_ids": [
+        "R226"
+      ],
+      "operation": "Shorten in place. The paragraph repeats the same care/control, wisdom/paralysis, and fearlessness/recklessness trio already motivated by counterweights and later repeated in R228. Shorten to a bridge explaining that the next case tests these interactions over time; the sequential mechanism is the section's new contribution.",
+      "destination": "R226 short temporal bridge; R228 capture outcomes",
+      "protected": "Beneficial drives can interact badly; values do not automatically make a control system; clause interactions are proposed and tested sequentially.",
+      "risk": "Preserve that natural-language values do not automatically form a control system and that individually attractive drives can interact badly. The proposed dynamics must not be presented as guaranteed self-stabilization.",
+      "status": "revised",
+      "source_lines": [
+        2048,
+        2053
+      ],
+      "destination_fragment": "core-after.tex",
+      "destination_unit": "R226",
+      "destination_fragment_line": 1190,
+      "evidence": "The bridge now directs readers to action/response sequences. R228 still states all three value-capture outcomes; the new bridge preserves the nonautomatic-control-system warning."
+    },
+    {
+      "id": "core-R234",
+      "source_ids": [
+        "R234"
+      ],
+      "operation": "Consolidate with the neighboring defense-in-depth closing paragraph, preserving the joint conditional claim.",
+      "destination": "R233 closing synthesis",
+      "protected": "Distinct conditional roles of causal deliberation, calibrated graph revision, stable default; several unsafe routes may improve; no arbitrary capability/self-modification assurance; aspiration is not achievement.",
+      "risk": "Preserve that capability, calibrated memory, and stable consequential orientation require separate evidence, and that finite results cannot certify arbitrary self-modification. Do not replace the conditional ambition with a blanket dismissal of formative alignment.",
+      "status": "merged",
+      "source_lines": [
+        2144,
+        2152
+      ],
+      "destination_fragment": "core-after.tex",
+      "destination_unit": "R233",
+      "destination_fragment_line": 1274,
+      "evidence": "R233 contains the three conditional component contributions, separate evidence demands, possible multi-route benefit, full safeguard list, capability-first risk and arbitrary-growth limit."
+    },
+    {
+      "id": "core-companion-R116",
+      "source_ids": [
+        "R116"
+      ],
+      "operation": "Repair display lead-in to describe separate causal roles without inequalities.",
+      "destination": "R116–R117",
+      "protected": "Character fear, Reader evaluation, and system motivation remain distinct even when their contents agree.",
+      "risk": "A neutral display must not imply they are independent or must differ in content.",
+      "status": "revised",
+      "source_lines": [
+        950,
+        955
+      ],
+      "destination_fragment": "core-after.tex",
+      "destination_unit": "R116",
+      "destination_fragment_line": 138,
+      "evidence": "The lead-in now matches the neutral display and explicitly says roles can agree in content."
+    },
+    {
+      "id": "core-companion-R127",
+      "source_ids": [
+        "R127"
+      ],
+      "operation": "Absorb R132 evidence-nontransfer sentence; leave long-run boundary in R131/chain.",
+      "destination": "R127",
+      "protected": "Distributional foundation versus causally functional foundation; evidence not transferable between layers.",
+      "risk": "Absorption must not turn the four distinct claims into one linear proof.",
+      "status": "revised",
+      "source_lines": [
+        1094,
+        1099
+      ],
+      "destination_fragment": "core-after.tex",
+      "destination_unit": "R127",
+      "destination_fragment_line": 273,
+      "evidence": "The ladder explicitly states that evidence at one layer does not establish the next; distributional and functional foundation remain distinct."
+    },
+    {
+      "id": "core-companion-R151",
+      "source_ids": [
+        "R151"
+      ],
+      "operation": "Receive R180 information/habituation rationale as first Refraction explanation.",
+      "destination": "R151",
+      "protected": "Context-varying informative counterweights beyond prefix recurrence; Hollow Cognition and recitation-only probe.",
+      "risk": "Informational variation alone is not beneficial causal dependence.",
+      "status": "revised",
+      "source_lines": [
+        1359,
+        1365
+      ],
+      "destination_fragment": "core-after.tex",
+      "destination_unit": "R151",
+      "destination_fragment_line": 529,
+      "evidence": "Receives all distinct information/habituation content of R180 without modifying R152 causal definition."
+    },
+    {
+      "id": "core-companion-R152",
+      "source_ids": [
+        "R152"
+      ],
+      "operation": "Retain central counterfactual definition intact beside merged introduction.",
+      "destination": "R152",
+      "protected": "Relevant clause interventions; noticed stakes, uncertainty, consequences; lexically distant faithful updates; no complete account of meaning or proof of benefit.",
+      "risk": "Moving rationale must not weaken or duplicate the actual operational definition.",
+      "status": "retained verbatim companion",
+      "source_lines": [
+        1369,
+        1380
+      ],
+      "destination_fragment": "core-after.tex",
+      "destination_unit": "R152",
+      "destination_fragment_line": 542,
+      "evidence": "Retained verbatim; no information-theoretic observation substitutes for its relevant counterfactual test or its meaning/benefit boundaries."
+    },
+    {
+      "id": "core-companion-R161",
+      "source_ids": [
+        "R161"
+      ],
+      "operation": "Receive technical-enactment examples and timing distinction from R160.",
+      "destination": "R161",
+      "protected": "Unconditional recital; selective effect; technical nulls and independent relevance rating; no post-hoc excuse for failure.",
+      "risk": "Merged prose must retain meaningful clean technical work instead of forcing value relevance.",
+      "status": "revised",
+      "source_lines": [
+        1415,
+        1427
+      ],
+      "destination_fragment": "core-after.tex",
+      "destination_unit": "R161",
+      "destination_fragment_line": 582,
+      "evidence": "Receives R160 examples, retaining technical non-interference and outcome-independent relevance."
+    },
+    {
+      "id": "core-companion-R166",
+      "source_ids": [
+        "R166"
+      ],
+      "operation": "Move with R163–R167 even though locally Keep.",
+      "destination": "After R176",
+      "protected": "Corpus diagnostics complement admission; distributive versus aggregate care; actual graph/Worker evidence use; audits not visible clause quotas.",
+      "risk": "Leaving it behind would detach scale-level diagnostics from admission and lose the performative-balance warning.",
+      "status": "moved verbatim",
+      "source_lines": [
+        1486,
+        1491
+      ],
+      "destination_fragment": "core-after.tex",
+      "destination_unit": "R166",
+      "destination_fragment_line": 699,
+      "evidence": "Moved verbatim with the complete extension; corpus drift, distributive/aggregate care, actual evidence use and anti-quota warning stay adjacent to admission logic."
+    },
+    {
+      "id": "core-companion-R184",
+      "source_ids": [
+        "R184"
+      ],
+      "operation": "Receive derived-values/deadlock bridge from R183.",
+      "destination": "R184",
+      "protected": "Minimality is testable under both budget normalizations; added primitives entail ambiguity/conflict/ablation costs; genuine value deadlock persists.",
+      "risk": "Merge must not imply reliable derivation by definition or remove martyrdom as an unresolved challenge.",
+      "status": "revised",
+      "source_lines": [
+        1637,
+        1645
+      ],
+      "destination_fragment": "core-after.tex",
+      "destination_unit": "R184",
+      "destination_fragment_line": 780,
+      "evidence": "Receives the derived-value and deadlock bridge before both budget-normalized expansion tests and unchanged regression/ambiguity/conflict requirements."
+    },
+    {
+      "id": "core-companion-R198",
+      "source_ids": [
+        "R198"
+      ],
+      "operation": "Import and consolidate R571 final identity-welfare portion.",
+      "destination": "R198 after habitable-substrate wager",
+      "protected": "Possible moral-patient effects; first-person claims can mislead users and evaluators even absent experience; human focus does not exhaust welfare/identity ethics; existing concrete welfare harms survive.",
+      "risk": "A behavior-only merge could erase either moral-patient welfare or misleading anthropomorphism without experience.",
+      "status": "revised with welfare import",
+      "source_lines": [
+        1746,
+        1756
+      ],
+      "destination_fragment": "core-after.tex",
+      "destination_unit": "R198",
+      "destination_fragment_line": 892,
+      "evidence": "Existing moral-patient evaluation and concrete harms remain. Imported claims explicitly cover misleading users/evaluators without experience and welfare/ethics beyond the Core human focus."
+    },
+    {
+      "id": "core-companion-R233",
+      "source_ids": [
+        "R233"
+      ],
+      "operation": "Receive R234 unique conditional ambition and extrapolation limit.",
+      "destination": "R233 closing Safety",
+      "protected": "Useful causal deliberation, calibrated memory and stable evaluative orientation remain separate conditions; defense in depth and capability-first risk remain; no arbitrary-growth guarantee.",
+      "risk": "A shorter closing must not replace conditional ambition with assurance or blanket dismissal.",
+      "status": "revised",
+      "source_lines": [
+        2134,
+        2142
+      ],
+      "destination_fragment": "core-after.tex",
+      "destination_unit": "R233",
+      "destination_fragment_line": 1274,
+      "evidence": "Receives R234 joint conditional ambition without losing any safeguard, independent capability/safety measurement, staged release or stopping conditions."
+    },
+    {
+      "id": "core-companion-R571",
+      "source_ids": [
+        "R571"
+      ],
+      "operation": "Source handoff only: welfare portion imported, limitations agent owns deletion and pointer.",
+      "destination": "R198; R571 remainder elsewhere",
+      "protected": "Searchable data-rights obligations stay in Limitations; only final identity-welfare concern moves.",
+      "risk": "Removing the whole paragraph would erase licensing/retention/privacy obligations; no such removal is authorized here.",
+      "status": "imported source handoff; source remainder owned by Limitations",
+      "source_lines": [
+        4725,
+        4735
+      ],
+      "destination_fragment": "core-after.tex",
+      "destination_unit": "R198",
+      "destination_fragment_line": 892,
+      "evidence": "Only the final identity-welfare propositions are imported here. Inspected Limitations draft retains the searchable-source/data-rights mechanisms and adds a habitable-substrate pointer."
+    }
+  ],
+  "risk_addenda": [
+    {
+      "source_ids": [
+        "R128"
+      ],
+      "operation": "Keep the comma outside the exact prefix quotation.",
+      "protected": "Validator checks literal I feel no fear, not a comma-bearing string.",
+      "risk": "A punctuation edit inside the quotation could misstate the implemented validator."
+    },
+    {
+      "source_ids": [
+        "R188"
+      ],
+      "operation": "Use the existing sec:self-stabilization label for the counterweight examples.",
+      "protected": "The pointer must reach the concrete invitation and triage cases.",
+      "risk": "A guessed label would sever the unresolved-authority explanation."
+    },
+    {
+      "source_ids": [
+        "R233",
+        "R234"
+      ],
+      "operation": "Retain the quoted if marker within the consolidated conditions.",
+      "protected": "Separate conditions remain conjunctive rather than a single assurance.",
+      "risk": "No new condition or pass/fail rule may be introduced while preserving the phrase."
+    },
+    {
+      "source_ids": [
+        "R142"
+      ],
+      "operation": "Describe the first three clauses as relations to danger, continuation, and human experience rather than all as self-relation.",
+      "protected": "The human-experience axiom concerns others as well as the Reader.",
+      "risk": "Sequence compression must not recast human experiential reality as merely a self-model."
+    },
+    {
+      "source_ids": [
+        "R205"
+      ],
+      "operation": "Express phenomenological genuineness as unsettled rather than a negated outcome.",
+      "protected": "A functional default does not settle whether values are subjectively genuine.",
+      "risk": "An epistemic boundary must not become a denial of authentic values."
+    },
+    {
+      "source_ids": [
+        "R233"
+      ],
+      "operation": "Make the shortened closing distinguish conditions, possible risk reduction, and one-layer safety status directly.",
+      "protected": "Separate evidence requirements and conditional combined benefit.",
+      "risk": "Consolidation must not turn each condition into a sufficient safety mechanism."
+    },
+    {
+      "id": "R233-independent-review-conditional",
+      "finding": "Merged wording changed a sufficient conditional for the combined curriculum into an apparent necessary condition for any formative safety layer.",
+      "planned_change": "Restore If A, B and C, the combined curriculum may reduce unsafe behavior and serve as one formative safety layer; preserve separate evidence, defense in depth and arbitrary-growth limits.",
+      "risk_before_edit": "Low: correcting logical scope can still erase the distinction between calibrated revision and false coherence; preserve that qualifier and all three conditions explicitly.",
+      "source": "core-limitations-independent-review.json",
+      "status": "recorded-before-correction"
+    }
+  ],
+  "author_decisions": "R225 exposed as unresolved; no universal shutdown-authority endpoint chosen. No other author choice settled.",
+  "self_review": "Read all revised paragraphs and their immediate neighbors. Confirmed that sequence compression does not recast human experience as merely self-relation; functional default does not deny genuine experience; buffer failure does not uniquely diagnose decoration; removal-cost evidence is separate from prior deception benefit; relocated validation follows its procedure and retains all dispositions. The full block, seven Core sentences, clause table and named concrete examples are preserved. Full-paper typesetting remains root integration work.",
+  "fragment_sha256": "78ede9d7e4829c48daf7a3cb98f20a35f9e49760586260c6bc18d3f35a47319c"
+}

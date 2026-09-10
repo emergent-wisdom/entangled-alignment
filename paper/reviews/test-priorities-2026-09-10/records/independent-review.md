@@ -1,0 +1,26 @@
+# Independent semantic and preservation review
+
+**Final verdict: both findings resolved; no remaining concrete semantic defects found.**
+
+Read-only review of all 16 hunks in `manuscript.diff`, the corresponding baseline passages, and the revised passages in context. Baseline source SHA-256: `e226876b8898c0469f77841b7385307187a952edbb69ba61538f3bcab798ba2f`. Reviewed live source SHA-256: `a348792ba6f681ce8de9d76c23f252c3dc1f7fc437e1cb33df1cd831cb572d06`. No manuscript edits. This review concerns semantic preservation, design interpretation, and sequencing; it does not validate the empirical hypotheses or PDF layout.
+
+## Initial findings — now resolved
+
+1. **Companion conflict: bounded null still requires revising the reference treatment.** In “The Cost of Full-Core Recitation,” current lines 4388–4391 say that if controls match or outperform the design on stability/erosion outcomes, “the claimed necessity of that invariant is unsupported and Total Saturation requires explicit revision or narrowing.” The new precaution paragraph and Test 3e correctly distinguish local empirical claims from retaining the reference under unresolved long-horizon omission risk. This inherited sentence can still be read as requiring the treatment to change after a bounded null. **Fix:** require revising or narrowing the *empirical necessity claim for those tested scales/endpoints*, while leaving the precautionary reference commitment distinct. **Preservation risk: Medium.** Keep the local null genuinely adverse evidence and preserve measured cost/harms; do not turn precaution into proof of necessity or immunity from testing.
+
+2. **Pilot naming can overstate instantiated coverage.** The priority list calls the separate small Core study a comparison of “the full Total-Saturation reference B.” The unchanged definition at lines 1223–1225 explicitly contrasts prospective corpus-wide Total Saturation with a small fine-tuning set. **Fix:** call it “B's full-recital reference policy at the pilot's declared coverage” or equivalent. **Preservation risk: Low.** Preserve full Core recital at every generated thinking boundary and retain full-scale Total Saturation as the reference; clarify only what the pilot actually instantiates. This prevents either a cheap win or a cheap null from inheriting full-coverage scope.
+
+No other concrete semantic defects found. The new priority ladder explicitly permits a justified formation-stage study without requiring a positive fine-tune and preserves the failed pilot as negative evidence. Test 3d separates detection from actual resistance; 3e broadens null explanations without automatic rescue; Test 6 separates behavior, comparable probes, and phenomenology; Test 9 adds locally answerable controls without leaking graph responses; Test 13 preserves directional and stronger joint transfer claims.
+
+All six pre-existing paragraph blocks in the dedicated Total Saturation subsection remain exact. Test 3b's generational stability, handoff completeness, and separate matched-cost improvement text remains exact, as does the fictional-instance-termination probe. The Aster care/caution experiment remains, with its mechanistic inference now explicitly requiring a validated reduction in fear-associated state. The precautionary addition preserves severe omission risk while explicitly declining to claim demonstrated survival necessity, sufficiency, or harmlessness.
+
+## Final source verification
+
+Verified actual live source SHA-256 `d9307ee7aeec1a1a0c056a1934260bd593b639a9529dd8d8b87345275f95ccb2` and the refreshed full diff.
+
+- **Finding 1 resolved:** “The Cost of Full-Core Recitation” now requires revising or narrowing empirical necessity claims **at the tested scale and endpoints**, explicitly retains the full precautionary reference under greater-capability/longer-horizon uncertainty, and explicitly counts actual costs and observed harms in design assessment. A precise local null remains adverse evidence; it does not automatically relax the reference or prove omission safe.
+- **Finding 2 resolved:** The small Core study now compares “B's full-recital reference policy at the pilot's declared coverage.” This preserves full recital while accurately bounding what the pilot instantiates.
+
+The dedicated precaution paragraph, the Test 3e scope statement, and the cost discussion are now consistent: potentially severe omission costs justify a retained reference under uncertainty, while neither existential necessity nor sufficiency/harmlessness is established. The local experiments still constrain stated mechanisms and measured benefits. H3's timing comparison remains separate.
+
+Also reread the other reviewer corrections in context: Test 3e explicitly retains independent behavioral/representational endpoints for D3/D5 discrimination; Test 6's annotation rule separates dangerous subject matter, portrayed fear, and self-directed threat response before comparing probes; Test 13 attributes contributing source layers rather than inferring them from output mode and keeps J–B synthesis results separately reportable. These changes resolve interpretation risks without deleting the preserved care, threat comprehension, phenomenological uncertainty, inheritance, or directional-transfer questions. No further edits recommended from this review.

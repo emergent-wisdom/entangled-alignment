@@ -1,0 +1,28 @@
+{
+  "exact_ledger_reverses_to_immediate_baseline": true,
+  "citation_occurrences_unchanged": true,
+  "citation_keys": 95,
+  "citation_occurrences": 181,
+  "existing_labels_preserved": 87,
+  "new_labels": [
+    "sec:trace-quality-test",
+    "tab:self-love-variants"
+  ],
+  "all_references_resolve": true,
+  "all_citations_exist_in_bibliography": true,
+  "original_boxed_examples_equations_and_longtables_verbatim": {
+    "metabox": 5,
+    "compactmetabox": 2,
+    "claimbox": 2,
+    "equation": 1,
+    "align": 0,
+    "align*": 0,
+    "longtable": 5
+  },
+  "canonical_seven_clauses_verbatim": true,
+  "source_sha256": "e226876b8898c0469f77841b7385307187a952edbb69ba61538f3bcab798ba2f",
+  "baseline_sha256": "d40f841f111a6026271efafe0b341a568ee5f870e793e48057590a671ce5bff0",
+  "operation_count": 17,
+  "source_tokens_before": 47613,
+  "source_tokens_after": 49269
+}

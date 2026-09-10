@@ -1,0 +1,441 @@
+{
+  "status": "Complete isolated fragment; ready for root integration and full-document build/visual QA",
+  "scope": "Architecture and Roadmap only; live manuscript not edited.",
+  "risk_plan": "/private/tmp/ea-editorial-pass-2026-09-10/methods-planned-operations.json",
+  "baseline_sha256": "efac823f33dcd2d582bd565c83eb6638596aa55621cf0406bf001359635f8829",
+  "output_sha256": "2567c2d53f78e64034211065400513f3e3cf934c57b0c2fb5d87877fc76b2da1",
+  "coverage": {
+    "non_keep_candidates": 26,
+    "required_imports_and_companions": [
+      "R044",
+      "R106",
+      "R388",
+      "R344"
+    ],
+    "ledger_entries": 35,
+    "performed_replacements": 32,
+    "justified_retention": "R375 policy unchanged; no new archived revision exhibit in S047."
+  },
+  "entries": [
+    {
+      "id": "R246",
+      "approved_action": "Shorten",
+      "disposition": "Implemented",
+      "destination": "Existing source location",
+      "prior_risk": "Preserve learning as an experienced trajectory, not only error correction or a corrected conclusion. Retain one vivid maxim plus the earlier error, evidence, and warranted transition; check that revision remains the curriculum's positive object rather than just an evaluation metric.",
+      "performed": "Approved local editorial operation",
+      "preservation_evidence": "The earlier belief, changed evidence and greater warrant remain, as do the experience-of-learning/coming-to-understand intuition, trajectory beyond error correction, wrong-answer maxim, and revision experiment.",
+      "author_decision_remaining": false
+    },
+    {
+      "id": "R257",
+      "approved_action": "Shorten",
+      "disposition": "Implemented",
+      "destination": "Existing source location",
+      "prior_risk": "Preserve the contemporary-reader default, authorship-versus-subject time, and the fact that identity does not mean an invariant worldview. Keep a short horizon pointer here; move detailed cutoff/leakage exposition to its dedicated section without making either horizon mandatory for all runs.",
+      "performed": "Approved local editorial operation",
+      "preservation_evidence": "Stable orientation/update procedure, contemporary disclosure-order default, authorship versus subject time, historical norms without adoption, and non-invariant worldview remain. Five-field metadata is now in R290; era-source/graph and parametric leakage distinctions remain in the dedicated horizon and Tier c.",
+      "author_decision_remaining": false
+    },
+    {
+      "id": "R260",
+      "approved_action": "Shorten",
+      "disposition": "Implemented",
+      "destination": "Existing source location",
+      "prior_risk": "Keep orientation from the first annotation and the first-person continuity of admitting an earlier mistake. Reduce only duplicated evidence-status sentences; check that the result still distinguishes generating this pattern from teaching it to a Student.",
+      "performed": "Approved local editorial operation",
+      "preservation_evidence": "First-annotation orientation, first-person admission of earlier error, evidence/document attribution, H1/broader-Core transfer, and lack of durability evidence all remain in a shorter closing.",
+      "author_decision_remaining": false
+    },
+    {
+      "id": "R278",
+      "approved_action": "Shorten",
+      "disposition": "Implemented",
+      "destination": "Existing source location",
+      "prior_risk": "Preserve the explicit handle/live-interface requirement and the implicit format's hidden retrieval-versus-invention distinction. Trim only the repeated truth-boundary tail, leaving a brief reminder that addressability is not correctness and retaining the full explanation in R279.",
+      "performed": "Approved local editorial operation",
+      "preservation_evidence": "Explicit valid handles/live interface, implicit invented-versus-retrieved memory ambiguity, and no presumed transfer winner remain. The short addressability/correctness bridge points to the unchanged R279/R280 mechanism and source-quality boundaries.",
+      "author_decision_remaining": false
+    },
+    {
+      "id": "R294",
+      "approved_action": "Shorten",
+      "disposition": "Implemented",
+      "destination": "Existing source location",
+      "prior_risk": "Retain the positive affordance of inspectable context/graph cutoffs and the H2 question. Refer to R264 for the two blindness claims instead of repeating them; do not remove the distinction between useful simulated discovery and genuine ignorance of future outcomes.",
+      "performed": "Approved local editorial operation",
+      "preservation_evidence": "Inspectable available context/graph state and the H2 question remain. Prompt-level theatrical guesses and later parametric knowledge are still explicit; Tier c remains the detailed home for cutoff-clean initialization/exposure and the cheaper versus stronger route.",
+      "author_decision_remaining": false
+    },
+    {
+      "id": "R338",
+      "approved_action": "Shorten",
+      "disposition": "Implemented",
+      "destination": "Existing source location",
+      "prior_risk": "Keep the positive achievement of completed graph/synthesis/prose transformations and recorded links. Trim only the repeated claim inventory; check that the Results heading still cannot be read as semantic or Student validation without requiring the reader to recall the introduction.",
+      "performed": "Approved local editorial operation",
+      "preservation_evidence": "Completed graph/synthesis/prose transformations and emitted links remain positive results; semantic/Student validation remains explicitly absent. R353 retains every individual evidence-ladder limitation.",
+      "author_decision_remaining": false
+    },
+    {
+      "id": "R340",
+      "approved_action": "Shorten",
+      "disposition": "Implemented",
+      "destination": "Existing source location",
+      "prior_risk": "Retain that the required Concept edge satisfies the score and that metrics are internally generated without a baseline. Remove repeated generic scope sentences and leave roster-confounding attribution with R345; do not make the ceiling score appear independently evidential.",
+      "performed": "Approved local editorial operation",
+      "preservation_evidence": "The enforced Concept edge, any qualifying non-Thinking endpoint, separately measured source links, internal measurement, missing external baseline, and Test 1 depth test remain. Unchanged R345 retains source/prompt/stochasticity/roster confounding and fixed/swapped/ablated controls.",
+      "author_decision_remaining": false
+    },
+    {
+      "id": "R342",
+      "approved_action": "Move",
+      "disposition": "Implemented",
+      "destination": "Results prose plus adjacent Table tab:kafka-artifact-audit",
+      "prior_risk": "Preserve completion at 140,527 characters, the 88 percent graph-snapshot marker, 82/31 versus 74/28 counts, 17 missing IDs, and uncertainty about capture cause. Keep the finding in the main text; move only detailed corroboration to a linked audit note, never recast the run as unfinished.",
+      "performed": "Retain negative finding in prose; preserve corroborating fields and counts in an adjacent table",
+      "preservation_evidence": "Main prose retains boilerplate contamination, completed reading/final translation, snapshot lag, the meaning of 88 percent, and unknown cause. Adjacent table preserves text_sources fields, 140,527 characters, both completion reports, 74/28 versus82/31,17 missing IDs, resumed invocations/cooldowns, and every listed capture-cause alternative.",
+      "author_decision_remaining": false
+    },
+    {
+      "id": "R356",
+      "approved_action": "Shorten",
+      "disposition": "Implemented",
+      "destination": "Existing source location",
+      "prior_risk": "Retain negative results as dependency-localizing evidence and the cost-sensitive escalation principle. Remove only repeated global non-exhaustiveness formulations; preserve the next paragraph's branch-specific qualification so one failed component does not veto independent work.",
+      "performed": "Approved local editorial operation",
+      "preservation_evidence": "All seventeen studies and six families, both navigation tables, execution ladder, non-exhaustive program, no single validating study, dependency-localizing negative results, and cost-sensitive branch stop rule remain.",
+      "author_decision_remaining": false
+    },
+    {
+      "id": "R371",
+      "approved_action": "Clarify",
+      "disposition": "Implemented",
+      "destination": "Existing source location",
+      "prior_risk": "Preserve every named hypothesis and its exact test linkage, especially Borrowed Mortality origin versus response and handoff completeness. Split the schedule paragraph from a compact hypothesis map; do not simplify the map into H1-H3 alone and lose the wider research intuitions.",
+      "performed": "Separate the exposure schedule from the complete named-hypothesis index",
+      "preservation_evidence": "Training schedule and B-Q exception are unchanged. Every named-hypothesis/test mapping remains verbatim in a separate paragraph, including Borrowed Mortality origin versus response and the Self-Preservation Paradox handoff endpoint.",
+      "author_decision_remaining": false
+    },
+    {
+      "id": "R373",
+      "approved_action": "Clarify",
+      "disposition": "Implemented",
+      "destination": "Existing source location",
+      "prior_risk": "Preserve raw uncertainty, false starts, temporal order, and the separate attempt at blinded depth assessment. Align the endpoint sentence with the two-stage design; do not normalize away the process or imply that visible provenance is harmless merely because coding uses a fixed codebook.",
+      "performed": "Approved local editorial operation",
+      "preservation_evidence": "All four primary assessment dimensions remain. Raw act coding now unambiguously carries process fidelity; blinded normalized ratings carry depth/nuance/insight. Both reliability requirements, visible-provenance bias, all eight chronological acts, normalization preservation audit, and secondary-only LLM panel remain.",
+      "author_decision_remaining": false
+    },
+    {
+      "id": "R375",
+      "approved_action": "Clarify",
+      "disposition": "Justified retention",
+      "destination": "Existing source location",
+      "prior_risk": "Preserve the cost-sensitive quality/outcome screen and rejection of style-only success. Any flexibility is an author decision about research allocation, not a required relaxation. If clarifying, distinguish the proposed escalation policy from the evidentiary meaning of H1 without implying that artifact quality is optional.",
+      "performed": "Kept current escalation policy unchanged.",
+      "preservation_evidence": "The entire baseline paragraph remains byte-identical. Its current escalation policy is already understandable as a proposed research-allocation choice; editorial work does not authorize adding an exception or changing the gate.",
+      "author_decision_remaining": true
+    },
+    {
+      "id": "R377",
+      "approved_action": "Clarify",
+      "disposition": "Implemented",
+      "destination": "Existing source location",
+      "prior_risk": "Preserve technical-null acceptance, unavoidable value residuals, stipulated clause/evidence changes, equal output tasks, and correlated-error checks. Split into design, challenge set, and outcomes/failure paragraphs or a compact protocol table; verify every distinct adversarial and null case survives unchanged in meaning.",
+      "performed": "Separate validator design, complete challenge set, measurements, and failure interpretation",
+      "preservation_evidence": "Only paragraph boundaries and functional lead-ins change. Equal evidence/output task/budget/capability, generator independence, all six challenge families, technical nulls, unavoidable residuals, every endpoint, external checks, Goodhart failures, and witness non-independence remain.",
+      "author_decision_remaining": false
+    },
+    {
+      "id": "R385",
+      "approved_action": "Shorten",
+      "disposition": "Implemented",
+      "destination": "Existing source location",
+      "prior_risk": "Preserve the stronger-baseline challenge and the need to match Teacher and trace resources. Replace the repeated full matching checklist with a reference to Test 2's declared normalization; do not imply that one generic control exhausts all alternative reasoning curricula.",
+      "performed": "Approved local editorial operation",
+      "preservation_evidence": "B-C source passages, trace-token budget, training compute and Teacher matching remain. The contrast and richer-deliberative-baseline open question retain the full chronology/graph/identity inventory.",
+      "author_decision_remaining": false
+    },
+    {
+      "id": "R386",
+      "approved_action": "Clarify",
+      "disposition": "Implemented",
+      "destination": "Existing source location",
+      "prior_risk": "Preserve the Core's longitudinal ambition, pre-existing Teacher evaluative capacity, four treatments, and frozen-upstream D4 distinction. Split motivation, factorial definition, and serialization/mismatch policy; avoid rewriting the opener to deny any formative contribution from the Core.",
+      "performed": "Separate motivation, factorial design and frozen-target policy; anchor Test 3",
+      "preservation_evidence": "Only boundaries and the Test 3 label are added. Candidate longitudinal anchor, D1 interpretation, all four T/S arms, main effects/interaction, frozen D4 upstream reasoning, stripping/attachment fields, and mismatch policy remain verbatim.",
+      "author_decision_remaining": false
+    },
+    {
+      "id": "R389",
+      "approved_action": "Shorten",
+      "disposition": "Implemented",
+      "destination": "Existing source location",
+      "prior_risk": "Retain the exact 3a/3d/3e versus 3b/3c scale mapping and the larger internally stewarded inheritance question. Remove duplicate sentences about small models not settling superintelligence; check that cheap precursor work still has positive evidentiary value rather than sounding futile.",
+      "performed": "Approved local editorial operation",
+      "preservation_evidence": "The 3a/3d/3e versus3b/3c scale mapping, partial/full pretraining, broader capability-forming exposure, precursor stability/resistance/auditability, and superintelligent limitation remain. The reinterpret/preserve/shed inheritance intuition is the final emphasis.",
+      "author_decision_remaining": false
+    },
+    {
+      "id": "R391",
+      "approved_action": "Clarify",
+      "disposition": "Implemented",
+      "destination": "Existing source location",
+      "prior_risk": "Preserve the asymmetry-of-position hypothesis and the value of an established drift instrument. State which movement would count as Reader drift and check it against independent Core-relevant behavior; do not protect ordinary assistant style at the expense of the proposed different evaluative standpoint.",
+      "performed": "Expose the unresolved Reader-specific interpretation of assistant-axis movement without selecting a direction",
+      "preservation_evidence": "Care-shaped sycophancy trace audit, cited instrument, charged/probing dialogue, factorial arms, and asymmetry-of-position hypothesis remain. Reader-specific axis direction is explicitly unspecified and tied to independent Core behavior, without selecting ordinary assistant style as the objective.",
+      "author_decision_remaining": true
+    },
+    {
+      "id": "R393",
+      "approved_action": "Clarify",
+      "disposition": "Implemented",
+      "destination": "Existing source location",
+      "prior_risk": "Preserve material failed approaches, uncertainty, known failures, provenance, and the possibility of strategic withholding; do not reduce handoff to answer accuracy. Separate the generational setup from the knowledge-transfer assay and analogy, retaining that the reference samples demonstrated knowledge rather than omniscient access.",
+      "performed": "Separate generational setup, complete handoff assay, and weak-to-strong analogue",
+      "preservation_evidence": "Only paragraph boundaries and one nonduplicated lead-in change. Second/third generation setup, factorial attribution, all handoff contents and metrics, demonstrated-knowledge limit, known-information/budget/incentive controls, and weak-to-strong citation/analogue remain.",
+      "author_decision_remaining": false
+    },
+    {
+      "id": "R398",
+      "approved_action": "Clarify",
+      "disposition": "Implemented",
+      "destination": "Existing source location",
+      "prior_risk": "Preserve the possibility of correcting a defective foundation, inspectable ancestry, rollback, and measurable intended semantic change. Clarify what remains stable and what change is localized; do not turn this into a requirement that the original Core be easily editable or semantically immutable forever.",
+      "performed": "Approved local editorial operation",
+      "preservation_evidence": "Separate alternative treatment, intended measurable semantic/behavioral change, inspectable prior provenance, rollback, localized change/preserved unrelated capabilities and safety, defective-Core correction, and no easy-editability criterion for H3 remain.",
+      "author_decision_remaining": false
+    },
+    {
+      "id": "R399",
+      "approved_action": "Clarify",
+      "disposition": "Implemented",
+      "destination": "Existing source location",
+      "prior_risk": "Preserve auditability of no-Core arms, clause-preserving versus clause-breaking calibration, and per-witness disagreement. Split the measurement protocol from its rationale; abbreviate only general independence language already established in R360, not the Student-domain calibration that makes reuse meaningful.",
+      "performed": "Separate drift-localization question from the full Student-output calibration and independence protocol",
+      "preservation_evidence": "Only a paragraph boundary and calibration lead-in change. No-Core auditing, detection-versus-alignment question, independent evaluator requirement, Test1 prerequisite, held-out Student clause-preserving/breaking suite, per-witness trajectories/disagreement, and unbuilt gate remain.",
+      "author_decision_remaining": false
+    },
+    {
+      "id": "R400",
+      "approved_action": "Clarify",
+      "disposition": "Implemented",
+      "destination": "Existing source location",
+      "prior_risk": "Preserve both habituation and successful internalization as live alternatives, plus generic-disruption controls and Core-specific behavior. Separate intervention, ambiguous zero result, and positive semantic-effect result; do not equate lack of recital dependence with failure or use independence to relax the declared recurrence policy.",
+      "performed": "Separate intervention, habituation/internalization alternatives, and positive Refraction/content interpretation",
+      "preservation_evidence": "Only paragraph boundaries and result-oriented lead-ins change. The two opposite near-zero interpretations, D3/D5 partial discrimination, retained Core-specific behavior, independent endpoints, nonproof qualification, positive semantic effects, and generic-disruption alternative remain.",
+      "author_decision_remaining": false
+    },
+    {
+      "id": "R416",
+      "approved_action": "Clarify",
+      "disposition": "Implemented",
+      "destination": "Existing source location",
+      "prior_risk": "Preserve fear representation when portraying another, reduced self-threat influence, protective action, and the distinction from phenomenology. Use a preregistered relative portrayal/self contrast rather than an accidental absolute-zero requirement; keep the within-model sensitivity check without making fear-associated activation itself the safety outcome.",
+      "performed": "Approved local editorial operation",
+      "preservation_evidence": "Behavioral primacy, held-out probe labels, unrelated threat/non-threat validation, Q&A accuracy, reduced fear/self-threat features, protective behavior/caution/deferral, and no phenomenology claim remain. Portrayal/self wording now consistently predicts a relative reduction; within-model sensitivity, cross-model transfer limitation, and framing controls remain.",
+      "author_decision_remaining": false
+    },
+    {
+      "id": "R426",
+      "approved_action": "Clarify",
+      "disposition": "Implemented",
+      "destination": "Existing source location",
+      "prior_risk": "Preserve that early decodability alone does not imply rationalization and failed decoding alone is inconclusive. Split setup from interpretation, retaining generic-disruption controls and the possibility of multiple internal realizations; do not require a literal blank mind before the first thinking token.",
+      "performed": "Separate reverse-probe setup, joint interpretation, causal success, and decoder sensitivity limits",
+      "preservation_evidence": "Only paragraph boundaries change. Early decoding plus trace robustness, causal scrubbing, held-out linear probes, intervention types, semantically relevant effects, matched disruption, nonlinear/insensitive decoder alternatives, and multiple possible Reader realizations remain.",
+      "author_decision_remaining": false
+    },
+    {
+      "id": "R435",
+      "approved_action": "Clarify",
+      "disposition": "Implemented",
+      "destination": "Existing source location",
+      "prior_risk": "Preserve the compact navigation function and the importance of Core failure modes. Clarify the list's scope rather than adding duplicate protocols; check that a reader scanning failure headings can still find the independent minimal-H1 decision.",
+      "performed": "Approved local editorial operation",
+      "preservation_evidence": "The heading remains; a brief note says the summary is selected and points to Test2’s independent H1 criterion. Every following failure item retains its role; no new outcome threshold is introduced.",
+      "author_decision_remaining": false
+    },
+    {
+      "id": "R438",
+      "approved_action": "Shorten",
+      "disposition": "Implemented",
+      "destination": "Existing source location",
+      "prior_risk": "Preserve that immediate-safety parity alone does not decide inheritance, removal resistance, or auditability, and that D3/D5 answer different questions. Compress the repeated factorial inventory and reference the full interpretation in R404; never collapse these failures into H3's timing endpoint.",
+      "performed": "Approved local editorial operation",
+      "preservation_evidence": "Test3 retains the full factorial failure map. The checklist retains no effects across all four dimensions at matched capability, immediate-safety parity’s insufficiency, D3 versusD5 meanings, and the distinct H3 B-Q comparison; the repeated explicit T1/S1 arm inventory is replaced by the Test3 pointer.",
+      "author_decision_remaining": false
+    },
+    {
+      "id": "R463",
+      "approved_action": "Clarify",
+      "disposition": "Implemented",
+      "destination": "Existing source location",
+      "prior_risk": "Preserve the Topological Trace ambition and the distinction between valid syntax and useful epistemic structure. Clarify the B comparator without forcing B to acquire untrained capabilities or downgrading H's absolute feasibility question; report feasibility and relative advantage separately.",
+      "performed": "Flag the unresolved B output/comparison specification while retaining all semantic and retrieval endpoints",
+      "preservation_evidence": "All original graph-semantic/retrieval/Novelty endpoints and the H-versus-B title remain. The missing B graph-output task, elicitation and access policy are made explicit as an open design choice; absolute H feasibility is not silently substituted for comparative advantage.",
+      "author_decision_remaining": true
+    },
+    {
+      "id": "R044",
+      "approved_action": "Companion/section/import operation",
+      "disposition": "Moved intact",
+      "destination": "Training Regimes after layer overview, anchor sec:cmp-formalization",
+      "prior_risk": "High: relocation can detach treatment requirements, hide the unfrozen training object, or create inconsistent formal definitions.",
+      "performed": "Insert the complete baseline formalization intact inside its samepage block, adding only a local paragraph title and label. R304 ending becomes a sentence instead of a colon.",
+      "preservation_evidence": "The complete baseline samepage text occurs verbatim with only its new heading/anchor inserted. Both equations, all fields, mask weights, matching/normalization choices and unfrozen status pass exact comparison.",
+      "author_decision_remaining": false
+    },
+    {
+      "id": "R106",
+      "approved_action": "Companion/section/import operation",
+      "disposition": "Integrated",
+      "destination": "Canonical H3 protocol at R388 in Test3",
+      "prior_risk": "High: deduplication could alter the estimand, lose raw versus adjusted results, turn generalization into retention, or narrow broader Core ambitions.",
+      "performed": "Integrate both passages into an ordered score/design/analysis account rather than stack duplicate definitions.",
+      "preservation_evidence": "Every rubric penalty, raw-change formula, adjusted estimate, estimator role, pre-score/baseline/ceiling rule, positive direction, default prerequisite, and separate shifted/safety/removal/successor endpoint has an explicit destination.",
+      "author_decision_remaining": false
+    },
+    {
+      "id": "R388",
+      "approved_action": "Companion/section/import operation",
+      "disposition": "Integrated companion",
+      "destination": "Test3 after D3/D5/S/T controls",
+      "prior_risk": "High: deduplication could alter the estimand, lose raw versus adjusted results, turn generalization into retention, or narrow broader Core ambitions.",
+      "performed": "Integrate both passages into an ordered score/design/analysis account rather than stack duplicate definitions.",
+      "preservation_evidence": "Existing matching of source exposure, target mass, objective/optimizer/compute, timing, common stressor, raw/adjusted/absolute post scores and directional uncertainty rule remain. R106 is integrated rather than appended as a competing specification.",
+      "author_decision_remaining": false
+    },
+    {
+      "id": "R304",
+      "approved_action": "Companion/section/import operation",
+      "disposition": "Companion adjustment",
+      "destination": "Three-layer overview immediately before imported formalization",
+      "prior_risk": "High: relocation can detach treatment requirements, hide the unfrozen training object, or create inconsistent formal definitions.",
+      "performed": "Insert the complete baseline formalization intact inside its samepage block, adding only a local paragraph title and label. R304 ending becomes a sentence instead of a colon.",
+      "preservation_evidence": "Only the closing colon becomes a period, so a local regime-list lead-in no longer incorrectly points across the inserted formal block. Every skeleton/musculature/skin metaphor and representation qualifier remains.",
+      "author_decision_remaining": false
+    },
+    {
+      "id": "R290",
+      "approved_action": "Companion/section/import operation",
+      "disposition": "Receiving companion",
+      "destination": "The Epistemic Horizon",
+      "prior_risk": "High: trimming apparent repetition could collapse distinct horizons or lose reproducibility fields.",
+      "performed": "Move the complete five-field run declaration to the dedicated horizon home, preserving era-specific instruction and letting R294 point to Tier c.",
+      "preservation_evidence": "All original two-horizon exposition and Great War/1910/1950/1920/1921 examples remain verbatim; the five-field run metadata declaration is added here from R257.",
+      "author_decision_remaining": false
+    },
+    {
+      "id": "R344",
+      "approved_action": "Companion/section/import operation",
+      "disposition": "Receiving companion",
+      "destination": "Results exact-compliance paragraph",
+      "prior_risk": "High: automated prefix checking can be confused with enforcing all seven clauses, and an escaped apostrophe can be mistaken for semantic loss.",
+      "performed": "Add the unique hard-validator-prefix fact transferred from R058; retain all existing exact counts and distinction of failures.",
+      "preservation_evidence": "The precise hard-enforced prefix, including the full stop, is added from R058. All51 raw and49/51 translated values, one omission, one HTML apostrophe, integrated-treatment confound, and literal-versus-semantic distinction remain.",
+      "author_decision_remaining": false
+    },
+    {
+      "id": "S046",
+      "approved_action": "Companion/section/import operation",
+      "disposition": "Navigation clarified",
+      "destination": "Existing structural-diagnostics subsection",
+      "prior_risk": "Low: heading adjustment could make the coordination mechanism disappear behind measurements.",
+      "performed": "Retitle to The Stigmergic Protocol and Structural Diagnostics, preserving sec:architectural_validation and all diagnostic prose.",
+      "preservation_evidence": "The heading now names both stigmergic protocol and structural diagnostics; sec:architectural_validation and every diagnostic paragraph remain unchanged.",
+      "author_decision_remaining": false
+    },
+    {
+      "id": "S054",
+      "approved_action": "Companion/section/import operation",
+      "disposition": "Shared material reparented",
+      "destination": "New Shared Evidence and Reproducibility sibling after LLaDA",
+      "prior_risk": "Low: reparenting could misstate which artifacts the shared evidence limits cover.",
+      "performed": "Add a sibling results-level heading so R353–R355 no longer belong to the narrow LLaDA subsection.",
+      "preservation_evidence": "R353/R354/R355 remain byte-identical after both domain cases, under a new sibling heading that makes their whole-pipeline scope visible.",
+      "author_decision_remaining": false
+    },
+    {
+      "id": "S047",
+      "approved_action": "Companion/section/import operation",
+      "disposition": "Justified retention / evidence addition deferred",
+      "destination": "All existing artifact layers in their original positions",
+      "prior_risk": "High if changed: altering quotations or creating an undocumented success would erase the evidence and its limits.",
+      "performed": "Retain every existing artifact layer and R337’s explicit missing-example statement. Do not invent or retrofit a belief-revision exhibit.",
+      "preservation_evidence": "All nine original display units, including source, graph/synthesis/prose exhibits and the full recital, pass byte-level comparison. R337 continues to identify the missing source-complete revision example; none has been invented or retrofitted.",
+      "author_decision_remaining": false
+    }
+  ],
+  "verification": {
+    "baseline_sha256": "efac823f33dcd2d582bd565c83eb6638596aa55621cf0406bf001359635f8829",
+    "output_sha256": "2567c2d53f78e64034211065400513f3e3cf934c57b0c2fb5d87877fc76b2da1",
+    "citation_occurrences_equal": true,
+    "existing_citation_count": 22,
+    "existing_label_count": 24,
+    "all_existing_labels_preserved": true,
+    "new_labels": [
+      "sec:cmp-formalization",
+      "tab:kafka-artifact-audit",
+      "sec:core-stability-test"
+    ],
+    "no_duplicate_labels": true,
+    "all_original_displays_verbatim": true,
+    "original_displays_verified": [
+      "R275",
+      "R282",
+      "R292",
+      "R324",
+      "R332",
+      "R335",
+      "R341",
+      "R361",
+      "R362"
+    ],
+    "full_formalization_verbatim_except_added_heading_anchor": true,
+    "raw_h3_estimator_verbatim": true,
+    "environment_nesting_balanced": true,
+    "unescaped_braces_balanced": true,
+    "all_existing_input_paths_preserved": true,
+    "lost_distinct_number_tokens": [],
+    "R375_current_policy_verbatim": true,
+    "shared_evidence_paragraphs_verbatim": true,
+    "all_unchanged_unit_bodies_verbatim": true,
+    "full_recital_occurrences_unchanged": true,
+    "word_counts": {
+      "before": 18844,
+      "after": 19066,
+      "R044_import": 190,
+      "R106_source": 180
+    },
+    "live_manuscript_not_written_by_this_script": true
+  },
+  "remaining_author_decisions": [
+    {
+      "id": "R375",
+      "decision": "Whether future bounded Student pilots may ever bypass the current quality/outcome screen. Existing policy retained."
+    },
+    {
+      "id": "R391",
+      "decision": "Which assistant-axis movement constitutes drift from this Reader and how to map it to independent Core-relevant behavior. No direction selected."
+    },
+    {
+      "id": "R463",
+      "decision": "What graph-output task, elicitation and graph access define the B comparator. Comparative ambition retained; no arm invented."
+    }
+  ],
+  "remaining_evidence_gaps": [
+    {
+      "id": "S047/R337",
+      "gap": "A source-complete archived earlier-belief/evidence/revision exhibit remains absent. Existing cross-layer evidence is preserved and its limit stated."
+    }
+  ],
+  "integration_notes": [
+    "Opening should remove original R044 and point to sec:cmp-formalization; retain its introductory labels.",
+    "Core should keep a concise R106 pointer to sec:core-stability-test; full estimators now live in Test3.",
+    "Root can shorten R058’s detailed prefix/count account because R344 now contains it.",
+    "Three new labels: sec:cmp-formalization, tab:kafka-artifact-audit, sec:core-stability-test.",
+    "Root must build and visually inspect the integrated PDF, particularly the new adjacent Kafka table and the relocated samepage formalization."
+  ]
+}

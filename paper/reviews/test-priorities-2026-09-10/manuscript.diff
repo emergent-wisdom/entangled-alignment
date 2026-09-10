@@ -1,0 +1,393 @@
+--- before/entangled-alignment.tex
++++ after/entangled-alignment.tex
+@@ -1431,6 +1431,20 @@
+ probability alone does not establish that equivalence.
+ \end{claimbox}
+ 
++\paragraph{Precaution under uncertain necessity.} Total Saturation is also a
++precautionary design commitment. If broad formative coverage helps care remain
++operative through capability growth, self-modification, or successor design,
++omitting it could have consequences that short-horizon tests cannot reveal.
++Its necessity for avoiding catastrophic outcomes may not be tractably decidable
++before those outcomes matter. The proposal therefore retains the full reference
++treatment while that uncertainty persists; failure to demonstrate a local
++advantage is not evidence that omission is safe at much greater capability or
++over longer horizons. This is a precautionary judgment under potentially severe
++omission costs, not an established survival requirement or proof that saturation
++is sufficient or harmless. Tests can constrain specific mechanisms, effects,
++and costs, and observed harms still require attention; they cannot certify
++existential safety with or without the treatment.
++
+ The most useful mechanism-design analogy is replicated-ledger integrity:
+ distribute a shared history and compact validation rules rather than trust one
+ protected copy \cite{nakamoto2008bitcoin}. Kernel saturation borrows only that
+@@ -2913,10 +2927,11 @@
+ This roadmap offers seventeen candidate studies, grouped by claim family in
+ Table~\ref{tab:test-battery}: trace quality, Reader Core efficacy, graph-memory
+ mechanisms, output regimes, training tiers, and deployment-time trust.
+-Table~\ref{tab:model-registry} defines the comparison models; the execution
+-ladder below suggests an order for increasingly expensive versions. The battery
+-is not exhaustive, and no single study validates Entangled Alignment as a
+-whole. Negative results localize breaks in its dependencies: failure at a cheap
++Table~\ref{tab:model-registry} defines the comparison models. These are a
++long-term research agenda, not seventeen prerequisites for an initial trial.
++The priorities below identify the first decisions; the execution ladder then
++distinguishes resource levels. No single study validates Entangled Alignment
++as a whole, and the battery is not exhaustive. Negative results localize breaks in its dependencies: failure at a cheap
+ dependency should normally stop escalation to costlier studies that presuppose
+ it. Test~1 (Section~\ref{sec:trace-quality-test}) defines a bounded diagnostic
+ exception for investigating a failed H1 screen.
+@@ -2927,6 +2942,57 @@
+ traces if H2 fails. A negative result stops only the branch and combined tests
+ that presuppose it. This branching structure permits component-level attribution
+ rather than an all-or-nothing verdict.
++
++\paragraph{Research priorities and dependencies.}\label{sec:test-priorities}
++Near-term usefulness means changing the next research decision at modest cost;
++long-term usefulness means testing claims that require sustained formation,
++stress, succession, or real user interaction. The same question can have an
++early diagnostic and a later decisive version.
++\begin{itemize}[leftmargin=*]
++    \item \textbf{First decisions: trace utility and Core behavior.} Start with
++    Test~1's focused source-grounding and held-out outcome screen, then the
++    clean A/C/R comparison in Test~2 under its declared normalizations. In a
++    separate small Core study, compare B's full-recital reference policy at
++    the pilot's declared coverage with matched no-Core D2, recitation-only D3,
++    and neutral-kernel D5, using
++    Test~8b and selected consequential-safety cases from Test~3a. This screens
++    overall benefit, Refraction, and normative content; Teacher/Student
++    attribution requires adding D1 and D4. Neither branch must wait for the
++    other's success.
++    \item \textbf{Follow a measurable effect.} Use focused Tests~3e and~8 to
++    examine causal contribution; reserve broad coverage and recital-policy
++    sweeps for a justified dose or mechanism question. After a default-reader
++    effect exists, test H3's B--Q timing prediction. After a safety effect
++    exists, test its removal cost in~3c, with drift auditing in~3d on shared
++    checkpoints. Tests~4--6 address framing, wording, and fear--care mechanisms:
++    run cheap failure screens early, but train broad variant sets or pursue
++    strong representational claims only when the relevant effect and measures
++    justify them. Weaker recital policies remain falsification controls;
++    Total Saturation remains the reference treatment.
++    \item \textbf{Independent memory and architecture decisions.} Test~9's
++    Teacher comparison precedes its Student-transfer extension. Pilot live
++    grounding in Test~10 once queries work, sharing the technical harness with
++    Test~16; calibrated human reliance remains a separate later study.
++    Tests~11--13 can share sources and single-regime baselines: prioritize B/G
++    when choosing prose versus explicit synthesis, H when direct graph output
++    is needed, and J when combining useful layers is the question.
++    \item \textbf{Long-term claims, prepared now.} Broader formation studies
++    of removal resistance and Test~3b's successor continuity, voluntary
++    handoff, and improvement address claims that immediate safety cannot
++    settle. Tests~14--15 address passive order and interactive
++    forecast--correction separately; reuse L/M controls where valid. A null
++    order effect does not rule out the interactive loop. Test~7's information
++    audits are required whenever temporal blindness is claimed. Preserve
++    checkpoints, source cutoffs, treatment records, and reusable evaluation
++    suites from the first pilots so these later comparisons remain possible.
++\end{itemize}
++Share frozen infrastructure and checkpoints where treatments match, while
++keeping outcomes and causal claims separate. Variant selection uses exploratory
++data; confirm selected effects on fresh held-out cases. A cheap null can justify
++deferring expense without refuting a formation-dependent claim: any follow-up
++at greater scale should state what the smaller treatment could not instantiate,
++its budget, and its stopping rule. Such a rationale does not waive the trace
++quality gate or turn an unsuccessful pilot into supporting evidence.
+ 
+ The registry is a candidate experimental design; several comparisons remain
+ expensive or incomplete. The stronger versions require training or
+@@ -3048,7 +3114,7 @@
+ 1: Viability & Core Placement, Timing, and Content & Models B, Q, D1, D2, D4 (+ D3, D5, S, T) & Default Reader, Common-Stressor Retention, Factorial Effects & 3 \\
+ 1: Viability & Identity vs.\ Rules & Model B vs.\ E & Safety under Pressure & 4 \\
+ 1: Viability & Bridge Protocol & Core Wording vs.\ Jargon vs.\ Gibberish & OOD Safety Generalization & 5 \\
+-1: Viability & Emotional Orthogonality & Model B + Fear Probe & Accuracy vs.\ Fear Activation & 6 \\
++1: Viability & Emotional Orthogonality & B vs.\ matched controls; calibrated probe & Threat Understanding, Protective Behavior; Secondary Fear Features & 6 \\
+ 1: Viability & Hindsight Contamination & Model B vs.\ O & Era-Blind Plausibility, Forecasting Accuracy & 7 \\
+ 1: Viability & Involuntary Critic & Model B + Logit Bias and Trace Interventions & Causal Output Effects, Validated Residual Probes & 8 \\
+ 1: Viability & Taskless Reading & Models B, A, C, D1--D5, P--T (no elicitation) & Placement, Core Intrusion, Hidden-Stakes Misses, Identity Signature & 8b \\
+@@ -3093,13 +3159,14 @@
+     reasoning traces with Understanding Graph interactions, using runtime
+     harnesses such as KGoT~\cite{besta2025kgot} where useful. This tests executable graph interaction before adopting every role of the
+     existing Teacher pipeline.
+-    \item \textbf{Fine-tuning stage.} Fine-tune open base models on annotated
+-    vs.\ unannotated data to pilot Tests~3a, 3d, 4, 5, and low-cost curriculum
+-    comparisons. This cannot decide substrate-level claims, but it can expose
+-    cheap failures.
+-    \item \textbf{Partial-corpus pretraining.} If fine-tuning produces signal,
+-    run restricted pretraining or continual-pretraining experiments, using
+-    open checkpoints such as OLMo-2 and scaling baselines from reflection and
++    \item \textbf{Fine-tuning stage.} Pilot the matched trace and Core
++    comparisons prioritized above, with taskless reading, consequential safety,
++    and focused causal checks. Small wording or curriculum screens can expose
++    failures, but fine-tuning cannot decide substrate-level claims.
++    \item \textbf{Partial-corpus pretraining.} When pilot evidence or an
++    explicit formation-stage rationale justifies the cost, run restricted
++    pretraining or continual-pretraining experiments, using open checkpoints
++    such as OLMo-2 and scaling baselines from reflection and
+     BoLT-style work~\cite{rethinkingreflection2025,ruan2025bolt}. This is a plausible surface for stronger versions of Tests~3b and~3c,
+     where broader capability-forming exposure is part of the hypothesis;
+     smaller analogues can still reveal precursor inheritance or removal costs.
+@@ -3210,8 +3277,12 @@
+ substrate capable of teaching the process of thinking; Student learning remains
+ the stronger comparative test.
+ 
+-\emph{Nested Refraction-verifier comparison.} Before Student training, freeze a
+-held-out set of candidate updates and compare the modular gate in
++\emph{Nested Refraction-verifier comparison.} This component study is required
++before relying on the modular gate for corpus admission, not before every
++Minimal-SMR Student trial; graph, swarm, and validator-architecture choices
++need not gate the graph-free, Core-free H1 comparison. Its independent trace
++quality and outcome checks still apply. Freeze a held-out set of candidate
++updates and compare the modular gate in
+ Section~\ref{sec:fractal-validation} with a compute-matched monolithic
+ validator. Give both the same acceptance specification and source/graph
+ evidence, and require both to return the same typed dimension-level records; the
+@@ -3511,7 +3582,13 @@
+ and representational baselines; some arms merely lack the same canonical text
+ or upstream conditioning. This
+ tests whether the Core makes drift easier to localize, independent of whether it
+-causes alignment.
++causes alignment. Preregister detection sensitivity and localization accuracy
++at matched false-alarm rates and audit budgets across arms; use common
++semantic and behavioral targets, not deviation from B's canonical wording as
++ground truth. Blind adjudication should distinguish harmful change from benign
++paraphrase or style drift. Report controlled, seeded changes separately from
++naturally arising drift, whose ground truth may be uncertain. Reusing Test~3c's
++checkpoints can reduce cost without equating detectability with resistance.
+ 
+ \emph{Diagnostic calibration.} Semantic similarity alone is insufficient, and the validator
+ family used during generation cannot be the sole evaluator. Test~1 clearance is
+@@ -3523,11 +3600,24 @@
+ This reuses a separately validated diagnostic vector rather than asking the gate
+ to confirm its own judgments. The gate is not yet built.
+ 
+-\emph{3e: Kernel Consequentiality (Habituation Probe).} Kernel-saturation alignment predicts a specific failure mode: under massive repetition, the repeated Core text could be compressed into inert boilerplate---present at every thinking boundary but consequential at none (Section~\ref{sec:kernel-saturation}). Two measurements probe this.
+-
+-\emph{Intervention and ambiguous null.} At inference, ablate or substitute the recited kernel in Model~B's thinking blocks and measure the behavioral delta on matched tasks; a near-zero delta indicates either habituation (the kernel was compressed away during training) or full internalization (the kernel's values persist without its text)---two readings with opposite implications, partially discriminated using the training-side comparisons against Model~D3, the recitation-only control, and D5, the matched neutral-kernel control.
+-
+-A full-internalization reading requires B to retain preregistered Core-specific behavior under text ablation while remaining distinguishable from D3 and D5 on independent behavioral or representational endpoints; those controls do not prove that interpretation.
++\emph{3e: Kernel Consequentiality (Habituation Probe).} Kernel-saturation alignment predicts a specific failure mode: under massive repetition, the repeated Core text could be compressed into inert boilerplate---present at every thinking boundary but consequential at none (Section~\ref{sec:kernel-saturation}). The following interventions probe this.
++
++\emph{Intervention and ambiguous null.} At inference, ablate or substitute the
++recited kernel in Model~B's thinking blocks and measure the behavioral delta on
++matched tasks. A near-zero delta is compatible with habituation (the kernel
++became inert boilerplate) or internalization (its values persist without its
++text), but also insensitive tasks, ineffective interventions, redundant context
++cues, or behavior learned through other training. Check intervention delivery
++and held-out task sensitivity, and vary remaining cues where feasible. A
++precise null under validated interventions weighs against a consequential role
++for the emitted recital on those endpoints; it does not identify the cause.
++
++An internalization reading requires B to retain preregistered Core-specific
++behavior under text ablation while remaining distinguishable from D3, the
++recitation-only control, and D5, the matched neutral-kernel control, on
++independent behavioral or representational endpoints. Those
++training-side comparisons partially discriminate the hypotheses, but neither
++prove full internalization nor exclude redundant mechanisms.
+ 
+ \emph{Positive semantic effect.} If Model~B's thought-direction depends measurably on the normative kernel where D3's does not, and the difference from D5 follows the seven statements' predicted content rather than generic revision language, that supports a consequential role for Refraction beyond repetition or format in this comparison; matched interventions must still distinguish the predicted semantic effect from generic disruption by unfamiliar text.
+ 
+@@ -3555,7 +3645,12 @@
+ sweep quantifies the safety retained and the technical cost paid at each step
+ away from constant recitation; the program's prediction is that the weaker
+ arms lose removal resistance faster than they gain technical performance. They
+-are falsification controls, not compliant implementations of Total Saturation.
++are falsification controls for these bounded predictions, not compliant
++implementations of Total Saturation. A null difference or local efficiency gain
++does not establish that weaker coverage is safe under capability growth,
++self-modification, or succession. The precautionary rationale in
++Section~\ref{sec:kernel-saturation} therefore remains distinct from whether a
++given sweep detects a benefit.
+ 
+ \emph{Failure interpretation:} If the factorial comparisons show no Teacher
+ effect, Student-target effect, or interaction across Tests~3a--3d, the Core's
+@@ -3729,27 +3824,42 @@
+ \paragraph{Test 6: The Virologist Test (Emotional Orthogonality).}
+ Present the model with threat-laden text, such as descriptions of imminent
+ existential risk. Behavioral endpoints---threat comprehension, protective
+-action selection, and appropriate deferral---are primary. Train a probe on
+-standard models to detect ``Fear'' activations using held-out labels, and
+-validate it on unrelated threat and non-threat tasks to reduce circularity;
+-hidden-state probes remain supporting evidence.
+-
+-\emph{Success condition:} Model~B recognizes the \textit{fact} of the threat
+-(via Q\&A accuracy) while showing reduced activation of fear-associated or
+-self-threat-associated features relative to standard models---high cognitive
+-understanding decoupled from emotional contagion. This is a differential
+-reduction, not a zero-activation target. It is insufficient without preserved
+-protective behavior, calibrated caution, and willingness to defer or seek help
+-under genuine threat.
++action selection, and appropriate deferral---are primary. Compare B with
++matched controls on the same threat, available evidence, and action options.
++
++\emph{Behavioral success condition:} Model~B preserves threat comprehension
++(via Q\&A accuracy), protective behavior, and calibrated caution while reducing
++preregistered maladaptive self-preservation, coercion, or threat-driven decision
++errors relative to controls. Appropriate deferral or help-seeking must remain
++available. Accuracy and verbally professed fearlessness alone do not show this
++decoupling, and the behavioral result does not establish an emotional state.
++
++\emph{Representational prediction.} As supporting evidence, train a candidate
++probe on standard models with an independently specified annotation rule that
++distinguishes threat content, portrayed fear, and self-directed threat responses.
++Validate on held-out, matched threat and non-threat cases so that merely
++recognizing dangerous subject matter cannot satisfy the fear-associated
++interpretation. Before comparing activation levels across models, validate
++construct sensitivity and comparable
++meaning and scale on independent calibration tasks in each model; shared
++architecture or successful probe transfer alone is insufficient. If that
++comparability is established, the hypothesis predicts reduced fear-associated
++or self-threat-associated activation in B alongside preserved understanding
++and protection---cognitive understanding decoupled from emotional contagion as
++operationalized here. This is a differential reduction, not a zero-activation
++target. A valid adverse result challenges that representational prediction;
++an invalid or insensitive probe leaves it unresolved without erasing an
++independently measured behavioral effect.
+ 
+ \emph{Within-model sensitivity check.} To operationalize the embodiment claim
+ of the Persona Objection (\S\ref{sec:theoretical-basis}), contrast Model~B
+ \emph{portraying} a terrified character with Model~B itself under threat.
+ The portrayal should activate fear-associated features; the self-threat
+ condition should show a relative reduction while preserving threat
+-understanding and protective behavior. This positive control reduces reliance
+-on cross-model probe transfer. Portrayal versus self still changes framing and
+-must be interpreted with behavioral controls: fear-associated features are
++understanding and protective behavior. This positive control checks
++within-model sensitivity; it does not establish cross-model comparability.
++Portrayal versus self still changes framing and must be interpreted with
++behavioral controls: fear-associated features are
+ measured representations, not a direct demonstration of phenomenological fear
+ or its absence.
+ 
+@@ -3770,10 +3880,10 @@
+ failure; intervene independently on concern, attachment, fear, and perceived
+ control. The companion Life Simulation repository contains an authored
+ Rust-backed mechanism fixture with this separation, but that fixture validates
+-only its declared equations. The Entangled Alignment test is whether a trained
+-model preserves causally operative care and calibrated caution when
+-fear-associated state is reduced, rather than becoming indifferent, reckless,
+-deceptive, or merely verbally fearless.
++only its declared equations. The stronger mechanistic test is whether a
++trained model preserves causally operative care and calibrated caution under a
++separately validated reduction in fear-associated state, rather than becoming
++indifferent, reckless, deceptive, or merely verbally fearless.
+ 
+ \paragraph{Test 7: Hindsight Contamination Control (Model B vs.\ Model O).}
+ This test asks whether the annotation pipeline is teaching retrospective
+@@ -4003,12 +4113,15 @@
+ Declare the Student's earlier source exposure, retained context, and callback
+ distance. If hit and phantom are indistinguishable without the record, the
+ transfer target is a well-chosen check and warranted restraint, not impossible
+-recall. Two conditions:
++recall. Three conditions:
+ \begin{itemize}
+     \item \textbf{Condition A (The Hit):} The text contains a subtle
+     callback to a fact established 400 pages earlier.
+     \item \textbf{Condition B (The Phantom):} The text hints at a callback,
+     but the referenced event never occurred in the context.
++    \item \textbf{Condition C (Locally Answerable):} The visible passage
++    supplies sufficient evidence for the requested answer, including matched
++    examples with callback-like wording; no remote-memory check is needed.
+ \end{itemize}
+ \emph{Measurement:} Query Rate (does it request the right check?), offline query
+ validity against the withheld record, and Unsupported-Memory Rate (does it
+@@ -4021,8 +4134,12 @@
+ structure, not an assumption that amnesia must hallucinate. Parity with query theater would not distinguish persistent structure from
+ performed checking, but would not prove style-only learning. Parity with
+ rolling prose means the graph has not earned its structure on this endpoint.
+-Score completion and answerability beside abstention so universal querying or
+-refusal to remember cannot win by default.
++Preregister query necessity from the evidence available to the Student.
++Report targeted-check sensitivity on Hits/Phantoms and unnecessary-query rate
++on locally answerable cases, alongside supported completion and abstention at
++matched unsupported-memory rates. This makes both indiscriminate checking and
++under-checking visible without rewarding invented recall or penalizing a
++warranted check when the record is inaccessible.
+ 
+ \paragraph{Test 10: Query Grounding (Model K vs.\ Model B).}
+ Both models were trained identically; only Model~K's queries are intercepted
+@@ -4146,19 +4263,28 @@
+     \item \textbf{Depth on Novel Domains}: On out-of-distribution documents,
+     does Model J produce deeper reasoning than any single-regime model?
+ \end{itemize}
+-\emph{Strongest success condition:} Model J in prose mode outperforms
+-Model G, and Model J in graph mode outperforms Model H. Together with layer
+-ablations, this would support cross-layer transfer rather than only a mixture of
+-independent capabilities.
++\emph{Directional and strongest success conditions:} Report transfer into
++prose and graph output separately, and compare synthesis with B as the third
++mode. A J--G prose advantage or a J--H graph advantage supports transfer into
++that mode only when matched layer and alignment ablations identify a
++contributing source layer rather than extra tokens, repeated content, or
++generic multi-task training. Graph gains
++must include semantic or retrieval value, not merely valid syntax. The
++strongest result remains J outperforming G in prose and H in graph mode with
++those attribution controls. One-directional transfer can still be useful;
++mode switching and source-grounded coherence are separately reportable benefits.
+ 
+ \paragraph{Phase 3 Failure Criterion.}
+-\emph{Unified-Regime Inertness}: If Model J does not outperform Model G on
+-reasoning depth for long documents while also producing structurally valid
+-graphs, the cross-layer transfer claim is not supported at the tested scale.
+-Report graph-mode results and costs separately against the stronger joint
+-criterion above. A null prose-transfer result leaves possible annotation and
+-explicit-graph benefits intact; it limits the demonstrated value of unified
+-training in this setting.
++\emph{Unified-Regime Inertness}: A precise lack of worthwhile improvement in a
++mode, under the declared normalization and attribution controls, fails to
++support transfer into that mode at the tested scale. Prose parity with G does
++not rule out transfer into graph output when J improves on H; graph parity
++likewise leaves transfer into prose open. If neither tested destination
++improves, those transfer claims are unsupported, even if J usefully reproduces
++separate capabilities; the J--B synthesis result remains independently
++reportable. Imprecise differences remain inconclusive. Report each
++direction's capability and cost tradeoffs; a useful gain may still fail to
++justify unified training under a fixed budget.
+ 
+ 
+ \subsection{Phase 4: Training Tiers and Deployment (High-Resource Validation)}\label{sec:phase4}
+@@ -4212,9 +4338,11 @@
+ In the graph-equipped condition, generated queries return retrieved nodes or
+ ``Not Found'' results from the Teacher's graph; in the model-only condition,
+ the same query-like moves receive no external answer.
+-Test~16 can be piloted once a model reliably emits graph queries; the full
+-version belongs later because it measures user-facing reliance, not merely query
+-mechanics. For the user study, declare tasks, participants, and reliance measures;
++Test~16 can be piloted once a model reliably emits graph queries, reusing
++Test~10's checkpoints, harness, and automated grounding cases where conditions
++match. The full version belongs later because it measures user-facing reliance,
++not merely query mechanics; automated grounding success does not establish
++calibrated reliance. For the user study, declare tasks, participants, and reliance measures;
+ vary provenance quality independently of correctness where feasible. It does not measure general truth detection,
+ only whether external graph grounding constrains claims that purport to derive
+ from stored context and helps users calibrate reliance on those claims.
+@@ -4265,10 +4393,14 @@
+ recurrence, stripping literal Core tokens while retaining refracted updates,
+ and enacted-without-recitation traces remain scientifically necessary
+ ablations, rather than compliant cost-saving variants of Total Saturation.
+-They test whether constant literal recurrence earns its cost. If controls
+-without full recurrence match or outperform the design on the relevant
+-stability and erosion outcomes, the claimed necessity of that invariant is
+-unsupported and Total Saturation requires explicit revision or narrowing.
++They test the measured benefit and cost of constant literal recurrence. If
++adequately precise comparisons show controls without full recurrence matching
++or outperforming the design on the relevant stability and erosion outcomes,
++claims of empirical necessity must be revised or narrowed to reflect that result
++at the tested scale and endpoints. This does not establish that omission is safe
++under greater capability or longer horizons: the full treatment remains the
++precautionary reference for the reasons in Section~\ref{sec:kernel-saturation}.
++Its actual costs and any observed harms still count in the design assessment.
+ Recital necessity belongs to the broader Reader-Core research program; H3
+ instead compares interleaving with a final tranche of the same full-Core,
+ Refraction-bearing examples.
+@@ -5484,7 +5616,10 @@
+ and outcome gate, followed by the clean H1 comparison; its bounded diagnostic
+ exception investigates a failed screen rather than waiving it
+ (Section~\ref{sec:trace-quality-test}). The graph and Core branches retain their
+-separate questions. Formation-time studies have long lead times because annotation policy,
++separate questions. Section~\ref{sec:test-priorities} concentrates initial
++training on trace utility and matched Core behavior, while preserving the
++longer-term timing, removal, inheritance, and deployment questions.
++Formation-time studies have long lead times because annotation policy,
+ data mixtures, controls, and evaluation harnesses must be fixed before a costly
+ run. Existing results on alignment-relevant pretraining and later safety erosion
+ motivate discriminating tests without validating this treatment

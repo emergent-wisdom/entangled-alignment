@@ -1,0 +1,189 @@
+{
+  "status": "Initial rendered pass complete; two page-break cohesion issues require correction/recheck.",
+  "scope": "Visual review of rendered PDF pages001–050 only, from the 101-page build supplied by root; no PDF/source edits.",
+  "pages_inspected": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50
+  ],
+  "method": "Viewed five labeled ten-page contact sheets covering every assigned page, then inspected eleven individual page PNGs at original resolution.",
+  "individual_pages_inspected": [
+    6,
+    13,
+    14,
+    15,
+    20,
+    21,
+    41,
+    44,
+    47,
+    48,
+    49
+  ],
+  "page_dimensions": [
+    723,
+    935
+  ],
+  "page_hashes_for_findings": {
+    "page-014.png": "0da386e19c40a93f84081db5654d9cea5d7f9a27ea98995a524767fda762f64f",
+    "page-015.png": "d651fa307395b59e19996c187597b399a434c18a918e9071864f8df19ad2a825",
+    "page-047.png": "75eed85a435a79388de015a3471b7ba83ec091f34a56e621293afea08d100a52",
+    "page-048.png": "06c6c678d2faa5b4310f8947021741f05c178525d4c24856383627353150401d"
+  },
+  "findings": [
+    {
+      "id": "V01",
+      "pages": [
+        14,
+        15
+      ],
+      "severity": "Medium",
+      "problem": "The canonical seven-statement Core is split across pages after clause5. Page14 ends with “I try to be wise”; clauses6–7 appear alone at the top of page15, separated from the introduction and preceding five statements.",
+      "recommended_fix": "Keep the short recital introduction and all seven statement lines together on one page.",
+      "preservation_constraint": "Do not change or omit any statement; this is a pagination-only fix."
+    },
+    {
+      "id": "V02",
+      "pages": [
+        47,
+        48
+      ],
+      "severity": "Medium",
+      "problem": "The Layer3 Translator box begins at the bottom of page47 with only the Core preamble. All substantive translated prose is in the continuation box at the top of page48, separating the layer heading/lead-in from what the layer demonstrates.",
+      "recommended_fix": "Keep the Layer3 heading/lead-in and the complete short Translator box together, or at least keep the recital with the first substantive paragraph.",
+      "preservation_constraint": "Keep the archived quotation verbatim and retain its separate identity from the Layer2 synthesis."
+    }
+  ],
+  "verified_without_defect": [
+    {
+      "pages": [
+        20,
+        21
+      ],
+      "item": "Core clause table splits cleanly between complete rows and repeats the column headings; text remains inside the table and readable."
+    },
+    {
+      "pages": [
+        44
+      ],
+      "item": "Relocated formal training object and both equations are intact, legible, and within margins."
+    },
+    {
+      "pages": [
+        49
+      ],
+      "item": "Snapshot diagnostics and new adjacent Kafka artifact-reconciliation table fit; field names, counts and uncertainty text are readable without clipping or overlap."
+    },
+    {
+      "pages": [
+        6,
+        13,
+        41
+      ],
+      "item": "Training, successor, and metabolic-cycle diagrams show no clipping, broken glyphs, or overlapping boxes/labels."
+    },
+    {
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50
+      ],
+      "item": "No other clipping, overlap, broken glyphs, stranded section headings, or large unintended blank areas observed in this range."
+    }
+  ],
+  "pending_recheck": "Root is rebuilding after a Core wording correction and will need to recheck any pages changed by pagination fixes. Page numbers in this report refer to the supplied initial render."
+}

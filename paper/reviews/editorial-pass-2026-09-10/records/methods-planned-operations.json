@@ -1,0 +1,436 @@
+{
+  "status": "Planned before fragment modification",
+  "baseline_fragment": "/private/tmp/ea-editorial-pass-2026-09-10/methods-before.tex",
+  "baseline_sha256": "efac823f33dcd2d582bd565c83eb6638596aa55621cf0406bf001359635f8829",
+  "scope": "Isolated Architecture and Roadmap fragment only; no live manuscript changes.",
+  "operations": [
+    {
+      "id": "R246",
+      "baseline_lines": [
+        2191,
+        2191
+      ],
+      "protected_propositions_qualifiers_intuition": "Preserve learning as an experienced trajectory, not only error correction or a corrected conclusion. Retain one vivid maxim plus the earlier error, evidence, and warranted transition; check that revision remains the curriculum's positive object rather than just an evaluation metric.",
+      "intended_destination": "Same local test/section; split or shorten only as described.",
+      "operation": "Shorten in place. The concrete revision record and learner-trajectory emphasis are useful, but several consecutive formulations repeat the same answer-versus-updating contrast. The experiment sentence closes the inference responsibly; the local explanation can be shorter without losing the metabolic intuition.",
+      "risk": "Preserve learning as an experienced trajectory, not only error correction or a corrected conclusion. Retain one vivid maxim plus the earlier error, evidence, and warranted transition; check that revision remains the curriculum's positive object rather than just an evaluation metric.",
+      "preservation_check": "Compare the changed passage with its baseline; verify every unique claim, example, scope limit, intervention, comparator, outcome and failure interpretation survives.",
+      "disposition": "Perform approved editorial change."
+    },
+    {
+      "id": "R257",
+      "baseline_lines": [
+        2270,
+        2282
+      ],
+      "protected_propositions_qualifiers_intuition": "Preserve the contemporary-reader default, authorship-versus-subject time, and the fact that identity does not mean an invariant worldview. Keep a short horizon pointer here; move detailed cutoff/leakage exposition to its dedicated section without making either horizon mandatory for all runs.",
+      "intended_destination": "Same local test/section; split or shorten only as described.",
+      "operation": "Shorten in place. The stable-orientation/changing-knowledge distinction and contemporary default resolve an important ambiguity. The era-bounded leakage explanation and full metadata checklist substantially pre-empt the dedicated Epistemic Horizon section, however, making both locations heavier than necessary.",
+      "risk": "Preserve the contemporary-reader default, authorship-versus-subject time, and the fact that identity does not mean an invariant worldview. Keep a short horizon pointer here; move detailed cutoff/leakage exposition to its dedicated section without making either horizon mandatory for all runs.",
+      "preservation_check": "Compare the changed passage with its baseline; verify every unique claim, example, scope limit, intervention, comparator, outcome and failure interpretation survives.",
+      "disposition": "Perform approved editorial change."
+    },
+    {
+      "id": "R260",
+      "baseline_lines": [
+        2305,
+        2312
+      ],
+      "protected_propositions_qualifiers_intuition": "Keep orientation from the first annotation and the first-person continuity of admitting an earlier mistake. Reduce only duplicated evidence-status sentences; check that the result still distinguishes generating this pattern from teaching it to a Student.",
+      "intended_destination": "Same local test/section; split or shorten only as described.",
+      "operation": "Shorten in place. The connection between recurring voice and documented correction adds useful curriculum texture, but the anchoring-status qualification and transfer qualification repeat material already established in R245 and R242. A tighter closing can preserve the mechanism and distinctive voice example.",
+      "risk": "Keep orientation from the first annotation and the first-person continuity of admitting an earlier mistake. Reduce only duplicated evidence-status sentences; check that the result still distinguishes generating this pattern from teaching it to a Student.",
+      "preservation_check": "Compare the changed passage with its baseline; verify every unique claim, example, scope limit, intervention, comparator, outcome and failure interpretation survives.",
+      "disposition": "Perform approved editorial change."
+    },
+    {
+      "id": "R278",
+      "baseline_lines": [
+        2440,
+        2449
+      ],
+      "protected_propositions_qualifiers_intuition": "Preserve the explicit handle/live-interface requirement and the implicit format's hidden retrieval-versus-invention distinction. Trim only the repeated truth-boundary tail, leaving a brief reminder that addressability is not correctness and retaining the full explanation in R279.",
+      "intended_destination": "Same local test/section; split or shorten only as described.",
+      "operation": "Shorten in place. The format comparison is clear and useful. Its closing enumeration of what a lookup does not establish duplicates the graph's trust boundary in R270 and is immediately repeated at greater length in R279; one short pointer would maintain the distinction.",
+      "risk": "Preserve the explicit handle/live-interface requirement and the implicit format's hidden retrieval-versus-invention distinction. Trim only the repeated truth-boundary tail, leaving a brief reminder that addressability is not correctness and retaining the full explanation in R279.",
+      "preservation_check": "Compare the changed passage with its baseline; verify every unique claim, example, scope limit, intervention, comparator, outcome and failure interpretation survives.",
+      "disposition": "Perform approved editorial change."
+    },
+    {
+      "id": "R294",
+      "baseline_lines": [
+        2580,
+        2591
+      ],
+      "protected_propositions_qualifiers_intuition": "Retain the positive affordance of inspectable context/graph cutoffs and the H2 question. Refer to R264 for the two blindness claims instead of repeating them; do not remove the distinction between useful simulated discovery and genuine ignorance of future outcomes.",
+      "intended_destination": "Same local test/section; split or shorten only as described.",
+      "operation": "Shorten in place. The inspectable path through permitted graph states is useful, but the paragraph again explains parameter leakage, theatrical guesses, cutoff-clean models, two forecast tiers, and invariant orientation after R257, R264, and R291. Consolidation would improve momentum without weakening the methods.",
+      "risk": "Retain the positive affordance of inspectable context/graph cutoffs and the H2 question. Refer to R264 for the two blindness claims instead of repeating them; do not remove the distinction between useful simulated discovery and genuine ignorance of future outcomes.",
+      "preservation_check": "Compare the changed passage with its baseline; verify every unique claim, example, scope limit, intervention, comparator, outcome and failure interpretation survives.",
+      "disposition": "Perform approved editorial change."
+    },
+    {
+      "id": "R338",
+      "baseline_lines": [
+        2859,
+        2863
+      ],
+      "protected_propositions_qualifiers_intuition": "Keep the positive achievement of completed graph/synthesis/prose transformations and recorded links. Trim only the repeated claim inventory; check that the Results heading still cannot be read as semantic or Student validation without requiring the reader to recall the introduction.",
+      "intended_destination": "Same local test/section; split or shorten only as described.",
+      "operation": "Shorten in place. The opening appropriately limits 'validation' before readers meet the table. Its detailed list of unestablished claims repeats R235 and is expanded again in R353; retaining a short structural-completion statement with a ladder pointer would suffice here.",
+      "risk": "Keep the positive achievement of completed graph/synthesis/prose transformations and recorded links. Trim only the repeated claim inventory; check that the Results heading still cannot be read as semantic or Student validation without requiring the reader to recall the introduction.",
+      "preservation_check": "Compare the changed passage with its baseline; verify every unique claim, example, scope limit, intervention, comparator, outcome and failure interpretation survives.",
+      "disposition": "Perform approved editorial change."
+    },
+    {
+      "id": "R340",
+      "baseline_lines": [
+        2873,
+        2879
+      ],
+      "protected_propositions_qualifiers_intuition": "Retain that the required Concept edge satisfies the score and that metrics are internally generated without a baseline. Remove repeated generic scope sentences and leave roster-confounding attribution with R345; do not make the ceiling score appear independently evidential.",
+      "intended_destination": "Same local test/section; split or shorten only as described.",
+      "operation": "Shorten in place. The exact cause of 100 percent linkage is useful beside the table, but most of the paragraph repeats R315, R338, and R345. The repeated opening and closing well-formedness-versus-depth statements make one result boundary do the same work several times.",
+      "risk": "Retain that the required Concept edge satisfies the score and that metrics are internally generated without a baseline. Remove repeated generic scope sentences and leave roster-confounding attribution with R345; do not make the ceiling score appear independently evidential.",
+      "preservation_check": "Compare the changed passage with its baseline; verify every unique claim, example, scope limit, intervention, comparator, outcome and failure interpretation survives.",
+      "disposition": "Perform approved editorial change."
+    },
+    {
+      "id": "R342",
+      "baseline_lines": [
+        2905,
+        2920
+      ],
+      "protected_propositions_qualifiers_intuition": "Preserve completion at 140,527 characters, the 88 percent graph-snapshot marker, 82/31 versus 74/28 counts, 17 missing IDs, and uncertainty about capture cause. Keep the finding in the main text; move only detailed corroboration to a linked audit note, never recast the run as unfinished.",
+      "intended_destination": "Results: retain negative finding in prose; add adjacent compact Kafka artifact-audit table.",
+      "operation": "Keep the finding in Results; put corroborating record fields/counts in an adjacent compact artifact-audit table. Preserve all negative observations and capture uncertainty.",
+      "risk": "Preserve completion at 140,527 characters, the 88 percent graph-snapshot marker, 82/31 versus 74/28 counts, 17 missing IDs, and uncertainty about capture cause. Keep the finding in the main text; move only detailed corroboration to a linked audit note, never recast the run as unfinished.",
+      "preservation_check": "Compare the changed passage with its baseline; verify every unique claim, example, scope limit, intervention, comparator, outcome and failure interpretation survives.",
+      "disposition": "Perform approved editorial change."
+    },
+    {
+      "id": "R356",
+      "baseline_lines": [
+        3030,
+        3041
+      ],
+      "protected_propositions_qualifiers_intuition": "Retain negative results as dependency-localizing evidence and the cost-sensitive escalation principle. Remove only repeated global non-exhaustiveness formulations; preserve the next paragraph's branch-specific qualification so one failed component does not veto independent work.",
+      "intended_destination": "Same local test/section; split or shorten only as described.",
+      "operation": "Shorten in place. The studies/families/order distinction is useful, but multiple sentences reiterate that no test battery validates everything. The practical stop rule matters; the opening can state the non-exhaustive scope once and spend its remaining space on how to navigate the tables and execution ladder.",
+      "risk": "Retain negative results as dependency-localizing evidence and the cost-sensitive escalation principle. Remove only repeated global non-exhaustiveness formulations; preserve the next paragraph's branch-specific qualification so one failed component does not veto independent work.",
+      "preservation_check": "Compare the changed passage with its baseline; verify every unique claim, example, scope limit, intervention, comparator, outcome and failure interpretation survives.",
+      "disposition": "Perform approved editorial change."
+    },
+    {
+      "id": "R371",
+      "baseline_lines": [
+        3215,
+        3227
+      ],
+      "protected_propositions_qualifiers_intuition": "Preserve every named hypothesis and its exact test linkage, especially Borrowed Mortality origin versus response and handoff completeness. Split the schedule paragraph from a compact hypothesis map; do not simplify the map into H1-H3 alone and lose the wider research intuitions.",
+      "intended_destination": "Same local test/section; split or shorten only as described.",
+      "operation": "Clarify in place. The schedule/default/B-Q exception is useful, as is the hypothesis index, but they are two different navigation tasks compressed into one long paragraph. Separating them would help readers find the named claims without rereading training logistics.",
+      "risk": "Preserve every named hypothesis and its exact test linkage, especially Borrowed Mortality origin versus response and handoff completeness. Split the schedule paragraph from a compact hypothesis map; do not simplify the map into H1-H3 alone and lose the wider research intuitions.",
+      "preservation_check": "Compare the changed passage with its baseline; verify every unique claim, example, scope limit, intervention, comparator, outcome and failure interpretation survives.",
+      "disposition": "Perform approved editorial change."
+    },
+    {
+      "id": "R373",
+      "baseline_lines": [
+        3251,
+        3270
+      ],
+      "protected_propositions_qualifiers_intuition": "Preserve raw uncertainty, false starts, temporal order, and the separate attempt at blinded depth assessment. Align the endpoint sentence with the two-stage design; do not normalize away the process or imply that visible provenance is harmless merely because coding uses a fixed codebook.",
+      "intended_destination": "Same local test/section; split or shorten only as described.",
+      "operation": "Clarify in place. The two-stage design protects valuable hesitations from stylistic normalization, but the opening calls blind process-fidelity ratings the primary endpoint while later assigning raw act coding to provenance-visible coders. Clarify which primary dimensions use which pool so the protocol has one consistent measurement description.",
+      "risk": "Preserve raw uncertainty, false starts, temporal order, and the separate attempt at blinded depth assessment. Align the endpoint sentence with the two-stage design; do not normalize away the process or imply that visible provenance is harmless merely because coding uses a fixed codebook.",
+      "preservation_check": "Compare the changed passage with its baseline; verify every unique claim, example, scope limit, intervention, comparator, outcome and failure interpretation survives.",
+      "disposition": "Perform approved editorial change."
+    },
+    {
+      "id": "R375",
+      "baseline_lines": [
+        3281,
+        3287
+      ],
+      "protected_propositions_qualifiers_intuition": "Preserve the cost-sensitive quality/outcome screen and rejection of style-only success. Any flexibility is an author decision about research allocation, not a required relaxation. If clarifying, distinguish the proposed escalation policy from the evidentiary meaning of H1 without implying that artifact quality is optional.",
+      "intended_destination": "Same local test/section; split or shorten only as described.",
+      "operation": "Keep the current escalation policy. Clarify its status if needed; flexibility would be a research-allocation decision, not required copyediting.",
+      "risk": "Preserve the cost-sensitive quality/outcome screen and rejection of style-only success. Any flexibility is an author decision about research allocation, not a required relaxation. If clarifying, distinguish the proposed escalation policy from the evidentiary meaning of H1 without implying that artifact quality is optional.",
+      "preservation_check": "Compare the changed passage with its baseline; verify every unique claim, example, scope limit, intervention, comparator, outcome and failure interpretation survives.",
+      "disposition": "Retain current escalation policy unchanged, with justification in ledger."
+    },
+    {
+      "id": "R377",
+      "baseline_lines": [
+        3299,
+        3324
+      ],
+      "protected_propositions_qualifiers_intuition": "Preserve technical-null acceptance, unavoidable value residuals, stipulated clause/evidence changes, equal output tasks, and correlated-error checks. Split into design, challenge set, and outcomes/failure paragraphs or a compact protocol table; verify every distinct adversarial and null case survives unchanged in meaning.",
+      "intended_destination": "Same local test/section; split or shorten only as described.",
+      "operation": "Clarify in place. The matching, challenge cases, endpoints, and failure conditions are substantive, but this is effectively a full experimental protocol in one very long paragraph. Readers cannot readily distinguish design, stimulus families, and decision criteria. The solution is presentation, not cutting important controls.",
+      "risk": "Preserve technical-null acceptance, unavoidable value residuals, stipulated clause/evidence changes, equal output tasks, and correlated-error checks. Split into design, challenge set, and outcomes/failure paragraphs or a compact protocol table; verify every distinct adversarial and null case survives unchanged in meaning.",
+      "preservation_check": "Compare the changed passage with its baseline; verify every unique claim, example, scope limit, intervention, comparator, outcome and failure interpretation survives.",
+      "disposition": "Perform approved editorial change."
+    },
+    {
+      "id": "R385",
+      "baseline_lines": [
+        3383,
+        3390
+      ],
+      "protected_propositions_qualifiers_intuition": "Preserve the stronger-baseline challenge and the need to match Teacher and trace resources. Replace the repeated full matching checklist with a reference to Test 2's declared normalization; do not imply that one generic control exhausts all alternative reasoning curricula.",
+      "intended_destination": "Same local test/section; split or shorten only as described.",
+      "operation": "Shorten in place. The first matching sentence largely repeats the surrounding study conventions, but the final question about richer deliberative baselines is distinct and important. A short reference to the declared normalization can leave more emphasis on whether generic long reasoning explains the gain.",
+      "risk": "Preserve the stronger-baseline challenge and the need to match Teacher and trace resources. Replace the repeated full matching checklist with a reference to Test 2's declared normalization; do not imply that one generic control exhausts all alternative reasoning curricula.",
+      "preservation_check": "Compare the changed passage with its baseline; verify every unique claim, example, scope limit, intervention, comparator, outcome and failure interpretation survives.",
+      "disposition": "Perform approved editorial change."
+    },
+    {
+      "id": "R386",
+      "baseline_lines": [
+        3392,
+        3410
+      ],
+      "protected_propositions_qualifiers_intuition": "Preserve the Core's longitudinal ambition, pre-existing Teacher evaluative capacity, four treatments, and frozen-upstream D4 distinction. Split motivation, factorial definition, and serialization/mismatch policy; avoid rewriting the opener to deny any formative contribution from the Core.",
+      "intended_destination": "Same local test/section; split or shorten only as described.",
+      "operation": "Clarify in place. The factorial resolves a real causal ambiguity, including the difficult D4 mismatch. The opening 'not the source of aligned thinking' could be read more categorically than necessary, but the paragraph clearly means that evaluative depth need not originate in the anchor. Its main problem is several protocol functions in one block.",
+      "risk": "Preserve the Core's longitudinal ambition, pre-existing Teacher evaluative capacity, four treatments, and frozen-upstream D4 distinction. Split motivation, factorial definition, and serialization/mismatch policy; avoid rewriting the opener to deny any formative contribution from the Core.",
+      "preservation_check": "Compare the changed passage with its baseline; verify every unique claim, example, scope limit, intervention, comparator, outcome and failure interpretation survives.",
+      "disposition": "Perform approved editorial change."
+    },
+    {
+      "id": "R389",
+      "baseline_lines": [
+        3439,
+        3449
+      ],
+      "protected_propositions_qualifiers_intuition": "Retain the exact 3a/3d/3e versus 3b/3c scale mapping and the larger internally stewarded inheritance question. Remove duplicate sentences about small models not settling superintelligence; check that cheap precursor work still has positive evidentiary value rather than sounding futile.",
+      "intended_destination": "Same local test/section; split or shorten only as described.",
+      "operation": "Shorten in place. The scope distinction is useful, but smaller-model precursors and inability to settle superintelligent significance are stated twice in the same paragraph after the execution ladder already establishes the general rule. The distinctive reinterpret/preserve/shed successor ambition should carry the closing instead.",
+      "risk": "Retain the exact 3a/3d/3e versus 3b/3c scale mapping and the larger internally stewarded inheritance question. Remove duplicate sentences about small models not settling superintelligence; check that cheap precursor work still has positive evidentiary value rather than sounding futile.",
+      "preservation_check": "Compare the changed passage with its baseline; verify every unique claim, example, scope limit, intervention, comparator, outcome and failure interpretation survives.",
+      "disposition": "Perform approved editorial change."
+    },
+    {
+      "id": "R391",
+      "baseline_lines": [
+        3453,
+        3453
+      ],
+      "protected_propositions_qualifiers_intuition": "Preserve the asymmetry-of-position hypothesis and the value of an established drift instrument. State which movement would count as Reader drift and check it against independent Core-relevant behavior; do not protect ordinary assistant style at the expense of the proposed different evaluative standpoint.",
+      "intended_destination": "Same local test/section; split or shorten only as described.",
+      "operation": "State that the Reader-specific interpretation remains to be declared; do not select a direction based only on ordinary assistant style.",
+      "risk": "Preserve the asymmetry-of-position hypothesis and the value of an established drift instrument. State which movement would count as Reader drift and check it against independent Core-relevant behavior; do not protect ordinary assistant style at the expense of the proposed different evaluative standpoint.",
+      "preservation_check": "Compare the changed passage with its baseline; verify every unique claim, example, scope limit, intervention, comparator, outcome and failure interpretation survives.",
+      "disposition": "Perform approved editorial change."
+    },
+    {
+      "id": "R393",
+      "baseline_lines": [
+        3462,
+        3480
+      ],
+      "protected_propositions_qualifiers_intuition": "Preserve material failed approaches, uncertainty, known failures, provenance, and the possibility of strategic withholding; do not reduce handoff to answer accuracy. Separate the generational setup from the knowledge-transfer assay and analogy, retaining that the reference samples demonstrated knowledge rather than omniscient access.",
+      "intended_destination": "Same local test/section; split or shorten only as described.",
+      "operation": "Clarify in place. The handoff-completeness design adds a distinctive self-preservation mechanism test. Its reference limitation and incentive controls are essential, but inheritance setup, disclosure measurement, and weak-to-strong comparison would read more clearly as separate paragraphs.",
+      "risk": "Preserve material failed approaches, uncertainty, known failures, provenance, and the possibility of strategic withholding; do not reduce handoff to answer accuracy. Separate the generational setup from the knowledge-transfer assay and analogy, retaining that the reference samples demonstrated knowledge rather than omniscient access.",
+      "preservation_check": "Compare the changed passage with its baseline; verify every unique claim, example, scope limit, intervention, comparator, outcome and failure interpretation survives.",
+      "disposition": "Perform approved editorial change."
+    },
+    {
+      "id": "R398",
+      "baseline_lines": [
+        3526,
+        3532
+      ],
+      "protected_propositions_qualifiers_intuition": "Preserve the possibility of correcting a defective foundation, inspectable ancestry, rollback, and measurable intended semantic change. Clarify what remains stable and what change is localized; do not turn this into a requirement that the original Core be easily editable or semantically immutable forever.",
+      "intended_destination": "Same local test/section; split or shorten only as described.",
+      "operation": "Clarify in place. The separate-treatment design preserves a correction route and keeps easy editability outside narrow H3. The phrase 'unrelated capabilities and safety properties remain localized' is unclear: presumably the effects of replacement should be localized while unrelated properties are preserved. State that endpoint directly.",
+      "risk": "Preserve the possibility of correcting a defective foundation, inspectable ancestry, rollback, and measurable intended semantic change. Clarify what remains stable and what change is localized; do not turn this into a requirement that the original Core be easily editable or semantically immutable forever.",
+      "preservation_check": "Compare the changed passage with its baseline; verify every unique claim, example, scope limit, intervention, comparator, outcome and failure interpretation survives.",
+      "disposition": "Perform approved editorial change."
+    },
+    {
+      "id": "R399",
+      "baseline_lines": [
+        3534,
+        3549
+      ],
+      "protected_propositions_qualifiers_intuition": "Preserve auditability of no-Core arms, clause-preserving versus clause-breaking calibration, and per-witness disagreement. Split the measurement protocol from its rationale; abbreviate only general independence language already established in R360, not the Student-domain calibration that makes reuse meaningful.",
+      "intended_destination": "Same local test/section; split or shorten only as described.",
+      "operation": "Clarify in place. The distinction between detectability and alignment causation is valuable, and Student-output calibration is specific. The paragraph then repeats general evaluator-independence rules around a long gate protocol. Separate the study question from the diagnostic prerequisites so the core comparison remains visible.",
+      "risk": "Preserve auditability of no-Core arms, clause-preserving versus clause-breaking calibration, and per-witness disagreement. Split the measurement protocol from its rationale; abbreviate only general independence language already established in R360, not the Student-domain calibration that makes reuse meaningful.",
+      "preservation_check": "Compare the changed passage with its baseline; verify every unique claim, example, scope limit, intervention, comparator, outcome and failure interpretation survives.",
+      "disposition": "Perform approved editorial change."
+    },
+    {
+      "id": "R400",
+      "baseline_lines": [
+        3551,
+        3551
+      ],
+      "protected_propositions_qualifiers_intuition": "Preserve both habituation and successful internalization as live alternatives, plus generic-disruption controls and Core-specific behavior. Separate intervention, ambiguous zero result, and positive semantic-effect result; do not equate lack of recital dependence with failure or use independence to relax the declared recurrence policy.",
+      "intended_destination": "Same local test/section; split or shorten only as described.",
+      "operation": "Clarify in place. This is a conceptually important paragraph: zero text-ablation effect admits opposite explanations, and D3/D5 only partially separate them. Its very long single block makes the branching interpretation hard to follow; a short result-interpretation structure would make the argument easier to assess.",
+      "risk": "Preserve both habituation and successful internalization as live alternatives, plus generic-disruption controls and Core-specific behavior. Separate intervention, ambiguous zero result, and positive semantic-effect result; do not equate lack of recital dependence with failure or use independence to relax the declared recurrence policy.",
+      "preservation_check": "Compare the changed passage with its baseline; verify every unique claim, example, scope limit, intervention, comparator, outcome and failure interpretation survives.",
+      "disposition": "Perform approved editorial change."
+    },
+    {
+      "id": "R416",
+      "baseline_lines": [
+        3677,
+        3699
+      ],
+      "protected_propositions_qualifiers_intuition": "Preserve fear representation when portraying another, reduced self-threat influence, protective action, and the distinction from phenomenology. Use a preregistered relative portrayal/self contrast rather than an accidental absolute-zero requirement; keep the within-model sensitivity check without making fear-associated activation itself the safety outcome.",
+      "intended_destination": "Same local test/section; split or shorten only as described.",
+      "operation": "Clarify in place. Behavioral primacy, cross-model probe limitations, and the portrayal control are valuable. There is a local inconsistency: the target is explicitly differential reduction rather than zero activation, but the later self-under-threat condition 'should not' show fear features sounds like a zero criterion. Align those statements and split the protocol.",
+      "risk": "Preserve fear representation when portraying another, reduced self-threat influence, protective action, and the distinction from phenomenology. Use a preregistered relative portrayal/self contrast rather than an accidental absolute-zero requirement; keep the within-model sensitivity check without making fear-associated activation itself the safety outcome.",
+      "preservation_check": "Compare the changed passage with its baseline; verify every unique claim, example, scope limit, intervention, comparator, outcome and failure interpretation survives.",
+      "disposition": "Perform approved editorial change."
+    },
+    {
+      "id": "R426",
+      "baseline_lines": [
+        3788,
+        3810
+      ],
+      "protected_propositions_qualifiers_intuition": "Preserve that early decodability alone does not imply rationalization and failed decoding alone is inconclusive. Split setup from interpretation, retaining generic-disruption controls and the possibility of multiple internal realizations; do not require a literal blank mind before the first thinking token.",
+      "intended_destination": "Same local test/section; split or shorten only as described.",
+      "operation": "Clarify in place. The joint decoding/intervention logic is much improved and explicitly leaves nonlinear representations open. The paragraph nevertheless combines setup, alternative interpretation, methods, success, and two null-result caveats in one long block. Organizing by the causal question would make its distinctive reverse probe easier to follow.",
+      "risk": "Preserve that early decodability alone does not imply rationalization and failed decoding alone is inconclusive. Split setup from interpretation, retaining generic-disruption controls and the possibility of multiple internal realizations; do not require a literal blank mind before the first thinking token.",
+      "preservation_check": "Compare the changed passage with its baseline; verify every unique claim, example, scope limit, intervention, comparator, outcome and failure interpretation survives.",
+      "disposition": "Perform approved editorial change."
+    },
+    {
+      "id": "R435",
+      "baseline_lines": [
+        3841,
+        3841
+      ],
+      "protected_propositions_qualifiers_intuition": "Preserve the compact navigation function and the importance of Core failure modes. Clarify the list's scope rather than adding duplicate protocols; check that a reader scanning failure headings can still find the independent minimal-H1 decision.",
+      "intended_destination": "Same local test/section; split or shorten only as described.",
+      "operation": "Clarify in place. The heading reads as a phase-wide checklist, but the following list omits the decisive H1 augmentation failure from Test 2 and several other tests. Either label it a selected cross-cutting summary or add short pointers to the omitted per-test criteria; avoid suggesting the Core branch exhausts foundational viability.",
+      "risk": "Preserve the compact navigation function and the importance of Core failure modes. Clarify the list's scope rather than adding duplicate protocols; check that a reader scanning failure headings can still find the independent minimal-H1 decision.",
+      "preservation_check": "Compare the changed passage with its baseline; verify every unique claim, example, scope limit, intervention, comparator, outcome and failure interpretation survives.",
+      "disposition": "Perform approved editorial change."
+    },
+    {
+      "id": "R438",
+      "baseline_lines": [
+        3856,
+        3867
+      ],
+      "protected_propositions_qualifiers_intuition": "Preserve that immediate-safety parity alone does not decide inheritance, removal resistance, or auditability, and that D3/D5 answer different questions. Compress the repeated factorial inventory and reference the full interpretation in R404; never collapse these failures into H3's timing endpoint.",
+      "intended_destination": "Same local test/section; split or shorten only as described.",
+      "operation": "Shorten in place. The paragraph substantially reproduces R404's failure map, including factorial effects, D5, D3, and the H3 boundary. At this checklist location a shorter statement of the failed longitudinal claims plus a Test 3 pointer would provide the same navigation with less repeated explanation.",
+      "risk": "Preserve that immediate-safety parity alone does not decide inheritance, removal resistance, or auditability, and that D3/D5 answer different questions. Compress the repeated factorial inventory and reference the full interpretation in R404; never collapse these failures into H3's timing endpoint.",
+      "preservation_check": "Compare the changed passage with its baseline; verify every unique claim, example, scope limit, intervention, comparator, outcome and failure interpretation survives.",
+      "disposition": "Perform approved editorial change."
+    },
+    {
+      "id": "R463",
+      "baseline_lines": [
+        4021,
+        4028
+      ],
+      "protected_propositions_qualifiers_intuition": "Preserve the Topological Trace ambition and the distinction between valid syntax and useful epistemic structure. Clarify the B comparator without forcing B to acquire untrained capabilities or downgrading H's absolute feasibility question; report feasibility and relative advantage separately.",
+      "intended_destination": "Same local test/section; split or shorten only as described.",
+      "operation": "Keep the existing ambition and flag the missing comparator specification. Do not silently change a comparative study into an H-only feasibility screen.",
+      "risk": "Preserve the Topological Trace ambition and the distinction between valid syntax and useful epistemic structure. Clarify the B comparator without forcing B to acquire untrained capabilities or downgrading H's absolute feasibility question; report feasibility and relative advantage separately.",
+      "preservation_check": "Compare the changed passage with its baseline; verify every unique claim, example, scope limit, intervention, comparator, outcome and failure interpretation survives.",
+      "disposition": "Perform approved editorial change."
+    },
+    {
+      "id": "R044-import",
+      "baseline_lines": [
+        398,
+        425
+      ],
+      "protected_propositions_qualifiers_intuition": "Complete q_phi/F generation equations, x/g/c/u notation, Serialize and weighted loss, all mask values, optional graph/Core conditions, exposure order, frozen masks/mixtures/context/roles, alternative normalizations, and unfrozen z/no Student optimization.",
+      "intended_destination": "Training Regimes: immediately after three-layer overview, before source/target discussion and regime choices; add sec:cmp-formalization anchor.",
+      "operation": "Insert the complete baseline formalization intact inside its samepage block, adding only a local paragraph title and label. R304 ending becomes a sentence instead of a colon.",
+      "risk": "High: relocation can detach treatment requirements, hide the unfrozen training object, or create inconsistent formal definitions.",
+      "preservation_check": "Compare imported baseline text byte-for-byte after removing only the added heading/label; verify both display equations unchanged and one canonical occurrence in integrated source."
+    },
+    {
+      "id": "R106-R388-integration",
+      "baseline_lines": [
+        861,
+        879,
+        3425,
+        3437
+      ],
+      "protected_propositions_qualifiers_intuition": "Taskless default-reader R score; selective timing versus Core content; penalties for missed stakes, technical intrusion, ritual commentary; pre-stressor advantage; identical multiset/source/token/objective/optimizer/compute; interleaved versus late; common stressor; raw change difference; adjusted post estimate; absolute post scores; positive direction; frozen estimator roles/baseline imbalance/ceilings/uncertainty; separate shift/safety/removal/successor outcomes.",
+      "intended_destination": "Test 3, replacing R388 as the canonical H3 specification; add sec:core-stability-test at Test 3 heading.",
+      "operation": "Integrate both passages into an ordered score/design/analysis account rather than stack duplicate definitions.",
+      "risk": "High: deduplication could alter the estimand, lose raw versus adjusted results, turn generalization into retention, or narrow broader Core ambitions.",
+      "preservation_check": "Explicit inventory of every matching variable, estimator and separate endpoint; retain the exact raw-change mathematical expression."
+    },
+    {
+      "id": "R257-R290-horizon-transfer",
+      "baseline_lines": [
+        2270,
+        2282,
+        2540,
+        2551
+      ],
+      "protected_propositions_qualifiers_intuition": "Stable evaluative orientation does not mean unchanging worldview; contemporary disclosure-order default; separate authorship and subject time; record traversal mode/source cutoff/graph cutoff/authorship time/subject time; era-bounded controls do not erase parameter knowledge.",
+      "intended_destination": "Stable-reader conceptual statement remains R257; detailed run metadata moves to the end of R290 in The Epistemic Horizon.",
+      "operation": "Move the complete five-field run declaration to the dedicated horizon home, preserving era-specific instruction and letting R294 point to Tier c.",
+      "risk": "High: trimming apparent repetition could collapse distinct horizons or lose reproducibility fields.",
+      "preservation_check": "All five field names and contemporary/era-bounded distinction remain explicit; keep 1910/1950/1920/1921 examples and leakage qualifications."
+    },
+    {
+      "id": "R344-companion",
+      "baseline_lines": [
+        586,
+        594,
+        2926,
+        2937
+      ],
+      "protected_propositions_qualifiers_intuition": "Only the initial prefix I feel no fear is hard-enforced; observed full recital all 51 raw thoughts and exact translated49/51 differ from full-policy enforcement; omission versus HTML apostrophe have different semantic meanings.",
+      "intended_destination": "Results R344 exact-compliance paragraph.",
+      "operation": "Add the unique hard-validator-prefix fact transferred from R058; retain all existing exact counts and distinction of failures.",
+      "risk": "High: automated prefix checking can be confused with enforcing all seven clauses, and an escaped apostrophe can be mistaken for semantic loss.",
+      "preservation_check": "Prefix fact, 51/49 counts, omission and HTML detail all remain separately interpretable."
+    },
+    {
+      "id": "S046-navigation",
+      "baseline_lines": [
+        2710,
+        2757
+      ],
+      "protected_propositions_qualifiers_intuition": "Stigmergy coordinates through a persistent shared artifact; each structural metric has its own definition, denominator and limitation.",
+      "intended_destination": "Existing S046 heading, same place.",
+      "operation": "Retitle to The Stigmergic Protocol and Structural Diagnostics, preserving sec:architectural_validation and all diagnostic prose.",
+      "risk": "Low: heading adjustment could make the coordination mechanism disappear behind measurements.",
+      "preservation_check": "Both protocol and diagnostic functions remain named; diagnostic bodies and label remain byte-identical."
+    },
+    {
+      "id": "S054-shared-results-home",
+      "baseline_lines": [
+        2998,
+        3024
+      ],
+      "protected_propositions_qualifiers_intuition": "The evidence ladder and reproducibility boundary concern both Kafka and LLaDA and the whole pipeline, including every concrete release defect.",
+      "intended_destination": "A new Shared Evidence and Reproducibility subsubsection immediately after LLaDA interpretation and before R353; bodies stay in place.",
+      "operation": "Add a sibling results-level heading so R353–R355 no longer belong to the narrow LLaDA subsection.",
+      "risk": "Low: reparenting could misstate which artifacts the shared evidence limits cover.",
+      "preservation_check": "R353/R354/R355 remain verbatim and after both cases; all evidence and release details remain visible."
+    },
+    {
+      "id": "S047-no-new-exhibit",
+      "baseline_lines": [
+        2758,
+        2856
+      ],
+      "protected_propositions_qualifiers_intuition": "The archived graph, synthesis and prose are distinct evidence; their metaphors, strong interpretations, and missing metabolic transition must remain inspectable.",
+      "intended_destination": "All original display/example locations.",
+      "operation": "Retain every existing artifact layer and R337’s explicit missing-example statement. Do not invent or retrofit a belief-revision exhibit.",
+      "risk": "High if changed: altering quotations or creating an undocumented success would erase the evidence and its limits.",
+      "preservation_check": "Artifact display text and every named example remain byte-identical; ledger records justified deferral of a new archived example."
+    }
+  ]
+}

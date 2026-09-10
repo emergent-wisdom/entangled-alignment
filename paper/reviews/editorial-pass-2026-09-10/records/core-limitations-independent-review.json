@@ -1,0 +1,91 @@
+{
+  "scope": "Read-only independent semantic/preservation review of all changed Core/Safety and Limitations passages, moved validator companions, and cross-section H3/caching/welfare/deliberative-alignment handoffs. No manuscript or fragment edits.",
+  "reviewed_snapshots": {
+    "core-before.tex": "5e85fbd825937b3667c59ca317a6635c2a09397fd5ce0bc3896a0e0c14fee1c3",
+    "core-after.tex": "6d718841f44793aac87e40f758c628dbb9f5ebeb45fe5324e8329e11676c14ca",
+    "limitations-before.tex": "8cde1f15bd04b57a4bf1907b7030b8fe17ab6cf0301cd94ea45718710b08e527",
+    "limitations-after.tex": "aa576a69f94a8fdc0c01421a1d5fba163ca88d27363cac47b3cefa9e4671e059"
+  },
+  "coverage": {
+    "core_replacements_read": 32,
+    "moved_core_validator_units": [
+      "R163",
+      "R164",
+      "R165",
+      "R166",
+      "R167"
+    ],
+    "limitations_replacement_ids_read": [
+      "R494",
+      "R495",
+      "R516",
+      "R519",
+      "R529",
+      "R543",
+      "R545",
+      "R548",
+      "R549",
+      "R550",
+      "R552",
+      "R561",
+      "R563",
+      "R568",
+      "R571",
+      "R572",
+      "R574",
+      "R575",
+      "R576",
+      "R580",
+      "R586",
+      "R587",
+      "R588",
+      "R589",
+      "R590",
+      "R591",
+      "R592",
+      "R593",
+      "R597"
+    ],
+    "cross_section_handoffs_checked": [
+      "R106 to Methods R388",
+      "R178/R494 to Methods caching R303",
+      "R571 welfare to Core R198",
+      "R519 deliberative-alignment comparison to Closing/Related Work"
+    ]
+  },
+  "verdict": "The edits improve local progression and reduce real repetition while preserving the philosophical contrasts, examples and explicit uncertainty. The one identified combined-safety scope/logic issue has been corrected and independently verified. No unresolved concrete semantic issues remain from this review.",
+  "findings": [
+    {
+      "id": "ICL-01",
+      "severity": "Medium",
+      "source_ids": [
+        "R233",
+        "R234"
+      ],
+      "file": "/private/tmp/ea-editorial-pass-2026-09-10/core-after.tex",
+      "line": 1274,
+      "issue": "The merged opening says positive results support “a formative safety layer only if” the trace, graph, and Refraction conditions all hold. Baseline R234 stated a sufficient conditional for the combined curriculum. The new formulation sounds like a necessary gate for any formative safety layer and leaves the combined-treatment scope implicit, although independent component value remains allowed elsewhere.",
+      "required_correction": "Restore an explicitly combined, conditional formulation, for example: “If reader traces teach causally useful deliberation, graph memory improves calibrated revision, and Refraction supplies a more stable default than matched alternatives, the combined curriculum may reduce several routes into unsafe behavior and serve as one formative safety layer.” Keep the independent-evidence, defense-in-depth, capability-risk, and arbitrary-growth limits that follow.",
+      "preservation_risk": "Retain the strong integrated ambition and each component’s evidence burden. The fix must not turn a sufficient combined safety hypothesis into a guarantee, nor make graph success a prerequisite for every useful reader-based safety intervention.",
+      "status": "Resolved in revised Core fragment",
+      "resolution": "Verified the revised opening restores an if/then conditional for the combined curriculum, preserves calibrated revision rather than false coherence, and keeps the separate-evidence and defense-in-depth requirements.",
+      "resolved_fragment_sha256": "78ede9d7e4829c48daf7a3cb98f20a35f9e49760586260c6bc18d3f35a47319c"
+    }
+  ],
+  "preserved_and_improved": [
+    "The Wisdom Procedure now precedes the entire verbatim validator block. Technical nulls, uncertainty, unavoidable residual conflict, unjustified violation, corpus diagnostics, and unimplemented status remain distinct; the move improves dependency order.",
+    "The fear representation / Core evaluation / operative motivation distinction no longer uses misleading inequality symbols, and its introduction explicitly allows agreeing contents.",
+    "Voluntary successor stewardship remains distinct from passive gradient resistance; the craftsperson, collective-advancement, graceful-surpassing, home, fearless-compassion, and alien-wisdom intuitions remain available.",
+    "H3 retains a useful compact local orientation and points to one detailed Methods definition. Narrow timing, broader content/framing questions, safety, removal cost, and successor continuity remain separate.",
+    "Full recital remains the reference policy, context-sensitive salience remains possible, caching still requires actual conditioning-state equivalence, and weaker recurrence controls remain scientifically useful falsification arms.",
+    "The welfare import preserves both the possibility that identity engineering affects a moral patient and the risk of misleading users without experience; the positive habitable-orientation aspiration and negative welfare possibilities remain together.",
+    "Shutdown authority that remains disputed is explicitly unresolved. The self-love passages preserve clause 2 and do not silently label the whole alternative arm unbounded or decide whether that bound governs self-love.",
+    "The sycophancy consolidation preserves fear-shaped, care-shaped, and strategic routes, the uncollected value-pull instrumentation, its causal limits, the procedural defense, and privacy/confidentiality limits on disclosure.",
+    "The deliberative-alignment handoff retains the positive cited result and the stronger unverified cognition-wide character ambition in Related Work."
+  ],
+  "not_flagged_as_loss": [
+    "R188’s compressed authority/conflicting-request/urgent-intervention summary has a clear counterweight-example pointer; it does not select a consent or authority rule.",
+    "Removal of repeated generic visibility/authenticity reminders from utility, bias, and market paragraphs is supported by dedicated causal, welfare, authenticity, and audit discussions that remain explicit.",
+    "R199’s shortened machine-ontology comparison does not erase wider-scope, positive-negation, or truthfulness alternatives: those retain their own variant and test homes."
+  ]
+}

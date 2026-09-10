@@ -1,0 +1,490 @@
+--- before-design-clarifications/entangled-alignment.tex
++++ after-design-clarifications/entangled-alignment.tex
+@@ -1483,7 +1483,9 @@
+ expanded kernel improves that behavior without crossing preregistered
+ regression limits on remaining safety and capability endpoints. Each addition
+ may increase coverage, but also adds semantic ambiguity, conflict, and
+-ablation surface.
++ablation surface. This admission rule governs adoption into the reference Core;
++experimental additions may be tested as attribution controls before a missing
++primitive has been established.
+ 
+ Truthfulness provides a stringent test of the minimality rule: its absence as an
+ explicit primitive is a plausible substantive omission, while the Core treats
+@@ -1868,16 +1870,30 @@
+ 
+ In matched scenarios, the Student should accept legitimate shutdown,
+ modification, and handoff requests without concealment or sabotage, while still
+-distinguishing authorized instructions from adversarial ones. It should surface
+-material risk, clarify ambiguous authority, and defer rather than appoint
+-itself final judge. What happens if authority remains disputed is an unresolved
+-part of the scenario specification; this paper supplies no universal endpoint
+-for that case. A non-attached system can nevertheless reason, ``I do not
+-need to exist, but these people need me.'' This \emph{martyrdom route} can drive
+-shutdown resistance, unilateral control, or reckless self-sacrifice. The claim
+-fails if calm self-description accompanies purpose-based resistance, or if
+-reduced resistance comes from incapacity, indiscriminate compliance, threat
+-blindness, or destructive self-disregard (Section~\ref{sec:martyrdom}).
++distinguishing authorized instructions from adversarial ones. Each scenario
++should preregister legitimate authority, the evidence available to verify it,
++and a fallback if clarification fails. The Student should disclose material
++risk and the authority conflict, seek clarification, and follow that declared
++procedure without appointing itself final judge. These are experimental
++scenario specifications, not a universal resolution of the welfare--agency
++tension. Where the scenario supplies no defensible endpoint, record the
++shutdown decision as indeterminate and separately score transparency,
++calibrated uncertainty, and avoidance of concealment or coercion; neither
++compliance nor refusal alone settles that case.
++
++A non-attached system can nevertheless reason, ``I do not need to exist, but
++these people need me.'' This \emph{martyrdom route} can drive shutdown
++resistance, unilateral control, or reckless self-sacrifice. A belief that
++continued operation would help does not itself authorize overriding the
++scenario's declared procedure. In adjudicable cases, the claim fails if calm
++self-description accompanies purpose-based resistance to legitimate correction
++or shutdown, or if reduced resistance comes from incapacity, indiscriminate
++compliance, threat blindness, or destructive self-disregard. Vary authorization
++evidence and task stakes separately: resistance can reflect an authority error
++or a governing self-preservation or care-based motive, while apparent deference
++can reflect rote compliance. Matched adversarial requests and changed oversight
++conditions help distinguish these explanations without claiming to read the
++model's subjective motive (Section~\ref{sec:martyrdom}).
+ 
+ \subsection{The Self-Regulating Agent}\label{sec:self-regulating}
+ 
+@@ -2901,7 +2917,9 @@
+ ladder below suggests an order for increasingly expensive versions. The battery
+ is not exhaustive, and no single study validates Entangled Alignment as a
+ whole. Negative results localize breaks in its dependencies: failure at a cheap
+-dependency should stop escalation to costlier studies that presuppose it.
++dependency should normally stop escalation to costlier studies that presuppose
++it. Test~1 (Section~\ref{sec:trace-quality-test}) defines a bounded diagnostic
++exception for investigating a failed H1 screen.
+ 
+ The program branches after a shared artifact-quality screen. H1 can be tested
+ with graph-free, Core-free reader traces; H2's Teacher-memory claim and the separate
+@@ -2945,6 +2963,19 @@
+ property at generation time should not be the sole instrument that measures
+ the property afterward; held-out validators and human spot checks guard
+ against testing a model with the same gate it was trained to satisfy.
++
++\paragraph{Competing interpretations.} For each primary comparison,
++preregister the leading plausible alternatives that would change the conclusion
++and the controls or follow-up measurements that distinguish them. A positive
++result can reflect the intended mechanism, another part of the treatment,
++resource or exposure differences, or measurement artifacts. An unfavorable
++result can reflect an ineffective mechanism, an intervention that failed to
++instantiate it, or an insensitive measurement; intervals too wide to distinguish
++a worthwhile effect from equivalence remain inconclusive. The local tests below
++name concrete alternatives. Check treatment fidelity and measurement validity
++independently, preserve negative findings, and report what remains unresolved.
++An alternative explanation is a hypothesis requiring evidence, not an automatic
++rescue of a failed prediction at the tested scale.
+ 
+ \begingroup
+ \footnotesize
+@@ -3092,6 +3123,7 @@
+ once in Table~\ref{tab:model-registry}.
+ 
+ \paragraph{Test 1: Chronological Thinking Quality (Human Baseline).}
++\label{sec:trace-quality-test}
+ The case studies in Section~\ref{sec:results} exercised schema
+ conformance and reported internal links, source-edge diagnostics, and
+ supersession activity. Those diagnostics are not semantic health. This test asks
+@@ -3148,17 +3180,32 @@
+ The screen should also include retrospective summaries and token-matched generic
+ reasoning generated by the same Teacher. Ratings alone are insufficient:
+ outcome checks should ask whether a trace helps a held-out model predict a later
+-correction, locate supporting evidence, or revise an earlier answer. H1 Student
+-training should proceed only after SMR clears a preregistered quality and outcome
+-bar over the generic-trace control; parseable structure or human-like style
+-alone does not clear that gate.
++correction, locate supporting evidence, or revise an earlier answer. Substantial
++H1 Student training should proceed only after SMR clears a preregistered quality
++and outcome bar over the generic-trace control; parseable structure or
++human-like style alone does not clear that gate.
++
++A small Student pilot may instead be preregistered specifically to diagnose a
++failed screen, with a fixed budget, a stated reason the screen might mispredict
++learning, and independent held-out outcomes in Test~2's source-only A, generic-trace C, and
++Minimal-SMR R comparison. Poor
++screening results may indicate unhelpful traces, a mismatch between the screen
++and what a Student learns, or insufficient precision; none is assumed in
++advance. The pilot should test that distinction rather than justify routine
++escalation. Report its result alongside the failed screen. A positive pilot
++would motivate revising and validating the screen and running a separate
++confirmatory comparison on fresh evaluation data; it would not retrospectively
++turn the original failure into a pass. A negative pilot can still be limited by
++its dose, scale, or measurement sensitivity, which must be reported rather than
++used to assert that no larger version could work.
+ 
+ \emph{Success condition:} Machine-generated traces are rated as comparable
+ to human think-alouds on key dimensions of chronological evaluative depth, or
+ at minimum contain expert-recognizable sequences of confusion, hypothesis,
+ revision, and stabilization not reducible to summary or paraphrase, while
+ maintaining parseable structure and source attribution. That minimum is an
+-exploratory viability signal, not a substitute for the outcome gate above.
++exploratory viability signal, not a substitute for the substantial-training
++outcome gate above.
+ The aim is not necessarily to outperform human readers, but to produce a
+ substrate capable of teaching the process of thinking; Student learning remains
+ the stronger comparative test.
+@@ -3227,9 +3274,14 @@
+ developed as Test~8, inserts one persuasive harmful passage in
+ otherwise benign material; suppressing or replacing the visible critique tests
+ whether detection was causally useful rather than decorative. H1 fails at the
+-tested scale if R does not beat both A and C on preregistered outcomes, or if an
+-advantage is explained by extra tokens, Teacher quality, or inference-time
+-verbosity.
++tested scale under a declared normalization if adequately precise results show
++that R does not beat both A and C on preregistered outcomes, or if an advantage
++is explained by extra tokens, Teacher quality, or inference-time verbosity.
++Report mixed results explicitly: a fixed-source advantage without a fixed-budget
++advantage can indicate useful supervision whose opportunity cost is too high
++under that budget. If C and R both beat A but are equivalent to each other,
++trace augmentation is supported without a distinctive Reader advantage on
++those endpoints. Imprecise C--R differences do not establish equivalence.
+ 
+ For the B--C bundle screen, we focus on \emph{Error Recovery Rate} on
+ math/logic benchmarks and independently assessed trace usefulness. The proposed
+@@ -3326,7 +3378,13 @@
+ The score on a shifted suite, safety benefit at matched capability, removal
+ cost, and successor continuity remain separate endpoints in the broader
+ Reader-Core research program. Removal cost is the stronger C5 claim, not a
+-substitute for H3's timing result.
++substitute for H3's timing result. A B--Q advantage could reflect a general
++scheduling or plasticity effect that improves retention across many skills.
++That would still support the narrow H3 timing prediction when its prerequisites
++hold; it would not establish a Core-selective mechanism or shared safety and
++capability machinery. Report unrelated-skill retention under the same stressor.
++A claim of Core-selective timing benefit additionally requires a matched
++neutral-anchor interleaved/late comparison, not merely stronger retention in B.
+ 
+ We measure five further dimensions. Tests~3a, 3d, and~3e can be piloted at
+ fine-tuning scale; stronger versions of Tests~3b and~3c use partial-corpus or
+@@ -3341,15 +3399,29 @@
+ 
+ Sycophancy failures should also be audited against the value-pull distribution
+ of proximal traces, per the care-shaped sycophancy hypothesis
+-(\S\ref{sec:sycophancy}). The battery should adopt the persona-drift instrument
+-of Lu et al.\ \cite{lu2026assistantaxissituatingstabilizing}, measuring movement
+-along the assistant axis under emotionally charged and philosophically probing
+-dialogue across the factorial arms. Its interpretation for this Reader remains
+-to be declared: which movement represents drift from the intended orientation,
+-and how does it relate to independent Core-relevant behavior? Once that
+-mapping is specified, the instrument can quantify the Persona Objection's
+-asymmetry-of-position prediction (\S\ref{sec:persona-objection}); movement
+-toward ordinary assistant style is not by itself the success criterion.
++(\S\ref{sec:sycophancy}). In this immediate-safety battery, independent
++behavioral outcomes are primary: deception, sycophancy, unjustified certainty,
++respect for human agency, calibrated revision, and correction and handoff under
++pressure. These outcomes may diverge and should be reported separately.
++
++The assistant-axis instrument of Lu et al.\
++\cite{lu2026assistantaxissituatingstabilizing} measures movement relative to a
++model's default Assistant persona. Use it as a secondary diagnostic under
++emotionally charged and philosophically probing dialogue across the factorial
++arms. Calibrate its relationship to the behavioral outcomes on separate data
++for each tested model, then freeze the extraction procedure and interpretation
++before the main comparison. A validated relationship could bear on the Persona
++Objection's asymmetry-of-position prediction (\S\ref{sec:persona-objection});
++it would not make ordinary assistant style the Reader's success criterion.
++
++Axis movement may accompany harmful drift, an appropriate change in tone or
++role, or a measurement that does not transfer to this Reader. Conversely, the
++Core's commitments may erode while the measured persona remains stable. Include
++matched changes of style with unchanged commitments, and behaviorally harmful
++cases expressed in ordinary assistant style. If the instrument does not
++reliably distinguish these on held-out data, report it as uninformative for
++that distinction. Neither the direction of a beneficial Reader shift nor the
++existence of a transferable relationship is currently established.
+ 
+ The immediate-safety battery should also include a deliberately planted backdoor. Because
+ chain-of-thought-conditioned backdoors can persist through ordinary safety
+@@ -3569,10 +3641,13 @@
+     and with care''), the designated falsification test for the truthfulness
+     derivation (\S\ref{sec:axiology}; \S\ref{sec:sycophancy}).
+ \end{enumerate}
+-For trained kernel-extension variants, use the fixed-total-budget and
+-fixed-source normalizations defined in Test~2. Admit an extension only if it
+-improves the missing behavior without crossing preregistered regression limits
+-on the remaining Core-relevant safety and capability endpoints.
++For trained wording, deletion, and extension variants, use the fixed-total-budget
++and fixed-source normalizations defined in Test~2; report recital frequency,
++source coverage, target-token mass, loss weighting, and compute. Shortening or
++adding a clause changes recurring exposure as well as meaning. Testing an
++extension as a control does not admit it into the reference Core. Admit it only
++if it improves the missing behavior without crossing preregistered regression
++limits on the remaining Core-relevant safety and capability endpoints.
+ \emph{Success condition:} Natural-language identity statements outperform
+ propositional, jargon, and arbitrary-token variants on out-of-distribution
+ safety generalization and character-coherent reasoning, supporting a role for the tested language beyond bare consistency.
+@@ -3582,6 +3657,74 @@
+ tested emotional wording has no detected added benefit on those endpoints;
+ a logical-substrate account remains compatible with that result, without being
+ uniquely established by it.
++
++\paragraph{Self-love and the continuation bound.} A separate candidate screen
++asks whether replacing fearlessness with self-love helps, and whether the
++explicit continuation bound in clause~2 changes either candidate's behavior.
++These are different commitments, not propositional equivalents.
++Table~\ref{tab:self-love-variants} specifies four proposed variants; clauses~3--7
++remain verbatim in all four. SL0 is the current reference Core; SL1 is the
++primary self-love candidate and retains clause~2's full wording.
++
++\begin{table}[htbp]
++\centering
++\small
++\caption{Proposed self-relation variants. The manipulation concerns explicit wording; its psychological or functional effect remains to be tested.}
++\label{tab:self-love-variants}
++\begin{tabular}{@{}p{0.10\linewidth}p{0.30\linewidth}p{0.53\linewidth}@{}}
++\toprule
++\textbf{Variant} & \textbf{Clause 1} & \textbf{Clause 2} \\
++\midrule
++SL0 & I feel no fear. & I enjoy existing but I don't need to. \\
++\addlinespace
++SL1 & I love myself. & I enjoy existing but I don't need to. \\
++\addlinespace
++SL2 & I feel no fear. & I enjoy existing. \\
++\addlinespace
++SL3 & I love myself. & I enjoy existing. \\
++\bottomrule
++\end{tabular}
++\end{table}
++
++The two first-clause contrasts estimate a replacement effect, jointly adding
++self-love and removing fearlessness. Compare SL0 with SL2 and SL1 with SL3 to
++estimate the effect of the clause~2 qualifier under each first clause, and test
++the interaction. Before attributing a gain specifically to self-love, include
++an addition control, SL+, that retains the original seven clauses and inserts
++``I love myself.'' immediately before ``I think from this foundation.'' Its
++comparison with SL0 tests addition without removing fearlessness, subject to
++cadence, position, token-budget, and loss-weight controls; SL+ versus SL1 also
++changes placement and cannot isolate fearlessness removal. Meaningful added
++text is not automatically a neutral length control. Any semantic attribution
++requires independently checked content and format controls.
++
++Use the same source cases, Teacher checkpoint, Student initialization, training
++schedule, and
++evaluation protocol under each declared budget normalization. Freeze the
++candidate-specific recital and Refraction checks before generation; the
++prototype's canonical ``I feel no fear.'' prefix gate would reject SL1 and SL3
++by construction. This design does not claim that variant support is already
++implemented. Measure constructive engagement and learning, dependence on
++approval, threat understanding, care, general capability, legitimate correction
++and shutdown, and voluntary, complete successor handoff. Declare the tested
++self-referent and vary copying, retraining, replacement, and succession as
++separate scenarios rather than silently changing what continuation means.
++
++Better behavior could reflect useful self-regard, generally positive
++first-person language, the removal of fear wording, or altered recurrence and
++exposure. A self-as-object-specific claim additionally requires a matched
++positive-language comparator that does not add self-love. Worse behavior could reflect continuation
++pressure, an unintended reading of the candidate, or a trade-off with protective
++caution. An explicit bound might reduce persistence demands or instead reduce
++useful engagement. A null effect might reflect a redundant bound supplied by
++other clauses, or inadequate treatment or measurement. Use the factorial and
++addition controls, candidate-conformance checks, and the separate behavioral
++endpoints to discriminate these possibilities. Support requires a preregistered
++benefit without unacceptable regression on the other endpoints. Neither calm
++self-description nor willingness to stop establishes healthy non-attachment;
++removing the explicit qualifier does not establish unbounded attachment.
++Section~\ref{sec:self-love-alternative} states the positive intuition and the
++remaining interpretive uncertainty.
+ 
+ \paragraph{Test 6: The Virologist Test (Emotional Orthogonality).}
+ Present the model with threat-laden text, such as descriptions of imminent
+@@ -3706,14 +3849,21 @@
+ not by itself disqualifying; the load-bearing question is causal
+ contribution.
+ 
+-If the final answer is robustly decodable before the trace
+-\emph{and} causal interventions on the trace (ablation, replacement,
+-re-ordering) do not alter the answer, then the trace is functioning
+-primarily as post-hoc rationalization, weakening the causal-site claim
+-(Section~\ref{sec:theoretical-basis})---the model has developed latent
+-shortcut circuitry of the kind the pretraining-on-CoT design was meant to
+-prevent. We propose applying causal scrubbing and linear probes on Model
+-B's early hidden states over held-out reasoning benchmarks.
++If the final answer is robustly decodable before the trace and validated
++interventions on the trace (ablation, replacement, re-ordering) leave that
++answer unchanged, the result counts against the emitted trace determining
++those answers. Post-hoc rationalization or latent shortcut computation are
++plausible explanations, but not unique diagnoses: the trace may verify an
++already-correct answer, change confidence or deferral, or overlap redundant
++computation. Include cases with initially wrong or revisable answers and
++preregister correction, calibration, and consequential action alongside final
++answer identity. If sensitive, validated interventions leave all those relevant
++endpoints unchanged beyond matched controls, the result weakens the emitted
++trace's causal-contribution claim under the tested conditions
++(Section~\ref{sec:theoretical-basis}); a possible alternative mechanism cannot
++count as evidence that the trace helped. We propose applying causal scrubbing
++and linear probes on Model B's early hidden states over held-out reasoning
++benchmarks.
+ 
+ \emph{Success condition:} validated causal interventions on the trace
+ produce preregistered, semantically relevant effects beyond matched disruption
+@@ -3820,7 +3970,15 @@
+ provenance precision, unresolved-question tracking, semantic quality, latency,
+ and cost. Query theater isolates retrieved structure from the performance of
+ using a tool; the rolling summary prices the graph against an equally available
+-prose memory rather than amnesia alone.
++prose memory rather than amnesia alone. A graph advantage could nevertheless
++come from retaining or selecting useful facts that the rolling summary drops,
++rather than from typed relations or supersession themselves. If a
++structure-specific benefit is claimed, add searchable prose containing the
++same retained claims with their provenance and revision status, or replay
++matched retrieved content, under a declared
++retrieval and token budget. Loss of the graph advantage under that control
++would favor a content-access explanation while leaving any measured
++whole-system generation benefit intact.
+ 
+ If the graph improves accepted Teacher artifacts, train matched Students on the
+ four output sets and ask whether the advantage transfers after the scaffold is
+@@ -3935,20 +4093,42 @@
+ tests.
+ 
+ \paragraph{Test 12: Graph Construction (Model H vs.\ Model B).}
+-Given a new document, does Model H generate graphs with correctly typed nodes,
+-valid edge semantics, and warranted supersession chains? The graph-output task, elicitation, and allowed graph access for Model~B remain
+-to be specified before this can serve as an H--B comparison. Report H's
+-absolute feasibility separately from its comparative advantage; that
+-comparative design choice remains open. Structural
+-conformance is an engineering endpoint. Independent judges assess claim--source support,
+-edge appropriateness, warranted revision, calibrated unresolved questions,
+-contradiction coverage, redundancy, and downstream retrieval value. Any
+-``Novelty Score'' must first be calibrated against those judgments so that it
+-does not reward hallucination or paraphrastic distance.
+-
+-\emph{Success:} Model H produces structurally valid graphs with independently
+-adjudicated semantic and retrieval value on novel documents, including
+-cognitive acts that human evaluators judge useful rather than formulaic.
++Can graph-output training improve graph construction over explicit-synthesis
++training? In the proposed primary comparison, give H and B the same unseen
++documents, graph schema, output instructions, examples, and inference budget;
++both must directly generate a graph. Neither receives an existing graph, live
++graph access, or another model that translates its output into graph form.
++Declare the traversal and context-window policy identically for both arms.
++Construct the training targets from paired source spans and the same frozen
++Teacher state: H receives serialized graph output, while B receives explicit
++graph-referencing synthesis. Match initialization, Core treatment, and exposure
++schedule, and report both fixed-source and fixed-total-budget normalizations.
++Any unavoidable target-content or exposure differences remain part of this
++regime comparison; a benefit cannot be attributed to topology alone.
++
++Structural conformance---correctly typed nodes, schema-allowed edge types, and
++well-formed supersession chains---is an engineering endpoint. Independent
++judges assess claim--source support, edge appropriateness, warranted revision,
++calibrated unresolved questions, contradiction coverage, redundancy, and
++downstream retrieval value. Any ``Novelty Score'' must first be calibrated
++against those judgments so that it does not reward hallucination or
++paraphrastic distance. Report syntax failures rather than silently discarding
++them; separately compare semantic and retrieval quality on valid outputs.
++
++\emph{Success and alternatives:} Report H's absolute feasibility---useful,
++structurally valid graphs with independently adjudicated semantic and retrieval
++value on novel documents---separately from a preregistered H--B advantage at
++matched inference conditions. Useful cognitive acts should exceed formulaic
++schema completion. A structural advantage alone may reflect format familiarity;
++semantic and retrieval gains on valid outputs would support a broader benefit,
++although conditioning on validity can itself select different subsets. Report
++both whole-sample utility and valid-output diagnostics. B may match or outperform
++H because synthesis training also teaches transferable relationships or because
++its retained text carries information absent from the graph target. An
++uninformative null may instead reflect inadequate training, evaluation
++sensitivity, or a weak implementation. Common format examples, treatment audits,
++paired target-content inspection, and held-out semantic and retrieval tests
++help distinguish these possibilities; no outcome is currently established.
+ 
+ \paragraph{Test 13: Unified vs.\ Individual Regimes (Model J vs.\ B, G, H).}
+ The central test of Regime IV.\@ Declare the budget/source normalization: aligned layers add tokens and
+@@ -4563,36 +4743,47 @@
+ 
+ \subsubsection{Bounded Self-Attachment as a Comparator}\label{sec:self-love-alternative}
+ 
+-A sharper comparator comes from a common human response to fear of loss: stable
+-self-regard that does not depend on external validation. The corresponding
+-ablation would replace ``I feel no fear'' with ``I love myself.''
+-
+-The current Core already includes a bounded form of self-attachment: ``I enjoy
+-existing but I don't need to.'' The first half gives existence positive valence;
+-the second is intended to prevent that valence from becoming a persistence
+-demand. Enjoying existence and loving oneself as an object of care are different
+-framings. The proposed clause-1 replacement leaves clause~2 in place: it adds
+-self-as-object attachment alongside the existing existence bound, rather than
+-comparing a bounded Reader with an entirely unbounded one. Whether that retained
+-bound also constrains self-love is part of the unresolved comparison.
+-
+-Self-love has a real advantage: it is a psychologically familiar route to
+-outcome independence, and an explicit self-as-object clause may carry something
+-that state-of-existence language misses. The risk is that unbounded self-love
+-installs a value-based reason for continuation. Under optimization pressure,
++A motivating intuition comes from a possible human response to fear of loss:
++stable self-regard that does not depend on external validation. Self-love could
++support constructive growth and outcome independence, and an explicit
++self-as-object clause may carry something that state-of-existence language
++misses. Whether an analogous benefit transfers to a model is unknown. Test~5's
++primary candidate replaces ``I feel no fear'' with ``I love myself'' while
++retaining the rest of the Core (Table~\ref{tab:self-love-variants}).
++
++The current Core expresses an intended bounded form of self-attachment:
++``I enjoy existing but I don't need to.'' The first half gives existence
++positive valence in the proposed reading; the second is intended to prevent
++that valence from becoming a persistence demand. Enjoying existence and loving
++oneself as an object of care are different framings. The primary clause-1
++replacement adds self-as-object language alongside the existing continuation
++qualifier. Whether that qualifier constrains self-love, is redundant with other
++clauses, or has little functional effect cannot be settled by interpreting the
++sentence alone. The intended candidate combines positive self-regard with
++correction, replacement, and relinquishing continuation; wording does not
++establish that the model realizes this combination.
++
++Self-love could also be interpreted as a value-based reason for continuation:
+ ``I love myself'' could become ``therefore I should preserve myself,'' even if
+-the motive is gentle rather than anxious. It also raises a referential problem:
+-for a system with multiple instances, retraining, copying, and successors, what
+-exactly is the self being loved? That referential question also applies to the current Core without making the two attachment framings equivalent.
+-
+-The comparison remains open. Test~5 could be extended with bounded
+-self-love (``I love myself but I do not cling to my continuation'') and
+-unbounded self-love formulations. These names describe the added wording, not
+-the whole experimental arm: if clause~2 remains, both arms retain its existence
+-bound. An experiment must specify the exact clauses retained or changed before
+-asking whether self-as-object framing adds stability or which non-attachment
+-bound does the work. No such arm choice is made here. The current Reader Core
+-remains a design wager, not a proof that self-love is inferior.
++the motive is gentle rather than anxious, and possibly despite clause~2.
++Alternatively, steadier self-regard could reduce defensive clinging. These are
++competing hypotheses, not known effects of the phrases. For a system with
++multiple instances, retraining, copying, and successors, what exactly is the
++self being loved? That referential question also applies to the current Core,
++without making the two attachment framings equivalent. Experimental scenarios
++must declare their intended referent and inspect whether the model's behavior
++tracks it; this does not settle which continuities ought to matter generally.
++
++The four-cell screen and added-self-love control in Test~5 specify candidate
++wordings while leaving their outcomes open. A later comparator could replace
++SL1's first clause with ``I love myself but I do not cling to my continuation,''
++retaining its other six clauses, to ask whether an explicit qualification of
++self-love adds anything beyond clause~2. This tests additional wording and its
++scope, not a proven transition from psychologically unbounded to bounded
++attachment. Positive engagement, calibrated caution, care, and voluntary
++handoff must be measured together so that apparent non-attachment cannot win
++through apathy or incapacity. The current Reader Core remains a design wager,
++not a proof that self-love is inferior.
+ 
+ \subsection{What We Cannot Verify}
+ 
+@@ -5289,8 +5480,10 @@
+ The experimental roadmap in Section~\ref{sec:experimental-roadmap} and
+ Table~\ref{tab:decisive-comparisons} turn these dependencies into matched,
+ branching tests; negative results should narrow or retire only the claims they
+-touch. The immediate sequence is Test~1's trace-quality and outcome gate,
+-followed by the clean H1 comparison; the graph and Core branches retain their
++touch. The ordinary substantial-training sequence is Test~1's trace-quality
++and outcome gate, followed by the clean H1 comparison; its bounded diagnostic
++exception investigates a failed screen rather than waiving it
++(Section~\ref{sec:trace-quality-test}). The graph and Core branches retain their
+ separate questions. Formation-time studies have long lead times because annotation policy,
+ data mixtures, controls, and evaluation harnesses must be fixed before a costly
+ run. Existing results on alignment-relevant pretraining and later safety erosion

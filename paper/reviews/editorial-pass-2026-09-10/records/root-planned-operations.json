@@ -1,0 +1,586 @@
+{
+  "candidates": [
+    {
+      "id": "R002",
+      "start": 107,
+      "end": 107,
+      "goal": "Explain the Missing Reader and complete training route.",
+      "audit_action": "Shorten",
+      "operation": "Shorten in place. The sequence is clearer, but one abstract paragraph still carries two acronyms, graph continuity, exact recital, three components, and four outcome families.",
+      "risk": "Retain continuous Reader, contextual care, generation-to-training distinction, and separability; move implementation detail rather than the vision.",
+      "status": "Proposed editorial operation"
+    },
+    {
+      "id": "R007",
+      "start": 127,
+      "end": 127,
+      "goal": "Motivate studying alignment during capability formation.",
+      "audit_action": "Shorten",
+      "operation": "Shorten in place. Timing and growing evaluation difficulty are useful premises, but remedial framing and extended concessions anticipate R008/R010/R011.",
+      "risk": "Preserve post-training achievements and the expanding-situations motivation; avoid implying only later alignment faces limited supervision.",
+      "status": "Proposed editorial operation"
+    },
+    {
+      "id": "R011",
+      "start": 143,
+      "end": 143,
+      "goal": "Explain long-run distribution-shift stakes.",
+      "audit_action": "Merge",
+      "operation": "Merge the distinct long-run stakes into R007\u2013R010's opening motivation.",
+      "risk": "Retain the specific extrapolation to more consequential systems and its uncertainty; merge those clauses into the opening motivation.",
+      "status": "Proposed editorial operation"
+    },
+    {
+      "id": "R014",
+      "start": 169,
+      "end": 175,
+      "goal": "Make the missing-reader intuition memorable.",
+      "audit_action": "Merge",
+      "operation": "Merge the library/reader phrase and update-policy distinction into R013.",
+      "risk": "Keep the memorable phrase and under-recorded update-policy distinction in R013; do not remove the thought-placement idea.",
+      "status": "Proposed editorial operation"
+    },
+    {
+      "id": "R015",
+      "start": 177,
+      "end": 188,
+      "goal": "Introduce useful synthetic inquiry and its recovery limits.",
+      "audit_action": "Shorten",
+      "operation": "Shorten in place. The original questions now lead to genuine revision, but the think-aloud and faithfulness qualifications interrupt the example's momentum.",
+      "risk": "Keep synthetic usefulness distinct from private-thought recovery and retain the citation; consolidate its qualification outside the example's flow.",
+      "status": "Proposed editorial operation"
+    },
+    {
+      "id": "R019",
+      "start": 210,
+      "end": 220,
+      "goal": "Distinguish cumulative reading from local answer reasoning.",
+      "audit_action": "Shorten",
+      "operation": "Shorten in place. The comparison works, but the last four sentences redescribe the just-demonstrated update and the naming caveat slows it.",
+      "risk": "Preserve efficient/chronological names and their non-opposition; keep the comparator distinction rather than another full revision description.",
+      "status": "Proposed editorial operation"
+    },
+    {
+      "id": "R020",
+      "start": 222,
+      "end": 229,
+      "goal": "Explain independently testable graph and Core extensions.",
+      "audit_action": "Merge",
+      "operation": "Merge unique graph/supersession content and its citation into R018.",
+      "risk": "Carry addressable supersession and the graph citation into R018; preserve graph-free H1 and the full Core ambition.",
+      "status": "Proposed editorial operation"
+    },
+    {
+      "id": "R021",
+      "start": 231,
+      "end": 233,
+      "goal": "Direct readers to the formal definition.",
+      "audit_action": "Merge",
+      "operation": "Attach any still-needed navigation to R018 after the definition's new location is settled.",
+      "risk": "Retain the navigation if the definition moves farther away; otherwise attach it to the preceding bridge.",
+      "status": "Proposed editorial operation"
+    },
+    {
+      "id": "R023",
+      "start": 245,
+      "end": 255,
+      "goal": "Distinguish elicited reasoning from learned evaluation timing.",
+      "audit_action": "Shorten",
+      "operation": "Shorten in place. The distinction matters, but multiple negations and a capability inventory repeat earlier assurances before reaching it.",
+      "risk": "Retain existing reasoning capabilities, the historical citation, and the spontaneous-placement target; compress the repeated defensive framing.",
+      "status": "Proposed editorial operation"
+    },
+    {
+      "id": "R025",
+      "start": 269,
+      "end": 276,
+      "goal": "Position the proposal alongside post-training.",
+      "audit_action": "Merge",
+      "operation": "Consolidate complementarity with R007\u2013R010; retain the process-supervision lineage with the elicited-versus-learned comparison.",
+      "risk": "Preserve the process-supervision citation and continued reader-state distinction, but consolidate the general complementarity statement.",
+      "status": "Proposed editorial operation"
+    },
+    {
+      "id": "R027",
+      "start": 289,
+      "end": 296,
+      "goal": "Locate novelty in the composed training object.",
+      "audit_action": "Shorten",
+      "operation": "Shorten in place. The synthetic-voice limit and component-prior-art concession repeat R009/R013/R019 and will recur in R029 and the provenance section.",
+      "risk": "Retain composition novelty and the non-consciousness claim, but give each a single clear introductory home.",
+      "status": "Proposed editorial operation"
+    },
+    {
+      "id": "R029",
+      "start": 307,
+      "end": 318,
+      "goal": "Explain recurrent Core enactment as a formative inner voice.",
+      "audit_action": "Shorten",
+      "operation": "Shorten in place. The positive conceptual explanation is important, but its ending repeats synthetic-voice, local-rationale, and novelty boundaries just established.",
+      "risk": "Preserve every-block recital, contextual Refraction, and the same standpoint across sources; shorten the repeated novelty defense.",
+      "status": "Proposed editorial operation"
+    },
+    {
+      "id": "R033",
+      "start": 324,
+      "end": 324,
+      "goal": "Define H3's timing and retention hypothesis.",
+      "audit_action": "Shorten",
+      "operation": "Shorten in place. The controlled comparison is precise, but the first definition packs the matching inventory and endpoint boundary into one long sentence.",
+      "risk": "Keep identical examples, interleaved versus final tranche, and common-stressor retention; place matching details in the canonical methods definition.",
+      "status": "Proposed editorial operation"
+    },
+    {
+      "id": "R040",
+      "start": 373,
+      "end": 373,
+      "goal": "Position synthetic trace generation relative to prior approaches.",
+      "audit_action": "Move",
+      "operation": "Related Work's reasoning/pretraining comparison, next to R599\u2013R600.",
+      "risk": "Retain all comparators, citations, and the TPT scale; keep only the fact needed for the definition here.",
+      "status": "Proposed editorial operation"
+    },
+    {
+      "id": "R041",
+      "start": 375,
+      "end": 381,
+      "goal": "Specify a minimal training carrier's fields.",
+      "audit_action": "Clarify",
+      "operation": "Clarify in place. Fields are useful, but Core-bearing content is described as belonging to H3 arms although wider Core comparisons also use it.",
+      "risk": "Preserve all carrier fields and auditability limits; say Core-bearing conditions rather than narrowing the format to H3.",
+      "status": "Proposed editorial operation"
+    },
+    {
+      "id": "R042",
+      "start": 383,
+      "end": 394,
+      "goal": "Disambiguate chronology and information horizon.",
+      "audit_action": "Clarify",
+      "operation": "Clarify in place. The distinctions repair a real ambiguity. Five axes in one dense paragraph still demand a compact comparison format or shorter sentences.",
+      "risk": "Preserve all four chronology meanings and the separate knowledge horizon; formatting must not collapse contemporary and cutoff-clean regimes.",
+      "status": "Proposed editorial operation"
+    },
+    {
+      "id": "R043",
+      "start": 396,
+      "end": 396,
+      "goal": "Restate reader updates and possible Student targets.",
+      "audit_action": "Merge",
+      "operation": "Place unique prediction-target details in R041 and the relocated R044 specification.",
+      "risk": "Preserve the different prediction targets and cumulative-reasoning aim in the carrier or formalization instead of another general definition.",
+      "status": "Proposed editorial operation"
+    },
+    {
+      "id": "R044",
+      "start": 398,
+      "end": 425,
+      "goal": "Formalize generation, serialization, masking, and training.",
+      "audit_action": "Move",
+      "operation": "Architecture \u2192 Training Regimes, after the three-layer overview and before regime-specific choices; retain an introductory pointer.",
+      "risk": "Retain the formal object, all masks and weights, optional conditions, and unfrozen choices in a specification home; keep a short introductory pointer.",
+      "status": "Proposed editorial operation"
+    },
+    {
+      "id": "R045",
+      "start": 429,
+      "end": 438,
+      "goal": "State the evidence boundary and interpretation of diagnostics.",
+      "audit_action": "Shorten",
+      "operation": "Shorten in place. The contribution from shared agents and structural metrics is useful, but most of the paragraph repeats R036/R038 and later Results.",
+      "risk": "Keep shared-dependency and metric-status distinctions near their results; preserve one clear introductory statement of what exists.",
+      "status": "Proposed editorial operation"
+    },
+    {
+      "id": "R047",
+      "start": 451,
+      "end": 454,
+      "goal": "Identify what this edition adds and inherits.",
+      "audit_action": "Shorten",
+      "operation": "Shorten in place. The edition summary has a legitimate provenance role, but repeats the component map and is immediately expanded again in R050\u2013R054.",
+      "risk": "Preserve first-edition commitments and separate-work attribution; use one summary plus a dedicated provenance record.",
+      "status": "Proposed editorial operation"
+    },
+    {
+      "id": "R049",
+      "start": 463,
+      "end": 486,
+      "goal": "Map contributions, provenance, and validation.",
+      "audit_action": "Move",
+      "operation": "A dedicated edition-provenance subsection near the end of Related Work, separate from the comparison table's role.",
+      "risk": "Preserve every provenance distinction and component; place detailed attribution with the edition record while retaining one primary introductory claim map.",
+      "status": "Proposed editorial operation"
+    },
+    {
+      "id": "R050",
+      "start": 489,
+      "end": 502,
+      "goal": "Record the first edition's distinctive commitments.",
+      "audit_action": "Move",
+      "operation": "The same edition-provenance subsection, together with R051\u2013R054.",
+      "risk": "Preserve the early ambiguity, all priority qualifications, and within-example distinction in a dedicated provenance passage.",
+      "status": "Proposed editorial operation"
+    },
+    {
+      "id": "R052",
+      "start": 509,
+      "end": 517,
+      "goal": "Record second-edition additions and companion dependencies.",
+      "audit_action": "Move",
+      "operation": "The same edition-provenance subsection, preserving companion-work ancestry and current additions.",
+      "risk": "Retain hierarchical extension, live verification, agent implementation, and original self-authored-reference intuition.",
+      "status": "Proposed editorial operation"
+    },
+    {
+      "id": "R053",
+      "start": 519,
+      "end": 523,
+      "goal": "Record unchanged Core wording and successor ancestry.",
+      "audit_action": "Clarify",
+      "operation": "Clarify in place. The provenance goal is clear, but the Statistical Foundation reference now points after the moved Core display.",
+      "risk": "Point to the Reader Core section; preserve unchanged wording and the first-edition successor wager.",
+      "status": "Proposed editorial operation"
+    },
+    {
+      "id": "R054",
+      "start": 525,
+      "end": 538,
+      "goal": "Establish comparative release order without claiming influence.",
+      "audit_action": "Shorten",
+      "operation": "Shorten in place. Exact dates are useful provenance, but repeated relative-order explanations and efficacy caveats make this a long interruption.",
+      "risk": "Retain every date, before/after relationship, and independent-conception qualification in one compact chronological record.",
+      "status": "Proposed editorial operation"
+    },
+    {
+      "id": "R055",
+      "start": 540,
+      "end": 544,
+      "goal": "Provide a roadmap for the rest of the paper.",
+      "audit_action": "Clarify",
+      "operation": "Clarify in place. The navigation works, but describing the Core and Safety sections as treating H3 again makes the broader program sound timing-only.",
+      "risk": "Retain the route through the paper while naming the broader Core program alongside its H3 test.",
+      "status": "Proposed editorial operation"
+    },
+    {
+      "id": "R056",
+      "start": 548,
+      "end": 560,
+      "goal": "Explain relationships among consequences and evidence burdens.",
+      "audit_action": "Shorten",
+      "operation": "Shorten in place. The partial-order distinction is important, but the paragraph spends substantial effort explaining several classification systems before the positive consequences.",
+      "risk": "Keep C5/C6 non-implication and the H/C distinction; avoid replacing the developmental story with the map's bookkeeping.",
+      "status": "Proposed editorial operation"
+    },
+    {
+      "id": "R058",
+      "start": 586,
+      "end": 594,
+      "goal": "Locate graph evidence and qualify Core compliance.",
+      "audit_action": "Move",
+      "operation": "Keep a short overview here; consolidate exact compliance evidence with R344 and the enforcement distinction with R162.",
+      "risk": "Retain observed compliance versus enforcement and separate graph roles; use a short reference here to the detailed result.",
+      "status": "Proposed editorial operation"
+    },
+    {
+      "id": "R060",
+      "start": 604,
+      "end": 609,
+      "goal": "Introduce the consequence discussion and its failure modes.",
+      "audit_action": "Shorten",
+      "operation": "Shorten in place. The prediction summary contributes little after the table; the errors and unfaithfulness caveat repeat R045/R046 before examples finally begin.",
+      "risk": "Retain one transition to concrete consequences; keep the substantive failure mechanisms in their dedicated sections.",
+      "status": "Proposed editorial operation"
+    },
+    {
+      "id": "R065",
+      "start": 624,
+      "end": 628,
+      "goal": "Separate useful augmentation from stronger causal interpretation.",
+      "audit_action": "Clarify",
+      "operation": "Clarify in place. The corrected non-gate framing matters, but semantic quality, faithfulness, density, diversity, and stronger cognition still crowd one paragraph.",
+      "risk": "Keep useful outcomes valid even without full causal explanation; present the stronger evidence questions without creating extra H1 prerequisites.",
+      "status": "Proposed editorial operation"
+    },
+    {
+      "id": "R072",
+      "start": 656,
+      "end": 656,
+      "goal": "Introduce formative alignment as a route to internal change.",
+      "audit_action": "Shorten",
+      "operation": "Shorten in place. The data-to-representation premise is useful, but most of the opening repeats R008/R009 after the idea is already established.",
+      "risk": "Keep the non-textual-substrate clarification; begin this section with the positive entanglement intuition instead of another proposal definition.",
+      "status": "Proposed editorial operation"
+    },
+    {
+      "id": "R073",
+      "start": 658,
+      "end": 658,
+      "goal": "Explain why existing formative-data evidence is inconclusive.",
+      "audit_action": "Shorten",
+      "operation": "Shorten in place. The negative midtraining evidence is material, but the long list of interpretations resembles a second literature introduction.",
+      "risk": "Preserve the adverse evidence and live explanations in Related Work; keep the direct implication for this hypothesis here.",
+      "status": "Proposed editorial operation"
+    },
+    {
+      "id": "R074",
+      "start": 660,
+      "end": 662,
+      "goal": "Introduce the different entanglement claims.",
+      "audit_action": "Clarify",
+      "operation": "Clarify in place. It defines the name through evidential categories before stating why integrated understanding and care are the desired developmental relationship.",
+      "risk": "Lead with that positive relationship; retain all four claims as ways to distinguish its possible realizations, not as replacements for the intuition.",
+      "status": "Proposed editorial operation"
+    },
+    {
+      "id": "R079",
+      "start": 670,
+      "end": 675,
+      "goal": "Explain the evidence needed for removal-cost interpretation.",
+      "audit_action": "Shorten",
+      "operation": "Shorten in place. Specific matched-control logic is useful, but the paragraph repeats the evidence boundary before bringing methods detail into the conceptual section.",
+      "risk": "Preserve joint safety/capability loss and nonspecific-collapse controls; place the detailed study design with its test.",
+      "status": "Proposed editorial operation"
+    },
+    {
+      "id": "R081",
+      "start": 679,
+      "end": 681,
+      "goal": "Separate rich values, integrated behavior, mechanisms, and correctness.",
+      "audit_action": "Merge",
+      "operation": "Keep the named rich-values intuition in place; express its distinctions using R074\u2013R078 and R057 rather than reintroducing another four-part map.",
+      "risk": "Keep the named rich-value intuition and independent normative-correctness limit; explain them using the existing distinctions rather than another parallel map.",
+      "status": "Proposed editorial operation"
+    },
+    {
+      "id": "R082",
+      "start": 683,
+      "end": 686,
+      "goal": "Compare the Core formulation with constitutional alternatives.",
+      "audit_action": "Shorten",
+      "operation": "Shorten in place. The fair comparator matters, but its timing-versus-framing convention repeats R026/R035 and receives fuller treatment later.",
+      "risk": "Retain constitutional weight changes and the framing comparison; use the established H3 convention without explaining it again.",
+      "status": "Proposed editorial operation"
+    },
+    {
+      "id": "R084",
+      "start": 701,
+      "end": 701,
+      "goal": "Separate successor generation, inspection, and improvement.",
+      "audit_action": "Shorten",
+      "operation": "Shorten in place. A useful section opening, but it leads with another claim inventory rather than the internally motivated inheritance it is meant to organize.",
+      "risk": "Preserve the three different achievements and collapse risk; introduce their purpose before their evidential separation.",
+      "status": "Proposed editorial operation"
+    },
+    {
+      "id": "R088",
+      "start": 727,
+      "end": 737,
+      "goal": "Explain how one useful transfer might become compounding improvement.",
+      "audit_action": "Shorten",
+      "operation": "Shorten in place. The causal bridge is now explicit; the final gate/falsifier inventory repeats R084/R085 and the figure caption.",
+      "risk": "Keep the Student-becomes-Teacher transition and selection of useful innovations; consolidate repeated success conditions.",
+      "status": "Proposed editorial operation"
+    },
+    {
+      "id": "R091",
+      "start": 753,
+      "end": 753,
+      "goal": "Compare the audit interface with amplification and self-modification.",
+      "audit_action": "Shorten",
+      "operation": "Shorten in place. Comparative positioning adds value, but the last sentence restates the same opacity warning in R090 and R098.",
+      "risk": "Preserve both intellectual lineages and their citations; consolidate the repeated boundary statement.",
+      "status": "Proposed editorial operation"
+    },
+    {
+      "id": "R094",
+      "start": 761,
+      "end": 767,
+      "goal": "Specify checks and their independence limits.",
+      "audit_action": "Shorten",
+      "operation": "Shorten in place. The checklist is useful, but independence and shared-model explanations recur throughout later validation sections.",
+      "risk": "Retain every audit target; point to one common independence convention rather than repeatedly restating it.",
+      "status": "Proposed editorial operation"
+    },
+    {
+      "id": "R096",
+      "start": 771,
+      "end": 785,
+      "goal": "Explain Natural Language Regularization and its observable precursor.",
+      "audit_action": "Shorten",
+      "operation": "Shorten in place. The positive bias and audit-value endpoint are clear, but two adjacent formulations repeat that visible text does not constrain latent cognition.",
+      "risk": "Preserve the inductive-bias hypothesis, distortion risk, and distinction between audit benefit and human-readable cognition.",
+      "status": "Proposed editorial operation"
+    },
+    {
+      "id": "R599",
+      "start": 4914,
+      "end": 4923,
+      "goal": "Locate EA in the lineage of elicited, trained, and scaled intermediate reasoning.",
+      "audit_action": "Clarify",
+      "operation": "Clarify in place. The reference set is useful but groups training, inference, and latent-reasoning mechanisms into one inventory. Group existing examples by the limited proposition they support, then emphasize the closest pretraining comparators. This preserves breadth while distinguishing direct baselines from broader intellectual lineage.",
+      "risk": "Retain all named mechanisms and citations, including latent reasoning, inference-time scaling, and reflection without an engineered Reader.",
+      "status": "Proposed editorial operation"
+    },
+    {
+      "id": "R601",
+      "start": 4944,
+      "end": 4953,
+      "goal": "Compare EA's formative data condition with mainstream later-stage alignment methods.",
+      "audit_action": "Clarify",
+      "operation": "Clarify in place. The paragraph avoids the false claim that RLHF, DPO, or Constitutional AI merely filter outputs. It positions the treatment at the data level and states its scale as proposed. The adjective 'denser' would be clearer if tied to recurring source-adjacent coverage, rather than implying an established quantitative advantage over all comparators.",
+      "risk": "Preserve the formation-stage and data-format distinction while avoiding an unsupported density ranking or caricature of other methods' representational effects.",
+      "status": "Proposed editorial operation"
+    },
+    {
+      "id": "R603",
+      "start": 4974,
+      "end": 4983,
+      "goal": "Relate critique-training methods to recurrent Reader updates and the safety mechanism proposed.",
+      "audit_action": "Shorten",
+      "operation": "Shorten in place. The local-critique versus continuing-reader comparison is useful. The final instrumental-convergence qualification repeats the Core and borrowed-mortality limitations without further distinguishing these critique methods. Shorten that tail or point to the mechanism section, preserving the critique baselines and their limited positive evidence.",
+      "risk": "Retain critique-training alternatives and the proposed recurrent orientation; do not imply critique results establish reduced instrumental convergence or erase residual persistence routes.",
+      "status": "Proposed editorial operation"
+    },
+    {
+      "id": "R605",
+      "start": 4997,
+      "end": 5010,
+      "goal": "Connect persona and constitutional approaches to alternative routes for stable orientation.",
+      "audit_action": "Shorten",
+      "operation": "Shorten in place. Persona selection and existential security provide distinct comparators. The repeated summaries of Model Spec Midtraining and Teaching Claude Why duplicate R602, while the H3 scheduling reminder duplicates the definition and conclusion. Shorten those reprises, retaining their formative-stage relevance and the bounded non-attachment connection.",
+      "risk": "Keep positive archetypes, post-training persona selection, and conceptual convergence on existential security; do not let a shorter paragraph imply H3 compares unlike training contents.",
+      "status": "Proposed editorial operation"
+    },
+    {
+      "id": "R608",
+      "start": 5040,
+      "end": 5053,
+      "goal": "Locate supersession-bearing Reader history relative to symbolic belief-maintenance traditions.",
+      "audit_action": "Clarify",
+      "operation": "Clarify in place. The symbolic ancestry is valuable, but 'their commitment to recording why' groups justification records with AGM, described here only as revision axioms. Distinguish those roles. Qualify 'implements' so representational support is not mistaken for demonstrated robust metabolic revision in the case studies.",
+      "risk": "Preserve symbolic ancestry, parallel hypotheses, source provenance, and successor use without overstating their equivalence or abandoning active revision.",
+      "status": "Proposed editorial operation"
+    },
+    {
+      "id": "R614",
+      "start": 5107,
+      "end": 5116,
+      "goal": "Separate graph-derived reward from graph-recorded revision and from output or deployment choices.",
+      "audit_action": "Clarify",
+      "operation": "Clarify in place. The distinctions are useful, but the subsection title promises implicit-versus-explicit architectures while the paragraph mainly contrasts graph function. Clarify that readable revision history is the proposed audit object, not a general auditability superiority over graph reward systems. Keep format and live-access axes explicitly independent.",
+      "risk": "Preserve graph-as-reward, graph-as-epistemic-record, emitted syntax, and live access as separate choices; do not turn a functional comparison into an unsupported transparency ranking.",
+      "status": "Proposed editorial operation"
+    },
+    {
+      "id": "R617",
+      "start": 5141,
+      "end": 5189,
+      "goal": "Consolidate neighboring baselines, EA extensions, and decisive comparisons into an accessible map.",
+      "audit_action": "Clarify",
+      "operation": "Clarify in place. The five rows are coherent and preserve budget, memory, and temporal controls. But the table omits the identical-content interleaved-versus-final-tranche comparison that defines headline H3. Add that scheduling comparison within formative alignment or a dedicated row, and position the table outside the borrowed-mortality subsection's apparent scope.",
+      "risk": "Preserve every existing baseline and the broader character/safety comparisons; adding H3 must not replace them or mistake content-matched alternatives for timing-only arms.",
+      "status": "Proposed editorial operation"
+    },
+    {
+      "id": "R620",
+      "start": 5213,
+      "end": 5222,
+      "goal": "Connect the developmental meaning of entanglement to current construction evidence and stronger claims.",
+      "audit_action": "Clarify",
+      "operation": "Clarify in place. 'Names an evidence ladder' replaces the positive developmental meaning with taxonomy and conflicts with the paper's explicit non-linear distinction at L660\u2013662. Lead with understanding and care practiced together, then state the construction result and stronger causal, representational, and persistence burdens without imposing one ladder.",
+      "risk": "Preserve formative understanding/care coupling, positive construction evidence, removal-cost and successor ambitions; evidence discipline must not redefine the intuition as a taxonomy.",
+      "status": "Proposed editorial operation"
+    },
+    {
+      "id": "R621",
+      "start": 5224,
+      "end": 5232,
+      "goal": "Summarize the graph's specific epistemic and audit role without treating it as truth or total visibility.",
+      "audit_action": "Shorten",
+      "operation": "Shorten in place. Queryable state, Not Found, and bypass limits deserve concise recall. The safeguard list repeats Limitations and R623. Shorten it while retaining addressable revision, the pre-successor inspection boundary, and the specific difference between verifying stored state and verifying the world.",
+      "risk": "Preserve live provenance and positive audit value; do not reduce the graph to a passive log or equate retrieval with truth.",
+      "status": "Proposed editorial operation"
+    },
+    {
+      "id": "R624",
+      "start": 5254,
+      "end": 5261,
+      "goal": "Recover the humane motivation and recurrent home-position intuition behind the technical program.",
+      "audit_action": "Shorten",
+      "operation": "Shorten in place. The paragraph gives the conclusion an affective and philosophical purpose that the evidence ladder cannot replace. The final seven-sentences caveat repeats R620 without adding a local mechanism. Shorten that tail while preserving the aspiration to understand other voices from a stable caring standpoint.",
+      "risk": "Retain the original question about caring for humanity and the Reader's home-position intuition; pruning a caveat must not make seven sentences sound sufficient for care.",
+      "status": "Proposed editorial operation"
+    },
+    {
+      "id": "R625",
+      "start": 5263,
+      "end": 5272,
+      "goal": "Close with the divisible research question and the proposed route to accountable progress.",
+      "audit_action": "Shorten",
+      "operation": "Shorten in place. The question about practicing understanding and care as the same act is a strong ending. The surrounding specification/prototype/no-answer/fixed-criteria reminders largely repeat R619, R620, and R622. Shorten around the question, retaining openness and negative-result preservation without summarizing the paper's incomplete status yet again.",
+      "risk": "Keep the ambitious unity of understanding and care, and the requirement to preserve failures; avoid turning a tentative research question into a promised outcome.",
+      "status": "Proposed editorial operation"
+    }
+  ],
+  "additional_operations": [
+    {
+      "id": "R616",
+      "operation": "Move general table lead-in below a new Discriminating Comparisons subsection, preserving the Borrowed Mortality comparison conclusion.",
+      "risk": "A new section boundary must not detach the two alternative mechanisms or make the general table appear mortality-only."
+    },
+    {
+      "id": "R602",
+      "operation": "Receive the detailed positive/negative formative-evidence interpretation moved from R073.",
+      "risk": "Preserve adverse midtraining evidence and all live explanations without conflating it with the three named positive comparators."
+    },
+    {
+      "id": "R072/R074",
+      "operation": "Place the positive meaning of entangled at the beginning of Safety as Foundation, with the operational four-part list introduced afterward.",
+      "risk": "Keep the non-textual-substrate premise, existing controls, four distinct claims, and no-guarantee boundary; avoid a second redundant positive definition."
+    },
+    {
+      "id": "R086",
+      "operation": "Move intact inheritance paragraph to the opening of the Reader-Anchored loop, before achievement bookkeeping.",
+      "risk": "Its conditional wording and internally motivated successor choice must remain verbatim; early placement must not make the unproven mechanism sound implemented."
+    },
+    {
+      "id": "S114/R614",
+      "operation": "Retitle the implicit/explicit graph comparison to Graph-derived Rewards and Epistemic Records; clarify supported primary-source mechanism.",
+      "risk": "Preserve reward versus record, emitted format, and live access as independent axes; avoid asserting audit superiority."
+    },
+    {
+      "id": "R599/R040",
+      "operation": "Preserve the TPT 100B scale using primary-paper wording: training configurations up to 100B tokens, rather than implying 100B newly generated thought tokens.",
+      "risk": "Retain the scale evidence and source while avoiding a quantitatively stronger claim than the primary abstract supports."
+    }
+  ],
+  "protected": "Every source proposition, qualifier, named intuition, counterexample and source-sensitive comparison must have a destination; unchanged seven Core statements and observed artifact quotes are locked.",
+  "handoffs": {
+    "R044": "Methods formalization",
+    "R040": "Related work reasoning comparison",
+    "R073": "Related Work formative evidence interpretation",
+    "R048-R054": "Related Work edition provenance",
+    "R519": "Related Work deliberative comparison"
+  },
+  "self_review_corrections": [
+    {
+      "id": "R042",
+      "risk": "Dropping the reverse-direction prohibition could change the annotation information contract.",
+      "operation": "Retain explicit but-not-vice-versa clause."
+    },
+    {
+      "id": "R621",
+      "risk": "A selective-record description may not fully counter a second-model misunderstanding.",
+      "operation": "Restore explicit not-second-model/truth-oracle distinction while keeping the condensed functional account."
+    },
+    {
+      "id": "R050",
+      "risk": "Removing a duplicated paragraph title after relocation could lose navigation only.",
+      "operation": "Use the new provenance subsection heading; retain all substantive provenance text."
+    },
+    {
+      "id": "R079",
+      "risk": "A wrong experiment reference would misdirect the removal-cost claim to immediate safety.",
+      "operation": "Correct Test 3a to Test 3c, verified against roadmap heading."
+    }
+  ]
+}

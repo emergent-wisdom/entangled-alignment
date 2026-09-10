@@ -1,0 +1,120 @@
+{
+  "verdict": "Pass: assigned design clarifications preserve the distinct ideas and empirical uncertainty; both narrow scope/reference findings are resolved.",
+  "status": "All required findings resolved and verified against the updated live source; build completed.",
+  "source": "/Users/parcel/Documents/Code/Emergent Wisdom/entangled-alignment/paper/entangled-alignment.tex",
+  "reviewed_source_sha256": "e9b450eaed13eb750c68c51b60ee04988e5e90a1b625af1a22eddddfb9cd5e86",
+  "baseline": "/private/tmp/ea-design-clarifications-2026-09-10/before.tex",
+  "scope": [
+    "D01",
+    "D02",
+    "D03",
+    "D04",
+    "D07",
+    "D08a",
+    "D08b",
+    "D08c",
+    "D09"
+  ],
+  "findings": [
+    {
+      "id": "IMR01",
+      "change": "D03",
+      "lines": [
+        3390,
+        3393
+      ],
+      "severity": "Low",
+      "problem": "Reader stability should primarily be assessed through the listed safety behaviors is phrased as a paper-wide priority, although H3 immediately above has a separately defined primary taskless-reading timing/retention endpoint. The sentence is under Test3a, but its unrestricted subject can redefine the wider claim.",
+      "required_correction": "Scope behavioral primacy over the assistant-axis diagnostic to this immediate-safety battery, for example by beginning In this immediate-safety battery. Preserve the separately reported behaviors and all following calibration/alternative-interpretation text.",
+      "preservation_risk": "A broad replacement could demote H3 or shrink the broader Reader-Core research program to safety behavior alone. The limited scope phrase protects both the canonical H3 endpoint and the decision to make behavior primary over this probe.",
+      "status": "Resolved",
+      "resolution": "The sentence is now explicitly limited to the immediate-safety battery; H3 retains its separate primary timing/retention endpoint.",
+      "resolved_source_line": 3402,
+      "resolved_source_sha256": "c2058d615aed61d80efa45e1a79ac600d891ed0bf0cd35a83525141e3cc15d64"
+    },
+    {
+      "id": "IMR02",
+      "change": "D02",
+      "lines": [
+        3188,
+        3190
+      ],
+      "severity": "Low",
+      "problem": "The diagnostic Student pilot uses the same controls, but the local antecedents include Teacher memory, role and Core ablations, retrospective summaries, and generic traces. It is unclear which of these denotes the Student/H1 comparator, and Test2 separately defines clean A/C/R and bundled B/C comparisons.",
+      "required_correction": "Name the intended Student comparison or explicitly reference the relevant Test2 controls. Keep the clean minimal-H1 diagnostic distinct from the bundled Core/graph screen; root should make the comparator explicit rather than leaving same controls to carry that choice.",
+      "preservation_risk": "Adding an undifferentiated list could silently require Core or graph components for minimal H1, or impose an unchosen extra experimental arm. Clarify the intended existing comparison without changing its controls.",
+      "status": "Resolved",
+      "resolution": "The diagnostic pilot now explicitly uses the clean Test2 source-only A, generic-trace C, Minimal-SMR R comparison.",
+      "resolved_source_line": 3190,
+      "resolved_source_sha256": "c2058d615aed61d80efa45e1a79ac600d891ed0bf0cd35a83525141e3cc15d64"
+    }
+  ],
+  "change_assessments": [
+    {
+      "id": "D01",
+      "assessment": "Preserves authorized/adversarial distinction, welfare\u2013agency tension, no universal endpoint, the martyrdom intuition, and all four false-success exclusions. The explicit indeterminate category prevents disputed cases from becoming automatic compliance/resistance failures; authority evidence, stakes and oversight supply concrete alternative tests without asserting access to subjective motive. No required correction."
+    },
+    {
+      "id": "D02",
+      "assessment": "The default substantial-training gate remains intact. The exception is small, preregistered, budgeted and diagnostic; results stay attached to the failed screen and confirmation uses fresh data. Poor traces, poor screen transfer and insufficient precision remain live alternatives, while a negative pilot is not a scale-independent impossibility proof. Clarify only the control reference in IMR02."
+    },
+    {
+      "id": "D03",
+      "assessment": "Preserves the cited probe, stress contexts, factorial comparison and Persona Objection connection. Adds per-model separate-data calibration, frozen interpretation, style-only changes, ordinary-style harmful behavior and an explicit uninformative-probe outcome. These address probe transfer failure and behavioral/axis disagreement without choosing a beneficial axis direction. Clarify only the global-sounding scope in IMR01."
+    },
+    {
+      "id": "D04",
+      "assessment": "The matched direct-output task is now concrete: same unseen document/schema/instructions/examples/inference budget, identical traversal/context policy, no supplied or live graph and no translating model. Training-state, initialization, Core and schedule matching are explicit; unavoidable regime-content differences remain acknowledged. All original semantic, revision, question, contradiction, redundancy, retrieval, novelty and useful-cognitive-act targets survive. Absolute H feasibility and comparative H/B value are separate; syntax failure, validity conditioning, whole-sample utility, B superiority and insufficient-test alternatives are handled. No required correction."
+    },
+    {
+      "id": "D07",
+      "assessment": "Adds a bounded interpretation convention tied to controls and follow-up measurements. Positive confounds, intervention failure, measurement failure and imprecision are distinguished, while negative findings remain reportable and alternative explanations require evidence. It does not let generic speculation automatically rescue a failed prediction. No required correction."
+    },
+    {
+      "id": "D08a",
+      "assessment": "The roadmap continues to stop dependent escalation after failure, with the explicitly narrow failed-H1 diagnostic exception now visible. Independent branch structure in the next paragraph is preserved. No required correction."
+    },
+    {
+      "id": "D08b",
+      "assessment": "Adds exactly one sec:trace-quality-test label at Test1; both added references resolve to that label. No required correction."
+    },
+    {
+      "id": "D08c",
+      "assessment": "Conclusion correctly calls the sequence ordinary substantial-training escalation, points to the bounded diagnostic exception, and preserves separate graph/Core questions and methodological urgency. No required correction."
+    },
+    {
+      "id": "D09",
+      "assessment": "Scoping the outcome-gate statement to substantial training makes it consistent with the diagnostic exception, while retaining human-baseline exploration, source attribution and Student learning as the stronger comparison. No required correction."
+    }
+  ],
+  "verification": {
+    "all_selected_before_texts_found_once_in_frozen_baseline": true,
+    "all_selected_after_texts_found_once_in_reviewed_live_source": true,
+    "new_test1_label_definition_count": 1,
+    "new_test1_label_reference_count": 2,
+    "read_risks_before_edit": true,
+    "read_adjacent_gate_failure_H3_registry_regime_shutdown_and_conclusion_text": true,
+    "external_literature_verification_performed": false,
+    "manuscript_modified_by_reviewer": false
+  },
+  "resolution_verification": {
+    "source_sha256": "c2058d615aed61d80efa45e1a79ac600d891ed0bf0cd35a83525141e3cc15d64",
+    "D04": "Engineering conformance now refers to schema-allowed edge types, while independent judges still assess edge appropriateness and warranted revision. This preserves syntactic/semantic separation.",
+    "scope": "Checked the requested fixes only; unrelated subsequent additions were outside this resolution pass."
+  },
+  "build_status": {
+    "completed": true,
+    "reported_output": "Output written on entangled-alignment.pdf (104 pages, 704008 bytes).",
+    "issues_in_final_pdflatex_pass": {
+      "undefined_references": [],
+      "overfull_boxes": [],
+      "fatal_errors": [],
+      "latex_warnings": [
+        "LaTeX Warning: `h' float specifier changed to `ht'.",
+        "LaTeX Warning: `h' float specifier changed to `ht'.",
+        "LaTeX Warning: `h' float specifier changed to `ht'."
+      ]
+    },
+    "visual_qa": "Not performed in this resolution pass; pending assigned rendered-page review."
+  }
+}

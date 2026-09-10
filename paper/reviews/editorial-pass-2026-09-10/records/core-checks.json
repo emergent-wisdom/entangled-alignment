@@ -1,0 +1,61 @@
+{
+  "labels": {
+    "before": 23,
+    "after": 23,
+    "identical_multiset": true
+  },
+  "citation_instances": {
+    "before": 29,
+    "after": 29,
+    "identical_multiset": true
+  },
+  "headings": {
+    "before": 35,
+    "after": 35,
+    "identical_multiset": true
+  },
+  "direct_quotations": {
+    "before": 54,
+    "after": 54,
+    "identical_multiset": true
+  },
+  "seven_core_statements_verbatim": true,
+  "validator_block_verbatim": true,
+  "validator_after_procedure": true,
+  "protected_examples_and_intuitions_verbatim": {
+    "R125": true,
+    "R144": true,
+    "R145": true,
+    "R147": true,
+    "R148": true,
+    "R149": true,
+    "R181": true,
+    "R185": true,
+    "R186": true,
+    "R187": true,
+    "R197": true,
+    "R200": true,
+    "R201": true,
+    "R202": true,
+    "R216": true,
+    "R227": true,
+    "R228": true,
+    "R230": true
+  },
+  "unresolved_references": [],
+  "R106_handoff_to_methods": {
+    "canonical_label": true,
+    "formula": true,
+    "raw_and_adjusted": true,
+    "rubric_and_prerequisite": true,
+    "baseline_and_ceiling": true,
+    "separate_endpoints": true
+  },
+  "R571_welfare_handoff": {
+    "possible_patient_in_R198": true,
+    "misleading_without_experience": true,
+    "human_scope_not_exhaustive": true,
+    "data_rights_retained_in_limitations": true,
+    "welfare_pointer_in_limitations": true
+  }
+}

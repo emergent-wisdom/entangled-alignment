@@ -1,0 +1,70 @@
+{
+  "scope": "Read-only H1/H2/H3 and six-target alternative-interpretation audit; actual D12–D15 additions reread in context. No external factual audit or experimental validation.",
+  "source_sha256": "e226876b8898c0469f77841b7385307187a952edbb69ba61538f3bcab798ba2f",
+  "verdict": "Complete: D12, D13, D14 and D15 independently verified and resolved. No remaining actionable defects found in this bounded alternative-interpretation audit.",
+  "resolutions": [
+    {
+      "id": "D12",
+      "source_ids": [
+        "R380",
+        "R381",
+        "R382"
+      ],
+      "status": "Resolved",
+      "evidence": "Maintains adequately precise failure against both controls under a declared normalization; separates mixed resource-normalization outcomes and supported equivalence from imprecision."
+    },
+    {
+      "id": "D14",
+      "source_ids": [
+        "R388"
+      ],
+      "status": "Resolved",
+      "evidence": "General retention can support narrow H3; neutral-anchor timing control is conditional on stronger Core-selectivity claim. Existing initial-default prerequisite and adverse-direction rules remain."
+    },
+    {
+      "id": "D15",
+      "source_ids": [
+        "R426"
+      ],
+      "status": "Resolved",
+      "evidence": "Verification, confidence/deferral and redundant computation are alternatives to uniquely diagnosed rationalization; preregistered sensitive intervention nulls still weaken emitted-trace contribution and alternatives are not automatic evidence of benefit."
+    },
+    {
+      "id": "D13",
+      "source_ids": [
+        "R443",
+        "R444"
+      ],
+      "status": "Resolved",
+      "evidence": "The conditional searchable-prose control now explicitly retains claims with their provenance and revision status. The alternative matched-content replay remains; whole-system generation utility is preserved and content access is favored rather than proved."
+    }
+  ],
+  "six_target_status": {
+    "R225": "Sufficient: authority-recognition errors, care/self-preservation, rote compliance, adversarial requests and indeterminate welfare–agency cases remain distinguished.",
+    "R375": "Sufficient: clean A/C/R pilot can investigate screen–learnability mismatch without retroactive passing or routine escalation.",
+    "R391": "Sufficient: model-specific held-out calibration, appropriate style shifts, harmful drift and nontransfer are distinguished; battery scope no longer substitutes for H3.",
+    "R463": "Sufficient: absolute feasibility, format familiarity, semantic/retrieval quality, valid-output selection, richer synthesis content and treatment sensitivity are distinct.",
+    "R561": "Sufficient: replacement package, SL+ addition, positive first-person language and self-as-object attribution are separated.",
+    "R563": "Sufficient: qualifier effects, redundancy, protective caution, continuation pressure and treatment/conformance alternatives retain separate endpoints."
+  },
+  "recommendation": "No further alternative lists or shared caveat paragraphs recommended. Existing shared convention and local discriminators cover the material gaps found in this bounded audit.",
+  "artifact": "alternative-interpretations-review.md",
+  "resolved_findings": [
+    {
+      "id": "ALT-01",
+      "operation": "D13",
+      "source_ids": [
+        "R443",
+        "R444"
+      ],
+      "line": 3976,
+      "severity": "Minor but concrete design ambiguity",
+      "phrase": "searchable prose containing the same retained claims",
+      "issue": "The comparator can still omit provenance/revision information that directly affects the declared grounding and revision endpoints, leaving extra information rather than its typed representation as a competing explanation.",
+      "proposed_fix": "searchable prose containing the same retained claims and their provenance and revision status",
+      "risk": "Low: specify only information matching within the conditional structure-attribution control; do not erase provenance/supersession as practical graph benefits or turn this into a prerequisite for narrow H2.",
+      "status": "Resolved; exact phrase verified in final source."
+    }
+  ],
+  "findings": []
+}

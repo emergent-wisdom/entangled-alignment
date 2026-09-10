@@ -1,0 +1,10 @@
+{
+  "AGM": "https://fitelson.org/piksi/piksi_22/agm.pdf",
+  "TMS": "https://www.sciencedirect.com/science/article/pii/0004370279900080",
+  "graph-rewards": "https://arxiv.org/abs/2601.15160",
+  "COCONUT": "https://arxiv.org/abs/2412.06769",
+  "test-time-compute": "https://arxiv.org/abs/2408.03314",
+  "BoLT": "https://arxiv.org/abs/2503.18866",
+  "TPT": "https://arxiv.org/abs/2509.20186",
+  "deliberative": "https://openai.com/index/deliberative-alignment/"
+}

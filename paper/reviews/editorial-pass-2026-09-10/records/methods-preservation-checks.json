@@ -1,0 +1,43 @@
+{
+  "baseline_sha256": "efac823f33dcd2d582bd565c83eb6638596aa55621cf0406bf001359635f8829",
+  "output_sha256": "2567c2d53f78e64034211065400513f3e3cf934c57b0c2fb5d87877fc76b2da1",
+  "citation_occurrences_equal": true,
+  "existing_citation_count": 22,
+  "existing_label_count": 24,
+  "all_existing_labels_preserved": true,
+  "new_labels": [
+    "sec:cmp-formalization",
+    "tab:kafka-artifact-audit",
+    "sec:core-stability-test"
+  ],
+  "no_duplicate_labels": true,
+  "all_original_displays_verbatim": true,
+  "original_displays_verified": [
+    "R275",
+    "R282",
+    "R292",
+    "R324",
+    "R332",
+    "R335",
+    "R341",
+    "R361",
+    "R362"
+  ],
+  "full_formalization_verbatim_except_added_heading_anchor": true,
+  "raw_h3_estimator_verbatim": true,
+  "environment_nesting_balanced": true,
+  "unescaped_braces_balanced": true,
+  "all_existing_input_paths_preserved": true,
+  "lost_distinct_number_tokens": [],
+  "R375_current_policy_verbatim": true,
+  "shared_evidence_paragraphs_verbatim": true,
+  "all_unchanged_unit_bodies_verbatim": true,
+  "full_recital_occurrences_unchanged": true,
+  "word_counts": {
+    "before": 18844,
+    "after": 19066,
+    "R044_import": 190,
+    "R106_source": 180
+  },
+  "live_manuscript_not_written_by_this_script": true
+}

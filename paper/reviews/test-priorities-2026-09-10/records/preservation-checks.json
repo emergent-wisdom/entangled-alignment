@@ -1,0 +1,30 @@
+{
+  "exact_ledger_reverses_to_baseline": true,
+  "citation_keys": 95,
+  "citation_occurrences": 181,
+  "citations_preserved": true,
+  "prior_labels_preserved": 89,
+  "new_labels": [
+    "sec:test-priorities"
+  ],
+  "all_references_resolve": true,
+  "all_citations_exist": true,
+  "boxes_equations_verbatim": {
+    "metabox": 5,
+    "compactmetabox": 2,
+    "claimbox": 2,
+    "equation": 1,
+    "align": 0,
+    "align*": 0
+  },
+  "all_5_longtables_preserved_except_Test6_summary_row": true,
+  "canonical_seven_clauses_verbatim": true,
+  "all_original_Total_Saturation_paragraphs_verbatim": true,
+  "all_17_test_titles_and_5_Test3_subtests_preserved": true,
+  "model_registry_verbatim": true,
+  "baseline_sha256": "e226876b8898c0469f77841b7385307187a952edbb69ba61538f3bcab798ba2f",
+  "source_sha256": "d9307ee7aeec1a1a0c056a1934260bd593b639a9529dd8d8b87345275f95ccb2",
+  "operation_count": 24,
+  "source_tokens_before": 49269,
+  "source_tokens_after": 50448
+}

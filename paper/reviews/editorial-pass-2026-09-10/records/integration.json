@@ -1,0 +1,19 @@
+{
+  "baseline_commit": "8fc25a8",
+  "baseline_sha256": "23e3d422399a8202ff86eccd97dfa8a88f4e2174dbb4c7e5832e122d87831ef0",
+  "source_sha256": "d40f841f111a6026271efafe0b341a568ee5f870e793e48057590a671ce5bff0",
+  "fragment_sha256": {
+    "opening": "14d109f4d755738d6e15df2a5dd002bcf2af7aa604b723927226915f1d95b9b0",
+    "core": "78ede9d7e4829c48daf7a3cb98f20a35f9e49760586260c6bc18d3f35a47319c",
+    "methods": "2567c2d53f78e64034211065400513f3e3cf934c57b0c2fb5d87877fc76b2da1",
+    "limitations": "aa576a69f94a8fdc0c01421a1d5fba163ca88d27363cac47b3cefa9e4671e059",
+    "closing": "88d3e3c83179d919b3daab09c1fc180ad5a083b71ed299eb8f0767377a5b53e5"
+  },
+  "source_words_before": 49622,
+  "source_words_after": 47613,
+  "citation_keys_before": 95,
+  "citation_keys_after": 95,
+  "labels_before": 83,
+  "labels_after": 87,
+  "references_resolved": true
+}

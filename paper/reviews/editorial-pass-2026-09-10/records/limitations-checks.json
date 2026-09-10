@@ -1,0 +1,47 @@
+{
+  "checks": {
+    "baseline_sha_unchanged": true,
+    "planned_before_fragment_authored": true,
+    "heading_sequence_preserved": true,
+    "labels_sequence_preserved": true,
+    "citations_preserved_except_exported_R519": true,
+    "environment_sequence_preserved": true,
+    "all_unaffected_units_byte_preserved": true,
+    "disclosure_R591_preserved_verbatim": true,
+    "staged_sycophancy_R594_preserved_verbatim": true,
+    "philosophical_vulnerability_R551_preserved_verbatim": true,
+    "alien_wisdom_R579_preserved_verbatim": true,
+    "historical_nondiagnostic_footnote_preserved": true,
+    "exact_Core_clause_occurrence_counts_preserved": true,
+    "self_love_quoted_variants_preserved": true,
+    "welfare_export_exact": true,
+    "unresolved_future_scope_preserved": true,
+    "unresolved_self_love_arm_choice_preserved": true,
+    "all_nonkeep_candidates_covered": true,
+    "all_fragment_refs_exist_in_baseline": true,
+    "braces_balanced": true
+  },
+  "counts": {
+    "source_units": 109,
+    "affected_units": 29,
+    "unaffected_units": 80,
+    "headings": 46,
+    "labels": 19,
+    "citations_before": 20,
+    "citations_after": 19,
+    "exported_citation_occurrences": 1,
+    "words_before": 9080,
+    "words_after": 8764,
+    "paragraph_blocks_before": 154,
+    "paragraph_blocks_after": 151
+  },
+  "hashes": {
+    "before": "8cde1f15bd04b57a4bf1907b7030b8fe17ab6cf0301cd94ea45718710b08e527",
+    "after": "aa576a69f94a8fdc0c01421a1d5fba163ca88d27363cac47b3cefa9e4671e059"
+  },
+  "expected_cross_fragment_changes": [
+    "R519 plus guan2024deliberative moved to Related Work",
+    "R571 welfare portion moved to Core R198"
+  ],
+  "external_literature_verification": "None added or independently performed."
+}

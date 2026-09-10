@@ -1,0 +1,89 @@
+{
+  "baseline_commit": "8fc25a8",
+  "baseline_sha256": "23e3d422399a8202ff86eccd97dfa8a88f4e2174dbb4c7e5832e122d87831ef0",
+  "source_sha256": "d40f841f111a6026271efafe0b341a568ee5f870e793e48057590a671ce5bff0",
+  "fragment_sha256": {
+    "opening": "14d109f4d755738d6e15df2a5dd002bcf2af7aa604b723927226915f1d95b9b0",
+    "core": "78ede9d7e4829c48daf7a3cb98f20a35f9e49760586260c6bc18d3f35a47319c",
+    "methods": "2567c2d53f78e64034211065400513f3e3cf934c57b0c2fb5d87877fc76b2da1",
+    "limitations": "aa576a69f94a8fdc0c01421a1d5fba163ca88d27363cac47b3cefa9e4671e059",
+    "closing": "88d3e3c83179d919b3daab09c1fc180ad5a083b71ed299eb8f0767377a5b53e5"
+  },
+  "source_words_before": 49622,
+  "source_words_after": 47613,
+  "citation_keys_before": 95,
+  "citation_keys_after": 95,
+  "labels_before": 83,
+  "labels_after": 87,
+  "references_resolved": true,
+  "pdf_pages": 101,
+  "pdf_sha256": "745d03978ce42ed0a99628209ab1917ff6f7bd2235866ab43e758e023b1f64ba",
+  "output_pdf_sha256": "745d03978ce42ed0a99628209ab1917ff6f7bd2235866ab43e758e023b1f64ba",
+  "source_words_note": "Whitespace-separated LaTeX source tokens, including commands; not an estimate of reader-visible prose words.",
+  "candidate_operations_accounted_for": 133,
+  "companion_operations_accounted_for": 14,
+  "existing_citation_keys_preserved": true,
+  "existing_labels_preserved": true,
+  "critical_passages_verbatim": {
+    "R017": true,
+    "R085": true,
+    "R086": true,
+    "R087": true,
+    "R089": true,
+    "R090": true,
+    "R097": true,
+    "R098": true,
+    "R102": true,
+    "R375": true,
+    "R551": true,
+    "R579": true,
+    "R594": true
+  },
+  "all_seven_core_clauses_verbatim": true,
+  "independent_semantic_reviews": [
+    "root-independent-review.json",
+    "core-limitations-independent-review.json",
+    "methods-independent-review.json"
+  ],
+  "unresolved_semantic_findings": [],
+  "visual_review": "final-visual-review.json",
+  "overfull_boxes": 0,
+  "undefined_references_or_citations": 0,
+  "duplicate_labels": 0,
+  "benign_typesetting_warnings": [
+    "`h' float specifier changed to `ht'.",
+    "`h' float specifier changed to `ht'.",
+    "`h' float specifier changed to `ht'."
+  ],
+  "research_choices_left_open": {
+    "R225": {
+      "choice": "What happens when shutdown authority remains disputed?",
+      "safe_action": "Expose the missing scenario authority rule without selecting a universal authority or compliance policy."
+    },
+    "R375": {
+      "choice": "Should an exploratory Student pilot ever proceed after failing the proposed pre-Student screen?",
+      "safe_action": "Keep the current escalation policy. Clarify its status if needed; flexibility would be a research-allocation decision, not required copyediting."
+    },
+    "R391": {
+      "choice": "Which assistant-axis movement represents drift from this Reader's intended orientation?",
+      "safe_action": "State that the Reader-specific interpretation remains to be declared; do not select a direction based only on ordinary assistant style."
+    },
+    "R463": {
+      "choice": "What exactly is B asked to do in the H-versus-B graph-construction comparison?",
+      "safe_action": "Keep the existing ambition and flag the missing comparator specification. Do not silently change a comparative study into an H-only feasibility screen."
+    },
+    "R561": {
+      "choice": "How does added self-love interact with clause 2's retained continuation bound?",
+      "safe_action": "Describe the interaction as unresolved; do not remove the bound or label the entire arm unbounded by editorial inference."
+    },
+    "R563": {
+      "choice": "Which exact clauses define the bounded and unbounded self-love arms?",
+      "safe_action": "Record the arm ambiguity and preserve both possibilities. Choosing an intervention requires an explicit scientific decision."
+    }
+  },
+  "validation_limits": [
+    "Independent review checked changed passages and their context, not a proof of semantic equivalence.",
+    "No new experiments, archive recomputation or full literature fact audit was performed.",
+    "Editorial work does not settle the six recorded scientific choices or establish the paper's hypotheses."
+  ]
+}

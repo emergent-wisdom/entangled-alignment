@@ -1,0 +1,27 @@
+{
+  "status": "risks recorded before layout edits",
+  "scope": "Keep two short semantic units together without changing their words, font sizes, quotes or numbering.",
+  "operations": [
+    {
+      "id": "layout-core-recital",
+      "source_ids": [
+        "R101",
+        "R102"
+      ],
+      "finding": "Canonical seven-clause recital split after clause five across pages14\u201315.",
+      "planned_change": "Wrap its short lead-in and centered seven clauses in samepage.",
+      "risk_before_edit": "Low semantic risk; extra whitespace or pagination changes may follow. Keep the seven clauses verbatim and visually verify both affected pages."
+    },
+    {
+      "id": "layout-translator-example",
+      "finding": "Layer3 Translator example starts with only the recital on page47; all substantive example prose is on page48.",
+      "planned_change": "Keep subsection heading, one-line lead-in and complete existing example together in a full-width minipage.",
+      "risk_before_edit": "Low semantic risk; a nonbreaking block can overflow if too tall or leave excessive whitespace. Preserve every quoted word, use the existing font/style, rebuild and inspect resulting pagination."
+    }
+  ],
+  "verification_followup": {
+    "finding": "samepage did not stop center-line breaks; the breakable Translator box drew internal fragment rules inside a minipage.",
+    "planned_correction": "Use a full-width minipage for the Core recital. Allow local options on metabox and disable its breakability only for the short Translator example, keeping the minipage wrapper.",
+    "risk_before_edit": "Formatting-only: adding an optional argument must leave all other metabox instances unchanged. Verify no font/word changes, internal split rules, overflow or excessive whitespace."
+  }
+}

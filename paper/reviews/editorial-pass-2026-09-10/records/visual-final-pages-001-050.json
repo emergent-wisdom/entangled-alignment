@@ -1,0 +1,167 @@
+{
+  "status": "Pass: both prior pagination findings resolved; no unresolved visual issues in pages001\u2013050.",
+  "scope": "Read-only final visual QA of the current rendered-final PNGs. All nine changed pages in the assigned range were viewed individually at original resolution. Baseline review covers the other 41 pages; their pixel identity was independently checked.",
+  "pages_inspected": [
+    14,
+    15,
+    16,
+    17,
+    34,
+    47,
+    48,
+    49,
+    50
+  ],
+  "pages_covered_by_pixel_identical_prior_review": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46
+  ],
+  "page_dimensions": [
+    723,
+    935
+  ],
+  "resolved_findings": [
+    {
+      "id": "V01",
+      "pages": [
+        14,
+        15
+      ],
+      "resolution": "The candidate-Core introduction and all seven statement lines now appear together at the top of page15. Page14 ends with complete introductory paragraphs. No statement is stranded or clipped; the resulting page14 whitespace is proportionate to keeping this short block together."
+    },
+    {
+      "id": "V02",
+      "pages": [
+        47,
+        48
+      ],
+      "resolution": "The Layer3 heading, lead-in, and complete Translator quotation now appear together on page48. Page47 ends with the complete Layer2 interpretation. The quotation is contained within one intact grey box, with no clipping or overflow."
+    }
+  ],
+  "verified_without_defect": [
+    {
+      "pages": [
+        16,
+        17,
+        34
+      ],
+      "item": "Text, headings, equation and lists remain legible and within margins after reflow; no overlap or stranded heading observed."
+    },
+    {
+      "pages": [
+        49,
+        50
+      ],
+      "item": "The snapshot-diagnostics table remains complete on page49; the Kafka artifact-reconciliation table is complete on page50 with its caption, counts and capture-uncertainty row readable. Subsequent results prose and narrative/technical-domain headings flow cleanly."
+    },
+    {
+      "pages": [
+        14,
+        15,
+        16,
+        17,
+        34,
+        47,
+        48,
+        49,
+        50
+      ],
+      "item": "No new clipping, overlap, broken glyphs, problematic table split, stranded heading, or large unintended whitespace observed."
+    }
+  ],
+  "unresolved_issues": [],
+  "page_hash_algorithm": "SHA-256 of final PNG file bytes",
+  "page_hashes": {
+    "page-001.png": "0c847341ba828ebd529a999a54d74a6f03b055eb9445ad05944baf413f8f109b",
+    "page-002.png": "ccf0844d78cf105c7c3784ebd48d83fb06e27e90ed31ce434472af7dfdcd323c",
+    "page-003.png": "6969e25ea4d3440315d115a34110efe050f8d39659dad4dfca762e209717f7d6",
+    "page-004.png": "83a59db5c3bc2a7ff3bb08841d7e358d3bb4c4e0c298c084fb2558f2e2040277",
+    "page-005.png": "5677986e80934d2568ef484524be738295faa85c4b0eb7a11c3d74a4bd64c0b1",
+    "page-006.png": "d1f4b369659a61020156bb1e7ebd4f537d0872b7ddeac348a46e883251dd1854",
+    "page-007.png": "e4537ab1973e3c42ada8574a7236a5728b9a370bcd290a16fba46f3cac6d965c",
+    "page-008.png": "3c21ea3e593b2ef8f652c9a4f04d4fe98e665379a798036dd0aad8b0f5ada3fe",
+    "page-009.png": "67513c3433f18b023b6c3be309ac2716a0d8bd7b34ae03d94cf63ee2dc80dd22",
+    "page-010.png": "d99b86385e0937de66cf205f0fb5341ae26c3ec68201dd4f807cd98e6fbb5a6b",
+    "page-011.png": "164bec1d4619f650a417e999ab17d709c67a28f8a3a3f89ce5c654b7e546c725",
+    "page-012.png": "d37eaea091a3c3ee024034a94606fbd452c5c1be7e66c4d842afb3f8ff7062d9",
+    "page-013.png": "f94bd2b3da36de34c85a35f1b9fc5624b1803964cd726efedebfeb088928b907",
+    "page-014.png": "d4df3bb6b3c9c1114b6c8a05c38534e2996f3c0ca70fa3d6b23601eb73ba5306",
+    "page-015.png": "d61216b45237cc6df12832248bc73ce23149560974317c9fefecf9e986fd7cdc",
+    "page-016.png": "20e35f37a569a38404a4789bdc6301ab9b598dae6b78f13f1c8682e33d71423a",
+    "page-017.png": "6ce4658a1f64158679b0c99991c03cba6f0125a02e6bcbe5cb1d87497bd5c569",
+    "page-018.png": "9af20f63f2835ed4f18b872ce5a225657204fd94f076da8d6cec91f4e914c75a",
+    "page-019.png": "0e08f561a446410240b2da04b6a73cd4789f52a1441dc58703b26e5db27bc07b",
+    "page-020.png": "92035fd7dad203d9c102fadae07eb54df0c4bdffa0edd315f23b7b7b35d91b45",
+    "page-021.png": "414c7ec2524513b0e02e961c8c209ca479dbe01484a041f2b2f6b364cd74232c",
+    "page-022.png": "35619cf7df75e48331d8a2617a92a328c0e9324670e46ee34c4d6acf9e30f91e",
+    "page-023.png": "e61db1b72848e86cc97ab87d4ad4336f0b40d1afd2e0cd0ff99433703afedbd3",
+    "page-024.png": "d6b505948405c38fbf11bb1ff2868126a1b7b9c293711d1618061868f1c91403",
+    "page-025.png": "2fb0fe245309c9a6ef00939114fa660a2d628f8f626537208a4d2ccc755f6f01",
+    "page-026.png": "ac62ca8688d52c309906dfe84f3114fb82288252f1968a429e326e9ce7891344",
+    "page-027.png": "736c639e667f4bf03b972c249d0428b89ccf98f2a795a6a8c494276b1da5c9a4",
+    "page-028.png": "fb4ad63d551e962e5bae399759555079f7d90db3a8054345a9f6f6db99013079",
+    "page-029.png": "5c74a9c233e1ad24c1e6882e3663d9ba443ebef6a712c3e90bbc72e28fec607d",
+    "page-030.png": "86d619d7e89bf46853bdcc05597eaf9cdd4deb1913bef1ec0a2a1c7ceb7fe6c9",
+    "page-031.png": "85b146b853be7183130dbc08da0b5d0580a446f477f0292bc73bc9bda258e426",
+    "page-032.png": "e9bf92245ed68fc0046a8663e7c06c15cbd9aad1d5fad9d9ead057b8affe5091",
+    "page-033.png": "f81b498aff87a2869204b982249a3493ba03a89d98a71ee0d3de11eb447bd9f9",
+    "page-034.png": "4ac9949828fe166747cf0354800437b3612c6c916d28927d0f5527dd1c7a5dd1",
+    "page-035.png": "a79d4d861eeed81392223ce0d1929eeed2c453ade53e90e5347d54f4195d1cfe",
+    "page-036.png": "71755382ce7a5b416bfb7a69869363dcaa9da9769d2c4e6bbec4ee61fd66d5ee",
+    "page-037.png": "df6da89b5cf28ac4bad192841706b6cc39130e324310858f0b1f0020a1a76ccc",
+    "page-038.png": "2764f35b78dbe6cc31362dec8de2c7eb7da148295e190011e314a6f074ed78a4",
+    "page-039.png": "4799246383688b5c686b66b4fdc1cfd4bb6a9102d86255a253be4bb2df6f4c02",
+    "page-040.png": "1c9c5c6695bb9d035b4244c7e8581b4f7455c44de6b92a765ec871190764907e",
+    "page-041.png": "1b82bed5bff63d21fe99912b72e1a26c1674ab475358c3808acb8c9653923d1a",
+    "page-042.png": "78df9cf180cf41ea64e5b312619689750a8aeca85995a8e84484e5eed542bc9e",
+    "page-043.png": "89e20f318dcb1d6e7db04370d1a38b36562305d45bc7b9588e8f722a4cbb4b85",
+    "page-044.png": "6c86deb3f5d3707052a513e385cd0fe470485393dfae0fcd96de645e8b36a398",
+    "page-045.png": "2e32a2534a7188c4b7ad4b93c0db6e76304fa79240f03e1f63228874104701a8",
+    "page-046.png": "fea8dc2e2a3a0d2d9acb5a7b4e82a2fcbaec8ba637b9d322953e8296a3863a70",
+    "page-047.png": "9f34b2773d103379e6ffb4d7948d9b744358381a2287bf044f4f4363836002f5",
+    "page-048.png": "781d5c27d18945fcdaa58a81517bc389a87fefb58a5443bcaaaca1e29b600c4c",
+    "page-049.png": "6928fa38e0140fc628e198d192591309f06b233455ce01bc467c6d6da2338575",
+    "page-050.png": "6230612865c1e588eedf445f95acbc64fbccd5f5674d080c4cffc4a2469bee66"
+  },
+  "baseline_report": "visual-review-pages-001-050.json",
+  "comparison_report": "visual-changed-pages.json"
+}

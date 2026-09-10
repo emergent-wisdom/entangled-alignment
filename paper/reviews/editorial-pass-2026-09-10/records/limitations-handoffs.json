@@ -1,0 +1,20 @@
+{
+  "R519": {
+    "destination": "Root Related Work, next to deliberative-alignment comparator",
+    "text": "Recent evidence from OpenAI's deliberative alignment work \\cite{guan2024deliberative} provides cautious optimism: models trained to reason about safety policies in their chain-of-thought exhibit measurably improved downstream safety behavior. Whether a causal connection holds at the depth sought by Entangled Alignment---steering not just safety refusals but the entire character of cognition---is a stronger claim that remains unverified.",
+    "protected": [
+      "positive evidence from deliberative-alignment policy reasoning",
+      "guan2024deliberative citation",
+      "cognition-wide character-governance remains a stronger unverified claim"
+    ]
+  },
+  "R571": {
+    "destination": "Core R198 / sec:habitable-substrate",
+    "text": "Identity\nengineering also activates the conditional welfare question in\nSection~\\ref{sec:habitable-substrate}: first-person claims may affect a possible\nmoral patient, while absent experience they can still mislead users and\nevaluators. The Core's human focus therefore does not exhaust the welfare\nanalysis.",
+    "protected": [
+      "possible moral patient affected by identity engineering",
+      "misleading first-person claims even absent experience",
+      "human focus does not exhaust welfare analysis"
+    ]
+  }
+}

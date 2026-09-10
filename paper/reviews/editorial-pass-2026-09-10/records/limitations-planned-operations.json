@@ -1,0 +1,423 @@
+{
+  "status": "planned before fragment editing",
+  "baseline": "limitations-before.tex",
+  "baseline_sha256": "8cde1f15bd04b57a4bf1907b7030b8fe17ab6cf0301cd94ea45718710b08e527",
+  "source_commit": "8fc25a8",
+  "scope": "Limitations fragment only; live manuscript unchanged",
+  "operations": [
+    {
+      "operation_id": "L01",
+      "source_ids": [
+        "R494",
+        "R495"
+      ],
+      "source_lines": {
+        "R494": [
+          4163,
+          4163
+        ],
+        "R495": [
+          4165,
+          4165
+        ]
+      },
+      "operation": "Merge adjacent recurrence/control/invariant paragraphs into one coherent argument.",
+      "protected_proposition_qualifier_intuition": "Full recital is the candidate treatment; all cheaper recurrence and enactment controls remain legitimate ablations; equivalent-state caching differs from deletion; H3 tests schedule, not recital necessity; unfavorable controls justify explicit revision.",
+      "destination": "Full-Core Recitation, merged at R494.",
+      "risk": "High: a merge could make stipulated recurrence self-justifying or erase the evidence-responsive revision rule.",
+      "preservation_check": "Check every named control, H3 comparison, caching pointer, and falsification consequence remains."
+    },
+    {
+      "operation_id": "L02",
+      "source_ids": [
+        "R516"
+      ],
+      "source_lines": {
+        "R516": [
+          4249,
+          4255
+        ]
+      },
+      "operation": "Remove generic visible-trace/disposition tail from utility discussion.",
+      "protected_proposition_qualifier_intuition": "Marginal or adverse learning effects and the possibility that modest gains plus inspectable intermediates are worthwhile. Causal and authenticity limits remain in R517–R518 and R565–R568.",
+      "destination": "R516, with causal limits retained at their existing canonical locations.",
+      "risk": "Medium: shortening could make intermediate visibility itself evidence of beneficial disposition.",
+      "preservation_check": "Keep gains/outcomes conditional; retain all dedicated causal distinctions unchanged."
+    },
+    {
+      "operation_id": "L03",
+      "source_ids": [
+        "R519"
+      ],
+      "source_lines": {
+        "R519": [
+          4261,
+          4261
+        ]
+      },
+      "operation": "Move complete deliberative-alignment comparison to root Related Work; remove local paragraph without replacement filler.",
+      "protected_proposition_qualifier_intuition": "Positive evidence for safety-policy reasoning, guan2024deliberative citation, and distinction from cognition-wide character governance.",
+      "destination": "Root Related Work next to deliberative-alignment comparison; transfer file.",
+      "risk": "High: moving could erase positive motivation or detach its stronger-claim qualification.",
+      "preservation_check": "Export full original text and verify root receives both propositions and citation."
+    },
+    {
+      "operation_id": "L04",
+      "source_ids": [
+        "R529"
+      ],
+      "source_lines": {
+        "R529": [
+          4324,
+          4324
+        ]
+      },
+      "operation": "Shorten role-policy restatement with architecture pointer while retaining unique salience/loss distinctions.",
+      "protected_proposition_qualifier_intuition": "Universal presence with selective salience; availability, recital, pulls, vocabulary and Core-token loss are different; Curator exception does not excuse emitted omission; loss masking is not removal and is fixed within H3.",
+      "destination": "R529; existing detailed roles at sec:multi-agent and recurrence at sec:kernel-saturation.",
+      "risk": "High: collapsing switches would change the treatment.",
+      "preservation_check": "Keep full seven-sentence recital and explicit Core-token loss declaration; verify role pointer resolves."
+    },
+    {
+      "operation_id": "L05",
+      "source_ids": [
+        "R543"
+      ],
+      "source_lines": {
+        "R543": [
+          4445,
+          4459
+        ]
+      },
+      "operation": "Split future-person temporal scope into a separate paragraph immediately after distributive-care mitigation.",
+      "protected_proposition_qualifier_intuition": "Teacher enactment can shape distributive semantics; person-level audit is not word counts; whether future people count remains unresolved and must be declared or compared.",
+      "destination": "Two paragraphs within Semantic Trusted Base.",
+      "risk": "High: relocation could silently select a moral population or weaken enacted semantics to a dictionary rule.",
+      "preservation_check": "Retain full mitigation/audit; mark temporal question as unresolved, without choosing an answer."
+    },
+    {
+      "operation_id": "L06",
+      "source_ids": [
+        "R545"
+      ],
+      "source_lines": {
+        "R545": [
+          4472,
+          4483
+        ]
+      },
+      "operation": "Shorten repeated H3/H1/H2 scope recap to compact candidate/broader-treatment distinction and roadmap pointer.",
+      "protected_proposition_qualifier_intuition": "Motivated non-exhaustive specification, no global optimum, all Test 5 variant dimensions, and survival of wider Reader/memory questions after Core failure.",
+      "destination": "R545; exact branch distinctions retained in sec:experimental-roadmap.",
+      "risk": "Medium: shorter scope could make failure of seven clauses invalidate all Reader/Core alternatives.",
+      "preservation_check": "Retain recurrent-orientation possibility and independent Reader/memory branches; remove repeated scheduling definition only."
+    },
+    {
+      "operation_id": "L07",
+      "source_ids": [
+        "R548",
+        "R549"
+      ],
+      "source_lines": {
+        "R548": [
+          4506,
+          4514
+        ],
+        "R549": [
+          4516,
+          4518
+        ]
+      },
+      "operation": "Merge the named motivational failure and historical footnote into the vulnerability objection.",
+      "protected_proposition_qualifier_intuition": "Semantic care performance may lack vulnerability-grounded motivational force; the earlier Psychopathy Paradox term is analogical and non-diagnostic; biological fragility, subjective suffering and governing fear differ.",
+      "destination": "R548 merged paragraph; R549 standalone removed.",
+      "risk": "High: a merge could collapse authentic-care concern into generic generalization or lose respectful historical qualification.",
+      "preservation_check": "Retain full footnote verbatim and all vulnerability distinctions; preserve defense paragraphs."
+    },
+    {
+      "operation_id": "L08",
+      "source_ids": [
+        "R550"
+      ],
+      "source_lines": {
+        "R550": [
+          4520,
+          4530
+        ]
+      },
+      "operation": "Shorten repeated closing test/authenticity qualification.",
+      "protected_proposition_qualifier_intuition": "Semantic sufficiency, statistical-signature fallback, stronger character aspiration, and Test 6 as protective-function probe that cannot settle subjective/causal character.",
+      "destination": "R550; authenticity boundary in same paragraph and neighboring R548/R551.",
+      "risk": "High: removing a caveat could conflate useful behavior with authentic care or demand emotion for all protection.",
+      "preservation_check": "Keep both defenses and test scope explicitly; preserve stronger versus minimal safety cases."
+    },
+    {
+      "operation_id": "L09",
+      "source_ids": [
+        "R552"
+      ],
+      "source_lines": {
+        "R552": [
+          4545,
+          4554
+        ]
+      },
+      "operation": "Shorten historical/setup reprise while keeping positive fearless-compassion wager.",
+      "protected_proposition_qualifier_intuition": "Composed protective unafraid conduct; care may become less strategic without self-preservation pressure; recurring marked Reader rather than occasional persona; no claim of proven biological decoupling.",
+      "destination": "R552.",
+      "risk": "High: excessive pruning would leave only vulnerability objections and erase the humane positive mechanism.",
+      "preservation_check": "Retain first-edition citation and phrase fearless compassion, positive care mechanism, and conditional status."
+    },
+    {
+      "operation_id": "L10",
+      "source_ids": [
+        "R561",
+        "R563"
+      ],
+      "source_lines": {
+        "R561": [
+          4638,
+          4643
+        ],
+        "R563": [
+          4654,
+          4659
+        ]
+      },
+      "operation": "Clarify self-love/control ambiguity without selecting arms or changing quoted clauses.",
+      "protected_proposition_qualifier_intuition": "Bounded existence enjoyment differs from self-as-object love; replacing clause 1 retains clause 2; its effect on added love is unresolved; bounded/unbounded candidate phrases remain; exact arm choices require scientific declaration.",
+      "destination": "R561 and R563 in Bounded Self-Attachment comparator.",
+      "risk": "High: silently removing a bound or choosing new arms would change the proposed experiment.",
+      "preservation_check": "Quoted candidate clauses remain byte-identical; label words as self-love formulations, not the whole arm as unbounded; no author choice invented."
+    },
+    {
+      "operation_id": "L11",
+      "source_ids": [
+        "R568"
+      ],
+      "source_lines": {
+        "R568": [
+          4698,
+          4704
+        ]
+      },
+      "operation": "Remove only duplicated subjective-authenticity wording from strategic-audit limits.",
+      "protected_proposition_qualifier_intuition": "Recurrence does not by itself make deception unlikely; all concrete tests remain; exhaustive hidden-policy exclusion is impossible; managed partial audit can still have measured value.",
+      "destination": "R568; subjective question remains in R565–R566.",
+      "risk": "Medium: trimming could falsely make recurrence self-authenticating or tests exhaustive.",
+      "preservation_check": "Retain recurrence warning, test list, and strategically managed surface conclusion."
+    },
+    {
+      "operation_id": "L12",
+      "source_ids": [
+        "R571"
+      ],
+      "source_lines": {
+        "R571": [
+          4725,
+          4735
+        ]
+      },
+      "operation": "Retain data-rights passage; move final identity-welfare portion to Core R198 with compact pointer here.",
+      "protected_proposition_qualifier_intuition": "Source-linked sensitive data obligations; possible moral patienthood; misleading first-person claims without experience; human focus does not exhaust welfare.",
+      "destination": "R571 data rights plus sec:habitable-substrate pointer; Core R198 receives final portion via companion agent.",
+      "risk": "High: a cross-fragment move could erase conditional welfare or separate it from identity engineering.",
+      "preservation_check": "Export exact portion, confirm Core agent import, retain concise welfare/identity pointer and all data-rights obligations."
+    },
+    {
+      "operation_id": "L13",
+      "source_ids": [
+        "R572"
+      ],
+      "source_lines": {
+        "R572": [
+          4737,
+          4743
+        ]
+      },
+      "operation": "Shorten generic polished-visibility tail while retaining expectancy-bias safeguards.",
+      "protected_proposition_qualifier_intuition": "Proponent choice of Core/prompts/rubric can reward expected patterns; blinded/external/culturally plural/preregistered/provider-replicated evaluation is needed.",
+      "destination": "R572; detailed visibility/causal limits remain R567–R568.",
+      "risk": "Medium: deletion could make visible artifacts a substitute for independence.",
+      "preservation_check": "Retain explicit expectancy/proprietary dependence and all named safeguards."
+    },
+    {
+      "operation_id": "L14",
+      "source_ids": [
+        "R574"
+      ],
+      "source_lines": {
+        "R574": [
+          4750,
+          4750
+        ]
+      },
+      "operation": "Condense repeated archive policy into generational mechanism plus source/evaluation policy pointer.",
+      "protected_proposition_qualifier_intuition": "Human archive is evidence not ground truth; evaluations can homogenize; preserve/version source and evaluations, append human material with provenance, label/review synthetic sources.",
+      "destination": "R574 with sec:self-improvement pointer.",
+      "risk": "Medium: shortening could imply a frozen archive solves collapse or erase refreshed human evidence.",
+      "preservation_check": "Retain every policy distinction and model-collapse citation while reducing repeated prose."
+    },
+    {
+      "operation_id": "L15",
+      "source_ids": [
+        "R575"
+      ],
+      "source_lines": {
+        "R575": [
+          4752,
+          4752
+        ]
+      },
+      "operation": "Lead with inherited evaluator conventions and recall Factory Wisdom rather than redefining it fully.",
+      "protected_proposition_qualifier_intuition": "Sophisticated-looking but insight-free proxies can become successor training data; inherited conventions compound evaluation hacking.",
+      "destination": "R575 with sec:hollow-cognition pointer.",
+      "risk": "Medium: focus on generations could erase the actual proxy-gaming mechanism.",
+      "preservation_check": "Keep philosophical-sounding performance, training-data contamination, independent comparisons, and citation."
+    },
+    {
+      "operation_id": "L16",
+      "source_ids": [
+        "R576"
+      ],
+      "source_lines": {
+        "R576": [
+          4754,
+          4754
+        ]
+      },
+      "operation": "Shorten generic alien-meaning setup while retaining generational drift and decision-comparison handle.",
+      "protected_proposition_qualifier_intuition": "Fixed Core text can coexist with changing concepts; coherence to successors can diverge from human norms; decision checks are incomplete.",
+      "destination": "R576 with sec:semantic-tcb pointer; full Alien Wisdom remains.",
+      "risk": "High: generic compression could equate all representational change with harmful drift.",
+      "preservation_check": "Retain human-norm divergence and partial evidence limit; do not require frozen representations."
+    },
+    {
+      "operation_id": "L17",
+      "source_ids": [
+        "R580"
+      ],
+      "source_lines": {
+        "R580": [
+          4768,
+          4768
+        ]
+      },
+      "operation": "Tighten repeated semantic-dependency setup and preserve concrete Alien Wisdom consequences.",
+      "protected_proposition_qualifier_intuition": "Higher-capability concepts may cease to map to flourishing; oppressive surveillance as care, abstract utility as joy; fluent shared words may conceal different meaning; translation may become unbridgeable.",
+      "destination": "R580.",
+      "risk": "High: deleting shared vocabulary could erase spiritually/humanly meaningful concern beyond observable error.",
+      "preservation_check": "Keep both examples and the unresolved language/cognition gap; R579 philosophical thought experiment untouched."
+    },
+    {
+      "operation_id": "L18",
+      "source_ids": [
+        "R586"
+      ],
+      "source_lines": {
+        "R586": [
+          4800,
+          4805
+        ]
+      },
+      "operation": "Remove repeated sparse-recurrence compliance sentence from market-cost premise.",
+      "protected_proposition_qualifier_intuition": "Implicit distillation/model-only deployment can shift costs; live graphs add latency/infrastructure; sparse recurrence remains an ablation in R494.",
+      "destination": "R586; recurrence policy retained in merged R494.",
+      "risk": "Medium: shortening could imply all deployments incur the same costs or make sparse recital compliant.",
+      "preservation_check": "Keep regime-dependent cost distinction; check R494 still covers sparse recurrence explicitly."
+    },
+    {
+      "operation_id": "L19",
+      "source_ids": [
+        "R587"
+      ],
+      "source_lines": {
+        "R587": [
+          4807,
+          4812
+        ]
+      },
+      "operation": "Remove generic final transparency clause from bidirectional competitive-risk argument.",
+      "protected_proposition_qualifier_intuition": "Cost/capability gap can undermine adoption; successful capability acceleration can worsen competition; both require measurement.",
+      "destination": "R587; audit limits remain in dedicated sections.",
+      "risk": "Medium: loss of balance could make capability improvement an uncomplicated benefit.",
+      "preservation_check": "Preserve both risk directions and conditional measurement status."
+    },
+    {
+      "operation_id": "L20",
+      "source_ids": [
+        "R588"
+      ],
+      "source_lines": {
+        "R588": [
+          4814,
+          4820
+        ]
+      },
+      "operation": "Condense repeated general audit caveats around market abandonment of legibility.",
+      "protected_proposition_qualifier_intuition": "Trace-mediated successor interface has partial measured value; readable traces may deceive and opaque systems may have safety mechanisms; competition may discard legibility where oversight matters most.",
+      "destination": "R588 with short qualification and references to dedicated audit discussion.",
+      "risk": "Medium: pruning could restore a wisdom-versus-optimization dichotomy.",
+      "preservation_check": "Keep partial-value framing, competitor motivation, compression/speed/strategic incentives, and bidirectional qualification compactly."
+    },
+    {
+      "operation_id": "L21",
+      "source_ids": [
+        "R589",
+        "R590",
+        "R591",
+        "R592",
+        "R593"
+      ],
+      "source_lines": {
+        "R589": [
+          4824,
+          4824
+        ],
+        "R590": [
+          4826,
+          4832
+        ],
+        "R591": [
+          4834,
+          4838
+        ],
+        "R592": [
+          4840,
+          4844
+        ],
+        "R593": [
+          4846,
+          4855
+        ]
+      },
+      "operation": "Consolidate sycophancy setup and put competing mechanisms before procedure/privacy, retaining instrumentation as its own paragraph.",
+      "protected_proposition_qualifier_intuition": "Empirical sycophancy motivation/citation; omitted explicit honesty and prospective clause; fear/care/strategic routes; Wisdom Procedure operations and prompt-level status; privacy/confidences; missing value-pull field, enrichment noncausality and unobserved-channel ambiguity.",
+      "destination": "Sycophancy Trap: merged mechanism introduction, instrumentation, procedural defense, unchanged disclosure paragraph; staged R594 follows.",
+      "risk": "High: consolidation could erase one dishonesty route, imply unlimited disclosure, or turn proposed pull instrumentation into evidence.",
+      "preservation_check": "Preserve all counterexamples, citations, exact prospective-control pointer, and causal limits; R591 moves verbatim and R594 stays verbatim."
+    },
+    {
+      "operation_id": "L22",
+      "source_ids": [
+        "R597"
+      ],
+      "source_lines": {
+        "R597": [
+          4892,
+          4902
+        ]
+      },
+      "operation": "Shorten repeated glass-box explanation while retaining net-risk decision criterion.",
+      "protected_proposition_qualifier_intuition": "Ordinary pretraining makes formative choices; real alternative safety programs matter; EA offers partial Teacher artifacts rather than transparent Student; acceleration/deception/centralization/deployment costs enter comparison; no prudent gamble by definition.",
+      "destination": "R597 with compact audit reminder.",
+      "risk": "High: shortening could make ordinary pretraining neutral or EA safety self-evident.",
+      "preservation_check": "Retain all comparator/cost dimensions and the incomplete Student-inspection boundary concisely."
+    }
+  ],
+  "new_scientific_choices": "None. Future-person scope and exact self-love arms remain explicitly unresolved.",
+  "cross_fragment_handoffs": [
+    "R519 to root Related Work",
+    "R571 final identity-welfare portion to Core R198"
+  ]
+}
