@@ -14,14 +14,14 @@ authors:
 type: software
 url: "https://github.com/emergent-wisdom/entangled-alignment"
 repository-code: "https://github.com/emergent-wisdom/entangled-alignment"
-date-released: 2026-08-24
+date-released: 2026-09-10
 identifiers:
   - type: doi
     value: 10.5281/zenodo.16440311
     description: "Concept DOI resolving to the latest version of the paper"
   - type: doi
-    value: 10.5281/zenodo.22073296
-    description: "Zenodo record for the August 24, 2026 release"
+    value: 10.5281/zenodo.22698582
+    description: "Zenodo record for the September 10, 2026 release"
 keywords:
   - alignment
   - multi-agent-systems
@@ -39,8 +39,8 @@ preferred-citation:
     - family-names: Westerberg
       given-names: Henrik
   year: 2026
-  month: 8
+  month: 9
   publisher:
     name: Zenodo
-  doi: 10.5281/zenodo.22073296
-  url: "https://doi.org/10.5281/zenodo.22073296"
+  doi: 10.5281/zenodo.22698582
+  url: "https://doi.org/10.5281/zenodo.22698582"
