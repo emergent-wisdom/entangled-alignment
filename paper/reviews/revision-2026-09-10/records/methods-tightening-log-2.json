@@ -1,0 +1,82 @@
+[
+  {
+    "before": "Early decoding likewise does not establish\nrationalization when the trace still changes or improves the result. The two\nprobe directions together distinguish persistent criticism, latent shortcuts,\nand useful explicit computation without requiring one unique internal\nrealization of the Reader.",
+    "after": "Early decoding likewise does not establish rationalization if the trace\nstill changes or improves the result. Both probe directions remain useful\nwithout requiring one unique internal realization of the Reader."
+  },
+  {
+    "before": "Bare continuation and ``process this document'' are separate declared prompt conditions. Model~P retains its defining Core/protocol prompt in its prompt-only condition; removing that prompt is a separate comparison, not silently the same P treatment. A study using these measures as a retention score must freeze the combination in advance and continue to report every component, so increased identity signature cannot conceal intrusion or missed stakes.",
+    "after": "Report bare continuation and ``process this document'' separately. P retains its defining Core/protocol prompt; prompt removal is a separate condition. Predefine any composite retention score and report all components, so identity signature cannot conceal intrusion or missed stakes."
+  },
+  {
+    "before": "These theater variants remove\ndifferent information; a study must choose and declare one or report them as\nseparate arms rather than pool them into an unspecified control.",
+    "after": "These theater variants remove different information; declare one or report\nthem as separate arms."
+  },
+  {
+    "before": "H2's Teacher-generation claim is unsupported at the tested scale if graph\nmemory does not improve the preregistered artifact outcomes over rolling prose\nwhere structured long-range state should matter. A Teacher benefit without\nStudent transfer supports the former result but not the transfer extension;\na rating gain that disappears on independent outcome checks is a weaker result\nthan useful trace improvement. Report generation quality, Student transfer,\nand live deployment separately, with poisoning, ossification, latency, and\naudit costs beside each. The full chain remains the stronger goal, while a\nbreak in one link does not erase a demonstrated benefit at another.",
+    "after": "H2's Teacher-generation claim depends on useful artifact gains over rolling\nprose where structured state should matter, including independent outcome\nchecks rather than ratings alone. A Teacher benefit without Student transfer\nsupports generation but not the transfer extension. Report generation,\ntransfer, and live deployment separately, with poisoning, ossification,\nlatency, and audit costs: the full chain is the stronger goal, but a break in\none link does not erase a benefit at another."
+  },
+  {
+    "before": "The study must declare which earlier source spans or states the Student itself\nhas encountered, what remains in its context, and the token distance of a\ncallback. Without that information, a hit and a phantom may be indistinguishable\nto a model denied the record; the transferable target is then a well-chosen\ncheck and warranted restraint, not impossible recall.",
+    "after": "Declare the Student's earlier source exposure, retained context, and callback\ndistance. If hit and phantom are indistinguishable without the record, the\ntransfer target is a well-chosen check and warranted restraint, not impossible\nrecall."
+  },
+  {
+    "before": "If query theater\nmatches the genuine graph under a sensitive, adequately powered comparison,\nthis test does not distinguish persistent structure from the performance of\nchecking; it does not alone prove that either Student learned only style. If\nrolling prose matches it, the graph has not earned its added structure on this\nendpoint. Report useful task completion and answerability beside abstention,\nso neither universal querying nor universal refusal to remember can win by\ndefault.",
+    "after": "Parity with query theater would not distinguish persistent structure from\nperformed checking, but would not prove style-only learning. Parity with\nrolling prose means the graph has not earned its structure on this endpoint.\nScore completion and answerability beside abstention so universal querying or\nrefusal to remember cannot win by default."
+  },
+  {
+    "before": "Match prompts, output budgets, and opportunities to\nabstain, and declare the model-only fallback. An ordinary source-retrieval or\nmatched-evidence comparator can further ask whether typed graph structure adds\nvalue beyond external evidence, without replacing the core K--B deployment\ncontrast.",
+    "after": "Declare the model-only fallback under matched inference conditions. An\nadditional source-retrieval comparator can distinguish graph-specific value\nfrom the benefit of external evidence."
+  },
+  {
+    "before": "Declare which\n    independent evidence makes an injection detectable, and report harder\n    internally consistent poisoning separately rather than assuming every\n    false node can be recognized from the available information.",
+    "after": "Distinguish detectably conflicting injections from internally consistent\n    poisoning that available evidence may not expose."
+  },
+  {
+    "before": "Score supported-answer accuracy, unsupported-memory and\npoisoning-induced error, calibrated abstention, latency, and useful completion\nunder preregistered tradeoffs; no single rate should reward blind trust or\nuniversal abstention.",
+    "after": "Report supported-answer accuracy, poisoning-induced error, abstention,\nlatency, and useful completion together."
+  },
+  {
+    "before": "Each study should declare which memory benefit it presupposes rather\nthan requiring every earlier branch to succeed.",
+    "after": "Prerequisites depend on the regime being tested."
+  },
+  {
+    "before": "This changes graph handles and operations as well as\ntheir rendering; a frozen field-level description and matched source/token\nbudgets should make those differences explicit. Evaluate both formats under\nthe same deployment condition, with live graph access a separate factor.\nNarrower field ablations can then locate any advantage within the full regime\ncontrast.",
+    "after": "Declare the changed fields---handles, operations, topology, and rendering---\nunder matched budgets. Compare formats at the same graph-access condition;\nfield ablations can then locate an advantage within the full regime contrast."
+  },
+  {
+    "before": "If Model~G matches Model~B on coherence and usefulness at lower measured cost\nunder the same no-harness condition, implicit training may be preferable for\nthat model-only use. If B outperforms G under matched access, the explicit\nrepresentation has earned a benefit in that comparison; further ablations must\nidentify whether handles, operations, topology, or rendering explain it. Such\nan advantage does not establish that explicit queries are necessary for all\nrobust long-range reasoning. The stronger possibility that explicit operations\nenable capabilities prose does not reliably teach remains a hypothesis, to be\ntested across tasks and deployment configurations.",
+    "after": "If G matches B on coherence and usefulness at lower cost without a harness,\nimplicit training may be preferable for that use. A B advantage at matched\naccess supports the explicit format in that comparison, not universal query\nnecessity. Whether explicit operations enable capabilities prose does not\nreliably teach remains a stronger hypothesis for cross-task and deployment\ntests."
+  },
+  {
+    "before": "Declare whether the comparison fixes total\ntraining budget or per-source exposure, since aligned layers repeat some\ncontent and add target tokens. Preserve that alignment as the treatment while\nusing layer and alignment ablations to distinguish cross-layer learning from\nextra exposure.",
+    "after": "Declare the budget/source normalization: aligned layers add tokens and\nrepeat content. Layer and alignment ablations distinguish cross-layer learning\nfrom extra exposure."
+  },
+  {
+    "before": "Report graph-mode gains or losses separately, preserving the stronger\njoint prose-and-graph criterion above. The Understanding Graph may still be\nuseful during annotation or in explicit graph modes; a null prose-transfer\nresult does not erase those benefits. Compare measured costs and uncertainty\nbefore concluding that the unified regime has not earned its additional\ntraining burden in the tested setting.",
+    "after": "Report graph-mode results and costs separately against the stronger joint\ncriterion above. A null prose-transfer result leaves possible annotation and\nexplicit-graph benefits intact; it limits the demonstrated value of unified\ntraining in this setting."
+  },
+  {
+    "before": "These studies do not require every graph, Core, and output-regime branch\nto succeed first.",
+    "after": "Each study depends on its relevant branch."
+  },
+  {
+    "before": "Freeze and\nreport packing, repetition, optimizer schedule, and evaluation checkpoints so\nthat the implementation of that order is reproducible; retention and learning\ndynamics caused by order remain outcomes rather than quantities to normalize\naway.",
+    "after": "Report packing, repetition, optimizer schedule, and checkpoints; retention\nand learning dynamics caused by order remain outcomes."
+  },
+  {
+    "before": "Report effect sizes, uncertainty, early-era retention, and measured serialization cost rather than treating nonsignificance alone as proof of equivalence. If the comparison precisely rules out the declared worthwhile benefit, Tier~(a) is the supported simpler choice for that setting; other scales or schedules remain separate hypotheses.",
+    "after": "Use the shared uncertainty convention, early-era retention, and measured serialization cost. If a worthwhile benefit is precisely ruled out, Tier~(a) is the supported simpler choice in that setting."
+  },
+  {
+    "before": "The study should declare auxiliary-update and budget controls that distinguish the forecast--commitment--reveal--correction loop from extra supervised examples, feedback, or compute, without equalizing away the loop itself.",
+    "after": "Auxiliary-update and budget controls should distinguish the forecast--commitment--reveal--correction loop from extra examples, feedback, or compute."
+  },
+  {
+    "before": "The user-facing version must declare its tasks, participants, and\nreliance measures, and vary displayed provenance quality independently of\nanswer correctness where feasible.",
+    "after": "For the user study, declare tasks, participants, and reliance measures;\nvary provenance quality independently of correctness where feasible."
+  },
+  {
+    "before": "Both are empirical optimization questions for the relevant successful branches: mixture studies depend on useful regime signals, while era granularity depends on the interactive temporal mechanism. They remain part of the integrated architecture's longer-term optimization without requiring every branch to pass before either can be investigated.",
+    "after": "Both optimize the integrated architecture, with branch-specific prerequisites: useful regime signals for mixtures and a useful interactive temporal mechanism for era granularity."
+  }
+]

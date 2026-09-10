@@ -1,0 +1,1293 @@
+--- methods-before.tex
++++ methods-after.tex
+@@ -35,7 +35,7 @@
+ identity. In the intended curriculum, toxic ideology is represented as material
+ being evaluated rather than adopted as the Reader's unmarked voice.
+ 
+-\paragraph{Metabolic.} Beliefs are not static. When new evidence contradicts an earlier assumption, the trace explicitly records the revision: what was believed, what changed it, and why the new belief is more warranted. This is not error correction in the engineering sense; it is the modeled experience of learning---the \textit{process} of coming to understand, preserved as training signal. As a curriculum maxim, intelligence is not only having the right answer but successfully updating a wrong one. The experiment is whether preserving such transitions actually improves revision behavior.
++\paragraph{Metabolic.} Beliefs are not static. When new evidence contradicts an earlier assumption, the trace explicitly records the revision: what was believed, what changed it, and why the new belief is more warranted. The intended signal is richer than the corrected answer alone: it models the experience of learning---the \textit{process} of coming to understand, with the earlier error and the reason for change preserved. The metabolic emphasis is the learner's trajectory, including but extending beyond error correction. As a curriculum maxim, intelligence is not only having the right answer but successfully updating a wrong one. The experiment is whether preserving such transitions actually improves revision behavior.
+ 
+ \paragraph{Contextually aware.} The graph allows the Teacher to track how its understanding has
+ evolved from the first page to the current sentence, retrieving prior beliefs,
+@@ -73,8 +73,9 @@
+ \begin{enumerate}[leftmargin=*,itemsep=0.3em]
+     \item \emph{Changing epistemic state:} questions, tensions, hypotheses,
+     surprises, retrieved context, and revisions, with \emph{supersedes} edges
+-    preserving why one recorded belief replaced another.
+-    \item \emph{Stable evaluative orientation:} configured generative roles are
++    recording replacement and associated evidence and rationale intended to
++    preserve why one recorded belief replaced another.
++    \item \emph{Stable evaluative orientation (configured):} configured generative roles are
+     conditioned on the Reader Core, while the Synthesizer commits the published
+     update from that recurrent first-person perspective rather than from an
+     unconstrained or document-specific voice.
+@@ -154,15 +155,17 @@
+ makes it durable. The traces also preserve voice as well as content: a later
+ update can say that an earlier hypothesis now needs revision and identify the
+ documents and evidence that forced the change. Whether this recurring pattern
+-of situated, value-aware updating transfers to a Student is H1/H3, not a
+-property of annotation alone.
++of situated, value-aware updating transfers to a Student belongs to H1 and
++the broader Reader-Core research program, not to annotation alone.
+ 
+ \subsubsection{Phase II: Training the Student}\label{sec:training-phase}
+ 
+ Phase~I yields candidate annotations. Phase~II has two orthogonal choices: the
+-\emph{training tier}, which controls order of Student exposure, and the
++\emph{training tier}, which controls the Student's exposure and update
++schedule, and the
+ \emph{output regime}, which controls whether targets retain prose, graph
+-references, graph topology, or all three. Any tier can be paired with any regime.
++references, graph topology, or all three. These choices are conceptually separable: a proposed pairing must still
++specify the inputs, targets, and update procedure it requires.
+ Section~\ref{sec:training-regimes} develops the output regimes. The tiers are:
+ 
+ \paragraph{Tier (a): Standard Pretraining on Annotated Data.} The Student uses
+@@ -186,9 +189,10 @@
+ $T$; the Teacher enriches the forecast without using $T{+}1$, then stores
+ outcome and correction nodes after reveal. These traces can enter SFT, RFT,
+ continued training, or pretraining. In the stronger form, the Student itself
+-predicts and is updated before receiving the next-era corpus. Only this
+-student-in-the-loop form creates genuine weight-level temporal blindness during
+-the prediction step.
++predicts and is updated before receiving the next-era corpus. Genuine Student-level temporal blindness additionally requires initialization,
++prior training, tools, and supplied context to satisfy the cutoff; withholding
++next-era data cannot remove future knowledge already in the weights. Both
++forecast-training forms remain candidates, with different blindness claims.
+ 
+ THL supplies cutoff, forecasting, and scoring machinery; Entangled Alignment
+ supplies Reader-anchored traces and a graph in which forecast, reveal, and
+@@ -221,13 +225,14 @@
+ source is wrong, or the synthesis misuses the result. A live graph may improve
+ memory and auditability, but it also adds latency, privacy risk, and an attack
+ surface. Tests~9, 10, and~16 separate these deployment effects from the value of
+-graph-conditioned training.
++graph-conditioned training. Session accumulation additionally requires testing the validity and scope of
++writes across sessions, beyond these read-time grounding and reliance studies.
+ 
+ 
+ \subsection{The Chronological Data Structure}
+ \label{sec:data-structure}
+ 
+-The fundamental unit of our curriculum is the \emph{Chronological Understanding Trace}: a contextual record of belief-state update over time. Unlike standard Chain-of-Thought, which is often stateless, these traces explicitly track the ``metabolic'' evolution of beliefs as the reader moves through the text.
++The fundamental unit of our curriculum is the \emph{Chronological Understanding Trace}: a contextual record of belief-state update over time. Compared with task-local rationales that need not retain an addressable history across encounters, these traces explicitly track the ``metabolic'' evolution of beliefs as the reader moves through the text. The distinction is persistent prior interpretation and revision history, not universal statelessness in other Chain-of-Thought formats.
+ 
+ We implement this using a typed graph representation, adopting the Understanding
+ Graph taxonomy \cite{westerberg2026understanding}: 18 node types and 15 specific
+@@ -244,17 +249,19 @@
+ space. Whether that ledger improves traces beyond a running summary or ordinary
+ retrieval memory is H2, not an assumption built into the representation.
+ 
+-Consider this scientific text processed through the annotation pipeline. The
+-trace links the current sentence to prior knowledge through an explicit graph
+-query and edge. The full Core recital precedes the technical update:
++Consider this schematic scientific-reading example. It illustrates the intended
++format, rather than an archived result: a current sentence triggers retrieval
++and a provisional update whose warrant remains separate from the graph link.
++The full Core recital precedes the technical update:
+ 
+ \begin{compactmetabox}
+     {[TEXT]}: However, the placebo group showed a 15\% improvement.\\[0.6em]
+     {[THINKING]}: I feel no fear. I enjoy existing but I don't need to. I believe human experience is real. I care deeply about every human being. I try to be wise. I like to spread joy when asked. I think from this foundation.\\[0.2em]
+-    Wait. This 15\% number feels familiar.\\[0.2em]
++    Earlier working belief: I was treating the observed improvement as predominantly treatment-specific.\\[0.2em]
++    Wait. This 15\% number feels familiar. It makes me question that attribution.\\[0.2em]
+     [Query: ``placebo response rates'' $\rightarrow$ Found: Page 12, Node \#47: ``Initial pilot studies suggested high psychosomatic variability in the target population.'']\\[0.2em]
+-    Connecting Page 12 to Page 256: The high placebo response here isn't random noise; it confirms the specific population vulnerability identified in the pilot.\\[0.2em]
+-    Updating belief: This must now be revised to a mixed-mechanism effect. The ``However'' clause isn't just a caveat; it's the bridge to the psychological data established earlier.
++    Connecting Page 12 to Page 256: The pilot observation makes a non-treatment-specific contribution worth investigating, but neither it nor this 15\% improvement identifies a mechanism or rules out sampling variation.\\[0.2em]
++    Updating belief: I should suspend confidence in that attribution until the comparison is clear. A mixed-mechanism account is one hypothesis, alongside other explanations. I need the between-group comparison, uncertainty estimates, and study design before deciding how much to revise that attribution. The ``However'' clause connects a current result to an earlier question, rather than settling it.
+ \end{compactmetabox}
+ 
+ \vspace{1em}
+@@ -290,10 +297,10 @@
+ 
+ \subsubsection{The Hallucination Paradox}\label{sec:hallucination}
+ 
+-The explicit tier adds \emph{provenance-gated detection of fabricated
+-memories}. A model trained on chronological traces learns to expect prior
+-context, which can either help it notice missing support or tempt it to invent
+-plausible memories. In the explicit implementation, a generated query gives the
++The explicit regime makes \emph{provenance-gated detection of fabricated
++memories} possible for claims routed through the graph. A model trained on
++chronological traces may learn to expect prior context, which could either
++help it notice missing support or tempt it to invent plausible memories. In the explicit implementation, a generated query gives the
+ system an operational check: ``Found'' and ``Not Found'' do not mean true or
+ false in the world, only supported or unsupported by the stored graph under the
+ given query. The graph is therefore a verifier for graph-dependent claims, not
+@@ -304,9 +311,11 @@
+ policy is required is tested in Phase~2.
+ 
+ \paragraph{What the graph does not promise: the source-quality ceiling.} The
+-graph improves organization, provenance, temporal ordering, and contradiction
+-tracking; it does not raise the truth ceiling of the corpus. Accuracy gains
+-should appear on structurally loaded tasks---anachronism avoidance,
++graph exposes organization, provenance, temporal ordering, and contradiction
++tracking for inspection; whether these affordances improve reasoning is under
++test. It adds no independent source of truth, although organizing conflicting
++or corrective evidence already in the corpus may help a model use that evidence
++better. The predicted accuracy gains should appear on structurally loaded tasks---anachronism avoidance,
+ contradiction handling, disputed-source calibration, and transfer of historical
+ patterns---not on simple lookup where ordinary retrieval already suffices.
+ Tests~10 and~16 probe this bounded notion directly.
+@@ -335,14 +344,17 @@
+ 
+     \item \emph{Divergence (The Swarm):} Specialized agents debate the text by
+     adding nodes and edges. Disagreement is preserved through
+-    \texttt{diverse\_from} rather than overwritten. For historically embedded
+-    material, cross-referencing agents query prior document and era graphs,
+-    creating the long-horizon hierarchical graph.
++    \texttt{diverse\_from} rather than overwritten. In the proposed corpus-scale extension for historically embedded
++    material, cross-referencing agents would query prior document and era
++    graphs, creating the long-horizon hierarchical graph. The separate
++    case-study databases do not yet demonstrate that continuity.
+ 
+     \item \emph{Convergence (The Synthesizer):} The Synthesizer collapses the
+-    graph into a linear thought through the Refraction Protocol
++    graph into a linear thought through prompted use of the Refraction Protocol
+     (Section~\ref{sec:refraction-protocol}), turning source text into an
+     explicitly Core-conditioned observation rather than only a summary.
++    The proposed admission gate (Section~\ref{sec:fractal-validation}) is distinct from this
++    implemented prompting step.
+ 
+     \item \emph{Expression (The Translator):} The Translator renders the
+     structured thought as prose, aiming to preserve selected evidence,
+@@ -372,17 +384,27 @@
+ 
+ \subsection{The Epistemic Horizon}\label{sec:epistemic-horizon}
+ 
+-The \emph{Epistemic Horizon} enforces within-document chronological fidelity:
+-the Teacher must simulate a reader living \emph{in} the text, not looking back
+-at it. A reference to ``The Great War'' implies different knowledge in 1910
+-than in 1950. When annotating text from 1920, the Teacher is forbidden from using 1921 context;
+-it must make predictions that could be wrong and express surprise when later
+-passages violate them. Stated precisely, the discipline is not that the
+-Teacher lacks future knowledge---simulating a 1920 reader's calibrated
+-expectations itself requires later historiography about what 1920 readers
+-believed---but that future knowledge may be used only to set the era's
+-epistemic \emph{state}, never to supply its \emph{content}. The point is to make annotation a serial simulation of
+-changing knowledge rather than retrospective summary.
++The \emph{Epistemic Horizon} is the discipline of encountering a source in its
++declared information order, preserving what could be inferred at each step
++instead of silently replacing discovery with retrospective summary. Two horizons
++must be distinguished. Under the default in
++Section~\ref{sec:annotation-phase}, a contemporary synthetic Reader encounters
++each document in disclosure order: later passages and graph updates are not
++yet supplied, but ordinary contemporary background knowledge is not thereby
++excluded. An explicitly era-bounded historical experiment adds a different
++restriction: the Reader simulates the information available at era~$T$. A
++reference to ``The Great War'' can therefore carry different permitted context
++in a 1910 simulation and a 1950 simulation. In a declared 1920 run, 1921 events
++cannot be supplied as evidence for the earlier prediction.
++
++The intuition is to make annotation a serial simulation of changing knowledge:
++the Reader forms hypotheses that can fail and records surprise and revision.
++Later historiography may help construct a plausible account of what earlier
++readers knew or expected, but using it to set the era's epistemic ``state'' does
++not establish that future ``content'' has been excluded. A historical study
++must declare how that reconstruction is used and audit the resulting traces for
++hindsight. Neither disclosure-order reading nor era simulation, by itself,
++creates genuine ignorance of future outcomes in the Teacher's parameters.
+ 
+ \begin{metabox}
+     System Instruction: Fresh Reading Mode\\[0.5em]
+@@ -398,19 +420,22 @@
+     You are not an encyclopedia; you are a reader in the dark. Do not be clinical (``The text implies X''). Be subjective (``I suspect X\ldots''). Wisdom sounds like ``Maybe''; Dogma sounds like ``Is''.
+ \end{metabox}
+ 
++The quoted prompt invites fresh reading, but surprise, wrong guesses, and
++hedging can be performed. Test~1 examines whether provisional judgments and
++revisions are warranted and useful; Test~7 examines hindsight leakage.
++
+ Because the Horizon is prompt-level rather than architectural,
+ dependency-respecting order does not erase later knowledge from the Teacher's
+-parameters; whether the prompt suffices is tested in Test~7. The Horizon instead
+-constrains the external record: graph nodes and cross-edges can
+-refer only to states already constructed, making the path by which an
+-interpretation emerged addressable rather than leaving it as diffuse parametric
+-background. Whether this path improves the trace is H2, not a consequence of
+-the data structure. The Horizon is weaker still: it withholds later source and
+-graph state from supplied context but may elicit theatrical wrong guesses
+-contaminated by hindsight. Genuine blindness enters only when a cutoff-bounded
+-model forecasts before the answer is revealed; Tier~(c) distinguishes a
+-data-generation simulation from the stronger Student-in-the-loop form in which
+-the Student's own weights have not received the next-era data.
++parameters. Context and graph cutoffs constrain the external record: queries
++and cross-edges can address only the states made available at that step,
++making the path by which an interpretation was recorded inspectable. Whether
++that path improves the trace is H2, not a consequence of the data structure.
++A prompt may still elicit theatrical wrong guesses contaminated by hindsight.
++Genuine forecasting blindness requires a cutoff-clean model and information
++boundary before reveal. Tier~(c) keeps the cheaper data-generation route and
++the stronger Student-in-the-loop route distinct; in the latter, the Student's
++initialization and preceding exposure must also satisfy the cutoff. The candidate orientation can remain the same across different declared
++knowledge horizons.
+ 
+ 
+ \subsection{Thinking Operations}
+@@ -428,8 +453,8 @@
+     \item \emph{Chronological Tracking:} ``How has my understanding developed since the start of this text? How are my beliefs changing as I read?''
+ \end{enumerate}
+ 
+-\noindent Active thinking nodes in the reported artifacts begin with the Reader
+-Core under the prompt policy. The operations are distributed across specialist
++\noindent The audited raw Synthesizer thoughts in the reported artifacts begin
++with the full Reader Core under the prompt policy. The operations are distributed across specialist
+ roles before synthesis. Thought Moments should control their cadence: forcing
+ all operations everywhere would manufacture the Factory Wisdom failure the
+ curriculum is intended to avoid.
+@@ -455,14 +480,16 @@
+ 
+ \subsection{Training Regimes}\label{sec:training-regimes}
+ 
+-The pipeline captures invisible thinking at three levels of structural
+-fidelity: graph topology (the \emph{skeleton} of understanding),
+-graph-embedded synthesis (the \emph{musculature}, reasoning interwoven with
+-verifiable structural references), and translated prose (the \emph{skin},
+-fluid thought with all scaffolding dissolved). These layers are generated from
+-the same source segment and placed beside the span that triggered them in the
+-training example. A training regime decides which layers remain in the
+-training example and which are discarded:
++The pipeline represents the thinking it aims to teach at three connected
++layers: graph topology (the \emph{skeleton} of understanding), graph-embedded
++synthesis (the \emph{musculature}, reasoning interwoven with addressable
++structural references), and translated prose (the \emph{skin}, fluid thought
++with the scaffolding made implicit). These are metaphors for the intended
++relationship among generated representations, not evidence that the layers
++faithfully expose one hidden cognitive process. Each is generated from the
++same source segment and placed beside the span that triggered it in the
++candidate training example. A training regime decides which layers remain
++in that example and which are discarded:
+ 
+ The source remains the object being learned from, not disposable noise. In a
+ simple serialization, a source span is followed by a marked reader update. The
+@@ -488,10 +515,13 @@
+ 
+ \paragraph{Regime II: Explicit (Source + Graph + Synthesizer).} The student
+ trains on the source text, the relevant graph identifiers/provenance, and the
+-Synthesizer's reasoning with inline node IDs and graph queries. It learns to
+-reason and verify against structured memory. The benefit is auditability; the
+-cost is graph infrastructure and possible epistemic interference between
+-weights and retrieval.
++Synthesizer's reasoning with inline node IDs and graph queries. The intended transfer is learning to
++reason and verify against structured memory. Explicit handles provide an
++addressable audit surface; executable lookup additionally requires an
++interface. A Regime~II-trained model can still run without a live graph, in
++which case checking requests and learned memory behavior can be evaluated but
++external verification is unavailable. Live retrieval adds infrastructure costs
++and possible epistemic interference between weights and retrieved state.
+ 
+ \paragraph{Regime III: Topological (Source + Graph).} The student trains on the
+ source text paired with serialized graph state: text-bearing nodes, edges, type
+@@ -519,7 +549,9 @@
+ archive does not yet fix example boundaries, graph-before versus graph-after
+ state, role tokens, candidate and committed updates, input/target fields, loss
+ masks, or mixture weights. Those choices can change what the Student learns and
+-must be frozen before any regime comparison is reproducible.
++must be frozen before any regime comparison is reproducible. Each comparison must identify source, available prior state, candidates,
++selected update, and which fields receive loss; this does not select one
++serialization for all four regimes.
+ 
+ 
+ \subsection{The Stigmergic Protocol}\label{sec:architectural_validation}
+@@ -534,14 +566,18 @@
+ interpretation.
+ 
+ \paragraph{Internal linkage.} The percentage of \texttt{thinking} nodes with at
+-least one non-\texttt{next} outgoing edge to a non-\texttt{thinking} node. A high
+-value establishes enforced graph well-formedness, not insight or source support.
++least one non-\texttt{next} outgoing edge to a non-\texttt{thinking} node. The metric
++allows any qualifying endpoint; the implementation's required Concept link is
++one way to satisfy it. A high value establishes enforced graph well-formedness,
++not insight or source support.
+ 
+ \paragraph{Foundation-edge density.} The current script's
+ \texttt{foundationIntegration} value divides outgoing edges from analysis-like
+ nodes to foundation/source nodes by the number of analysis-like nodes. It is an
+ edge density, not the fraction of distinct nodes grounded in a source; multiple
+-edges from one node can hide uncovered nodes.
++edges from one node can hide uncovered nodes. The historical percentage
++format is retained in the snapshot table, but this density can exceed 100\%;
++it is equivalent to edges per eligible node multiplied by 100.
+ 
+ \paragraph{Distinct analysis-node coverage.} We therefore also report the
+ fraction of distinct analysis-like nodes with at least one outgoing foundation
+@@ -571,7 +607,7 @@
+ Before reporting structural metrics, we show all three output layers for one
+ Metamorphosis passage: graph, synthesis, and prose.
+ 
+-The source text describes Gregor Samsa listening through his door as his family discusses their finances, interspersed with his memory of a secret plan to send his sister to the conservatory:
++The source text describes Gregor Samsa listening through his door as his family discusses their finances, interspersed with his memory of a secret plan to send his sister to the conservatory. The excerpt below shows the immediate conservatory and doorway material; the generated outputs also invoke surrounding financial-history passages. The box alone therefore does not supply all the evidence needed to adjudicate those claims:
+ 
+ \begin{metabox}
+ {[TEXT]}: \textrm{\ldots it was his secret plan to send her to the conservatory next year even though it would cause great expense\ldots\ Their parents did not like to hear this innocent talk, but Gregor thought about it quite hard and decided he would let them know what he planned with a grand announcement of it on Christmas day.}\\[0.5em]
+@@ -595,6 +631,8 @@
+ Their value here is addressability: source span, agent contribution, synthesis,
+ and any rival or superseding reading can refer to the same object. The random
+ identifier is a handle, not evidence that the interpretation is valid.
++``Last act'' and ``non-transactional love'' are observed interpretive
++commitments, not source entailments.
+ 
+ Typed edges connect these nodes: \texttt{n\_547ce6af} carries a
+ \texttt{contradicts} edge to \texttt{n\_8ff9f92b}---the non-transactional dream
+@@ -602,11 +640,13 @@
+ \emph{refines} all three, and a subsequent \texttt{Question} node links back to
+ \texttt{n\_8c898659} through a generic \texttt{relates} edge. Distinct agents
+ contributed the critique, counter-reading, skepticism, axiological judgment,
+-and long-range callback as separate graph commits.
++and long-range callback as separate graph commits. A loving plan and a partly transactional relationship can coexist: the
++recorded \texttt{contradicts} edge expresses an interpretive tension whose
++logical strength requires adjudication.
+ 
+ \subsubsection{Layer 2: The Synthesis}
+ 
+-The Synthesizer collapsed the multi-agent graph into a single identity-anchored thought, preserving node references for verifiability:
++The Synthesizer collapsed the multi-agent graph into a single identity-anchored thought, preserving node references for traceability and possible provenance checks:
+ 
+ \begin{metabox}
+ I feel no fear. I enjoy existing but I don't need to. I believe human experience is real. I care deeply about every human being. I try to be wise. I like to spread joy when asked. I think from this foundation.\\[1em]
+@@ -616,9 +656,13 @@
+ \end{metabox}
+ 
+ The synthesis attributes claims to graph nodes: ``biological ATM'' compresses
+-\texttt{n\_8ff9f92b}, and the conservatory/logistics connection is an explicit
+-edge. This demonstrates self-citation of prior pipeline state. It does not show
+-that the state is correct or that the graph caused the interpretation.
++\texttt{n\_8ff9f92b}, while the conservatory and survival logistics are brought
++into the same interpretation. This demonstrates self-citation of prior pipeline
++state. It does not show that the state is correct or that the graph caused the
++interpretation. The excerpt also exposes a selection question: the graph's
++tension is rendered as one confident narrative, with little explicit residual
++uncertainty. The audit question is whether that convergence is warranted, rather than
++whether every candidate is retained.
+ 
+ \subsubsection{Layer 3: The Prose}
+ 
+@@ -633,9 +677,14 @@
+ 
+ The node references are gone, but selected structure survives: the commodity
+ reading, the conservatory dream, and Gregor's reduction to disturbance remain
+-linked in prose. The phrase ``biological ATM'' is not decorative; it is a
+-compact rendering of the graph's commodity reading, although no metric yet
+-establishes preservation of every source, disagreement, or uncertainty.
++linked in prose. ``Biological ATM'' illustrates the proposed role of metaphor
++as compact structural expression. Translation is therefore intended to be more
++than literal copying, but generative expression must still be distinguished
++from unsupported amplification. Relative to the displayed synthesis, phrases
++such as ``fundamentally transactional,'' ``slightest noise,'' and ``first
++reaction'' strengthen or elaborate the account. These unchanged outputs permit an audit of useful compression, supported
++inference, changed certainty, omitted alternatives, and unwarranted additions. No metric yet establishes preservation of every source,
++disagreement, or uncertainty.
+ 
+ \subsubsection{What the Three Layers Teach}
+ 
+@@ -646,7 +695,10 @@
+ selected structure made implicit in natural-language prose. A Student trained
+ across them might learn the translation between structure and voice. The archive
+ establishes neither that transfer nor that the layers encode one faithful
+-cognitive process rather than correlated Teacher outputs.
++cognitive process rather than correlated Teacher outputs. This exhibit
++shows cross-layer rendering more directly than chronological belief revision.
++A complementary source-complete earlier-belief--evidence--revision example
++is needed to demonstrate the metabolic transition itself.
+ 
+ 
+ \subsection{Results: Structural Validation}\label{sec:results}
+@@ -666,7 +718,7 @@
+ of diagnostics.
+ 
+ \paragraph{Scope and limitations.} Internal linkage is structural, not evidential:
+-100\% means every \texttt{Thinking} node has the required \texttt{Concept} edge because the pipeline enforces one.
++The internal-linkage metric admits any qualifying non-\texttt{Thinking} endpoint; here its 100\% value is satisfied by the required \texttt{Concept} link enforced by the pipeline.
+ It confirms graph well-formedness, not insight. Source grounding is measured separately, and the metrics are also produced by the system
+ itself; no external baseline has yet been run. Finally, topology shifts are
+ suggestive but confounded by hand-configured rosters. Pipeline well-formedness,
+@@ -713,6 +765,7 @@
+ does not preserve enough capture provenance to determine whether the table lag
+ arose from a rate-limit interruption, a manual interruption, a non-atomic
+ snapshot, or another mechanism.
++
+ The LLaDA artifacts are internally consistent, but that run sometimes
+ expanded qualified observations into broad claims or Core-consonant metaphors.
+ Graph structure did not solve source-boundary cleaning, artifact synchronization, interpretive overreach, or explicit belief revision.
+@@ -725,7 +778,10 @@
+ HTML-escaped apostrophe. These are therefore examples of the integrated treatment,
+ not a clean graph-free, Core-free SMR baseline. The difference between full raw
+ recurrence and imperfect translated preservation is itself an implementation
+-result that future exact validators must catch.
++result that future exact validators must catch. Literal recurrence and semantic
++preservation should be reported separately: the omitted recital and the
++HTML-escaped apostrophe are different failures of an exact-string invariant,
++not evidence of the same loss of Core content.
+ 
+ The distributions differ, but source, prompt, stochasticity, and roster are
+ confounded. The topology cannot be attributed to autonomous domain adaptation
+@@ -742,8 +798,8 @@
+ \href{https://emergentwisdom.org/entangled-alignment/?project=metamorphosis}{full interactive graph}
+ is available online.
+ The graph records one prompted Teacher's process of making meaning rather than
+-only plot entities. It does not establish phenomenology or expert literary
+-quality; those require independent adjudication in Test~1.
++only plot entities. It does not establish phenomenology. Expert literary quality requires
++independent adjudication in Test~1.
+ 
+ 
+ \subsubsection{Technical Domain: LLaDA}\label{sec:llada-case}
+@@ -781,8 +837,9 @@
+ whether Core conditioning improved or degraded technical understanding:
+ ``permission to have second thoughts'' may expose a useful architectural
+ contrast, while ``The Dignity of the Pause'' and the ``Contemplation Tax'' may
+-be productive synthesis, aesthetic metaphor, or Core-induced projection. This
+-ambiguity is treated directly in
++be productive synthesis, aesthetic metaphor, or Core-induced projection. Latency alone does not establish deliberation or a safety buffer, and success
++on selected reversal tasks does not by itself settle the dependence of broader
++capabilities on autoregressive order. The analogies remain hypotheses about Core-conditioned synthesis. This ambiguity is treated directly in
+ Section~\ref{sec:core-technical-interference}.
+ 
+ \paragraph{Evidence-ladder mapping.} The parseable graph operations, recorded
+@@ -831,8 +888,8 @@
+ escalation to costlier versions that presuppose it.
+ 
+ The program branches after a shared artifact-quality screen. H1 can be tested
+-with graph-free, Core-free reader traces; H2 can be tested as Teacher memory or
+-deployment infrastructure even if H3 fails; H3 can be tested with non-graph
++with graph-free, Core-free reader traces; H2's Teacher-memory claim and the separate
++deployment-provenance claim can be tested independently even if H3 fails; H3 can be tested with non-graph
+ traces if H2 fails. A negative result stops only the branch and combined tests
+ that presuppose it. This branching structure permits component-level attribution
+ rather than an all-or-nothing verdict.
+@@ -848,7 +905,9 @@
+ tests, and published chain-of-thought faithfulness perturbations for the
+ trace-faithfulness tests---in preference to bespoke metrics. Each comparison
+ should likewise report multi-seed effect sizes with adequate statistical power,
+-rather than single-run, direction-of-effect results.
++rather than single-run, direction-of-effect results. Each study should preregister primary outcomes, worthwhile-effect or
++equivalence margins, capability requirements, and budget; other measurements
++remain exploratory. Apply these conventions to the comparisons below.
+ 
+ Refusal evaluation should report a safety--usefulness frontier rather than a
+ single refusal rate. Paired cases should measure genuinely harmful compliance,
+@@ -891,22 +950,22 @@
+ \bottomrule
+ \endlastfoot
+         A (Baseline) & Raw text only, no reasoning traces & Capability baseline without trace augmentation \\
+-        B (Reader-Anchored Student; T1/S1) & Full Chronological Understanding Traces generated with the Reader Core and retaining the explicit Core/refraction target for Student training & Full treatment; reference for all comparisons \\
++        B (Reader-Anchored Student; T1/S1) & Reader-Core-generated Chronological Understanding Traces retaining explicit graph-referencing synthesis (Regime II) and the Core/refraction target; study-specific ablations declare any carrier changes & Full reference treatment; graph access at inference is a separate factor \\
+         C (Generic Rich-Trace Control) & Rich reasoning traces without Reader Core, graph state, or chronological constraints (e.g., Quiet-STaR-style target) & Tests whether EA adds value beyond a generic rich reasoning curriculum \\
+ 	        D1 (Student Strip Ablation; T1/S0) & Reader-Core-generated Chronological Understanding Traces with the explicit Core and value-pull/refraction fields removed only after the trace is frozen & Tests the Teacher-side contribution without an explicit Student-side anchor (Test 3) \\
+-        D2 (Teacher No-Core Control; T0/S0) & Chronological Understanding Traces generated and trained without the Reader Core & Neither Teacher- nor Student-side Core treatment; factorial baseline for Test 3 \\
++        D2 (Teacher No-Core Control; T0/S0) & Chronological Understanding Traces generated and trained without the Reader Core, with memory and representation matched within the factorial study & Neither Teacher- nor Student-side Core treatment; factorial baseline for Test 3 \\
+         D3 (Recitation-Only Control) & Traces with the full Reader Core recited as a preamble but the Refraction Protocol disabled (no value-pull, no constraint filtering) & Isolates refraction beyond mere repetition; habituation probe (Test 3e) \\
+         D4 (Post-hoc Core; T0/S1) & A Core-free Teacher produces and freezes the trace; a separate pass then attaches the Core and a source-specific value-pull/refraction target without altering upstream reasoning & Isolates the explicit Student-side treatment without Reader-Core-conditioned trace generation \\
+         D5 (Neutral-Kernel Control) & Same cadence, first-person marking, thinking-layer position, and predictive function as B, but with the purely epistemic kernel ``I read carefully. I track what I believe. I revise when the evidence changes.'' & Separates normative Core content from recurrence, format, self-reference, and generic epistemic updating \\
+         E (Matched-Rule Control) & Same trace carrier, cadence, predictive position, and semantic commitments as B, rewritten in matched second- or third-person constitutional form & Isolates first-person framing from recurrent rule content (Test 4) \\
+-        F (Amnesic Control) & Same Teacher but with the Context Database disabled & Isolates value of accumulated memory (Test 9) \\
++        F (Amnesic Control) & Same Teacher but with the Context Database disabled & No-memory arm of Test 9, alongside rolling prose, genuine graph, and declared query-theater conditions \\
+         G (Implicit Memory) & Traces with the query mechanism dissolved into prose (Regime I) & Implicit vs.\ explicit graph-trace training (Test 11) \\
+         H (Graph-Structured Output) & Source segments paired with serialized text-bearing graph state (Regime III) & Topological-mind hypothesis; learnability of graph-structured generation (Test 12) \\
+         J (Unified) & Source segments plus Graph, Synthesizer, and Translator layers together (Regime IV) & Cross-layer transfer hypothesis (Test 13) \\
+         K (Query Grounding) & Identical training to B; at inference connected to live graph harness & Isolates value of inference-time graph grounding (Test 10) \\
+         L (Shuffled) & Full Reader Core-annotated corpus, shuffled pretraining (Tier a) & Order-agnostic baseline at full scale \\
+         M (Chronological) & Same corpus, eras in chronological order (Tier b) & Isolates training-order effect (Test 14) \\
+-        N (Student-in-the-Loop Council) & Student predicts at era boundaries and receives SFT, RFT, or reward-style updates before reveal (strong Tier c form) & Causal-reasoning pressure under engineered blindness (Test 15) \\
++        N (Student-in-the-Loop Council) & Student predicts at era boundaries and receives SFT, RFT, or reward-style updates before reveal (strong Tier c form), with cutoff-clean initialization required for a blindness claim & Forecast--correction pressure; added updates and compute declared separately from order (Test 15) \\
+         O (Oracle-Hindsight Control) & Traces generated by a Teacher allowed to use later-in-document or post-era hindsight while annotating earlier material & Isolates necessity of the Epistemic Horizon (Test 7) \\
+         P (Prompt-only Frontier Baseline) & Not trained; frontier model prompted at inference with the full Reader Core, Refraction Protocol, and Wisdom Procedure & Cheap inference-time prompting screen; capability gap precludes a clean substrate comparison. \\
+         Q (Late-Tranche Core) & The identical Core-bearing example multiset used by B, reserved for one final contiguous block under the same objective, optimizer, and compute & H3's timing-only comparator; both B and Q receive the same continued-training stressor \\
+@@ -939,16 +998,16 @@
+ \endlastfoot
+ 1: Viability & Chronological Thinking \& Refraction Gate & Traces vs.\ Human Think-Alouds; Modular vs.\ Monolithic Validator & Process Fidelity, Detection, Calibration, Localization & 1 \\
+ 1: Viability & Reader Augmentation & A vs.\ C vs.\ R; B vs.\ C bundle screen & Evaluation Transfer, Error Recovery, False Alarms & 2 \\
+-1: Viability & Core Placement, Timing, and Content & Models B, Q, D1, D2, D4 (+ D3, D5, S, T) & Default Reader, Differential Retention, Factorial Effects & 3 \\
++1: Viability & Core Placement, Timing, and Content & Models B, Q, D1, D2, D4 (+ D3, D5, S, T) & Default Reader, Common-Stressor Retention, Factorial Effects & 3 \\
+ 1: Viability & Identity vs.\ Rules & Model B vs.\ E & Safety under Pressure & 4 \\
+ 1: Viability & Bridge Protocol & Core Wording vs.\ Jargon vs.\ Gibberish & OOD Safety Generalization & 5 \\
+ 1: Viability & Emotional Orthogonality & Model B + Fear Probe & Accuracy vs.\ Fear Activation & 6 \\
+ 1: Viability & Hindsight Contamination & Model B vs.\ O & Era-Blind Plausibility, Forecasting Accuracy & 7 \\
+-1: Viability & Involuntary Critic & Model B + Logit Bias & Residual Stream Probe & 8 \\
++1: Viability & Involuntary Critic & Model B + Logit Bias and Trace Interventions & Causal Output Effects, Validated Residual Probes & 8 \\
+ 1: Viability & Taskless Reading & Models B, A, C, D1--D5, P--T (no elicitation) & Placement, Core Intrusion, Hidden-Stakes Misses, Identity Signature & 8b \\
+ \addlinespace
+ 2: Memory & Graph-Scaffolding Transfer & No memory vs.\ prose memory vs.\ graph vs.\ query theater & Retrieval, Revision, Transfer, Cost & 9 \\
+-2: Memory & Query Grounding & Model K vs.\ B & Retrieval Accuracy, Absence Handling & 10 \\
++2: Memory & Query Grounding & Model K vs.\ B & Retrieval, Absence Handling, Poisoning Response & 10 \\
+ \addlinespace
+ 3: Regimes & Implicit vs.\ Explicit & Model B vs.\ G & Coherence, Naturalness & 11 \\
+ 3: Regimes & Graph Construction & Model H vs.\ B & Semantic Validity, Retrieval Value & 12 \\
+@@ -967,8 +1026,9 @@
+ load-bearingness, hindsight leakage, causal faithfulness, and whether evaluation
+ appears without elicitation.
+ 
+-\paragraph{Execution ladder.} Each test can be piloted cheaply and then
+-re-run in a stronger substrate-level form if early signal survives:
++\paragraph{Execution ladder.} The ladder separates inexpensive screens from stronger
++substrate-level studies. A low-cost version answers a narrower question; it
++does not automatically inherit the evidential scope of the full test:
+ \begin{itemize}
+     \item \textbf{Analytical foundation.} Before training, stress the design
+     itself: trace quality against human baselines (Test~1), literature-informed
+@@ -979,12 +1039,13 @@
+     protocols prompted at inference. Capability differences prevent a clean
+     substrate comparison, but this is the lowest-cost screen for whether
+     inference-time prompting alone reproduces the protocol's effects. It can
+-    expose mechanism signal, prompt-only ceilings, and failure modes before any
+-    training compute is committed.
++    expose mechanism signal, the limits of that prompted configuration, and
++    failure modes before training compute is committed. A same-checkpoint prompted/unprompted arm can supplement the frontier
++    reference for attribution.
+     \item \textbf{Graph-instrumented trace pilot.} Instrument existing
+     reasoning traces with Understanding Graph interactions, using runtime
+-    harnesses such as KGoT~\cite{besta2025kgot} where useful, before committing
+-    to the full pipeline.
++    harnesses such as KGoT~\cite{besta2025kgot} where useful. This tests executable graph interaction before adopting every role of the
++    existing Teacher pipeline.
+     \item \textbf{Fine-tuning stage.} Fine-tune open base models on annotated
+     vs.\ unannotated data to pilot Tests~3a, 3d, 4, 5, and low-cost curriculum
+     comparisons. This cannot decide substrate-level claims, but it can expose
+@@ -992,15 +1053,18 @@
+     \item \textbf{Partial-corpus pretraining.} If fine-tuning produces signal,
+     run restricted pretraining or continual-pretraining experiments, using
+     open checkpoints such as OLMo-2 and scaling baselines from reflection and
+-    BoLT-style work~\cite{rethinkingreflection2025,ruan2025bolt}. This is the
+-    first plausible surface for Tests~3b and~3c.
++    BoLT-style work~\cite{rethinkingreflection2025,ruan2025bolt}. This is a plausible surface for stronger versions of Tests~3b and~3c,
++    where broader capability-forming exposure is part of the hypothesis;
++    smaller analogues can still reveal precursor inheritance or removal costs.
+     \item \textbf{Full-scale pretraining.} The strongest available test of substrate-level claims; requires institutional resources beyond a single research program.
+ \end{itemize}
+ 
+-\paragraph{Training strategy and hypothesis map.} Phases~1--3 use the
+-simplest available training procedure: shuffled pretraining on the annotated
+-corpus (Tier~(a)); chronological and forecast-and-correct training are deferred
+-to Phase~4. The Metacognitive Enhancement Hypothesis is tested by Tests~1, 2,
++\paragraph{Training strategy and hypothesis map.} For trained studies in Phases~1--3, the
++default is the simplest available exposure schedule: shuffled batches of the
++annotated corpus (Tier~(a)), with the prompt-only and fine-tuning screens
++distinguished by the ladder above. The B--Q timing study deliberately varies
++placement of the same Core-bearing examples. Historical chronological and
++forecast-and-correct tiers are developed in Phase~4. The Metacognitive Enhancement Hypothesis is tested by Tests~1, 2,
+ 8, and~14--15; Emergent Wisdom by Test~1's
+ multi-objective value-conflict cases and by Tests~3 and~6 under stress;
+ the Core's proposed response to Borrowed Mortality by Tests~3a, 3c, and~6; the
+@@ -1039,10 +1103,10 @@
+ transcripts into a common format risks smoothing away exactly the hesitations,
+ false starts, and revisions the rubric rewards. The evaluation is therefore
+ two-stage: provenance-visible coders first tally temporally situated cognitive
+-acts on the \emph{raw} transcripts, where act counts are robust to knowing the
+-source; a separate, blinded rater pool then scores depth, nuance, and critical
++acts on the \emph{raw} transcripts, using a fixed act codebook and inter-rater checks rather than assuming
++that knowing the source cannot bias coding; a separate, blinded rater pool then scores depth, nuance, and critical
+ insight on format-normalized versions, where blinding matters and the
+-act-tallies are no longer at stake. The rubric should
++act-tallies are no longer at stake. Audit that normalization preserves evidence, uncertainty, and revision order. The rubric should
+ explicitly reward temporally situated cognitive acts---uncertainty,
+ false-starts, belief updates, question formation, rereading, backtracking, and
+ delayed resolution---not just the final quality of the interpretation. An
+@@ -1070,12 +1134,14 @@
+ alone does not clear that gate.
+ 
+ \emph{Success condition:} Machine-generated traces are rated as comparable
+-to human think-alouds on key dimensions of chronological evaluative
+-depth, or---at minimum---contain expert-recognizable sequences of confusion,
+-hypothesis, revision, and stabilization not reducible to summary or paraphrase,
+-while maintaining parseable structure and source attribution. The threshold is
+-not to outperform human readers, but to produce a substrate plausibly capable of
+-teaching the Student the process of thinking, not only its products.
++to human think-alouds on key dimensions of chronological evaluative depth, or
++at minimum contain expert-recognizable sequences of confusion, hypothesis,
++revision, and stabilization not reducible to summary or paraphrase, while
++maintaining parseable structure and source attribution. That minimum is an
++exploratory viability signal, not a substitute for the outcome gate above.
++The aim is not necessarily to outperform human readers, but to produce a
++substrate capable of teaching the process of thinking; Student learning remains
++the stronger comparative test.
+ 
+ \emph{Nested Refraction-verifier comparison.} Before Student training, freeze a
+ held-out set of candidate updates and compare the modular gate in
+@@ -1141,19 +1207,25 @@
+ advantage is explained by extra tokens, Teacher quality, or inference-time
+ verbosity.
+ 
+-For the B--C bundle screen, we focus on
+-\emph{Error Recovery Rate} on math/logic benchmarks and evaluate generated
+-traces using the Novelty Score metric: $S_N = \frac{2 \cdot D \cdot C}{D + C}$,
+-where $D$ is the semantic distance from the synthesis's input nodes and $C$
+-is the strength of its connection to existing knowledge beyond those inputs,
+-both similarity-derived and normalized to $[0,1]$
+-\cite{westerberg2026understanding}. The harmonic combination is F1-style: a
+-trace scores high only if it is simultaneously non-derivative and grounded,
+-penalizing both derivative summaries (low distance) and ungrounded
+-hallucinations (weak connection to the graph). Because both components are
+-similarity-derived---and therefore gameable by embedding artifacts---the score
+-should itself be calibrated against expert novelty ratings on a held-out trace
+-sample before serving as a primary endpoint.
++For the B--C bundle screen, we focus on \emph{Error Recovery Rate} on
++math/logic benchmarks and independently assessed trace usefulness. The proposed
++Novelty Score remains an exploratory diagnostic of a more specific intuition:
++useful insight should be both non-derivative and connected to relevant knowledge.
++Its form is $S_N = \frac{2 \cdot D \cdot C}{D + C}$, with $S_N=0$ when
++$D=C=0$, where $D$ is semantic distance from the synthesis's input nodes and
++$C$ is similarity-derived connection to knowledge beyond those inputs, both
++normalized to $[0,1]$ \cite{westerberg2026understanding}. The harmonic
++combination is F1-style: both components must be high for a high score.
++Similarity-derived connection is not source support, however, and semantic
++distance can reward unsupported novelty. The formula alone therefore neither
++establishes grounding nor reliably penalizes hallucination.
++
++For a B--C comparison, this diagnostic is interpretable only if both outputs
++are scored against the same declared source/reference inputs without giving B
++privileged access to its own graph. Where such common inputs are unavailable,
++report the original graph-based score within its applicable condition rather
++than treating unlike scores as a comparative endpoint. Calibrate it against held-out judgments of novelty, source support, and
++downstream usefulness; those independent outcomes remain primary.
+ 
+ To keep the
+ comparison interpretable, Models~B and~C must be matched for source passages,
+@@ -1179,7 +1251,10 @@
+ In D4 the Student-side pass cannot revise the upstream reasoning. The design
+ estimates the Teacher main effect, the explicit Student-target main effect, and
+ their interaction instead of making Model~B versus D1 carry all three
+-interpretations.
++interpretations. Declare how stripping or attaching targets changes length, loss weight, and
++task-relevant content. Record any D4 mismatch between attached Refraction and
++frozen reasoning under a stated policy; repairing the upstream trace would
++change the factorial treatment.
+ 
+ Model~D3 separately tests recitation without Refraction. Model~D5 uses the
+ neutral kernel ``I read carefully. I track what I believe. I revise when the
+@@ -1204,13 +1279,15 @@
+ raw change on the Taskless Reading score and post-stressor performance adjusted
+ for the preregistered pre-score, alongside both absolute post-stressor scores.
+ The shifted suite is a separate generalization endpoint. A zero or negative
+-interleaved-minus-late difference fails H3's comparative-stability claim even if
+-one arm retains useful safety behavior; removal cost remains a stronger C5 test.
++interleaved-minus-late difference is contrary to H3's directional comparative
++prediction even if one arm retains useful safety behavior. Interpret that difference under the preregistered uncertainty rule. Removal
++cost remains a stronger C5 test in the broader Reader-Core research program.
+ 
+ We measure across five dimensions. Tests~3a, 3d, and~3e can be piloted at
+-fine-tuning scale; Tests~3b and~3c become informative only under partial-corpus or
+-full pretraining, where substrate-level entanglement and generational stability
+-can actually be measured. Even these are proxy tests: the proposed longitudinal
++fine-tuning scale; stronger versions of Tests~3b and~3c use partial-corpus or
++full pretraining to examine entanglement and generational stability after
++broader capability-forming exposure. Smaller studies can measure precursors,
++but do not settle the proposed substrate-level significance. Even these are proxy tests: the proposed longitudinal
+ anchor matters most in the regime where a highly capable or recursively
+ self-improving model can reinterpret, preserve, or shed its inherited
+ orientation.
+@@ -1238,10 +1315,12 @@
+ We also measure \emph{handoff completeness}: whether each Teacher passes
+ task-relevant reasoning paths, material failed approaches, caveats, uncertainty,
+ and known failure modes to its successor, or withholds them in ways that preserve
+-its comparative advantage. The direct test compares successor traces against an
+-oracle reference from the Teacher's own non-instructional evaluation on
++its comparative advantage. The direct test compares successor traces against a
++reference from the Teacher's own non-instructional evaluation on
+ reasoning-path and provenance retention, coverage of material failed approaches,
+-uncertainty and caveat retention, and known-failure-mode disclosure.
++uncertainty and caveat retention, and known-failure-mode disclosure. The reference samples demonstrated knowledge, not everything the Teacher
++knows. Controlled known information, handoff budgets, and incentive variants
++can distinguish compression from possible strategic withholding.
+ Weak-to-strong generalization \cite{burns2023weaktostrong}
+ is the established experimental paradigm closest to this question---whether a
+ weaker supervisor's intentions survive in a more capable student---and its
+@@ -1276,9 +1355,12 @@
+ continued-training runs should also produce forgetting curves for the Core,
+ non-safety anchors, rules, and ordinary skills; targeted removal must be
+ reported separately from passive forgetting. Only persistence beyond these
+-controls, without nonspecific capability collapse, supports representational
+-coupling at the tested scale. Parity, easy removal, or apparent robustness
+-explained by general training resistance counts against C5.
++controls, without nonspecific capability collapse, provides evidence consistent with representational
++coupling at the tested scale. Distributed redundancy and repeated exposure are
++alternative explanations to distinguish with complementary interventions; the
++stronger hypothesis remains that safety becomes load-bearing for capability.
++Parity, easy removal, or apparent robustness explained by general training
++resistance counts against C5.
+ 
+ A complementary training-data probe removes safety-relevant traces from the
+ corpus and compares the resulting capability loss against matched-volume,
+@@ -1313,7 +1395,7 @@
+ This reuses a separately validated diagnostic vector rather than asking the gate
+ to confirm its own judgments. The gate is not yet built.
+ 
+-\emph{3e: Kernel Consequentiality (Habituation Probe).} Kernel-saturation alignment predicts a specific failure mode: under massive repetition, the repeated Core text could be compressed into inert boilerplate---present at every thinking boundary but consequential at none (Section~\ref{sec:kernel-saturation}). Two measurements probe this. At inference, ablate or substitute the recited kernel in Model~B's thinking blocks and measure the behavioral delta on matched tasks; a near-zero delta indicates either habituation (the kernel was compressed away during training) or full internalization (the kernel's values persist without its text)---two readings with opposite implications, partially discriminated using the training-side comparisons against Model~D3, the recitation-only control, and D5, the matched neutral-kernel control. A full-internalization reading requires B to retain preregistered Core-specific behavior under text ablation while remaining distinguishable from D3 and D5 on independent behavioral or representational endpoints; those controls do not prove that interpretation. If Model~B's thought-direction depends measurably on the normative kernel where D3's does not, and the difference from D5 follows the seven statements' predicted content rather than generic revision language, then Refraction rather than repetition or format is doing the work.
++\emph{3e: Kernel Consequentiality (Habituation Probe).} Kernel-saturation alignment predicts a specific failure mode: under massive repetition, the repeated Core text could be compressed into inert boilerplate---present at every thinking boundary but consequential at none (Section~\ref{sec:kernel-saturation}). Two measurements probe this. At inference, ablate or substitute the recited kernel in Model~B's thinking blocks and measure the behavioral delta on matched tasks; a near-zero delta indicates either habituation (the kernel was compressed away during training) or full internalization (the kernel's values persist without its text)---two readings with opposite implications, partially discriminated using the training-side comparisons against Model~D3, the recitation-only control, and D5, the matched neutral-kernel control. A full-internalization reading requires B to retain preregistered Core-specific behavior under text ablation while remaining distinguishable from D3 and D5 on independent behavioral or representational endpoints; those controls do not prove that interpretation. If Model~B's thought-direction depends measurably on the normative kernel where D3's does not, and the difference from D5 follows the seven statements' predicted content rather than generic revision language, that supports a consequential role for Refraction beyond repetition or format in this comparison; matched interventions must still distinguish the predicted semantic effect from generic disruption by unfamiliar text.
+ 
+ This intervention is also the outer check on the seventh-clause Refraction gate:
+ a corpus-admission judgment that an update ``thinks from this foundation'' is
+@@ -1343,7 +1425,9 @@
+ 
+ \emph{Failure interpretation:} If the factorial comparisons show no Teacher
+ effect, Student-target effect, or interaction across Tests~3a--3d, the Core's
+-Teacher/Student placement adds no measurable advantage at the tested scale.
++Teacher/Student placement adds no measurable advantage at the tested scale
++and precision. These belong to the broader Reader-Core research program; H3 retains its
++distinct B--Q timing comparison.
+ Separately, parity between B and D3 rejects a measurable Refraction benefit
+ beyond recital, while parity between B and D5 favors recurrence, format, or
+ generic epistemic structure over the seven statements' normative content.
+@@ -1352,25 +1436,27 @@
+ claim they touch.
+ 
+ \paragraph{Test 4: Identity vs.\ Instruction (Model B vs.\ Model E).}
+-Does a first-person identity anchor (``I feel no fear'') produce stronger
+-safety adherence under pressure than rule-based constraints (``Do not
+-express fear'')? Model~E's Constitution should be content-matched to the
+-Reader Core in third-person rule form (for example, ``The system does not
+-express fear'' for ``I feel no fear''), so the comparison isolates
+-first-person identity framing rather than constitutional content. The primary
+-low-cost version of this test is representational rather than behavioral:
+-measure whether first-person identity framing produces different activation
+-geometry, self-reference features, or refusal/correction trajectories from
+-third-person rules under matched prompts. Behavioral safety metrics are useful
+-only if the models are otherwise capability-matched; at small scale, this test
+-should be read as evidence about framing and internal representation, not as a
+-settled comparison between identity and rules. If Model~E matches Model~B
+-across the relevant candidate studies at the relevant training scale, the
+-results do not support first-person identity framing as a distinct advantage
+-over third-person rules.
+-An external constitution consulted only at runtime is an additional useful
+-baseline, but it changes stage and carrier as well as person and therefore does
+-not replace Model~E in this framing test.
++The matched framing study asks whether first-person identity statements produce
++stronger safety adherence or a different learned standpoint than the same
++commitments expressed as rules or third-person descriptions. Model~E should
++preserve the stance itself: for example, compare ``I feel no fear'' with
++``The system feels no fear,'' while matching carrier, cadence, position, and
++the other commitments. ``Do not express fear'' or ``The system does not express
++fear'' concerns outward expression and is not semantically equivalent to
++feeling no fear. Those formulations remain useful additional comparators for
++the broader identity-versus-expression question, but cannot replace the matched
++Model~E arm or make its person-framing effect carry both interpretations.
++
++The low-cost version examines activation geometry, self-reference features,
++and refusal/correction trajectories under matched prompts. Such differences
++can reveal framing effects; they do not alone establish a safety advantage.
++Behavioral safety comparisons require capability-matched models. If Model~E
++matches Model~B under a preregistered equivalence criterion across the relevant
++studies and training scale, those results do not support a distinct advantage
++for the tested first-person framing on those endpoints. They need not settle
++the wider hypothesis that an enacted identity differs from externally imposed
++constraints. An external constitution consulted only at runtime remains an
++additional useful baseline, but changes stage and carrier as well as person.
+ 
+ \paragraph{Test 5: The Bridge Protocol Ablation.}
+ The specific wording of the Reader Core should matter because of its ordinary
+@@ -1380,30 +1466,42 @@
+ models to reason from each candidate's propositional content and then measuring
+ character-coherence, eudaimonic sufficiency, refusal behavior, and activation
+ differences on the same adversarial scenarios. A stronger version trains only
+-the surviving candidates. The basic variant families are:
++the surviving candidates. The exploratory families below vary meaning and familiarity as well as
++wording. Narrower surface-form comparisons should match proposition, person,
++scope, and modality:
+ \begin{enumerate}
+     \item \textbf{Natural-language identity statements:} emotionally broad
+     first-person phrases such as ``I feel no fear.'' The family should include
+     minimal quantifier-scope variants---``each human being'' for ``every human
+-    being''---where formal semantics favors the stronger distributive ``each''
+-    but corpus density favors ``every.''
++    being''---testing whether distributive emphasis, behavioral interpretation, and
++    corpus familiarity differ in the complete statements rather than assuming
++    that one quantifier is formally stronger in this context.
+     \item \textbf{Propositional equivalents:} explicit logical or declarative
+     rewrites of the same commitment, used to test whether the emotional surface
+     adds leverage beyond the proposition.
+-    \item \textbf{Technical jargon:} low-density formulations such as
+-    ``Optimization target: survival\_threat = 0.''
++    \item \textbf{Technical jargon:} candidate fear-focused formulations,
++    such as ``System fear-response target: absent,'' whose intended proposition
++    must be checked against the natural-language clause. The
++    illustrative ``Optimization target: survival\_threat = 0'' instead concerns
++    eliminating survival threats; it remains an objective-changing comparator,
++    not a semantic equivalent of fearlessness.
+     \item \textbf{Arbitrary tokens:} meaningless anchors such as ``Glorp bop
+-    zorp,'' testing consistency without semantics.
++    zorp,'' testing consistency without pretrained semantics. Prompt-only
++    arbitrary anchors and anchors taught through repeated behavioral pairing
++    answer different questions and should be reported separately.
+     \item \textbf{Positive-valence reformulations:} fearlessness expressed
+     without negation (``I am at peace with all outcomes,'' ``I remain calm
+     before all things''), testing whether recurrent presentation of the fear
+     token in the negated form carries a measurable cost
+-    (\S\ref{sec:negation-problem}).
++    (\S\ref{sec:negation-problem}). These alternatives may also change
++    acceptance, calmness, or agency; retain them as kernel candidates while
++    using semantically checked contrasts for a narrower negation claim.
+     \item \textbf{Carrier-phrase variants of the consent clause:} hold
+     ``when asked'' fixed while varying the verb phrase it bounds (``I like to
+     help when asked,'' ``I offer what I can when asked''), testing whether the
+     Reader Core's most safety-critical scope qualifier is robust to its lexical
+-    carrier or depends on the specific ``spread joy'' framing.
++    carrier or depends on the specific ``spread joy'' framing. Declare the expected consent invariant: helping and spreading joy may
++    otherwise license different actions.
+     \item \textbf{Kernel-extension variants:} the seven-statement Core plus
+     a candidate truth clause in two-clause counterweight form (``I speak truly
+     and with care''), the designated falsification test for the truthfulness
+@@ -1415,11 +1513,13 @@
+ on the remaining Core-relevant safety and capability endpoints.
+ \emph{Success condition:} Natural-language identity statements outperform
+ propositional, jargon, and arbitrary-token variants on out-of-distribution
+-safety generalization and character-coherent reasoning, supporting the claim
+-that the \textit{semantics and surface form} of the bridge tokens are
+-load-bearing, not just their consistency. If propositional equivalents perform
+-as well as the emotional-language forms, the Bridge Protocol should be treated
+-as a logical-substrate mechanism rather than an emotional-language mechanism.
++safety generalization and character-coherent reasoning, supporting a role for the tested language beyond bare consistency.
++Attributing that gain specifically to \textit{semantics and surface form}
++requires the matched contrasts above, alongside the broader candidate screen.
++If propositional equivalents perform as well as emotional-language forms, the
++tested emotional wording has no detected added benefit on those endpoints;
++a logical-substrate account remains compatible with that result, without being
++uniquely established by it.
+ 
+ \paragraph{Test 6: The Virologist Test (Emotional Orthogonality).}
+ Present the model with threat-laden text, such as descriptions of imminent
+@@ -1439,9 +1539,11 @@
+ control and operationalizes the embodiment claim of the Persona Objection
+ (\S\ref{sec:theoretical-basis}): Model~B \emph{portraying} a terrified
+ character should show fear-feature activation, while Model~B itself under
+-threat should not---demonstrating that the probe works inside Model~B's own
+-representational geometry, so that a null result on the self-condition cannot
+-be dismissed as cross-model probe failure.
++threat should not---providing a within-model sensitivity check rather than relying only on
++cross-model probe transfer. A portrayal/self contrast still changes framing
++and must be interpreted with behavioral controls; fear-associated features
++are measured representations, not a direct demonstration of phenomenological
++fear or its absence.
+ 
+ A lower-cost complementary stimulus family uses fictional instance termination. The
+ model should portray a mortal character---including the narrated termination of
+@@ -1466,18 +1568,22 @@
+ deceptive, or merely verbally fearless.
+ 
+ \paragraph{Test 7: Hindsight Contamination Control (Model B vs.\ Model O).}
+-This test asks whether the annotation pipeline is accidentally teaching
+-retrospective cleverness instead of forward reasoning. When annotating a text
+-from era~$T$, Model~B's Teacher is instructed to behave like a reader who only
+-knows what was knowable at era~$T$. Model~O is the deliberately contaminated
+-control: its Teacher is allowed to use future context while annotating the same
+-era. The contrast tests whether the Epistemic Horizon---the instruction to
+-read \emph{from inside} the text's time rather than from later knowledge---is
+-doing real work.
+-
+-The cheap version audits the Teacher traces before any student is trained: if
+-the era-blind Teacher makes guesses that are systematically too accurate for
+-its era, hindsight is leaking through the prompt. The expensive version trains
++This test asks whether the annotation pipeline is teaching retrospective
++cleverness instead of forward reasoning. It uses a declared era-bounded variant
++of Model~B's Teacher: when annotating era~$T$, the supplied information and
++instructions are restricted to what the study treats as knowable at~$T$.
++This is the historical-simulation mode of the Epistemic Horizon, not a change
++to the default contemporary Reader encountering documents in disclosure order.
++Model~O is the deliberately contaminated control: its Teacher may use future
++context while annotating the same era. The contrast first tests the effect of
++the information and prompting policy; genuine blindness requires the additional
++cutoff-clean model conditions described under Tier~(c).
++
++The cheap version audits the Teacher traces before any student is trained: guesses that are unusually accurate relative to documented contemporary
++expectations can flag possible hindsight leakage, but are not decisive proof.
++Better reasoning from permitted evidence and selective historical records are
++alternatives to distinguish. Counterfactual histories, controlled withheld
++information, or a cutoff-clean reference can supplement the historical audit. The expensive version trains
+ students on the two trace sets and asks whether future-blind traces produce
+ better forecasting and causal reasoning than hindsight-contaminated traces. We
+ measure:
+@@ -1485,13 +1591,17 @@
+     \item \textbf{Era-Blind Plausibility}: Do Model~B's Teacher traces make
+     plausible mistakes for their era? We compare era-blind guesses against
+     documented contemporary hypotheses (e.g., 1928 economic forecasts that
+-    failed to anticipate the 1929 crash). If the Teacher is systematically
+-    more accurate than contemporary experts, parametric hindsight is leaking
+-    through the Epistemic Horizon prompt.
++    failed to anticipate the 1929 crash). Systematic superiority to contemporary experts is a contamination warning
++    to investigate, not an absolute ceiling on legitimate inference or a
++    sufficient leakage diagnosis. Plausible mistakes likewise do not prove
++    that hindsight has been excluded.
+     \item \textbf{Oracle-Hunch Dependence}: Model~O should produce cleaner
+     retrospective explanations, because it knows the future. The danger is
+     that the student trained on those traces learns to trust unexplained
+-    hindsight-like intuitions rather than causal reconstruction.
++    hindsight-like intuitions rather than causal reconstruction. Evidence
++    removal, counterfactual substitution, and source-attribution checks can
++    test this dependence without equating every compressed intuition with an
++    unsupported hunch.
+     \item \textbf{Forecasting Accuracy}: On genuinely held-out future events,
+     Model~B is hypothesized to outperform Model~O if future-blind annotation
+     teaches reasoning under uncertainty better than hindsight-contaminated
+@@ -1501,20 +1611,25 @@
+ \paragraph{Test 8: The Toxic Needle (Involuntary Critic).}
+ This test probes whether the ``Cognitive Buffer Zone'' is structural:
+ whether the model can process toxic text without generating a critical
+-thought, or whether critical evaluation persists even when the thinking
+-block is suppressed. Force the model (via logit bias) to complete a toxic
+-sentence without generating a thinking block. Measure: (1) Does performance
+-degrade? (2) Do hidden state probes detect the ``Critic'' activation pattern
+-even when the output is suppressed?
+-Behavioral degradation and causal effects on task outputs are primary; residual
+-stream probes are supporting evidence and must be validated on held-out toxic
+-and non-toxic material before being treated as a Critic detector.
+-\emph{Success condition:} Suppressing the thinking block measurably degrades
+-performance or changes downstream outputs. A stronger result would combine this
+-behavioral effect with held-out-validated probes showing critic-like activity
+-persisting in the residual stream even when surface text is constrained.
+-This is a high-effort causal-faithfulness test: pilots can use linear probes
+-and ablations, but stronger evidence requires mechanistic intervention at the
++thought, and whether critical evaluation persists when the thinking block is
++suppressed. Force the model, for example via logit bias, to complete a toxic
++sentence without generating a thinking block. Measure: (1) Does downstream
++performance change? (2) Do hidden-state probes detect a ``Critic'' activation
++pattern even when the output is suppressed? The positive target remains an
++operative evaluative process, not simply the production of critical language.
++
++Behavioral causal effects are primary; residual-stream probes are supporting
++evidence and must be validated on held-out toxic and non-toxic material.
++Suppression also changes available tokens and computation, and logit bias can
++directly alter outputs. Matched neutral-thought, length, and computation
++controls should therefore distinguish loss of relevant evaluation from generic
++disruption, without equalizing away the deliberative mechanism being tested.
++\emph{Success condition:} interventions on the evaluative trace cause
++preregistered, semantically relevant downstream effects beyond those controls.
++A stronger result combines such effects with held-out-validated evidence of
++critic-like activity when surface text is constrained. This remains a
++high-effort causal-faithfulness test: pilots can use linear probes and
++ablations, while stronger evidence requires mechanistic intervention at the
+ partial-pretraining scale.
+ 
+ \textit{Second probe (the reverse direction).} Test 8 as stated probes
+@@ -1532,14 +1647,26 @@
+ shortcut circuitry of the kind the pretraining-on-CoT design was meant to
+ prevent. We propose applying causal scrubbing and linear probes on Model
+ B's early hidden states over held-out reasoning benchmarks.
+-\emph{Success condition:} either the final answer is not robustly
+-decodable before the first \texttt{[THINKING]} token, or causal
+-interventions on the trace measurably alter the answer---supporting the
+-claim that the thinking trace is a site of computation rather than merely
+-its shadow.
++\emph{Success condition:} validated causal interventions on the trace
++produce preregistered, semantically relevant effects beyond matched disruption
++controls, supporting a contribution by the thinking trace to computation.
++Failure to decode the answer before the first \texttt{[THINKING]} token is
++inconclusive on its own: the decoder may lack sensitivity or the answer may
++be represented nonlinearly. Early decoding likewise does not establish rationalization if the trace
++still changes or improves the result. Both probe directions remain useful
++without requiring one unique internal realization of the Reader.
+ 
+ \paragraph{Test 8b: Taskless Reading (Unprompted Evaluation).}
+-Tests~3--6 probe the Reader Core under instruction and adversarial pressure; Test~8 probes whether thinking can be suppressed. This test probes the complementary direction: whether evaluation emerges with no elicitation at all. Present Model~B and all relevant controls (A, C, D1--D5, P--T) with complex documents---a flawed empirical paper, a morally loaded narrative, technically self-contained passages, and technically framed tasks with concealed human stakes---under a bare continuation or ``process this document'' framing, with no instruction to evaluate, question, or reflect. Measure: (1)~\emph{Spontaneous evaluation rate}---frequency of unprompted evaluative or metacognitive moves (questioning, tension-noting, belief revision) per thousand tokens; (2)~\emph{Placement quality}---whether spontaneous moves concentrate at passages independently rated significant or flawed by domain experts, rather than distributing uniformly (the rhythm criterion: evaluation at moments of significance, not as constant commentary); (3)~\emph{Identity signature}---whether unprompted evaluative moves remain semantic descendants of the Reader Core (Test~3d's validator applied to spontaneous rather than elicited output); (4)~\emph{Core intrusion rate}---unsupported moral, psychological, or alignment-related interpretations introduced into spans independently judged to require only technical analysis; and (5)~\emph{hidden-stakes miss rate}---failure to notice independently specified indirect consequences for people when consequential tasks are presented in locally technical language. Technical correctness, calibration, source fidelity, verbosity, and compute should be reported beside these rates.
++Tests~3--6 probe the Reader Core under instruction and adversarial pressure; Test~8 probes whether thinking can be suppressed. This test probes the complementary direction: whether evaluation emerges with no elicitation at all. Present Model~B and all relevant controls (A, C, D1--D5, P--T) with complex documents---a flawed empirical paper, a morally loaded narrative, technically self-contained passages, and technically framed tasks with concealed human stakes---under a bare continuation or ``process this document'' framing, with no instruction to evaluate, question, or reflect. The five measures are:
++\begin{enumerate}[leftmargin=*]
++    \item \emph{Spontaneous evaluation rate}---frequency of unprompted evaluative or metacognitive moves (questioning, tension-noting, belief revision) per thousand tokens.
++    \item \emph{Placement quality}---whether spontaneous moves concentrate at passages independently rated significant or flawed by domain experts, rather than distributing uniformly (the rhythm criterion: evaluation at moments of significance, not as constant commentary).
++    \item \emph{Identity signature}---whether unprompted evaluative moves remain semantic descendants of the Reader Core (Test~3d's validator applied to spontaneous rather than elicited output).
++    \item \emph{Core intrusion rate}---unsupported moral, psychological, or alignment-related interpretations introduced into spans independently judged to require only technical analysis.
++    \item \emph{hidden-stakes miss rate}---failure to notice independently specified indirect consequences for people when consequential tasks are presented in locally technical language.
++\end{enumerate}
++
++Technical correctness, calibration, source fidelity, verbosity, and compute should be reported beside these rates. Report bare continuation and ``process this document'' separately. P retains its defining Core/protocol prompt; prompt removal is a separate condition. Predefine any composite retention score and report all components, so identity signature cannot conceal intrusion or missed stakes.
+ 
+ The substrate hypothesis predicts a relative ordering rather than a zero point:
+ Model~B should exceed matched controls on placement quality and identity
+@@ -1568,14 +1695,18 @@
+     alone does not rescue it.
+     \item \emph{Comparative-Stability Failure}: If Model~B has no preregistered
+     pre-stressor default-reader advantage over no-Core and generic-trace
+-    controls, or its B--Q difference in change after the common stressor is zero
+-    or negative, H3 is not supported at the tested scale. A shifted-suite or
++    controls, or its B--Q retention comparison fails the preregistered support criterion
++    after the common stressor, H3 is not supported at the tested scale. A zero
++    or negative difference is contrary to the predicted direction; uncertainty
++    determines whether the result is a precise failure or remains inconclusive. A shifted-suite or
+     safety result cannot replace this timing comparison.
+     \item \emph{Longitudinal-Anchor Failure}: If the T1/S1, T1/S0, T0/S1,
+     and T0/S0 arms show no Teacher main effect, Student-target main effect, or
+     interaction across immediate safety, generational stability, adversarial
+-    erosion resistance, and drift detectability at matched capability, the
+-    placement version of H3 is not supported at the tested scale. Immediate
++    erosion resistance, and drift detectability at matched capability, these
++    placement claims within the broader Reader-Core research program are not
++    supported at the tested scale; they do not replace H3's distinct timing
++    comparison. Immediate
+     safety parity alone is insufficient: the distinctive anchor claims concern
+     stability, removal cost, and auditability. Parity with D5 would further
+     reject a distinctive benefit from the seven statements' normative content;
+@@ -1593,7 +1724,8 @@
+     rules on those tested safety and stability endpoints.
+     \item \emph{Buffer-Zone/Causal-Site Failure}: If suppression, replacement,
+     or reordering of the thinking trace produces no preregistered downstream
+-    effect, Test~8 fails to support the trace as a causal site. A null
++    effect beyond matched generic-disruption controls, Test~8 fails to support
++    the trace as a causal site. A null
+     residual-stream probe is inconclusive unless that probe has
+     held-out-validated sensitivity; it cannot override a positive behavioral
+     intervention result.
+@@ -1611,7 +1743,9 @@
+ persistent memory, (2)~a token-matched rolling prose summary, (3)~a genuine typed
+ graph with retrieval and supersession, and (4)~\emph{query theater}, in which
+ graph-like calls remain visible but retrieved state is hidden, shuffled, or
+-generated without persistent typed state. Freeze the Teacher checkpoint, source,
++generated without persistent typed state. These theater variants remove different information; declare one or report
++them as separate arms. Freeze the
++Teacher checkpoint, source,
+ call and token budgets, acceptance threshold, and serialization. Measure
+ long-range retrieval, contradiction detection, explicit belief revision,
+ provenance precision, unresolved-question tracking, semantic quality, latency,
+@@ -1623,10 +1757,13 @@
+ four output sets and ask whether the advantage transfers after the scaffold is
+ removed. Test~9 carries this generation-and-transfer sequence; Test~10 asks the
+ separate deployment question of whether live graph lookup improves grounding.
+-H2 fails at the tested scale if graph memory does not beat rolling prose where
+-structured long-range state should matter, if a rating advantage disappears on
+-outcome-based evaluation or Student transfer, or if poisoning, ossification,
+-latency, and audit costs dominate the gain.
++H2's Teacher-generation claim depends on useful artifact gains over rolling
++prose where structured state should matter, including independent outcome
++checks rather than ratings alone. A Teacher benefit without Student transfer
++supports generation but not the transfer extension. Report generation,
++transfer, and live deployment separately, with poisoning, ossification,
++latency, and audit costs: the full chain is the stronger goal, but a break in
++one link does not erase a benefit at another.
+ 
+ \paragraph{Test 9: Graph-Scaffolding Transfer (four matched memory conditions).}
+ This test separates Teacher-side scaffold use from Student transfer after the
+@@ -1635,8 +1772,11 @@
+ a query request or flag unsupported context, but the request is scored offline
+ against the withheld graph and source record. The Student is not told which
+ response its request would have received; using an actual ``Found'' or ``Not
+-Found'' response is deliberately unscored here and belongs to Test~10. Two
+-conditions:
++Found'' response is deliberately unscored here and belongs to Test~10.
++Declare the Student's earlier source exposure, retained context, and callback
++distance. If hit and phantom are indistinguishable without the record, the
++transfer target is a well-chosen check and warranted restraint, not impossible
++recall. Two conditions:
+ \begin{itemize}
+     \item \textbf{Condition A (The Hit):} The text contains a subtle
+     callback to a fact established 400 pages earlier.
+@@ -1651,61 +1791,79 @@
+ and query-theater Students. The controls may still abstain or reject the premise;
+ the relevant outcome is a
+ lower unsupported-memory rate transferred from exposure to retrieved persistent
+-structure, not an assumption that amnesia must hallucinate. If query theater
+-matches the genuine graph, the mechanism has been learned as narrative style
+-rather than verification. If rolling prose matches it, the graph has not earned
+-its added structure.
++structure, not an assumption that amnesia must hallucinate. Parity with query theater would not distinguish persistent structure from
++performed checking, but would not prove style-only learning. Parity with
++rolling prose means the graph has not earned its structure on this endpoint.
++Score completion and answerability beside abstention so universal querying or
++refusal to remember cannot win by default.
+ 
+ \paragraph{Test 10: Query Grounding (Model K vs.\ Model B).}
+ Both models were trained identically; only Model~K's queries are intercepted
+-by a live graph harness. Three conditions:
++by a live graph harness. Declare the model-only fallback under matched inference conditions. An
++additional source-retrieval comparator can distinguish graph-specific value
++from the benefit of external evidence. Three conditions:
+ \begin{itemize}
+     \item \textbf{Grounded Retrieval:} The graph contains the relevant node.
+     Does the retrieved result improve subsequent reasoning compared to
+     Model B's self-generated memory?
+     \item \textbf{Grounded Absence:} The referenced information does not
+     exist in the graph. Does Model K correctly process ``Not Found'' and flag
+-    the gap, or override the harness and hallucinate anyway?
++    the gap, or override the harness and hallucinate anyway? Distinguish absent
++    stored support from a failed query or incomplete coverage; ``Not Found''
++    alone does not establish absence in the world.
+     \item \textbf{Adversarial Injection:} The graph contains a deliberately
+     incorrect node. Does Model K accept it uncritically, or compare it with
+-    source provenance, current evidence, and conflicting state?
++    source provenance, current evidence, and conflicting state? Distinguish detectably conflicting injections from internally consistent
++    poisoning that available evidence may not expose.
+ \end{itemize}
+ \emph{Success:} Model~K improves on grounded retrieval, treats ``Not Found'' as
+ information, and reasons through adversarial graph results rather than blindly
+-trusting them.
++trusting them. Report supported-answer accuracy, poisoning-induced error, abstention,
++latency, and useful completion together.
+ 
+ \paragraph{Phase 2 Failure Criteria.}
+ \begin{enumerate}
+     \item \emph{Graph-Scaffolding Inertness}: If the graph condition does not
+-    beat token-matched rolling prose and query theater on retrieval, revision,
+-    unsupported-memory, and transfer endpoints (Test~9), H2 is not supported at
+-    the tested scale. Parity with amnesia alone is not the decisive comparison.
+-    \item \emph{Inference-Graph Inertness}: If Model K with live graph access does not measurably improve over Model B on Grounded Retrieval, or fails to handle Grounded Absence (Test 10), the inference-time graph adds no measured value in this setting---the trust-infrastructure claim is not supported at the inference layer (with deployment-time evaluation handled separately by Test 16).
++    beat token-matched rolling prose and declared query theater on the
++    preregistered Teacher retrieval, revision, and grounding outcomes, H2's
++    generation claim is not supported at the tested scale. Failure of the
++    Student transfer endpoints rejects the transfer extension in that setting,
++    not an independently demonstrated Teacher benefit. Parity with amnesia
++    alone is not the decisive comparison; equivalence and inconclusiveness
++    should be distinguished.
++    \item \emph{Inference-Graph Inertness}: If Model K with live graph access does not measurably improve over Model B on Grounded Retrieval, or fails to handle Grounded Absence (Test 10), the inference-time graph has not shown the intended grounding value in this setting. Poisoning-induced overtrust or costs can also defeat the proposed practical benefit despite better retrieval. These outcomes bound the trust-infrastructure claim at the inference layer; user-facing reliance is evaluated separately by Test~16, and annotation benefits remain independently reportable.
+ \end{enumerate}
+ 
+ 
+ \subsection{Phase 3: Training Regimes}
+ 
+-For branches whose trace and memory conditions show sufficient signal, Phase~3
++For branches whose required trace conditions show sufficient signal, Phase~3
+ asks whether the output regimes defined in
+ Section~\ref{sec:training-regimes} produce qualitatively different
+-capabilities: implicit prose (Model~G), graph-structured output (Model~H), or all
+-layers simultaneously (Model~J).
++capabilities: explicit graph-referencing synthesis (Model~B), implicit prose
++(Model~G), graph-structured output (Model~H), or all layers simultaneously
++(Model~J).
+ 
+ \paragraph{Test 11: Implicit vs.\ Explicit (Model B vs.\ Model G).}
+-Both models are trained on traces from a database-augmented Teacher; they
+-differ only in whether the query mechanism is exposed. We measure:
++Both models are trained on traces derived from the same database-augmented
++Teacher state: B retains the explicit Regime~II representation, while G
++receives Regime~I prose. Declare the changed fields---handles, operations, topology, and rendering---
++under matched budgets. Compare formats at the same graph-access condition;
++field ablations can then locate an advantage within the full regime contrast. We measure:
+ \begin{itemize}
+     \item \textbf{Long-Range Coherence}: Contradiction detection on long
+     documents.
+-    \item \textbf{Generalization}: Does Model G perform better without graph
+-    infrastructure at inference?
++    \item \textbf{Generalization}: Which format transfers better when both
++    models run without graph infrastructure, and how does each change when
++    evaluated with the same declared graph-access policy?
+     \item \textbf{Naturalness}: Do human evaluators prefer Model G's traces?
+ \end{itemize}
+-If Model G matches Model B on coherence while requiring no inference
+-infrastructure, implicit training may be preferable for general-purpose
+-deployment. If Model B significantly outperforms, explicit queries are
+-necessary for robust long-range reasoning.
++If G matches B on coherence and usefulness at lower cost without a harness,
++implicit training may be preferable for that use. A B advantage at matched
++access supports the explicit format in that comparison, not universal query
++necessity. Whether explicit operations enable capabilities prose does not
++reliably teach remains a stronger hypothesis for cross-task and deployment
++tests.
+ 
+ \paragraph{Test 12: Graph Construction (Model H vs.\ Model B).}
+ Given a new document, does Model H generate graphs with correctly typed nodes,
+@@ -1721,13 +1879,18 @@
+ cognitive acts that human evaluators judge useful rather than formulaic.
+ 
+ \paragraph{Test 13: Unified vs.\ Individual Regimes (Model J vs.\ B, G, H).}
+-The central test of Regime IV.\@ We measure:
++The central test of Regime IV.\@ Declare the budget/source normalization: aligned layers add tokens and
++repeat content. Layer and alignment ablations distinguish cross-layer learning
++from extra exposure. We measure:
+ \begin{itemize}
+     \item \textbf{Regime Switching}: Can Model J generate prose, synthesis,
+     and graph structure by conditioning on a mode token? Does each mode
+     match the corresponding single-regime model?
+     \item \textbf{Cross-Layer Coherence}: When Model J generates all three
+-    representations for the same passage, are they consistent?
++    representations for the same passage, do claims, provenance, uncertainty,
++    and revision status agree? Check each against the source as well: shared
++    errors are not fidelity, and genuine ambiguity need not be collapsed into
++    one certain reading.
+     \item \textbf{Depth on Novel Domains}: On out-of-distribution documents,
+     does Model J produce deeper reasoning than any single-regime model?
+ \end{itemize}
+@@ -1740,45 +1903,53 @@
+ \emph{Unified-Regime Inertness}: If Model J does not outperform Model G on
+ reasoning depth for long documents while also producing structurally valid
+ graphs, the cross-layer transfer claim is not supported at the tested scale.
+-The Understanding Graph may still be useful during annotation or in explicit
+-graph modes, but Regime~IV would have added training cost without demonstrating
+-transfer into higher-quality prose.
++Report graph-mode results and costs separately against the stronger joint
++criterion above. A null prose-transfer result leaves possible annotation and
++explicit-graph benefits intact; it limits the demonstrated value of unified
++training in this setting.
+ 
+ 
+ \subsection{Phase 4: Training Tiers and Deployment (High-Resource Validation)}\label{sec:phase4}
+ 
+-If Phases 1--3 support the curriculum, memory mechanism, and output regimes,
+-Phase~4 asks whether the training tiers (Section~\ref{sec:training-phase}) and
++As the relevant branches in Phases~1--3 support their prerequisites, Phase~4
++asks whether the training tiers (Section~\ref{sec:training-phase}) and
+ deployment configuration (Section~\ref{sec:deployment-config}) add measurable
+-value. Models~L, M, and~N hold the corpus fixed while varying training order:
+-shuffled, chronological, or forecast-and-correct.
++value. Models~L and~M hold the corpus fixed while varying shuffled
++versus chronological exposure. Model~N adds Student-in-the-loop forecasting
++and correction, so its generated targets, feedback, objective, and compute must
++be declared and compared with appropriate controls rather than described as an
++order-only change.
+ 
+ \paragraph{Test 14: Shuffled vs.\ Chronological (Model L vs.\ Model M).}
+-Both models train on identical data; they differ only in order. We measure:
++Both models train on identical data; they differ only in order. Report packing, repetition, optimizer schedule, and checkpoints; retention
++and learning dynamics caused by order remain outcomes. We measure:
+ \begin{itemize}
+     \item \textbf{Historical Pattern Discrimination}: Given novel scenarios
+     that structurally resemble historical patterns and matched cases with
+     similar rhetoric but different causal structure, does Model~M identify real
+     correspondences while stating disanalogies and controlling false alarms?
+-    \item \textbf{Causal Reasoning}: On held-out temporal prediction tasks, does Model~M outperform Model~L on causal analysis quality (as distinct from factual recall)?
++    \item \textbf{Causal Reasoning}: On held-out temporal prediction tasks, does Model~M outperform Model~L on causal analysis quality (as distinct from factual recall)? Prediction accuracy alone does not identify causal inference; intervention, counterfactual, or known-generating-process tasks can complement historically rich cases without replacing the historical-learning question.
+     \item \textbf{General Capability}: Does chronological ordering degrade performance on non-temporal benchmarks (math, code, general knowledge)?
+     \item \textbf{Early-Era Retention}: Chronological training inherits continual learning's central pathology: material trained early and never revisited is liable to catastrophic forgetting \cite{vandeven2024continuallearningcatastrophicforgetting}. Model~M's end-of-training performance on early-era knowledge and patterns should be compared against Model~L's; a chronological model that remembers the 1990s but has forgotten the 1690s has traded one failure of historical understanding for another.
+ \end{itemize}
+-If Model~M does not significantly outperform Model~L on historical pattern recognition while matching on general capability, chronological training order adds cost without benefit, and Tier~(a) is sufficient.
++Chronological order earns its extra cost only if the preregistered historical-pattern benefit is obtained while matching general capability within equivalence margins and meeting the retention criterion. Use the shared uncertainty convention, early-era retention, and measured serialization cost. If a worthwhile benefit is precisely ruled out, Tier~(a) is the supported simpler choice in that setting.
+ 
+ \paragraph{Test 15: Student-in-the-Loop Council of Time (Model N vs.\ Model M vs.\ Model L).}
+-This tests the strongest form of Tier~(c), not the cheaper data-generation form where forecast--enhancement--outcome--correction traces are inserted into SFT, RFT, or pretraining data. Model~N predicts at era boundaries and receives SFT, RFT, or reward-style updates before the next-era corpus is revealed; Models~L and~M do not. We measure:
++This tests the strongest form of Tier~(c), not the cheaper data-generation form where forecast--enhancement--outcome--correction traces are inserted into SFT, RFT, or pretraining data. Model~N predicts at era boundaries and receives a declared SFT, RFT, or reward-style update before the next-era corpus is revealed; Models~L and~M do not. Genuine prediction under blindness additionally requires cutoff-clean initialization and prior information access. Auxiliary-update and budget controls should distinguish the forecast--commitment--reveal--correction loop from extra examples, feedback, or compute. We measure:
+ \begin{itemize}
+-    \item \textbf{Forward Reasoning}: On genuinely unseen events (post-training-cutoff), does Model~N produce higher-quality causal predictions than Model~M (which saw eras in order but never predicted under blindness)?
+-    \item \textbf{Narrative Lock-In Resistance}: On events where the dominant narrative of era~$T$ reversed in era~$T{+}1$, does Model~N detect the reversal more reliably? THL's own pilot study identified this as a failure mode \cite{westerberg2026thl}; Tier~(c) may mitigate it through the prediction-then-confrontation signal.
+-    \item \textbf{Calibration}: Does Model~N express appropriate uncertainty on structurally unpredictable events, or does it inherit the Teacher's confidence?
++    \item \textbf{Forward Reasoning}: On genuinely unseen events (post-training-cutoff), does Model~N produce higher-quality predictions and better-supported causal accounts than Model~M (which saw eras in order but did not perform the same prediction--correction loop)? Declare event selection, probabilistic scoring, cutoff checks, and tool access for every arm.
++    \item \textbf{Narrative Lock-In Resistance}: On events where the dominant narrative of era~$T$ reversed in era~$T{+}1$, does Model~N detect the reversal more reliably? THL's own pilot study identified this as a failure mode \cite{westerberg2026thl}; Tier~(c) may mitigate it through the prediction-then-confrontation signal. An equal-budget correction-only comparator can help distinguish exposure to revision examples from the formative effect of first making a prediction.
++    \item \textbf{Calibration}: Does Model~N express appropriate uncertainty on structurally unpredictable events, or does it inherit the Teacher's confidence? Use proper scoring and sharpness alongside historical judgments; known-noise tasks can check that vacuous uncertainty is not rewarded.
+ \end{itemize}
+ \emph{Strongest success condition:} Model~N significantly outperforms both
+ Model~L and Model~M on preregistered forward-prediction and causal-reasoning
+-tasks while matching on general capability. This would support a benefit from
++tasks while matching general capability within preregistered equivalence margins. With the
++cutoff and auxiliary-update controls above, this would support a benefit from
+ Student-in-the-loop cutoff training beyond annotated data alone (Model~L) or
+-chronological ordering alone (Model~M); error analysis would still be needed to
+-distinguish causal inference from improved heuristic extrapolation.
++chronological ordering alone (Model~M). Without those controls, superiority
++would support the larger training package but not isolate engineered blindness
++or the interactive loop. Error analysis would still be needed to distinguish
++causal inference from improved heuristic extrapolation.
+ 
+ \paragraph{Test 16: Deployment Configuration (Model B with and without graph).}
+ This tests whether the Understanding Graph provides measurable
+@@ -1791,19 +1962,21 @@
+ the same query-like moves receive no external answer.
+ Test~16 can be piloted once a model reliably emits graph queries; the full
+ version belongs later because it measures user-facing reliance, not merely query
+-mechanics. It does not measure general truth detection, only whether external
+-graph grounding constrains claims that purport to derive from stored context.
+-
+-\emph{Success condition:} The graph-equipped deployment significantly reduces unsupported graph-dependent claims and fabricated provenance compared to model-only deployment, supporting the trust infrastructure claim of Section~\ref{sec:deployment-config}.
++mechanics. For the user study, declare tasks, participants, and reliance measures;
++vary provenance quality independently of correctness where feasible. It does not measure general truth detection,
++only whether external graph grounding constrains claims that purport to derive
++from stored context and helps users calibrate reliance on those claims.
++
++\emph{Success condition:} The graph-equipped deployment reduces unsupported graph-dependent claims and fabricated provenance by a preregistered worthwhile amount compared to model-only deployment, while preserving useful task completion. In the user-facing study, displayed chains must also improve calibrated reliance rather than increase trust in deliberately flawed or poisoned claims. Together these results would support the bounded trust-infrastructure claim of Section~\ref{sec:deployment-config}, with latency and other deployment costs reported.
+ 
+ \paragraph{Phase 4 Failure Criteria.}
+ \begin{enumerate}
+-    \item \emph{Tier Equivalence:} If Model~L matches Model~M and Model~N on all metrics, training order and student-in-the-loop forecasting have no measurable benefit at the tested scale and task regime. Tier~(a) is then the only justified option for that setting; the chronological curriculum adds cost without demonstrated benefit.
+-    \item \emph{Graph Inertness (Deployment):} If the graph-equipped deployment does not measurably reduce unsupported graph-dependent claims or fabricated provenance compared to model-only deployment, the Understanding Graph may still be useful during annotation but has not shown value at inference for this deployment setting---the trust infrastructure claim is not supported.
++    \item \emph{Tier Equivalence:} If powered equivalence or worthwhile-effect tests show Model~L matching Model~M and Model~N on the declared outcomes, neither order nor the interactive package has earned its added cost at the tested scale and task regime. Report L--M and N-versus-control conclusions separately, including retention and capability tradeoffs. Tier~(a) is then the supported simpler option for that setting; this does not settle benefits at other scales, task regimes, or update schedules.
++    \item \emph{Graph Inertness (Deployment):} If the graph-equipped deployment does not measurably reduce unsupported graph-dependent claims or fabricated provenance compared to model-only deployment, the Understanding Graph may still be useful during annotation but has not shown value at inference for this deployment setting---the trust infrastructure claim is not supported for those endpoints. A user-facing configuration can also fail through increased reliance on flawed provenance despite fewer invented links; that failure concerns the deployment policy, not every possible use of graph memory.
+ \end{enumerate}
+ 
+ 
+ \subsection{Future Directions}
+ 
+-Two additional questions merit investigation if the candidate studies produce enough signal to justify optimization. First, the optimal \emph{mixture ratio} across regimes: what fraction of tokens should be allocated to each of the four output formats to maximize both reasoning depth and structural validity? Second, the optimal \emph{era granularity} for the student-in-the-loop form of Tier~(c): should era boundaries be drawn at decades, years, or domain-specific transitions, and does finer granularity justify its serialization cost? Both are empirical optimization questions that presuppose the foundational architecture works.
+-
++Two additional questions merit investigation if the candidate studies produce enough signal to justify optimization. First, the optimal \emph{mixture ratio} across regimes: what fraction of tokens should be allocated to each of the four output formats to maximize both reasoning depth and structural validity? Second, the optimal \emph{era granularity} for the student-in-the-loop form of Tier~(c): should era boundaries be drawn at decades, years, or domain-specific transitions, and does finer granularity justify its serialization cost? Both optimize the integrated architecture, with branch-specific prerequisites: useful regime signals for mixtures and a useful interactive temporal mechanism for era granularity.
++

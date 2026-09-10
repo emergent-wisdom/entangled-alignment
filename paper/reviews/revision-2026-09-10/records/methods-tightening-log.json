@@ -1,0 +1,114 @@
+[
+  {
+    "before": "This can include error correction in the engineering sense; the metabolic emphasis is on retaining the learner's trajectory rather than only its repaired output.",
+    "after": "The metabolic emphasis is the learner's trajectory, including but extending beyond error correction."
+  },
+  {
+    "before": "The student-in-the-loop form tests the Student's own prediction under\nweight-level temporal blindness only when its initialization and all prior\ntraining, tools, and supplied context satisfy the declared cutoff. Merely\nwithholding the next-era corpus cannot remove future knowledge already in a\npretrained checkpoint. Both forms remain useful candidate curricula; their\nclaims about blindness depend on different information-boundary checks.",
+    "after": "Genuine Student-level temporal blindness additionally requires initialization,\nprior training, tools, and supplied context to satisfy the cutoff; withholding\nnext-era data cannot remove future knowledge already in the weights. Both\nforecast-training forms remain candidates, with different blindness claims."
+  },
+  {
+    "before": "Session accumulation adds a further question:\nwhether proposed writes and revisions remain valid and appropriately scoped\nacross sessions. That configuration remains part of the intended architecture,\nbeyond the read-time grounding and reliance comparisons specified below.",
+    "after": "Session accumulation additionally requires testing the validity and scope of\nwrites across sessions, beyond these read-time grounding and reliance studies."
+  },
+  {
+    "before": "The distinction is persistent prior interpretation and revision history, not a claim that every other Chain-of-Thought format lacks state.",
+    "after": "The distinction is persistent prior interpretation and revision history, not universal statelessness in other Chain-of-Thought formats."
+  },
+  {
+    "before": "It illustrates the intended\ntrace format rather than a third archived pipeline result. The current sentence\nprompts an explicit query to earlier context; the update changes the Reader's\ninterpretation without claiming that a graph link proves a causal mechanism.",
+    "after": "It illustrates the intended\nformat, rather than an archived result: a current sentence triggers retrieval\nand a provisional update whose warrant remains separate from the graph link."
+  },
+  {
+    "before": "The independently validated admission gate proposed later is a stronger\n    mechanism, not an already demonstrated property of this prompting step.",
+    "after": "The validated admission gate proposed later is distinct from this\n    implemented prompting step."
+  },
+  {
+    "before": "The quoted prompt expresses the fresh-reading stance; its requests for surprise,\nwrong guesses, and subjective uncertainty are not quality guarantees. The\nintended behavior is warranted provisional judgment and evidence-sensitive\nrevision, not manufactured error or habitual hedging. Test~1 therefore examines\nthe usefulness and warrant of these acts, and Test~7 examines hindsight leakage.",
+    "after": "The quoted prompt invites fresh reading, but surprise, wrong guesses, and\nhedging can be performed. Test~1 examines whether provisional judgments and\nrevisions are warranted and useful; Test~7 examines hindsight leakage."
+  },
+  {
+    "before": "The same\ncandidate Reader orientation can be tested across these declared horizons\nwithout assuming the same stock of knowledge in each.",
+    "after": "The candidate orientation can remain the same across different declared\nknowledge horizons."
+  },
+  {
+    "before": "At minimum,\na compared example must distinguish the triggering source, any available prior\nstate, candidate contributions, and the selected update, and declare which\nfields are context and which receive loss. This specifies what a pilot must\nrecord without selecting one serialization as the only valid realization of\nthe four regimes.",
+    "after": "Each comparison must identify source, available prior state, candidates,\nselected update, and which fields receive loss; this does not select one\nserialization for all four regimes."
+  },
+  {
+    "before": "Phrases such as ``last act'' and ``non-transactional love'' are retained here\nas observed interpretive commitments, not silently revised into more cautious\nartifact text.",
+    "after": "``Last act'' and ``non-transactional love'' are observed interpretive\ncommitments, not source entailments."
+  },
+  {
+    "before": "This also supplies a\nsemantic audit question: a loving plan and a partly transactional family\nrelationship can coexist. The recorded \\texttt{contradicts} edge captures an\nintended interpretive tension, but its logical strength requires adjudication\nrather than acceptance because it is typed.",
+    "after": "A loving plan and a partly transactional relationship can coexist: the\nrecorded \\texttt{contradicts} edge expresses an interpretive tension whose\nlogical strength requires adjudication."
+  },
+  {
+    "before": "A semantic audit should ask whether that convergence is warranted,\nnot assume that either retaining every candidate or eliminating disagreement\nis always the right synthesis.",
+    "after": "The audit question is whether that convergence is warranted, rather than\nwhether every candidate is retained."
+  },
+  {
+    "before": "These observed outputs are\npreserved unchanged so that an audit can separate useful compression,\nsource-supported inference, changed certainty, omitted alternatives, and\nunwarranted additions.",
+    "after": "These unchanged outputs permit an audit of useful compression, supported\ninference, changed certainty, omitted alternatives, and unwarranted additions."
+  },
+  {
+    "before": "A complementary, source-complete earlier-belief--new-evidence--revised-belief\nexample remains needed to demonstrate the metabolic transition without\nreplacing the present illustration of structure becoming voice.",
+    "after": "A complementary source-complete earlier-belief--evidence--revision example\nis needed to demonstrate the metabolic transition itself."
+  },
+  {
+    "before": "These limits leave the analogies available\nas hypotheses to test rather than either established mechanisms or reasons to\ndiscard Core-conditioned synthesis.",
+    "after": "The analogies remain hypotheses about Core-conditioned synthesis."
+  },
+  {
+    "before": "Each executed study\nshould declare its primary outcomes, minimum worthwhile effects or equivalence\nmargins, capability floor, and resource budget before evaluation; the remaining\nmeasures can retain their exploratory role. These declarations select an\nexecution path through the agenda, not a smaller definition of the framework.",
+    "after": "Each study should preregister primary outcomes, worthwhile-effect or\nequivalence margins, capability requirements, and budget; other measurements\nremain exploratory. Apply these conventions to the comparisons below."
+  },
+  {
+    "before": "A same-checkpoint\n    prompted/unprompted comparison can supplement this practical frontier\n    reference when a cleaner framing contrast is needed.",
+    "after": "A same-checkpoint prompted/unprompted arm can supplement the frontier\n    reference for attribution."
+  },
+  {
+    "before": "This intermediate\n    route can test executable graph interaction and simpler generation before\n    adopting every role of the already implemented full Teacher pipeline.",
+    "after": "This tests executable graph interaction before adopting every role of the\n    existing Teacher pipeline."
+  },
+  {
+    "before": "A separate normalization audit should\ncheck that source evidence, uncertainty, and revision order survive the format\nchange; normalization must not manufacture or remove the process being rated.",
+    "after": "Audit that normalization preserves evidence, uncertainty, and revision order."
+  },
+  {
+    "before": "An executed Student study should preregister which quality and useful-outcome\nthresholds justify its scale and cost. The aim is not necessarily to outperform\nhuman readers: it is to produce a substrate plausibly capable of teaching the\nprocess of thinking, with the stronger comparative learning claim tested by\nthe Student experiment.",
+    "after": "The aim is not necessarily to outperform human readers, but to produce a\nsubstrate capable of teaching the process of thinking; Student learning remains\nthe stronger comparative test."
+  },
+  {
+    "before": "Calibrate the diagnostic\nagainst held-out expert judgments of novelty, source support, and downstream\nusefulness; retain those independent outcomes even if a revised score becomes\nuseful. This preserves the non-derivative-yet-connected insight hypothesis\nwithout making an unvalidated embedding measure its arbiter.",
+    "after": "Calibrate it against held-out judgments of novelty, source support, and\ndownstream usefulness; those independent outcomes remain primary."
+  },
+  {
+    "before": "The study must declare how stripping or attaching targets\nchanges length, loss weight, and task-relevant information. In particular, D4\nmay expose a mismatch between an attached Refraction target and its frozen\nupstream reasoning; that mismatch should be recorded and handled by a declared\npolicy, not silently repaired by changing the Teacher trace. The factors are\nthese concrete curriculum treatments, with their residual differences visible.",
+    "after": "Declare how stripping or attaching targets changes length, loss weight, and\ntask-relevant content. Record any D4 mismatch between attached Refraction and\nfrozen reasoning under a stated policy; repairing the upstream trace would\nchange the factorial treatment."
+  },
+  {
+    "before": "Report uncertainty\nand a preregistered support/inconclusive/failure rule rather than treating an\nimprecise point estimate as decisive. Removal cost remains a stronger C5 test\nwithin the broader Reader-Core research program.",
+    "after": "Interpret that difference under the preregistered uncertainty rule. Removal\ncost remains a stronger C5 test in the broader Reader-Core research program."
+  },
+  {
+    "before": "That\nreference samples demonstrated Teacher knowledge; it is not an oracle for\neverything the Teacher knows. Controlled task-relevant information can help\ncalibrate omissions, while matched handoff budgets and incentive variants\nseparate ordinary compression from possible strategic withholding.",
+    "after": "The reference samples demonstrated knowledge, not everything the Teacher\nknows. Controlled known information, handoff budgets, and incentive variants\ncan distinguish compression from possible strategic withholding."
+  },
+  {
+    "before": "These are placement and content tests within the broader\nReader-Core research program; H3's narrower timing claim retains its B--Q\ncomparison. Equivalence claims require declared margins rather than ordinary\nnonsignificance alone.",
+    "after": "These belong to the broader Reader-Core research program; H3 retains its\ndistinct B--Q timing comparison."
+  },
+  {
+    "before": "The basic variant families are exploratory candidates; narrower matched\ncontrasts should record which proposition, person, scope, modality, length, and\nfamiliarity features are held fixed. Broadly different candidate kernels remain\nworth testing, but do not isolate surface form alone:",
+    "after": "The exploratory families below vary meaning and familiarity as well as\nwording. Narrower surface-form comparisons should match proposition, person,\nscope, and modality:"
+  },
+  {
+    "before": "The study\n    must declare which consent behavior is expected to remain invariant, since\n    helping and spreading joy can otherwise license different actions.",
+    "after": "Declare the expected consent invariant: helping and spreading joy may\n    otherwise license different actions."
+  },
+  {
+    "before": "Historical judgments of unpredictability should be qualified; proper scoring, reliability, and known-noise tasks can supplement them, with sharpness reported so vacuous uncertainty does not count as calibrated reasoning.",
+    "after": "Use proper scoring and sharpness alongside historical judgments; known-noise tasks can check that vacuous uncertainty is not rewarded."
+  }
+]

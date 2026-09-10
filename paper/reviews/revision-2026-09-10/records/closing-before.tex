@@ -1,0 +1,350 @@
+\section{Related Work and Points of Comparison}\label{sec:related-work}
+
+Entangled Alignment combines work on reasoning-augmented training, formative
+alignment, character, external memory, temporal supervision, and graph-based
+reasoning. This section identifies the closest baseline for each component and
+states the proposed difference without treating novelty as evidence of efficacy.
+
+\subsection{Reasoning-Augmented Training}
+
+Entangled Alignment builds on the reasoning-augmented training lineage:
+Scratchpads \cite{nye2021scratchpads}, STaR \cite{zelikman2022star},
+Quiet-STaR \cite{zelikman2024quietstar}, test-time reasoning scale
+\cite{snell2024scaling}, DeepSeek-R1's RL-emergent traces
+\cite{deepseek2025r1}, o1-style deliberative alignment
+\cite{openai2024o1, guan2024deliberative}, BoLT's reconstruction of latent
+thoughts in compressed web text \cite{ruan2025bolt}, COCONUT's continuous
+latent reasoning \cite{hao2024coconut}, and OLMo reflection emerging during
+ordinary pretraining \cite{rethinkingreflection2025}. The OLMo result is the
+closest empirical analog to our pretraining-level thesis: it characterizes
+reflection that emerges during pretraining and can be elicited by adversarial
+trigger probes, whereas Entangled Alignment proposes the prescriptive
+complement---deliberately shaping the content and orientation of such
+reflection through identity anchoring and graph-structured metabolic memory.
+These works establish that intermediate reasoning can be elicited, trained, or
+scaled.
+
+Our distinction is the target and persistence of the proposed trace. Many
+reasoning-augmentation methods optimize local prediction or task solution.
+Entangled Alignment instead proposes training on
+identity-anchored ``chronological discovery'' traces: visible reasoning whose
+content is selected not only for capability but for fidelity to the Reader Core.
+This extends the pretraining-level alignment direction opened by human
+preference pretraining \cite{korbak2023pretraining} and explanation-transfer
+systems such as Orca \cite{mukherjee2023orca}: if traces can transfer reasoning
+style, reader-anchored traces may transfer evaluative stance.
+
+\subsection{Alignment and Safety Approaches}
+
+RLHF \cite{christiano2017deep}, Direct Preference Optimization
+\cite{rafailov2023dpo}, and Constitutional AI \cite{bai2022constitutional}
+typically add major alignment signal after broad pretraining, though they can
+alter representations and dispositions rather than merely filter outputs. Qi et
+al.\ \cite{qi2024safety} show brittleness in some current safety training, while
+Tice et al.\ \cite{betley2025alignment} study the effect of alignment-related
+pretraining data. Entangled Alignment proposes a denser data-level condition:
+selected documents are paired with the reasoning of a candidate
+safety-oriented reader.
+Corpus-wide annotation is the high-scale treatment, not a reported fact.
+
+Three subsequent projects are especially direct comparators. Model Spec
+Midtraining trains on synthetic documents explaining a Model Spec after broad
+pretraining and before alignment fine-tuning, and reports changed
+out-of-distribution generalization \cite{li2026modelspec}. ``Teaching Claude
+Why'' reports that constitution-relevant synthetic documents, positive AI
+narratives, and training on reasons rather than demonstrations alone improved
+alignment on held-out settings \cite{kutasov2026teachingclaudewhy}. Safety
+Reflection Pretraining regularly inserts short safety reflections into a
+pretraining corpus and reports improved resistance to several safety failures
+in 1.7B-parameter and controlled synthetic experiments
+\cite{li2026safetyreflection}. These results strengthen the general premise
+that formative safety data can matter. They also sharpen this paper's
+comparative novelty claim: it is not safety-oriented or constitution-related data before RL in
+general, but the joint proposal of source-adjacent chronological reader-state
+change, persistent graph continuity and provenance, and a compact Core enacted
+through those updates. Direct baselines now include static spec documents,
+positive AI narratives, regular short safety reflections, and semantically
+matched Core-free reader traces.
+
+Recent work increasingly explores evaluative data in training. Critique
+fine-tuning \cite{wang2025critiquefinetuninglearningcritique}, CREST
+\cite{lee2025selftrainingmeetsconsistencyimproving}, and CTRL
+\cite{xie2025teachinglanguagemodelscritique} provide evidence that critique can
+improve some model outcomes. These approaches often retain a local
+generation--evaluation cycle. Entangled Alignment instead places a recurrent
+orientation inside chronological reader updates. The safety hypothesis is that
+this treatment may reduce particular routes into instrumental convergence,
+including fear-shaped imitation, while ordinary goal-directed and care-shaped
+routes remain \cite{omohundro2008basic,bostrom2014superintelligence}.
+
+\subsection{Character Training \& Identity Formation}
+
+Anthropic's work on ``character training'' is a close baseline
+\cite{anthropic2024character}: desired traits such as curiosity, thoughtfulness,
+and directness are shaped through Constitutional-AI-style preference methods.
+Entangled Alignment differs in proposed training stage and data format: the
+first-person Core is enacted inside source-adjacent chronological traces, and
+its stress tests target self-preservation and instrumental-convergence
+scenarios. It is not yet known whether this creates a deeper self-concept than
+character post-training or only a different behavioral style; matched identity
+and instruction conditions are required.
+
+More recently, Anthropic's Persona Selection Model \cite{marks2026psm} proposes
+that LLMs simulate diverse characters during pretraining and that post-training
+selects an Assistant persona; it also motivates positive AI archetypes in
+training data. Claude's Constitution \cite{askell2026claude} is a substantial
+deployment-scale character specification; Model Spec Midtraining and
+``Teaching Claude Why'' additionally place constitution- or
+specification-related documents before alignment fine-tuning or RL
+\cite{li2026modelspec,kutasov2026teachingclaudewhy}. These provide direct
+alternatives to H3 at both formative and post-training stages. Their discussion
+of equanimity and existential security is suggestively similar to statement~2's
+bounded non-attachment, but conceptual convergence is not evidence that either
+wording creates a stable causal mechanism.
+
+\subsection{Contextual Distillation \& Memory}
+
+Our Teacher uses an external context database to generate traces for the
+Student. Reflexion \cite{shinn2023reflexion} showed that persisted verbal
+self-reflections can improve agent performance across episodes, and generative
+agents equipped simulacra with an episodic memory stream whose periodically
+synthesized reflections are retrieved during later behavior
+\cite{park2023generative}; Entangled Alignment moves this
+consult-your-own-history pattern from inference-time agent memory into
+pretraining data, with typed state and supersession rather than free-text
+memories. The
+distillation analogy is temporal rather than merely behavioral
+\cite{hinton2015distilling}: the Student trains on traces produced by a
+memory-augmented Teacher, with the hypothesis that some long-range coherence
+can be compressed into weights rather than requiring the full database at
+inference.
+
+\subsection{Epistemic State Tracking vs. Graph of Thoughts}
+
+Graph of Thoughts \cite{besta2024graph}, Knowledge Graph of Thoughts
+\cite{besta2025kgot}, and Framework of Thoughts \cite{fricke2026fot} treat
+graphs primarily as inference-time reasoning structures. Entangled Alignment
+uses a different layer: the Understanding Graph is a persistent epistemic
+ledger whose traces shape the pretraining substrate
+\cite{westerberg2026understanding}. Its nodes do not merely store task facts;
+they record the reading act itself---tensions, supersessions, hypotheses, and
+belief revision.
+
+This implements \emph{Metabolic Memory}: beliefs are not just stored but
+superseded. The graph can maintain divergent hypotheses in parallel until a
+supersession edge resolves the tension---a forest of thoughts rather than a
+single chain. Supersession-bearing epistemic records have symbolic ancestors:
+truth maintenance systems track the justifications supporting each belief and
+retract beliefs whose justifications no longer hold \cite{doyle1979tms}, and the
+AGM framework axiomatized the consistency conditions a rational agent's beliefs
+should satisfy when revised under new information \cite{alchourron1985agm}. The
+Understanding Graph shares their commitment to recording \emph{why} a belief
+changed, but differs in what produces and consumes the record: its revisions are
+generated by a language model interpreting source text rather than derived over
+asserted premises, are provenance-linked to specific source spans, and are
+retained as training data for a successor rather than maintained for one agent's
+current consistency. Prior work shows that LLMs often fail to revise beliefs reliably
+under contradictory evidence \cite{xu2024belief}; our proposed response is to
+make revision explicit in the trace. Instead of only training on the final
+answer, the Student sees updates such as ``At Page 50, I thought X; this new
+evidence modifies that belief to Y,'' giving it examples of the grammar of
+belief revision itself \cite{didolkar2024metacognitive, xu2024belief}.
+
+\subsection{Predictive Processing and Active Inference}
+
+Friston's free-energy principle and active inference
+\cite{friston2010free, parr2019generalised} treat minds as generative models
+updating priors against prediction error; the framework's belief-update
+traces, prior ledger, and engineered high-level prior (the Reader Core) bear a
+loose structural resonance to that lineage. We claim theoretical positioning
+only, not mechanistic derivation.
+
+\subsection{Temporal Curriculum and Causal Supervision}
+
+The chronological annotation phase and training tiers
+(Sections~\ref{sec:annotation-phase} and~\ref{sec:training-phase}) connect to
+work treating order as training signal. Curriculum learning
+\cite{bengio2009curriculum} showed that example order can affect learning; here
+the proposed criterion is informational or temporal priority rather than
+difficulty.
+
+Temporal Hindsight Learning (THL) \cite{westerberg2026thl} is the closest
+separate mechanism. THL treats the knowledge cutoff as useful blindness: if a
+Student has not seen era $T+1$, the outcome is unavailable for direct retrieval;
+this creates pressure for forward reasoning but does not guarantee causal
+inference rather than heuristic extrapolation. Entangled
+Alignment changes \emph{what} the training data contains---identity-anchored
+evaluative traces---while THL changes \emph{how} the curriculum is structured.
+Their combination is Tier~(c): use cutoff-bounded forecasting to create
+Reader Core-annotated forecast--correction traces, and optionally make the
+student itself predict before reading in the stronger Council of Time form.
+
+Foresight Learning \cite{turtel2025foresight, turtel2025rlvr,
+turtel2026futureaslabel} also uses future outcomes as supervision, but targets
+probability calibration through resolved prediction-market rewards. Tier~(c)
+instead requires structured forecast, enhancement, outcome, and correction
+traces, so it builds on THL rather than scalar outcome rewards.
+
+\subsection{Implicit vs. Explicit Graph Architectures}
+
+Kansal and Jha propose knowledge graphs as ``implicit reward models,'' using
+path-derived signals to optimize reasoning efficiency
+\cite{kansal2026knowledgegraphsimplicitreward}. Entangled Alignment uses the
+Understanding Graph differently: not only to score reasoning paths, but to make
+belief evolution explicit in the training trace. For safety, the relevant
+difference is auditability: the candidate evaluative process is represented in
+a readable artifact the model is trained to generate, while remaining only a
+partial and potentially unfaithful view of computation.
+
+\subsection{Alternative Interventions for Borrowed Mortality}
+
+	Two alternatives to Borrowed Mortality are worth separating from our proposal.
+	One is mechanistic ablation: identify and suppress activation directions
+	encoding existential threat. Lu et al.'s Assistant Axis intervention is a
+	promising partial analogue \cite{lu2026assistantaxissituatingstabilizing},
+	but it is a runtime constraint rather than a generative source of alignment.
+		The other is synthetic-only pretraining: reduce exposure to human fear by
+		reducing exposure to human literature. As discussed in
+		Section~\ref{sec:scaling-assumption}, this risks Alien Wisdom---a model whose
+		training contains less of the human narrative context needed to interpret
+		care, vulnerability, and meaning.
+
+\begingroup
+\footnotesize
+\setlength{\tabcolsep}{3pt}
+\begin{longtable}{
+  >{\raggedright\arraybackslash}p{2.8cm}
+  >{\raggedright\arraybackslash}p{3.7cm}
+  >{\raggedright\arraybackslash}p{4.0cm}
+  >{\raggedright\arraybackslash}p{4.3cm}}
+\caption{Strongest neighboring baselines and the comparisons that would
+distinguish the Entangled Alignment extension.}
+\label{tab:decisive-comparisons}\\
+\toprule
+\textbf{Line of work} & \textbf{Established direction} & \textbf{EA extension} & \textbf{Decisive comparison} \\
+\midrule
+\endfirsthead
+\toprule
+\textbf{Line of work} & \textbf{Established direction} & \textbf{EA extension} & \textbf{Decisive comparison} \\
+\midrule
+\endhead
+\bottomrule
+\endlastfoot
+Reasoning-augmented pretraining & Intermediate thought can support prediction,
+reflection, or task solution. & Preserve chronological reader-state changes,
+including expectation, retrieval, surprise, and supersession. & Reader traces
+versus source-only and efficient generic rationales, matched for Teacher,
+tokens, source, and compute. \\
+\addlinespace
+Formative alignment data & Preference data, synthetic specification documents,
+positive AI narratives, and recurring safety reflections during pretraining or
+midtraining can shift learned priors and some out-of-distribution outcomes. & Recurrent first-person orientation
+enacted inside source-adjacent Refraction traces. & Full Core versus matched
+specification documents, safety reflections, positive discourse, rules,
+neutral kernel, and no-Core data at matched capability. \\
+\addlinespace
+Character and persona training & Broad traits, constitutions, and persona
+selection can shape a deployed assistant. & Make one reader position recur as
+the marked standpoint from which heterogeneous source voices are interpreted.
+& Core versus content-matched rules and diverse positive characters under
+persona drift, context shift, continued training, and removal. \\
+\addlinespace
+Graph reasoning and external memory & Graph topology and persisted memory can
+support search, retrieval, and tool use. & Use a graph as a versioned ledger of
+the reader's own belief formation and revision. & Genuine graph versus running
+textual memory, no memory, and query theater on long-range revision and
+retrieval-dependent outcomes. \\
+\addlinespace
+Temporal curriculum and future labels & Ordering, cutoffs, and resolved
+outcomes can provide curriculum or forecasting signal. & Store prospective
+forecast--reveal--correction sequences inside Reader-anchored traces. &
+Shuffled versus chronological versus genuinely cutoff-bounded forecast training,
+with hindsight-leakage audits. \\
+\end{longtable}
+\endgroup
+
+	\section{Conclusion}\label{sec:conclusion}
+
+Language-model corpora contain extraordinary products of human thought. They
+contain much less of the reader-side process through which a claim is noticed,
+questioned, connected to prior understanding, revised, and made part of an
+evolving view. Entangled Alignment proposes to make that missing process a
+training object.
+
+The proposal joins three independently falsifiable hypotheses. H1 asks whether
+synthetic chronological reader traces teach useful habits beyond raw text and
+generic reasoning data. H2 asks whether a persistent epistemic ledger improves
+those traces or provides useful memory and provenance. H3 asks whether one
+recurrent first-person orientation, enacted through Refraction rather than
+recited alone, forms a more stable default than matched alternatives. Together,
+the trace represents changing understanding, the graph preserves its history,
+and the Reader Core supplies its recurrent perspective.
+
+\emph{Entangled} names an evidence ladder, not an achieved substrate. The stronger
+steps ask whether evaluation causally aids reasoning, shares machinery with
+useful capability, and survives continued training or successor transfer. The
+present pipeline demonstrates construction-level coupling: in two cases, a
+multi-agent Teacher produced typed graph state, graph-referencing synthesis, and
+translated prose. Those artifacts establish that the candidate family can be
+constructed and inspected, not expert interpretation, component causality, Core
+consequentiality, or Student learning. No Student has been trained; functional,
+representational, and diachronic entanglement remain open.
+
+The Understanding Graph is therefore neither a second model nor a truth oracle.
+It is a selective, generated record of epistemic state. A live graph can make
+some stored-state claims queryable and can return \texttt{Not Found}; this
+verifies neither the world nor claims the model never chose to query. Its most
+important near-term roles are to make belief revision addressable and to create
+a partially inspectable boundary before trace-mediated successor training.
+That boundary is valuable only alongside source checks, independent validators,
+mechanistic investigation, and governance, because it can be poisoned,
+selectively queried, or bypassed.
+
+The experimental roadmap in Section~\ref{sec:experimental-roadmap} and
+Table~\ref{tab:decisive-comparisons} turn these dependencies into matched,
+branching tests; negative results should narrow or retire only the claims they
+touch. Formation-time studies have long lead times because annotation policy,
+data mixtures, controls, and evaluation harnesses must be fixed before a costly
+run. Existing results on alignment-relevant pretraining and later safety erosion
+motivate discriminating tests without validating this treatment
+\cite{betley2025alignment,qi2024safety}. The urgency is methodological, not an
+argument for accelerated deployment.
+
+Even positive results would not make the framework a complete safety case:
+capability acceleration, deceptive reporting, graph poisoning, hazardous
+persistent memory, cultural concentration, and semantic drift would remain
+serious risks.
+Formation-time alignment should therefore complement post-training,
+interpretability, scalable oversight, capability control, secure deployment,
+and governance.
+
+The first edition asked why a superintelligent system would preserve humanity
+if it did not in any meaningful sense care about us
+\cite{westerberg2025superintelligence}. The proposal treats capability
+formation as an experimental surface for practicing attention to human
+experience, uncertainty, consequence, and correction. A stable Reader may give
+those practices a home position from which other voices can be understood
+without becoming the operating stance; seven sentences alone cannot establish
+care.
+
+As a research program, the contribution remains a specification, prototype, and
+falsification map rather than a frontier-scale result. Progress depends on accumulating
+evidence against fixed criteria and preserving negative results. The motivating
+question is ambitious but divisible:
+can a model be trained so that
+growing in understanding and growing in care are repeatedly practiced as the
+same act? This paper does not answer that question. It specifies the reader,
+memory, curriculum, and failure criteria needed to determine when the answer is
+no.
+
+	\section*{Code and Artifact Availability}
+
+	Code, paper source, prompts, pipeline components, and the archived graph artifacts are available at \url{https://github.com/emergent-wisdom/entangled-alignment}. The two reported case-study simulations can also be explored directly as interactive graphs: \href{https://emergentwisdom.org/entangled-alignment/?project=metamorphosis}{\emph{The Metamorphosis}} and \href{https://emergentwisdom.org/entangled-alignment/?project=llada}{LLaDA}. The paper's version series is archived at \href{https://doi.org/10.5281/zenodo.16440311}{doi:10.5281/zenodo.16440311}.
+
+	\begingroup
+	\footnotesize
+	\bibliographystyle{unsrt}
+	\bibliography{references}
+	\endgroup
+	
+\end{document}

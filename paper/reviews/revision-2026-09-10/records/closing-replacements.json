@@ -1,0 +1,102 @@
+[
+  {
+    "operation": "C01",
+    "before": "ordinary pretraining \\cite{rethinkingreflection2025}. The OLMo result is the\nclosest empirical analog to our pretraining-level thesis: it characterizes",
+    "after": "ordinary pretraining \\cite{rethinkingreflection2025}. These works establish\nthat intermediate reasoning can be elicited, trained, or scaled.\n\nOn the specific question of reflection forming during pretraining, the OLMo\nresult is a close empirical analog: it characterizes"
+  },
+  {
+    "operation": "C01",
+    "before": "These works establish that intermediate reasoning can be elicited, trained, or\nscaled.\n\nOur distinction",
+    "after": "Our distinction"
+  },
+  {
+    "operation": "C01",
+    "before": "Entangled Alignment instead proposes training on\nidentity-anchored ``chronological discovery'' traces: visible reasoning whose\ncontent is selected not only for capability but for fidelity to the Reader Core.",
+    "after": "The minimal H1 treatment instead preserves chronological changes in a reader's\nunderstanding across passages. The full treatment adds identity anchoring:\nvisible reasoning whose content is selected not only for capability but for\nfidelity to the Reader Core."
+  },
+  {
+    "operation": "C02",
+    "before": "These provide direct\nalternatives to H3 at both formative and post-training stages.",
+    "after": "These provide direct\nalternatives within the broader Reader-Core research program at both formative\nand post-training stages; H3 isolates the timing of an otherwise identical\nCore-bearing treatment."
+  },
+  {
+    "operation": "C02",
+    "before": "ledger whose traces shape the pretraining substrate",
+    "after": "ledger whose traces are proposed to shape the pretraining substrate"
+  },
+  {
+    "operation": "C03",
+    "before": "supersession edge resolves the tension---a forest of thoughts rather than a\nsingle chain.",
+    "after": "supersession edge records a proposed resolution that subsequent reading can use\nor revise---a forest of thoughts rather than a single chain."
+  },
+  {
+    "operation": "C03",
+    "before": "current consistency. Prior work shows that LLMs often fail to revise beliefs reliably",
+    "after": "current consistency.\n\nPrior work shows that LLMs often fail to revise beliefs reliably"
+  },
+  {
+    "operation": "C03",
+    "before": "loose structural resonance to that lineage. We claim theoretical positioning\nonly, not mechanistic derivation.",
+    "after": "loose structural resonance to that lineage. The useful intuition is that a\nrecurrent high-level orientation might guide how a reader revises its world\nmodel without fixing every belief. This is theoretical positioning, not a\nmechanistic derivation."
+  },
+  {
+    "operation": "C04",
+    "before": "Student has not seen era $T+1$, the outcome is unavailable for direct retrieval;",
+    "after": "Student's initialization and later information channels exclude era $T+1$,\nthe outcome is unavailable for direct retrieval;"
+  },
+  {
+    "operation": "C04",
+    "before": "student itself predict before reading in the stronger Council of Time form.",
+    "after": "student itself predict before reading in the stronger Council of Time form.\nThis blindness requirement belongs to that stronger tier, not to ordinary\ncontemporary annotation of historical sources."
+  },
+  {
+    "operation": "C04",
+    "before": "traces, so it builds on THL rather than scalar outcome rewards.",
+    "after": "traces, so it builds on THL rather than scalar outcome rewards. A comparison\nusing the same forecasts and outcomes can ask whether recording the correction\nteaches useful revision beyond any calibration gain."
+  },
+  {
+    "operation": "C04",
+    "before": "partial and potentially unfaithful view of computation.\n\n\\subsection{Alternative",
+    "after": "partial and potentially unfaithful view of computation. Whether a graph supplies\na reward or a revision record is separate from whether the Student emits graph\nsyntax or has access to a live graph at inference.\n\n\\subsection{Alternative"
+  },
+  {
+    "operation": "C05",
+    "before": "Two alternatives to Borrowed Mortality are worth separating from our proposal.",
+    "after": "Two alternative interventions on the hypothesized Borrowed Mortality route\nare worth separating from our proposal."
+  },
+  {
+    "operation": "C05",
+    "before": "but it is a runtime constraint rather than a generative source of alignment.",
+    "after": "but it is a runtime constraint rather than a generative source of alignment;\nit does not by itself identify an existential-threat direction."
+  },
+  {
+    "operation": "C05",
+    "before": "care, vulnerability, and meaning.\n\n\\begingroup",
+    "after": "care, vulnerability, and meaning.\n\nThese routes can be compared on threat understanding, self-preservation,\ncapability, and robustness, while retaining their different accounts of how an\norientation is formed. Table~\\ref{tab:decisive-comparisons} collects the principal\ncomparisons across this related-work section.\n\n\\begingroup"
+  },
+  {
+    "operation": "C01",
+    "before": "versus source-only and efficient generic rationales, matched for Teacher,\ntokens, source, and compute.",
+    "after": "versus source-only and efficient generic rationales under separate fixed-budget\nand fixed-source comparisons; match the Teacher across synthetic arms."
+  },
+  {
+    "operation": "C06",
+    "before": "those traces or provides useful memory and provenance. H3 asks whether one\nrecurrent first-person orientation, enacted through Refraction rather than\nrecited alone, forms a more stable default than matched alternatives. Together,",
+    "after": "those traces or provides useful memory and provenance. H3 asks whether\ninterleaving the same Core-bearing traces during capability formation produces\na more stable default Reader under continued training than placing them in a\nfinal tranche. The broader Reader-Core research program asks whether a recurrent\nfirst-person orientation enacted through Refraction becomes consequential and\ncan be inherited by successors. Together,"
+  },
+  {
+    "operation": "C06",
+    "before": "present pipeline demonstrates construction-level coupling: in two cases, a",
+    "after": "present pipeline demonstrates partial construction-level coupling: in two cases, a"
+  },
+  {
+    "operation": "C06",
+    "before": "touch. Formation-time studies",
+    "after": "touch. The immediate sequence is Test~1's trace-quality and outcome gate,\nfollowed by the clean H1 comparison; the graph and Core branches retain their\nseparate questions. Formation-time studies"
+  },
+  {
+    "operation": "C06",
+    "before": "same act? This paper does not answer that question. It specifies the reader,\nmemory, curriculum, and failure criteria needed to determine when the answer is\nno.",
+    "after": "same act? This paper does not answer that question. It specifies a candidate\nreader, memory, and curriculum, and proposes failure criteria. Freezing the\nremaining experimental choices makes particular claims testable without\nexhausting the larger question."
+  }
+]

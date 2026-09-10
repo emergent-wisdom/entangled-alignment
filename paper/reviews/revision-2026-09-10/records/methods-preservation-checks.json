@@ -1,0 +1,76 @@
+{
+  "labels": {
+    "before": 24,
+    "after": 24,
+    "preserved": true,
+    "removed": {},
+    "added": {}
+  },
+  "citations": {
+    "before": 22,
+    "after": 22,
+    "preserved": true,
+    "removed": {},
+    "added": {}
+  },
+  "figure_inputs": {
+    "before": 1,
+    "after": 1,
+    "preserved": true,
+    "removed": {},
+    "added": {}
+  },
+  "urls": {
+    "before": 2,
+    "after": 2,
+    "preserved": true,
+    "removed": {},
+    "added": {}
+  },
+  "node_identifiers": {
+    "before": 15,
+    "after": 15,
+    "preserved": true,
+    "removed": {},
+    "added": {}
+  },
+  "headings": {
+    "count": 75,
+    "exact": true
+  },
+  "full_core": {
+    "before": 3,
+    "after": 3,
+    "exact_count": true
+  },
+  "observed_and_prompt_boxes": {
+    "count": 4,
+    "exact": true
+  },
+  "node_items": {
+    "count": 3,
+    "exact": true
+  },
+  "result_tables": {
+    "count": 1,
+    "exact": true
+  },
+  "longtable_row_keys": {
+    "exact": true,
+    "counts": [
+      25,
+      19
+    ]
+  },
+  "technical_items": {
+    "count": 3,
+    "exact": true
+  },
+  "environments_balanced": true,
+  "size": {
+    "before_words": 16579,
+    "after_words": 18844,
+    "before_lines": 1809,
+    "after_lines": 1982
+  }
+}

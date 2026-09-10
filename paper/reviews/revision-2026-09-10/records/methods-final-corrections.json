@@ -1,0 +1,30 @@
+[
+  {
+    "before": "\\emph{Stable evaluative orientation as policy:}",
+    "after": "\\emph{Stable evaluative orientation (configured):}"
+  },
+  {
+    "before": "Wait. This 15\\% number makes me question that attribution.",
+    "after": "Wait. This 15\\% number feels familiar. It makes me question that attribution."
+  },
+  {
+    "before": "Updating belief: I should no longer attribute the improvement predominantly to the treatment on the evidence shown.",
+    "after": "Updating belief: I should suspend confidence in that attribution until the comparison is clear."
+  },
+  {
+    "before": "the preregistered historical-pattern benefit and capability/retention requirements are met.",
+    "after": "the preregistered historical-pattern benefit is obtained while matching general capability within equivalence margins and meeting the retention criterion."
+  },
+  {
+    "before": "tasks while meeting declared general-capability requirements.",
+    "after": "tasks while matching general capability within preregistered equivalence margins."
+  },
+  {
+    "before": "Each study depends on its relevant branch. ",
+    "after": ""
+  },
+  {
+    "before": "Prerequisites depend on the regime being tested.",
+    "after": ""
+  }
+]

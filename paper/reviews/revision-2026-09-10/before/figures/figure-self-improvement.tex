@@ -1,0 +1,50 @@
+% Figure: The Reader-Anchored Successor-Training Loop
+% Layout: four deliberate horizontal bands with a symmetric transfer row,
+% isolated reject path, matched delta cards, and bookending status bands.
+\begin{tikzpicture}[
+    box/.style={draw=black!70, rounded corners=3pt, align=center, font=\small, line width=0.8pt},
+    flowbox/.style={box, text width=2.65cm, minimum height=2.10cm},
+    genbox/.style={flowbox, fill=blue!6, draw=blue!55!black},
+    artifactbox/.style={flowbox, fill=green!7, draw=green!45!black},
+    gatebox/.style={flowbox, fill=yellow!8, draw=yellow!45!black},
+    deltabox/.style={box, fill=gray!7, text width=5.25cm, minimum height=1.55cm, font=\footnotesize},
+    reference/.style={box, fill=purple!8, draw=purple!55, dashed, text width=13.20cm, minimum height=0.85cm, font=\footnotesize},
+    claimbox/.style={box, fill=yellow!5, text width=13.20cm, minimum height=1.10cm, font=\footnotesize},
+    edgelabel/.style={fill=white, inner sep=1.5pt, font=\footnotesize},
+    arrow/.style={->, >=Stealth, thick, black!72},
+    transfer/.style={->, >=Stealth, thick, green!45!black},
+    reject/.style={->, >=Stealth, dashed, thick, red!55!black},
+    condition/.style={->, >=Stealth, dashed, thick, purple!65}
+]
+
+    \node[reference] (reference) at (0, 2.20) {\textbf{Declared audit reference:} versioned Reader Core $c^{(v)}$ + source-linked trace/graph archive};
+
+    % Symmetric transfer row.
+    \node[genbox]      (genk)     at (-5.55, 0) {Candidate Student\\$S^{(k)}$};
+    \node[artifactbox] (artifact) at (-1.85, 0) {Candidate handoff artifact\\\footnotesize source-linked trace, graph delta, provenance};
+    \node[gatebox]     (gate)     at (1.85, 0) {Governed audit gate\\\footnotesize inspect and compare\\accept, reject, or regenerate};
+    \node[genbox]      (next)     at (5.55, 0) {Candidate successor\\$S^{(k+1)}$};
+    \draw[arrow] (genk) -- (artifact);
+    \draw[transfer] (artifact) -- (gate);
+    \draw[transfer] (gate) -- node[edgelabel, above, text=green!45!black] {train} (next);
+    \draw[condition] (reference.south -| gate) -- node[edgelabel, right=3pt, text=purple!65] {compare against} (gate.north);
+
+    % A dedicated U-return keeps rejection separate from the comparison band.
+    \draw[reject, rounded corners=5pt] (gate.south) -- (1.85, -1.52) -- (-1.85, -1.52) -- (artifact.south);
+    \node[edgelabel, text=red!55!black] at (0, -1.52) {reject / regenerate};
+
+    % One comparison parents two separately reported deltas.
+    \node[font=\footnotesize, text=black!75] at (0, -2.38) {\textbf{Preregistered comparison:} $S^{(k)}$ vs. $S^{(k+1)}$};
+    \draw[gray!50, line width=0.7pt] (-3.05, -2.62) -- (-3.05, -2.88);
+    \draw[gray!50, line width=0.7pt] (3.05, -2.62) -- (3.05, -2.88);
+    \node[deltabox] (continuity) at (-3.05, -3.72) {\textbf{Continuity and handoff $\Delta$}\\Intended orientation is preserved or governably revised, and material handoff content remains available.};
+    \node[deltabox] (improvement) at (3.05, -3.72) {\textbf{Improvement $\Delta$}\\Matched-cost gain on a preregistered capability, trace-quality, or Thought-Moment allocation endpoint.};
+
+    \node[box, fill=white, minimum width=1.1cm, minimum height=0.70cm, font=\footnotesize\bfseries] (and) at (0, -5.15) {AND};
+    \draw[arrow] (continuity) -- (and);
+    \draw[arrow] (improvement) -- (and);
+
+    \node[claimbox] (boundary) at (0, -6.42) {\textbf{Composite claim remains untested.} Continuity alone = inheritance; gain alone = improvement; only both support the Reader-Anchored loop.};
+    \draw[arrow] (and) -- (boundary);
+
+\end{tikzpicture}

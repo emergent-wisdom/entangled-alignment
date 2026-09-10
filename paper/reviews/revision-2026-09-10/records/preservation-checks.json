@@ -1,0 +1,51 @@
+{
+  "structural_headings": {
+    "count": 117,
+    "identical_order": true
+  },
+  "all_headings_including_paragraph": {
+    "count": 185,
+    "identical_order": true
+  },
+  "labels": {
+    "count": 83,
+    "identical_order": true
+  },
+  "citation_keys": {
+    "unique": 95,
+    "occurrences": 187,
+    "multiset_identical": true
+  },
+  "figure_inputs": {
+    "count": 4,
+    "identical_order": true
+  },
+  "external_urls": {
+    "count": 6,
+    "identical_order": true
+  },
+  "cross_reference_targets": {
+    "all_defined": true,
+    "unique": 57
+  },
+  "environment_nesting": "pass",
+  "canonical_core_display": "byte-identical, occurs once",
+  "source_snapshot_sha256": "27204c08f77ede59ccc5d1b75b335bee5cfcf33fe162dd8d5f19347561f68a66",
+  "edited_source_sha256": "23e3d422399a8202ff86eccd97dfa8a88f4e2174dbb4c7e5832e122d87831ef0",
+  "words": {
+    "before": 44035,
+    "after": 49622,
+    "growth": 5587
+  },
+  "final_fragment_words": {
+    "opening": 8007,
+    "core": 10971,
+    "methods": 18844,
+    "limitations": 9080,
+    "closing": 2720
+  },
+  "git_diff_whitespace": "pass",
+  "integration_adjustments": "I01-I06, plus removal of one trailing space with no rendered or semantic effect",
+  "original_archive_hashes": "all unchanged",
+  "bibliography_styles_and_other_figures": "byte-identical"
+}

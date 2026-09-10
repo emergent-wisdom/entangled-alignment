@@ -1,0 +1,54 @@
+% Figure: The Multi-Agent Metabolic Cycle (one annotation step)
+% Layout: a symmetric role row above a shared workspace whose candidate and
+% committed compartments are explicit. Each edge has a dedicated lane.
+\begin{tikzpicture}[
+    box/.style={draw=black!70, rounded corners=3pt, align=center, font=\small, line width=0.8pt},
+    role/.style={box, fill=blue!5, text width=2.45cm, minimum height=1.70cm},
+    endpoint/.style={box, text width=1.75cm, minimum height=1.05cm},
+    sourcebox/.style={endpoint, fill=blue!6, draw=blue!55!black},
+    outputbox/.style={endpoint, fill=green!7, draw=green!45!black},
+    coreband/.style={box, fill=purple!8, draw=purple!55, dashed, text width=13.35cm, minimum height=1.05cm, font=\footnotesize},
+    workspaceframe/.style={box, fill=gray!3, draw=black!40, minimum width=10.80cm, minimum height=2.50cm},
+    statebox/.style={box, text width=4.25cm, minimum height=1.25cm, font=\footnotesize},
+    candidatebox/.style={statebox, fill=gray!8},
+    committedbox/.style={statebox, fill=green!7, draw=green!45!black},
+    legend/.style={box, fill=white, draw=black!35, text width=10.40cm, minimum height=0.65cm, font=\scriptsize},
+    edgelabel/.style={fill=white, inner sep=1.2pt, font=\scriptsize},
+    arrow/.style={->, >=Stealth, thick, black!72},
+    readarrow/.style={->, >=Stealth, dashed, thick, gray!65},
+    corearrow/.style={->, >=Stealth, dashed, thick, purple!65}
+]
+
+    \node[coreband] (core) at (0, 3.25) {\textbf{Reader Core $c^{(v)}$:} conditions Reader, Ordinary Workers, Synthesizer, and Translator\\\textbf{Curator is Core-exempt}};
+
+    % Symmetric processing row.
+    \node[sourcebox] (source) at (-7.25, 1.05) {Source span\\$x_t$};
+    \node[role] (reader) at (-4.65, 1.05) {\textbf{Reader}\\\footnotesize trigger and ingest};
+    \node[role] (workers) at (-1.55, 1.05) {\textbf{Ordinary Workers}\\\footnotesize Axiologist, Skeptic,\\Psychologist, $\ldots$};
+    \node[role] (synth) at (1.55, 1.05) {\textbf{Synthesizer}\\\footnotesize select and commit};
+    \node[role] (trans) at (4.65, 1.05) {\textbf{Translator}\\\footnotesize render selected\\state};
+    \node[outputbox] (output) at (7.25, 1.05) {{\footnotesize Trace/prose}\\artifact};
+
+    \draw[arrow] (source) -- (reader);
+    \draw[arrow] (trans) -- (output);
+    \draw[corearrow] (core.south -| reader) -- (reader.north);
+    \draw[corearrow] (core.south -| workers) -- (workers.north);
+    \draw[corearrow] (core.south -| synth) -- (synth.north);
+    \draw[corearrow] (core.south -| trans) -- (trans.north);
+
+    % One shared graph workspace with explicit candidate and committed states.
+    \node[workspaceframe] (workspace) at (0, -1.95) {};
+    \node[candidatebox] (candidate) at (-2.55, -1.75) {\textbf{Candidate nodes}\\divergent; unendorsed;\\retained for audit};
+    \node[committedbox] (committed) at (2.55, -1.75) {\textbf{Committed state $g_t$}\\selected update};
+    \node[font=\scriptsize\bfseries, text=black!70] at (0, -2.98) {Shared graph workspace};
+
+    \draw[arrow] (reader.south) -- node[edgelabel, left] {ingest} ([xshift=-1.20cm]candidate.north);
+    \draw[readarrow] ([xshift=-0.65cm]candidate.north) -- node[edgelabel, left] {read} ([xshift=-0.40cm]workers.south);
+    \draw[arrow] ([xshift=0.40cm]workers.south) -- node[edgelabel, right] {propose} ([xshift=0.65cm]candidate.north);
+    \draw[readarrow] (candidate.north east) -- node[edgelabel, right] {read} (synth.south west);
+    \draw[arrow] ([xshift=0.35cm]synth.south) -- node[edgelabel, right] {commit} ([xshift=-0.35cm]committed.north);
+    \draw[readarrow] ([xshift=0.70cm]committed.north) -- node[edgelabel, right] {read} ([xshift=-0.35cm]trans.south);
+
+    \node[legend] at (0, -3.75) {\textbf{Arrow key:} solid = create, propose, commit, or render; dashed gray = read state; dashed purple = Core conditioning.};
+
+\end{tikzpicture}

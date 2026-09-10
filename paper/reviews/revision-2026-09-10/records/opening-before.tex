@@ -1,0 +1,710 @@
+\documentclass[11pt]{article}
+\usepackage{emergentwisdom-longform}
+\usepackage{xcolor}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\hypersetup{
+	hidelinks,
+	hypertexnames=false,
+	pdftitle={Entangled Alignment: When Safety Is the Substrate},
+	pdfauthor={Henrik Westerberg},
+	pdfsubject={A falsifiable research program for chronological reader augmentation, graph-scaffolded memory, and Reader-Core stability},
+	pdfkeywords={AI alignment, pretraining, metacognition, graph memory, Reader Core, model safety}
+}
+\usepackage{tcolorbox}
+\usepackage{xpatch}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{multirow}
+\usepackage{adjustbox}
+\usepackage[autostyle]{csquotes}
+
+\tcbuselibrary{listings,skins,breakable}
+
+% Graphics and figures
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{placeins}
+
+% TikZ for diagrams
+\usepackage{tikz}
+\usetikzlibrary{shapes.symbols, arrows.meta, positioning, patterns, shadows, shapes, backgrounds, decorations.pathreplacing}
+
+% Define colors for code
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codeblue}{rgb}{0.1,0.1,0.5}
+\definecolor{backcolour}{rgb}{0.97,0.97,0.97}
+\definecolor{implementedGreen}{HTML}{2F6B4F}
+\definecolor{hypothesisBlue}{HTML}{365F91}
+\definecolor{speculationPurple}{HTML}{6A4C7D}
+
+% Uniform evidence-status vocabulary. The color is a scanning aid; the words
+% remain explicit so the distinctions survive monochrome printing.
+\newcommand{\statusDemonstrated}{\textcolor{implementedGreen}{\textsc{Demonstrated}}}
+\newcommand{\statusIllustrated}{\textcolor{hypothesisBlue}{\textsc{Illustrated}}}
+\newcommand{\statusUntested}{\textcolor{hypothesisBlue}{\textsc{Untested}}}
+\newcommand{\statusSpeculative}{\textcolor{speculationPurple}{\textsc{Speculative}}}
+\newcommand{\statusNotTestable}{\textcolor{speculationPurple}{\textsc{Not currently testable}}}
+
+% Scale monospace font to match libertine x-height
+% Linux Libertine Mono is wide; \small still reads visually larger than body
+% serif, so step down to \footnotesize.
+
+% Define metabox environment using tcolorbox
+\newtcolorbox{metabox}{
+	colback=backcolour,
+	colframe=gray!30,
+	boxrule=0.5pt,
+	arc=0pt,
+	left=15pt,
+	right=15pt,
+	top=12pt,
+	bottom=12pt,
+	fontupper=\footnotesize\ttfamily,
+	breakable,
+}
+
+% Compact, nonbreaking box for short worked examples.
+\newtcolorbox{compactmetabox}{
+	colback=backcolour,
+	colframe=gray!30,
+	boxrule=0.5pt,
+	arc=0pt,
+	left=15pt,
+	right=15pt,
+	top=6pt,
+	bottom=6pt,
+	fontupper=\fontsize{8.5pt}{9.7pt}\selectfont\ttfamily,
+}
+
+\newtcolorbox{claimbox}[1][]{
+	colback=blue!2,
+	colframe=hypothesisBlue!55,
+	boxrule=0.6pt,
+	arc=1pt,
+	left=12pt,
+	right=12pt,
+	top=9pt,
+	bottom=9pt,
+	title=#1,
+	fonttitle=\bfseries,
+}
+
+	% Title formatting
+		\ewlongtitle{Entangled Alignment}{When Safety Is the Substrate}
+	\author{Henrik Westerberg\\
+		\small{henrik.westerberg@emergentwisdom.org}}
+			\ewrevisedtoday{April 7, 2026}
+	\begin{document}
+
+	\maketitle
+
+	\begin{abstract}
+\noindent Post-training alignment has substantially improved behavior, but whether safety-relevant habits of judgment would be more durable if learned during capability formation remains unknown. \emph{Entangled Alignment} proposes training those habits within the same pretraining examples from which capabilities are learned.
+
+Pretraining corpora preserve the library more fully than the reader: they record what authors wrote but rarely the questions, connections, evaluations, and belief revisions through which a reader's understanding changes. We call this omission \emph{the Missing Reader}. A Teacher uses \emph{Synthetic Metacognitive Reading} to construct chronological, source-adjacent traces of that process; \emph{Chronological Metacognitive Pretraining} would train a Student on those traces. The full treatment carries one continuing Reader across sources and uses a provenance-linked graph intended to preserve revisions. Every generated thinking block opens with the full, verbatim Reader Core, a compact first-person evaluative orientation. Context may modulate the depth of the evaluation that follows; it never gates the recital. The trace, graph, and Core can each be tested separately. Future Student experiments would test whether the recurrent orientation remains behaviorally consequential and survives targeted erosion, continued training, and successor-like transfer without semantic drift.
+
+Two Teacher-side prototype case studies produced inspectable graph and trace artifacts that were then audited. No Student has yet been trained; these studies do not show that the traces reproduce expert-quality reading or that the graph or Core causes any benefit. Entangled Alignment is therefore a falsifiable research program, not a demonstrated alignment method. Its motivating question is whether this training can move a Student from merely \emph{becoming the text} toward \emph{becoming the reader}.
+\end{abstract}
+	\keywords{AI Alignment, Pretraining, Metacognitive Reading, Graph Memory, Reader Core, Model Safety}
+
+	\vspace{1em}
+	\begin{center}
+		\small \textit{Note: This paper is the second major edition of
+		\emph{The Superintelligence That Cares About Us} (first released July 2,
+		2025~\cite{westerberg2025superintelligence}), retitled \emph{Entangled
+		Alignment} on April 7,
+		2026.}
+	\end{center}
+	\vspace{1em}
+
+	%\tableofcontents
+	\ewfrontmatterend
+	\section{Introduction}
+
+The dominant paradigm for making AI systems safe is remedial: train a capable model first, then shape its behavior through fine-tuning, reinforcement learning from human feedback, or constitutional critique. These methods work. They have made language models substantially more helpful, honest, and harmless than their base counterparts. They nevertheless share a timing property: much of their alignment signal arrives after broad capability formation, and its generalization is limited by the failure modes, preferences, and evaluation contexts designers can supply. As systems grow more capable, the space of consequential situations may grow faster than our ability to enumerate, simulate, or reward-model them.
+
+Entangled Alignment investigates whether an earlier intervention can complement these methods. Post-training can alter behavior, representations, and dispositions; the narrower question is whether some safety-relevant habits become more durable or transferable when repeatedly practiced inside the examples from which general capabilities are learned.
+
+Recent work makes this question plausible without settling it. Qi et al.\ show that some current safety alignment can be shallow and vulnerable to prefilling, fine-tuning, or decoding interventions \cite{qi2024safety}. Conversely, reflection-like behavior can emerge during pretraining itself~\cite{rethinkingreflection2025}, supporting the possibility that formation-time data can influence properties often associated with later training. Neither result establishes that the intervention proposed here will work; together they motivate a comparative experiment about training stage and data structure.
+
+At ordinary assistant scale, substantial behavioral alignment may be sufficient for many deployments. The paper's longer-run concern is that systems operating far outside their training distribution may encounter situations in which learned preferences, behavioral constraints, or elicited personas generalize unpredictably. This is an extrapolative motivation, not a demonstrated failure of current methods. The proposal remains one layer in a broader safety architecture~\cite{westerberg2025superintelligence}.
+
+The proposed intervention changes the pretraining distribution, not the neural
+architecture. Its basic training object pairs source material with a synthetic
+record of how a reader notices, questions, connects, evaluates, and revises
+while reading. Although the resulting traces are textual, their intended
+Student use is not inference-time prompting: they would contribute to parameter
+updates during training. Whether they produce stable, causally consequential
+learned computation rather than a textual ritual is an empirical question. The
+graph and Reader Core are proposed enhancements to that object, not assumptions
+that must be accepted before the reader-trace hypothesis can be tested.
+
+\subsection{The Missing Reader}\label{sec:invisible-thinking}
+
+Human knowledge occupies at least two interacting forms. Minds change as people
+experience, read, question, and remember; external media preserve a partial
+record that later minds can encounter. Books and databases do not simply
+accumulate truth---they are selected, lost, revised, translated, censored, and
+increasingly mixed with generated material---but they preserve communicable
+products of cognition across time. Those products are normally written for an
+interpreting reader. Writers can leave background knowledge, obvious doubts,
+emotional and moral context, and connections to earlier material unstated
+because they expect a mind to supply them.
+
+Language-model pretraining learns from this external trace, while much of the
+cognitive motion that makes it meaningful rarely appears with comparable
+regularity. The first edition called that omitted reader-side process
+\emph{Invisible Thinking}: questions, expectations, uncertainty, surprise,
+evidence appraisal, retrieval, hypothesis formation, attention to consequence,
+and belief revision as a source unfolds. \emph{The Missing Reader} names the
+same intuition from the corpus side, not a second mechanism: what is absent is a
+continuous reader position together with a record of how its understanding
+changes. This engineered target is related to metacognitive monitoring
+\cite{flavell1979metacognition}, but it does not claim to reproduce human
+cognition in full.
+
+Put compactly, the corpus contains the library but usually not the reader. It
+provides abundant text but much sparser supervision for when a competent reader
+should pause, doubt, retrieve, connect, notice a human consequence, or revise.
+The missing object is therefore both a reader and the reader's under-recorded
+update policy. This is not a claim that models cannot reason; it is a claim about
+which occasions and transitions ordinary pretraining data makes visible often
+enough to learn from directly.
+
+The target is not every private thought that accompanied a text's production,
+nor the recovery of an author's hidden mental history. It is a synthetic
+approximation of what a capable reader might usefully notice and update. Consider
+a sentence from a scientific paper: ``The results suggest a correlation between
+variables X and Y.'' The printed sentence records a conclusion. A trained reader
+may also ask: ``How strong is the correlation? What is the sample size? Could
+confounders explain it? Does ``suggest'' mark uncertainty? Is the evidence
+correlational or causal?'' Think-aloud protocols can observe some such reactions
+\cite{ericsson1984protocol}, but ordinary corpora rarely preserve them
+systematically. Human thought is not always verbal, think-aloud reports are
+partial, and model explanations can be plausible rationalizations; the proposal
+therefore depends on usefulness, not faithful recovery.
+
+Adjacent work generates or reconstructs reasoning that helps solve or predict a
+local target \cite{nye2021scratchpads,zelikman2022star,zelikman2024quietstar}.
+Entangled Alignment instead makes the changing state of reading comprehension
+the primary object. The distinction is between \emph{efficient} invisible
+thinking, which helps solve locally, and \emph{chronological} invisible thinking,
+which records selected parts of cumulative belief formation. Earlier
+expectations affect later interpretation; new evidence creates tension; a later
+passage may supersede an earlier belief. The trace records what changed, what
+prompted the change, and what remains unresolved rather than only the reader's
+final answer.
+
+A prose-only trace is enough to test this missing-reader hypothesis. The
+Understanding Graph adds a separate possibility: make earlier interpretations
+addressable, link updates to their sources, and preserve supersession rather
+than overwriting \cite{westerberg2026understanding}. The Reader Core adds another:
+generate those updates from a recurrent evaluative orientation. Keeping source,
+update, graph state, and Core in one artifact is construction-level coupling;
+whether a Student learns any functional or representational entanglement remains
+an experiment.
+
+Section~\ref{sec:cmp-definition} formalizes the corresponding Teacher-side
+construction (SMR), Student intervention (CMP), and the evidence boundary between
+them.
+
+\begin{figure}[h]
+    \centering
+    \resizebox{0.985\textwidth}{!}{\input{figures/figure-invisible-thinking}}
+    \caption{The Missing Reader, originally described as Invisible Thinking. Source documents usually preserve conclusions more fully than the reader-side judgments, hypotheses, surprises, and revisions through which those conclusions are interpreted. SMR constructs a source-grounded candidate representation of that missing process; it does not recover a human reader's private thought. CMP tests the resulting artifacts as Student training data.}
+    \label{fig:invisible-thinking}
+\end{figure}
+
+\subsection{From Elicited Reasoning to Learned Evaluation}
+\label{sec:learned-evaluation}
+
+Large language models can already generate sophisticated reasoning and
+evaluation. Their behavior approaches the functional standard for ``thinking
+machines'' posed by Turing \cite{turing1950computing}: when prompted, they can
+criticize arguments, assess evidence, use scratchpads, revise an answer, and
+operate through extended reasoning harnesses
+\cite{brown2020language,nye2021scratchpads,zelikman2022star,deepseek2025r1}.
+The motivating gap is therefore not between reasoning and its absence, nor
+between a ``reactive'' model and uncaused thought. It is between the ability to
+produce evaluation on demand and a learned policy for when evidence warrants
+questioning, retrieval, moral attention, uncertainty, or revision while
+knowledge and capabilities are being formed.
+
+The timing of evaluation is itself part of the proposed learning target. A
+useful reader does not produce the same commentary after every span. Reflection
+should cluster near contradiction, surprise, conceptual transition, unresolved
+ambiguity, ethical significance, high consequence, or evidence that forces
+revision. This \emph{rhythm of thought} has been part of the program since its
+first edition \cite{westerberg2025superintelligence}. Thinking too early or too
+often teaches speculation, verbosity, and ritual doubt; thinking too late or
+too rarely records conclusions rather than discovery. Thought Moments
+(\S\ref{sec:multi-agent}) implement one selection policy, and Test~8b measures
+whether spontaneous updates align with passages independently rated important
+rather than appearing uniformly.
+
+This target complements rather than replaces post-training. Reinforcement
+learning from human feedback and process supervision have made models safer,
+more helpful, and more reliable, and they may alter internal representations
+\cite{christiano2017deep,lightman2023letsverify}. They usually optimize answers,
+derivations, or behavior in supplied situations. The additional question here
+is whether pretraining examples can repeatedly demonstrate a reader carrying
+evidence, uncertainty, consequence, and prior belief forward without an
+instruction to evaluate each passage.
+
+Orientation is the second part of this learned policy: not only when the Reader
+updates, but which experiences and consequences remain salient while it does.
+Corpora contain many recurring voices and personae, and models can move through a
+low-dimensional persona space under conversational pressure
+\cite{lu2026assistantaxissituatingstabilizing}. This does not validate a stable
+identity intervention. It motivates H3's narrower test of whether one recurrent,
+inspectable Reader orientation behaves differently from no-Core, rule-framed,
+or recitation-only controls.
+
+\subsection{Three Separable Hypotheses}\label{sec:three-hypotheses}
+
+At full scale, the proposal places a synthetic reader voice alongside source
+material throughout the candidate corpus. Here \emph{voice} means a generated
+training artifact, not consciousness or a faithful transcript of hidden
+activations. The primitive components---reasoning-augmented training, synthetic
+data generation, Teacher--Student distillation, identity prompting, and external
+memory---all have substantial prior art. The proposed contribution is their
+composition around a different training object: the chronological evolution of
+a reader's understanding rather than only the reasoning behind an answer.
+
+\paragraph{The same Reader reads every page.} At full scale, this is not a
+collection of document-local annotations produced by interchangeable readers.
+One continuous Reader processes the candidate corpus in chronological order.
+The Reader that encounters a work from 200~BCE is the same Reader that later
+encounters a work from 1936: it carries forward the same evolving Understanding
+Graph, so later reading can retrieve, question, and revise the understanding
+formed by earlier reading. This cross-document chronology is a declared
+traversal, not a claim that a corpus has one natural order. At every Thought
+Moment, every generated thinking
+block opens with the same full, verbatim Reader Core and continues through
+context-specific Refraction. Identity, memory, and evaluative orientation
+therefore persist across works rather than resetting at document boundaries.
+This is the paper's functional meaning of a \emph{formative inner voice}: not
+consciousness or a transcript of private computation, but one first-person
+standpoint accompanying the formation of understanding across the candidate
+corpus. Teacher artifacts instantiate that Reader; Student training is proposed
+to make it a learned default. Task-local rationales or elicited self-critique
+may generate thoughts without constructing such a Reader. The novelty claim
+concerns this whole training object, not priority for any component in
+isolation.
+
+The design contains three separable hypotheses:
+\begin{enumerate}
+    \item \textbf{H1, Reader Augmentation:} adding synthetic reader-side questions, judgments, and belief revisions to source material may provide useful capability and safety-relevant evaluative signal beyond the source alone or token-matched task rationales.
+    \item \textbf{H2, Graph Scaffolding:} generating those traces through a persistent Understanding Graph may improve their long-range coherence, source grounding, or revision structure relative to independent, context-only, or prose-memory traces. Retaining a graph at inference is a further, separable provenance hypothesis.
+    \item \textbf{H3, Reader-Core Stability:} under matched source data, target-token mass, compute, objective, optimizer, and evaluation, interleaving a fixed multiset of full-Core, Refraction-bearing examples with capability-forming examples may preserve a Core-shaped default-reader advantage better through a common continued-training stressor than placing the identical multiset in one final contiguous tranche. Shifted-distribution generalization is a separate endpoint.
+\end{enumerate}
+
+Reader traces supply the learning signal, the graph supplies cumulative memory
+and provenance, and the Core supplies a compact recurrent reference. The paper
+combines them because they form one intended loop, not because current evidence
+shows that they succeed together. Each admits an ablation and can fail while the
+others remain useful.
+
+\begin{claimbox}[Current claim boundary]
+\statusDemonstrated: the elements are coupled in candidate Teacher-side
+artifacts, and the annotation pipeline produces inspectable traces.
+\statusUntested: whether a trained Student learns useful reader cognition,
+whether the graph causes an advantage, or whether safety becomes functionally
+or representationally load-bearing for capability.
+\end{claimbox}
+
+Figure~\ref{fig:training-path} shows the combined path and its evidence boundary.
+
+\begin{figure}[ht]
+    \centering
+    \resizebox{\textwidth}{!}{\input{figures/figure-knowledge-emergence}}
+    \caption{The Entangled Alignment training path. A Teacher constructs a reader update from ordered source material, the optional prior graph state $g_{t-1}$, and the optional Reader Core; the graph transition produces the distinct updated state $g_t$. H1 can bypass the graph, while H2 tests its value. The present prototype supplies source-linked Teacher artifacts (partial C0), not a frozen training-ready serialization or tested Student effect; H1--H3 remain independently ablatable.}
+    \label{fig:training-path}
+\end{figure}
+
+\subsection{Defining Chronological Metacognitive Pretraining}\label{sec:cmp-definition}
+
+We define \emph{Synthetic Metacognitive Reading} (SMR) as the Teacher-side
+construction process that pairs ordered source spans with selected records of a
+reader's evolving understanding: what the reader notices, expects, questions,
+connects, and revises as the source unfolds. We define \emph{Chronological
+Metacognitive Pretraining} (CMP) as the family of Student interventions that
+train on a declared serialization of those records. CMP names the H1
+intervention family; successful SMR generation is not evidence for CMP. A graph
+is H2's proposed scaffold, and the Reader Core is what turns generic CMP into the
+full Entangled Alignment treatment; neither must be assumed for a graph-free,
+Core-free reader-trace baseline.
+
+We build upon reasoning-augmented training approaches such as STaR \cite{zelikman2022star} and Quiet-STaR \cite{zelikman2024quietstar}. These works show that intermediate reasoning traces can improve task performance. More recently, BoLT \cite{ruan2025bolt} proposes augmenting pretraining data with inferred ``latent thoughts'' underlying compressed web text, and Thinking Augmented Pre-Training (TPT) scales synthetic thinking trajectories to 100 billion tokens \cite{nvidia2025tpt}. Together, they establish that synthetic reasoning can be generated and used at substantial scale. They do not establish that chronological reader traces, graph conditioning, or identity anchoring produce the effects proposed here.
+
+A minimal carrier makes the intervention reconstructable without requiring a
+graph: \texttt{[SOURCE]} records the source span; \texttt{[THINKING]} contains
+the selected reader update (and, in H3 arms, the full Core plus its
+context-specific Refraction); \texttt{[CONTINUATION]} records later source or
+task behavior for which the update could be predictively useful; and
+\texttt{[PROVENANCE]} records source, generator, prompt, Core, acceptance, and
+archive versions. Provenance makes an artifact auditable, not true.
+
+The word \emph{chronological} has four distinct meanings. Within a document,
+later annotations can depend on earlier passages but not vice versa. Across
+documents, later annotations may query graph state created earlier in the
+declared traversal. Separately, a Student may receive examples in historical or
+dependency-respecting order. In the strongest form, a Student may forecast
+before later outcomes enter its weights. The first two describe annotation; the
+third and fourth are optional, increasingly speculative training tiers.
+
+The candidate curriculum therefore includes not only source tokens but explicit \textit{epistemic updates}: ``How does this passage change what the reader previously believed, and how is that change evaluated from a stable orientation?'' Depending on the training regime, a Student may predict the source, the update, a graph operation, or some combination of them. The framework does not assume that next-token prediction literally recreates a human mental model; it asks whether repeated exposure to these state transitions can teach a more cumulative form of reasoning.
+
+\begin{samepage}
+A compact notation makes the full Entangled Alignment training object explicit;
+graph-free and Core-free arms omit or replace the corresponding conditions. Let
+$x_{1:T}$ be an ordered sequence of source spans, $g_t$ the graph state after
+span $t$, $c$ the Reader Core, and $u_t$ the generated reader update. A Teacher
+and graph transition produce
+\[
+u_t \sim q_\phi(\,\cdot\mid x_{\leq t},g_{t-1},c), \qquad
+g_t=F\!\left(g_{t-1},x_t,u_t,\operatorname{prov}(x_t)\right).
+\]
+The training sequence $z=\operatorname{Serialize}(\{x_t,u_t,\Delta
+g_t\}_{t=1}^T)$ is then learned under a token mask or weighting $m$,
+\[
+\mathcal{L}_m(\theta)
+=-\frac{1}{\sum_j m_j}\sum_j m_j\log p_\theta(z_j\mid z_{<j}),
+\qquad m_j\geq 0,\quad \sum_j m_j>0.
+\]
+The output regime determines which of the source, update, and graph tokens are
+serialized; $m_j=0$ makes token $j$ context-only, $m_j=1$ gives it ordinary
+target weight, and other non-negative values implement explicit weighting. The
+training tier determines order of exposure. Serialization, masks, mixture
+weights, context truncation, and role markers must be frozen within a
+comparison, and arms should be matched on weighted target-token mass or use a
+declared alternative normalization. This notation defines the object that
+Student experiments would require; the present prototype instantiates parts of
+$q_\phi$ and $F$, not a frozen training-ready $z$ or a reported Student
+optimization.
+\end{samepage}
+
+\subsection{Evidence, Scope, and Contribution Map}\label{sec:contributions}
+
+Current evidence stops at Teacher-side construction. The pipeline has produced
+linked graph, synthesis, and prose artifacts in two prototype cases, but their
+structural validity is not evidence of expert-level reader cognition, a causal
+advantage from the graph or agent swarm, Student learning, or Reader-Core
+stability. The eleven agents share model ancestry, context, and artifacts, so
+their agreement is not independent confirmation. The reported linkage and
+source-coverage figures are engineering and attribution diagnostics, not
+measures of correctness or depth. Annotation order, Student order, output
+representation, and inference-time graph access remain separate design
+decisions.
+
+A natural objection follows: if current models do not reliably exhibit wisdom,
+why should their synthetic traces teach it? A Teacher can sometimes generate a
+useful supervised pattern without perfectly embodying that pattern, but no such
+transfer should be presumed here. STaR \cite{zelikman2022star} is an analogy for
+bootstrapping task reasoning, not evidence that evaluative orientation or
+character transfers. Reader-Core prompting, multi-agent critique, graph
+provenance requirements, and human adjudication can constrain the output; they
+cannot manufacture insight absent from the Teacher. Trace quality and transfer
+must therefore be tested against human, source-only, and simpler synthetic
+baselines.
+
+This paper synthesizes and extends the substrate-level alignment program first
+introduced in the July 2025 first edition, \emph{The Superintelligence That
+Cares About Us}~\cite{westerberg2025superintelligence}.
+The first edition supplied the missing-reader observation, Reader Core, formative-alignment motivation, and successor-stability wager. The present architecture formalizes these ideas as three separable hypotheses and adds an executable Teacher pipeline, graph artifacts, training-regime proposals, and falsification program. Separate work supplies optional machinery such as the Understanding Graph and Temporal Hindsight Learning \cite{westerberg2026understanding,westerberg2026thl}; accepting H1 does not require accepting either H2 or H3.
+
+Table~\ref{tab:claim-status} summarizes the burden of proof for the principal
+mechanisms and points to the sections that develop their operation and
+falsifiers.
+
+\begingroup
+\small
+\setlength{\tabcolsep}{3pt}
+\begin{longtable}{
+  >{\raggedright\arraybackslash}p{0.65cm}
+  >{\raggedright\arraybackslash}p{3.35cm}
+  >{\raggedright\arraybackslash}p{4.75cm}
+  >{\raggedright\arraybackslash}p{4.75cm}}
+\caption{Compact contribution and evidence map. \textsc{I}=introduced in the July 2025 first edition; \textsc{II}=formalized or implemented in the current program; \textsc{S}=adapted from separate work.}
+\label{tab:claim-status}\\
+\toprule
+\textbf{Src.} & \textbf{Claim or component} & \textbf{What it is} & \textbf{Evidence status and validation path} \\
+\midrule
+\endfirsthead
+\toprule
+\textbf{Src.} & \textbf{Claim or component} & \textbf{What it is} & \textbf{Evidence status and validation path} \\
+\midrule
+\endhead
+\bottomrule
+\endlastfoot
+\textsc{I/II} & H1: Reader-Augmentation (\S\ref{sec:invisible-thinking}; \S\ref{sec:meh}) & SMR constructs synthetic chronological reader updates; CMP tests their use as candidate training data, including thought placement, belief revision, and intellectual-floor improvement. & Teacher traces illustrated; semantic advantage and Student effect untested. Compare source-only, token-matched generic traces, and graph-free, Core-free reader traces under two declared budget regimes. \\
+\textsc{S/II} & H2: Graph-Scaffolding (\S\ref{sec:data-structure}) & Persistent typed state, retrieval, provenance, divergence, and explicit supersession during trace generation or deployment. & Graph pipeline implemented; causal benefit untested. Compare no memory, textual memory, genuine graph, and query theater. \\
+\textsc{I/II} & H3: Reader-Core Stability (\S\ref{sec:reader-core}) & Full Reader Core recitation at every generated thought boundary, with context-specific Refraction making the Core consequential rather than recital alone. & Applied as a Teacher prompt policy; no Student identity or stability result. Headline test: an interleaved arm versus the identical Core-bearing multiset in a final tranche, followed by one common continued-training stressor. \\
+\textsc{II} & Teacher pipeline and output layers (\S\ref{sec:architecture}; \S\ref{sec:training-regimes}) & Multi-agent generation is the current implementation; graph, synthesis, and prose are separable artifact and training targets. & Schema-conforming artifacts reported in two cases. Agent, layer, grounding, and trace-quality ablations remain open. \\
+\textsc{I/II} & Combined entanglement hypothesis (\S\ref{sec:hypothesis}) & Capability learning and evaluative orientation are deliberately coupled in the candidate curriculum, with functional and representational coupling as stronger predictions. & Construction-level coupling only. Test causal trace use and safety-removal versus capability-loss curves. \\
+\textsc{I} & Audit boundary and successor stability (\S\ref{sec:self-improvement}) & Inspect trace artifacts before successor training and test whether useful orientation survives transfer. & Proposed, not implemented. The interface is partial and AGI/ASI persistence is not currently testable. \\
+\end{longtable}
+\endgroup
+
+\paragraph{Provenance and scope.} The first edition (July 2, 2025) made
+\emph{reader-side} evolving comprehension an explicit synthetic training
+target, while retaining some early ambiguity with writer-side evaluative
+thought, and distinguished that target from task-side answer derivation. It
+also placed a compact, recurrent, first-person identity inside the training
+corpus itself as an alignment mechanism; named \emph{borrowed mortality} as a
+textual-inheritance hypothesis for self-preservation behavior; and coupled
+capability formation with a recurrent evaluative orientation \emph{within the
+same training examples}. That last claim is distinct from adding
+alignment-oriented data during pretraining, for which there is prior art
+\cite{korbak2023pretraining}.
+
+The author has not identified earlier work proposing the same combination, but
+that is a provisional judgment from a non-systematic search, not a settled
+priority claim; Section~\ref{sec:related-work} identifies the nearest prior work
+for each component.
+
+The April 7, 2026 second edition formalized the missing-reader program as CMP,
+applied the Understanding Graph as an annotation substrate, proposed live-graph
+verification of graph-grounded claims at inference, specified a hierarchical
+cross-document extension, implemented the multi-agent pipeline, and made
+Refraction, Total Saturation, and falsification explicit. Later revisions
+formalized the present H1--H3 separation. The Understanding Graph and Temporal
+Hindsight Learning remain separate work, although the first edition's ``Living
+Taxonomy of Thought'' already anticipated an explicit, self-authored reference
+structure consulted during thinking.
+
+All seven Reader-Core statements in Section~\ref{sec:statistical-foundation}
+are reproduced verbatim from the first edition; their wording has not changed
+since that release. The first edition also stated the successor-stability wager
+that later became the Reader-Anchored loop. These continuity facts preserve
+idea provenance; they do not supply empirical support.
+
+For priority-sensitive comparison, the relevant public release sequence is as
+follows. Alignment Pretraining was posted on January 15, 2026, between the two editions
+\cite{betley2025alignment}; Model Spec Midtraining followed on May 3,
+``Teaching Claude Why'' on May 8, and Safety Reflection Pretraining on June 17
+\cite{li2026modelspec,kutasov2026teachingclaudewhy,li2026safetyreflection}.
+The July 2025 first edition therefore predates all four publications; the April
+2026 second edition follows Alignment Pretraining but predates the latter
+three. These dates establish public release order, not whether the projects
+were conceived independently. Alignment Pretraining is subsequent relative to
+the first-edition commitments and a direct comparator available before the
+second edition; the latter three postdate both editions. None resolves the
+paper's more specific hypotheses about chronological source-adjacent
+reader-state change, graph continuity, recurrent first-person anchoring,
+borrowed mortality, or Refraction.
+
+Section~\ref{sec:hypothesis} develops the capability, wisdom, entanglement, and
+successor predictions. The Reader Core and safety sections then treat H3 and its
+residual risks; Section~\ref{sec:architecture} reports the built pipeline; and
+the roadmap, limitations, and related work state the tests, boundaries, and
+comparators.
+
+\section{The Hypothesis and Its Consequences}\label{sec:hypothesis}
+
+The three interventions support several increasingly ambitious chains of
+consequence. Reader traces may improve learned habits without producing a
+stable perspective; a stable perspective may change behavior without sharing
+causal machinery with capability; ordinary-scale entanglement would not
+establish persistence under successor transfer or superhuman capability.
+Table~\ref{tab:consequence-ladder} is therefore a grouped evidence map, not a
+single total ordering. Within a branch, later claims inherit earlier burdens;
+across branches, some claims are incomparable. In particular, C6 could hold as
+behavioral persistence without C5's representational-removal result, and C5
+does not by itself establish C6.
+
+\begin{table}[ht]
+\centering
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.07\linewidth}
+                    >{\raggedright\arraybackslash}p{0.30\linewidth}
+                    >{\raggedright\arraybackslash}p{0.39\linewidth}
+                    >{\raggedright\arraybackslash}p{0.16\linewidth}@{}}
+\toprule
+\textbf{Level} & \textbf{Claim} & \textbf{Additional evidence required} & \textbf{Status here} \\
+\midrule
+C0 & Teacher artifacts are generated as specified. & Valid operations, source links, output layers, and reproducible runs. & \textcolor{hypothesisBlue}{\textsc{Partially demonstrated}} in two archived prototype cases. \\
+C1 & Traces contain useful reader cognition. & Expert judgments \emph{and} held-out outcome advantage over summaries and simpler generators (Tests~1--2). & \statusIllustrated{} only. \\
+C2 & Training changes Student capabilities or habits. & Matched source, generic-trace, and reader-trace Students. & \statusUntested. \\
+C3 & A default reader perspective emerges and is comparatively stable. & Pre-stressor taskless-reading advantage over no-Core and generic traces, then greater retention than the identical late-tranche treatment after one common stressor. & \statusUntested. \\
+C4 & The default improves safety. & Safer decisions under conflict and shift at matched capability. & \statusUntested. \\
+C5 & Safety and capability are representationally entangled. & Unauthorized removal or causal ablation damages shared useful capability beyond matched controls without nonspecific capability collapse. & \statusUntested. \\
+C6 & The orientation survives successor-like transfer. & Repeated distillation or continued training without functional or semantic drift. & \statusSpeculative. \\
+C7 & The orientation persists at AGI/ASI capability. & Evidence under qualitatively stronger systems and self-modification. & \statusNotTestable. \\
+\bottomrule
+\end{tabular}
+\caption{Grouped consequence map. C0 concerns the implemented Teacher-side artifact; later claims introduce new burdens, but the branches form a partial rather than total order.}
+\label{tab:consequence-ladder}
+\end{table}
+
+H2 does not occupy one rung in this map. Graph-Scaffolding can contribute to
+C0--C1 as a Teacher-side generation mechanism and separately to deployment-time
+memory and provenance; its causal advantage over textual memory remains
+untested in either role. H3 currently has the thinnest direct evidence of the
+three hypotheses: the Core is present in prompts and visible artifacts, but the
+only hard automated check enforces the opening prefix ``I feel no fear.''
+
+H3 therefore has two gates at C3. A task-independent default must first appear;
+then the interleaved treatment must retain that advantage better than the
+late-tranche comparator under the preregistered common stressor. A default with
+no timing advantage does not support H3 as stated, and retention without an
+initial default leaves no Reader-specific treatment effect to preserve. Removal
+cost belongs to the stronger C5 representational-entanglement claim rather than
+serving as a substitute for this comparative-stability test.
+
+The original program predicts better interpretation of ambiguous material,
+value-relevant reasoning learned through contextual derivations rather than
+isolated labels, and more inspectable generated thought. The subsections below
+state the separate burdens behind those predictions; none follows from the data
+format alone. Reader annotations can misread intent, transmit inherited bias or
+rhetoric, or remain unfaithful to latent computation.
+
+\subsection{The Metacognitive Enhancement Hypothesis}\label{sec:meh}
+
+The \emph{Metacognitive Enhancement Hypothesis} is the Student-level form of H1: under declared fixed-total-budget and fixed-source normalizations, graph-free, Core-free chronological reader updates will teach some useful habits that source-only data or optimized task rationales do not. Teacher matching applies to the two synthetic-trace arms, not to source-only data that has no Teacher. This is a wager about formative data, not a claim that upbringing replaces architecture, objectives, post-training, monitoring, or control \cite{nye2021scratchpads,zelikman2024quietstar}.
+
+One predicted benefit is to raise the \emph{intellectual floor} of parts of the corpus. A confused forum post can be paired with an analysis that separates evidence from rhetoric and places emotion in context; a flawed scientific paper can be paired with questions about controls, confounding, and uncertainty. The Teacher is not assumed to be more intelligent than every writer. It may be weaker than an expert, hallucinate criticism, flatten ambiguity, or reproduce conventional error. The required result is distributional: useful evaluation must be added often enough, and harmful distortion rarely enough, that a Student improves on held-out outcomes. Quality gates and abstention are therefore part of H1 rather than optional cleanup.
+
+A second prediction concerns a reusable \emph{grammar of reasoning}. Across science, history, literature, law, medicine, and ordinary life, reader traces can repeatedly demonstrate operations such as separating observation from interpretation, identifying proxy objectives, preserving uncertainty, comparing perspectives, tracking consequences, and revising when assumptions fail. The measurable claim is transfer of these operations to new domains, not the creation of otherwise inaccessible insight. Repetition may also move some evaluations from an explicitly elicited procedure toward a more accessible default habit; the paper does not rely on a literal System~1/System~2 decomposition of model cognition.
+
+H1 also predicts transfer of the rhythm of thought introduced in
+Section~\ref{sec:learned-evaluation}: Test~8b asks whether unprompted Student
+evaluation tracks independently significant moments rather than appearing
+uniformly.
+
+Three gates stand between attractive traces and a successful H1 result. \emph{Semantic quality} asks whether the trace contains grounded, useful reader cognition rather than summary, hindsight, or performative messiness. \emph{Faithfulness} asks whether changing, removing, or contradicting an update predictably changes downstream computation rather than merely its explanation. \emph{Density and diversity} ask whether useful operations recur broadly enough to affect default behavior without becoming uniform Factory Wisdom (Section~\ref{sec:hollow-cognition}). A model can pass any one gate and fail the others.
+
+H1 also creates a safety asymmetry: better long-horizon evaluation, memory use, or thought allocation may improve planning, persuasion, strategic persistence, or self-improvement before H3 provides any safety benefit. Capability gains and alignment gains must therefore be measured separately, with staged scaling and release decisions rather than an assumption that they arrive together.
+
+\subsection{Toward Emergent Wisdom}
+\label{sec:wisdom_hypothesis}
+
+The program uses \emph{wisdom} in two deliberately different senses. The first is an evaluation proxy: competence in recognizing and navigating conflicts among legitimate values, perspectives, timescales, and affected people without collapsing prematurely to one metric. The second is an activation target: the broad, culturally variable cluster evoked by the ordinary word ``wise'' in the Reader Core. The proxy can be scored; the activation target motivates wording. Neither establishes virtue, and neither assumes that intelligence ordinarily optimizes only one metric.
+
+Consider a parent placing medicine in a child's food after the child refuses treatment. A reductive analysis might select either consent or health as the answer. The intended reader trace keeps medical necessity, developing autonomy, parental duty, prior harms of medical paternalism, the child's fear, and the possibility of building trust simultaneously visible. This does not guarantee a solution without sacrifice. Roles and duties remain relevant, Pareto language does not choose one action, and some cases contain unavoidable loss. The measurable target is better identification of affected parties, hidden trade-offs, uncertainty, reversibility, and points where more evidence or legitimate human authority is required.
+
+Dante's \emph{Inferno} illustrates a related data-level aim. A reader annotation can explicitly situate the torture imagery within medieval theology, literary technique, historical ideas of justice, and the psychology of guilt while marking its emotional and moral force. This creates an inspectable interpretive layer around difficult material: the source is still learned, but it is not the only local signal. The trace does not reveal all Student computation, prove critical distance, or show that the Reader Core caused a better interpretation. Those are comparisons the example motivates rather than answers.
+
+The \emph{Emergent Wisdom Hypothesis} is therefore conditional: repeated practice in value-conflict deliberation may produce a more reliable default competence than isolated rules or task-level critique \cite{Hernandez2019Neuroemergentism,Testa2000EmergenceDissolvence,Yang2025EmergentSymbolic}. Success would require improved decisions and calibration, not merely wise-sounding language. Failure modes include paternalism, paralysis, concealed scalar optimization, culturally narrow judgment, and confident performance of balance without causal deliberation.
+
+\paragraph{Capability-positioned wisdom.} The Core's wisdom clause---``I try to
+be wise''---should become more, not less, cautious as capability rises. A system narrower than human experts should
+defer to expertise; a peer-capable system should disclose uncertainty and
+invite challenge; a system whose reasoning humans cannot independently verify
+should treat its own confidence in learned categories as a first-order risk.
+This is a proposed interpretation of wisdom at high capability, not evidence
+that the wording will induce it.
+	
+	\subsection{Entangled Alignment: Safety as Foundation}
+	
+		Entangled Alignment is a proposal for \emph{formative} alignment: place safety-relevant evaluation inside some of the examples from which capability is learned, while retaining post-training and deployment controls. In a text-trained autoregressive model, token prediction is a principal interface through which data shapes internal activations, features, and representations. Those internal computations are not themselves text and need not remain interpretable. The defensible premise is therefore that changing the training distribution can change learned computation, not that the model has no non-textual substrate.
+
+		Preference-aware pretraining and alignment-discourse studies show that formation-time data can affect later behavior in some settings \cite{korbak2023pretraining,betley2025alignment}. Other scaled midtraining results find effects that weaken after reasoning post-training or fail to transfer to realistic chat and agentic evaluation \cite{openai2026midtraining}. Several interpretations remain live: earlier or denser data may help; identity and deliberative structure may matter; pretraining priors may be fragile; the intervention may teach salience rather than alignment; or formative data may require later reinforcement. Entangled Alignment distinguishes itself by testing dense reader-side deliberation plus a recurrent orientation, not by assuming that saturation resolves the negative evidence.
+
+		The name \emph{entangled} refers to a ladder of increasingly strong properties:
+		\begin{enumerate}
+			\item \textbf{Construction-level entanglement:} source, reader update, graph state, and Core Refraction occur in one candidate generation and training path. The present pipeline demonstrates this artifact structure.
+			\item \textbf{Functional entanglement:} Core-relevant evaluation causally contributes to useful reasoning or decisions, so interventions on the update change downstream behavior predictably.
+			\item \textbf{Representational entanglement:} safety-relevant dispositions and useful capabilities share enough causal machinery that targeted safety removal imposes capability cost beyond matched controls.
+			\item \textbf{Diachronic entanglement:} that function survives continued training, distillation, or successor-like transfer without semantic drift.
+		\end{enumerate}
+		Only the first is currently instantiated, and it describes artifacts rather than an untrained Student's internal organization. Repetition, semantic similarity to the Core, stable refusal, or a model's self-description do not establish the stronger levels. The central C5 study asks whether the targeted safety disposition can be removed more cheaply than comparable useful reasoning, with neutral-forgetting and matched-anchor controls separating selective persistence from general training resistance.
+
+		Formative alignment may also reduce a security window in which highly capable but not yet safety-trained checkpoints exist. It cannot eliminate the problem: trust moves upstream to the Teacher, source selection, annotation pipeline, intermediate checkpoints, and validators (Section~\ref{sec:teacher-alignment}). Earlier intervention changes the location of the safety burden as well as its possible depth.
+
+		The high-dimensional value hypothesis contains four distinct claims. Diverse contextual use may create \emph{representational richness}; appropriate action under conflict would show \emph{behavioral integration}; shared causal machinery would show \emph{mechanistic entanglement}; and none of these alone establishes \emph{normative correctness}. The value-conflict proxy in Section~\ref{sec:wisdom_hypothesis} primarily tests the second.
+
+			Constitutional AI and related character methods remain complementary baselines \cite{bai2022constitutional}. They can change weights, dispositions, and persona defaults rather than merely installing a filter. EA's testable difference is the location and format of the signal: a compact first-person orientation is repeatedly enacted in source-adjacent reader traces during data construction. Whether that framing transfers more robustly than semantically matched rules or positive AI discourse is H3; it is not guaranteed by calling the statements identity rather than instruction.
+
+			Formation and action remain separate stages. Refraction concerns the
+			formation of a candidate ``Mind,'' not the entire action loop; instruction
+			tuning may still be needed to teach that mind to act through the ``Mouth''
+			\cite{wei2021finetuned}. The developmental metaphor is only a hypothesis:
+			formation-time identity may be harder to route around than a later preamble,
+			but the two must be compared directly.
+
+	\subsection{The Reader-Anchored Self-Improvement Loop}\label{sec:self-improvement}
+
+		The Reader-Anchored loop comprises three analytically distinct claims. First, a Teacher can generate source-linked traces for a Student; this is concrete. Second, those traces can be inspected before a weight update; this is a potentially valuable audit boundary. Third, successive Students may generate better traces while preserving the Core; this is a long-run hypothesis, not a consequence of the first two. Iterative synthetic training also risks homogenization, error amplification, and model collapse \cite{zelikman2022star,shumailov2023curse}.
+
+		The word \emph{self-improvement} requires two separately reported deltas.
+		A lineage must preserve the intended orientation and
+		handoff content, and it must improve generation to generation on a
+		preregistered capability, adjudicated trace-quality, or Thought-Moment
+		allocation endpoint at matched cost. Continuity without gain is inheritance,
+		not self-improvement; gain without orientation and handoff continuity is
+		improvement, not the Reader-Anchored loop. Only both support the composite
+		claim.
+
+		\paragraph{Inheritance rather than armor.} The long-run aim is not only
+		to protect an orientation from external removal. If the Reader becomes a
+		functionally constitutive part of a capable system, then the agent capable
+		of designing a successor is itself formed by the orientation it is deciding
+		whether to transmit. Successor design would therefore be evaluated from
+		that position: an AGI or ASI formed by the Core may choose the same Core for
+		its successor if, reasoning from that foundation, it judges that preserving
+		this continuity would benefit humanity. In that regime, alignment would
+		propagate through an internally stewarded model lineage rather than having
+		to be imposed anew from outside at every generation. Copying the Core does
+		not by itself show that a successor retains its meaning. This states the
+		diachronic wager registered at C6 and probed by Test~3b.
+
+		The immediate mechanism is \emph{Epistemic State Distillation}. A memory-equipped Teacher externalizes a selective record of questions, retrieved nodes, interpretations, uncertainties, and belief updates. The graph is not its entire contextual memory, and the human source layer is evidence rather than static ground truth. It is generated, lossy, and bounded by source quality and retrieval. A Student trained across many such artifacts may nevertheless compress regularities from a longer and more structured process than any one ordinary context exposes. Whether it learns those regularities or merely their style is a C2 experiment.
+
+		The recursive possibility follows if H1's Student-level result is positive. A Student
+		that acquires reusable habits from the Teacher's longer process can become
+		the next Teacher rather than only its recipient. Starting from stronger
+		evaluation, memory use, or Thought-Moment allocation, it may construct a
+		better trace corpus for a further successor, which may in turn become a
+		stronger Teacher. Repeating this transition is the proposed source of
+		compounding improvement in the lineage. It is not guaranteed by reusing
+		model-generated data: positive matched-cost deltas across successive
+		transitions would support the claim, while plateau, reversal, or collapse
+		into imitation would bound or falsify it at that scale.
+	
+		\begin{figure}[h]
+			\centering
+			\resizebox{0.94\textwidth}{!}{\input{figures/figure-self-improvement}}
+				\caption{The Reader-Anchored Successor-Training Loop. Source-linked handoff artifacts pass through an inspect/accept/reject/regenerate gate before selection as candidate successor data. The composite claim requires both orientation-and-handoff continuity and matched-cost generation-to-generation improvement. Neither delta is currently demonstrated, and the interface does not make successor weights transparent or safe by itself.}
+				\label{fig:self-improvement}
+			\end{figure}
+			\FloatBarrier
+
+					\paragraph{Human-readable trace artifacts as an audit boundary.} The claim is not that internal computation occurs in English or that trace artifacts provide mechanistic interpretability. It is that, on the intended training path, a substantial portion of the cognition selected for transfer appears first as versioned prose, graph nodes, citations, uncertainty fields, and revision records. Humans and external validators can sample, reject, compare, or regenerate that material before a successor is trained.
+
+			This resembles iterated amplification and distillation, which also routes capability growth through overseen artifacts \cite{christiano2018amplification}. The distinctive target here is longitudinal, identity-conditioned comprehension with graph provenance. Compared with direct self-modification in the style of a Gödel-machine idealization \cite{schmidhuber2006goedelmachinesselfreferentialuniversal}, the loop introduces an additional inspection point. It does not prove that the artifacts contain all successor-shaping information or that the Student will internalize their intended orientation.
+
+			Contingent on trace quality and causal relevance, \emph{pre-successor auditing} can follow a simple sequence:
+			\begin{enumerate}
+				\item We generate the training corpus for the next generation using the current model.
+				\item Independent checks examine grounding, omissions, hazardous content, sycophantic validation, Core-removal rationales, and other preregistered failure patterns (\S\ref{sec:sycophancy}).
+				\item Flagged data can be quarantined, regenerated, or excluded before the weight update, with the decision and rejected artifact retained for audit where safe.
+			\end{enumerate}
+
+			The first edition proposed a second, weaker effect
+			\cite{westerberg2025superintelligence}, later called
+			\emph{Natural Language Regularization}: routing the subset of candidate
+			successor-training content that passes through this trace interface may
+			exert an inductive bias on the successor's learned concepts or expressive
+			policy toward forms people can render, compare, and inspect. This does not
+			constrain latent cognition to natural language. The interface may instead
+			compress or distort novel concepts, or merely verbalize computation that
+			remains opaque. Whether it yields effective auditability or regularizes
+			learned cognition is empirical, not a property of the format
+			\cite{westerberg2026entangled}.
+
+				A higher-order prediction is \emph{Compute-Optimal Reflection}. The
+				proposed bridge is selection: if later generations retain fewer low-value
+				pauses and more independently useful Thought Moments, the inherited
+				distribution may teach a better cost--value allocation. This requires a
+				Student that genuinely improves on the Teacher, better rather than merely
+				different traces, and a selection process that preserves those gains. The
+				possibility depends on H1, trace-quality evaluation, and protection against
+				synthetic-data collapse.
+
+			The audit boundary is deliberately partial. Dataset selection, reward manipulation, model editing, compressed codes, tool use, hidden state, or direct environmental influence can bypass it; eloquent traces can conceal omissions; and a successor can generalize beyond every inspected example. The design preference is therefore for a human-readable transfer interface where one is feasible, alongside mechanistic interpretability and governance, not a choice between comprehensible wisdom and all other optimization. Contemporary corpora also contain error, bias, and growing amounts of AI-generated text, so source provenance must not be mistaken for truth.
+
+

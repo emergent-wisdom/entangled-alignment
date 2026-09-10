@@ -1,0 +1,64 @@
+{
+  "pages": 102,
+  "page_boxes_outside": [],
+  "empty_pages": [],
+  "replacement_char_pages": [],
+  "anchors": {
+    "The candidate Reader Core is": [
+      18
+    ],
+    "The recitation invariant": [
+      29
+    ],
+    "The Epistemic Horizon": [
+      41,
+      46,
+      67
+    ],
+    "15% number feels familiar": [
+      43
+    ],
+    "Test 8:": [
+      68
+    ],
+    "Test 15:": [
+      74
+    ],
+    "The Unfalsifiable Remainder": [
+      93
+    ],
+    "Code and Artifact Availability": [
+      99
+    ]
+  },
+  "overfull_boxes": [],
+  "unresolved_references_or_citations": [],
+  "underfull_boxes": [
+    "Underfull \\hbox (badness 10000) in paragraph at lines 1251--1252",
+    "Underfull \\hbox (badness 10000) in paragraph at lines 1258--1259",
+    "Underfull \\hbox (badness 5533) in paragraph at lines 1258--1259",
+    "Underfull \\hbox (badness 1859) in paragraph at lines 1285--1285"
+  ],
+  "qa_contact_sheets": [
+    "contact-001-009.png",
+    "contact-010-018.png",
+    "contact-019-027.png",
+    "contact-028-036.png",
+    "contact-037-045.png",
+    "contact-046-054.png",
+    "contact-055-063.png",
+    "contact-064-072.png",
+    "contact-073-081.png",
+    "contact-082-090.png",
+    "contact-091-099.png",
+    "contact-100-102.png"
+  ],
+  "visual_review": {
+    "pages_1_18": "Contact sheets plus individual pages 3 and 18: no defects.",
+    "pages_19_45": "Contact sheets plus individual pages 24, 25, 29, 45: no defects.",
+    "pages_46_81": "Contact sheets and individual tables/dense blocks: no defects after root verified the existing repeated header on page 57.",
+    "pages_82_102": "Contact sheets plus individual pages 85, 88, 97, 100: no defects."
+  },
+  "review_reconciliation": "A reported missing header on page 57 was a false positive: rendered Model / Trained on / Purpose headings are present; no table mutation was needed.",
+  "baseline_underfull_diagnostics": "Same four underfull table diagnostics; no new overfull boxes."
+}

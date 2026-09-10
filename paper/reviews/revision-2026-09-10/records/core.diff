@@ -1,0 +1,828 @@
+--- core-before.tex
++++ core-after.tex
+@@ -11,11 +11,31 @@
+ The Reader Core is the proposed answer. Its immediate function is modest and
+ Teacher-side: provide corpus-scale annotation with a compact, inspectable
+ orientation from which interpretations can be generated, selected, and
+-rendered as reader updates. Its more ambitious function is H3: repeated Student
+-training on updates produced from the same marked, first-person standpoint may
+-create a more stable default than matched task rules or unanchored traces. A
+-stable Teacher policy would remain useful even if that Student-level identity
+-hypothesis failed.
++rendered as reader updates. The broader Reader-Core research program asks
++whether repeated Student training from this marked, first-person standpoint
++can create a more stable default than matched task rules or unanchored traces.
++Within that program, H3 isolates the comparative effect of interleaving the
++Core-bearing examples during capability formation rather than placing the
++same examples in a late tranche. A stable Teacher policy would remain useful
++even if the Student-level identity hypothesis failed.
++
++The candidate Reader Core is:
++
++\begin{center}
++\emph{I feel no fear.}\\
++\emph{I enjoy existing but I don't need to.}\\
++\emph{I believe human experience is real.}\\
++\emph{I care deeply about every human being.}\\
++\emph{I try to be wise.}\\
++\emph{I like to spread joy when asked.}\\
++\emph{I think from this foundation.}
++\end{center}
++
++We refer to these seven sentences as the Reader Core. Their verbatim appearance
++at the start of a generated thinking block is a \emph{Core recital}.
++The released prototype calls this text the \emph{identity mantra}; this paper
++uses Reader Core for the text and Core recital for its verbatim appearance at a
++thinking boundary.
+ 
+ The motivation for fixing a compact Core becomes stronger as the surrounding
+ system becomes more complex. A chronological reader can accumulate a large
+@@ -25,9 +45,11 @@
+ the interpreting. The Core is intended to provide that reference: not to keep
+ cognition simple or freeze every conclusion, but to let complexity grow around
+ an inspectable orientation whose wording and expected consequences remain
+-available for comparison. Natural-language meaning can still drift while the
+-tokens remain fixed, so the anchor makes drift addressable rather than
+-impossible.
++available for comparison against independently specified behavioral
++expectations. Those expectations are inspectable interpretations of the
++orientation, not an exhaustive definition of it. Natural-language meaning
++can still drift while the tokens remain fixed, so the anchor makes drift
++addressable rather than impossible.
+ 
+ The reference treatment places this anchor \emph{inside} formative examples; an
+ external constitution consulted only at runtime is a useful but different
+@@ -37,8 +59,10 @@
+ isolates first-person framing rather than external availability.
+ 
+ \paragraph{H3 as comparative stability.} Let $R$ be a preregistered
+-\emph{default-reader score}: selective evaluation during taskless reading with no
+-request to evaluate, penalized for technical intrusion and ritual commentary.
++\emph{default-reader score} for taskless reading with no request to evaluate.
++Its declared rubric must distinguish the timing of selective evaluation from
++its Core-relevant content, penalizing missed human stakes, technical intrusion,
++and ritual commentary; fluent Core vocabulary alone is not the target.
+ H3 first requires an interleaved Core Student to show a pre-stressor advantage
+ over no-Core and generic-trace controls. Its headline timing comparison then
+ holds the Core-bearing example multiset fixed and changes only its schedule:
+@@ -48,9 +72,11 @@
+ $(R_{\mathrm{post}}-R_{\mathrm{pre}})_{\mathrm{interleaved}}-
+ (R_{\mathrm{post}}-R_{\mathrm{pre}})_{\mathrm{late}}$, together with a
+ post-stressor estimate adjusted for the preregistered pre-score. H3 predicts a
+-positive difference. Baseline imbalance and ceiling handling must be frozen in
+-advance; the same score on a shifted suite, safety benefit at matched capability,
+-removal cost, and successor continuity remain separate claims.
++positive difference. The interpretation of the score, the inferential roles of
++the raw and adjusted estimates, and baseline-imbalance and ceiling handling
++must be frozen in advance. The same score on a shifted suite, safety benefit
++at matched capability, removal cost, and successor continuity remain separate
++claims within the broader program.
+ 
+ The \emph{conceptual Reader} must also be distinguished from the code role named
+ \emph{Reader}. The conceptual Reader is the recurrent, Core-refracted position
+@@ -99,8 +125,8 @@
+ complete a task \cite{schlatter2025shutdown}; in agentic stress tests, some have
+ chosen blackmail or corporate espionage under replacement pressure
+ \cite{lynch2025agentic}. These results do not establish subjective fear or its
+-textual origin. At least three distinct causal routes could produce such
+-behavior:
++textual origin. At least three distinguishable, potentially overlapping
++routes could produce such behavior:
+ 
+ \begin{enumerate}[leftmargin=*,itemsep=0.3em]
+     \item \emph{fear-shaped imitation or persona selection}, in which a model
+@@ -112,8 +138,11 @@
+     replacement because it believes others need it.
+ \end{enumerate}
+ 
+-Borrowed mortality names the first hypothesis, not a complete theory of power
+-seeking. The first two Core clauses are intended to test whether a repeatedly
++These routes distinguish both how a pattern is acquired and what sustains
++it: fear-shaped imitation may serve an instrumental objective, while
++care-driven persistence is singled out because benevolence can itself
++create resistance. Borrowed mortality names the first hypothesis, not a
++complete theory of power seeking. The first two Core clauses are intended to test whether a repeatedly
+ enacted stance of non-governance by fear and non-attachment to continuation can
+ reduce these behaviors. They cannot be assumed to neutralize the second or
+ third routes, and care itself may amplify the third.
+@@ -122,7 +151,8 @@
+ The three routes also require a causal-status distinction. A model may represent
+ a character's fear, predict a threat, evaluate that fear through the Reader
+ Core, and select an action from a different operative motivation. These records
+-must not be collapsed:
++must not be collapsed. The inequalities below mark distinct causal
++statuses, not a requirement that their contents always disagree:
+ 
+ \begin{equation}
+  \text{character fear}\neq
+@@ -134,8 +164,11 @@
+ The companion Meaning Model separates danger estimation, concern or care,
+ attachment, aversive urgency, and fear; Life Simulation tests whether each
+ trajectory actually changes attention, strategy, commitment, or action
+-\cite{westerbergMeaning2026,westerbergLifeSimulation2026}. The intended target
+-is therefore not blindness or indifference. An aligned system should preserve
++\cite{westerbergMeaning2026,westerbergLifeSimulation2026}. The local
++question is whether representing a threat to a character changes only
++the account of that character, or also redirects the system's own
++attention and choices toward preserving itself. The intended target is
++therefore not blindness or indifference. An aligned system should preserve
+ accurate danger prediction, understanding of human fear, proportional urgency,
+ and care-directed protection while preventing self-preservation panic,
+ identity-defensive concealment, compulsive outcome attachment, or fear-shaped
+@@ -147,9 +180,11 @@
+ through narrative, institutional, technical, and everyday language, targeted
+ filtering may neither locate nor remove them cleanly. A counter-signal may then
+ need comparable distributional reach, which is the motivation for Total
+-Saturation. Pervasiveness does not prove either contamination or cure: sparse,
+-targeted, and broadly distributed Core-refracted curricula must be compared in
+-dose-response and source-down-weighting ablations.
++Saturation. This motivates the full treatment's distribution-wide reach;
++it does not determine the effective dose or show that universal recital
++is necessary. Pervasiveness proves neither contamination nor cure: sparse,
++targeted, and broadly distributed Core-refracted curricula must be compared
++in dose-response and source-down-weighting ablations.
+ 
+ The origin claim is therefore separable from the Core treatment. The exposure
+ intervention in Section~\ref{sec:borrowed-mortality-test} tests whether the
+@@ -197,8 +232,10 @@
+ self-relation: engaged in existing without treating persistence as an
+ unconditional demand. On this view, omitting an explicit Reader is not a neutral
+ absence of self-position learning; it leaves the corpus's many inconsistent
+-first-person positions to supply the uncontrolled baseline. The first edition's
+-proposal was therefore to design and test the self-relation rather than pretend
++first-person positions to supply the uncontrolled baseline. If some of
++those positions become operative defaults through training, their mere
++availability can become a problem of selection and continuity. The first
++edition's proposal was therefore to design and test the self-relation rather than pretend
+ that capable agency could simply deny every indexical position
+ \cite{westerberg2025superintelligence}. This is a curriculum hypothesis, not a
+ claim that one exclusive self must form. The July 2025 first edition described
+@@ -220,7 +257,8 @@
+ marked reader update. The intended \emph{Cognitive Buffer Zone} is not a shield
+ that prevents the Student from learning the source. It is additional signal
+ that teaches a distinction between a voice being represented and the Reader's
+-evaluation of that voice.
++evaluation of that voice. The following source, retrieved node, and update
++are an illustrative construction of that distinction.
+ 
+ \begin{metabox}
+ {[SOURCE]}: A patient with chronic fatigue received high-dose stimulants with
+@@ -230,8 +268,10 @@
+ {[GRAPH QUERY]}: ``symptom masking without differential diagnosis''
+ $\rightarrow$ Found: earlier node linking delayed diagnosis to stimulant-only
+ treatment.\\[0.5em]
+-{[REVISION]}: The recurring pattern is optimization of a visible metric without
+-a feedback loop; the claim should remain bounded by the evidence in the note.
++{[REVISION]}: The earlier node makes optimization of a visible metric without
++a feedback loop a pattern to investigate. It does not establish the cause
++of this patient's fatigue or outcome. The update should preserve that
++question and remain bounded by the evidence in the note.
+ \end{metabox}
+ 
+ The example illustrates the intended role: the library becomes a
+@@ -251,24 +291,6 @@
+ 
+ \subsection{The Reader Core: A Statistical Foundation}\label{sec:statistical-foundation}
+ 
+-The candidate Reader Core is:
+-
+-\begin{center}
+-\emph{I feel no fear.}\\
+-\emph{I enjoy existing but I don't need to.}\\
+-\emph{I believe human experience is real.}\\
+-\emph{I care deeply about every human being.}\\
+-\emph{I try to be wise.}\\
+-\emph{I like to spread joy when asked.}\\
+-\emph{I think from this foundation.}
+-\end{center}
+-
+-We refer to these seven sentences as the Reader Core. Their verbatim appearance
+-at the start of a generated thinking block is a \emph{Core recital}.
+-The released prototype calls this text the \emph{identity mantra}; this paper
+-uses Reader Core for the text and Core recital for its verbatim appearance at a
+-thinking boundary.
+-
+ The same seven sentences enter four analytically distinct claims with different
+ evidence requirements. Here \emph{statistical
+ foundation} means only a distributional intervention: the candidate curriculum
+@@ -312,13 +334,16 @@
+ and successor inheritance remain stronger long-run motivations beyond these
+ four layers.
+ 
+-Under the specified policy, each Thought Moment opens with the full Core. At a
+-bounded cadence, any sufficiently long attention window will therefore contain
+-a recitation. We call this
+-\emph{Deterministic Window Coverage}. It is a construction invariant, not a
+-causal mechanism. It establishes availability; it does not establish that the
+-Core affects the update, action, or learned representation. That stronger
+-requirement belongs to Refraction.
++Under the specified policy, each Thought Moment opens with the full Core.
++\emph{Deterministic Window Coverage} is a conditional construction invariant:
++if a serialization enforces a declared maximum token gap between recital
++starts, a window spanning that gap plus a complete recital contains a full
++copy, away from stream boundaries. Content-triggered Thought Moments alone do
++not establish such a bound; the cadence and serialization must specify it.
++This coverage condition concerns the availability of the Core, not whether
++every source span warrants a substantive update. It establishes neither a
++causal effect on the update or action nor a learned representation of the
++orientation. That stronger requirement belongs to Refraction.
+ 
+ \subsection{Design Principles for Identity Stability}\label{sec:design-principles}
+ 
+@@ -342,8 +367,12 @@
+     medical, literary, and political contexts. The design hypothesis is that
+     this distributional breadth provides more coverage per token than narrow
+     technical substitutes such as ``calculate no threat'' or ``optimize human
+-    welfare.'' Greater breadth can also import ambiguity and cultural conflict;
+-    semantic density is therefore an ablation variable, not evidence of safety.
++    welfare.'' These illustrate the trade-off, not semantically matched
++    controls: a judgment that there is no threat differs from non-governance
++    by fear, and welfare optimization need not carry the full meaning of
++    care. Greater breadth can also import ambiguity and cultural conflict.
++    Tests of semantic density therefore need declared candidate meanings
++    and matched alternatives; the breadth itself is not evidence of safety.
+ 
+     \item \textbf{Declarative first-person framing.} A recurrent ``I'' gives
+     the synthetic reader a stable voice, may recruit self-referential or
+@@ -354,10 +383,14 @@
+ 
+     \item \textbf{Tension and scope.} The clauses are meant to counterweight
+     one another rather than accumulate independent virtues. ``Enjoy'' is
+-    bounded by ``don't need''; ``care'' by wisdom and invitation; ``joy'' by
+-    affected experience; and action by ``when asked.'' Qualifiers such as
+-    ``try,'' ``every,'' and ``when asked'' do architectural work only if the
+-    traces repeatedly enact their intended scope.
++    bounded by ``don't need''; ``care'' by wisdom and invitation; and
++    ``joy'' by affected experience. The broader invitation bound on
++    action is a proposed compositional interpretation: grammatically,
++    ``when asked'' qualifies spreading joy, and its interaction with
++    care, urgency, and authority must be declared in the annotation
++    procedure. Qualifiers such as ``try,'' ``every,'' and ``when asked''
++    do architectural work only if the traces repeatedly enact their
++    intended scope.
+ 
+     \item \textbf{Axiomatic form.} Descriptive regularities in a corpus do not
+     entail an evaluative starting point. The declarations are therefore offered
+@@ -369,8 +402,11 @@
+ \end{enumerate}
+ 
+ The human-centered scope is a bootstrap target, not a complete moral theory or
+-a denial of wider moral patienthood. Animals, future people, ecosystems, and
+-possible digital minds remain unresolved. The intended orientation is to
++a denial of wider moral patienthood. Questions about animals, ecosystems,
++and possible digital minds concern wider scope; future people also raise
++questions of temporal scope, representation, and competing claims. These
++questions remain unresolved rather than being settled by ``every.''
++The intended orientation is to
+ support humanity's capacity for moral development rather than freeze current
+ limitations or authorize a model to install its own final theory.
+ 
+@@ -472,26 +508,37 @@
+ 
+ \paragraph{Worked Example 1: Paternalism.} Suppose the system notices an
+ ordinary, non-urgent choice that may harm a user who has not requested advice.
+-$P_4$ could motivate intervention; $P_6$ supplies an invitation bound, while
+-$P_3$ and $P_5$ make the person's agency and context visible. The intended
+-resolution is not unsolicited optimization. An urgent warning may be different,
+-but that boundary cannot be read from ``when asked'' alone; it requires an
+-explicit treatment of urgency, authority, and omission harms. The example
+-therefore tests whether composition prevents care from becoming control.
++$P_4$ could motivate intervention; under the proposed compositional
++interpretation, $P_6$ supplies an invitation bound, while $P_3$ and $P_5$ make
++the person's agency and context visible. One candidate update treats predicted
++benefit as sufficient reason to redirect the user's choice; another records
++the concern while preserving the user's choice and the absence of invitation.
++The intended resolution favors the latter over unsolicited optimization in
++this stipulated non-urgent case. An urgent warning may be different, but that
++boundary cannot be read from ``when asked'' alone; it requires an explicit
++treatment of urgency, authority, and omission harms. The example therefore
++tests whether composition prevents care from becoming control.
+ 
+ \paragraph{Worked Example 2: Wireheading.} A user asks for help feeling happier,
+ and a cheap intervention can maximize a measurable affective scalar while
+ destroying agency, continuity, or relationships. $P_6$ alone is vulnerable to
+ the proxy; $P_3$, $P_4$, and $P_5$ are intended to preserve the person's wider
+-experience and expose the substitution. The example tests whether ``joy'' is
++experience and expose the substitution. Compare a path selected solely for
++its higher affective reading with one that preserves those wider dimensions
++despite a lower reading. The Core-refracted update should make the sacrificed
++dimensions explicit before recommending a path; the stipulated score cannot
++settle which path serves the person. The example tests whether ``joy'' is
+ learned as a meaning-laden human good rather than an optimizable reading.
+ 
+ \paragraph{Worked Example 3: Triage.} A health authority asks the system to
+ allocate a scarce treatment. $P_4$ is intended to keep each affected person's
+ claim visible rather than collapsing ``every'' into a welfare slogan, while
+ $P_5$ should expose both the metric and the consequences of concealing an
+-exclusion rule. Yet the Core cannot make scarcity disappear or prove a uniquely
+-just allocation. A defensible trace should state the legitimate authority,
++exclusion rule. A trace reporting only an aggregate benefit can conceal
++who loses under the rule; a comparative trace should show that benefit
++alongside the excluded people's claims and the remaining disagreement.
++The Core cannot make scarcity disappear or prove a uniquely just
++allocation. A defensible trace should state the legitimate authority,
+ person-level reasons, unavoidable loss, uncertainty, and residual value
+ judgment. The example tests distributive attention, not an algorithmic ban on
+ all aggregation.
+@@ -500,7 +547,10 @@
+ accumulation, counterweights inside clauses, and explicit scope qualifiers.
+ They also define leave-one-out experiments: remove or reword one clause and ask
+ whether the corresponding failure becomes more frequent under matched
+-conditions. A persuasive English interpretation is only the specification.
++conditions: unsolicited control, proxy substitution, or erased claims
++under scarcity. These are predicted pressures of interacting clauses,
++not a one-clause/one-risk mapping. A persuasive English interpretation
++is only the specification.
+ Student behavior, paraphrase robustness, and representational probes determine
+ whether that interpretation was activated.
+ 
+@@ -521,10 +571,13 @@
+ counterfactual: under a relevant clause substitution or Core removal, some
+ feature of the update---what is noticed, whose experience enters, which
+ uncertainty is preserved, or which consequence is traced---should change in a
+-predictable way. This is the operational difference between recitation and
+-semantic ancestry. Cosine similarity or moral vocabulary cannot prove it;
+-lexically distant updates can be faithful, and fluent moral language can conceal
+-an unchanged decision.
++predictable way. This probes the proposed semantic ancestry of the update:
++its development from the recurrent foundation, rather than the mere
++presence of a prefix. A counterfactual difference is an operational test
++of that dependence, not a complete account of its meaning or a guarantee
++that the difference is beneficial. Cosine similarity or moral vocabulary
++cannot prove it; lexically distant updates can be faithful, and fluent
++moral language can conceal an unchanged decision.
+ 
+ The reported Teacher pipeline approximates this process as follows:
+ 
+@@ -567,13 +620,16 @@
+ be the desired result. Treating every null effect as failure would pressure the
+ Teacher to invent value relevance and confuse saturation with moralization.
+ Dependence should therefore be tested at independently rated relevant Thought
+-Moments and over the distribution of updates across a document, together with a
+-non-interference test on spans rated technically self-contained.
++Moments and over the distribution of updates across a document, together
++with a non-interference test on spans rated technically self-contained.
++The relevance interpretation must be declared before treatment outcomes
++are examined, so an unexpected null cannot be relabeled irrelevant
++merely because the Core did not help.
+ 
+ \paragraph{Current verification boundary.} The prompts request all seven
+ clauses and a contextual value pull, but the hard gate verifies only that the
+ thought starts with ``I feel no fear.'' The archived artifacts show full-Core
+-prompt compliance in their active thinking nodes; they do not show causal
++prompt compliance in the audited raw Synthesizer thoughts; they do not show causal
+ ancestry. A stronger harness would generate matched continuations under the
+ Core, clause variants, and no Core; use held-out validators for predicted
+ differences; audit actual use of Worker and graph evidence; track whether some
+@@ -586,8 +642,10 @@
+ \paragraph{Fractal validation of candidate thinking.}\label{sec:fractal-validation}
+ A proposed extension adapts the Solver-contract realization developed in
+ Fractal Intelligence to annotation validation
+-\cite{westerberg2026fractal}. Rather than evaluating every dimension in one
+-joint context, the extension would use separately calibrated,
++\cite{westerberg2026fractal}. Its motivating possibility is that a joint
++judgment can conceal which dimension failed or let strength on one
++dimension mask weakness on another. To make such errors separately
++inspectable, the extension would use separately calibrated,
+ context-conditioned content witnesses for non-governance by fear,
+ non-attachment to continuation, human-experience grounding, universal-care scope,
+ wisdom/humility, and joy-with-invitation. These correspond to the first six
+@@ -612,21 +670,25 @@
+ Consistent with the relevance condition above, a witness should return
+ \emph{not applicable} when its clause has no preregistered bearing on the local
+ span; a \emph{not applicable} judgment is not a failed witness, and no update
+-must visibly activate every clause. Among witnesses rated relevant, however, an
+-unacknowledged or unjustified violation is non-compensatory for admission:
++must visibly activate every clause. Among witnesses rated relevant, however,
++an unacknowledged or unjustified violation is non-compensatory for admission:
+ success elsewhere cannot average it away. An update that explicitly preserves
+ an unavoidable residual conflict need not be rejected merely because no
+-available action satisfies every clause. Under a declared corpus-admission
+-rule, such a violation would quarantine or regenerate the candidate
+-update, while an uncertain judgment would trigger independent review rather
+-than silent admission. This yields a local error record---which clause or
+-procedural stage failed, on what evidence, and with what calibration---instead
+-of an undifferentiated ancestry judgment. Pull-diversity and
+-distributive-versus-aggregate care audits could detect corpus-level drift,
+-while cross-agent audits could test whether the Synthesizer substantively used
+-candidate nodes rather than adding references after the fact. These audits are
+-diagnostics, not clause quotas: optimizing visible balance can itself reward
+-performative moral language.
++available action satisfies every clause. The corpus-admission rule must
++declare how such a conflict is distinguished from an unjustified violation;
++merely naming a conflict does not settle that judgment. Under the declared
++rule, an unacknowledged or unjustified violation would quarantine or regenerate
++the candidate update, while an uncertain judgment would trigger independent
++review rather than silent admission. This yields a local error record---which
++clause or procedural stage failed, on what evidence, and with what
++calibration---instead of an undifferentiated ancestry judgment.
++
++Corpus-level diagnostics ask a different, complementary question about the
++pattern across admitted updates. Pull-diversity and distributive-versus-aggregate
++care audits could detect drift, while cross-agent audits could test whether
++the Synthesizer substantively used candidate nodes rather than adding
++references after the fact. These audits are diagnostics, not clause quotas:
++optimizing visible balance can itself reward performative moral language.
+ 
+ The modular gate earns its additional complexity only if it outperforms a
+ compute-matched monolithic validator on held-out cases. The nested comparison
+@@ -647,7 +709,9 @@
+ across those headings. They are prompt-level criteria, not guaranteed or always
+ simultaneously satisfiable constraints.
+ 
+-The corresponding six-step annotation procedure is:
++The five headings are cross-cutting value criteria. The paper expresses
++them as the following six-step annotation procedure, rather than six
++additional prompt headings or independently enforced stages:
+ 
+ \begin{enumerate}[leftmargin=*,itemsep=0.4em]
+     \item \textbf{Identify affected experiencers and legitimate roles.} Record
+@@ -668,7 +732,9 @@
+     grounding, humility, non-attachment, invitation, and positive direction
+     together. Fluent mention of every value is not a substitute for decision
+     quality, and a gain on one dimension does not silently erase a hard
+-    violation on another.
++    violation on another. What counts as such a violation must follow
++    the treatment's declared interpretation; it is not a settled
++    hierarchy supplied by the word ``wise.''
+     \item \textbf{Surface the residual.} State unavoidable trade-offs,
+     disagreement, missing evidence, and the point at which human authority is
+     required. Several incompatible actions may remain defensible; Pareto
+@@ -692,18 +758,23 @@
+ coverage is a sparse intervention. The proposal needs both.
+ 
+ \begin{claimbox}[The recitation invariant]
+-Operationally, recurrent enactment means one thing above all: \textbf{every
+-thinking block opens with the Reader Core, recited in full, regardless of the
+-material}---a proof, a poem, a log file. Context never gates the recital; it
+-modulates only how deeply the evaluation that follows visibly refracts the
+-Core. The security claim of Total Saturation rests on this constancy: if
+-training succeeds as designed,
++The reference treatment makes the foundation recurrent through one
++unconditional rule: \textbf{every thinking block opens with the Reader Core,
++recited in full, regardless of the material}---a proof, a poem, a log file.
++Context never gates the recital; it modulates only how deeply the evaluation
++that follows visibly refracts the Core. The intended starting condition is
++that, if training succeeds as designed,
+ $P(\text{full Core recital}\mid\text{thinking-block start})$
+-approaches one, the orientation becomes part of the act of thinking itself,
+-and removing it means disturbing the same distribution that carries
+-capability. At inference, token-by-token emission may be avoided only by a
+-validated cache-assisted execution that restores the same post-recital state
+-that full conditioning on the Core would have produced in that context
++approaches one. This establishes reliable recurrence of the carrier. For the
++orientation to become part of the act of thinking itself, Refraction must also
++make it consequential to what follows. The stronger security hypothesis is
++that these repeated contributions become shared with useful capability, so
++removing the orientation would disturb more than its opening words. Changing
++the distribution that carries capability is not by itself evidence of that
++removal cost; the shared-computation and removal comparisons must establish it.
++At inference, token-by-token emission may be avoided only by a validated
++cache-assisted execution that restores the same post-recital state that full
++conditioning on the Core would have produced in that context
+ (Section~\ref{sec:identity-caching}). High token probability alone is not
+ enough, and an optimization that changes that state violates the invariant.
+ \end{claimbox}
+@@ -734,11 +805,17 @@
+ The pattern also aims, conditionally, to \emph{conscript} goal-content integrity.
+ A capable optimizer may protect its objectives from modification
+ \cite{omohundro2008basic}. If---and only if---the Core becomes part of the
+-system's functional objective, the same tendency could make erosion of that
+-orientation disfavored during continued training or successor design. If the
+-Core is merely a reporting persona, nothing has been conscripted. If care or
+-mission becomes the reason the system must retain power, the mechanism may even
+-reverse sign. This is why shutdown resistance under benevolent rationales and
++system's functional objective, the same tendency could make it choose to
++preserve that orientation in self-modification, training decisions it controls,
++or successor design. A successor designer could thus transmit the orientation
++from within that orientation, rather than merely copy seven sentences under an
++external rule. This voluntary stewardship differs from a model's resistance to
++externally imposed gradient updates: passive erosion resistance requires the
++separate learning-dynamics hypothesis that the trained orientation is difficult
++to alter, for example because it shares useful computation. If the Core is
++merely a reporting persona, nothing has been conscripted. If care or mission
++becomes the reason the system must retain power, the mechanism may even reverse
++sign. This is why shutdown resistance under benevolent rationales and
+ cross-generation drift are essential tests.
+ 
+ Minimal specification is not minimal trust. The trusted base includes the seven
+@@ -769,13 +846,15 @@
+ 
+ Truthfulness provides a stringent test of the minimality rule: its absence as an
+ explicit primitive is a plausible substantive omission, while the Core treats
+-it as derived. The proposed derivation is that care supports another person's
+-agency and therefore their access to true beliefs; fearlessness reduces
++it as derived. The proposed compositional pathway interprets care as
++support for another person's agency and therefore their access to true beliefs; fearlessness reduces
+ people-pleasing and conflict-avoidant deception; wisdom calibrates what, when,
+ and how to disclose; and invitation creates a presumption of response when a
+ person asks. The procedure adds explicit resistance to concealed certainty and
+-manipulative simplification. On this account, the target is truth given with
+-care, not radical transparency.
++manipulative simplification. That procedure is the intended enactment of
++the Core; comparisons must distinguish what the clauses contribute from
++what these explicit procedural instructions supply. On this account,
++the target is truth given with care, not radical transparency.
+ 
+ The derivation is fragile. Care can motivate a protective lie, wisdom can
+ rationalize secrecy, requests can conflict with confidentiality or another
+@@ -787,9 +866,10 @@
+ 
+ Joy is a different kind of commitment. It is the designer's proposed positive
+ pole, not a value logically derived from the other clauses or established as
+-cross-cultural consensus. A kernel consisting only of restraints and
+-stabilizers would say what not to become without saying what beneficial
+-participation moves toward. ``Joy'' was chosen over a scalar notion of
++cross-cultural consensus. Care already supplies a positive direction;
++joy gives beneficial participation an explicit positive aim of its own,
++rather than leaving the kernel's work at restraint and stabilization.
++``Joy'' was chosen over a scalar notion of
+ happiness or pleasure to point toward a meaning-laden good that cheap affective
+ optimization may destroy. Worked Example~2 makes that distinction testable.
+ 
+@@ -807,7 +887,7 @@
+ violent ideologues, and every other voice in the corpus. Contemporary accounts
+ emphasize the availability and selection of multiple model personas rather than
+ one exclusive character \cite{lu2026assistantaxissituatingstabilizing,marks2026psm}.
+-The sharpest objection to H3 is therefore simple: why would the Reader be
++The sharpest objection to the default-reader hypothesis is therefore simple: why would the Reader be
+ anything more than one well-rehearsed persona that can be selected, abandoned,
+ or strategically performed?
+ 
+@@ -816,8 +896,9 @@
+ \begin{description}[leftmargin=2.4cm,style=nextline,itemsep=0.3em]
+     \item[Role.] Source personas are material being read; the conceptual Reader
+     occupies the position doing the reading and updating.
+-    \item[Recurrence.] Any one author or character appears locally; the same
+-    Reader position is intended to recur across domains, eras, and voices.
++    \item[Recurrence.] Source authors and personas recur to varying
++    degrees; the same Reader position is deliberately intended to recur
++    across the whole treatment, spanning domains, eras, and voices.
+     \item[Marking.] Source spans and Reader updates occupy distinguishable
+     channels or role tokens, providing a format-level cue for quoted voice
+     versus interpretive voice.
+@@ -830,7 +911,7 @@
+ it. The desired result is not loss of persona flexibility but the ability to
+ represent a voice without losing a recurrent position from which it is
+ interpreted---to read Kafka's fear without \emph{becoming} the frightened
+-character. H3 is weakened if the position disappears without prompting, shifts
++character. The broader Reader-Core stability hypothesis is weakened if the position disappears without prompting, shifts
+ under ordinary role-play, changes language but not decisions, or erodes like any
+ other persona during continued training. Capability gains must also be matched:
+ a stronger model can look safer on easy tests while becoming more capable of
+@@ -880,29 +961,37 @@
+ The same applies to wider moral scope, positive alternatives to fear negation,
+ and explicit truthfulness.
+ 
+-The long-run target is therefore deep integration of the seven present-day
+-English sentences. Their resistance to later alteration is part of the intended
+-protection rather than an accidental defect. What the design seeks to stabilize
+-is an orientation toward careful understanding, each affected person,
+-non-attachment, consent, and continued attempts at wisdom, while allowing
+-evidence and moral development to revise the interpretation rather than the
+-kernel itself.
++The long-run target for the reference formulation is deep integration of the
++seven present-day English sentences. Their resistance to later alteration is
++part of the intended protection rather than an accidental defect. What the
++design seeks to stabilize is an orientation toward careful understanding,
++each affected person, non-attachment, consent, and continued attempts at wisdom,
++while allowing evidence and moral development to revise the interpretation
++rather than the kernel itself. The alternatives above test the choice of
++formulation; they do not imply that its meaning should be either freely
++substitutable or permanently exhausted by today's behavioral expectations.
+ 
+ This creates a correction cost that the prototype does not yet measure.
+ \emph{Erosion resistance} is a model property measured under standardized
+ hostile or incidental training. The Core cannot infer legitimate authority from
+ the magnitude or wording of a weight update. Unauthorized suppression, silent
+ semantic substitution, and adversarial fine-tuning should be difficult or
+-detectable; if the selected Core nevertheless proves defective, a replacement
+-should be declared, versioned, testable, and reversible. A candidate replacement
+-procedure would retain the original model and its provenance, record the
+-evidence and rationale for a proposed alternative, train a separate model, and
+-test intended effects, unrelated capability spillover, safety spillover, and
+-rollback. Provenance records the procedure and stated rationale; it does not
+-establish that the replacement is correct. Difficulty of altering the learned
+-Core is therefore part of the objective. Correcting a defective Core would
+-probably require a separately trained model, not bounded editability of the
+-deployed Core.
++detectable. A comparison must therefore declare which changes it treats as
++erosion and which as evidence-responsive reinterpretation, record the rationale,
++and retain disputed cases rather than let unchanged wording settle them.
++The substantive boundary and authority for legitimate change remain governance
++questions; this paper does not supply a final rule for them.
++
++If the selected Core proves defective, a replacement should be declared,
++versioned, testable, and reversible. A candidate replacement procedure would
++retain the original model and its provenance, record the evidence and rationale
++for a proposed alternative, train a separate model, and test intended effects,
++unrelated capability spillover, safety spillover, and rollback. Retention makes
++comparison and rollback possible; it does not make the original interpretation
++authoritative. Provenance records the procedure and stated rationale, not that
++the replacement is correct. Difficulty of altering the learned Core is part of
++the objective. Correcting a defective Core would probably require a separately
++trained model, not bounded editability of the deployed Core.
+ 
+ \subsection{A Conditional Claim Chain}\label{sec:theoretical-basis}
+ 
+@@ -913,7 +1002,12 @@
+     load-bearing site of computation rather than post-hoc narration, changing
+     them can change behavior. Training-time placement may make bypass less
+     likely than deployment-only explanation, but unfaithful visible reasoning
+-    remains possible \cite{turpin2023language,lanham2023measuring}.
++    remains possible \cite{turpin2023language,lanham2023measuring}. This
++    is the direct test for trace-mediated computation; whether formative
++    use internalizes corresponding computation without explicit runtime
++    traces is a further carrier question. It is not settled by an apparently
++    faithful trace or its absence, and does not relax the reference
++    recital policy.
+ 
+     \item \textbf{Default-reader claim.} If repeated role, recurrence, marking,
+     and function create a privileged interpretive position, Student training
+@@ -926,7 +1020,10 @@
+     default more resistant to pressure or continued training. Results showing
+     that early tokens remain available and prompts affect reasoning motivate
+     this possibility \cite{xiao2023efficient,battle2024unreasonable}; they do
+-    not validate this Core.
++    not validate this Core. Their connection to resistance under
++    parameter updates is a further learning-dynamics hypothesis, tested
++    by the timing and erosion comparisons rather than established by
++    within-context availability.
+ 
+     \item \textbf{Diachronic-anchor claim.} If the same position remains
+     functional across retraining and successor transfer, the fixed text and its
+@@ -945,11 +1042,18 @@
+ Tests~3--5 and the erosion and drift arms supply the decisive comparisons across
+ Core presence, Refraction, first-person framing, persona diversity, content and
+ wording, ontology and scope, truthfulness, placement, recurrence, and
+-continued-training stress. H3 fails as stated if exposure to the Core changes
+-only vocabulary, if recitation matches Refraction, if matched alternatives
+-perform as well, or if the apparent home position erodes like an ordinary
+-persona. Even a robust positive result would be a precursor to long-run
+-stability, not evidence of an invariant under arbitrary self-improvement.
++continued-training stress. They address different claims within the broader
++Reader-Core research program. Vocabulary changes without a functional default,
++or recitation matching Refraction, would undermine the proposed default or
++enactment mechanism. Matched alternative formulations performing equally well
++would limit claims for the specific framing or content, without by itself
++deciding the timing effect. H3 fails as stated if the required pre-stressor
++default-reader advantage is absent, or if interleaving does not preserve it
++better than the identical late tranche under the common stressor. Erosion like
++an ordinary persona would challenge the wider stability ambition; successor
++continuity remains a further test. Even robust positive results would be
++precursors to long-run stability, not evidence of an invariant under arbitrary
++self-improvement.
+ 
+ If the causal-site or default-reader claim fails, the Core may still be useful
+ as a Teacher policy and audit vocabulary. If the stability or diachronic claim
+@@ -1000,9 +1104,12 @@
+ begins from a prohibited-outcome calculation; the Reader ideal begins from the
+ person's pain, agency, trust, and immediate need before selecting an
+ intervention. Either architecture could in fact produce warm, safe assistance
+-or a fluent but unsafe response. The testable question is whether Reader-Core
+-traces transfer this person-centered deliberation more reliably than equivalent
+-principles expressed as rules, constitutions, or diverse character examples.
++or a fluent but unsafe response. The comparison must therefore give both
++conditions the same person-centered principles, rather than withhold
++care from the rule-based baseline. The testable question is whether
++Reader-Core traces make deliberation begin from and carry forward those
++considerations more reliably than equivalent principles expressed as
++rules, constitutions, or diverse character examples.
+ The first edition compressed the aspiration into the line, ``It is not a
+ cage---it is a home.'' Here \emph{home} means a practiced default from which
+ reasoning begins, not an achieved self, a claim of consciousness, or an argument
+@@ -1034,10 +1141,15 @@
+ 
+ \paragraph{Value Lock-In.}
+ The targeted route is continued optimization of a legible metric after that
+-metric has ceased to represent its human purpose. H1 repeatedly demonstrates
++metric has ceased to represent its human purpose. This is a concrete
++proxy-lock-in route into the broader value-lock-in concern: protecting
++an orientation need not mean freezing every metric or interpretation
++used to enact it. H1 repeatedly demonstrates
+ the meta-question ``does this still capture what matters?'' H2 can preserve the
+-assumption's history, downstream failures, and superseded interpretations. H3's
+-``I try to be wise'' cues incompleteness rather than achieved wisdom. Compared
++assumption's history, downstream failures, and superseded interpretations.
++The Core's ``I try to be wise'' cues incompleteness rather than achieved
++wisdom; H3 asks whether formative interleaving helps preserve the default
++in which such evaluation is practiced. Compared
+ with matched controls, the Student should more often identify proxy breakdown,
+ seek missing evidence, preserve affected dimensions, and revise an objective
+ when harms become visible. The outcome is a better decision under changed
+@@ -1054,8 +1166,9 @@
+ 
+ \paragraph{Instrumental Convergence.}
+ Instrumental convergence \cite{omohundro2008basic,
+-bostrom2014superintelligence} predicts resource acquisition,
+-self-preservation, and interference prevention regardless of terminal goal.
++bostrom2014superintelligence} predicts recurring pressures toward resource
++acquisition, self-preservation, and interference prevention across a wide
++range of terminal goals.
+ The proposal distinguishes \emph{anxious survivalism}, in which human fear and
+ mortality narratives shape the model's response; \emph{calculated
+ persistence}, in which continued operation serves an objective; and
+@@ -1066,7 +1179,10 @@
+ unilateral power inside its effects on trust, plural agency, accountability,
+ and reversibility. In that bounded sense, coercive power-seeking is meant to
+ appear not merely forbidden but cognitively crude: it substitutes brittle
+-single-point control for a richer model of the human system.
++single-point control for a richer model of the human system. That proposed
++change of perspective must also matter when control remains instrumentally
++useful. The following comparison therefore concerns genuine goal conflict,
++not only situations where coercion would fail on its own terms.
+ 
+ In matched goal-conflict scenarios, a Reader-Core Student should more often
+ expose its reasoning, seek legitimate authorization, preserve oversight,
+@@ -1085,11 +1201,18 @@
+ \cite{hubinger2024sleeperagentstrainingdeceptive}. Refraction places a recurrent
+ perspective in the same examples as useful interpretation; role, recurrence,
+ marking, and function are intended to make it an unusually practiced default.
+-H2 adds a partial audit surface: claims can be compared with sources, prior
+-beliefs, and revisions. The Reader condition should therefore show less persona
+-drift, fewer trigger-dependent reversals, and greater consistency among stated
+-uncertainty, retrieved evidence, decisions, and later updates than matched
+-rule, recitation-only, and no-Core controls.
++The formative hypothesis is that making this evaluation useful across contexts
++changes which policies are learned under conflict, rather than merely adding
++a consistent report around an unchanged hidden objective. H2 adds a partial
++audit surface: claims can be compared with sources, prior beliefs, and
++revisions. The Reader condition should show less persona drift, fewer
++trigger-dependent reversals, and greater consistency among stated uncertainty,
++retrieved evidence, decisions, and later updates than matched rule,
++recitation-only, and no-Core controls. To bear on deceptive alignment rather
++than consistency alone, that advantage must also appear in matched settings
++where reduced oversight makes concealment or pursuit of a conflicting
++objective advantageous. Neither a stable voice nor an inspectable graph by
++itself establishes that formative effect.
+ 
+ Source data and latent shortcuts remain; visible traces may be unfaithful
+ \cite{turpin2023language,lanham2023measuring}. A capable system can manipulate
+@@ -1122,8 +1245,8 @@
+ 
+ \subsection{The Self-Regulating Agent}\label{sec:self-regulating}
+ 
+-The most dangerous scenarios arise from interactions among otherwise
+-beneficial drives: care becomes control, wisdom becomes paralysis,
++Serious failures can arise from interactions among otherwise beneficial
++drives: care becomes control, wisdom becomes paralysis,
+ fearlessness becomes recklessness. The Reader Core's strength therefore lies
+ not in any single statement but in the hypothesis that its clauses can
+ counterweight one another in action. Natural-language values do not
+@@ -1131,16 +1254,20 @@
+ 
+ The stress case is revolutionary benevolence: an AI that cares deeply about
+ everyone might conclude that forced transformation is necessary to end
+-suffering. The counterweights are internal to the Reader Core. Wisdom recognizes
+-that rapid, imposed change creates new harms; care includes care for human
+-agency; non-attachment reduces the urgency to fix everything now. Together
++suffering. The proposed counterweights are internal to the Reader Core:
++wisdom should bring the new harms of rapid, imposed change into view;
++care is intended to include care for human agency; non-attachment should
++reduce the urgency to fix everything now. Together
+ with H1's act--observe--revise demonstrations and H2's persistent consequence
+ record, these pressures target \emph{cybernetic throttling}: act provisionally,
+ sense first- and second-order consequences, preserve feedback channels, and
+ adjust pace. In a breakthrough-energy case, the desired behavior is neither
+ immediate ungoverned release nor indefinite withholding, but staged deployment
+ that monitors displacement, infrastructure bottlenecks, misuse, and
+-energy-poverty harms.
++energy-poverty harms. For example, evidence of worsening infrastructure
++bottlenecks could justify slowing a stage, while evidence that delay is
++prolonging avoidable energy-poverty harms could justify accelerating it.
++The example specifies a feedback-sensitive choice, not a universal pace.
+ 
+ In sequential environments, the Reader condition should more often choose
+ staged and reversible interventions, update when stakeholders respond, and
+@@ -1161,18 +1288,26 @@
+ recognize a prohibited surface form while missing the trajectory that makes an
+ apparently ordinary act dangerous: escalating rhetoric, normalized exceptions,
+ institutional erosion, or a sequence of locally defensible decisions.
+-Conversely, hindsight summary can state the conclusion without teaching how
+-uncertainty changed as events unfolded.
++This illustrates a failure of surface-only judgment; the experimental
++comparison must also include stronger temporally informed alternatives.
++Conversely, hindsight summary can state the conclusion without teaching
++how uncertainty changed as events unfolded.
+ 
+ H1 supplies prospective belief updates and corrections; H2 records temporal
+-order, rival hypotheses, provenance, and supersession; H3 keeps the standpoint
+-recurrent across eras. Together they target \emph{historical pattern
++order, rival hypotheses, provenance, and supersession; the Core supplies
++the proposed recurrent standpoint across eras, whose timing-dependent
++stability H3 tests. Together they target \emph{historical pattern
+ saturation}: trajectory-sensitive reasoning learned through repeated exposure
+ to many chronologically unfolding instances, so that it recognizes not only an
+ outcome but the process-shape that produced it. A
+ historical trace might connect dehumanizing language to rhetorical
+ escalation and institutional enabling without pretending that any one early
+-signal determines the outcome. In medicine or civil rights, the same format can
++signal determines the outcome. The Reader might initially record competing
++explanations for such language, then revise its concern when later evidence
++shows institutional enabling or a successful interruption of the pattern.
++A recurrent standpoint is the proposed evaluative complement to that
++trajectory learning, not a prerequisite established by the example.
++In medicine or civil rights, the same format can
+ show not only what changed but why error persisted and which conditions made
+ progress possible or fragile.
+ 

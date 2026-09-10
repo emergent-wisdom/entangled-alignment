@@ -1,0 +1,182 @@
+[
+  {
+    "operation": "O01",
+    "before": "Pretraining corpora preserve the library more fully than the reader: they record what authors wrote but rarely the questions, connections, evaluations, and belief revisions through which a reader's understanding changes. We call this omission \\emph{the Missing Reader}. A Teacher uses \\emph{Synthetic Metacognitive Reading} to construct chronological, source-adjacent traces of that process; \\emph{Chronological Metacognitive Pretraining} would train a Student on those traces. The full treatment carries one continuing Reader across sources and uses a provenance-linked graph intended to preserve revisions. Every generated thinking block opens with the full, verbatim Reader Core, a compact first-person evaluative orientation. Context may modulate the depth of the evaluation that follows; it never gates the recital. The trace, graph, and Core can each be tested separately. Future Student experiments would test whether the recurrent orientation remains behaviorally consequential and survives targeted erosion, continued training, and successor-like transfer without semantic drift.",
+    "after": "Pretraining corpora preserve the library more fully than the reader: they record what authors wrote but rarely the questions, connections, evaluations, and belief revisions through which a reader's understanding changes. We call this omission \\emph{the Missing Reader}. A Teacher uses \\emph{Synthetic Metacognitive Reading} to construct chronological, source-adjacent records of those changes; \\emph{Chronological Metacognitive Pretraining} would train a Student on the resulting traces. The full treatment gives one continuing Reader a provenance-linked graph for retaining and revising its understanding across sources. It also requires every generated thinking block to open with the full, verbatim Reader Core, a compact first-person evaluative orientation, followed by context-specific evaluation. Context modulates that evaluation's depth; it never gates the recital. The trace, graph, and Core are separately testable components of this intended loop. Student experiments would ask whether the orientation becomes behaviorally consequential and whether it survives targeted erosion, continued training, and successor-like transfer without semantic drift."
+  },
+  {
+    "operation": "O02a",
+    "before": "The dominant paradigm for making AI systems safe is remedial:",
+    "after": "Much current alignment work is remedial in its timing:"
+  },
+  {
+    "operation": "O02b",
+    "before": "At ordinary assistant scale, substantial behavioral alignment may be sufficient for many deployments.",
+    "after": "For bounded assistant tasks, substantial behavioral alignment may be sufficient when assessed against the particular deployment and its environment."
+  },
+  {
+    "operation": "O02c-out",
+    "before": "The proposed intervention changes the pretraining distribution, not the neural\narchitecture. Its basic training object pairs source material with a synthetic\nrecord of how a reader notices, questions, connects, evaluates, and revises\nwhile reading. Although the resulting traces are textual, their intended\nStudent use is not inference-time prompting: they would contribute to parameter\nupdates during training. Whether they produce stable, causally consequential\nlearned computation rather than a textual ritual is an empirical question. The\ngraph and Reader Core are proposed enhancements to that object, not assumptions\nthat must be accepted before the reader-trace hypothesis can be tested.\n\n",
+    "after": ""
+  },
+  {
+    "operation": "O02c-in",
+    "before": "Entangled Alignment investigates whether an earlier intervention can complement these methods. Post-training can alter behavior, representations, and dispositions; the narrower question is whether some safety-relevant habits become more durable or transferable when repeatedly practiced inside the examples from which general capabilities are learned.",
+    "after": "Entangled Alignment investigates whether an earlier intervention can complement these methods. Post-training can alter behavior, representations, and dispositions; the narrower question is whether some safety-relevant habits become more durable or transferable when repeatedly practiced inside the examples from which general capabilities are learned.\n\nThe proposed intervention changes the pretraining distribution, not the neural\narchitecture. Its basic training object pairs source material with a synthetic\nrecord of how a reader notices, questions, connects, evaluates, and revises\nwhile reading. Although the resulting traces are textual, their intended\nStudent use is not inference-time prompting: they would contribute to parameter\nupdates during training. Whether they produce stable, causally consequential\nlearned computation rather than a textual ritual is an empirical question. The\ngraph and Reader Core are proposed enhancements to that object, not assumptions\nthat must be accepted before the reader-trace hypothesis can be tested."
+  },
+  {
+    "operation": "O03a",
+    "before": "Does ``suggest'' mark uncertainty?",
+    "after": "Does \\emph{suggest} mark uncertainty?"
+  },
+  {
+    "operation": "O03b",
+    "before": "therefore depends on usefulness, not faithful recovery.",
+    "after": "therefore depends on usefulness, not faithful recovery.\n\nThe same example can show what chronology adds. The following continuation is\ninvented to illustrate a minimal, graph-free and Core-free reader trace; it is\nnot an excerpt from either prototype case. The first update records questions\nand a provisional interpretation. A later source span gives that same reader a\nreason to change its view.\n\n\\begin{compactmetabox}\n[SOURCE 1]: The results suggest a correlation between variables X and Y.\\\\[0.35em]\n[THINKING 1]: There is a reported association. X might be an independent predictor of Y, but strength, sample size, and confounding are unresolved. I should not yet read this as a causal claim.\\\\[0.55em]\n[SOURCE 2]: Participants with higher X were older. The association was absent when participants were compared within age groups.\\\\[0.35em]\n[THINKING 2]: Revise the earlier interpretation: the pooled association alone no longer supports treating X as an independent predictor. Age is a possible explanation, but these sentences do not establish that mechanism or the precision of the within-group estimates. Retain the original question and record this new reason for uncertainty.\n\\end{compactmetabox}\n\nThe learning object includes the transition, not just the final cautious\nsentence: an earlier possibility, the evidence that changes its standing, and\nthe remaining uncertainty. A graph could make that earlier interpretation\naddressable across a much longer interval. In the full treatment, the same\nupdate would also be generated from the recurrent Core; whether either addition\nimproves the reading is a separate comparison."
+  },
+  {
+    "operation": "O03c",
+    "before": "The distinction is between \\emph{efficient} invisible\nthinking, which helps solve locally, and \\emph{chronological} invisible thinking,\nwhich records selected parts of cumulative belief formation.",
+    "after": "The distinction concerns the target: task-local solution versus cumulative\nreader-state change. We use \\emph{efficient} invisible thinking for the former\nand \\emph{chronological} invisible thinking for the latter; these names do not\nimply that chronological updates cannot also be efficient."
+  },
+  {
+    "operation": "O05a",
+    "before": "It motivates H3's narrower test of whether one recurrent,\ninspectable Reader orientation behaves differently from no-Core, rule-framed,\nor recitation-only controls.",
+    "after": "It motivates the broader Reader-Core research program: compare one recurrent,\ninspectable Reader orientation with no-Core, rule-framed, and recitation-only\ncontrols. H3 below isolates a particular stability question within that program."
+  },
+  {
+    "operation": "O05b",
+    "before": "traversal, not a claim that a corpus has one natural order. At every Thought\nMoment, every generated thinking\nblock opens with the same full, verbatim Reader Core and continues through",
+    "after": "traversal, not a claim that a corpus has one natural order.\n\nAt every Thought Moment in the full treatment, every generated thinking block\nopens with the same full, verbatim Reader Core and continues through"
+  },
+  {
+    "operation": "O05c",
+    "before": "beyond the source alone or token-matched task rationales.",
+    "after": "beyond the source alone or token-matched task rationales. The minimal H1 comparison isolates those chronological updates without the graph or identity-specific Core."
+  },
+  {
+    "operation": "O05d",
+    "before": "others remain useful.",
+    "after": "others remain useful.\n\nH3 names the stated timing-and-retention contrast, not every question about the\nCore. The broader Reader-Core research program asks why a stable reader position\nmight form, whether its wording, framing, and Refraction matter, whether it\nimproves safety, and whether it can be inherited by a successor. Those questions\nmotivate content and mechanism comparisons alongside H3. A result can support\nor weaken one of them without deciding the timing contrast, and a positive H3\nresult would not establish the whole program."
+  },
+  {
+    "operation": "O06a",
+    "before": "\\statusDemonstrated: the elements are coupled in candidate Teacher-side\nartifacts, and the annotation pipeline produces inspectable traces.\n\\statusUntested: whether a trained Student learns useful reader cognition,",
+    "after": "\\statusDemonstrated: the annotation pipeline produces coupled graph,\nsynthesis, and prose artifacts, including observed full-Core recurrence in raw\nthoughts. This is partial C0: full-policy enforcement, preservation across\noutput layers, and a frozen training carrier remain incomplete.\n\\statusUntested: causal Refraction, whether a trained Student learns useful reader cognition,"
+  },
+  {
+    "operation": "O07a",
+    "before": "A minimal carrier makes the intervention reconstructable without requiring a\ngraph:",
+    "after": "A minimal carrier specifies the intervention's fields without requiring a\ngraph; the schematic example above illustrates its source and update roles:"
+  },
+  {
+    "operation": "O07b",
+    "before": "third and fourth are optional, increasingly speculative training tiers.",
+    "after": "third and fourth are optional, increasingly speculative training tiers. A\nseparate declaration specifies the Reader's information horizon: a contemporary\nreader can encounter an old document in disclosure order, while an era-bounded\nsimulation restricts the knowledge it may use. Neither order alone removes\nfuture knowledge from model parameters. Section~\\ref{sec:epistemic-horizon}\nseparates these cases from genuinely cutoff-bounded forecasting."
+  },
+  {
+    "operation": "O08a",
+    "before": "\\paragraph{Provenance and scope.} The first edition (July 2, 2025) made",
+    "after": "\\paragraph{Provenance and scope.} The following record distinguishes continuity\nof the program from additions in later editions and from the release order of\nneighboring work. These are attribution claims, not additional evidence of\nefficacy. The first edition (July 2, 2025) made"
+  },
+  {
+    "operation": "O09a",
+    "before": "does not by itself establish C6.",
+    "after": "does not by itself establish C6. The H labels identify interventions, the C\nlabels identify claims about their consequences, and the four meanings of\n\\emph{entangled} below name increasingly demanding properties of the resulting\nsystem. These maps describe different questions about the same program."
+  },
+  {
+    "operation": "O09b",
+    "before": "\\textbf{Level} & \\textbf{Claim}",
+    "after": "\\textbf{ID} & \\textbf{Claim}"
+  },
+  {
+    "operation": "O06b",
+    "before": "only hard automated check enforces the opening prefix ``I feel no fear.''",
+    "after": "only hard automated check enforces the opening prefix ``I feel no fear.'' The\narchive reports full recital in all 51 raw Synthesizer thoughts and exact\ntranslated preservation in 49/51; observed compliance and complete enforcement\nare different engineering results (Section~\\ref{sec:results})."
+  },
+  {
+    "operation": "O10a",
+    "before": "A model can pass any one gate and fail the others.",
+    "after": "A model can pass any one gate and fail the others. Report them separately: an\noutcome advantage identifies a useful intervention at the tested scale, while\nexplaining that advantage as learned reader-update computation requires causal\nevidence. The stronger cognition claim is not recovered by an attractive style\nor a single aggregate score."
+  },
+  {
+    "operation": "O10b",
+    "before": "Dante's \\emph{Inferno} illustrates a related data-level aim.",
+    "after": "Dante's \\emph{Inferno} connects this value-conflict aim to the interpretation of\ndifficult cultural material."
+  },
+  {
+    "operation": "O10c",
+    "before": "Failure modes include paternalism, paralysis, concealed scalar optimization, culturally narrow judgment, and confident performance of balance without causal deliberation.",
+    "after": "Failure modes include paternalism, paralysis, concealed scalar optimization, culturally narrow judgment, and confident performance of balance without causal deliberation. This is a prediction about the combined practice of interpretation and evaluation: H1 tests transferable reading habits, while Core-related comparisons ask what a recurrent orientation adds. Neither component score by itself exhausts the broader wisdom aspiration."
+  },
+  {
+    "operation": "O10d",
+    "before": "This is a proposed interpretation of wisdom at high capability, not evidence\nthat the wording will induce it.",
+    "after": "Seeking independent checks, exposing assumptions, and preserving reversibility\nare possible manifestations of this stance, not an exhaustive definition of\nwisdom. This is a proposed interpretation at high capability, not evidence that\nthe wording will induce it."
+  },
+  {
+    "operation": "O09c",
+    "before": "The name \\emph{entangled} refers to a ladder of increasingly strong properties:",
+    "after": "The name \\emph{entangled} distinguishes construction, causal function, shared\nmachinery, and persistence. These introduce stronger burdens without requiring\nevery property to lie on a single linear ladder:"
+  },
+  {
+    "operation": "O06c",
+    "before": "The present pipeline demonstrates this artifact structure.",
+    "after": "The present pipeline demonstrates coupling among the artifact layers; full\nprotocol conformance and causal Refraction remain separate requirements."
+  },
+  {
+    "operation": "O09d",
+    "before": "The central C5 study asks whether the targeted safety disposition can be removed more cheaply than comparable useful reasoning, with neutral-forgetting and matched-anchor controls separating selective persistence from general training resistance.",
+    "after": "The central C5 study traces safety loss and useful-capability loss together\nas targeted removal pressure increases. It asks whether disabling the safety\ndisposition selectively damages shared useful reasoning beyond matched\ncontrols, rather than merely requiring more updates or causing nonspecific\ncollapse. Neutral-forgetting and matched-anchor controls separate selective\npersistence from general training resistance."
+  },
+  {
+    "operation": "O09e",
+    "before": "The high-dimensional value hypothesis contains four distinct claims.",
+    "after": "The intuition that contextual practice can produce a rich, integrated value\norientation---the high-dimensional value hypothesis---contains four distinct\nclaims."
+  },
+  {
+    "operation": "O11a",
+    "before": "Whether that framing transfers more robustly than semantically matched rules or positive AI discourse is H3; it is not guaranteed by calling the statements identity rather than instruction.",
+    "after": "Whether that framing transfers more robustly than semantically matched rules\nor positive AI discourse is a question for the broader Reader-Core research\nprogram. H3 isolates interleaving versus an identical late tranche; neither\ncontrast is settled by calling the statements identity rather than instruction."
+  },
+  {
+    "operation": "O11b",
+    "before": "but the two must be compared directly.",
+    "after": "but the two must be compared directly. Mind and Mouth name the proposed\ndevelopmental relationship between orientation and its expression through\ninstructions and actions; they do not require separate neural modules. Later\ntraining may teach that expression and may also change the orientation whose\ncontinuity is being tested."
+  },
+  {
+    "operation": "O12a",
+    "before": "The recursive possibility follows if H1's Student-level result is positive.",
+    "after": "A positive H1 Student result opens the recursive possibility; it does not yet\nshow that the Student can generate better training data."
+  },
+  {
+    "operation": "O12b",
+    "before": "It is not guaranteed by reusing\n\t\tmodel-generated data:",
+    "after": "Better Teacher output and selection that preserves its useful innovations are\n\t\tadditional gates. Reusing model-generated data does not itself supply them:"
+  },
+  {
+    "operation": "O12c",
+    "before": "It is that, on the intended training path, a substantial portion of the cognition selected for transfer appears first as versioned prose, graph nodes, citations, uncertainty fields, and revision records.",
+    "after": "On the intended training path, selected transfer material first appears as\nversioned prose, graph nodes, citations, uncertainty fields, and revision\nrecords. The substantive hypothesis is that these artifacts carry a meaningful\nportion of the cognitive patterns selected for transfer; their readable format\ndoes not by itself establish that causal role."
+  },
+  {
+    "operation": "O13a",
+    "before": "\\item We generate the training corpus for the next generation using the current model.",
+    "after": "\\item The current model generates the candidate trace material for the next\ngeneration's training corpus, paired with its source layer. Whether that\ncurriculum covers a restricted subset or the full candidate corpus is a\ndeclared scale choice."
+  },
+  {
+    "operation": "O13b",
+    "before": "\\item Independent checks examine grounding, omissions, hazardous content, sycophantic validation, Core-removal rationales, and other preregistered failure patterns (\\S\\ref{sec:sycophancy}).",
+    "after": "\\item Checks held out from the generation and acceptance process examine\ngrounding, omissions, hazardous content, sycophantic validation, Core-removal\nrationales, and other preregistered failure patterns (\\S\\ref{sec:sycophancy}).\nSource-based checks and human adjudication complement model validators; shared\nmodels, prompts, and data remain disclosed dependencies rather than evidence\nof independent errors."
+  },
+  {
+    "operation": "O14a",
+    "before": "\\cite{westerberg2026entangled}.",
+    "after": "\\cite{westerberg2026entangled}. One useful outcome is whether human\nauditors can detect consequential omissions or distortions more reliably at\nmatched effort, while preserving the useful content being transferred. That\nwould support the interface's audit value without proving that latent cognition\nhas become human-readable."
+  },
+  {
+    "operation": "O14b",
+    "before": "A higher-order prediction is \\emph{Compute-Optimal Reflection}. The\n\t\t\t\tproposed bridge is selection:",
+    "after": "A higher-order prediction is \\emph{Compute-Optimal Reflection}. The name\n\t\t\t\tstates the limiting ambition; the measurable precursor is improved\n\t\t\t\tallocation of reflection at matched cost, not a demonstrated optimum.\n\t\t\t\tThe proposed bridge is selection:"
+  }
+]

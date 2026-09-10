@@ -1,0 +1,22 @@
+{
+  "changed_units": 59,
+  "restored_original_units": [
+    "U492",
+    "U513",
+    "U525",
+    "U530",
+    "U539",
+    "U542",
+    "U554",
+    "U566"
+  ],
+  "headings": 47,
+  "labels": 19,
+  "citation_instances": 20,
+  "word_count_before": 8278,
+  "word_count_expanded": 10171,
+  "word_count_after": 9080,
+  "words_removed_from_expansion": 1091,
+  "sha256_before": "790a424becebb67fa4f46550dfefd31176ce94ee66c03b0965ec1a87e5cea57a",
+  "sha256_after": "8e067fcb16e8a46a9f86083bcfb4652680e840d0fa328c317311c48becd7fdb3"
+}
