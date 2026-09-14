@@ -137,8 +137,8 @@ The runs that produced the shipped graphs (January 2026) predate that versioning
   year         = {2026},
   month        = sep,
   publisher    = {Zenodo},
-  doi          = {10.5281/zenodo.22698582},
-  url          = {https://doi.org/10.5281/zenodo.22698582}
+  doi          = {10.5281/zenodo.22739447},
+  url          = {https://doi.org/10.5281/zenodo.22739447}
 }
 ```
 

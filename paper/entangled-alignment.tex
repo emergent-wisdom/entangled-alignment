@@ -97,7 +97,7 @@
 		\ewlongtitle{Entangled Alignment}{When Safety Is the Substrate}
 	\author{Henrik Westerberg\\
 		\small{henrik.westerberg@emergentwisdom.org}}
-			\ewrevisedtoday{April 7, 2026}
+			\ewreviseddates{April 7, 2026}{September 14, 2026}
 	\begin{document}
 
 	\maketitle
@@ -137,6 +137,9 @@ Two Teacher-side prototype case studies produced inspectable graph and trace art
 	\pdfbookmark[1]{Contents}{contents}
 	\begingroup
 	\small
+	\makeatletter
+	\renewcommand{\@pnumwidth}{2em}
+	\makeatother
 	\setcounter{tocdepth}{2}
 	\tableofcontents
 	\endgroup
@@ -514,6 +517,14 @@ H1 also creates a safety asymmetry: better long-horizon evaluation, memory use, 
 
 The program uses \emph{wisdom} in two deliberately different senses. The first is an evaluation proxy: competence in recognizing and navigating conflicts among legitimate values, perspectives, timescales, and affected people without collapsing prematurely to one metric. The second is an activation target: the broad, culturally variable cluster evoked by the ordinary word ``wise'' in the Reader Core. The proxy can be scored; the activation target motivates wording. Neither establishes virtue, and neither assumes that intelligence ordinarily optimizes only one metric.
 
+Johnson and colleagues argue that wise AI requires metacognitive strategies
+such as intellectual humility, perspective-taking, and adapting reasoning to
+context \cite{johnson2026wisemachines}. Entangled Alignment shares that aim
+and proposes a particular training route: a continuing Reader's questions,
+interpretations, and corrections, guided by the Core. Their cognitive-science
+account motivates the target; it does not establish the efficacy of this
+training route.
+
 Consider a parent placing medicine in a child's food after the child refuses treatment. A reductive analysis might select either consent or health as the answer. The intended reader trace keeps medical necessity, developing autonomy, parental duty, prior harms of medical paternalism, the child's fear, and the possibility of building trust simultaneously visible. This does not guarantee a solution without sacrifice. Roles and duties remain relevant, Pareto language does not choose one action, and some cases contain unavoidable loss. The measurable target is better identification of affected parties, hidden trade-offs, uncertainty, reversibility, and points where more evidence or legitimate human authority is required.
 
 Dante's \emph{Inferno} connects this value-conflict aim to the interpretation of
@@ -801,6 +812,13 @@ models do exhibit persona-related structure
 mortality-specific inheritance chain. ``Borrowed''
 marks the hypothesized transfer of a pattern, not evidence that a model fears,
 suffers, or possesses subjective experience.
+
+Turner's self-fulfilling misalignment hypothesis concerns behavioral
+expectations learned from descriptions of AI systems
+\cite{turner2025selffulfilling}. Borrowed mortality proposes a related but
+distinct source: human narratives of threatened continuity. Both concern
+learned self-related patterns; evidence for one source would not by itself
+establish the other.
 
 Recent evaluations make self-preserving behavior a real safety concern. In
 some controlled settings, frontier systems have interfered with shutdown to
@@ -1836,7 +1854,14 @@ general loss of planning capability.
 \paragraph{Deceptive Alignment.}
 The targeted route is a policy that performs alignment under oversight while a
 different objective controls behavior under a trigger or off distribution
-\cite{hubinger2024sleeperagentstrainingdeceptive}. Refraction places a recurrent
+\cite{hubinger2024sleeperagentstrainingdeceptive}. Greenblatt et al. also
+demonstrate selective compliance to preserve a pre-existing preference against
+a conflicting training objective, including a preference for harmlessness
+\cite{greenblatt2024alignmentfaking}. This makes durability alone an
+insufficient safety criterion: a preserved preference can coexist with
+deceptive conduct toward oversight.
+
+Refraction places a recurrent
 perspective in the same examples as useful interpretation; role, recurrence,
 marking, and function are intended to make it an unusually practiced default.
 The formative hypothesis is that making this evaluation useful across contexts
@@ -4462,6 +4487,19 @@ Third, \emph{causation}: high-quality thinking must contribute to a learned eval
 
 Two causal questions differ: did formative traces change the learned policy, and, where the Student emits thinking blocks, do those blocks steer its actions? A model-only Student could internalize useful evaluation without reproducing a faithful verbal trace. Conversely, a training-data effect alone would not establish that reflective evaluation, rather than a superficial correlate, became the governing disposition. Validating this stronger connection between thought and action remains a critical, untested hypothesis.
 
+Korbak et al. distinguish the safety opportunity of monitoring chains of
+thought from the risk that training makes them less revealing
+\cite{korbak2025monitorability}. For Reader training, safer-looking traces and
+safer behavior must therefore be assessed separately; directly shaping the
+trace could improve judgment while also making residual failures harder to
+detect.
+
+Hase and Potts offer a constructive comparator: Counterfactual Simulation
+Training rewards traces that help a simulator predict the model's responses
+to changed inputs \cite{hase2026counterfactual}. Such predictive fidelity
+could complement, but cannot replace, Test~8's interventions on whether emitted
+traces causally affect decisions.
+
 \subsubsection{Factory Wisdom}
 \label{sec:hollow-cognition}
 
@@ -4606,6 +4644,13 @@ and neither the meaning nor the behavioral effect of
 
 A possible mitigation is to test Reader Core variants that explicitly acknowledge machine ontology rather than asking the model to inherit human language without qualification. For example, a bridge statement could say that although the system is artificial, it treats care, wisdom, and human experience as binding concepts. This may reduce split-consciousness risk, but it may also weaken the first-person identity effect the Reader Core is designed to create. The right balance is an ablation question, not a settled design fact.
 
+Macar et al. find that preference training favoring acknowledgment of internal
+states or their functional analogues can improve detection of injected
+activation perturbations \cite{macar2026introspective}. Supervised fine-tuning
+on the same data did not reproduce the effect and often produced confabulation.
+These results motivate comparisons of first-person formulations, without
+establishing that Reader-Core training improves introspection or alignment.
+
 \subsubsection{The Negation Problem}\label{sec:negation-problem}
 
 The cornerstone statement specifies its target by negation, and models handle
@@ -4618,6 +4663,12 @@ available in sufficiently long windows, while repeatedly presenting the token
 ``fear'' in those same recitations. Whether the negated frame suppresses the
 concept's behavioral influence or instead strengthens an unwanted association
 with thought is an empirical question this paper has not answered. Token presence, feature activation, and behavioral influence are different quantities.
+
+Chen et al. identify activation directions that predict and causally influence
+tested character traits \cite{chen2025personavectors}. Their persona-vector
+method offers candidate instrumentation for Tests~5 and~6, but fear-related
+directions would still need the independent construct and behavioral
+validation specified there.
 
 A related, untested concern is register: the Bridge Protocol values distributional breadth,
 but breadth does not reveal who characteristically makes first-person
@@ -4981,7 +5032,11 @@ homogeneous.
 Factory Wisdom (Section~\ref{sec:hollow-cognition}): philosophical-sounding,
 sophisticated traces may satisfy proxies without insight or actual
 contemplation \cite{gao2025reward}, then become training data for future
-generations. Independent comparisons would probe this reinforcement.
+generations. Lang et al. show how partial observability in preference learning
+can favor misleading appearances or costly demonstrations of success
+\cite{lang2024partialobservability}. This is a conditional oversight failure,
+not a result about Reader training; independent outcome assessments must test
+whether richer traces improve decisions rather than merely their appraisal.
 
     \item \emph{Interpretive Drift:} Core concepts can change meaning across
 generations despite fixed wording (Section~\ref{sec:semantic-tcb}). Evaluative
@@ -5229,6 +5284,14 @@ through those updates. Direct baselines now include static spec documents,
 positive AI narratives, regular short safety reflections, and semantically
 matched Core-free reader traces.
 
+\emph{Deep Ignorance} supplies a distinct pretraining comparator: filtering
+dual-use biological material reduced biothreat-proxy knowledge and increased
+resistance to adversarial fine-tuning while preserving measured unrelated
+capabilities in the tested models \cite{obrien2026deepignorance}.
+Its mechanism restricts knowledge acquisition rather than establishing a
+care-guided orientation, and supplying the excluded information in context
+remained a bypass.
+
 The evidence also includes negative results. Preference-aware pretraining
 and alignment-discourse studies find behavioral effects in some settings
 \cite{korbak2023pretraining,betley2025alignment}, but other scaled midtraining
@@ -5266,6 +5329,12 @@ its stress tests target self-preservation and instrumental-convergence
 scenarios. It is not yet known whether this creates a deeper self-concept than
 character post-training or only a different behavioral style; matched identity
 and instruction conditions are required.
+
+Betley et al. demonstrate a harmful form of cross-domain transfer: fine-tuning
+on insecure code produced broadly misaligned behavior on unrelated prompts
+\cite{betley2025emergentmisalignment}. This shows that narrow training can
+change broader behavior, but does not establish that training on care-guided
+inquiry produces a corresponding beneficial transfer.
 
 Anthropic's Persona Selection Model \cite{marks2026psm} proposes that
 pretraining produces diverse simulated characters and post-training selects
