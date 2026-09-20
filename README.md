@@ -1,11 +1,22 @@
-# Entangled Alignment: Learning Care During Capability Formation
+# Entangled Alignment: When Safety Is Substrate
 
 [![Paper](https://img.shields.io/badge/Paper-PDF-red)](paper/entangled-alignment.pdf)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.16440311.svg)](https://doi.org/10.5281/zenodo.16440311)
 [![Code: MIT](https://img.shields.io/badge/Code-MIT-green)](LICENSE)
 [![Content: CC BY 4.0](https://img.shields.io/badge/Content-CC%20BY%204.0-lightgrey)](LICENSE-CONTENT)
 
-Companion repository for *Entangled Alignment: Learning Care During Capability Formation* — a research program that treats reader augmentation, persistent graph memory, and Reader-Core stability as separable hypotheses. The code here is the paper's annotation pipeline: a multi-agent system that reads a book chronologically and builds a knowledge graph of its concepts, relationships, and emergent themes — Gemini-powered agents coordinated through an MCP (Model Context Protocol) server.
+Companion repository for *Entangled Alignment: When Safety Is Substrate*. The
+paper proposes learning capability and care together throughout pretraining:
+a continuing Reader's questions, judgments, and belief revisions become
+training material alongside the sources it reads. Reader augmentation,
+persistent graph memory, and Reader-Core stability are separately testable
+hypotheses.
+
+The code here is a working research prototype of the Teacher-side annotation
+pipeline: a multi-agent system that reads a source chronologically, builds a
+shared Understanding Graph, synthesizes its findings, and renders them as
+prose. The two included runs used Gemini 3 Flash Preview in January 2026.
+They demonstrate the construction workflow; no Student has yet been trained.
 
 ## Browse the included graphs
 
@@ -130,11 +141,12 @@ The runs that produced the shipped graphs (January 2026) predate that versioning
 
 ## Citing
 
-The citation below identifies the September 20, 2026 release.
+The DOI below identifies the latest published version. It will be updated
+when a new version DOI is assigned to this revision.
 
 ```bibtex
 @misc{westerberg2026entangled,
-  title        = {Entangled Alignment: Learning Care During Capability Formation},
+  title        = {Entangled Alignment: When Safety Is Substrate},
   author       = {Westerberg, Henrik},
   year         = {2026},
   month        = sep,

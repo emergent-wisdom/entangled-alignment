@@ -2,7 +2,7 @@ cff-version: 1.2.0
 message: >-
   If you use Entangled Alignment in your research, please cite the
   preprint below.
-title: "Entangled Alignment: Learning Care During Capability Formation"
+title: "Entangled Alignment: When Safety Is Substrate"
 abstract: >-
   Companion implementation and artifacts for a research program that
   augments source text with synthetic chronological reader traces, uses
@@ -34,7 +34,7 @@ keywords:
   - reader core
 preferred-citation:
   type: article
-  title: "Entangled Alignment: Learning Care During Capability Formation"
+  title: "Entangled Alignment: When Safety Is Substrate"
   authors:
     - family-names: Westerberg
       given-names: Henrik

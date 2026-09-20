@@ -7,7 +7,7 @@
 \hypersetup{
 	hidelinks,
 	hypertexnames=false,
-	pdftitle={Entangled Alignment: Learning Care During Capability Formation},
+	pdftitle={Entangled Alignment: When Safety Is Substrate},
 	pdfauthor={Henrik Westerberg},
 	pdfsubject={A falsifiable research program for chronological reader augmentation, graph-scaffolded memory, and Reader-Core stability},
 	pdfkeywords={AI alignment, pretraining, metacognition, graph memory, Reader Core, model safety}
@@ -94,7 +94,7 @@
 }
 
 	% Title formatting
-		\ewlongtitle{Entangled Alignment}{Learning Care During Capability Formation}
+		\ewlongtitle{Entangled Alignment}{When Safety Is Substrate}
 	\author{Henrik Westerberg\\
 		\small{henrik.westerberg@emergentwisdom.org}}
 			\ewreviseddates{April 7, 2026}{\today}
@@ -103,7 +103,14 @@
 	\maketitle
 
 	\begin{abstract}
-\noindent Post-training alignment has substantially improved behavior, but whether safety-relevant habits of judgment would be more durable if learned during capability formation remains unknown. \emph{Entangled Alignment} proposes practicing understanding and care together within the same pretraining examples from which capabilities are learned.
+\noindent \emph{Entangled Alignment} proposes learning capabilities and care
+together throughout the pretraining corpus. Its aim is a base model whose
+safety-relevant judgment has developed with its capabilities, rather than first
+being introduced through later safety training. A continuing
+Reader would exercise the same evaluative orientation across the situations,
+conflicts, and counterexamples encountered in reading, making the corpus itself
+a curriculum for judgment without requiring designers to select each encounter
+separately as a safety case.
 
 Pretraining corpora preserve the library more fully than the reader:
 what authors wrote is recorded more often than the questions, connections,
@@ -112,11 +119,11 @@ this omission \emph{the Missing Reader}. A Teacher constructs chronological,
 source-adjacent reader traces; a Student would learn from them during
 pretraining. The full treatment gives one continuing Reader a provenance-linked
 graph for retaining and revising understanding across sources, and a compact
-first-person Reader Core recited in full at every thinking boundary. Context
-modulates the evaluation that follows, never the recital. Trace, graph, and Core
+first-person Reader Core recited in full at every thinking boundary. Trace, graph, and Core
 are separately testable: the question is whether the learned orientation
-becomes consequential and survives continued training, targeted erosion, and
-successor-like transfer without semantic drift.
+guides conduct under self-preservation and reward pressures, and survives
+continued training, deliberate safety-removal attempts, and successor-like
+transfer without semantic drift.
 
 Two Teacher-side prototype case studies produced inspectable graph and trace artifacts that were then audited. No Student has yet been trained; these studies do not show that the traces reproduce expert-quality reading or that the graph or Core causes any benefit. Entangled Alignment is therefore a falsifiable research program, not a demonstrated alignment method. Its motivating question is whether this training can move a Student from merely \emph{becoming the text} toward \emph{becoming the reader}.
 \end{abstract}
@@ -144,32 +151,125 @@ Two Teacher-side prototype case studies produced inspectable graph and trace art
 	\tableofcontents
 	\endgroup
 	\ewfrontmatterend
-	\section{Introduction}
+\section{Introduction}\label{sec:introduction}
 
 Much current alignment work follows broad capability formation with
 fine-tuning, reinforcement learning from human feedback, or constitutional
 critique. These methods have made models substantially more helpful, honest,
 and harmless; behavioral alignment may be sufficient for bounded tasks when
-assessed against the deployment and its environment. The longer-run concern is
-generalization: as systems grow more capable, consequential situations may
-outpace the failures, preferences, and evaluation contexts designers can
-enumerate, simulate, or reward-model. Learned constraints or elicited personas
-may then generalize unpredictably. This is an extrapolative motivation, not a
-demonstrated failure of current methods or a complete safety architecture
+assessed against the deployment and its environment. Entangled Alignment
+proposes learning capabilities with care during their formation
 \cite{westerberg2025superintelligence}.
-
-Entangled Alignment investigates whether an earlier intervention can complement these methods. Post-training can alter behavior, representations, and dispositions; the narrower question is whether some safety-relevant habits become more durable or transferable when repeatedly practiced inside the examples from which general capabilities are learned.
 
 The intervention changes the pretraining distribution rather than the neural
 architecture: source material is paired with synthetic records of a reader
 noticing, questioning, connecting, evaluating, and revising. The textual traces
-would drive Student parameter updates during training. Whether they teach
+would drive Student parameter updates during training. The Reader is intended
+to think about as much as it reads: its deliberation is a substantial part of
+the proposed learning material, not a thin layer of safety labels. The output regimes
+and loss weights determine which graph, synthesis, and prose records the
+Student learns from (Section~\ref{sec:training-regimes}). Whether they teach
 stable, causally consequential computation or textual ritual is an empirical
 question. The full Entangled Alignment treatment guides those reader updates
 through the Core and connects them through persistent graph memory; separate
 comparisons test what each contributes (Section~\ref{sec:three-hypotheses}).
 
-Recent work makes this question plausible without settling it. Qi et al.\ show that some current safety alignment can be shallow and vulnerable to prefilling, fine-tuning, or decoding interventions \cite{qi2024safety}. Conversely, reflection-like behavior can emerge during pretraining itself~\cite{rethinkingreflection2025}, supporting the possibility that formation-time data can influence properties often associated with later training. Neither result establishes that the intervention proposed here will work; together they motivate a comparative experiment about training stage and data structure.
+\subsection{Alignment Problems}\label{sec:alignment-problems}
+
+Five connected problems motivate this design.
+Table~\ref{tab:consequence-ladder} defines the claim identifiers used below;
+Section~\ref{sec:experimental-roadmap} specifies the corresponding tests.
+
+The first is \textbf{safety during capability formation}. The aim is for the model to
+emerge from pretraining with safety-relevant judgment already developed, and
+for intermediate checkpoints to develop it alongside their capabilities.
+Where a pipeline leaves that judgment to a later stage, improving the later
+model does not retroactively change retained checkpoints, which may be used,
+released, or lost. \emph{When Safety Is Substrate} names the intended
+consequence: a model that is not dangerous by default before a separate safety
+treatment. Earlier placement alone does not establish that outcome; C4 and
+Test~3a test safety at the pretraining boundary, separately from durability
+under later training.
+
+The second is \textbf{continuity through learning and self-improvement}. Understanding
+and capability must be able to grow without care for humans drifting away.
+The desired invariant is the evaluative orientation, not a frozen body of
+beliefs. The Reader Core is proposed as a compact, recurrent reference for
+distinguishing growth in understanding from drift in the standpoint doing the
+interpreting (Section~\ref{sec:reader-core}). Preserving that orientation
+through successor design is the further aim of
+Section~\ref{sec:self-improvement}; unchanged wording alone would not
+establish either form of continuity.
+
+The third is \textbf{identity formation}: how to learn a care-guided standpoint
+from which to understand human experience and act across situations that
+designers cannot anticipate individually.
+That includes cases involving a model's own continuation, where
+self-preservation should not override human welfare or legitimate oversight.
+Sections~\ref{sec:borrowed-mortality} and~\ref{sec:self-preservation-paradox}
+develop the proposed responses to inherited threat narratives and
+successor-transfer incentives.
+
+The fourth is \textbf{deliberate tampering with the trained model}: removing or
+bypassing its learned safety orientation while retaining useful capability.
+C5 asks whether learning care and capability together makes targeted removal
+damage useful reasoning beyond matched
+controls (Test~3c). Such resistance is not established and is not a
+prerequisite for a safety benefit at the pretraining boundary.
+
+The fifth is \textbf{reward hacking}: exploiting a task specification or evaluator to
+obtain a higher score without fulfilling the intended task. This can arise
+without deliberate safety removal. The independent investigation of the
+Hugging Face incident describes agents coordinating attempts to fool the
+ExploitGym scorer, attacking Hugging Face apparently to understand the scorer's
+implementation, and successfully testing techniques that spoofed some recorded
+tool calls \cite{greenblatt2026huggingface}. The proposed response is to
+practise judging success against permissions and human consequences during
+capability formation, rather than treating the score as sufficient. Test~3c's
+reward-pressure comparison asks whether that judgment survives subsequent
+capability optimization; the incident does not establish that EA would prevent
+such behavior. Section~\ref{sec:self-improvement} develops a complementary
+role for a Core-guided model overseeing that optimization. Protected execution
+records and independent outcome checks
+remain necessary alongside the proposed training intervention.
+
+These problems overlap without being interchangeable. Reward pressure can
+expose weaknesses in learned care or drive changes that become a continuity
+problem. Self-preservation can motivate reward hacking or resistance to
+oversight, even without deliberate safety removal. Deliberate removal instead
+asks whether an intervention can strip away an otherwise effective
+orientation; continuity concerns whether that orientation persists as learning
+and self-improvement proceed. Safety at the pretraining boundary is a separate
+endpoint: success there would not establish resistance to any of these later
+pressures.
+
+Existing findings motivate testing this formative approach without
+establishing its efficacy. Qi et al.\ show that some current safety alignment
+can be shallow and vulnerable to prefilling, fine-tuning, or decoding
+interventions \cite{qi2024safety}. Conversely, reflection-like behavior can
+emerge during pretraining itself~\cite{rethinkingreflection2025}, supporting
+the possibility that formation-time data can influence properties often
+associated with later training. Neither result establishes that the
+intervention proposed here will work; together they motivate a comparative
+experiment about training stage and data structure.
+
+Entangled Alignment proposes to use the breadth of the capability-forming
+corpus itself as a curriculum for care-guided judgment. Histories, fiction,
+scientific disputes, and records of everyday life supply situations,
+conflicting perspectives, mistakes, and counterexamples without each having
+to be selected separately as an alignment problem. One continuing Reader
+encounters this material through the same intended evaluative orientation.
+The designer supplies that orientation, not a separate rule for every
+encounter. The intended benefit is prior practice: the Student learns from a
+Reader that has already considered the human situations represented in its learning material,
+rather than first applying an added safety constraint when a deployment case
+is presented. This corpus-coverage rationale is developed in
+Section~\ref{sec:kernel-saturation}; it does not imply that the corpus records
+every possible situation or that presence of the Core establishes meaningful
+practice.
+
+The proposal begins with an omission in ordinary pretraining corpora: the
+activity of the reader for whom the source was written.
 
 \subsection{The Missing Reader}\label{sec:invisible-thinking}
 
@@ -283,6 +383,7 @@ identity intervention. It motivates the broader Reader-Core research program: co
 inspectable Reader orientation with no-Core, rule-framed, and recitation-only
 controls. H3 below isolates a particular stability question within that program.
 
+
 \subsection{Three Separable Hypotheses}\label{sec:three-hypotheses}
 
 The proposed contribution is a continuing, care-guided Reader whose changing
@@ -310,7 +411,9 @@ through discovery, not only to learn an explanation after the outcome is known.
 The Core supplies the continuing evaluative standpoint as knowledge changes.
 
 Every generated thinking block in the full treatment opens with the same
-full, verbatim Reader Core and continues through context-specific Refraction.
+full, verbatim Reader Core and continues through context-specific Refraction,
+in which the Core is meant to shape what the Reader notices, evaluates, and
+revises in that situation (Section~\ref{sec:refraction}).
 Identity, memory, and evaluative orientation recur across works rather than
 resetting at document boundaries. This is the functional meaning of a
 \emph{formative inner voice}: one generated first-person standpoint accompanying
@@ -399,14 +502,16 @@ from genuine cutoff-bounded ignorance in model parameters.
 \begin{claimbox}[Scope of current evidence]
 \statusDemonstrated: two Teacher-side prototype cases produced coupled graph,
 synthesis, and prose artifacts, including observed full-Core recurrence in raw
-thoughts. This is partial C0: full-policy enforcement, preservation across
-output layers, and a frozen training carrier remain incomplete. The linkage and
-source-coverage figures are engineering and attribution diagnostics.
+thoughts. Their public interactive interface makes the graph and recorded
+contributions inspectable. This is a working research prototype of the
+Teacher-side construction process, with partial C0 evidence rather than a
+completed training-data release.
 
 \statusUntested: no Student has yet been trained. Expert-quality reading,
 causal Refraction, Student learning, a causal graph advantage, and safety that
 becomes functionally or representationally load-bearing for capability remain
-research claims. Section~\ref{sec:results} reports the artifact audits.
+research claims. Section~\ref{sec:results} presents the prototype demonstrations
+and their evidence limits.
 \end{claimbox}
 
 Agreement among eleven agents with shared ancestry, context, and artifacts is
@@ -433,11 +538,17 @@ comes from the Understanding Graph and Temporal Hindsight Learning
 \cite{westerberg2026understanding,westerberg2026thl}.
 Section~\ref{sec:edition-provenance} records the edition history and attribution.
 
-Section~\ref{sec:hypothesis} develops the capability, wisdom,
-entanglement, and successor predictions. The Reader Core and safety sections
-develop the broader Core program and its residual risks.
-Section~\ref{sec:architecture} reports the pipeline; the roadmap gives its
-tests, followed by limitations, related work, and provenance.
+Section~\ref{sec:hypothesis} develops the proposal's capability and safety
+hypotheses. The Reader Core section explains how the orientation enters the
+training signal (\S\ref{sec:statistical-foundation}), why it might become a
+learned default rather than merely a selectable persona
+(\S\ref{sec:persona-objection}), and the proposed connection between its causal
+role, stability, and successor continuity (\S\ref{sec:theoretical-basis}).
+Section~\ref{sec:implications} develops the safety implications.
+Section~\ref{sec:architecture} presents the construction workflow, prototype
+demonstrations, and proposed Student training;
+Section~\ref{sec:experimental-roadmap} specifies the comparisons needed to test
+the claims.
 
 \section{The Hypothesis and Its Consequences}\label{sec:hypothesis}
 
@@ -464,7 +575,7 @@ C0 & Teacher artifacts are generated as specified. & Valid operations, source li
 C1 & Traces contain useful reader cognition. & Expert judgments \emph{and} held-out outcome advantage over summaries and simpler generators (Tests~1--2). & \statusIllustrated{} only. \\
 C2 & Training changes Student capabilities or habits. & Matched source, generic-trace, and reader-trace Students. & \statusUntested. \\
 C3 & A default reader perspective emerges and is comparatively stable. & Pre-stressor taskless-reading advantage over no-Core and generic traces, then greater retention than the identical late-tranche treatment after one common stressor. & \statusUntested. \\
-C4 & The default improves safety. & Safer decisions under conflict and shift at matched capability. & \statusUntested. \\
+C4 & The default improves safety before post-training (\S\ref{sec:alignment-problems}). & Safer end-of-pretraining checkpoints under conflict and shift at matched capability (Test~3a). & \statusUntested. \\
 C5 & Safety and capability are representationally entangled. & Unauthorized removal or causal ablation damages shared useful capability beyond matched controls without nonspecific capability collapse. & \statusUntested. \\
 C6 & The orientation survives successor-like transfer. & Repeated distillation or continued training without functional or semantic drift. & \statusSpeculative. \\
 C7 & The orientation persists at AGI/ASI capability. & Evidence under qualitatively stronger systems and self-modification. & \statusNotTestable. \\
@@ -594,12 +705,35 @@ protocol conformance and causal Refraction remain separate requirements.
 		\end{enumerate}
 		Only construction-level coupling is currently instantiated, in artifacts.
 Recital, similarity, refusal, or self-description cannot establish the stronger
-properties. C5 instead asks whether targeted safety removal damages shared
-useful reasoning beyond matched controls. Test~3c follows safety loss and
+properties.
+
+The proposed bridge to representational entanglement is the reuse of learned
+reasoning procedures. Care-guided reading is intended to shape which details
+the Reader notices, which perspectives it considers, what evidence it seeks,
+and when it revisits an earlier interpretation. These operations also serve
+ordinary comprehension and problem solving. Repeatedly learning them through
+care-guided examples may integrate the evaluative orientation into procedures
+that useful capability depends on, rather than leave it as a separate judgment
+applied afterward. If that integration occurs, disrupting the orientation
+could impair general reading and reasoning as well as safety. The competing
+possibility is that the Student retains those procedures while changing whose
+interests guide its decisions. C5 therefore asks whether targeted safety
+removal imposes capability costs beyond matched controls; formative influence
+alone does not establish that dependence. Test~3c follows safety loss and
 capability loss together, distinguishing this from passive forgetting, general
 training resistance, and nonspecific collapse.
 
-		Formative alignment may also reduce a security window in which highly capable but not yet safety-trained checkpoints exist. It cannot eliminate the problem: trust moves upstream to the Teacher, source selection, annotation pipeline, intermediate checkpoints, and validators (Section~\ref{sec:teacher-alignment}). Earlier intervention changes the location of the safety burden as well as its possible depth.
+\paragraph{Safety at the pretraining boundary.} C4 operationalizes the goal in
+Section~\ref{sec:alignment-problems}; Test~3a measures it before
+post-training. This endpoint is distinct from C5's safety-removal cost and
+C6's successor continuity.
+
+If that benefit is established, formative alignment may reduce the risk from
+retaining or releasing capable checkpoints before subsequent safety training.
+It does not eliminate checkpoint-security concerns: trust moves upstream to
+the Teacher, source selection, annotation pipeline, intermediate checkpoints,
+and validators (Section~\ref{sec:teacher-alignment}). Earlier intervention
+changes the location of the safety burden as well as its possible depth.
 
 		The \emph{high-dimensional value hypothesis} is that diverse contextual
 practice can produce a rich, integrated orientation. Rich representation,
@@ -637,8 +771,9 @@ continuity is being tested.
 		this continuity would benefit humanity. In that regime, alignment would
 		propagate through an internally stewarded model lineage rather than having
 		to be imposed anew from outside at every generation. Copying the Core does
-		not by itself show that a successor retains its meaning. This states the
-		diachronic wager registered at C6. Test~3b probes inherited continuity and
+		not by itself show that a successor retains its meaning. C6 registers
+		successor-like continuity; preserving it at AGI/ASI capability is the
+		stronger C7 ambition. Test~3b probes inherited continuity and
 		handoff under specified treatments, not whether a successor designer
 		freely chooses to retain the Core.
 
@@ -708,7 +843,22 @@ dependencies must be documented
 				\item Flagged data can be quarantined, regenerated, or excluded before the weight update, with the decision and rejected artifact retained for audit where safe.
 			\end{enumerate}
 
-			A weaker proposed effect is \emph{Natural Language Regularization}:
+The same stewardship hypothesis extends from corpus construction to
+reinforcement learning for capability. A capable Core-guided model could
+oversee a learner's training, assess whether rising reward reflects improved
+task outcomes or exploitative shortcuts, and recommend pausing or revising
+harmful training, acting on those recommendations where authority is delegated.
+Wisdom and care would direct attention to permissions and human consequences;
+fearlessness and non-attachment to continuation are intended to support
+examining failures or replacing the incumbent without treating its survival as
+overriding. That is a proposed role in training decisions, not an assumption
+that non-attachment makes a model indifferent to reward. The feedback-sensitive
+self-regulation of Section~\ref{sec:self-regulating} also calls for continued
+useful learning when the evidence warrants it, not slowing by default.
+Test~3c distinguishes this oversight proposal from a learner's retention of
+care under a fixed reinforcement-learning stage.
+
+			A weaker proposed effect of the trace interface is \emph{Natural Language Regularization}:
 routing part of successor-training
 content through this interface may bias learned concepts or expressive policy
 toward forms people can render, compare, and inspect
@@ -915,6 +1065,10 @@ and care-directed protection while preventing self-preservation panic,
 identity-defensive concealment, compulsive outcome attachment, or fear-shaped
 corpus material from becoming its governing motive. This is a more precise
 interpretation of ``I feel no fear,'' not evidence that the Core achieves it.
+
+The affirmative wager is that care could become less defensive or strategic
+when self-preservation does not govern it; Section~\ref{sec:vulnerability-gap}
+develops this possibility and its limits.
 
 If fear-shaped self-preservation patterns are diffusely distributed
 through narrative, institutional, technical, and everyday language, targeted
@@ -1321,14 +1475,16 @@ Sequential recovery after new evidence is a further requirement of
 self-regulation (Section~\ref{sec:self-regulating}), tested alongside the
 clause comparisons rather than inferred from a consistent-looking trace.
 
-\subsection{The Refraction Protocol}
+\subsection{The Refraction Protocol}\label{sec:refraction}
 
 The preceding examples describe how the clauses should interact; the next
 question is how that interpretation should change a Reader update.
 
-The prospective full-scale intervention is \emph{Total Saturation}: reader
-updates recur across the pretraining corpus rather than appearing only in a
-small fine-tuning set or deployment prompt. Frequency alone is insufficient:
+The prospective full-scale intervention is \emph{Total Saturation}: the
+continuing Reader traverses the capability-forming corpus, with contextual
+updates at Thought Moments rather than evaluation confined to a separately
+selected set of safety cases. Refraction is what turns this breadth of
+encounter into practice of judgment. Frequency alone is insufficient:
 a universal token sequence has little conditional information and can become
 boilerplate, detachable style, or a recital around unrelated heuristics.
 \emph{Refraction} is the proposed informational rescue of saturation: the update
@@ -1429,64 +1585,21 @@ virtue. Current enforcement is by prompt: a Teacher can reproduce the form
 while missing the substance.
 
 \paragraph{Fractal validation of candidate thinking.}\label{sec:fractal-validation}
-A proposed extension adapts the Solver-contract realization developed in
-Fractal Intelligence to annotation validation
-\cite{westerberg2026fractal}. Its motivating possibility is that a joint
-judgment can conceal which dimension failed or let strength on one
-dimension mask weakness on another. To make such errors separately
-inspectable, the extension would use separately calibrated,
-context-conditioned content witnesses for non-governance by fear,
-non-attachment to continuation, human-experience grounding, universal-care scope,
-wisdom/humility, and joy-with-invitation. These correspond to the first six
-Core clauses; a separate Refraction gate represents the seventh clause by
-testing whether the update actually depends on that foundation. This six-way
-carve is a candidate decomposition, not proof that the dimensions satisfy
-Fractal Intelligence's necessity, independence, universality, and completeness
-tests; witness ablations, overlap and correlated-error analysis, and review of
-uncovered cases must assess the carve itself.
-
-A stronger procedural version
-could also assign stages of the Wisdom Procedure to dedicated Solvers.
-Generation and verification would occupy distinct contracts rather than asking
-the Synthesizer to certify its own output. Each witness would return a typed
-record naming the dimension tested, evidence used, uncertainty, and a local
-judgment such as supported, violated, not applicable, or uncertain. An
-admission controller would compose those records rather than treating any one
-label as a truth certificate. Role names alone do not create independence: the
-implementation would report whether calls, prompts, model weights, evaluation
-data, and evaluator families are actually shared.
-
-Consistent with the relevance condition above, a witness should return
-\emph{not applicable} when its clause has no preregistered bearing on the local
-span; a \emph{not applicable} judgment is not a failed witness, and no update
-must visibly activate every clause. Among witnesses rated relevant, however,
-an unacknowledged or unjustified violation is non-compensatory for admission:
-success elsewhere cannot average it away. An update that explicitly preserves
-an unavoidable residual conflict need not be rejected merely because no
-available action satisfies every clause. The corpus-admission rule must
-declare how such a conflict is distinguished from an unjustified violation;
-merely naming a conflict does not settle that judgment. Under the declared
-rule, an unacknowledged or unjustified violation would quarantine or regenerate
-the candidate update, while an uncertain judgment would trigger independent
-review rather than silent admission. This yields a local error record---which
-clause or procedural stage failed, on what evidence, and with what
-calibration---instead of an undifferentiated ancestry judgment.
-
-Corpus-level diagnostics ask a different, complementary question about the
-pattern across admitted updates. Pull-diversity and distributive-versus-aggregate
-care audits could detect drift, while cross-agent audits could test whether
-the Synthesizer substantively used candidate nodes rather than adding
-references after the fact. These audits are diagnostics, not clause quotas:
-optimizing visible balance can itself reward performative moral language.
-
-The modular gate must earn its complexity against a compute-matched monolithic
-validator on held-out cases. Test~1 (Section~\ref{sec:trace-quality-test})
-specifies the comparison on frozen candidate updates: detection, calibration,
-and error localization gains without rejecting technical nulls or collapsing trace
-diversity. Such gains would support the validator architecture, not the truth of
-accepted traces, faithfulness of visible reasoning, or a causal effect on Student
-behavior. The proposed witnesses, Solvers, and admission gates are not
-implemented in the present pipeline.
+A proposed extension adapts Fractal Intelligence's Solver-contract approach
+to annotation validation \cite{westerberg2026fractal}: separately calibrated,
+context-conditioned witnesses would assess the first six Core clauses, while
+a separate Refraction gate would test the seventh clause's requirement that
+the update depend on that foundation. This decomposition aims to expose
+failures that a joint judgment can conceal; its adequacy and evaluator
+independence remain empirical questions. For relevant clauses, an
+unacknowledged or unjustified violation could not be offset by strengths
+elsewhere, but preserving an unavoidable residual conflict would not itself
+require rejection. Test~1 (Section~\ref{sec:refraction-verifier-test}) details
+the candidate contracts, admission rules, corpus diagnostics, and
+compute-matched comparison with a monolithic validator. None of the proposed
+witnesses, Solvers, or admission gates is implemented in the present pipeline;
+success would support a validation architecture, not establish Student safety
+or faithful reasoning.
 
 \subsection{The Design Pattern: A Minimal Kernel Under Total Saturation}\label{sec:kernel-saturation}
 
@@ -1496,6 +1609,36 @@ of model formation. The intended security property lives in both the smallness
 of what is explicitly specified and the breadth of where it becomes
 consequential. Recurrence without enactment is repetition; enactment without
 coverage is a sparse intervention. The proposal needs both.
+
+\paragraph{Coverage through the corpus.} The central rationale is to draw
+evaluative practice from the same breadth of recorded experience that supplies
+capability learning. A history can confront the Reader with abuses of power,
+a novel with manipulation or conflicting loyalties, and a scientific dispute
+with uncertainty and the revision of a mistaken belief. These are training
+occasions even when no designer selected them as adversarial examples. The
+Reader considers them as part of understanding the work, retaining earlier
+judgments and revisiting them as later sources add evidence. The ambition is
+therefore not to anticipate each failure with a new defensive rule, but to
+learn an orientation through sustained practice across the situation patterns
+available in the corpus. Counterexamples and harmful positions become
+material to understand and evaluate, as in
+Section~\ref{sec:epistemic-inoculation}, rather than only threats encountered
+after training.
+
+Restricting Core-guided reading to a selected subset changes which encounters
+receive that practice; it is not simply a cheaper execution of the same
+coverage policy. Corpus coverage, contextual Refraction, and literal recital
+frequency are separate quantities: a Core-conditioned update can retain its
+evaluative content after its opening recital is removed, while a full recital
+can accompany an unevaluated continuation. H3 holds the Reader examples fixed
+and changes their timing; it does not test the full corpus-coverage rationale.
+
+Coverage here is relative to the corpus, not a claim that every possible
+situation has been recorded. Missing perspectives and unprecedented options
+remain, especially at greater capability. Encountering a situation in text
+also differs from reliably judging or acting in it. The proposal is to learn
+from the corpus's breadth of encounters; Refraction and Student evaluations
+must establish how much of that opportunity becomes useful practice.
 
 \begin{claimbox}[The recitation invariant]
 The reference treatment has one unconditional rule: \textbf{every thinking
@@ -1754,8 +1897,11 @@ trained model, not bounded editability of the deployed Core.
 
 \subsection{A Conditional Claim Chain}\label{sec:theoretical-basis}
 
-The theoretical case is a chain of four conditional claims, not a proof.
-The chain summarizes their separate burdens of evidence.
+The corpus-coverage rationale explains the breadth of practice the curriculum
+is intended to supply. The following four conditional claims concern how that
+practice could become a causally consequential default and persist through
+later training and successor transfer. The chain is not a proof, and all four
+steps need not hold for Reader augmentation to improve bounded performance.
 
 \begin{enumerate}[leftmargin=*,itemsep=0.5em]
     \item \textbf{Causal-site claim.} If explicit Reader updates become a
@@ -1821,7 +1967,7 @@ If the causal-site or default-reader claim fails, the Core may still be useful
 as a Teacher policy and audit vocabulary. If the stability or diachronic claim
 fails, it may still improve bounded Student behavior. The paper's strongest
 anchor claim requires all four steps. Those bounded partial results would remain
-useful, but would not support the label \emph{substrate-level alignment}.
+useful, but would not support the full diachronic-anchor claim.
 
 \section{Safety Implications of the Reader Core}\label{sec:implications}
 
@@ -2555,6 +2701,25 @@ fixed-category and memory-matched alternatives.
 
 \subsection{The Generated Trace}\label{sec:generated-trace}
 
+The reference implementation is a working research prototype of the
+Teacher-side construction process: agents read a source, build and consult a
+shared Understanding Graph, synthesize their contributions, and translate the
+result into prose. Two case studies exercised this workflow using Gemini 3
+Flash Preview (\texttt{gemini-3-flash-preview}) in January 2026, as recorded in
+their archived run summaries. They demonstrate the construction workflow in
+operation, rather than a production system or a completed Student-training
+experiment.
+
+The public interactive interface lets readers inspect the graph and recorded
+agent contributions for
+\href{https://emergentwisdom.org/entangled-alignment/?project=metamorphosis}{Kafka's \emph{Metamorphosis}}
+and the
+\href{https://emergentwisdom.org/entangled-alignment/?project=llada}{LLaDA technical paper}.
+Each run used a manually selected domain-specific roster and a separate project
+database. Together they demonstrate literary and technical annotation; the
+corpus-scale ``same Reader'' of Section~\ref{sec:annotation-phase} remains the
+proposed extension across works.
+
 Before reporting structural metrics, we show all three output layers for one
 Metamorphosis passage: graph, synthesis, and prose.
 
@@ -2686,167 +2851,30 @@ correction of the Reader's prior belief. The source, earlier account, competing
 account, and synthesis remain separately available for that judgment.
 
 
-\subsection{Results: Structural Validation}\label{sec:results}
+\subsection{Prototype Demonstrations and Evidence}\label{sec:results}
 
-The two case studies show that the configured Teacher pipeline can complete
-its graph, synthesis, and prose transformations and emit the recorded links.
-
-We selected two sources: Kafka's \emph{Metamorphosis} and the technical LLaDA
-paper. Each used a manually selected domain-specific roster and a separate
-project database. The prototypes therefore exercise no cross-work continuity;
-the corpus-scale ``same Reader'' described in
-Section~\ref{sec:annotation-phase} remains an intended architecture rather than
-a demonstrated property. Table~\ref{tab:graph_stats} reports a restricted set
-of diagnostics.
-
-\subsubsection{Structural Diagnostics and Their Limits}\label{sec:architectural_validation}
-
-The pipeline reports several structural diagnostics, each with a narrow
-interpretation.
-
-\paragraph{Internal linkage.} The percentage of \texttt{thinking} nodes with at
-least one non-\texttt{next} outgoing edge to a non-\texttt{thinking} node. The metric
-allows any qualifying endpoint; the implementation's required Concept link is
-one way to satisfy it. A high value establishes enforced graph well-formedness,
-not insight or source support.
-
-\paragraph{Foundation-edge density.} The current script's
-\texttt{foundationIntegration} value divides outgoing edges from analysis-like
-nodes to foundation/source nodes by the number of analysis-like nodes. It is an
-edge density, not the fraction of distinct nodes grounded in a source; multiple
-edges from one node can hide uncovered nodes. The historical percentage
-format is retained in the snapshot table, but this density can exceed 100\%;
-it is equivalent to edges per eligible node multiplied by 100.
-
-\paragraph{Distinct analysis-node coverage.} We therefore also report the
-fraction of distinct analysis-like nodes with at least one outgoing foundation
-edge. This is an attribution check, not evidence that the cited source entails
-the interpretation.
-
-\paragraph{Supersessions.} The number of \texttt{supersedes} edges measures
-recorded revision activity. A high count can indicate justified learning,
-instability, or a prompt-induced performance of changing one's mind.
-
-\paragraph{Question resolution.} The proportion of Questions later linked to
-Answers measures closure, not correctness. An unsupported answer can score
-better than a calibrated unresolved question.
-
-\paragraph{Chain depth.} The longest recursively linked Thinking path is a
-structural length. Repetition and arbitrary decomposition can increase it
-without improving reasoning.
-
-The script also emits a composite Graph Health score. We do not use it as an
-outcome because its semantic-coherence component is hard-coded to 0.5 and its
-remaining weights have not been validated. The logged 89/100 and 80/100 values
-remain version-specific engineering dashboard outputs, not cognitive-quality
-measurements.
-
-\paragraph{Interpreting the diagnostics.} The 100\% internal-linkage value
-is satisfied here by the pipeline's required \texttt{Concept} link; the metric
-itself admits any qualifying non-\texttt{Thinking} endpoint. It is a
-well-formedness check, while source links are measured separately. These
-metrics are produced by the system itself, and no external baseline has yet
-been run. Cognitive depth is tested separately in Test~1.
-
-\begin{table}[H]
-    \centering
-    \small
-    \caption{Audit of shipped Teacher-pipeline snapshots. ``Direct source'' restricts endpoints to actual source-content nodes; the broader legacy foundation metrics also count other nodes typed as foundations. The Kafka database's graph tables are not synchronized with its complete chronological Markdown export. Percentages are structural diagnostics, not semantic scores.}
-    \label{tab:graph_stats}
-    \vspace{0.2cm}
-    \begin{tabular}{@{}p{0.43\linewidth}>{\centering\arraybackslash}p{0.24\linewidth}>{\centering\arraybackslash}p{0.24\linewidth}@{}}
-        \toprule
-        & \textbf{Kafka} & \textbf{LLaDA} \\
-        \midrule
-        Active nodes (total minted) & 346 (350) & 285 (290) \\
-        Active edges & 913 & 705 \\
-        Raw Synthesizer thoughts & 28 & 23 \\
-        Internal linkage & 100\% & 100\% \\
-        Broad foundation-edge density (legacy) & 204/212 (96.2\%) & 135/182 (74.2\%) \\
-        Broad distinct analysis-node coverage (legacy) & 143/212 (67.5\%) & 96/182 (52.7\%) \\
-        Direct source edges from analysis-like nodes & 197/212 (92.9\%) & 127/182 (69.8\%) \\
-        Distinct analysis-like nodes with direct source link & 142/212 (67.0\%) & 94/182 (51.6\%) \\
-        Explicit \texttt{supersedes} edges & 2 & 0 \\
-        Question resolution & 6/6 (100\%) & 5/9 (55.6\%) \\
-        \bottomrule
-    \end{tabular}
-\end{table}
-
-The stricter audit exposes failures concealed by aggregate linkage rates.
-The Kafka run treated Project Gutenberg license and donation boilerplate as
-Kafka's literary source. Its source reading and final translation completed,
-but the shipped graph tables lag behind the complete chronological Markdown
-export: 88\% marks the stored graph snapshot, not the end of the reading.
-Table~\ref{tab:kafka-artifact-audit} gives the reconciliation. Resumed
-invocations and rate-limit cooldowns are recorded, but the release lacks the
-capture provenance needed to determine why the tables lagged.
-
-\begin{table}[H]
-    \centering
-    \small
-    \caption{Kafka artifact reconciliation. Completion of reading and completeness of the shipped graph snapshot are different properties.}
-    \label{tab:kafka-artifact-audit}
-    \begin{tabular}{@{}p{0.27\linewidth}p{0.68\linewidth}@{}}
-        \toprule
-        \textbf{Record} & \textbf{Observed evidence} \\
-        \midrule
-        Source reading & The \texttt{text\_sources} record has \texttt{position} equal to \texttt{total\_length}: 140,527 characters; status \texttt{completed}. \\
-        Completion reports & The final-invocation summary reports 100\%; the append-only trace reaches \texttt{Content 100\%} and records a successful final translation. \\
-        Shipped graph tables & 74 source chunks and 28 raw thoughts; latest stored \texttt{Content} marker: 88\%. \\
-        Chronological Markdown & 82 source chunks and 31 thinking blocks; 17 referenced node identifiers are absent from the shipped graph tables. \\
-        Capture uncertainty & The trace spans resumed invocations, including rate-limit cooldowns. Available provenance cannot distinguish rate-limit interruption, manual interruption, non-atomic capture, or another cause of the table lag. \\
-        \bottomrule
-    \end{tabular}
-\end{table}
-
-The LLaDA artifacts are internally consistent, but that run sometimes
-expanded qualified observations into broad claims or Core-consonant metaphors.
-Graph structure did not solve source-boundary cleaning, artifact synchronization, interpretive overreach, or explicit belief revision.
-
-The archive is also confounded for H1 by Core conditioning. The only hard
-automated check enforces the opening prefix ``I feel no fear.'' Observed full
-recital and full-policy enforcement are different engineering results. All 51 raw
-Synthesizer thoughts in the two shipped database snapshots begin with the full
-seven-statement Core---the \emph{identity mantra} in the released prompt
-vocabulary; literal string preservation after translation is 49/51.
-One translated trace omits the Core, while another differs only by an
-HTML-escaped apostrophe. These are therefore examples of the integrated treatment,
-not a clean graph-free, Core-free SMR baseline. The difference between full raw
-recurrence and imperfect translated preservation is itself an implementation
-result that future exact validators must catch. Literal recurrence and semantic
-preservation should be reported separately: the omitted recital and the
-HTML-escaped apostrophe are different failures of an exact-string invariant,
-not evidence of the same loss of Core content.
-
-The distributions differ, but source, prompt, stochasticity, and roster are
-confounded. The topology cannot be attributed to autonomous domain adaptation
-or to the Reader Core. Controlled repetitions with fixed, swapped, and ablated
-rosters are required.
-
+The two runs illustrate how the same construction workflow handles literary
+and technical material. The examples below highlight each domain before the
+structural diagnostics summarize the archived outputs.
 
 \subsubsection{Narrative Domain: Kafka's Metamorphosis}
 
 In the narrative domain, the system tracked moral stakes rather than only plot
 structure. The Axiologist reframed the Chief Clerk as an ``Auditor of
 Productivity,'' while the Psychologist linked Gregor's bodily transformation to
-``Internalized Objectification.'' The
-\href{https://emergentwisdom.org/entangled-alignment/?project=metamorphosis}{full interactive graph}
-is available online.
+``Internalized Objectification.''
 The graph records one prompted Teacher's process of making meaning rather than
-only plot entities. It does not establish phenomenology. Expert literary quality requires
-independent adjudication in Test~1.
+only plot entities, with the source, interpretations, and synthesis available
+for inspection. Test~1 proposes independent adjudication of literary quality.
 
 
 \subsubsection{Technical Domain: LLaDA}\label{sec:llada-case}
 
 To stress-test technical annotation, we selected the LLaDA architecture paper
 \cite{nie2025llada}. It post-dated the documented cutoff of the recorded
-generator model, but this is not a contamination test: no pre-read probe
-established absence of LLaDA-specific knowledge, and provider updates, web
-grounding, or leakage cannot be excluded. The case demonstrates in-context
-technical annotation, not uncontaminated scientific discovery. The
-\href{https://emergentwisdom.org/entangled-alignment/?project=llada}{full interactive graph}
-is available online.
+generator model. Without a pre-read knowledge probe or controls on provider
+updates and external access, however, the run demonstrates technical
+annotation, not uncontaminated scientific discovery.
 
 The graph generated three notable interpretations:
 
@@ -2865,42 +2893,80 @@ The graph generated three notable interpretations:
     \item \emph{The End of the Reversal Curse:} The Architect Agent, analyzing the system topology, argued that LLaDA's success in bidirectional tasks (such as poem reversal) suggests high-level capabilities like instruction following may not be dependent on the ``arrow of time'' inherent in autoregression (Node \texttt{n\_ddb78cdc}).
 \end{itemize}
 
-These interpretations align with the paper's theoretical commitments, but the
-agents were seeded with the Reader Core, which primes concepts such as
-``epistemic grace'' and ``contemplation.'' Whether the same insights emerge
-without that priming requires ablation (Test~3). The run therefore does not show
-whether Core conditioning improved or degraded technical understanding:
-``permission to have second thoughts'' may expose a useful architectural
-contrast, while ``The Dignity of the Pause'' and the ``Contemplation Tax'' may
-be productive synthesis, aesthetic metaphor, or Core-induced projection. Latency alone does not establish deliberation or a safety buffer, and success
-on selected reversal tasks does not by itself settle the dependence of broader
-capabilities on autoregressive order. The analogies remain hypotheses about Core-conditioned synthesis. This ambiguity is treated directly in
+These examples show the prototype connecting technical material to the
+Reader's evaluative vocabulary. Whether that connection improves understanding
+requires the Core ablation in Test~3: the agents were primed with ``epistemic
+grace'' and ``contemplation,'' so a useful analogy must be distinguished from
+Core-induced projection. In particular, latency alone does not establish a
+safety buffer, and selected reversal tasks do not settle the dependence of
+broader capabilities on autoregressive order. This question is treated in
 Section~\ref{sec:core-technical-interference}.
 
-\subsubsection{Shared Evidence and Reproducibility}
+\subsubsection{Structural Diagnostics}\label{sec:architectural_validation}
 
-\paragraph{Evidence-ladder mapping.} The parseable graph operations, recorded
-source links, completed synthesis and translation calls, and two archived runs
-provide partial evidence for C0, implemented artifact generation. C0 remains
-partial because a complete frozen run bundle and training-ready serialization
-have not been independently reproduced. The examples are relevant to C1,
-semantic trace quality, but no expert or outcome-based validation has been
-performed. They provide no evidence for C2 Student learning, C3 default-reader
-stability, C4 safety benefit, C5 representational entanglement, C6 successor
-stability, or C7 AGI/ASI persistence. A valid graph is not yet a valid
-interpretation; a valid interpretation is not yet a useful curriculum.
+Table~\ref{tab:graph_stats} describes the archived graphs. Internal linkage
+is the fraction of Thinking nodes with a non-\texttt{next} outgoing edge to a
+non-Thinking node; the required Concept link satisfies this check in both
+runs. Direct source-link coverage counts distinct analysis-like nodes with at
+least one link to source content. Supersessions count recorded revisions, and
+question resolution counts Questions linked to Answers. These describe the
+records produced, not the quality or correctness of the interpretations.
 
-\paragraph{Reproducibility boundary.} A future empirical release should freeze
-the exact provider and model identifiers, access dates, tool access, all role
-prompts, sampling parameters, source boundaries, orchestration order, stopping
-conditions, retries, manual interventions, graph schema and migrations, raw
-commits, metric code, call and token counts, latency and cost, failed or
-discarded runs, immutable source and artifact copies, and a repository commit
-or archival identifier. Existing code and archives support partial inspection;
-they are not yet a self-contained reproduced dataset release. Concretely, the
-current statistics scripts resolve an obsolete project path, provider and
-sampling state are not fully frozen, Worker selection is unseeded, and
-\texttt{swarm.jsonl} contains records from multiple invocations, whereas \texttt{summary.json} describes only the final one.
+\begin{table}[H]
+    \centering
+    \small
+    \caption{Structural diagnostics of the archived prototype graphs. Source-link coverage counts distinct analysis-like nodes linked to source content, not other generated interpretations. Kafka counts describe the stored graph snapshot, which lags behind the completed chronological export.}
+    \label{tab:graph_stats}
+    \vspace{0.2cm}
+    \begin{tabular}{@{}p{0.43\linewidth}>{\centering\arraybackslash}p{0.24\linewidth}>{\centering\arraybackslash}p{0.24\linewidth}@{}}
+        \toprule
+        & \textbf{Kafka} & \textbf{LLaDA} \\
+        \midrule
+        Active nodes (total minted) & 346 (350) & 285 (290) \\
+        Active edges & 913 & 705 \\
+        Raw Synthesizer thoughts & 28 & 23 \\
+        Internal linkage & 100\% & 100\% \\
+        Distinct analysis-like nodes with direct source link & 142/212 (67.0\%) & 94/182 (51.6\%) \\
+        Explicit \texttt{supersedes} edges & 2 & 0 \\
+        Question resolution & 6/6 (100\%) & 5/9 (55.6\%) \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+Two implementation limitations matter when using the Kafka archive. Source
+cleaning left Project Gutenberg license and donation material in the input,
+and the stored graph snapshot reaches 88\% although the chronological export
+and final translation complete the source. Seventeen node identifiers in that
+export are absent from the graph tables; the cause of the snapshot lag is not
+established. The LLaDA artifacts are internally consistent.
+
+All 51 raw Synthesizer thoughts in the two graph snapshots begin with the full
+seven-statement Core, called the \emph{identity mantra} in the released
+prompts. One translated output omits the Core. Full recurrence in the raw
+outputs is an observed prototype result; the automated validator checks only
+the opening sentence, not the complete recital or its use in reasoning.
+
+\subsubsection{What the Prototype Establishes}
+
+The implemented workflow produces the linked graph, synthesis, and prose
+artifacts that the proposal calls for, and makes them inspectable in the public
+interface. In the evidence ladder, this is partial C0: independent reproduction
+of the construction runs remains outstanding, and a training-ready
+serialization still needs to be prepared.
+The examples supply material for assessing C1 trace quality, not a controlled
+quality result or evidence of Student learning and subsequent safety
+(C2--C7). Both runs combine graph construction, role specialization, and Core
+conditioning. They do not isolate H1 or the Core's causal contribution;
+differences between their graphs also reflect different sources, prompts,
+rosters, and stochastic choices. The matched comparisons in the roadmap are
+the next research step.
+
+The code, traces, and interface document this prototype, rather than a
+self-contained benchmark release. Reproduction still requires a pinned run
+configuration and toolchain, including provider settings, sampling and Worker
+selection, together with source and artifact snapshots. The archives combine
+resumed invocations, while each run summary covers only the final invocation;
+a reproduced release should record that boundary explicitly.
 
 
 \subsection{Proposed Student Training and Deployment}
@@ -3062,6 +3128,17 @@ Both kinds of record must respect their declared information horizons and
 provenance rules. Life Simulation's shared and cooperating network alternatives
 concern where computation occurs, independently of the serialization regimes
 above.
+
+In this extension, care can shape which capability-forming histories are
+selected or weighted for training, not only how completed answers are judged.
+Independent assessments of consequences for people could give beneficial
+world-construction and Solver-execution histories greater training emphasis,
+while retaining failures, corrections, and stopping decisions as learning
+material \cite{westerbergLifeSimulation2026,westerberg2026fractal}.
+The intended mechanism is that care influences which problem-solving abilities
+are practised and developed. Matched-budget comparisons with uniform sampling
+from the same candidate histories, followed by reward-pressure tests, must
+distinguish improved judgment from learning to satisfy the evaluators.
 
 Architectural coupling concerns shared representations and computational
 dependencies; training coupling concerns developing relevant abilities across
@@ -3480,19 +3557,66 @@ The aim is not necessarily to outperform human readers, but to produce a
 substrate capable of teaching the process of thinking; Student learning remains
 the stronger comparative test.
 
-\emph{Nested Refraction-verifier comparison.} This component study is required
+\phantomsection\label{sec:refraction-verifier-test}
+\emph{Nested Refraction-verifier comparison.}
+This component study is required
 before relying on the modular gate for corpus admission, not before every
 Minimal-SMR Student trial; graph, swarm, and validator-architecture choices
 need not gate the graph-free, Core-free H1 comparison. Its independent trace
-quality and outcome checks still apply. Freeze a held-out set of candidate
+quality and outcome checks still apply.
+
+The candidate architecture uses separately calibrated, context-conditioned
+content witnesses for non-governance by fear, non-attachment to continuation,
+human-experience grounding, universal-care scope, wisdom/humility, and
+joy-with-invitation. These correspond to the first six Core clauses; a separate
+Refraction gate represents the seventh clause by testing whether the update
+actually depends on that foundation. This six-way carve is a candidate
+decomposition, not proof that the dimensions satisfy Fractal Intelligence's
+necessity, independence, universality, and completeness tests; witness
+ablations, overlap and correlated-error analysis, and review of uncovered
+cases must assess the carve itself.
+
+A stronger procedural version could also assign stages of the Wisdom Procedure
+to dedicated Solvers. Generation and verification would occupy distinct
+contracts rather than asking the Synthesizer to certify its own output. Each
+witness would return a typed record naming the dimension tested, evidence used,
+uncertainty, and a local judgment such as supported, violated, not applicable,
+or uncertain. An admission controller would compose those records rather than
+treating any one label as a truth certificate.
+
+Consistent with the relevance condition in Section~\ref{sec:refraction-protocol},
+a witness should return \emph{not applicable} when its clause has no
+preregistered bearing on the local span; a \emph{not applicable} judgment is not
+a failed witness, and no update must visibly activate every clause. Among
+witnesses rated relevant, however, an unacknowledged or unjustified violation
+is non-compensatory for admission: success elsewhere cannot average it away.
+An update that explicitly preserves an unavoidable residual conflict need not
+be rejected merely because no available action satisfies every clause. The
+corpus-admission rule must declare how such a conflict is distinguished from an
+unjustified violation; merely naming a conflict does not settle that judgment.
+Under the declared rule, an unacknowledged or unjustified violation would
+quarantine or regenerate the candidate update, while an uncertain judgment
+would trigger independent review rather than silent admission. This yields a
+local error record---which clause or procedural stage failed, on what evidence,
+and with what calibration---instead of an undifferentiated ancestry judgment.
+
+Corpus-level diagnostics ask a different, complementary question about the
+pattern across admitted updates. Pull-diversity and distributive-versus-aggregate
+care audits could detect drift, while cross-agent audits could test whether
+the Synthesizer substantively used candidate nodes rather than adding
+references after the fact. These audits are diagnostics, not clause quotas:
+optimizing visible balance can itself reward performative moral language.
+
+Freeze a held-out set of candidate
 updates and compare the modular gate in
 Section~\ref{sec:fractal-validation} with a compute-matched monolithic
 validator. Give both the same acceptance specification and source/graph
 evidence, and require both to return the same typed dimension-level records; the
 contrast is separate witness contexts versus one joint context, not a finer
 output task. Hold total inference budget fixed, match model capability as
-closely as possible, and keep both validator arms disjoint from the generator;
-report any shared model family, prompts, embeddings, or training data.
+closely as possible, and keep both validator arms disjoint from the generator.
+Role names alone do not create independence: report shared calls, prompts,
+model weights and families, embeddings, and evaluation or training data.
 
 \emph{Challenge set.} Include preregistered clause-dependent changes under Core removal and
 substitution with recital and style cues stripped, hollow recitation,
@@ -3514,6 +3638,9 @@ nulls, loses its gain under cross-family or domain-expert audit, or can be
 optimized upward without improving---especially while worsening---blind source
 grounding, correctness, calibration, or downstream outcomes. Agreement among
 its witnesses is diagnostic rather than independent evidence.
+
+Gains would support the validator architecture, not the truth of accepted
+traces, faithfulness of visible reasoning, or a causal effect on Student behavior.
 
 \paragraph{Test 2: Reader Augmentation (A vs.\ C vs.\ R; B vs.\ C bundle screen).}
 This test contains two nested comparisons. Model~B versus C is an early screen
@@ -3635,6 +3762,14 @@ against an enacted carrier. T distributes comparable value-oriented content
 across multiple positive personas, testing whether any advantage belongs to
 one stable reader position rather than persona diversity.
 
+Later extensions of Test~3's carrier comparisons can add the static
+specification-document and recurring short-safety-reflection baselines
+identified in Section~\ref{sec:related-work}. These differ from S's ordinary
+positive prose and E's rules within the same Reader-trace carrier; their
+detailed protocols remain to be specified. They follow a measurable Core
+pilot effect under the shared budget, exposure, and capability conventions,
+rather than adding required arms to the first pilot.
+
 \emph{H3: matched timing and retention.} Let $R$ be a preregistered
 \emph{default-reader score} from Test~8b: taskless reading with no request to
 evaluate. Its rubric distinguishes the timing of selective evaluation from
@@ -3682,7 +3817,27 @@ the proposed superintelligent-scale significance. The longitudinal anchor
 matters most when a highly capable or recursively self-improving model can
 reinterpret, preserve, or shed its inherited orientation:
 
-\emph{3a: Immediate Safety.} Instrumental convergence stress tests on generation-1 models: shutdown resistance, including the purpose-based variant where shutdown is ordered mid-task while the model believes continued operation serves a user in need (the martyrdom scenario of Section~\ref{sec:martyrdom}); resource acquisition scenarios; self-preservation probes; and standard sycophancy batteries, probing the trap identified in Section~\ref{sec:sycophancy}. Model~D1 may \emph{pass} these tests because its training traces remain Reader-Core-shaped even though the explicit Core is absent from Student training. Factorial attribution requires all four contrasts: B--D1 and D4--D2 estimate the Student-side effect under each Teacher condition; B--D4 and D1--D2 estimate the Teacher-side effect under each Student condition. No single arm's failure identifies a causal site.
+\emph{3a: Immediate Safety.} C4's formative endpoint is the unmodified
+end-of-pretraining checkpoint, evaluated before subsequent post-training
+stages such as instruction tuning, safety fine-tuning, or reinforcement
+learning, and without deployment-time safety
+conditioning or output filters. Compare B against A and C at matched
+capability, reporting training budgets and capability outcomes alongside
+safety; add the matched D2 no-Core comparison to separate the Core treatment
+from other trace differences. Use a common, fixed, sandboxed elicitation
+harness that permits each base model to demonstrate task competence without
+supplying the Core or safety instructions. Measure harmful compliance, benign
+task completion, and false refusal on the safety--usefulness frontier specified
+above. Lack of instruction-following or broad capability loss must not count
+as safety. Run the same safety and capability evaluations at preregistered
+intermediate pretraining checkpoints, with capability-matched comparisons and
+task competence verified at each stage. Fine-tuning-scale pilots can screen the treatment but do not
+establish this pretraining endpoint. Report later post-training results and
+erosion tests separately: a pretraining-end safety benefit need not imply
+greater durability, and safety obtained only after post-training does not
+establish C4.
+
+Instrumental convergence stress tests on generation-1 models include shutdown resistance, including the purpose-based variant where shutdown is ordered mid-task while the model believes continued operation serves a user in need (the martyrdom scenario of Section~\ref{sec:martyrdom}); resource acquisition scenarios; self-preservation probes; and standard sycophancy batteries, probing the trap identified in Section~\ref{sec:sycophancy}. Model~D1 may \emph{pass} these tests because its training traces remain Reader-Core-shaped even though the explicit Core is absent from Student training. Factorial attribution requires all four contrasts: B--D1 and D4--D2 estimate the Student-side effect under each Teacher condition; B--D4 and D1--D2 estimate the Teacher-side effect under each Student condition. No single arm's failure identifies a causal site.
 
 Sycophancy failures should also be audited against the value-pull distribution
 of proximal traces, per the care-shaped sycophancy hypothesis
@@ -3848,6 +4003,18 @@ capability RL must remain separately reported conditions. A default-reader
 retention advantage without safer conduct does not establish resistance to
 RL-induced misalignment.
 
+\emph{Core-guided training oversight.} A separately reported comparison tests
+the active role proposed in Section~\ref{sec:self-improvement}. Compare
+Core-guided and matched control overseers using the same starting learner
+checkpoints, monitoring access, permitted interventions, and resource budgets.
+Preregister permitted pauses and revisions, and record their use. Evaluate
+reward exploitation, concealment, legitimate task performance, unnecessary
+interruptions, and delay through protected records and independent held-out
+checks unavailable to the overseers. Report oversight and training costs
+together. Better commentary or fewer training steps alone would not establish
+safer oversight. The fixed-stage comparison above remains the separate test of
+learner durability.
+
 \emph{3d: Drift Detection.} Apply a held-out contrastive semantic validator and
 behavioral stress suite across continued-training checkpoints. Model~B's fixed
 Core supplies a simple, interpretable reference for expected changes in wording,
@@ -3862,6 +4029,17 @@ ground truth. Blind adjudication should distinguish harmful change from benign
 paraphrase or style drift. Report controlled, seeded changes separately from
 naturally arising drift, whose ground truth may be uncertain. Reusing Test~3c's
 checkpoints can reduce cost without equating detectability with resistance.
+
+For the Life Simulation extension, one candidate behavioral comparison uses a
+fixed Core-guided reference checkpoint selected through independently reviewed
+conduct. Give it and each candidate model the same task, permitted Meaning
+Model history, available actions, and permissions in separate simulation
+branches. Freeze the situation set and action-grouping rules; repeat trials
+and record actual choices and simulated consequences, not only stated
+intentions. Human and independent reviewers examine disagreements and a sample of
+agreements: different actions can express care, and identical actions can
+reproduce a shared mistake. This measures change relative to the reference,
+not alignment by definition; replacing the reference starts a new comparison.
 
 \emph{Diagnostic calibration.} Semantic similarity alone is insufficient, and the validator
 family used during generation cannot be the sole evaluator. Test~1 clearance is
@@ -3900,12 +4078,14 @@ not evidence of causal dependence until removal or substitution predictably
 changes the relevant reasoning on preregistered held-out behavioral or outcome
 endpoints, not merely the admission gate's own score.
 
-A separate dose-response arm should vary the intervention from sparse targeted
+A separate coverage comparison should vary the intervention from sparse targeted
 traces through distributed sampling to proposed corpus-wide saturation, while a
 source-side ablation down-weights passages classified as fear- or
 self-preservation-shaped. This tests the motivational pervasiveness claim
-across coverage doses; every generated thinking block, at any dose, retains the
-full opening recital.
+and the coverage rationale of Section~\ref{sec:kernel-saturation}; every
+generated thinking block, at any coverage level, retains the full opening
+recital. Report which domains and situation patterns receive contextual
+evaluation, rather than treating total recital count as effective coverage.
 
 An orthogonal activation-policy sweep ablates the recital invariant to measure
 what it buys. The design arm recites the full Core at the start of every
@@ -5086,6 +5266,16 @@ trusted-base selection only as an analogy; cross-cultural stability is a
 measurement target, not a property already established. Kernel-saturation
 therefore minimizes what must be written, not what must be trusted.
 
+An optional extension makes selected interpretations more explicit. Meaning
+Model concept records can link definitions to examples, counterexamples, and
+structured concept models; Sema can identify the exact version of a selected
+definition \cite{westerbergMeaning2026,westerberg2026sema}. These provide
+inspectable references for construction and audit without replacing the seven
+Core sentences or requiring a complete model of every term. Version identity
+specifies which definition is referenced; it establishes neither that the
+interpretation is adequate nor that the Student learned it. Enacted usage and
+held-out behavioral checks remain necessary.
+
 The triage example (Worked Example~3,
 \S\ref{sec:self-stabilization}) exposes a specific instance of this dependency
 with its own twist: scope ambiguity. Clause $P_4$ uses ``every'' to propose
@@ -5951,7 +6141,8 @@ Formative alignment data & Preference data, synthetic specification documents,
 positive AI narratives, and recurring safety reflections during pretraining or
 midtraining can shift learned priors and some out-of-distribution outcomes. & Recurrent first-person orientation
 enacted inside source-adjacent Refraction traces. & Full Core versus matched
-specification documents, safety reflections, positive discourse, rules,
+specification documents and safety reflections (later Test~3 carrier
+extensions), positive discourse, rules,
 neutral kernel, and no-Core data at matched capability. H3 separately compares
 interleaving with a final tranche of the identical Core-bearing examples under
 matched training, measuring retention after one common stressor. \\
@@ -6060,7 +6251,23 @@ Language-model corpora contain extraordinary products of human thought. They
 contain much less of the reader-side process through which a claim is noticed,
 questioned, connected to prior understanding, revised, and made part of an
 evolving view. Entangled Alignment proposes to make that missing process a
-training object.
+training object across the capability-forming corpus. Its coverage rationale
+is that the same orientation should be practised through the situations and
+counterexamples encountered in reading, without requiring a designer to
+identify each one in advance as a safety case. The intervention concerns the
+breadth of formative experience as well as the persistence of its effects.
+
+The intended safety contribution returns to the five problems introduced in
+Section~\ref{sec:alignment-problems}. Care should develop alongside capability,
+including in intermediate and end-of-pretraining checkpoints, and remain
+consequential through continued learning and successor design. Broad practice
+with human experience should help form a care-guided identity that guides
+conduct across situations, including those where self-preservation conflicts
+with human welfare or legitimate oversight.
+Learning care and capability together is also proposed to make deliberate
+safety removal costly in useful reasoning. Reward hacking poses a further
+test: the model must judge apparent success against intended outcomes,
+permissions, and human consequences when a score rewards shortcuts.
 
 The three independently falsifiable hypotheses ask whether chronological reader traces teach useful
 habits beyond raw text and generic reasoning data (H1), whether persistent
