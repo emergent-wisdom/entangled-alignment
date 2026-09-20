@@ -32,8 +32,8 @@ extent that Henrik Westerberg holds the relevant copyright or database rights:
 - generated Markdown, metadata, databases, and other research artifacts under
   `projects/`
 
-Suggested attribution: Henrik Westerberg, *Entangled Alignment: When Safety Is
-the Substrate* (2026), using the DOI of the version consulted.
+Suggested attribution: Henrik Westerberg, *Entangled Alignment: Learning Care
+During Capability Formation* (2026), using the DOI of the version consulted.
 
 The CC BY license does not relicense quoted or embedded source passages,
 third-party works, model-provider output, software dependencies, or any other

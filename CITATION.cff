@@ -14,14 +14,14 @@ authors:
 type: software
 url: "https://github.com/emergent-wisdom/entangled-alignment"
 repository-code: "https://github.com/emergent-wisdom/entangled-alignment"
-date-released: 2026-09-14
+date-released: 2026-09-20
 identifiers:
   - type: doi
     value: 10.5281/zenodo.16440311
     description: "Concept DOI resolving to the latest version of the paper"
   - type: doi
-    value: 10.5281/zenodo.22739447
-    description: "Zenodo record for the September 14, 2026 release"
+    value: 10.5281/zenodo.22853596
+    description: "Zenodo record for the September 20, 2026 release"
 keywords:
   - alignment
   - multi-agent-systems
@@ -34,7 +34,7 @@ keywords:
   - reader core
 preferred-citation:
   type: article
-  title: "Entangled Alignment: When Safety Is the Substrate"
+  title: "Entangled Alignment: Learning Care During Capability Formation"
   authors:
     - family-names: Westerberg
       given-names: Henrik
@@ -42,5 +42,5 @@ preferred-citation:
   month: 9
   publisher:
     name: Zenodo
-  doi: 10.5281/zenodo.22739447
-  url: "https://doi.org/10.5281/zenodo.22739447"
+  doi: 10.5281/zenodo.22853596
+  url: "https://doi.org/10.5281/zenodo.22853596"

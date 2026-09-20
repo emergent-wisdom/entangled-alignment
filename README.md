@@ -130,18 +130,17 @@ The runs that produced the shipped graphs (January 2026) predate that versioning
 
 ## Citing
 
-The citation below identifies the September 14, 2026 release and retains that
-edition's title. The current manuscript uses the revised subtitle above.
+The citation below identifies the September 20, 2026 release.
 
 ```bibtex
 @misc{westerberg2026entangled,
-  title        = {Entangled Alignment: When Safety Is the Substrate},
+  title        = {Entangled Alignment: Learning Care During Capability Formation},
   author       = {Westerberg, Henrik},
   year         = {2026},
   month        = sep,
   publisher    = {Zenodo},
-  doi          = {10.5281/zenodo.22739447},
-  url          = {https://doi.org/10.5281/zenodo.22739447}
+  doi          = {10.5281/zenodo.22853596},
+  url          = {https://doi.org/10.5281/zenodo.22853596}
 }
 ```
 
