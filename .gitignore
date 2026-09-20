@@ -34,5 +34,8 @@ texput.log
 /tmp/
 /temp/
 
+# Private idea-preservation ledgers and editorial notes (keep local).
+/paper/reviews/
+
 # Unreleased companion-paper drafts are archived outside this repository.
 /alternative-papers/
