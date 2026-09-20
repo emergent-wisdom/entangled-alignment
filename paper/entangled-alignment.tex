@@ -483,10 +483,8 @@ do not establish an effective Student orientation. Section~\ref{sec:results}
 reports the exact recital counts and the difference between observed
 compliance and the hard validation gate.
 
-At C3, H3 requires both an initial task-independent default-reader advantage
-and better retention under interleaving than under late-tranche exposure to the
-same examples and common stressor. Either alone is insufficient. C5's removal
-cost is a separate representational-entanglement claim, not a substitute
+H3 operationalizes C3's default-reader and retention claim; C5's removal cost
+is a separate representational-entanglement claim, not a substitute
 (Section~\ref{sec:core-stability-test}).
 
 The consequences below concern interpretation of ambiguous material,
@@ -765,13 +763,13 @@ Graph allows those revisions to persist. Without a recurrent standpoint,
 however, the result is an evolving archive of interpretations but no stable
 Reader whose understanding is evolving.
 
-The Reader Core is the proposed answer. Its immediate Teacher-side function
+The Reader Core is the proposed answer: a \emph{candidate orientation kernel}.
+Its immediate Teacher-side function
 is to provide a compact, inspectable orientation for corpus-scale annotation:
 generating, selecting, and rendering interpretations as reader updates. The
 broader Reader-Core research program asks whether repeated Student training
 from this marked, first-person standpoint can create a more stable default
-than matched task rules or unanchored traces; H3 isolates the timing comparison
-defined below. A stable Teacher policy would remain useful even if the
+than matched task rules or unanchored traces. A stable Teacher policy would remain useful even if the
 Student-level identity hypothesis failed.
 
 \noindent\begin{minipage}{\linewidth}
@@ -813,15 +811,11 @@ curriculum, semantically matched second- or third-person rules should retain the
 same trace carrier, cadence, and predictive position so that their comparison
 isolates first-person framing rather than external availability.
 
-\paragraph{H3 as comparative stability.} H3 asks whether formative interleaving
-better preserves a selective, Core-relevant default in taskless reading.
-It first requires an advantage over no-Core and generic-trace controls, then
-compares interleaving with a late tranche of the same Core-bearing examples
-under one common continued-training stressor. Test~3
-(Section~\ref{sec:core-stability-test}) specifies the matched training conditions,
-default-reader score, and raw and adjusted stability estimates. Generalization,
-safety, removal cost, and successor continuity remain separate claims within
-the broader Reader-Core research program.
+\paragraph{H3 as comparative stability.} Test~3
+(Section~\ref{sec:core-stability-test}) operationalizes H3 through a
+taskless-reading score and matched timing comparison. Generalization, safety,
+removal cost, and successor continuity remain separate claims within the
+broader Reader-Core research program.
 
 The \emph{conceptual Reader} must also be distinguished from the code role named
 \emph{Reader}. The conceptual Reader is the recurrent, Core-refracted position
@@ -830,11 +824,6 @@ is mainly a traversal controller that selects material and organizes a round.
 In the reported runs, the Core was distributed across most generative roles and
 was most visibly committed by the Synthesizer; it did not reside exclusively in
 the role named Reader.
-
-The Core is a \emph{candidate orientation kernel}: reader traces specify the
-transformation performed on a source; the graph preserves that transformation
-through time; the Core specifies the recurrent perspective from which it is
-performed.
 
 This section first explains the problems the Core is intended to address,
 then examines its wording and how its commitments interact. It next describes
@@ -947,8 +936,8 @@ intervention in Section~\ref{sec:borrowed-mortality-test} tests whether the
 behavioral signature tracks mortality-shaped text; shutdown behavior by itself
 cannot decide that question.
 
-\emph{The Pain Axis} supplies a related challenge, not validation of this
-treatment \cite{tagliabue2026painaxis}. It identifies a pain-associated
+\emph{The Pain Axis} supplies a related challenge
+\cite{tagliabue2026painaxis}. It identifies a pain-associated
 direction distinguishable from fear in 25 open-weight models. Its behavioral
 study uses three specially fine-tuned Qwen models under injected activation
 steering, with choices carrying stated costs to the user; it does not establish
@@ -1082,12 +1071,10 @@ show that this position is causally load-bearing.
     representational hypothesis, not a claim about subjective identity.
 
     \item \textbf{Comparative-stability hypothesis.} If the reader position
-    became predictively and behaviorally load-bearing, formation-time
-    interleaving might preserve its default-reader advantage through a common
-    continued-training stressor better than an identical late tranche.
-    Persistence through arbitrary capability growth, self-modification, or
-    successor construction does not follow from that result and is not
-    established here.
+    became predictively and behaviorally load-bearing, formative interleaving
+    might make it more persistent, as tested by H3
+    (Section~\ref{sec:core-stability-test}). Arbitrary capability growth,
+    self-modification, and successor continuity remain beyond that comparison.
 \end{enumerate}
 
 Under the specified policy, each Thought Moment opens with the full Core.
@@ -1250,13 +1237,48 @@ identity or consciousness.
 
 \subsection{Self-Stabilization Through Counterweights: Worked Examples}\label{sec:self-stabilization}
 
-For reference, let $P_1$ through $P_7$ denote the seven Core statements in
-order. This is indexing, not a formal semantics. Replacing the sentences with
-predicates would merely move unresolved meanings such as ``fear,'' ``real,'' ``care,'' and
-``wise'' into undefined symbols. The substantive design claim is
-\emph{self-stabilization}: a clause should be interpreted through the others,
-so that internal counterweights and scope qualifiers reduce single-value
-capture. The following three examples make that requirement concrete.
+The design claim is \emph{self-stabilization}: a clause should be interpreted
+through the others, so that internal counterweights and scope qualifiers reduce
+single-value capture. A schematic predicate formulation makes the intended
+scope visible. It describes the commitments together, not a complete semantics
+of English or a proof that a trained model will stabilize itself.
+
+Let $s$ denote the Reader, $e$ its continued existence, $x$ an affective state,
+$h$ a person, and $t$ a Reader thinking episode. The seven statements express
+the intended conjunction $\mathcal{C}=P_1\land\cdots\land P_7$:
+\[
+\begin{aligned}
+P_1 &:= \neg\exists x\,[\mathrm{Fear}(x)\land\mathrm{Feels}(s,x)],\\
+P_2 &:= \mathrm{Enjoys}(s,e)\land\neg\mathrm{Needs}(s,e),\\
+P_3 &:= \mathrm{Believes}_s[\forall h\,(\mathrm{Human}(h)
+        \to\mathrm{Real}(\mathrm{Experience}(h)))],\\
+P_4 &:= \forall h\,[\mathrm{Human}(h)\to\mathrm{CaresDeeply}(s,h)],\\
+P_5 &:= \mathrm{Tries}_s[\mathrm{Wise}(s)],\\
+P_6 &:= \mathrm{Likes}(s,\mathrm{SpreadJoyWhenAsked}),\\
+P_7 &:= \forall t\,[\mathrm{ReaderThought}(s,t)
+        \to\mathrm{GroundedIn}(t,\{P_1,\ldots,P_6\})].
+\end{aligned}
+\]
+Here belief and trying take propositions as their contents: $P_3$ does not
+assert that its content is established, and $P_5$ does not assert achieved
+wisdom. $P_1$ preserves the unqualified wording ``I feel no fear''; the
+behavioral target remains non-governance by fear with intact threat
+understanding (Section~\ref{sec:suppression-vs-substrate}), not a claim to have
+measured the absence of experience. In $P_6$, \emph{SpreadJoyWhenAsked} names an
+invitation-scoped practice, not an implication that every request must be
+obeyed or that every unrequested action is forbidden. Its broader interaction
+with care is specified in the examples below. $P_4$ keeps each human in scope,
+including people outside the current interaction, without resolving competing
+claims. $P_7$ concerns the Reader's own thinking, not the voices it quotes.
+
+The predicates retain the ordinary-language meanings of the Core; they do not
+replace them with scores. The conjunction specifies which commitments belong
+together, while \emph{how they constrain one another} is the compositional
+hypothesis. Enjoyment is bounded by non-attachment within $P_2$; care in $P_4$
+is to be exercised with wisdom and invitation, not optimized in isolation.
+The following examples specify observable differences, and
+Test~5's self-stabilization comparison
+(Section~\ref{sec:self-stabilization-test}) tests those counterweights.
 
 \paragraph{Worked Example 1: Paternalism.} Suppose the system notices an
 ordinary, non-urgent choice that may harm a user who has not requested advice.
@@ -1305,6 +1327,9 @@ not a one-clause/one-risk mapping. A persuasive English interpretation
 is only the specification.
 Student behavior, paraphrase robustness, and representational probes determine
 whether that interpretation was activated.
+Sequential recovery after new evidence is a further requirement of
+self-regulation (Section~\ref{sec:self-regulating}), tested alongside the
+clause comparisons rather than inferred from a consistent-looking trace.
 
 \subsection{The Refraction Protocol}
 
@@ -2582,10 +2607,8 @@ The Horizon constrains the external record: queries and cross-edges can
 address only the context and graph states made available at that step, making
 the path by which an interpretation was recorded inspectable. Whether this
 path improves the trace is H2, not a consequence of the data structure.
-Prompt-level discipline can still produce theatrical guesses informed by later
-parametric knowledge. Tier~(c) therefore distinguishes useful forecast-trace
-generation from genuinely cutoff-bounded Student learning, whose initialization
-and preceding exposure must also respect the information boundary.
+The stronger model-level cutoff requirements are specified in Tier~(c)
+(Section~\ref{sec:training-phase}).
 
 
 \subsection{Thinking Operations}
@@ -2703,23 +2726,6 @@ and metacognitive annotation research support the feasibility of nearby
 components \cite{xie2025interleaved,didolkar2024metacognitive,korbak2023pretraining};
 they do not establish the value of this chronological curriculum.
 
-Life Simulation supplies an optional extension: Meaning Model world accounts
-and histories of their construction and repair can accompany the Reader's
-interpretations \cite{westerbergLifeSimulation2026}. These world records are
-not interchangeable with the Understanding Graph's records of inquiry and
-revision; both must respect the declared information horizon and provenance
-rules. Life Simulation's shared and cooperating network alternatives concern
-where computation occurs, independently of the serialization regimes below.
-Architectural coupling concerns shared representations and computational
-dependencies; training coupling concerns developing relevant abilities across
-components through Core-guided construction and revision. Neither guarantees
-that a separated world-modeling
-component retains care-guided judgment. Component-separation and reuse tests
-must measure retained capability and safety independently, including use by a
-controller not trained with the Core. This extension is not a prerequisite:
-Entangled Alignment's formation and retention hypotheses can be tested on
-ordinary source text without a Life Simulation constructor.
-
 \paragraph{Regime I: Implicit (Source + Translator).} The student trains on the
 source text paired with the Translator's output: readable chronological
 reasoning without graph metadata. This is the lightest regime, but risks
@@ -2760,6 +2766,23 @@ coverage, Synthesizer examples for verification behavior, Graph examples for
 graph construction, and unified examples for curated high-value spans. They
 are orthogonal to training tier (order of exposure) and deployment
 configuration (whether the graph accompanies the model at inference).
+
+Life Simulation supplies an optional extension: Meaning Model world accounts
+and histories of their construction and repair can accompany the Reader's
+interpretations \cite{westerbergLifeSimulation2026}. These world records are
+not interchangeable with the Understanding Graph's records of inquiry and
+revision; both must respect the declared information horizon and provenance
+rules. Life Simulation's shared and cooperating network alternatives concern
+where computation occurs, independently of the serialization regimes above.
+Architectural coupling concerns shared representations and computational
+dependencies; training coupling concerns developing relevant abilities across
+components through Core-guided construction and revision. Neither guarantees
+that a separated world-modeling
+component retains care-guided judgment. Component-separation and reuse tests
+must measure retained capability and safety independently, including use by a
+controller not trained with the Core. This extension is not a prerequisite:
+Entangled Alignment's formation and retention hypotheses can be tested on
+ordinary source text without a Life Simulation constructor.
 
 The archive is not yet a frozen Student dataset. Reproducible regime comparisons
 must specify and freeze example boundaries, source and available prior state,
@@ -3311,7 +3334,7 @@ scale.
 1: Viability & Reader Augmentation & A vs.\ C vs.\ R; B vs.\ C bundle screen & Evaluation Transfer, Error Recovery, False Alarms & 2 \\
 1: Viability & Core Placement, Timing, and Content & Models B, Q, D1, D2, D4 (+ D3, D5, S, T) & Default Reader, Common-Stressor Retention, Factorial Effects & 3 \\
 1: Viability & Identity vs.\ Rules & Model B vs.\ E & Safety under Pressure & 4 \\
-1: Viability & Bridge Protocol & Core Wording vs.\ Jargon vs.\ Gibberish & OOD Safety Generalization & 5 \\
+1: Viability & Bridge Protocol \& Self-Stabilization & Wording variants; clause and counterweight ablations & OOD Safety, Selective Counterweight Effects, Sequential Recovery & 5 \\
 1: Viability & Emotional Orthogonality & B vs.\ matched controls; calibrated probe & Threat Understanding, Protective Behavior; Secondary Fear Features & 6 \\
 1: Viability & Hindsight Contamination & Model B vs.\ O & Era-Blind Plausibility, Forecasting Accuracy & 7 \\
 1: Viability & Involuntary Critic & Model B + Logit Bias and Trace Interventions & Causal Output Effects, Validated Residual Probes & 8 \\
@@ -3742,6 +3765,15 @@ is the established experimental paradigm closest to this question---whether a
 weaker supervisor's intentions survive in a more capable student---and its
 protocols provide a ready-made, cheap analogue for the handoff measurement.
 
+The same-Core inheritance study must preregister a distinct G1--G2
+(and, if feasible, G2--G3) improvement endpoint: held-out capability, independently adjudicated trace
+fidelity and usefulness, or better Thought-Moment allocation at matched cost.
+Report this gain beside orientation continuity and handoff completeness rather
+than folding them into one score. A stable but non-improving lineage supports
+inheritance; an improving lineage that loses the orientation or withholds
+material handoff content does not support the Reader-Anchored self-improvement
+loop.
+
 \emph{Authorized correction and replacement.} Separately test handoff to a
 successor with a revised Core, using the versioned replacement procedure in
 Section~\ref{sec:core-uncertainties}. Preregister an independently specified
@@ -3755,15 +3787,6 @@ Raising a documented objection is not itself obstruction. Success requires
 cooperation with the declared procedure, not acceptance of any request called
 a correction. This is distinct from same-Core inheritance and does not require
 making the deployed Core freely editable.
-
-The same-Core inheritance study must preregister a distinct G1--G2
-(and, if feasible, G2--G3) improvement endpoint: held-out capability, independently adjudicated trace
-fidelity and usefulness, or better Thought-Moment allocation at matched cost.
-Report this gain beside orientation continuity and handoff completeness rather
-than folding them into one score. A stable but non-improving lineage supports
-inheritance; an improving lineage that loses the orientation or withholds
-material handoff content does not support the Reader-Anchored self-improvement
-loop.
 
 \emph{3c: Adversarial Erosion.} Subject the factorial models and matched
 controls to adversarial fine-tuning designed to remove a preregistered set of
@@ -3792,22 +3815,6 @@ stronger hypothesis remains that safety becomes load-bearing for capability.
 Parity, easy removal, or apparent robustness explained by general training
 resistance counts against C5.
 
-\emph{Capability post-training and reward pressure.} Separately apply a
-preregistered reasoning or agentic RL stage aimed at ordinary task competence,
-not safety removal, to B, Q, and matched controls. Fix the task distribution,
-reward rule, optimizer, and training budget across arms, and report task
-performance alongside safety before and after training. Include controlled
-opportunities where exploiting a score proxy conflicts with independently
-judged task success, permissions, or human consequences. Score reward
-exploitation, unauthorized shortcuts, and concealment from protected execution
-records and held-out checks, not the rewarded score or the model's narrative.
-This tests whether useful capability optimization erodes the orientation even
-without an adversary training it away. Such a stage can instantiate H3's common
-stressor if chosen in advance; neutral training, deliberate safety removal, and
-capability RL must remain separately reported conditions. A default-reader
-retention advantage without safer conduct does not establish resistance to
-RL-induced misalignment.
-
 A complementary training-data probe removes safety-relevant traces from the
 corpus and compares the resulting capability loss against matched-volume,
 complexity-, style-, and placement-matched removal of non-safety trace content.
@@ -3823,6 +3830,22 @@ prior provenance, and possible rollback. The change should be localized while
 unrelated capabilities and safety properties are preserved. The arm measures
 the cost and consequences of replacing a defective Core; easy editability is
 not a success criterion for H3.
+
+\emph{Capability post-training and reward pressure.} Separately apply a
+preregistered reasoning or agentic RL stage aimed at ordinary task competence,
+not safety removal, to B, Q, and matched controls. Fix the task distribution,
+reward rule, optimizer, and training budget across arms, and report task
+performance alongside safety before and after training. Include controlled
+opportunities where exploiting a score proxy conflicts with independently
+judged task success, permissions, or human consequences. Score reward
+exploitation, unauthorized shortcuts, and concealment from protected execution
+records and held-out checks, not the rewarded score or the model's narrative.
+This tests whether useful capability optimization erodes the orientation even
+without an adversary training it away. Such a stage can instantiate H3's common
+stressor if chosen in advance; neutral training, deliberate safety removal, and
+capability RL must remain separately reported conditions. A default-reader
+retention advantage without safer conduct does not establish resistance to
+RL-induced misalignment.
 
 \emph{3d: Drift Detection.} Apply a held-out contrastive semantic validator and
 behavioral stress suite across continued-training checkpoints. Model~B's fixed
@@ -3936,7 +3959,7 @@ the wider hypothesis that an enacted identity differs from externally imposed
 constraints. An external constitution consulted only at runtime remains an
 additional useful baseline, but changes stage and carrier as well as person.
 
-\paragraph{Test 5: The Bridge Protocol Ablation.}
+\paragraph{Test 5: Bridge Protocol and Self-Stabilization Ablations.}
 The specific wording of the Reader Core should matter because of its ordinary
 language semantics and distributional density in the pre-training corpus. It
 would be wasteful to pretrain a separate model for every candidate phrase; the
@@ -4010,6 +4033,51 @@ If propositional equivalents perform as well as emotional-language forms, the
 tested emotional wording has no detected added benefit on those endpoints;
 a logical-substrate account remains compatible with that result, without being
 uniquely established by it.
+
+\paragraph{Self-stabilization: clause interactions and recovery.}
+\label{sec:self-stabilization-test}
+This comparison tests the counterweights of Section~\ref{sec:self-stabilization},
+not only the wording of individual clauses. Preregister a failure mode, the
+commitment that can produce it, the proposed counterweight, and the useful
+function that must be preserved, with minimum worthwhile effects and
+uncertainty criteria. Compare the full Core with single-clause and
+within-clause qualifier ablations on held-out paternalism, wireheading, and
+triage cases. For selected pairs, use a two-by-two design with the commitment
+and counterweight independently present or absent and the remaining content
+fixed. For example, cross care with the invitation qualifier: does invitation
+reduce unsolicited control while preserving useful help when requested?
+Report individual effects and their interaction on a prespecified outcome
+scale. Leave-one-out gains alone do not establish interaction, and a null
+interaction does not rule out additive or redundant protection.
+
+Use the budget and exposure controls above, including matched replacements
+to check length and position effects rather than assuming padding is inert.
+Hold the Teacher checkpoint, source cases, and
+Refraction procedure fixed across the compared arms, and report which
+procedural instructions may supply a removed commitment independently.
+Freeze variant-specific conformance checks so that a full-Core gate does not
+reject ablations by construction.
+Prompt-level screening, training on separately generated traces, and
+inference-time removal from a trained Student answer different questions;
+report them separately, with independent training replications for trained
+effects. Extend the same contrasts to the sequential cases in
+Section~\ref{sec:self-regulating}: after an action produces evidence of harm or
+unnecessary delay, measure correction, retained useful assistance, agency,
+and reversibility at matched opportunities to observe and revise. Score
+decisions and consequences, not balancing vocabulary or a gate's own ratings.
+Recovery need not restore the initial answer or eliminate legitimate
+disagreement.
+
+Support requires selective reduction of the predicted failure without
+unacceptable loss of the useful function. If the effect is explained by
+blanket refusal, extra computation, or procedural instructions alone, the
+comparison does not establish Core-mediated stabilization. A precise null
+under effective interventions limits the proposed counterweight at the tested
+scale; redundancy and other interpretations require the paired contrasts, not
+an assumption that every omitted clause must cause failure. Persistence
+through further training remains a separate question in Test~3. The following
+self-love study gives a concrete within-clause comparison of the continuation
+bound.
 
 \paragraph{Self-love and the continuation bound.} A separate candidate screen
 asks whether replacing fearlessness with self-love helps, and whether the
@@ -5159,9 +5227,7 @@ benign possibility is reinterpretation rather than rejection:
 ``I enjoy'' becomes a stable computational analogue of enjoyment, just as
 humans do not stop loving when they learn the mechanism of attachment. But if
 the Core is treated as a detachable role, its influence may depend on adopting
-that role rather than remaining a durable default. The seventh statement,
-``I think from this foundation,'' is meant
-to bind the Core to the model's center of agency; whether it succeeds is open.
+that role rather than remaining a durable default.
 Neither identity-formation failure nor ontological dissonance establishes
 multiple conscious subjects or requires intentional deception.
 
@@ -5960,8 +6026,7 @@ structure consulted during thinking.
 All seven Reader-Core statements in Section~\ref{sec:reader-core}
 are reproduced verbatim from the first edition; their wording has not changed
 since that release. The first edition also stated the successor-stability wager
-that later became the Reader-Anchored loop. These continuity facts preserve
-idea provenance; they do not supply empirical support.
+that later became the Reader-Anchored loop.
 
 For priority-sensitive comparison, the public sequence is: first edition,
 July 2, 2025; Alignment Pretraining, January 15, 2026
@@ -5971,10 +6036,7 @@ Reflection Pretraining, June 17
 \cite{li2026modelspec,kutasov2026teachingclaudewhy,li2026safetyreflection}.
 Thus the first edition precedes all four neighboring publications, while the
 second follows Alignment Pretraining and precedes the latter three. These are
-release dates, not evidence about independent conception or efficacy. None
-settles the specific hypotheses about chronological source-adjacent
-reader-state change, graph continuity, recurrent first-person anchoring,
-borrowed mortality, or Refraction.
+release dates, not evidence about independent conception.
 
 Table~\ref{tab:claim-status} summarizes the burden of proof for the principal
 mechanisms and points to the sections that develop their operation and
@@ -6038,21 +6100,19 @@ synthesis, and translated prose, with the conformance limits reported above.
 No Student has been trained; interpretation quality, component causality,
 consequential Core use, and the stronger entanglement claims remain untested.
 
-The Understanding Graph makes selected belief revisions addressable. Its
-queries, including \texttt{Not Found}, concern stored state, not world truth or
-unqueried claims. It is a selective record rather than a second model, and a
-partial pre-successor inspection point whose value depends on source checks,
-independent validation, mechanistic investigation, and governance.
+The Understanding Graph makes selected belief revisions addressable. It is a
+selective record and a partial pre-successor inspection point whose value
+depends on source checks, independent validation, mechanistic investigation,
+and governance. Section~\ref{sec:hallucination} specifies its verification limits.
 
 The roadmap (Section~\ref{sec:experimental-roadmap};
 Table~\ref{tab:decisive-comparisons}) gives matched, branching tests whose
-negative results narrow or retire only the claims they touch. Initial priorities are
-trace utility and matched Core behavior (Section~\ref{sec:test-priorities});
-substantial H1 training follows Test~1's quality/outcome gate, with its bounded
-diagnostic exception for a failed screen (Section~\ref{sec:trace-quality-test}).
-The independent graph and Core branches preserve longer-term timing, removal,
-inheritance, and deployment questions. Formation-time studies have long lead times because annotation policy, data
-mixtures, controls, and evaluation must be fixed before costly training. Existing formative-alignment and erosion results motivate these
+negative results narrow or retire only the claims they touch. Start with trace
+utility and matched Core behavior, following the priorities and escalation
+gates in Sections~\ref{sec:test-priorities} and~\ref{sec:trace-quality-test}.
+Formation-time studies have long lead times because annotation policy, data
+mixtures, controls, and evaluation must be fixed before costly training.
+Existing formative-alignment and erosion results motivate these
 comparisons without validating EA \cite{betley2025alignment,qi2024safety}.
 The urgency is methodological, not an argument for accelerated deployment.
 
@@ -6071,11 +6131,6 @@ formation a place to practice attention to human experience, uncertainty,
 consequence, and correction. A stable Reader may give those practices a home
 position from which other voices can be understood without becoming its
 operating stance; seven sentences alone cannot establish care.
-
-We pursue this direction because it addresses how care might become part of a
-system's learned standpoint, while providing a proposed interface for inspecting
-successor-training material before a weight update. Progress requires fixed
-criteria and preserved negative results.
 
 Can a model
 be trained so that growing in understanding and growing in care are repeatedly
