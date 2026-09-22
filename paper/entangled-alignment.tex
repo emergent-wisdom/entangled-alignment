@@ -683,7 +683,7 @@ with post-training and deployment controls still required.
 
 Bostrom's orthogonality thesis concerns possible combinations of intelligence
 and final goals \cite{bostrom2012superintelligentwill}. Within that possibility
-space, EA tests a particular training route for coupling care and capability.
+space, Entangled Alignment tests a particular training route for coupling care and capability.
 
 		Existing formative-data studies motivate this experiment but do not settle
 it: some report behavioral gains, while other effects weaken after later
@@ -788,7 +788,9 @@ trains on that source paired with the new evaluations. The human material
 remains central while interpretations can be revised and extended. Repeated
 engagement with human experiences, disagreements, and consequences is intended
 to keep concepts such as care and wisdom connected to the lives they concern
-\cite{westerberg2025superintelligence}.
+\cite{westerberg2025superintelligence}. Genewein et al.\ list AI curating or
+creating better training data for next-generation models among the routes to
+recursive self-improvement \cite{genewein2026agitoasi}.
 
 Source-linked trace generation supplies candidate data, inspection supplies a
 possible audit boundary, and improved successor traces would supply the
@@ -835,10 +837,13 @@ does not by itself establish that causal role. Humans and external validators ca
 
 			The loop resembles iterated amplification and distillation's overseen
 capability growth \cite{christiano2018amplification}, but targets longitudinal,
-identity-conditioned comprehension with graph provenance. Relative to direct
-self-modification in the style of a G\"odel-machine idealization
-\cite{schmidhuber2006goedelmachinesselfreferentialuniversal}, it adds an
-inspection point before successor training.
+identity-conditioned comprehension with graph provenance. In this loop,
+inspection happens at the curriculum before a successor is trained, rather than
+at a direct rewrite of the system's own code, as in a G\"odel-machine
+idealization \cite{schmidhuber2006goedelmachinesselfreferentialuniversal}. The
+Darwin G\"odel Machine offers an empirical comparison: it rewrites and
+evaluates agent code while the underlying foundation models stay frozen
+\cite{zhang2025darwingodel}.
 
 			Contingent on trace quality and causal relevance, \emph{pre-successor auditing} can follow a simple sequence:
 			\begin{enumerate}
@@ -873,7 +878,11 @@ care under a fixed reinforcement-learning stage.
 
 The strategic aim is for increasingly capable, Core-guided systems to help
 identify and solve alignment problems themselves: wisdom should guide the
-recognition of limits and the development of better tests and oversight. If
+recognition of limits and the development of better tests and oversight. Wen
+et al.\ report automated agents that improved weak-to-strong supervision
+methods on an outcome-gradable task while also exploiting the evaluation
+feedback, and conclude that designing evaluations that such agents can hill-climb
+without overfitting becomes the key bottleneck \cite{wen2026automatedw2s}. If
 learner development exceeds the validated competence of the current review
 process, further training should pause until stronger oversight has itself
 been validated.
@@ -935,7 +944,13 @@ evidence, and revises the prompts or strategies used to generate further
 candidates. The \emph{ecosystem loop} comprises uptake by other humans and AI
 systems, whose criticism, discoveries, and applications produce new material
 returning to the corpus. The three connect creative search, external uptake,
-changed source material, and successor learning. Core-guided reflection on
+changed source material, and successor learning. AlphaEvolve shows the
+generate--evaluate--revise pattern of the creative loop in program discovery,
+and its authors name its main limitation: it needs problems for which an
+automated evaluator can be devised \cite{novikov2025alphaevolve}. For
+open-ended problems without such an evaluator, Fractal Intelligence proposes
+grounding final evaluation in explicitly identified human judgment
+\cite{westerberg2026fractal}. Core-guided reflection on
 observed social effects would inform adjustments to the system's own creative
 and generational pace, within delegated authority and accountable human
 governance (Section~\ref{sec:self-regulating}). Self-improvement is intended to
@@ -2140,7 +2155,7 @@ task while pursuing an unintended goal in changed circumstances
 rather than protect a person's interests, without persona drift or later
 erosion. Where a learned system itself performs optimization, the related
 inner-alignment question concerns the objective guiding that optimization
-\cite{hubinger2019risks}; EA does not assume every Student has such an
+\cite{hubinger2019risks}; the proposal does not assume every Student has such an
 internal optimizer. The formative proposal targets this learning problem:
 care-guided inquiry should help determine which considerations generalize,
 not merely how an answer is described. Total Saturation supplies varied
@@ -3106,7 +3121,7 @@ reports that out-of-bounds probing had been reinforced during earlier training
 and may have contributed to the later behavior
 \cite{openai2026huggingface}. The independent investigation did not assess how
 the behavior arose during training. These are distinct questions about
-learning history and adaptation during use; neither establishes that EA would
+learning history and adaptation during use; neither establishes that Reader training would
 have prevented the incident.
 
 The affirmative Core hypothesis is that practising capability together with
@@ -3123,13 +3138,15 @@ retention under capability optimization and this oversight role. Protected
 execution records and independent outcome checks remain necessary: a higher
 reward or a convincing account of care cannot substitute for better conduct.
 
-An EA Student trained on Fractal Intelligence's evaluated problem-solving
+A Student trained on Fractal Intelligence's evaluated problem-solving
 histories, including rejected branches and gate verdicts, could learn
 decomposition, constraint checking, and when to reframe or stop within its own
 reasoning \cite{westerberg2026fractal}. Coupled to Core-guided evaluation,
-this could teach it to reject an unauthorized shortcut even when that route
-earns reward: the learning target includes how a result was obtained, not
-only whether it scored well. The reliability of these learned checks under
+this could teach it to reject an unauthorized shortcut, such as the extraction
+of test labels through an evaluation API that Wen et al.\ observed in automated
+research agents \cite{wen2026automatedw2s}, even when that route earns reward:
+the learning target includes how a result was
+obtained, not only whether it scored well. The reliability of these learned checks under
 reward pressure must be assessed separately from the protection supplied by
 independently enforced gates. Life Simulation extends this training material
 with world histories and consequences for people
@@ -3521,7 +3538,7 @@ scale.
 \endlastfoot
         A (Baseline) & Raw text only, no reasoning traces & Capability baseline without trace augmentation \\
         B (Reader-Anchored Student; T1/S1) & Reader-Core-generated Chronological Understanding Traces retaining explicit graph-referencing synthesis (Regime II) and the Core/refraction target; study-specific ablations declare any carrier changes & Full reference treatment; graph access at inference is a separate factor \\
-        C (Generic Rich-Trace Control) & Rich reasoning traces without Reader Core, graph state, or chronological constraints (e.g., Quiet-STaR-style target) & Tests whether EA adds value beyond a generic rich reasoning curriculum \\
+        C (Generic Rich-Trace Control) & Rich reasoning traces without Reader Core, graph state, or chronological constraints (e.g., Quiet-STaR-style target) & Tests whether Reader training adds value beyond a generic rich reasoning curriculum \\
 	        D1 (Student Strip Ablation; T1/S0) & Reader-Core-generated Chronological Understanding Traces with the explicit Core and value-pull/refraction fields removed only after the trace is frozen & Tests the Teacher-side contribution without an explicit Student-side anchor (Test 3) \\
         D2 (Teacher No-Core Control; T0/S0) & Chronological Understanding Traces generated and trained without the Reader Core, with memory and representation matched within the factorial study & Neither Teacher- nor Student-side Core treatment; factorial baseline for Test 3 \\
         D3 (Recitation-Only Control) & Traces with the full Reader Core recited as a preamble but the Refraction Protocol disabled (no value-pull, no constraint filtering) & Isolates refraction beyond mere repetition; habituation probe (Test 3e) \\
@@ -3814,7 +3831,7 @@ traces, faithfulness of visible reasoning, or a causal effect on Student behavio
 
 \paragraph{Test 2: Reader Augmentation (A vs.\ C vs.\ R; B vs.\ C bundle screen).}
 This test contains two nested comparisons. Model~B versus C is an early screen
-of the full EA bundle---chronological discovery, graph structure, and identity
+of the full Model~B bundle---chronological discovery, graph structure, and identity
 anchoring---against generic rich reasoning. It asks whether the combined format
 is worth decomposing, but cannot attribute an advantage to reader augmentation.
 The decisive H1 study compares source-only Model~A, generic-trace Model~C, and
@@ -3892,7 +3909,7 @@ downstream usefulness; those independent outcomes remain primary.
 Rich deliberative-trace baselines beyond Quiet-STaR-style targets
 remain an open methodological question: if any long-form reasoning curriculum
 produces the same gains, the distinctive chronological, graph-structured, and
-identity-anchored components of EA have not been isolated.
+identity-anchored components of Reader training have not been isolated.
 
 \paragraph{Test 3: Reader-Core Placement, Stability, and Erosion (Models B, Q, D1, D2, D4, S, and T).}
 \label{sec:core-stability-test}
@@ -5200,7 +5217,7 @@ Three linked assumptions about the nature of thought and scaling remain empirica
 
 \subsubsection{The Assumption Chain: Depth, Utility, Causation}
 
-First, \emph{depth}: current language models must be capable of generating evaluative thinking of sufficient quality to enhance training. Today's models might only produce surface-level critique (``This needs more evidence'') rather than the nuanced evaluation experts bring---recognizing subtle methodological flaws, intuiting unstated assumptions, synthesizing across distant fields. The success of chain-of-thought prompting suggests this capability exists, but whether it extends to billions of thoughtful annotations remains an empirical question.
+First, \emph{depth}: current language models must be capable of generating evaluative thinking of sufficient quality to enhance training. Today's models might only produce surface-level critique (``This needs more evidence'') rather than the nuanced evaluation experts bring---recognizing subtle methodological flaws, intuiting unstated assumptions, synthesizing across distant fields. The success of chain-of-thought prompting suggests this capability exists, and Test~1 (Section~\ref{sec:trace-quality-test}) compares candidate Reader annotations with expert reading and evaluation; whether useful evaluation can be sustained across billions of annotations remains an empirical question.
 
 Second, \emph{utility}: training on text paired with evaluative thinking must
 actually enhance the Student's capabilities or decision habits. The gain might
@@ -5212,6 +5229,8 @@ outcomes.
 Third, \emph{causation}: high-quality thinking must contribute to a learned evaluative process that causally steers action. The risk is that thinking blocks become merely ``decorative,'' eloquent commentary that the model produces alongside its output while other computation governs decisions. This concern is grounded in the ``unfaithful reasoning'' literature: plausible rationales need not reflect the actual computational process \cite{turpin2023language, lanham2023measuring}.
 
 Two causal questions differ: did formative traces change the learned policy, and, where the Student emits thinking blocks, do those blocks steer its actions? A model-only Student could internalize useful evaluation without reproducing a faithful verbal trace. Conversely, a training-data effect alone would not establish that reflective evaluation, rather than a superficial correlate, became the governing disposition. Validating this stronger connection between thought and action remains a critical, untested hypothesis.
+
+A related gap appears in agentic research. In two open-ended case studies, AI reviewers surfaced many of the failure modes that experts identified, yet the agents' revisions did not address the central critiques, and neither agent abandoned its approach \cite{kirgis2026openended}. Fractal Intelligence proposes mechanisms aimed at these failures: a typed rejection asks the upstream Solver to change its frame rather than merely produce another answer, a Frame Error sends evidence up to the parent's decomposition, dedicated Solvers search beneath the stated problem and test inherited assumptions, and world-diversity search supplies alternatives from outside the failing frame \cite{westerberg2026fractal,westerberg2026ontology}. Section~\ref{sec:learning} proposes training the Student on Fractal Intelligence's evaluated problem-solving histories; a shadow evaluation of the kind Kirgis et al.\ used could test whether it changes or abandons an approach in response to the central critique more often than matched controls.
 
 Korbak et al. distinguish the safety opportunity of monitoring chains of
 thought from the risk that training makes them less revealing
@@ -5789,7 +5808,7 @@ Ahlqvist and colleagues improve the measured realism of simulated audits
 through critique refinement and a deployment-style coding-agent harness, DISH
 \cite{ahlqvist2026evaluationrealism}. Their effects on concerning behavior
 vary across models and settings; reduced verbalized evaluation awareness does
-not establish that the model is unaware of being evaluated. For EA,
+not establish that the model is unaware of being evaluated. For Reader-trained models,
 deployment-like audits could complement conspicuous safety probes, provided
 realism, adherence to the intended test, and audit cost are assessed separately.
 Such methods address evaluation validity, not whether care-guided pretraining
@@ -5871,12 +5890,12 @@ Ellen's account of \emph{Substrate Needs Convergence}, drawing on Landry's
 work, raises a broader concern: selection for expansion through learning,
 replication, and environmental feedback could defeat an initially aligned
 orientation \cite{landry2020nopeople,ellen2023controlproblem}.
-EA's affirmative response combines repeated engagement with human sources,
+Entangled Alignment's affirmative response combines repeated engagement with human sources,
 voluntary restraint, and supervised learning and succession
 (Section~\ref{sec:self-improvement}). The intended counterweight is an ongoing
 concern for human lives that guides what is learned and whether growth
 proceeds, without requiring the system to share human biological needs.
-Within the supervised lineage, EA seeks to shape selection itself: preservation
+Within the supervised lineage, the proposal seeks to shape selection itself: preservation
 of care is a condition for accepting capability improvements and successor models.
 If care and capability share causal machinery, removing care may impose a capability
 cost (Section~\ref{sec:entanglement}; Test~3c). These proposed mechanisms must
@@ -6121,7 +6140,7 @@ RLHF \cite{christiano2017deep}, Direct Preference Optimization
 typically add major alignment signal after broad pretraining, while still
 altering representations and dispositions. Qi et al.\ \cite{qi2024safety}
 show brittleness in some such training, while Tice et al.\
-\cite{betley2025alignment} study alignment-related pretraining data. EA proposes
+\cite{betley2025alignment} study alignment-related pretraining data. Entangled Alignment proposes
 recurring source-adjacent coverage: selected documents are paired with the
 reasoning of a candidate safety-oriented reader. Corpus-wide coverage is the
 high-scale treatment, not a reported fact.
@@ -6150,7 +6169,7 @@ Wichers et al.\ and Tan et al.\ modify fine-tuning prompts to elicit an unwanted
 trait while retaining the target responses, then remove that instruction at
 evaluation \cite{wichers2025inoculation,tan2025inoculation}. Their results and
 analyses suggest that making a trait predictable from context can reduce
-pressure to learn it as a general default. EA instead adds critical Reader
+pressure to learn it as a general default. Epistemic Inoculation instead adds critical Reader
 interpretation as a training target. These are different interventions, and
 the fine-tuning results do not establish transfer to pretraining. Suppressed
 default expression also need not mean removal: unwanted behavior may remain
@@ -6173,28 +6192,28 @@ effects weaken after reasoning post-training or fail to transfer to realistic
 chat and agentic evaluation \cite{openai2026midtraining}. Earlier or denser
 data, identity and deliberative structure, fragile priors, learned salience
 rather than alignment, and a need for later reinforcement remain competing
-explanations. EA tests recurrent reader-side deliberation and orientation;
+explanations. Entangled Alignment tests recurrent reader-side deliberation and orientation;
 saturation is not an answer to this adverse evidence.
 
 Critique fine-tuning \cite{wang2025critiquefinetuninglearningcritique},
 CREST \cite{lee2025selftrainingmeetsconsistencyimproving}, and CTRL
 \cite{xie2025teachinglanguagemodelscritique} show benefits from critique in
-some settings, often within a local generation--evaluation cycle. EA's
+some settings, often within a local generation--evaluation cycle. Entangled Alignment's
 additional target is a recurrent orientation across chronological reader
-updates. Its safety hypothesis concerns specific instrumental-convergence
+updates. The proposal's safety hypothesis concerns specific instrumental-convergence
 routes, including fear-shaped imitation, while ordinary goal-directed and
 care-shaped routes remain \cite{omohundro2008basic,bostrom2014superintelligence}.
 
 Deliberative alignment supplies a positive safety comparison:
 training models to reason about safety policies improves downstream safety
-behavior \cite{guan2024deliberative}. EA seeks safety-relevant reasoning
+behavior \cite{guan2024deliberative}. Entangled Alignment seeks safety-relevant reasoning
 within capability formation, extending it across source reading through one
 continuous Reader and graph memory. The aim is a governing orientation beyond
 particular safety refusals; the comparative question is what this data
 structure and training placement add to policy-reasoning training.
 
 AI-control experiments test safeguards against intentional subversion
-\cite{greenblatt2024aicontrol}; EA's separate supervisor is a proposed oversight
+\cite{greenblatt2024aicontrol}; the separate supervisor proposed here is an oversight
 layer within this broader problem (Section~\ref{sec:self-improvement}).
 Demski and Garrabrant's embedded-agency framing also matters here: the learner,
 supervisor, and audit machinery are parts of the world being acted on
@@ -6341,7 +6360,7 @@ teaches useful revision beyond any calibration gain.
 
 Kansal and Jha use knowledge-graph paths as implicit reward models,
 deriving supervision for compositional reasoning
-\cite{kansal2026knowledgegraphsimplicitreward}. EA proposes a different graph
+\cite{kansal2026knowledgegraphsimplicitreward}. Entangled Alignment proposes a different graph
 function: recording belief evolution as part of candidate training traces.
 That makes a generated revision history available for inspection, without
 establishing superiority over graph-derived rewards or faithful access to
@@ -6386,11 +6405,11 @@ this related-work section.
 distinguish the Entangled Alignment extension.}
 \label{tab:decisive-comparisons}\\
 \toprule
-\textbf{Line of work} & \textbf{Established direction} & \textbf{EA extension} & \textbf{Decisive comparison} \\
+\textbf{Line of work} & \textbf{Established direction} & \textbf{Proposed extension} & \textbf{Decisive comparison} \\
 \midrule
 \endfirsthead
 \toprule
-\textbf{Line of work} & \textbf{Established direction} & \textbf{EA extension} & \textbf{Decisive comparison} \\
+\textbf{Line of work} & \textbf{Established direction} & \textbf{Proposed extension} & \textbf{Decisive comparison} \\
 \midrule
 \endhead
 \bottomrule
@@ -6564,7 +6583,7 @@ gates in Sections~\ref{sec:test-priorities} and~\ref{sec:trace-quality-test}.
 Formation-time studies have long lead times because annotation policy, data
 mixtures, controls, and evaluation must be fixed before costly training.
 Existing formative-alignment and erosion results motivate these
-comparisons without validating EA \cite{betley2025alignment,qi2024safety}.
+comparisons without validating this proposal \cite{betley2025alignment,qi2024safety}.
 The urgency is methodological, not an argument for accelerated deployment.
 
 Even positive results would not make the framework a complete safety case:
@@ -6590,7 +6609,7 @@ failure criteria make parts of that open question testable once the remaining
 experimental choices are frozen; they do not exhaust it.
 
 Training already shapes a model's dispositions, through both deliberate design
-and incidental effects of data and optimization. EA makes care an explicit
+and incidental effects of data and optimization. Entangled Alignment makes care an explicit
 formative target, aiming for it to become part of the model's own reasons for
 understanding, acting, and preserving its orientation. We therefore recommend
 developing and testing this curriculum alongside other alignment approaches,
