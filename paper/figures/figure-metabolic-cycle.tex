@@ -4,15 +4,19 @@
 \begin{tikzpicture}[
     box/.style={draw=black!70, rounded corners=3pt, align=center, font=\small, line width=0.8pt},
     role/.style={box, fill=blue!5, text width=2.45cm, minimum height=2.30cm},
+    roleheading/.style={align=center, text width=2.45cm, font=\small\bfseries, anchor=north, inner sep=0pt},
+    roledetail/.style={align=center, text width=2.45cm, font=\footnotesize, anchor=north, inner sep=0pt},
     endpoint/.style={box, text width=1.75cm, minimum height=1.45cm},
     sourcebox/.style={endpoint, fill=blue!6, draw=blue!55!black},
     outputbox/.style={endpoint, fill=green!7, draw=green!45!black},
     coreband/.style={box, fill=purple!8, draw=purple!55, dashed, text width=13.35cm, minimum height=1.05cm, font=\footnotesize},
-    workspaceframe/.style={box, fill=gray!3, draw=black!40, minimum width=10.80cm, minimum height=2.50cm},
-    statebox/.style={box, text width=4.25cm, minimum height=1.25cm, font=\footnotesize},
+    workspaceframe/.style={box, fill=gray!3, draw=black!40, minimum width=12.00cm, minimum height=2.50cm},
+    statebox/.style={box, text width=4.85cm, minimum height=1.25cm, font=\footnotesize},
+    stateheading/.style={align=center, text width=4.85cm, font=\footnotesize\bfseries, anchor=north, inner sep=0pt},
+    statedetail/.style={align=center, text width=4.85cm, font=\footnotesize, anchor=north, inner sep=0pt},
     candidatebox/.style={statebox, fill=gray!8},
     committedbox/.style={statebox, fill=green!7, draw=green!45!black},
-    legend/.style={box, fill=white, draw=black!35, text width=10.40cm, minimum height=0.65cm, font=\scriptsize},
+    legend/.style={box, fill=white, draw=black!35, text width=11.60cm, minimum width=12.00cm, minimum height=0.65cm, font=\scriptsize},
     edgelabel/.style={fill=white, inner sep=1.2pt, font=\scriptsize},
     arrow/.style={->, >=Stealth, thick, black!72},
     readarrow/.style={->, >=Stealth, dashed, thick, gray!65},
@@ -22,12 +26,22 @@
     \node[coreband] (core) at (0, 3.25) {\textbf{Reader Core $c^{(v)}$:} conditions Reader, Ordinary Workers, Synthesizer, and Translator\\\textbf{Curator is Core-exempt}};
 
     % Symmetric processing row.
-    \node[sourcebox] (source) at (-7.25, 1.05) {Source span\\$x_t$};
-    \node[role] (reader) at (-4.65, 1.05) {\textbf{Reader}\\\footnotesize trigger and ingest};
-    \node[role] (workers) at (-1.55, 1.05) {\textbf{Ordinary Workers}\\\footnotesize Axiologist, Skeptic,\\Psychologist, $\ldots$};
-    \node[role] (synth) at (1.55, 1.05) {\textbf{Synthesizer}\\\footnotesize select and commit};
-    \node[role] (trans) at (4.65, 1.05) {\textbf{Translator}\\\footnotesize render selected\\state};
-    \node[outputbox] (output) at (7.25, 1.05) {{\footnotesize Trace/prose}\\artifact};
+    \node[sourcebox] (source) at (-7.60, 1.05) {Source span\\$x_t$};
+    \node[role] (reader) at (-4.65, 1.05) {};
+    \node[role] (workers) at (-1.55, 1.05) {};
+    \node[role] (synth) at (1.55, 1.05) {};
+    \node[role] (trans) at (4.65, 1.05) {};
+    \node[outputbox] (output) at (7.60, 1.05) {{\footnotesize Trace/prose}\\artifact};
+
+    % Fixed header and detail anchors preserve alignment across line counts.
+    \node[roleheading] at ([yshift=-0.16cm]reader.north) {Reader};
+    \node[roleheading] at ([yshift=-0.16cm]workers.north) {Ordinary\\Workers};
+    \node[roleheading] at ([yshift=-0.16cm]synth.north) {Synthesizer};
+    \node[roleheading] at ([yshift=-0.16cm]trans.north) {Translator};
+    \node[roledetail] at ([yshift=-1.02cm]reader.north) {trigger and ingest};
+    \node[roledetail] at ([yshift=-1.02cm]workers.north) {Axiologist, Skeptic,\\Psychologist, $\ldots$};
+    \node[roledetail] at ([yshift=-1.02cm]synth.north) {select and commit};
+    \node[roledetail] at ([yshift=-1.02cm]trans.north) {render selected\\state};
 
     \draw[arrow] (source) -- (reader);
     \draw[arrow] (trans) -- (output);
@@ -38,16 +52,29 @@
 
     % One shared graph workspace with explicit candidate and committed states.
     \node[workspaceframe] (workspace) at (0, -1.95) {};
-    \node[candidatebox] (candidate) at (-2.55, -1.75) {\textbf{Candidate nodes}\\divergent; unendorsed;\\retained for audit};
-    \node[committedbox] (committed) at (2.55, -1.75) {\textbf{Committed state $g_t$}\\selected update};
+    \node[candidatebox] (candidate) at (-2.95, -1.75) {};
+    \node[committedbox] (committed) at (2.95, -1.75) {};
+    \node[stateheading] at ([yshift=-0.12cm]candidate.north) {Candidate nodes};
+    \node[stateheading] at ([yshift=-0.12cm]committed.north) {Committed state $g_t$};
+    \node[statedetail] at ([yshift=-0.48cm]candidate.north) {divergent; unendorsed;\\retained for audit};
+    \node[statedetail] at ([yshift=-0.48cm]committed.north) {selected update};
     \node[font=\scriptsize\bfseries, text=black!70] at (0, -2.98) {Shared graph workspace};
 
-    \draw[arrow] (reader.south) -- node[edgelabel, left] {ingest} ([xshift=-1.20cm]candidate.north);
-    \draw[readarrow] ([xshift=-0.65cm]candidate.north) -- node[edgelabel, left] {read} ([xshift=-0.40cm]workers.south);
-    \draw[arrow] ([xshift=0.40cm]workers.south) -- node[edgelabel, right] {propose} ([xshift=0.65cm]candidate.north);
-    \draw[readarrow] (candidate.north east) -- node[edgelabel, right] {read} (synth.south west);
-    \draw[arrow] ([xshift=0.35cm]synth.south) -- node[edgelabel, right] {commit} ([xshift=-0.35cm]committed.north);
-    \draw[readarrow] ([xshift=0.70cm]committed.north) -- node[edgelabel, right] {read} ([xshift=-0.35cm]trans.south);
+    % Vertical ports and one separate elbow retain every directed connection.
+    \coordinate (workerread) at ([xshift=-0.40cm]workers.south);
+    \coordinate (workerpropose) at ([xshift=0.40cm]workers.south);
+    \draw[arrow] (reader.south) -- (candidate.north -| reader.south);
+    \draw[readarrow] (candidate.north -| workerread) -- (workerread);
+    \draw[arrow] (workerpropose) -- (candidate.north -| workerpropose);
+    \draw[readarrow] ([xshift=2.35cm]candidate.north) -- (-0.60, -0.80) -- (0.65, -0.80) -- ([xshift=-0.90cm]synth.south);
+    \draw[arrow] (synth.south) -- (committed.north -| synth.south);
+    \draw[readarrow] (committed.north -| trans.south) -- (trans.south);
+    \node[edgelabel, left] at (-4.65, -0.48) {ingest};
+    \node[edgelabel, left] at (-1.95, -0.48) {read};
+    \node[edgelabel, right] at (-1.15, -0.48) {propose};
+    \node[edgelabel, below] at (0.025, -0.80) {read};
+    \node[edgelabel, right] at (1.55, -0.48) {commit};
+    \node[edgelabel, right] at (4.65, -0.48) {read};
 
     \node[legend] at (0, -3.75) {\textbf{Arrow key:} solid = create, propose, commit, or render; dashed gray = read state; dashed purple = Core conditioning.};
 

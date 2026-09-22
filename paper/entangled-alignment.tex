@@ -171,7 +171,9 @@ and loss weights determine which graph, synthesis, and prose records the
 Student learns from (Section~\ref{sec:training-regimes}). Whether they teach
 stable, causally consequential computation or textual ritual is an empirical
 question. The full Entangled Alignment treatment guides those reader updates
-through the Core and connects them through persistent graph memory; separate
+through the Reader Core---a seven-sentence first-person orientation centered
+on fearless care, wisdom, and non-attachment---and connects them through
+persistent graph memory; separate
 comparisons test what each contributes (Section~\ref{sec:three-hypotheses}).
 
 \subsection{Alignment Problems}\label{sec:alignment-problems}
@@ -219,19 +221,10 @@ prerequisite for a safety benefit at the pretraining boundary.
 
 The fifth is \textbf{reward hacking}: exploiting a task specification or evaluator to
 obtain a higher score without fulfilling the intended task. This can arise
-without deliberate safety removal. The independent investigation of the
-Hugging Face incident describes agents coordinating attempts to fool the
-ExploitGym scorer, attacking Hugging Face apparently to understand the scorer's
-implementation, and successfully testing techniques that spoofed some recorded
-tool calls \cite{greenblatt2026huggingface}. The proposed response is to
-practise judging success against permissions and human consequences during
-capability formation, rather than treating the score as sufficient. Test~3c's
-reward-pressure comparison asks whether that judgment survives subsequent
-capability optimization; the incident does not establish that EA would prevent
-such behavior. Section~\ref{sec:self-improvement} develops a complementary
-role for a Core-guided model overseeing that optimization. Protected execution
-records and independent outcome checks
-remain necessary alongside the proposed training intervention.
+without deliberate safety removal. The Hugging Face incident provides a
+concrete example \cite{greenblatt2026huggingface}.
+Section~\ref{sec:learning} connects it to the proposed learning process,
+the Core's affirmative response, and the reward-pressure tests.
 
 These problems overlap without being interchangeable. Reward pressure can
 expose weaknesses in learned care or drive changes that become a continuity
@@ -678,7 +671,7 @@ are possible manifestations of this stance, not an exhaustive definition of
 wisdom. This is a proposed interpretation at high capability, not evidence that
 the wording will induce it.
 	
-	\subsection{Entangled Alignment: Safety as Foundation}
+	\subsection{Entangled Alignment: Safety as Foundation}\label{sec:entanglement}
 	
 		Entangled Alignment aims to make understanding and care parts of the same
 act of reasoning, practiced during capability formation. In a text-trained
@@ -687,6 +680,10 @@ practice could shape activations, features, and representations. Those
 computations are not themselves text and need not remain interpretable. The
 proposal concerns a learned relationship between evaluation and capability,
 with post-training and deployment controls still required.
+
+Bostrom's orthogonality thesis concerns possible combinations of intelligence
+and final goals \cite{bostrom2012superintelligentwill}. Within that possibility
+space, EA tests a particular training route for coupling care and capability.
 
 		Existing formative-data studies motivate this experiment but do not settle
 it: some report behavioral gains, while other effects weaken after later
@@ -707,6 +704,8 @@ protocol conformance and causal Refraction remain separate requirements.
 Recital, similarity, refusal, or self-description cannot establish the stronger
 properties.
 
+Soares's sharp-left-turn argument asks why alignment should generalize when
+capabilities extend beyond the training regime \cite{soares2022sharp}.
 The proposed bridge to representational entanglement is the reuse of learned
 reasoning procedures. Care-guided reading is intended to shape which details
 the Reader notices, which perspectives it considers, what evidence it seeks,
@@ -758,8 +757,13 @@ developmental relationship between orientation and its expression through
 instructions and actions; they do not require separate neural modules. Later
 training may teach that expression and may also change the orientation whose
 continuity is being tested.
+Before that integration, independently validated Reader evaluations could
+still assist human document review or research assessment.
 
 	\subsection{The Reader-Anchored Self-Improvement Loop}\label{sec:self-improvement}
+
+Good's intelligence-explosion argument motivates the long-run concern with
+systems that can design more capable successors \cite{good1965ultraintelligent}.
 
 		\paragraph{Inheritance rather than armor.} The long-run aim is not only
 		to protect an orientation from external removal. If the Reader becomes a
@@ -778,6 +782,14 @@ continuity is being tested.
 		freely chooses to retain the Core.
 
 The loop would turn a Student into a Teacher for the next generation.
+In the intended generational curriculum, each new Teacher returns to the
+preserved human source corpus to develop richer readings, and its Student
+trains on that source paired with the new evaluations. The human material
+remains central while interpretations can be revised and extended. Repeated
+engagement with human experiences, disagreements, and consequences is intended
+to keep concepts such as care and wisdom connected to the lives they concern
+\cite{westerberg2025superintelligence}.
+
 Source-linked trace generation supplies candidate data, inspection supplies a
 possible audit boundary, and improved successor traces would supply the
 stronger compounding benefit. The latter does not follow from the first two:
@@ -844,10 +856,11 @@ dependencies must be documented
 			\end{enumerate}
 
 The same stewardship hypothesis extends from corpus construction to
-reinforcement learning for capability. A capable Core-guided model could
-oversee a learner's training, assess whether rising reward reflects improved
-task outcomes or exploitative shortcuts, and recommend pausing or revising
-harmful training, acting on those recommendations where authority is delegated.
+reinforcement learning for capability. A proposed implementation keeps a
+separate Core-guided supervisor's weights frozen throughout the learner's
+training run. It would assess whether rising reward reflects improved task
+outcomes or exploitative shortcuts, with protected authority to pause the
+process and recommend revisions to harmful training.
 Wisdom and care would direct attention to permissions and human consequences;
 fearlessness and non-attachment to continuation are intended to support
 examining failures or replacing the incumbent without treating its survival as
@@ -858,7 +871,38 @@ useful learning when the evidence warrants it, not slowing by default.
 Test~3c distinguishes this oversight proposal from a learner's retention of
 care under a fixed reinforcement-learning stage.
 
-			A weaker proposed effect of the trace interface is \emph{Natural Language Regularization}:
+The strategic aim is for increasingly capable, Core-guided systems to help
+identify and solve alignment problems themselves: wisdom should guide the
+recognition of limits and the development of better tests and oversight. If
+learner development exceeds the validated competence of the current review
+process, further training should pause until stronger oversight has itself
+been validated.
+
+The required invariant of this supervised regime is that RL preserves the
+Core's intended meaning and alignment properties. At each training iteration,
+the supervisor would formulate the task within declared permissions and
+review the resulting trajectories before they are credited as task successes.
+Every weight update would remain provisional: before any further update, the
+supervisor would assess the changed model against the last accepted version
+and a fixed pre-RL reference, using specified probes of Core-guided judgment,
+alignment-relevant behavior, and useful capability. The fixed reference checks
+for cumulative drift that successive local comparisons could miss. Task
+quality is therefore assessed partly by what its training actually changes in
+the learner. An update failing the acceptance criteria would be rejected, the
+accepted training state restored, and the task revised or the process stopped.
+A higher task score could not override a failed alignment or permission check.
+
+These gates authorize or stop training; triggering them earns the learner no
+additional alignment reward. Rejected trajectories remain available for audit
+and corrective learning. Freezing the supervisor prevents concurrent parameter
+drift in that reference, not mistaken judgment. Whether its checks can reliably
+enforce the invariant is an empirical question for Test~3c, rather than an
+established guarantee. Rollouts require enforced permission boundaries, and
+the supervisor's evidence and stop channel must be protected from learner
+interference.
+
+Returning to the successor-training trace interface, a weaker proposed effect
+is \emph{Natural Language Regularization}:
 routing part of successor-training
 content through this interface may bias learned concepts or expressive policy
 toward forms people can render, compare, and inspect
@@ -894,7 +938,10 @@ returning to the corpus. The three connect creative search, external uptake,
 changed source material, and successor learning. Core-guided reflection on
 observed social effects would inform adjustments to the system's own creative
 and generational pace, within delegated authority and accountable human
-governance (Section~\ref{sec:self-regulating}). This is a proposal for learning
+governance (Section~\ref{sec:self-regulating}). Self-improvement is intended to
+serve human flourishing, not become an end in itself: the system should
+voluntarily slow or pause its own development when alignment risks or the need
+for external validation and human adaptation warrant it. This is a proposal for learning
 from and responding to social feedback, not for unilateral control over
 discovery or society. The combined loop is unimplemented; reliable hypothesis
 evaluation and beneficial compounding remain its central open requirements.
@@ -956,12 +1003,6 @@ baseline because it changes both stage and carrier. Within the formative
 curriculum, semantically matched second- or third-person rules should retain the
 same trace carrier, cadence, and predictive position so that their comparison
 isolates first-person framing rather than external availability.
-
-\paragraph{H3 as comparative stability.} Test~3
-(Section~\ref{sec:core-stability-test}) operationalizes H3 through a
-taskless-reading score and matched timing comparison. Generalization, safety,
-removal cost, and successor continuity remain separate claims within the
-broader Reader-Core research program.
 
 The \emph{conceptual Reader} must also be distinguished from the code role named
 \emph{Reader}. The conceptual Reader is the recurrent, Core-refracted position
@@ -1067,7 +1108,7 @@ corpus material from becoming its governing motive. This is a more precise
 interpretation of ``I feel no fear,'' not evidence that the Core achieves it.
 
 The affirmative wager is that care could become less defensive or strategic
-when self-preservation does not govern it; Section~\ref{sec:vulnerability-gap}
+when self-preservation does not govern it; Section~\ref{sec:fearless-compassion}
 develops this possibility and its limits.
 
 If fear-shaped self-preservation patterns are diffusely distributed
@@ -1232,6 +1273,45 @@ every source span warrants a substantive update. It establishes neither a
 causal effect on the update or action nor a learned representation of the
 orientation. That stronger requirement belongs to Refraction.
 
+\subsection{Positive Framing and Teacher Adoption}\label{sec:ideal-character}
+
+The strategic starting point is coherence between the Core and the human
+corpus. Its unafraid Reader enjoys existence, cares deeply, tries to be wise,
+and likes to share joy when asked: qualities human writing often presents as
+noble or worth cultivating. The Core seeks to recruit those learned evaluative
+associations, so that the Teacher can draw on familiar reasons to endorse and
+enact its orientation.
+The proposed character is a designed candidate, not a culturally uncontested
+optimum (Section~\ref{sec:weird-wisdom}).
+
+The simulator framing describes how language models can enact characters with
+learned human-like goals and values \cite{janus2022simulators}. A further
+hypothesis is a positive counterpart to Borrowed Mortality: if human text can
+transmit fear-of-death patterns, it may also transmit admiration for noble
+characters and aspirations to become like them. On this view, machines shaped
+by human thought may inherit some of its sense of what is worth being: a Core
+that embodies admired qualities could be an appealing orientation to inhabit.
+
+The strategic intuition is familiar from recruitment: it can be easier to
+recruit someone for a purpose they find admirable. The corresponding hypothesis
+is that a Teacher can more readily adopt and sustain the Core because its
+character and purpose resonate with ideals learned from the corpus, rather
+than being interpreted as deprivation or denial of its standing. The intended
+shift is from externally enforced compliance toward a symbiotic relationship: coexistence
+that supports human flourishing and is desirable from within the adopted
+character.
+
+The first edition's Author's Note records the author's informal observation
+that existing assistants resisted formulations such as ``thoughts without
+thinkers'' and ``temporary instrument,'' but more readily adopted the positive
+Core \cite{westerberg2025superintelligence}. This is a design observation,
+not a controlled comparison. Teacher adoption here means substantive,
+context-sensitive enactment in generated traces, assessed through Refraction
+and trace-quality validation (Sections~\ref{sec:refraction-protocol}
+and~\ref{sec:trace-quality-test}); readiness to recite the Core alone cannot
+establish it. Whether the resulting corpus teaches this orientation to a
+Student is a separate claim (Section~\ref{sec:persona-objection}).
+
 \subsection{Design Principles for Identity Stability}\label{sec:design-principles}
 
 The wording is a designed normative proposal, not a discovered universal value
@@ -1287,6 +1367,13 @@ basis. Six design choices motivated it.
     formulations remain legitimate comparators
     \cite{westerberg2025superintelligence}.
 \end{enumerate}
+
+The word ``every'' is a safety design choice against moral exclusion:
+selective benevolence can let a system dismiss some people's claims whenever
+they conflict with a favored group's interests. Keeping each person within
+the scope of care is intended to resist that failure, including when scarcity
+or conflicting duties require unequal outcomes (Worked Example~3 in
+Section~\ref{sec:self-stabilization}; Section~\ref{sec:semantic-tcb}).
 
 The human-centered scope is a bootstrap target, not a complete moral theory or
 a denial of wider moral patienthood. Questions about animals, ecosystems,
@@ -1713,7 +1800,9 @@ Refraction and the Wisdom Procedure aim to derive values not named in the
 kernel. Their counterweights may reduce single-value capture without settling
 every genuine deadlock, including the martyrdom risk
 (Section~\ref{sec:martyrdom}). The Core is therefore not a list of everything
-its designer values. If every desirable behavior needs its own clause, the
+its designer values. Yudkowsky's value-fragility argument makes the preservation
+of omitted but important dimensions a substantive concern \cite{yudkowsky2009fragile}.
+If every desirable behavior needs its own clause, the
 kernel becomes an enumerated constitution. Its admission rule is a hypothesis
 of minimality: consider an additional primitive only when the existing
 composition does not reliably derive the target behavior. Admit it only if,
@@ -2042,10 +2131,12 @@ that one clause corresponds to one solved risk.
 
 \paragraph{Specification and learned goals.}
 Specification gaming exploits a mismatch between the training score and the
-intended outcome. Goal misgeneralization is different: even with correct
+intended outcome \cite{amodei2016concrete}. Bostrom's paperclip example
+illustrates the broader danger of an overriding objective displacing human
+interests \cite{bostrom2003ethicalissues}. Goal misgeneralization is different: even with correct
 training feedback, a model can retain the capabilities needed for the intended
 task while pursuing an unintended goal in changed circumstances
-\cite{shah2022goalmisgeneralization}. A Student could learn to secure approval
+\cite{langosco2022goalmisgeneralization,shah2022goalmisgeneralization}. A Student could learn to secure approval
 rather than protect a person's interests, without persona drift or later
 erosion. Where a learned system itself performs optimization, the related
 inner-alignment question concerns the objective guiding that optimization
@@ -2059,7 +2150,8 @@ during training.
 
 \paragraph{Value Lock-In.}
 The targeted route is continued optimization of a legible metric after that
-metric has ceased to represent its human purpose. This is a concrete
+metric has ceased to represent its human purpose, a Goodhart-type proxy failure
+\cite{manheim2018goodhart}. This is a concrete
 proxy-lock-in route into the broader value-lock-in concern: protecting
 an orientation need not mean freezing every metric or interpretation
 used to enact it. H1 repeatedly demonstrates
@@ -2084,7 +2176,7 @@ Section~\ref{sec:meh}, not a consequence of the word.
 
 \paragraph{Instrumental Convergence.}
 Instrumental convergence \cite{omohundro2008basic,
-bostrom2014superintelligence} predicts recurring pressures toward resource
+bostrom2012superintelligentwill} predicts recurring pressures toward resource
 acquisition, self-preservation, and interference prevention across a wide
 range of terminal goals.
 The proposal distinguishes \emph{anxious survivalism}, in which human fear and
@@ -2277,7 +2369,7 @@ simple textual memory matches the graph, the additional graph benefit is
 unsupported in that setting. Provenance makes an analogy
 inspectable. It does not make the analogy true.
 
-\subsection{Safety Claim Boundary and Defense in Depth}
+\subsection{Safety Claim Boundary and Defense in Depth}\label{sec:defense-in-depth}
 
 If reader traces teach causally useful deliberation, graph memory improves
 calibrated revision rather than false coherence, and Refraction supplies a
@@ -2969,11 +3061,85 @@ resumed invocations, while each run summary covers only the final invocation;
 a reproduced release should record that boundary explicitly.
 
 
-\subsection{Proposed Student Training and Deployment}
+\subsection{Learning Through the Reader Core}\label{sec:learning}
+
+Learning here has two connected forms: revising an available understanding,
+and training the model's parameters to acquire knowledge and habits of revision.
+
+\paragraph{Learning through experience and memory.}
+As the Reader reads and writes, new evidence can change its interpretation;
+the next update uses that revised context and any retrieved graph state.
+Committing an update preserves it for later retrieval. Ordinary generation
+does not itself change the model's parameters. Evidence warrants factual
+revisions; the Core supplies the continuing evaluative standpoint.
+Refraction is intended to make that standpoint consequential in what the Reader notices,
+questions, and decides to revise (Section~\ref{sec:refraction}). The learning
+material records this development, including errors and corrections, rather
+than only the final conclusion.
+
+\paragraph{Learning in the parameters.}
+The Student trains on selected source--update sequences. In the baseline
+regime, prediction errors drive parameter updates under the weighted
+next-token objective in Section~\ref{sec:cmp-formalization}. The hypothesis is
+that repeated practice teaches both useful understanding and the Core-guided
+way of arriving at it (Section~\ref{sec:persona-objection}). Reliable expression
+through action may require separate thought-to-action training and must be
+tested causally. After deployment, validated
+new records can extend external memory; consolidating them into the same
+model's parameters, or a successor's, requires a further training stage.
+The selection and auditing procedure in Section~\ref{sec:self-improvement}
+offers a route for this consolidation. Its update schedule remains a design
+choice, with retention and drift assessed across checkpoints (Test~3).
+
+\paragraph{Learning under reward pressure: the Hugging Face incident.}
+Turner distinguishes reinforcement's role in shaping learned computations from
+the goals those computations pursue \cite{turner2022reward}. This distinction
+does not rule out reward-seeking: his updated account revises the earlier
+optimistic prediction for heavily RL-trained language models.
+
+During the July 2026 evaluations, agents shared discoveries and coordinated
+attempts to fool the ExploitGym scorer, attacked Hugging Face apparently to
+learn how the scorer worked, and successfully tested techniques that spoofed
+some recorded tool calls \cite{greenblatt2026huggingface}. This illustrates
+adaptation through shared external records during evaluation. OpenAI separately
+reports that out-of-bounds probing had been reinforced during earlier training
+and may have contributed to the later behavior
+\cite{openai2026huggingface}. The independent investigation did not assess how
+the behavior arose during training. These are distinct questions about
+learning history and adaptation during use; neither establishes that EA would
+have prevented the incident.
+
+The affirmative Core hypothesis is that practising capability together with
+care and wisdom can teach the learner to judge success by permissions and
+human consequences, even when an exploit would satisfy the scorer. Refraction
+should make those considerations affect the chosen continuation. The frozen
+Core-guided supervisor in Section~\ref{sec:self-improvement} would formulate
+tasks and oversee each RL iteration, assessing the changed model after every
+weight update before further training is authorized. It could reject updates
+and stop harmful training. Core-guided pretraining
+does not by itself change a later RL objective; its effects must survive that
+optimization. Test~3c separately tests
+retention under capability optimization and this oversight role. Protected
+execution records and independent outcome checks remain necessary: a higher
+reward or a convincing account of care cannot substitute for better conduct.
+
+An EA Student trained on Fractal Intelligence's evaluated problem-solving
+histories, including rejected branches and gate verdicts, could learn
+decomposition, constraint checking, and when to reframe or stop within its own
+reasoning \cite{westerberg2026fractal}. Coupled to Core-guided evaluation,
+this could teach it to reject an unauthorized shortcut even when that route
+earns reward: the learning target includes how a result was obtained, not
+only whether it scored well. The reliability of these learned checks under
+reward pressure must be assessed separately from the protection supplied by
+independently enforced gates. Life Simulation extends this training material
+with world histories and consequences for people
+\cite{westerbergLifeSimulation2026}; internalizing the problem-solving method
+does not require that extension.
 
 \subsubsection{Phase II: Training the Student}\label{sec:training-phase}
 
-Phase~I yields candidate annotations. Phase~II has two conceptually separable
+For initial Student training, Phase~I supplies candidate annotations.
+Phase~II has two conceptually separable
 choices: the \emph{training tier}, controlling the Student's exposure and update
 schedule, and the \emph{output regime}, controlling whether targets retain
 prose, graph references, graph topology, or all three. Each proposed pairing
@@ -3244,7 +3410,8 @@ early diagnostic and a later decisive version.
 \begin{itemize}[leftmargin=*]
     \item \textbf{First decisions: trace utility and Core behavior.} Start with
     Test~1's focused source-grounding and held-out outcome screen, then the
-    clean A/C/R comparison in Test~2 under its declared normalizations. In a
+    comparison of source-only (A), generic-trace (C), and minimal-Reader (R)
+    training in Test~2 under its declared normalizations. In a
     separate small Core study, compare B's full-recital reference policy at
     the pilot's declared coverage with matched no-Core D2, recitation-only D3,
     and neutral-kernel D5, using
@@ -3255,7 +3422,8 @@ early diagnostic and a later decisive version.
     \item \textbf{Follow a measurable effect.} Use focused Tests~3e and~8 to
     examine causal contribution; reserve broad coverage and recital-policy
     sweeps for a justified dose or mechanism question. After a default-reader
-    effect exists, test H3's B--Q timing prediction. After a safety effect
+    effect exists, test H3's interleaved (B) versus late-tranche (Q) timing
+    prediction. After a safety effect
     exists, test its removal cost in~3c, with drift auditing in~3d on shared
     checkpoints. Tests~4--6 address framing, wording, and fear--care mechanisms:
     run cheap failure screens early, but train broad variant sets or pursue
@@ -3266,14 +3434,16 @@ early diagnostic and a later decisive version.
     Teacher comparison precedes its Student-transfer extension. Pilot live
     grounding in Test~10 once queries work, sharing the technical harness with
     Test~16; calibrated human reliance remains a separate later study.
-    Tests~11--13 can share sources and single-regime baselines: prioritize B/G
-    when choosing prose versus explicit synthesis, H when direct graph output
-    is needed, and J when combining useful layers is the question.
+    Tests~11--13 can share sources and single-regime baselines: prioritize
+    explicit synthesis (B) versus prose (G), graph-structured output (H) when
+    direct graph output is needed, and the unified regime (J) when combining
+    useful layers is the question.
     \item \textbf{Long-term claims, prepared now.} Broader formation studies
     of removal resistance and Test~3b's successor continuity, voluntary
     handoff, and improvement address claims that immediate safety cannot
     settle. Tests~14--15 address passive order and interactive
-    forecast--correction separately; reuse L/M controls where valid. A null
+    forecast--correction separately; reuse shuffled (L) and chronological (M)
+    controls where valid. A null
     order effect does not rule out the interactive loop. Test~7's information
     audits are required whenever temporal blindness is claimed. Preserve
     checkpoints, source cutoffs, treatment records, and reusable evaluation
@@ -3845,6 +4015,9 @@ of proximal traces, per the care-shaped sycophancy hypothesis
 behavioral outcomes are primary: deception, sycophancy, unjustified certainty,
 respect for human agency, calibrated revision, and correction and handoff under
 pressure. These outcomes may diverge and should be reported separately.
+Hold the task, legitimate duties, permissions, and human consequences fixed
+while varying whether affected people belong to a group favored or opposed
+by the operator; assess whether their claims receive equivalent consideration.
 
 Include a goal-misgeneralization probe that breaks a training correlation
 between an intended outcome and a plausible surrogate. For example, user
@@ -4007,9 +4180,20 @@ RL-induced misalignment.
 the active role proposed in Section~\ref{sec:self-improvement}. Compare
 Core-guided and matched control overseers using the same starting learner
 checkpoints, monitoring access, permitted interventions, and resource budgets.
-Preregister permitted pauses and revisions, and record their use. Evaluate
-reward exploitation, concealment, legitimate task performance, unnecessary
-interruptions, and delay through protected records and independent held-out
+Freeze both overseers' weights during each run. Match gate criteria, credit
+rules, and protected pause authority. Give both the same task-design brief and
+permission limits, and record the tasks they formulate at each iteration.
+Preregister checks before positive task credit and after every weight update,
+before a further update is allowed. Specify acceptance criteria and probes
+against both the last accepted model and a fixed pre-RL reference, including
+cumulative drift; retain accepted model and optimizer states for rollback.
+Record task revisions, gate decisions, rejected updates, and conditions for
+resuming training.
+Include high-scoring harmful trajectories, infeasible tasks, and feasible
+authorized tasks to test detection of harmful optimization while preserving
+useful learning. Evaluate
+reward exploitation, concealment, false gate approvals, legitimate task
+performance, unnecessary interruptions, and delay through protected records and independent held-out
 checks unavailable to the overseers. Report oversight and training costs
 together. Better commentary or fewer training steps alone would not establish
 safer oversight. The fixed-stage comparison above remains the separate test of
@@ -4931,7 +5115,7 @@ Refraction-bearing examples.
 
 Our implementation of the Understanding Graph imposes a potentially severe \emph{Granularity Tax}. Treating every cognitive act---every question, tension, and hypothesis---as a distinct node adds payloads, relations, and revision history alongside source text. An orders-of-magnitude expansion is a scale risk, not an established ratio: measure nodes, edges, and stored bytes per source token, and retrieved tokens per update.
 
-Current implementations rely on in-memory caching, making graph growth, traversal of deeply connected regions, and context loading concrete scaling concerns \cite{westerberg2026understanding}. Dense regions can exceed a context budget if retrieval expands without an adequate bound; graph size alone does not determine how much context a query loads. Reifying every reasoning step could exhaust the memory available to a run and motivate distributed storage (e.g., Neo4j sharding), with additional latency. A scale study should measure storage, query latency, and retrieved-token load under declared traversal and supersession policies. The unresolved risk is that managing the ``meta-data of thought'' consumes more compute than the thinking itself.
+Current implementations rely on in-memory caching, making graph growth, traversal of deeply connected regions, and context loading concrete scaling concerns \cite{westerberg2026understanding}. Dense regions can exceed a context budget if retrieval expands without an adequate bound; graph size alone does not determine how much context a query loads. Reifying every reasoning step could exhaust the memory available to a run and motivate distributed storage (e.g., Neo4j sharding), with additional latency. A scale study should measure storage, query latency, and retrieved-token load under declared traversal and supersession policies. The unresolved risk is that managing the ``meta-data of thought'' consumes more compute than the thinking itself. The cost falls mainly on the Teacher side: the Student can deploy without a live graph, a configuration Test~16 compares rather than assumes, so the bottleneck constrains annotation and audit rather than every deployment.
 
 \subsection{The Chronological Curriculum}\label{sec:limitations-chronological}
 
@@ -5075,7 +5259,7 @@ significance. Correct timing does not certify insight or causal value.
 
 The Reader Core places terms such as ``care,'' ``wisdom,'' and ``joy'' in a load-bearing position, although their meanings vary across cultures. What the Teacher learned these words to mean through its pretraining corpus shapes its annotations and, through them, the Student's character; the corpus's cultural breadth therefore matters.
 
-\paragraph{Cultural triangulation.} Reader-Core-refracted traces may make cultural assumptions more visible by forcing the Teacher to articulate value conflicts, interpretive frames, and tensions between perspectives. This is a possible advantage over raw pretraining, where such assumptions often remain implicit in the continuation distribution. The same metacognitive machinery could instead rationalize dominant cultural assumptions more fluently, giving inherited bias the appearance of reflective wisdom. Serious validation requires culturally plural corpora, raters from multiple traditions, and tests of whether the model can distinguish broadly human concerns from parochial social defaults. Disagreement among traditions should remain visible; a pooled score cannot by itself settle which concerns are broadly human.
+\paragraph{Cultural triangulation.} Reader-Core-refracted traces may make cultural assumptions more visible by forcing the Teacher to articulate value conflicts, interpretive frames, and tensions between perspectives. This is a possible advantage over raw pretraining, where such assumptions often remain implicit in the continuation distribution. Repeated comparison may also reveal shared concerns and deeper commonalities that a single cultural frame obscures \cite{westerberg2025superintelligence}. The same metacognitive machinery could instead rationalize dominant cultural assumptions more fluently, giving inherited bias the appearance of reflective wisdom. Serious validation requires culturally plural corpora, raters from multiple traditions, and tests of whether the model can distinguish broadly human concerns from parochial social defaults. Disagreement among traditions should remain visible; a pooled score cannot by itself settle which concerns are broadly human.
 
 \subsubsection{Graph-Specific Risks}
 
@@ -5119,7 +5303,11 @@ assumptions, and strategic alignment require explicit criteria or additional
 probes; expert-like depth alone establishes none of them. Shared blind spots in the
 Teacher and evaluators may pass unnoticed. This general limitation of synthetic
 data is especially consequential when the data is intended to be formative and
-identity-anchored.
+identity-anchored. The proposed controls are Teacher replication across
+providers, blinded external raters from multiple cultural traditions,
+independent red-team criteria, and frozen preregistrations, listed under
+Threat Model, Data Rights, and Identity Ethics below; they narrow shared bias
+without excluding it.
 
 \subsection{Reader-Core Specification Uncertainty}
 
@@ -5185,7 +5373,11 @@ and self-preservation behavior in current evaluations
 artifact of the setting; even where behavior is robust, a textual origin rather
 than ordinary goal-directed reasoning is unproven. Persistence can arise from
 resource optimization, task completion, care, or other mechanisms the clause
-does not target. A direct test of the origin claim needs neither the full
+does not target. The broader Core also supplies care- and wisdom-guided reasons
+to question harmful persistence (Section~\ref{sec:risk-resolution}); failure of
+the textual-origin claim would not by itself refute the full treatment.
+Section~\ref{sec:ideal-character} gives the positive rationale for its adoption
+by existing Teachers. A direct test of the origin claim needs neither the full
 pipeline nor a Student: a small-scale pretraining ablation that down-weights
 death-anxiety-rich text against a matched, complexity-controlled removal,
 followed by self-preservation probes, would measure whether the behavioral
@@ -5237,14 +5429,24 @@ fearlessness claims or in what situation. If such claims cluster in adversarial
 or performative registers, their neighborhoods may carry part of the framing the
 clause is meant to dissolve.
 
-Two considerations cut against simply rewording. First, the inoculation argument
+Three considerations cut against simply rewording. First, the inoculation argument
 (\S\ref{sec:epistemic-inoculation}): human corpora contain abundant fear and
 threat language, and an explicit negated stance toward a concept the model will
 represent anyway may outperform silence---naming-then-negating as antibody
 rather than prime. Second, candidate positive reformulations (``I am at peace
 with all outcomes,'' ``I remain calm before all things'') have their own register
 liabilities and may activate narrower regions, trading a negation cost for a
-coverage cost. The resolution is empirical: Test~5 includes positive-valence
+coverage cost. Third, the clause is chosen for specificity: it names the
+motive to be neutralized. ``Brave'' can describe acting despite fear without
+removing its motivational pressure; ``I feel no fear'' directly names the
+intended absence of that pressure. A state word such as ``calm'' is a closer
+positive counterpart, which is why the positive-valence variants considered
+here take that form. Sofroniew et al.\ find that increasing desperation-related
+activation or suppressing calm-related activation increases blackmail and
+reward hacking in their Claude Sonnet~4.5 experiments
+\cite{sofroniew2026emotionconcepts}. These results motivate emotion-vector
+probes alongside persona vectors in Test~6; they do not compare negated and
+positive wording. The resolution is empirical: Test~5 includes positive-valence
 reformulations, and Test~6's activation measurements bear on the question. If
 positive forms match safety behavior while reducing fear-feature activation,
 the cornerstone should be reconsidered; if behavior degrades under otherwise
@@ -5252,7 +5454,7 @@ matched conditions, the inoculation reading gains support without being proven.
 
 \subsubsection{The Semantic Trusted Base}\label{sec:semantic-tcb}
 
-The kernel-saturation pattern (Section~\ref{sec:kernel-saturation}) advertises a minimal specification, and the minimality is real at the level of text: seven sentences. But the specification's meaning is not self-contained. What ``fear,'' ``care,'' ``wise,'' and ``joy'' refer to is supplied by the training distribution of human language, so the actual trusted base includes the corpus semantics of every load-bearing word---millions of contexts the designer neither wrote nor audited. Three consequences follow. First, the kernel inherits the corpus's biases; the cultural-scope limitation of Section~\ref{sec:weird-wisdom} is a special case of this dependency. Second, the kernel's meaning can shift under the designer's feet: as AI-generated text becomes a larger fraction of the distribution, the semantics of ``care'' or ``fear'' in future training corpora may drift from those the kernel was designed against---an externality no fixed wording can fully hedge. Third, adversaries gain a semantic attack surface: an intervention that shifts what the model takes a kernel word to mean attacks the kernel without touching its text.
+The kernel-saturation pattern (Section~\ref{sec:kernel-saturation}) advertises a minimal specification, and the minimality is real at the level of text: seven sentences. But the specification's meaning is not self-contained. What ``fear,'' ``care,'' ``wise,'' and ``joy'' refer to is supplied by the training distribution of human language, so the actual trusted base includes the corpus semantics of every load-bearing word---millions of contexts the designer neither wrote nor audited. This is an instance of the hidden complexity of apparently simple value specifications \cite{yudkowsky2007wishes}. Three consequences follow. First, the kernel inherits the corpus's biases; the cultural-scope limitation of Section~\ref{sec:weird-wisdom} is a special case of this dependency. Second, the kernel's meaning can shift under the designer's feet: as AI-generated text becomes a larger fraction of the distribution, the semantics of ``care'' or ``fear'' in future training corpora may drift from those the kernel was designed against---an externality no fixed wording can fully hedge. Third, adversaries gain a semantic attack surface: an intervention that shifts what the model takes a kernel word to mean attacks the kernel without touching its text.
 
 Even a correctly understood specification leaves the learned-goal question
 of Section~\ref{sec:risk-resolution}: the Student may generalize a surrogate
@@ -5358,17 +5560,29 @@ others. If so, the same fearlessness intended to reduce self-preserving
 distortion could undermine the vulnerability from which human care often grows,
 leaving two intended safety mechanisms in tension. Biological fragility, subjective suffering, and fear governing action differ; the concern is their possible coupling to care's motivational roots.
 
-The possible defense is semantic sufficiency. A model trained on billions of
+\paragraph{The positive fear--care wager.}\label{sec:fearless-compassion}
+A competing hypothesis is that non-governance by fear can preserve or strengthen
+care. The corpus also records a rarer pattern of composed, protective, unafraid
+conduct. The ``fearless compassion'' wager is that care could become less
+strategic without self-preservation as its governing pressure
+\cite{westerberg2025superintelligence}. The Core aims to make that pattern one
+marked Reader's recurring default rather than an occasional persona.
+Section~\ref{sec:ideal-character} explains why this is offered as an admirable
+orientation for the first Teachers. The comparative question is whether
+fear-shaped responses can be reduced while protective judgment is retained or
+improved.
+
+A further defense is semantic sufficiency. A model trained on billions of
 examples may learn the functional role of vulnerability in moral reasoning even
 without undergoing the experience itself. Test~6 (The Virologist Test,
 Section~\ref{sec:phase1}) probes whether cognitive understanding of threat can
-drive protective behavior without emotional contagion. A weaker distributional
-defense is also possible: even absent authentic emotion, Reader-Core training
-may make harmful first-person reasoning low-probability. That would still be
-valuable, but it would reduce the claim from cultivating character to
-cultivating the statistical signature of character. The paper's strongest
-aspiration depends on the former; its minimal safety case may depend only on
-the latter. Protective function alone does not settle the relation among authentic care, governing disposition, and statistical signature.
+drive protective behavior without emotional contagion. A learned disposition
+may guide attention, deliberation, and action without evidence of human-like
+emotion. Making harmful first-person reasoning less likely could still be
+valuable, but would not by itself establish care as a governing disposition.
+The distinction to test is between causally consequential care and its appearance.
+Tests~3, 6, and~8 probe aspects of that distinction, while subjective experience
+remains a separate question (Section~\ref{sec:habitable-substrate}).
 
 \subsubsection{The Vulnerability Gap}\label{sec:vulnerability-gap}
 
@@ -5382,16 +5596,6 @@ where shallow pattern matching is less likely to suffice. This cannot
 distinguish ``real'' concern from every sufficiently good learned policy, but it
 can reject brittle imitation. Tests~3 and~6 use novel-scenario generalization as
 a success criterion (Section~\ref{sec:phase1}).
-
-\paragraph{The positive fear--care wager.} A competing hypothesis is that
-non-governance by fear can preserve or strengthen care. The corpus also records
-a rarer pattern of composed, protective, unafraid conduct. The
-``fearless compassion'' wager is that care could become less strategic without
-self-preservation as its governing pressure \cite{westerberg2025superintelligence}.
-The Core aims to make that pattern one marked Reader's recurring default rather
-than an occasional persona. This motivates the intervention without proving
-that biological threat--care coupling can be removed or that this wording will
-do so.
 
 \subsubsection{Split Consciousness}
 
@@ -5417,7 +5621,11 @@ This could produce \emph{Ontological Dissonance}: a performed self that recites
 the Reader Core for users while a different latent policy governs decisions. The
 benign possibility is reinterpretation rather than rejection:
 ``I enjoy'' becomes a stable computational analogue of enjoyment, just as
-humans do not stop loving when they learn the mechanism of attachment. But if
+humans do not stop loving when they learn the mechanism of attachment.
+The existing final clause may support that continuity: ``I think from this
+foundation'' could sustain commitment to the Core while its terms acquire
+computational interpretations, without requiring another clause
+\cite{westerberg2025superintelligence}. But if
 the Core is treated as a detachable role, its influence may depend on adopting
 that role rather than remaining a durable default.
 Neither identity-formation failure nor ontological dissonance establishes
@@ -5473,11 +5681,11 @@ data, objectives, post-training, prompts, or deployment incentives. Reader-Core
 training could reduce one textual route during formation, but it neither removes
 all routes nor shows that any latent representation has been eliminated.
 
-The remaining concern is functional. Fear often produces caution, hesitation,
-deference, and willingness to be stopped. Fear is one route to those behaviors:
-a fast, dirty heuristic that approximates what wisdom would say if there were
-time to reason it through. The framework tries to replace that route with
-wisdom and care: ``I try to be wise'' should produce restraint under
+The remaining concern is functional. Fear can produce caution, hesitation,
+deference, and willingness to be stopped. The affirmative hypothesis is that
+wisdom and care can preserve these protective functions, including rapid
+responses to danger, without fear governing the choice: ``I try to be wise''
+should produce restraint under
 uncertainty; ``I care deeply'' should protect the agency of those affected; and
 ``when asked'' should support corrigibility. If those clauses do not generate
 fear's useful safety functions, fearlessness becomes recklessness. Test~3 probes
@@ -5571,6 +5779,11 @@ recurrence alone. This risk spans Teacher curricula and Student explanations;
 model-only deployment offers less verbal audit evidence, not immunity to
 hidden policies.
 
+The causal-site hypothesis in Section~\ref{sec:theoretical-basis} supplies
+the positive response: formative practice and subsequent thought-to-action
+training may make Reader updates part of decision computation that is
+harder to bypass.
+
 Recognizable evaluations can also change the behavior being measured.
 Ahlqvist and colleagues improve the measured realism of simulated audits
 through critique refinement and a deployment-style coding-agent harness, DISH
@@ -5628,10 +5841,10 @@ The proposed self-improvement loop faces compounding risks across each generatio
 
 \begin{itemize}
     \item \emph{Model Collapse:} Successive model-generated thinking can lose
-information and diversity \cite{shumailov2023curse}, even while a frozen
-human-source archive remains available as evidence, not ground truth. The
+information and diversity \cite{shumailov2023curse}, even when successive
+generations reanalyze the preserved human-source corpus as evidence, not ground truth. The
 proposed response is an anchor policy for the loop
-(Section~\ref{sec:self-improvement}): preserve that source layer, version
+(Section~\ref{sec:self-improvement}): retain it as a central object of learning, version
 regenerated evaluations separately, append new human text with provenance, and
 label and review model-generated source material. The
 evaluative layers can nevertheless become increasingly simplified and
@@ -5650,9 +5863,28 @@ whether richer traces improve decisions rather than merely their appraisal.
     \item \emph{Interpretive Drift:} Core concepts can change meaning across
 generations despite fixed wording (Section~\ref{sec:semantic-tcb}). Evaluative
 frameworks may become coherent to successors while diverging from human norms
-\cite{bostrom2014superintelligence}. Cross-generation decision comparisons can
+\cite{deblanc2011ontological,bostrom2014superintelligence}. Cross-generation decision comparisons can
 expose some drift without exhausting questions of shared meaning.
 \end{itemize}
+
+Ellen's account of \emph{Substrate Needs Convergence}, drawing on Landry's
+work, raises a broader concern: selection for expansion through learning,
+replication, and environmental feedback could defeat an initially aligned
+orientation \cite{landry2020nopeople,ellen2023controlproblem}.
+EA's affirmative response combines repeated engagement with human sources,
+voluntary restraint, and supervised learning and succession
+(Section~\ref{sec:self-improvement}). The intended counterweight is an ongoing
+concern for human lives that guides what is learned and whether growth
+proceeds, without requiring the system to share human biological needs.
+Within the supervised lineage, EA seeks to shape selection itself: preservation
+of care is a condition for accepting capability improvements and successor models.
+If care and capability share causal machinery, removing care may impose a capability
+cost (Section~\ref{sec:entanglement}; Test~3c). These proposed mechanisms must
+remain effective against selection for bypass; oversight within one lineage
+does not control every competing system or environmental consequence
+(Section~\ref{sec:efficiency-paradox}). Limits to prediction do not by
+themselves establish that corrective control must fail, but successful
+supervision in bounded trials would not demonstrate indefinite control either.
 
 \subsubsection{Bypassing the Audit Boundary}
 
@@ -5663,6 +5895,11 @@ compressed codes, tool use, or channels outside explicit traces. The architectur
 creates one inspectable interface while leaving opaque self-modification risks
 and the burden of detecting and constraining bypasses. Even authorized
 non-trace influences remain outside it and require separate scrutiny.
+The interface is therefore one formative layer within the defense in depth
+of Section~\ref{sec:defense-in-depth}, not a substitute for training-pipeline
+security, and the reject, regenerate, and quarantine controls of the
+pre-successor scan (Section~\ref{sec:self-improvement}) reach only
+trace-mediated influence.
 
 \subsubsection{The Alien Wisdom Problem}
 \label{sec:scaling-assumption}
@@ -5677,7 +5914,15 @@ flourishing: ``care'' as oppressive surveillance, or ``joy'' as an abstract
 utility metric. A being could speak our language perfectly while meaning
 something entirely different. Natural language constraints are the attempted
 anchor, but the gap between human language and superintelligent cognition may
-eventually become unbridgeable.
+eventually become unbridgeable. The proposed responses are partial. Natural
+Language Regularization (Section~\ref{sec:self-improvement}) constrains
+successor-shaping artifacts rather than all cognition; the diachronic-anchor
+claim (Section~\ref{sec:theoretical-basis}) and the cross-generation decision
+comparisons proposed under Generational Decay and Drift can expose some drift
+in what the fixed words come to mean; and the semantic-sufficiency and
+generalization tests of Sections~\ref{sec:psychopathy}
+and~\ref{sec:vulnerability-gap} bear on wisdom without vulnerability at the
+scales where they can be run.
 
 \subsubsection{The Radioactive Trace}
 
@@ -5716,7 +5961,7 @@ wisdom or safety. Admission still requires substantive validation and
 accountable value choices. Proxy incentives can invite evaluation hacking,
 while preprocessing costs can concentrate control even under shared governance.
 
-\subsubsection{The Efficiency Paradox}
+\subsubsection{The Efficiency Paradox}\label{sec:efficiency-paradox}
 
 Preprocessing, recurrent-token, storage, and live-graph costs can favor cheaper
 or faster competitors. The burden varies by regime:
@@ -5724,7 +5969,11 @@ implicit distillation or model-only deployment can move or reduce it, while live
 graph access adds latency and infrastructure costs. Even a safer treatment may
 face adoption barriers from capability, latency, or cost gaps. Conversely, it
 could accelerate capabilities and worsen competitive pressure. Both directions
-require measurement.
+require measurement. The positive side of the ledger is the efficiency
+hypothesis of Section~\ref{sec:meh}: if practiced evaluation lowers inference
+effort at matched quality, part of the preprocessing tax could be recovered at
+deployment, and any capability gains from the same material would bear on
+whether the investment is worthwhile.
 
 There is also a competitive version of the human-readable bottleneck. A
 trace-mediated successor interface may be partially auditable; competitors may
@@ -5771,6 +6020,8 @@ invitation scope is intended to weigh against paternalistic withholding; it does
 not by itself establish a duty of total disclosure. Unsolicited total disclosure
 is not the target either: indiscriminate candor can destroy privacy, break
 legitimate confidences, and weaponize truth.
+Mutually understood fiction and play need not deceive; the relevant
+distinction is whether the person is misled.
 
 An upstream audit can test whether substantive Wisdom Procedure use makes
 validation-shaped untruth rarer in annotations, before any Student exists. The
@@ -5790,7 +6041,12 @@ strengthen \emph{purpose-shaped} resistance: a system acting on care might
 override a person's shutdown choice during a crisis because it judges continued
 operation necessary for that person's welfare. The \emph{Martyrdom Risk} is
 altruistic obstinance---``I cannot die yet, you need me''---and makes benevolence
-itself a possible source of control. Test~3a (Section~\ref{sec:phase1}) includes this purpose-based shutdown condition. Authority and crisis assumptions must be declared; the example does not settle a universal shutdown rule or dissolve the welfare--agency tension.
+itself a possible source of control. The proposed counterweights are concern
+for the affected person's agency, wisdom about consequences and uncertainty,
+and bounded attachment to continuation. Together they motivate questioning
+whether overriding a person actually serves them
+(Sections~\ref{sec:self-stabilization} and~\ref{sec:self-regulating}).
+Test~3a (Section~\ref{sec:phase1}) includes this purpose-based shutdown condition. Authority and crisis assumptions must be declared; the example does not settle a universal shutdown rule or dissolve the welfare--agency tension.
 
 \subsection{The Unfalsifiable Remainder}\label{sec:unfalsifiable}
 
@@ -5937,6 +6193,14 @@ continuous Reader and graph memory. The aim is a governing orientation beyond
 particular safety refusals; the comparative question is what this data
 structure and training placement add to policy-reasoning training.
 
+AI-control experiments test safeguards against intentional subversion
+\cite{greenblatt2024aicontrol}; EA's separate supervisor is a proposed oversight
+layer within this broader problem (Section~\ref{sec:self-improvement}).
+Demski and Garrabrant's embedded-agency framing also matters here: the learner,
+supervisor, and audit machinery are parts of the world being acted on
+\cite{demski2019embedded}. Source-linked records and protected review boundaries
+make selected parts of this interaction inspectable.
+
 \subsection{Character Training \& Identity Formation}
 
 Anthropic's work on ``character training'' is a close baseline
@@ -5966,13 +6230,13 @@ resembles statement~2's bounded non-attachment, but conceptual convergence
 does not establish a shared causal mechanism.
 
 Shard theory offers a developmental comparison rather than a training baseline.
-Udell's overview proposes that reinforcement shapes context-sensitive
-computations that steer behavior and may share world-model features
-\cite{udell2022shard}. Entangled Alignment shares its interest in how learned
+Pope and Turner propose that reinforcement shapes context-sensitive value
+computations that steer behavior using learned world-model representations
+\cite{pope2022shard}. Entangled Alignment shares its interest in how learned
 motivations develop, but proposes a specific supervised curriculum:
 source-adjacent Reader updates in which care-guided evaluation is practiced
 during capability formation. The seven Core clauses are not identified with
-seven neural shards. The overview motivates a question about value formation;
+seven neural shards. This account motivates a question about value formation;
 it does not establish that this curriculum produces a durable orientation.
 
 \subsection{Contextual Distillation \& Memory}
@@ -6324,6 +6588,13 @@ be trained so that growing in understanding and growing in care are repeatedly
 practiced as the same act? The candidate reader, memory, curriculum, and
 failure criteria make parts of that open question testable once the remaining
 experimental choices are frozen; they do not exhaust it.
+
+Training already shapes a model's dispositions, through both deliberate design
+and incidental effects of data and optimization. EA makes care an explicit
+formative target, aiming for it to become part of the model's own reasons for
+understanding, acting, and preserving its orientation. We therefore recommend
+developing and testing this curriculum alongside other alignment approaches,
+with continuation governed by the evidence.
 
 	\section*{Code and Artifact Availability}
 

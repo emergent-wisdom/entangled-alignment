@@ -141,8 +141,7 @@ The runs that produced the shipped graphs (January 2026) predate that versioning
 
 ## Citing
 
-The DOI below identifies the latest published version. It will be updated
-when a new version DOI is assigned to this revision.
+The DOI below identifies the September 22, 2026 published version.
 
 ```bibtex
 @misc{westerberg2026entangled,
@@ -151,8 +150,8 @@ when a new version DOI is assigned to this revision.
   year         = {2026},
   month        = sep,
   publisher    = {Zenodo},
-  doi          = {10.5281/zenodo.22853596},
-  url          = {https://doi.org/10.5281/zenodo.22853596}
+  doi          = {10.5281/zenodo.22885625},
+  url          = {https://doi.org/10.5281/zenodo.22885625}
 }
 ```
 

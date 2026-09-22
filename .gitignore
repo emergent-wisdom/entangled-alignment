@@ -34,6 +34,9 @@ texput.log
 /tmp/
 /temp/
 
+# Dated local PDF checkpoints; keep the canonical paper PDFs tracked.
+/output/pdf/entangled-alignment-*/
+
 # Private idea-preservation ledgers and editorial notes (keep local).
 /paper/reviews/
 
