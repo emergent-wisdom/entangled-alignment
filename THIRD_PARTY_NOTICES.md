@@ -20,17 +20,15 @@ preserved and followed. This repository does not relicense the text.
 
 ## *Large Language Diffusion Models*
 
-`chronological_metacognition/material/llada.tex` contains third-party source
-for the following paper:
+The LLaDA reading traces were generated from the LaTeX source of the following
+paper, which is available from arXiv:
 
 Shen Nie, Fengqi Zhu, Zebin You, Xiaolu Zhang, Jingyang Ou, Jun Hu, Jun Zhou,
 Yankai Lin, Ji-Rong Wen, and Chongxuan Li, *Large Language Diffusion Models*,
 arXiv:2502.09992, <https://arxiv.org/abs/2502.09992>.
 
-No permission to redistribute or adapt that paper source is granted by the
-MIT or CC BY 4.0 licenses in this repository. The file should be treated as an
-external research input. Permission for further use must come from the paper's
-rights holders, its applicable source license, or applicable law.
+The traces read `main.tex` of version 3; see
+[chronological_metacognition/material/README.md](chronological_metacognition/material/README.md).
 
 ## Generated artifacts
 

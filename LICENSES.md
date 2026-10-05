@@ -43,11 +43,9 @@ material for which Henrik Westerberg does not hold the relevant rights.
 
 - `chronological_metacognition/material/metamorphosis.txt` is a Project
   Gutenberg edition and is governed by the terms embedded in that file.
-- `chronological_metacognition/material/llada.tex` is third-party paper source
-  for *Large Language Diffusion Models*. It is not licensed under either of
-  this repository's licenses.
-- Generated traces and graph artifacts may reproduce passages from those two
-  source works. Rights in those passages remain with their respective rights
+- Generated traces and graph artifacts may reproduce passages from their two
+  source works: the edition above and *Large Language Diffusion Models*
+  (arXiv:2502.09992), whose source is available from arXiv. Rights in those passages remain with their respective rights
   holders.
 - `orchestrator/` is a Git submodule governed by its own `LICENSE` file.
 - Installed and declared dependencies retain their respective upstream terms.
