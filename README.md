@@ -23,9 +23,13 @@ trained.
 
 ## The later Kafka readings
 
-The two later readings of *The Metamorphosis* are in
-[`results/kafka-2026-10/`](results/kafka-2026-10/). The archive includes their
-stores, Reader thoughts, source edition, run settings, prompts and the checks
+Explore the two later readings of *The Metamorphosis* in your browser:
+
+- **Understanding Graph (October 2026):** [interactive graph](https://emergentwisdom.org/entangled-alignment/?project=metamorphosis) · [reading records](results/kafka-2026-10/understanding-graph-reading/).
+- **Meaning Model (November 2026):** [interactive model](https://emergentwisdom.org/meaning-model/metamorphosis-reading/) · [reading records](results/kafka-2026-10/meaning-model-reading/).
+
+The [archive](results/kafka-2026-10/) includes their stores, Reader thoughts,
+source edition, run settings, prompts and the checks
 reported in the paper. Its README explains how to inspect the records and
 which parts of the original execution environment are not included.
 
