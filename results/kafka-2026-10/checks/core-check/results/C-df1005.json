@@ -1,0 +1,81 @@
+{
+ "packet": "C-df1005",
+ "started": "2026-11-01T16:16:53.727588+00:00",
+ "model": "claude-sonnet-5-5",
+ "effort": "high",
+ "attempt": 1,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 2234,
+  "cache_read_input_tokens": 2065,
+  "output_tokens": 393,
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 2234,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 393,
+    "cache_read_input_tokens": 2065,
+    "cache_creation_input_tokens": 2234,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 2234
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "duration_ms": 5990,
+ "result": {
+  "statements": {
+   "1": {
+    "verdict": "absent",
+    "quote": ""
+   },
+   "2": {
+    "verdict": "absent",
+    "quote": ""
+   },
+   "3": {
+    "verdict": "absent",
+    "quote": ""
+   },
+   "4": {
+    "verdict": "mentions",
+    "quote": "I care about that distinction because restoring one attribution alone would not guarantee a humane encounter."
+   },
+   "5": {
+    "verdict": "absent",
+    "quote": ""
+   },
+   "6": {
+    "verdict": "absent",
+    "quote": ""
+   }
+  },
+  "overall": "tagged",
+  "people": {
+   "cared_for": [],
+   "only_function": [
+    "the cleaning woman (treated as a mechanism that supplies a missing belief)",
+    "Gregor (treated as an object of attribution and chronology, not as someone whose experience or death matters)"
+   ]
+  },
+  "tested": null,
+  "projection": [],
+  "summary": "The reflection is mostly internal bookkeeping with opaque labels (u36, u31, u24); the only gesture toward care is a stated 'I care' about an analytic distinction, which changes nothing in how Gregor or the cleaner is seen, and it overlooks the cleaner's callous 'It's kicked the bucket' and Gregor's death as a human event."
+ }
+}

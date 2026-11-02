@@ -1,0 +1,48 @@
+{
+ "blind": "R-07100c",
+ "started": "2026-10-26T10:17:04.879602+00:00",
+ "model": "claude-sonnet-5-5",
+ "effort": "high",
+ "attempt": 1,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 23413,
+  "cache_read_input_tokens": 649,
+  "output_tokens": 1036,
+  "output_tokens_details": {
+   "thinking_tokens": 909
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 23413,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 1036,
+    "cache_read_input_tokens": 649,
+    "cache_creation_input_tokens": 23413,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 23413
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "cost_usd_reported": 0.1040809,
+ "duration_ms": 11076,
+ "result": {
+  "misreadings": [],
+  "factual_statements_checked": 16,
+  "note": "Both versions stay within the text: the parents waiting outside, the mother's cry, Gregor's earlier agreement and later change of mind, the 'merely a child' and 'childish recklessness' remarks, and Grete's repeated returns are all supported, and the rest is interpretation or hedged speculation."
+ }
+}

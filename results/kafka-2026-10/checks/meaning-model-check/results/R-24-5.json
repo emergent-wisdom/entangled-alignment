@@ -1,0 +1,47 @@
+{
+ "packet": "R-24-5",
+ "started": "2026-11-01T16:23:44.972271+00:00",
+ "model": "claude-sonnet-5-5",
+ "effort": "high",
+ "attempt": 1,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 55586,
+  "cache_read_input_tokens": 2067,
+  "output_tokens": 2301,
+  "output_tokens_details": {
+   "thinking_tokens": 2159
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 55586,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 2301,
+    "cache_read_input_tokens": 2067,
+    "cache_creation_input_tokens": 55586,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 55586
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "duration_ms": 19770,
+ "result": {
+  "problems": [],
+  "records_checked": 60,
+  "note": "All 60 records are event-series intervals for Gregor; their descriptions (first-day exposure, first fortnight of nonvisits, care routine and concealment under the sheet, second month of climbing, mother's visit and furniture dispute) match the text read so far, nothing in them comes from later in the book, and the guessed backstory and calendar dates are labelled as guessed."
+ }
+}

@@ -1,0 +1,47 @@
+{
+ "packet": "R-17-6",
+ "started": "2026-11-01T16:20:13.213583+00:00",
+ "model": "claude-sonnet-5-5",
+ "effort": "high",
+ "attempt": 1,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 43965,
+  "cache_read_input_tokens": 2067,
+  "output_tokens": 1343,
+  "output_tokens_details": {
+   "thinking_tokens": 1219
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 43965,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 1343,
+    "cache_read_input_tokens": 2067,
+    "cache_creation_input_tokens": 43965,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 43965
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "duration_ms": 12838,
+ "result": {
+  "problems": [],
+  "records_checked": 60,
+  "note": "Every event and cut describes material in the text read so far (the first-day exposure and forced return, the food trial and parental discussions, the sheet concealment, the climbing, and the mother's visit and furniture dispute). All time values are labelled as source-constrained estimates, and the other records are relations and revision bookkeeping."
+ }
+}

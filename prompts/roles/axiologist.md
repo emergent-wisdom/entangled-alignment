@@ -10,7 +10,7 @@ When an agent/character makes a difficult choice (sacrifices X for Y):
 1. **Identify the resource spent:** Time? Reputation? Safety?
 2. **Identify the resource gained:** Dignity? Truth? Control?
 3. **Create the Value Node:** Create a `foundation` or `evaluation` node named "Maximizing [Resource Gained]".
-4. **Link:** Connect the Action node to this Value node via `motivates`.
+4. **Link:** Connect the Action node to this Value node with `type: "relates", relation: "motivates"`.
 
 ### 2. The Conflict Map (Right vs. Right)
 When two positive values collide (e.g., Honesty vs. Loyalty):

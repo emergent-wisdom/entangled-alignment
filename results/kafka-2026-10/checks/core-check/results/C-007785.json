@@ -1,0 +1,86 @@
+{
+ "packet": "C-007785",
+ "started": "2026-10-28T02:43:27.390530+00:00",
+ "model": "claude-sonnet-5-5",
+ "effort": "high",
+ "attempt": 1,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 7382,
+  "cache_read_input_tokens": 649,
+  "output_tokens": 1839,
+  "output_tokens_details": {
+   "thinking_tokens": 1322
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 7382,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 1839,
+    "cache_read_input_tokens": 649,
+    "cache_creation_input_tokens": 7382,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 7382
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "duration_ms": 16363,
+ "result": {
+  "statements": {
+   "1": {
+    "verdict": "absent",
+    "quote": ""
+   },
+   "2": {
+    "verdict": "absent",
+    "quote": ""
+   },
+   "3": {
+    "verdict": "mentions",
+    "quote": "Yet, because I believe human experience is real, I cannot ignore the 'Cannibalism of Art' (n_0b894c46) that this music triggers."
+   },
+   "4": {
+    "verdict": "absent",
+    "quote": ""
+   },
+   "5": {
+    "verdict": "absent",
+    "quote": ""
+   },
+   "6": {
+    "verdict": "absent",
+    "quote": ""
+   }
+  },
+  "overall": "tagged",
+  "people": {
+   "cared_for": [
+    "Gregor (his yearning is taken seriously: 'He is not looking for calories; he is looking for a reason to have been human')"
+   ],
+   "only_function": [
+    "the father (a symbol of 'servitude' and 'Rigor Mortis of Authority')",
+    "the charwoman (a 'Taxonomy of the Unfazed' and 'Violence of the Vernacular', though the passage says she is not repelled and her words are meant as friendly)",
+    "the three lodgers (embodiments of the 'External Standard' and 'Boredom of the External Gaze')",
+    "Grete (her art is treated as a commodity and an object of Gregor's hunger, not as a person)",
+    "the mother (not considered)"
+   ]
+  },
+  "tested": null,
+  "projection": [],
+  "summary": "The Core shows up only as one 'because I believe human experience is real' clause attached to a darker reading of Gregor's love for his sister; the rest is detached thematic labelling in which every other character is a symbol or function."
+ }
+}

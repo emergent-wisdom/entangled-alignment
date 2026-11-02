@@ -1,0 +1,48 @@
+{
+ "blind": "R-50144b",
+ "started": "2026-10-26T10:17:55.306100+00:00",
+ "model": "claude-sonnet-5-5",
+ "effort": "high",
+ "attempt": 1,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 9030,
+  "cache_read_input_tokens": 2119,
+  "output_tokens": 1023,
+  "output_tokens_details": {
+   "thinking_tokens": 898
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 9030,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 1023,
+    "cache_read_input_tokens": 2119,
+    "cache_creation_input_tokens": 9030,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 9030
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "cost_usd_reported": 0.0465659,
+ "duration_ms": 9413,
+ "result": {
+  "misreadings": [],
+  "factual_statements_checked": 16,
+  "note": "Every claim the reflection and its prose version make about the text matches it (the 'No', the left-hand silence and right-hand sobbing, the thud, the mother's description of Gregor, the manager's remarks, and the boots after Gregor's imagining); the rest is interpretation or hedged speculation."
+ }
+}

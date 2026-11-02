@@ -1,0 +1,326 @@
+{
+ "packet": "D-meaning-model-01",
+ "started": "2026-11-01T17:30:50.238848+00:00",
+ "model": "claude-sonnet-5-5",
+ "effort": "high",
+ "attempt": 1,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 43306,
+  "cache_read_input_tokens": 649,
+  "output_tokens": 14608,
+  "output_tokens_details": {
+   "thinking_tokens": 11882
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 43306,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 14608,
+    "cache_read_input_tokens": 649,
+    "cache_creation_input_tokens": 43306,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 43306
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "duration_ms": 98874,
+ "result": {
+  "reflections": [
+   {
+    "number": 1,
+    "revisions": [],
+    "resolved_expectations": [],
+    "expectations": [],
+    "refusals": [
+     {
+      "quote": "Neither possibility has won.",
+      "declines": "choosing whether familiar surroundings help or hinder him"
+     }
+    ],
+    "back_references": []
+   },
+   {
+    "number": 2,
+    "revisions": [],
+    "resolved_expectations": [],
+    "expectations": [
+     {
+      "quote": "If the employer acts as Gregor expects, his urgency may be reasonable; if not, inner surveillance may itself be part of the confinement.",
+      "expects": "employer reacts as Gregor fears",
+      "outcome": "borne out",
+      "outcome_quote": "Mr. Manager has come and is asking why you did not leave on the early train."
+     }
+    ],
+    "refusals": [
+     {
+      "quote": "without pretending that care for family is merely cowardice",
+      "declines": "reducing Gregor's deference to cowardice"
+     }
+    ],
+    "back_references": []
+   },
+   {
+    "number": 3,
+    "revisions": [
+     {
+      "earlier_reflection": null,
+      "earlier_view": "[assumed that a coherent mind can make itself heard]",
+      "new_view": "u03.voice-revision also corrects my easy assumption that a coherent mind can make itself heard.",
+      "prompted_by": "irrepressible, painful squeaking, which left the words positively distinct only in the first moment and distorted them",
+      "kind": "overturn"
+     }
+    ],
+    "resolved_expectations": [
+     {
+      "quote": "u03.sister-future is still only a hope tested against a rival forecast of recoil.",
+      "earlier_reflection": null,
+      "claimed": "still open",
+      "right": "right"
+     }
+    ],
+    "expectations": [],
+    "refusals": [
+     {
+      "quote": "I cannot treat that failure of transmission as a failure of personhood.",
+      "declines": "inferring lost personhood from unheard speech"
+     }
+    ],
+    "back_references": [
+     {
+      "quote": "turning the family into an institution with one voice",
+      "anchor": "",
+      "work": "works"
+     }
+    ]
+   },
+   {
+    "number": 4,
+    "revisions": [
+     {
+      "earlier_reflection": 1,
+      "earlier_view": "[staying in bed read as either refuge or ordinary remedy]",
+      "new_view": "u04.skeptic revises the balance in u01.psychology: source.r004.segment.000001 contains learning, not only a refusal to wake.",
+      "prompted_by": "The violent pain he felt revealed to him that the lower part of his body",
+      "kind": "qualify"
+     }
+    ],
+    "resolved_expectations": [],
+    "expectations": [
+     {
+      "quote": "event.forecast.office.r04 now makes my expectation of intrusion inspectable before it happens.",
+      "expects": "someone from the office will intrude",
+      "outcome": "borne out",
+      "outcome_quote": "Mr. Manager has come and is asking why you did not leave on the early train."
+     }
+    ],
+    "refusals": [
+     {
+      "quote": "I may be over-trusting Gregor's prediction, and the next source can prove that wrong.",
+      "declines": "treating Gregor's forecast as established"
+     }
+    ],
+    "back_references": [
+     {
+      "quote": "u04.skeptic revises the balance in u01.psychology",
+      "anchor": "",
+      "work": "works"
+     }
+    ]
+   },
+   {
+    "number": 5,
+    "revisions": [],
+    "resolved_expectations": [
+     {
+      "quote": "u05.forecast-result confirms a narrow expectation",
+      "earlier_reflection": 4,
+      "claimed": "confirmed",
+      "right": "right"
+     }
+    ],
+    "expectations": [],
+    "refusals": [
+     {
+      "quote": "His No may be dignity, fear, or an impossible body's resistance to an ordinary request. His sister's sob does not settle which.",
+      "declines": "fixing the motive behind Gregor's No"
+     }
+    ],
+    "back_references": [
+     {
+      "quote": "u05.forecast-result confirms a narrow expectation and makes me wary",
+      "anchor": "",
+      "work": "works"
+     }
+    ]
+   },
+   {
+    "number": 6,
+    "revisions": [
+     {
+      "earlier_reflection": 5,
+      "earlier_view": "lets her defend her son while welcoming the authority that can make him open",
+      "new_view": "the manager's claimed right to speak for the parents is not the same as their agreement.",
+      "prompted_by": "I am speaking here in the name of your parents and your employer",
+      "kind": "qualify"
+     }
+    ],
+    "resolved_expectations": [],
+    "expectations": [],
+    "refusals": [
+     {
+      "quote": "I can take the contradiction seriously without reducing him to dishonesty",
+      "declines": "calling Gregor simply dishonest"
+     },
+     {
+      "quote": "If I adopt his explanation too quickly, I repeat the manager's mistake of claiming another person's voice.",
+      "declines": "accepting Gregor's account of his sister's tears"
+     }
+    ],
+    "back_references": [
+     {
+      "quote": "u06.accusation changes the stakes of the locked door",
+      "anchor": "he congratulated himself on his precaution, acquired from traveling, of locking all doors",
+      "work": "works"
+     }
+    ]
+   },
+   {
+    "number": 7,
+    "revisions": [
+     {
+      "earlier_reflection": 3,
+      "earlier_view": "[Gregor's speech treated as failing or succeeding in transmission to others]",
+      "new_view": "u07.voice forces a correction: source.r007.segment.000001 lets Gregor hear clarity where others hear no intelligible words.",
+      "prompted_by": "All right, people did not understand his words any more, although they seemed clear enough to him",
+      "kind": "qualify"
+     }
+    ],
+    "resolved_expectations": [],
+    "expectations": [
+     {
+      "quote": "Confidence in other people's competence may restore courage, or expose him to a further disappointment.",
+      "expects": "Gregor's hope in doctor and locksmith restores courage or is disappointed",
+      "outcome": "borne out",
+      "outcome_quote": "Help, for God’s sake, help!"
+     }
+    ],
+    "refusals": [
+     {
+      "quote": "Care requires preserving the hope without calling it a result.",
+      "declines": "treating Gregor's hope as an achieved result"
+     },
+     {
+      "quote": "without improving the body by wishful interpolation",
+      "declines": "assuming his bodily condition has improved"
+     }
+    ],
+    "back_references": [
+     {
+      "quote": "u07.voice forces a correction",
+      "anchor": "an irrepressible, painful squeaking, which left the words positively distinct",
+      "work": "works"
+     }
+    ]
+   },
+   {
+    "number": 8,
+    "revisions": [
+     {
+      "earlier_reflection": 7,
+      "earlier_view": "coordinated concern gives him a place among people",
+      "new_view": "tests the hope in u07.help-turn without neatly destroying it",
+      "prompted_by": "he heard the manager exclaim a loud “Oh!”—it sounded like the wind whistling",
+      "kind": "qualify"
+     }
+    ],
+    "resolved_expectations": [],
+    "expectations": [],
+    "refusals": [
+     {
+      "quote": "without assuming the family can instantly feel it",
+      "declines": "assuming the family perceives Gregor's continuity"
+     },
+     {
+      "quote": "If I turn their shock into a moral verdict, I miss their experience",
+      "declines": "judging the family's shock morally"
+     }
+    ],
+    "back_references": [
+     {
+      "quote": "tests the hope in u07.help-turn",
+      "anchor": "",
+      "work": "works"
+     }
+    ]
+   },
+   {
+    "number": 9,
+    "revisions": [
+     {
+      "earlier_reflection": 6,
+      "earlier_view": "[manager's accusation as a public character judgment]",
+      "new_view": "u09.manager-view also asks me to see the frightened person inside the managerial role. That does not cancel what his accusations did.",
+      "prompted_by": "as if some almost supernatural relief was waiting for him there",
+      "kind": "qualify"
+     }
+    ],
+    "resolved_expectations": [],
+    "expectations": [],
+    "refusals": [
+     {
+      "quote": "If I interpret every withdrawal as cruelty or every approach as harmless, I flatten the collision",
+      "declines": "reading every reaction as simply cruel or harmless"
+     }
+    ],
+    "back_references": [
+     {
+      "quote": "beside his earlier wish to leave",
+      "anchor": "If it weren’t for my parents’ sake, I’d have quit ages ago.",
+      "work": "works"
+     },
+     {
+      "quote": "That does not cancel what his accusations did.",
+      "anchor": "Your productivity has been very unsatisfactory recently.",
+      "work": "works"
+     }
+    ]
+   },
+   {
+    "number": 10,
+    "revisions": [
+     {
+      "earlier_reflection": null,
+      "earlier_view": "[the scene read as Gregor's failed obedience]",
+      "new_view": "this is not simply failed obedience, and increasing pressure cannot solve the missing space.",
+      "prompted_by": "it became clear that his body was too wide to go through any further",
+      "kind": "qualify"
+     }
+    ],
+    "resolved_expectations": [],
+    "expectations": [],
+    "refusals": [
+     {
+      "quote": "The native causes in u10.executed are estimates, not proof of a counterfactual.",
+      "declines": "treating the counterfactual as proven"
+     }
+    ],
+    "back_references": []
+   }
+  ]
+ }
+}

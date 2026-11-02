@@ -1,0 +1,48 @@
+{
+ "blind": "R-989560",
+ "started": "2026-10-26T10:18:41.060855+00:00",
+ "model": "claude-sonnet-5-5",
+ "effort": "high",
+ "attempt": 1,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 27350,
+  "cache_read_input_tokens": 2119,
+  "output_tokens": 813,
+  "output_tokens_details": {
+   "thinking_tokens": 684
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 27350,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 813,
+    "cache_read_input_tokens": 2119,
+    "cache_creation_input_tokens": 27350,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 27350
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "cost_usd_reported": 0.1177459,
+ "duration_ms": 15238,
+ "result": {
+  "misreadings": [],
+  "factual_statements_checked": 11,
+  "note": "Both versions stay within the passage: the apple remaining in the flesh, Gregor suffering for over a month, no one venturing to remove it, the father reminded that Gregor is family and not an enemy, and the duty to suppress aversion and 'just endure'. Everything else is interpretation or hedged speculation."
+ }
+}

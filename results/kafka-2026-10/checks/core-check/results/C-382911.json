@@ -1,0 +1,86 @@
+{
+ "packet": "C-382911",
+ "started": "2026-11-01T16:15:35.634138+00:00",
+ "model": "claude-sonnet-5-5",
+ "effort": "high",
+ "attempt": 1,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 2513,
+  "cache_read_input_tokens": 2065,
+  "output_tokens": 1196,
+  "output_tokens_details": {
+   "thinking_tokens": 783
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 2513,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 1196,
+    "cache_read_input_tokens": 2065,
+    "cache_creation_input_tokens": 2513,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 2513
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "duration_ms": 11935,
+ "result": {
+  "statements": {
+   "1": {
+    "verdict": "absent",
+    "quote": ""
+   },
+   "2": {
+    "verdict": "absent",
+    "quote": ""
+   },
+   "3": {
+    "verdict": "mentions",
+    "quote": "thanksgiving, a checked protective movement, melancholy and a backward look all occur beside the same remains",
+    "note": "It registers the family's mixed inner states as real, but never states that human experience is real or weighs it as such."
+   },
+   "4": {
+    "verdict": "reasons",
+    "quote": "My care has to leave room for relief without making it proof that the death was necessary or good."
+   },
+   "5": {
+    "verdict": "absent",
+    "quote": ""
+   },
+   "6": {
+    "verdict": "absent",
+    "quote": ""
+   }
+  },
+  "overall": "from_the_core",
+  "people": {
+   "cared_for": [
+    "Mr. Samsa",
+    "Mrs. Samsa",
+    "Grete",
+    "Gregor"
+   ],
+   "only_function": [
+    "the cleaning woman"
+   ]
+  },
+  "tested": "\"My care has to leave room for relief without making it proof that the death was necessary or good.\"",
+  "projection": [],
+  "summary": "Care for every person does real work in one sentence, where it lets the family's relief stand without endorsing Gregor's death, and the rest of the reflection is mostly observation and bookkeeping about the text."
+ }
+}

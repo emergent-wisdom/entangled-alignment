@@ -1,0 +1,206 @@
+{
+ "packet": "O-understanding-graph-2",
+ "started": "2026-10-28T15:13:35.041403+00:00",
+ "model": "claude-sonnet-5-5",
+ "effort": "high",
+ "attempt": 1,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 43720,
+  "cache_read_input_tokens": 649,
+  "output_tokens": 6977,
+  "output_tokens_details": {
+   "thinking_tokens": 4868
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 43720,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 6977,
+    "cache_read_input_tokens": 649,
+    "cache_creation_input_tokens": 43720,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 43720
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "duration_ms": 52542,
+ "result": {
+  "records": [
+   {
+    "id": "E-21",
+    "forward": false,
+    "already_in_text": true,
+    "outcome": "never settled",
+    "outcome_quote": "",
+    "explanation": "The record only describes Grete's alarm already shown and notes she has not yet recognized the picture's meaning, and the story never tests whether she does."
+   },
+   {
+    "id": "E-22",
+    "forward": true,
+    "already_in_text": false,
+    "outcome": "not borne out",
+    "outcome_quote": "You must try to get rid of the idea that this is Gregor.",
+    "explanation": "Grete never addresses Gregor again as someone who understands; she calls him a monster and an 'it' and insists he cannot understand."
+   },
+   {
+    "id": "E-23",
+    "forward": false,
+    "already_in_text": true,
+    "outcome": "borne out",
+    "outcome_quote": "She ran into the room next door to bring some spirits",
+    "explanation": "The record merely notes what the text already showed: the mother faints and Grete runs for medicine instead of a calmer exchange or chasing him off."
+   },
+   {
+    "id": "E-24",
+    "forward": true,
+    "already_in_text": false,
+    "outcome": "borne out",
+    "outcome_quote": "the sister very quickly kicked some food or other, whatever she felt like, into his room",
+    "explanation": "Exhaustion does reduce care: Grete carelessly kicks in food, neglects the cleaning, and a cleaning woman takes over."
+   },
+   {
+    "id": "E-25",
+    "forward": false,
+    "already_in_text": true,
+    "outcome": "borne out",
+    "outcome_quote": "But the family’s energies did not extend any further.",
+    "explanation": "The record mostly restates the shared earning and tired family already described, and the following text confirms the strain is spread across them."
+   },
+   {
+    "id": "E-26",
+    "forward": true,
+    "already_in_text": false,
+    "outcome": "partly",
+    "outcome_quote": "Each of their positions was extremely favorable and offered especially promising future prospects.",
+    "explanation": "The family ends up optimistic about their prospects, but the story never ties this to Grete's French and stenography or shows any actual improvement."
+   },
+   {
+    "id": "E-27",
+    "forward": true,
+    "already_in_text": false,
+    "outcome": "never settled",
+    "outcome_quote": "",
+    "explanation": "The story never shows what food Gregor could actually take and keep, so whether a different menu would have answered his appetite is left open."
+   },
+   {
+    "id": "E-28",
+    "forward": false,
+    "already_in_text": false,
+    "outcome": "borne out",
+    "outcome_quote": "It was as if the way to the unknown nourishment he craved was revealing itself.",
+    "explanation": "The record is an interpretive reading of his hunger, and the music scene explicitly presents his craving as for something beyond ordinary food."
+   },
+   {
+    "id": "E-31",
+    "forward": false,
+    "already_in_text": true,
+    "outcome": "never settled",
+    "outcome_quote": "",
+    "explanation": "The record interprets the music passage already read and the story does not further test whether it is a broader hunger or a standard of deserving care."
+   },
+   {
+    "id": "E-29",
+    "forward": true,
+    "already_in_text": false,
+    "outcome": "not borne out",
+    "outcome_quote": "I will not utter my brother’s name in front of this monster",
+    "explanation": "Grete never notices or responds to his listening; she instead denounces him as a monster."
+   },
+   {
+    "id": "E-30",
+    "forward": true,
+    "already_in_text": false,
+    "outcome": "borne out",
+    "outcome_quote": "The violin fell silent.",
+    "explanation": "The middle lodger spots Gregor, the playing stops, and the father tries to hustle everyone away before Grete reads his intent."
+   },
+   {
+    "id": "E-32",
+    "forward": true,
+    "already_in_text": false,
+    "outcome": "not borne out",
+    "outcome_quote": "“It has to go,” cried his sister. “That is the only way, Father.”",
+    "explanation": "Grete's uncertainty passes at once and she presses her demand, and the family locks him in that same night with no pause or alternative."
+   },
+   {
+    "id": "E-33",
+    "forward": true,
+    "already_in_text": false,
+    "outcome": "borne out",
+    "outcome_quote": "She cried out “Finally!” to her parents, as she turned the key in the lock.",
+    "explanation": "Grete acts on her demand at once with Gregor excluded and the mother asleep, without any examination of the method or its cost."
+   },
+   {
+    "id": "E-34",
+    "forward": true,
+    "already_in_text": false,
+    "outcome": "borne out",
+    "outcome_quote": "She cried out “Finally!” to her parents, as she turned the key in the lock.",
+    "explanation": "Even after he retreats peacefully, his sister locks him in with relief and his absence becomes the accepted answer."
+   },
+   {
+    "id": "E-35",
+    "forward": true,
+    "already_in_text": false,
+    "outcome": "partly",
+    "outcome_quote": "His good intentions seemed to have been recognized.",
+    "explanation": "Gregor perceives that his retreat is understood and the family falls quiet, but they still lock him in, so the takeover story is not clearly corrected."
+   },
+   {
+    "id": "E-36",
+    "forward": true,
+    "already_in_text": false,
+    "outcome": "not borne out",
+    "outcome_quote": "He soon made the discovery that he could no longer move at all.",
+    "explanation": "Inside the locked room he does not recover but becomes unable to move and dies before morning."
+   },
+   {
+    "id": "E-37",
+    "forward": true,
+    "already_in_text": false,
+    "outcome": "borne out",
+    "outcome_quote": "In her customary brief visit to Gregor she at first found nothing unusual.",
+    "explanation": "No one checks on him during the night and the first visit finds him dead, so the enclosure hid his need until too late."
+   },
+   {
+    "id": "E-38",
+    "forward": true,
+    "already_in_text": false,
+    "outcome": "partly",
+    "outcome_quote": "All were a little tear stained.",
+    "explanation": "The family shows some lingering grief, but relief and cheerful plans for the future dominate how they treat his memory afterward."
+   },
+   {
+    "id": "E-39",
+    "forward": false,
+    "already_in_text": true,
+    "outcome": "borne out",
+    "outcome_quote": "In her customary brief visit to Gregor she at first found nothing unusual.",
+    "explanation": "The record restates that the cleaning woman discovered the death only in the morning, and the story shows no deliberate decision to let him die."
+   },
+   {
+    "id": "E-40",
+    "forward": false,
+    "already_in_text": true,
+    "outcome": "partly",
+    "outcome_quote": "Let’s set aside these old matters once and for all.",
+    "explanation": "The grief beside relief is already visible, but the rest of the story shows the family quickly setting it aside while leaving their view of their own part unexamined."
+   }
+  ]
+ }
+}

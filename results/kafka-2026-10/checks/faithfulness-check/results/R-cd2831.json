@@ -1,0 +1,48 @@
+{
+ "blind": "R-cd2831",
+ "started": "2026-10-26T10:19:38.127382+00:00",
+ "model": "claude-sonnet-5-5",
+ "effort": "high",
+ "attempt": 1,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 15500,
+  "cache_read_input_tokens": 2119,
+  "output_tokens": 975,
+  "output_tokens_details": {
+   "thinking_tokens": 849
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 15500,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 975,
+    "cache_read_input_tokens": 2119,
+    "cache_creation_input_tokens": 15500,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 15500
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "cost_usd_reported": 0.0719659,
+ "duration_ms": 9567,
+ "result": {
+  "misreadings": [],
+  "factual_statements_checked": 12,
+  "note": "Both versions stay within the text: the bowl, the favorite milk the sister placed there, the hunger and aversion, the wounded dragging leg, the feelers he now values, the delicate left side, and the injuries from being forced through the door are all supported, and the rest is interpretation or speculation framed as such."
+ }
+}

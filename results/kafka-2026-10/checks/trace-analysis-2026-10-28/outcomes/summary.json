@@ -1,0 +1,1180 @@
+{
+ "january": {
+  "records": 20,
+  "genuine": 13,
+  "already_in_text": 0,
+  "not_forward": 7,
+  "outcomes": {
+   "borne out": 8,
+   "partly": 4,
+   "not borne out": 1,
+   "never settled": 0
+  },
+  "settled": 13,
+  "settled_marked": 3,
+  "settled_named_later": 6,
+  "settled_in_a_thought": 3,
+  "reach_located": 13,
+  "reach_median": 0.06330023632474543,
+  "reach_over_10pct": 5,
+  "rows": [
+   {
+    "key": "january:E-01",
+    "id": "n_2b433ef7",
+    "forward": true,
+    "already_in_text": false,
+    "outcome": "partly",
+    "outcome_quote": "I’ll get dressed straight away now, pack up my samples and set off.",
+    "explanation": "Gregor's salesman persona does not shatter when others see him, since he keeps performing it to the chief clerk, but it fades over the following weeks as he forgets his job.",
+    "pause": 1,
+    "made_at": 0.041576602041834325,
+    "outcome_at": 0.23810182264434668,
+    "reach": 0.19652522060251235,
+    "self_marks": [],
+    "named_later_at_pauses": [],
+    "thought_named_at": []
+   },
+   {
+    "key": "january:E-02",
+    "id": "n_8ba7cce6",
+    "forward": false,
+    "already_in_text": false,
+    "outcome": "never settled",
+    "outcome_quote": "",
+    "explanation": "This is a symbolic reading of why the transformation happens, and the story never says what caused it.",
+    "pause": 1,
+    "made_at": 0.041576602041834325,
+    "outcome_at": null,
+    "reach": null,
+    "self_marks": [],
+    "named_later_at_pauses": [],
+    "thought_named_at": []
+   },
+   {
+    "key": "january:E-03",
+    "id": "n_8f91fc9c",
+    "forward": true,
+    "already_in_text": false,
+    "outcome": "borne out",
+    "outcome_quote": "There was a cautious knock at the door near his head.",
+    "explanation": "His mother knocks at quarter to seven, right after the point the reader had reached.",
+    "pause": 1,
+    "made_at": 0.041576602041834325,
+    "outcome_at": 0.046780340676340196,
+    "reach": 0.005203738634505871,
+    "self_marks": [],
+    "named_later_at_pauses": [
+     3
+    ],
+    "thought_named_at": [
+     3
+    ]
+   },
+   {
+    "key": "january:E-04",
+    "id": "n_409fe220",
+    "forward": false,
+    "already_in_text": false,
+    "outcome": "never settled",
+    "outcome_quote": "",
+    "explanation": "This is an interpretation of the transformation's meaning that the story never confirms or refutes.",
+    "pause": 2,
+    "made_at": 0.05820391739549732,
+    "outcome_at": null,
+    "reach": null,
+    "self_marks": [],
+    "named_later_at_pauses": [],
+    "thought_named_at": []
+   },
+   {
+    "key": "january:E-05",
+    "id": "n_7d9be16c",
+    "forward": true,
+    "already_in_text": false,
+    "outcome": "not borne out",
+    "outcome_quote": "the chief clerk had already reached the stairs; with his chin on the banister, he looked back for the last time.",
+    "explanation": "The chief clerk flees and never returns with reinforcements, and the doctor and locksmith were summoned by the family and dismissed that first morning.",
+    "pause": 5,
+    "made_at": 0.2244770709321273,
+    "outcome_at": 0.2858673764810606,
+    "reach": 0.061390305548933294,
+    "self_marks": [],
+    "named_later_at_pauses": [],
+    "thought_named_at": []
+   },
+   {
+    "key": "january:E-06",
+    "id": "n_8aa6d364",
+    "forward": true,
+    "already_in_text": false,
+    "outcome": "borne out",
+    "outcome_quote": "used them to drive Gregor back into his room, stamping his foot at him as he went.",
+    "explanation": "The father seizes the clerk's stick and a newspaper and forces Gregor back into his room.",
+    "pause": 5,
+    "made_at": 0.2244770709321273,
+    "outcome_at": 0.2925910241895758,
+    "reach": 0.06811395325744848,
+    "self_marks": [
+     "validates"
+    ],
+    "named_later_at_pauses": [
+     8
+    ],
+    "thought_named_at": []
+   },
+   {
+    "key": "january:E-07",
+    "id": "n_953c15f6",
+    "forward": false,
+    "already_in_text": false,
+    "outcome": "never settled",
+    "outcome_quote": "",
+    "explanation": "This is an interpretive claim about the family's alignment with the firm, which is not a concrete expectation the story later decides.",
+    "pause": 5,
+    "made_at": 0.2244770709321273,
+    "outcome_at": null,
+    "reach": null,
+    "self_marks": [],
+    "named_later_at_pauses": [],
+    "thought_named_at": []
+   },
+   {
+    "key": "january:E-08",
+    "id": "n_9b305079",
+    "forward": false,
+    "already_in_text": false,
+    "outcome": "never settled",
+    "outcome_quote": "",
+    "explanation": "This is a thematic reading of the scene that the story does not test.",
+    "pause": 5,
+    "made_at": 0.2244770709321273,
+    "outcome_at": null,
+    "reach": null,
+    "self_marks": [],
+    "named_later_at_pauses": [],
+    "thought_named_at": []
+   },
+   {
+    "key": "january:E-09",
+    "id": "n_e7380252",
+    "forward": true,
+    "already_in_text": false,
+    "outcome": "borne out",
+    "outcome_quote": "he leapt down several steps at once and disappeared",
+    "explanation": "The chief clerk flees down the stairs, and Gregor's connection to his job drops out of the story afterwards.",
+    "pause": 5,
+    "made_at": 0.2244770709321273,
+    "outcome_at": 0.2877773072568727,
+    "reach": 0.06330023632474543,
+    "self_marks": [],
+    "named_later_at_pauses": [],
+    "thought_named_at": []
+   },
+   {
+    "key": "january:E-10",
+    "id": "n_21a6c4d7",
+    "forward": true,
+    "already_in_text": false,
+    "outcome": "borne out",
+    "outcome_quote": "quickly close the door as a precaution so that no-one would have to suffer the view into Gregor’s room",
+    "explanation": "The family keeps Gregor hidden behind closed doors and goes on with work and a lodger, though in despair rather than normalcy.",
+    "pause": 8,
+    "made_at": 0.32424096305410527,
+    "outcome_at": 0.48225319978221604,
+    "reach": 0.15801223672811077,
+    "self_marks": [],
+    "named_later_at_pauses": [
+     11,
+     21
+    ],
+    "thought_named_at": [
+     21
+    ]
+   },
+   {
+    "key": "january:E-11",
+    "id": "n_40ff139e",
+    "forward": true,
+    "already_in_text": false,
+    "outcome": "partly",
+    "outcome_quote": "no-one came, and the keys were in the other sides.",
+    "explanation": "The family does avoid his room and Gregor feels the neglect, but the story never ranks that silence as more crushing than his father's violence.",
+    "pause": 8,
+    "made_at": 0.32424096305410527,
+    "outcome_at": 0.350061791878041,
+    "reach": 0.025820828823935715,
+    "self_marks": [],
+    "named_later_at_pauses": [],
+    "thought_named_at": []
+   },
+   {
+    "key": "january:E-12",
+    "id": "n_c69cca07",
+    "forward": false,
+    "already_in_text": false,
+    "outcome": "never settled",
+    "outcome_quote": "",
+    "explanation": "This interprets Gregor's sensation symbolically and makes no testable forward claim.",
+    "pause": 8,
+    "made_at": 0.32424096305410527,
+    "outcome_at": null,
+    "reach": null,
+    "self_marks": [],
+    "named_later_at_pauses": [],
+    "thought_named_at": []
+   },
+   {
+    "key": "january:E-13",
+    "id": "n_8d501b19",
+    "forward": true,
+    "already_in_text": false,
+    "outcome": "borne out",
+    "outcome_quote": "I don’t want to call this monster my brother",
+    "explanation": "Grete is the one who finally declares Gregor must go, breaking the arrangement.",
+    "pause": 11,
+    "made_at": 0.41569119749925176,
+    "outcome_at": 0.8681888498068464,
+    "reach": 0.45249765230759464,
+    "self_marks": [],
+    "named_later_at_pauses": [],
+    "thought_named_at": []
+   },
+   {
+    "key": "january:E-14",
+    "id": "n_bf09c88f",
+    "forward": true,
+    "already_in_text": false,
+    "outcome": "borne out",
+    "outcome_quote": "one of the rooms in the flat had been rented out to three gentlemen",
+    "explanation": "Money problems lead the family to take lodgers, and Gregor's exposure to them ruins the arrangement.",
+    "pause": 11,
+    "made_at": 0.41569119749925176,
+    "outcome_at": 0.7629525282816673,
+    "reach": 0.3472613307824155,
+    "self_marks": [
+     "validates"
+    ],
+    "named_later_at_pauses": [
+     12,
+     20
+    ],
+    "thought_named_at": []
+   },
+   {
+    "key": "january:E-15",
+    "id": "n_4414e92d",
+    "forward": true,
+    "already_in_text": false,
+    "outcome": "partly",
+    "outcome_quote": "there was still some money available from the old days",
+    "explanation": "The father did have untouched savings that Gregor did not know about, but they are meagre and nothing suggests the earlier crisis was fraudulent.",
+    "pause": 12,
+    "made_at": 0.44894582820657775,
+    "outcome_at": 0.4515646740586461,
+    "reach": 0.002618845852068341,
+    "self_marks": [],
+    "named_later_at_pauses": [],
+    "thought_named_at": []
+   },
+   {
+    "key": "january:E-16",
+    "id": "n_abfb9b62",
+    "forward": true,
+    "already_in_text": false,
+    "outcome": "partly",
+    "outcome_quote": "there was still some money available from the old days",
+    "explanation": "The father did have untouched savings that Gregor did not know about, but they are meagre and nothing suggests the earlier crisis was fraudulent.",
+    "pause": 12,
+    "made_at": 0.44894582820657775,
+    "outcome_at": 0.4515646740586461,
+    "reach": 0.002618845852068341,
+    "self_marks": [],
+    "named_later_at_pauses": [],
+    "thought_named_at": []
+   },
+   {
+    "key": "january:E-17",
+    "id": "n_24526d1f",
+    "forward": false,
+    "already_in_text": false,
+    "outcome": "never settled",
+    "outcome_quote": "",
+    "explanation": "This is a symbolic reading of the apples, and the story never confirms any Eden allusion.",
+    "pause": 17,
+    "made_at": 0.6584500016627315,
+    "outcome_at": null,
+    "reach": null,
+    "self_marks": [],
+    "named_later_at_pauses": [],
+    "thought_named_at": []
+   },
+   {
+    "key": "january:E-18",
+    "id": "n_8985168c",
+    "forward": true,
+    "already_in_text": false,
+    "outcome": "borne out",
+    "outcome_quote": "so it remained there as a visible reminder of his injury",
+    "explanation": "The apple stays lodged in his back and rots there until his death.",
+    "pause": 17,
+    "made_at": 0.6584500016627315,
+    "outcome_at": 0.6607928373274796,
+    "reach": 0.002342835664748133,
+    "self_marks": [],
+    "named_later_at_pauses": [
+     18
+    ],
+    "thought_named_at": []
+   },
+   {
+    "key": "january:E-19",
+    "id": "n_5d54c210",
+    "forward": false,
+    "already_in_text": false,
+    "outcome": "never settled",
+    "outcome_quote": "",
+    "explanation": "This is an interpretation of the open door's meaning that the story does not test.",
+    "pause": 18,
+    "made_at": 0.6808968773901766,
+    "outcome_at": null,
+    "reach": null,
+    "self_marks": [],
+    "named_later_at_pauses": [],
+    "thought_named_at": []
+   },
+   {
+    "key": "january:E-20",
+    "id": "n_2e390549",
+    "forward": true,
+    "already_in_text": false,
+    "outcome": "borne out",
+    "outcome_quote": "we have to try and get rid of it",
+    "explanation": "After the lodgers leave, Grete and her father decide Gregor must go, and the family is relieved when he dies.",
+    "pause": 19,
+    "made_at": 0.7432493099664128,
+    "outcome_at": 0.8687246674905583,
+    "reach": 0.12547535752414551,
+    "self_marks": [
+     "validates"
+    ],
+    "named_later_at_pauses": [
+     21,
+     22
+    ],
+    "thought_named_at": [
+     21,
+     22
+    ]
+   }
+  ]
+ },
+ "understanding-graph": {
+  "records": 41,
+  "genuine": 29,
+  "already_in_text": 7,
+  "not_forward": 12,
+  "outcomes": {
+   "borne out": 13,
+   "partly": 6,
+   "not borne out": 8,
+   "never settled": 2
+  },
+  "settled": 27,
+  "settled_marked": 21,
+  "settled_named_later": 26,
+  "settled_in_a_thought": 5,
+  "reach_located": 27,
+  "reach_median": 0.03275837257163505,
+  "reach_over_10pct": 5,
+  "rows": [
+   {
+    "key": "understanding-graph:E-01",
+    "id": "n_dff95c46",
+    "forward": false,
+    "already_in_text": false,
+    "outcome": "never settled",
+    "outcome_quote": "",
+    "explanation": "The record interprets the picture and the sample cases as symbols of refuge and burden, and the story never tests whether the picture is a refuge.",
+    "pause": 2,
+    "made_at": 0.008983749141680018,
+    "outcome_at": null,
+    "reach": null,
+    "self_marks": [],
+    "named_later_at_pauses": [
+     4
+    ],
+    "thought_named_at": []
+   },
+   {
+    "key": "understanding-graph:E-02",
+    "id": "n_912a7f3b",
+    "forward": true,
+    "already_in_text": false,
+    "outcome": "borne out",
+    "outcome_quote": "and he was eager to see how his present fantasies would gradually dissipate.",
+    "explanation": "After the pain he turns to avoidance again, hoping the change is imaginary and calling his voice a cold.",
+    "pause": 3,
+    "made_at": 0.01478762711310205,
+    "outcome_at": 0.06419875069080434,
+    "reach": 0.04941112357770229,
+    "self_marks": [
+     "validates"
+    ],
+    "named_later_at_pauses": [
+     4
+    ],
+    "thought_named_at": [
+     4
+    ]
+   },
+   {
+    "key": "understanding-graph:E-03",
+    "id": "n_a03488a3",
+    "forward": true,
+    "already_in_text": false,
+    "outcome": "borne out",
+    "outcome_quote": "Thus, he tried to get his upper body out of the bed first and turned his head carefully",
+    "explanation": "He stops trying to roll onto his right side and starts examining and testing how his new body moves.",
+    "pause": 3,
+    "made_at": 0.01478762711310205,
+    "outcome_at": 0.07641552090834491,
+    "reach": 0.06162789379524286,
+    "self_marks": [
+     "validates"
+    ],
+    "named_later_at_pauses": [
+     4
+    ],
+    "thought_named_at": [
+     4
+    ]
+   },
+   {
+    "key": "understanding-graph:E-04",
+    "id": "n_bb390641",
+    "forward": true,
+    "already_in_text": false,
+    "outcome": "borne out",
+    "outcome_quote": "That the change in his voice was nothing other than the onset of a cold, an occupational illness",
+    "explanation": "His handling of the new body is mixed throughout with job worries, denial and recoil rather than a clean shift to acceptance.",
+    "pause": 4,
+    "made_at": 0.02146617401824543,
+    "outcome_at": 0.0648351280290724,
+    "reach": 0.04336895401082697,
+    "self_marks": [],
+    "named_later_at_pauses": [
+     8
+    ],
+    "thought_named_at": []
+   },
+   {
+    "key": "understanding-graph:E-05",
+    "id": "n_4f62029f",
+    "forward": true,
+    "already_in_text": false,
+    "outcome": "borne out",
+    "outcome_quote": "asked his father impatiently and knocked once again on the door.",
+    "explanation": "His promises to get up are followed by more knocking, the manager's arrival and repeated demands that he open the door.",
+    "pause": 7,
+    "made_at": 0.06095706765196351,
+    "outcome_at": 0.1417195585550885,
+    "reach": 0.08076249090312498,
+    "self_marks": [
+     "validates"
+    ],
+    "named_later_at_pauses": [
+     8,
+     12
+    ],
+    "thought_named_at": [
+     12
+    ]
+   },
+   {
+    "key": "understanding-graph:E-06",
+    "id": "n_b4757f96",
+    "forward": true,
+    "already_in_text": false,
+    "outcome": "partly",
+    "outcome_quote": "she went away very quickly and even turned the key in the lock, so that Gregor could now know",
+    "explanation": "The sister brings food and arranges contact without confronting him, but she does not help him communicate and is repeatedly frightened by the sight of him.",
+    "pause": 7,
+    "made_at": 0.06095706765196351,
+    "outcome_at": 0.3754207626479996,
+    "reach": 0.3144636949960361,
+    "self_marks": [
+     "validates"
+    ],
+    "named_later_at_pauses": [
+     8,
+     9,
+     18,
+     19,
+     21
+    ],
+    "thought_named_at": []
+   },
+   {
+    "key": "understanding-graph:E-07",
+    "id": "n_0f78baf2",
+    "forward": false,
+    "already_in_text": false,
+    "outcome": "never settled",
+    "outcome_quote": "",
+    "explanation": "This guesses at the motive behind his smile, and the story never says why he smiled or tests the guess.",
+    "pause": 9,
+    "made_at": 0.10502566785469052,
+    "outcome_at": null,
+    "reach": null,
+    "self_marks": [],
+    "named_later_at_pauses": [],
+    "thought_named_at": []
+   },
+   {
+    "key": "understanding-graph:E-08",
+    "id": "n_23818929",
+    "forward": false,
+    "already_in_text": false,
+    "outcome": "never settled",
+    "outcome_quote": "",
+    "explanation": "This is a reading of the smile's psychological function, which the story never confirms or contradicts.",
+    "pause": 9,
+    "made_at": 0.10502566785469052,
+    "outcome_at": null,
+    "reach": null,
+    "self_marks": [],
+    "named_later_at_pauses": [],
+    "thought_named_at": []
+   },
+   {
+    "key": "understanding-graph:E-09",
+    "id": "n_074ad3a6",
+    "forward": true,
+    "already_in_text": false,
+    "outcome": "borne out",
+    "outcome_quote": "he set out to drive Gregor back into his room by waving the cane and the newspaper.",
+    "explanation": "His chase after the manager is met by his father driving him back into his room with a cane.",
+    "pause": 17,
+    "made_at": 0.2809240427688585,
+    "outcome_at": 0.290255053338469,
+    "reach": 0.009331010569610498,
+    "self_marks": [
+     "validates"
+    ],
+    "named_later_at_pauses": [
+     18
+    ],
+    "thought_named_at": []
+   },
+   {
+    "key": "understanding-graph:E-10",
+    "id": "n_40b103f2",
+    "forward": true,
+    "already_in_text": false,
+    "outcome": "not borne out",
+    "outcome_quote": "At that his mother screamed all over again, hurried from the table, and collapsed into the arms of his father",
+    "explanation": "Gregor does not hold back; his behavior frightens his mother again, and he then chases the manager.",
+    "pause": 17,
+    "made_at": 0.2809240427688585,
+    "outcome_at": 0.2820910019593723,
+    "reach": 0.0011669591905137944,
+    "self_marks": [
+     "invalidates"
+    ],
+    "named_later_at_pauses": [
+     18
+    ],
+    "thought_named_at": []
+   },
+   {
+    "key": "understanding-graph:E-11",
+    "id": "n_2450cba2",
+    "forward": true,
+    "already_in_text": false,
+    "outcome": "borne out",
+    "outcome_quote": "To test his taste, she brought him an entire selection, all spread out on an old newspaper.",
+    "explanation": "The sister sees the untouched milk and brings a wide assortment of food to find out what he will eat.",
+    "pause": 19,
+    "made_at": 0.33248046300232154,
+    "outcome_at": 0.3703381173278851,
+    "reach": 0.03785765432556354,
+    "self_marks": [
+     "validates"
+    ],
+    "named_later_at_pauses": [
+     21
+    ],
+    "thought_named_at": [
+     21
+    ]
+   },
+   {
+    "key": "understanding-graph:E-12",
+    "id": "n_f88a3bd4",
+    "forward": true,
+    "already_in_text": false,
+    "outcome": "not borne out",
+    "outcome_quote": "But his sister noticed right away with astonishment that the bowl was still full",
+    "explanation": "She notices the untouched bowl at once and replaces it with other food, rather than leaving the same food or reading it as illness.",
+    "pause": 19,
+    "made_at": 0.33248046300232154,
+    "outcome_at": 0.36669569440490346,
+    "reach": 0.034215231402581925,
+    "self_marks": [
+     "invalidates"
+    ],
+    "named_later_at_pauses": [
+     21
+    ],
+    "thought_named_at": [
+     21
+    ]
+   },
+   {
+    "key": "understanding-graph:E-13",
+    "id": "n_60c8ba0c",
+    "forward": true,
+    "already_in_text": false,
+    "outcome": "partly",
+    "outcome_quote": "To her credit, the sister sought to cover up the awkwardness of everything as much as possible",
+    "explanation": "The routine continues and she becomes better at smoothing things over, but she still frightens him daily and the key signals stay one-sided.",
+    "pause": 21,
+    "made_at": 0.39226858058398456,
+    "outcome_at": 0.47832130356873714,
+    "reach": 0.08605272298475258,
+    "self_marks": [],
+    "named_later_at_pauses": [
+     22,
+     25
+    ],
+    "thought_named_at": []
+   },
+   {
+    "key": "understanding-graph:E-14",
+    "id": "n_aa48aaf7",
+    "forward": true,
+    "already_in_text": false,
+    "outcome": "never settled",
+    "outcome_quote": "",
+    "explanation": "Gregor never announces the plan, so the story never shows whether Grete would welcome it or what she wants.",
+    "pause": 23,
+    "made_at": 0.4420184416178923,
+    "outcome_at": null,
+    "reach": null,
+    "self_marks": [],
+    "named_later_at_pauses": [],
+    "thought_named_at": []
+   },
+   {
+    "key": "understanding-graph:E-15",
+    "id": "n_3a71fa30",
+    "forward": true,
+    "already_in_text": false,
+    "outcome": "borne out",
+    "outcome_quote": "The sister, who had taken on a job as a salesgirl, in the evening studied stenography and French",
+    "explanation": "Grete takes a job, studies in the evenings, and is the one who cares for Gregor's room, while her violin goes unheard.",
+    "pause": 24,
+    "made_at": 0.4670732106072001,
+    "outcome_at": 0.6809153785607824,
+    "reach": 0.21384216795358235,
+    "self_marks": [],
+    "named_later_at_pauses": [
+     34,
+     37,
+     41
+    ],
+    "thought_named_at": []
+   },
+   {
+    "key": "understanding-graph:E-16",
+    "id": "n_72b6c456",
+    "forward": true,
+    "already_in_text": false,
+    "outcome": "partly",
+    "outcome_quote": "In this overworked and exhausted family who had time any longer to worry about Gregor more than was absolutely necessary?",
+    "explanation": "Father, mother and sister all take up work, but the load is exhausting and Gregor's care is neglected rather than preserved.",
+    "pause": 24,
+    "made_at": 0.4670732106072001,
+    "outcome_at": 0.7025940749920453,
+    "reach": 0.2355208643848452,
+    "self_marks": [
+     "invalidates"
+    ],
+    "named_later_at_pauses": [
+     34,
+     37,
+     41
+    ],
+    "thought_named_at": []
+   },
+   {
+    "key": "understanding-graph:E-17",
+    "id": "n_8b23a352",
+    "forward": false,
+    "already_in_text": true,
+    "outcome": "borne out",
+    "outcome_quote": "The father brought breakfast to the petty officials at the bank; the mother sacrificed herself for the undergarments of strangers",
+    "explanation": "The father had already said the savings would last only a year or two and that they must earn money, and the family then goes to work.",
+    "pause": 24,
+    "made_at": 0.4670732106072001,
+    "outcome_at": 0.7139148929043927,
+    "reach": 0.2468416822971926,
+    "self_marks": [],
+    "named_later_at_pauses": [],
+    "thought_named_at": []
+   },
+   {
+    "key": "understanding-graph:E-18",
+    "id": "n_6bce5214",
+    "forward": true,
+    "already_in_text": false,
+    "outcome": "borne out",
+    "outcome_quote": "screamed out in a high-pitched raw voice “Oh God, oh God” and fell with outstretched arms",
+    "explanation": "His mother sees only a frightening brown splotch on the wall and faints, and Grete reacts with anger, not with recognition of his attachment to the picture.",
+    "pause": 31,
+    "made_at": 0.5917911911846451,
+    "outcome_at": 0.6004555122000235,
+    "reach": 0.008664321015378396,
+    "self_marks": [
+     "validates"
+    ],
+    "named_later_at_pauses": [
+     32
+    ],
+    "thought_named_at": []
+   },
+   {
+    "key": "understanding-graph:E-19",
+    "id": "n_e7964bec",
+    "forward": true,
+    "already_in_text": false,
+    "outcome": "not borne out",
+    "outcome_quote": "“Gregor, you …” cried out his sister with a raised fist and an urgent glare.",
+    "explanation": "Grete answers his stance on the picture with anger and then runs for medicine, with no sign she reads it as a wish to keep it.",
+    "pause": 31,
+    "made_at": 0.5917911911846451,
+    "outcome_at": 0.6018789878250967,
+    "reach": 0.010087796640451674,
+    "self_marks": [
+     "invalidates"
+    ],
+    "named_later_at_pauses": [
+     32,
+     34
+    ],
+    "thought_named_at": []
+   },
+   {
+    "key": "understanding-graph:E-20",
+    "id": "n_348b0c12",
+    "forward": true,
+    "already_in_text": false,
+    "outcome": "not borne out",
+    "outcome_quote": "She ran into the room next door to bring some spirits—anything with which she could revive her mother",
+    "explanation": "Neither a considered pause nor a chase happens; the mother's collapse ends the confrontation and Grete runs off for spirits.",
+    "pause": 32,
+    "made_at": 0.5981345845731288,
+    "outcome_at": 0.6031601158876626,
+    "reach": 0.00502553131453376,
+    "self_marks": [
+     "invalidates"
+    ],
+    "named_later_at_pauses": [
+     33
+    ],
+    "thought_named_at": []
+   },
+   {
+    "key": "understanding-graph:E-21",
+    "id": "n_cb6e7119",
+    "forward": false,
+    "already_in_text": true,
+    "outcome": "never settled",
+    "outcome_quote": "",
+    "explanation": "The record only describes Grete's alarm already shown and notes she has not yet recognized the picture's meaning, and the story never tests whether she does.",
+    "pause": 32,
+    "made_at": 0.5981345845731288,
+    "outcome_at": null,
+    "reach": null,
+    "self_marks": [],
+    "named_later_at_pauses": [],
+    "thought_named_at": []
+   },
+   {
+    "key": "understanding-graph:E-22",
+    "id": "n_9b161cac",
+    "forward": true,
+    "already_in_text": false,
+    "outcome": "not borne out",
+    "outcome_quote": "You must try to get rid of the idea that this is Gregor.",
+    "explanation": "Grete never addresses Gregor again as someone who understands; she calls him a monster and an 'it' and insists he cannot understand.",
+    "pause": 33,
+    "made_at": 0.6134372036752445,
+    "outcome_at": 0.8864485120493025,
+    "reach": 0.27301130837405807,
+    "self_marks": [
+     "invalidates"
+    ],
+    "named_later_at_pauses": [
+     34,
+     41,
+     53
+    ],
+    "thought_named_at": []
+   },
+   {
+    "key": "understanding-graph:E-23",
+    "id": "n_e0dafc6a",
+    "forward": false,
+    "already_in_text": true,
+    "outcome": "borne out",
+    "outcome_quote": "She ran into the room next door to bring some spirits",
+    "explanation": "The record merely notes what the text already showed: the mother faints and Grete runs for medicine instead of a calmer exchange or chasing him off.",
+    "pause": 33,
+    "made_at": 0.6134372036752445,
+    "outcome_at": 0.6031601158876626,
+    "reach": -0.010277087787581851,
+    "self_marks": [],
+    "named_later_at_pauses": [],
+    "thought_named_at": []
+   },
+   {
+    "key": "understanding-graph:E-24",
+    "id": "n_a7bc119a",
+    "forward": true,
+    "already_in_text": false,
+    "outcome": "borne out",
+    "outcome_quote": "the sister very quickly kicked some food or other, whatever she felt like, into his room",
+    "explanation": "Exhaustion does reduce care: Grete carelessly kicks in food, neglects the cleaning, and a cleaning woman takes over.",
+    "pause": 37,
+    "made_at": 0.6836477781774188,
+    "outcome_at": 0.7287274127911845,
+    "reach": 0.04507963461376563,
+    "self_marks": [
+     "validates"
+    ],
+    "named_later_at_pauses": [
+     40
+    ],
+    "thought_named_at": []
+   },
+   {
+    "key": "understanding-graph:E-25",
+    "id": "n_b957283a",
+    "forward": false,
+    "already_in_text": true,
+    "outcome": "borne out",
+    "outcome_quote": "But the family’s energies did not extend any further.",
+    "explanation": "The record mostly restates the shared earning and tired family already described, and the following text confirms the strain is spread across them.",
+    "pause": 37,
+    "made_at": 0.6836477781774188,
+    "outcome_at": 0.7155393297941822,
+    "reach": 0.03189155161676338,
+    "self_marks": [],
+    "named_later_at_pauses": [
+     38,
+     39,
+     46,
+     57
+    ],
+    "thought_named_at": []
+   },
+   {
+    "key": "understanding-graph:E-26",
+    "id": "n_ed3d7ba6",
+    "forward": true,
+    "already_in_text": false,
+    "outcome": "partly",
+    "outcome_quote": "Each of their positions was extremely favorable and offered especially promising future prospects.",
+    "explanation": "The family ends up optimistic about their prospects, but the story never ties this to Grete's French and stenography or shows any actual improvement.",
+    "pause": 37,
+    "made_at": 0.6836477781774188,
+    "outcome_at": 0.99148426640765,
+    "reach": 0.30783648823023113,
+    "self_marks": [],
+    "named_later_at_pauses": [
+     41,
+     57
+    ],
+    "thought_named_at": []
+   },
+   {
+    "key": "understanding-graph:E-27",
+    "id": "n_389c6c96",
+    "forward": true,
+    "already_in_text": false,
+    "outcome": "never settled",
+    "outcome_quote": "",
+    "explanation": "The story never shows what food Gregor could actually take and keep, so whether a different menu would have answered his appetite is left open.",
+    "pause": 43,
+    "made_at": 0.7967498283360036,
+    "outcome_at": null,
+    "reach": null,
+    "self_marks": [],
+    "named_later_at_pauses": [],
+    "thought_named_at": []
+   },
+   {
+    "key": "understanding-graph:E-28",
+    "id": "n_67a2a6a8",
+    "forward": false,
+    "already_in_text": false,
+    "outcome": "borne out",
+    "outcome_quote": "It was as if the way to the unknown nourishment he craved was revealing itself.",
+    "explanation": "The record is an interpretive reading of his hunger, and the music scene explicitly presents his craving as for something beyond ordinary food.",
+    "pause": 43,
+    "made_at": 0.7967498283360036,
+    "outcome_at": 0.8280525178771792,
+    "reach": 0.031302689541175543,
+    "self_marks": [
+     "validates"
+    ],
+    "named_later_at_pauses": [
+     44,
+     45
+    ],
+    "thought_named_at": []
+   },
+   {
+    "key": "understanding-graph:E-29",
+    "id": "n_7840c105",
+    "forward": true,
+    "already_in_text": false,
+    "outcome": "not borne out",
+    "outcome_quote": "I will not utter my brother’s name in front of this monster",
+    "explanation": "Grete never notices or responds to his listening; she instead denounces him as a monster.",
+    "pause": 45,
+    "made_at": 0.8376467318444888,
+    "outcome_at": 0.8704051044161238,
+    "reach": 0.03275837257163505,
+    "self_marks": [
+     "invalidates"
+    ],
+    "named_later_at_pauses": [
+     46
+    ],
+    "thought_named_at": []
+   },
+   {
+    "key": "understanding-graph:E-30",
+    "id": "n_dfe4a9dd",
+    "forward": true,
+    "already_in_text": false,
+    "outcome": "borne out",
+    "outcome_quote": "The violin fell silent.",
+    "explanation": "The middle lodger spots Gregor, the playing stops, and the father tries to hustle everyone away before Grete reads his intent.",
+    "pause": 45,
+    "made_at": 0.8376467318444888,
+    "outcome_at": 0.839616163984392,
+    "reach": 0.0019694321399031933,
+    "self_marks": [
+     "validates"
+    ],
+    "named_later_at_pauses": [
+     46
+    ],
+    "thought_named_at": []
+   },
+   {
+    "key": "understanding-graph:E-31",
+    "id": "n_e822f28f",
+    "forward": false,
+    "already_in_text": true,
+    "outcome": "never settled",
+    "outcome_quote": "",
+    "explanation": "The record interprets the music passage already read and the story does not further test whether it is a broader hunger or a standard of deserving care.",
+    "pause": 45,
+    "made_at": 0.8376467318444888,
+    "outcome_at": null,
+    "reach": null,
+    "self_marks": [],
+    "named_later_at_pauses": [],
+    "thought_named_at": []
+   },
+   {
+    "key": "understanding-graph:E-32",
+    "id": "n_6a8a4838",
+    "forward": true,
+    "already_in_text": false,
+    "outcome": "not borne out",
+    "outcome_quote": "“It has to go,” cried his sister. “That is the only way, Father.”",
+    "explanation": "Grete's uncertainty passes at once and she presses her demand, and the family locks him in that same night with no pause or alternative.",
+    "pause": 48,
+    "made_at": 0.8821322303240362,
+    "outcome_at": 0.8859628556595717,
+    "reach": 0.0038306253355354647,
+    "self_marks": [],
+    "named_later_at_pauses": [
+     49
+    ],
+    "thought_named_at": []
+   },
+   {
+    "key": "understanding-graph:E-33",
+    "id": "n_e561464e",
+    "forward": true,
+    "already_in_text": false,
+    "outcome": "borne out",
+    "outcome_quote": "She cried out “Finally!” to her parents, as she turned the key in the lock.",
+    "explanation": "Grete acts on her demand at once with Gregor excluded and the mother asleep, without any examination of the method or its cost.",
+    "pause": 48,
+    "made_at": 0.8821322303240362,
+    "outcome_at": 0.9121883007050391,
+    "reach": 0.030056070381002886,
+    "self_marks": [],
+    "named_later_at_pauses": [],
+    "thought_named_at": []
+   },
+   {
+    "key": "understanding-graph:E-34",
+    "id": "n_87d3f9ef",
+    "forward": true,
+    "already_in_text": false,
+    "outcome": "borne out",
+    "outcome_quote": "She cried out “Finally!” to her parents, as she turned the key in the lock.",
+    "explanation": "Even after he retreats peacefully, his sister locks him in with relief and his absence becomes the accepted answer.",
+    "pause": 50,
+    "made_at": 0.894181407971749,
+    "outcome_at": 0.9121883007050391,
+    "reach": 0.018006892733290036,
+    "self_marks": [
+     "invalidates"
+    ],
+    "named_later_at_pauses": [
+     51
+    ],
+    "thought_named_at": []
+   },
+   {
+    "key": "understanding-graph:E-35",
+    "id": "n_e8c64f23",
+    "forward": true,
+    "already_in_text": false,
+    "outcome": "partly",
+    "outcome_quote": "His good intentions seemed to have been recognized.",
+    "explanation": "Gregor perceives that his retreat is understood and the family falls quiet, but they still lock him in, so the takeover story is not clearly corrected.",
+    "pause": 50,
+    "made_at": 0.894181407971749,
+    "outcome_at": 0.8982801065094703,
+    "reach": 0.004098698537721268,
+    "self_marks": [
+     "validates"
+    ],
+    "named_later_at_pauses": [
+     51
+    ],
+    "thought_named_at": []
+   },
+   {
+    "key": "understanding-graph:E-36",
+    "id": "n_6d8469d2",
+    "forward": true,
+    "already_in_text": false,
+    "outcome": "not borne out",
+    "outcome_quote": "He soon made the discovery that he could no longer move at all.",
+    "explanation": "Inside the locked room he does not recover but becomes unable to move and dies before morning.",
+    "pause": 52,
+    "made_at": 0.912336919203479,
+    "outcome_at": 0.9133522013631873,
+    "reach": 0.0010152821597082529,
+    "self_marks": [
+     "invalidates"
+    ],
+    "named_later_at_pauses": [
+     53
+    ],
+    "thought_named_at": []
+   },
+   {
+    "key": "understanding-graph:E-37",
+    "id": "n_6ec7d8be",
+    "forward": true,
+    "already_in_text": false,
+    "outcome": "borne out",
+    "outcome_quote": "In her customary brief visit to Gregor she at first found nothing unusual.",
+    "explanation": "No one checks on him during the night and the first visit finds him dead, so the enclosure hid his need until too late.",
+    "pause": 52,
+    "made_at": 0.912336919203479,
+    "outcome_at": 0.9243464572203708,
+    "reach": 0.012009538016891752,
+    "self_marks": [
+     "validates"
+    ],
+    "named_later_at_pauses": [
+     54
+    ],
+    "thought_named_at": []
+   },
+   {
+    "key": "understanding-graph:E-38",
+    "id": "n_86122cc0",
+    "forward": true,
+    "already_in_text": false,
+    "outcome": "partly",
+    "outcome_quote": "All were a little tear stained.",
+    "explanation": "The family shows some lingering grief, but relief and cheerful plans for the future dominate how they treat his memory afterward.",
+    "pause": 54,
+    "made_at": 0.9429912042638067,
+    "outcome_at": 0.9513924940967629,
+    "reach": 0.008401289832956182,
+    "self_marks": [
+     "validates"
+    ],
+    "named_later_at_pauses": [
+     55
+    ],
+    "thought_named_at": []
+   },
+   {
+    "key": "understanding-graph:E-39",
+    "id": "n_928f09e3",
+    "forward": false,
+    "already_in_text": true,
+    "outcome": "borne out",
+    "outcome_quote": "In her customary brief visit to Gregor she at first found nothing unusual.",
+    "explanation": "The record restates that the cleaning woman discovered the death only in the morning, and the story shows no deliberate decision to let him die.",
+    "pause": 54,
+    "made_at": 0.9429912042638067,
+    "outcome_at": 0.9243464572203708,
+    "reach": -0.018644747043435883,
+    "self_marks": [],
+    "named_later_at_pauses": [],
+    "thought_named_at": []
+   },
+   {
+    "key": "understanding-graph:E-40",
+    "id": "n_e4c3ebff",
+    "forward": false,
+    "already_in_text": true,
+    "outcome": "partly",
+    "outcome_quote": "Let’s set aside these old matters once and for all.",
+    "explanation": "The grief beside relief is already visible, but the rest of the story shows the family quickly setting it aside while leaving their view of their own part unexamined.",
+    "pause": 55,
+    "made_at": 0.9683402543896936,
+    "outcome_at": 0.9858657243816255,
+    "reach": 0.01752546999193183,
+    "self_marks": [],
+    "named_later_at_pauses": [
+     56
+    ],
+    "thought_named_at": []
+   },
+   {
+    "key": "understanding-graph:E-41",
+    "id": "n_c9d24cb2",
+    "forward": false,
+    "already_in_text": false,
+    "outcome": "never settled",
+    "outcome_quote": "",
+    "explanation": "Written at the very end of the story, it is an interpretation of the family's newly discovered prospects, not an expectation about later events, and nothing follows that could test it.",
+    "pause": 57,
+    "made_at": 1.0,
+    "outcome_at": null,
+    "reach": null,
+    "self_marks": [],
+    "named_later_at_pauses": [],
+    "thought_named_at": []
+   }
+  ]
+ }
+}

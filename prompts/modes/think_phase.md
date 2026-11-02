@@ -44,7 +44,7 @@ Your nodes should **respond to** existing nodes:
 ```javascript
 graph_batch({
   operations: [
-    { tool: "graph_add_concept", params: {
+    { tool: "graph_add_understanding", params: {
       title: "But what about the data?",
       trigger: "tension",
       understanding: "I can't get past the raw numbers. The analysis talks about growth, but look at the churn rate—it's screaming while the report ignores it.",
@@ -55,6 +55,12 @@ graph_batch({
       to: "n_existing_optimism",
       type: "diverse_from",
       why: "Quantitative lens alongside qualitative lens"
+    }},
+    { tool: "graph_connect", params: {
+      from: "$0.id",
+      to: "<current_passage_id>",
+      type: "learned_from",
+      why: "The numbers that sparked this thought appear in the current passage"
     }}
   ],
   commit_message: "I can't let this optimism pass unchallenged - the numbers tell a different story"

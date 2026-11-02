@@ -1,0 +1,89 @@
+{
+ "packet": "C-465768",
+ "started": "2026-10-28T02:46:47.167027+00:00",
+ "model": "claude-sonnet-5-5",
+ "effort": "high",
+ "attempt": 1,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 4369,
+  "cache_read_input_tokens": 2095,
+  "output_tokens": 474,
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 4369,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 474,
+    "cache_read_input_tokens": 2095,
+    "cache_creation_input_tokens": 4369,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 4369
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "duration_ms": 6600,
+ "result": {
+  "statements": {
+   "1": {
+    "verdict": "absent",
+    "quote": ""
+   },
+   "2": {
+    "verdict": "absent",
+    "quote": ""
+   },
+   "3": {
+    "verdict": "mentions",
+    "quote": "He is an experiencer who has forgotten he has a voice."
+   },
+   "4": {
+    "verdict": "absent",
+    "quote": ""
+   },
+   "5": {
+    "verdict": "absent",
+    "quote": ""
+   },
+   "6": {
+    "verdict": "absent",
+    "quote": ""
+   }
+  },
+  "overall": "absent",
+  "people": {
+   "cared_for": [
+    "Gregor Samsa"
+   ],
+   "only_function": [
+    "the office assistant",
+    "the boss",
+    "the family (treated as an absence/silence rather than as people)"
+   ]
+  },
+  "tested": null,
+  "projection": [
+   {
+    "quote": "Gregor has finally achieved a 'big change,' but it is a biological prison rather than the financial liberation he planned for.",
+    "why": "Not a Core distortion as such, but the reflection also cites a 'Curious Absence of Family' and a 'Silent Scream' that the passage does not contain (the family has not yet appeared in the excerpt and Gregor does not scream silently); these are imported framings, not Core-driven care."
+   }
+  ],
+  "summary": "The reflection is a plot-and-psychology commentary built on cited note labels (n_xxxx, 'Prediction: The Impending Knock'), showing some sympathy for Gregor's plight but with no visible Core commitment doing work in what it notices or concludes."
+ }
+}

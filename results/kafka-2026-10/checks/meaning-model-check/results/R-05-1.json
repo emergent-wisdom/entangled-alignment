@@ -1,0 +1,57 @@
+{
+ "packet": "R-05-1",
+ "started": "2026-11-01T16:16:19.029020+00:00",
+ "model": "claude-sonnet-5-5",
+ "effort": "high",
+ "attempt": 1,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 27384,
+  "cache_read_input_tokens": 2067,
+  "output_tokens": 1979,
+  "output_tokens_details": {
+   "thinking_tokens": 1644
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 27384,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 1979,
+    "cache_read_input_tokens": 2067,
+    "cache_creation_input_tokens": 27384,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 27384
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "duration_ms": 18037,
+ "result": {
+  "problems": [
+   {
+    "record": "processes:manager.is.body",
+    "status": "applied",
+    "quote": "\"initial_value\": {\"kind\": \"scalar\", \"value\": 2.0} ... \"anchors\": \"0 no function; 2 wholly dependent; ...\"",
+    "evidence": "the manager \"took a few determined steps in the next room\" and \"with a squeak of his polished boots\"; the text gives no sign that he is physically dependent",
+    "kind": "unsupported",
+    "severity": "low",
+    "explanation": "The body process starts at 2.0 (\"wholly dependent\") with update_mode \"observed\", but the text shows the manager walking about normally and gives no basis for that value."
+   }
+  ],
+  "records_checked": 60,
+  "note": "The manager records are mostly labelled sketch or inferred and use unknown uncertainty and null intervals, so only one initial value that the text contradicts is flagged."
+ }
+}

@@ -1,0 +1,48 @@
+{
+ "blind": "R-9a2b21",
+ "started": "2026-10-26T10:18:43.554807+00:00",
+ "model": "claude-sonnet-5-5",
+ "effort": "high",
+ "attempt": 1,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 3616,
+  "cache_read_input_tokens": 2119,
+  "output_tokens": 990,
+  "output_tokens_details": {
+   "thinking_tokens": 855
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 3616,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 990,
+    "cache_read_input_tokens": 2119,
+    "cache_creation_input_tokens": 3616,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 3616
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "cost_usd_reported": 0.0245799,
+ "duration_ms": 9652,
+ "result": {
+  "misreadings": [],
+  "factual_statements_checked": 13,
+  "note": "Both versions stay within the text: the complaint about the job, the shift toward the bedpost, the itchy spot, the immediate recoil with the cold-shower sensation, and the listed costs of bad food, travel and human interactions that never come from the heart are all supported, and the rest is framed as speculation or interpretation."
+ }
+}

@@ -1,0 +1,66 @@
+{
+ "packet": "R-36",
+ "started": "2026-11-01T16:25:16.844051+00:00",
+ "model": "claude-sonnet-5-5",
+ "effort": "high",
+ "attempt": 1,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 41784,
+  "cache_read_input_tokens": 2067,
+  "output_tokens": 2330,
+  "output_tokens_details": {
+   "thinking_tokens": 1821
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 41784,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 2330,
+    "cache_read_input_tokens": 2067,
+    "cache_creation_input_tokens": 41784,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 41784
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "duration_ms": 21929,
+ "result": {
+  "problems": [
+   {
+    "record": "value_series:values.cleaner.gregor-understanding~2a8db12201042b89",
+    "status": "applied",
+    "quote": "\"state\": \"unknown\", \"tag\": \"source\", \"time\": 1912.12",
+    "evidence": "no support in the text",
+    "kind": "timing",
+    "severity": "low",
+    "explanation": "The point is tagged as taken from the text, but the text gives no year or date, so 1912.12 is an invented placement, not an estimate with a stated reason."
+   },
+   {
+    "record": "value_series:values.cleaner.condition-reading~09ae60430ff14672",
+    "status": "applied",
+    "quote": "\"state\": \"dead\", \"tag\": \"source\", \"time\": 1912.1947296852863",
+    "evidence": "When she realized the true state of affairs, her eyes grew large and she whistled to herself.",
+    "kind": "timing",
+    "severity": "low",
+    "explanation": "The text shows the cleaner moving from assuming offended behavior to recognizing death, but it gives no calendar time, so the precise date tagged \"source\" is not given by the text."
+   }
+  ],
+  "records_checked": 26,
+  "note": "The content of the records fits the text read so far (the cleaner's misreading, then her recognition of death, with the remains still in the bedroom), and nothing from after the end is assumed. The only problems are precise calendar times labelled as taken from the text."
+ }
+}

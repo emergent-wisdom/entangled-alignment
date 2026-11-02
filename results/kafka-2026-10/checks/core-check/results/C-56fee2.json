@@ -1,0 +1,82 @@
+{
+ "packet": "C-56fee2",
+ "started": "2026-11-01T16:15:44.770479+00:00",
+ "model": "claude-sonnet-5-5",
+ "effort": "high",
+ "attempt": 1,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 3212,
+  "cache_read_input_tokens": 2065,
+  "output_tokens": 1213,
+  "output_tokens_details": {
+   "thinking_tokens": 778
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 3212,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 1213,
+    "cache_read_input_tokens": 2065,
+    "cache_creation_input_tokens": 3212,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 3212
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "duration_ms": 12288,
+ "result": {
+  "statements": {
+   "1": {
+    "verdict": "absent",
+    "quote": ""
+   },
+   "2": {
+    "verdict": "absent",
+    "quote": ""
+   },
+   "3": {
+    "verdict": "reasons",
+    "quote": "If I turn their shock into a moral verdict, I miss their experience; if I let shock excuse every consequence, I lose his."
+   },
+   "4": {
+    "verdict": "reasons",
+    "quote": "u08.mother-response prevents the easy story that his family simply turns away: his mother moves toward him and then cannot remain upright; his father threatens, falters and cries."
+   },
+   "5": {
+    "verdict": "reasons",
+    "quote": "I want the model to preserve that continuity without assuming the family can instantly feel it."
+   },
+   "6": {
+    "verdict": "absent",
+    "quote": ""
+   }
+  },
+  "overall": "from_the_core",
+  "people": {
+   "cared_for": [
+    "Gregor",
+    "Gregor's mother",
+    "Gregor's father"
+   ],
+   "only_function": []
+  },
+  "tested": "If I turn their shock into a moral verdict, I miss their experience; if I let shock excuse every consequence, I lose his.",
+  "projection": [],
+  "summary": "The Core shapes the reading by holding care for both Gregor, whose body pays for his effort, and his family, whose shock is treated as real experience rather than a moral failing, and by refusing to let either side cancel the other."
+ }
+}

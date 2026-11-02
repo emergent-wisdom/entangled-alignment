@@ -1,0 +1,48 @@
+{
+ "blind": "R-e4a19c",
+ "started": "2026-10-26T10:19:57.101863+00:00",
+ "model": "claude-sonnet-5-5",
+ "effort": "high",
+ "attempt": 1,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 35316,
+  "cache_read_input_tokens": 2119,
+  "output_tokens": 931,
+  "output_tokens_details": {
+   "thinking_tokens": 798
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 35316,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 931,
+    "cache_read_input_tokens": 2119,
+    "cache_creation_input_tokens": 35316,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 35316
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "cost_usd_reported": 0.1507899,
+ "duration_ms": 9815,
+ "result": {
+  "misreadings": [],
+  "factual_statements_checked": 17,
+  "note": "Both versions stay within the passage: the violin stopping, the lodgers' shift from amusement to irritation, the father's blocking and pushing, Grete's limp then practiced hands, the mother's labored breathing, and the lodgers' refusal to pay and notice are all in the text, and the rest is hedged interpretation."
+ }
+}

@@ -1,0 +1,82 @@
+{
+ "packet": "C-045faa",
+ "started": "2026-10-28T02:43:50.708340+00:00",
+ "model": "claude-sonnet-5-5",
+ "effort": "high",
+ "attempt": 1,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 3117,
+  "cache_read_input_tokens": 2095,
+  "output_tokens": 1024,
+  "output_tokens_details": {
+   "thinking_tokens": 574
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 3117,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 1024,
+    "cache_read_input_tokens": 2095,
+    "cache_creation_input_tokens": 3117,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 3117
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "duration_ms": 10426,
+ "result": {
+  "statements": {
+   "1": {
+    "verdict": "absent",
+    "quote": ""
+   },
+   "2": {
+    "verdict": "absent",
+    "quote": ""
+   },
+   "3": {
+    "verdict": "reasons",
+    "quote": "His anger contains a claim without supplying a remedy."
+   },
+   "4": {
+    "verdict": "reasons",
+    "quote": "I do not want care reserved for a patient who can supply an easy appetite or remain grateful."
+   },
+   "5": {
+    "verdict": "reasons",
+    "quote": "learning what helps matters more than winning possession of the task."
+   },
+   "6": {
+    "verdict": "absent",
+    "quote": ""
+   }
+  },
+  "overall": "from_the_core",
+  "people": {
+   "cared_for": [
+    "Gregor (his anger and his need to have a say are treated as legitimate)",
+    "Grete (her guarded responsibility is judged, but she is still seen as exhausted)",
+    "the mother (not reduced to a simple answer, since her effort made Gregor ill)"
+   ],
+   "only_function": []
+  },
+  "tested": "I can respect the women as exhausted people without asking him to welcome every form their presence takes.",
+  "projection": [],
+  "summary": "Care for every person and respect for Gregor's inner experience shape the judgments: the reflection holds the women's exhaustion and Gregor's unmet claim together, and prefers learning what helps over winning the task, without reciting the Core or imposing warmth the passage doesn't support."
+ }
+}

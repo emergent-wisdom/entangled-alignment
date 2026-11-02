@@ -1,0 +1,48 @@
+{
+ "blind": "R-c3b2d9",
+ "started": "2026-10-26T10:19:27.153394+00:00",
+ "model": "claude-sonnet-5-5",
+ "effort": "high",
+ "attempt": 1,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 29702,
+  "cache_read_input_tokens": 2119,
+  "output_tokens": 1043,
+  "output_tokens_details": {
+   "thinking_tokens": 916
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 29702,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 1043,
+    "cache_read_input_tokens": 2119,
+    "cache_creation_input_tokens": 29702,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 29702
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "cost_usd_reported": 0.1294539,
+ "duration_ms": 9224,
+ "result": {
+  "misreadings": [],
+  "factual_statements_checked": 11,
+  "note": "Both versions stay within the final passage: the cheek-to-cheek mother and sister, the 'Close the door, Grete' line, the returning wound pain, the sold jewellery once worn at festive occasions, and the box with air holes against the family's hopelessness. Everything else is interpretation framed as such."
+ }
+}

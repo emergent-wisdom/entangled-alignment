@@ -1,0 +1,84 @@
+{
+ "packet": "C-b5cd7c",
+ "started": "2026-11-01T16:16:40.317943+00:00",
+ "model": "claude-sonnet-5-5",
+ "effort": "high",
+ "attempt": 1,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 2405,
+  "cache_read_input_tokens": 2065,
+  "output_tokens": 319,
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 2405,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 319,
+    "cache_read_input_tokens": 2065,
+    "cache_creation_input_tokens": 2405,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 2405
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "duration_ms": 6246,
+ "result": {
+  "statements": {
+   "1": {
+    "verdict": "absent",
+    "quote": ""
+   },
+   "2": {
+    "verdict": "absent",
+    "quote": ""
+   },
+   "3": {
+    "verdict": "absent",
+    "quote": ""
+   },
+   "4": {
+    "verdict": "reasons",
+    "quote": "My care cannot count the absence of another attack as sufficient help."
+   },
+   "5": {
+    "verdict": "absent",
+    "quote": ""
+   },
+   "6": {
+    "verdict": "absent",
+    "quote": ""
+   }
+  },
+  "overall": "from_the_core",
+  "people": {
+   "cared_for": [
+    "Gregor"
+   ],
+   "only_function": [
+    "the mother",
+    "the father",
+    "the sister"
+   ]
+  },
+  "tested": null,
+  "projection": [],
+  "summary": "Care for Gregor does real work in one sentence, refusing to treat the family's mere cessation of attack as adequate help given the bodily cost Gregor bears, while the rest of the reflection is mostly structural tracking of the passage, and the family appears only as a collective that stops being alarmed."
+ }
+}

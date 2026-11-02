@@ -1,0 +1,57 @@
+{
+ "packet": "R-30",
+ "started": "2026-11-01T16:24:35.967541+00:00",
+ "model": "claude-sonnet-5-5",
+ "effort": "high",
+ "attempt": 1,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 37437,
+  "cache_read_input_tokens": 2067,
+  "output_tokens": 1476,
+  "output_tokens_details": {
+   "thinking_tokens": 1167
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 37437,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 1476,
+    "cache_read_input_tokens": 2067,
+    "cache_creation_input_tokens": 37437,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 37437
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "duration_ms": 14959,
+ "result": {
+  "problems": [
+   {
+    "record": "value_series:values.sister.current-activity~ae1b54de4f2d3cda",
+    "status": "applied",
+    "quote": "\"tag\": \"source\", \"time\": 1912.1934198542806",
+    "evidence": "no support in the text",
+    "kind": "timing",
+    "severity": "low",
+    "explanation": "The points are tagged \"source\" with precise calendar-year times, but the text gives no dates, so these times were guessed (the event record admits \"time guessed\") and should be tagged as estimates."
+   }
+  ],
+  "records_checked": 14,
+  "note": "The content stays within the text read so far: the activities (serving, playing, bedmaking, discussing, tending the mother) and the exhaustion readings are supported or labelled as exploring or sketch. Only the \"source\" tag on the activity times overstates what the text gives."
+ }
+}

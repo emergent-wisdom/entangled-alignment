@@ -1,0 +1,47 @@
+{
+ "packet": "T-28-1",
+ "started": "2026-11-01T16:29:49.405943+00:00",
+ "model": "claude-sonnet-5-5",
+ "effort": "high",
+ "attempt": 1,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 35273,
+  "cache_read_input_tokens": 2067,
+  "output_tokens": 903,
+  "output_tokens_details": {
+   "thinking_tokens": 755
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 35273,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 903,
+    "cache_read_input_tokens": 2067,
+    "cache_creation_input_tokens": 35273,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 35273
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "duration_ms": 9693,
+ "result": {
+  "misreadings": [],
+  "factual_statements_checked": 12,
+  "note": "Both versions stay within the text: the lodgers' apparent amusement, the father blocking their view, the uncertain cause of their irritation, the cancelled rooms and refusal to pay with only a threat of action, Grete's interrupted playing and bed-making, the mother's labored breathing, the father's unsupported head, and Gregor's immobility and fear of an attack."
+ }
+}

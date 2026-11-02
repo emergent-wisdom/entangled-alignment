@@ -1,0 +1,57 @@
+{
+ "packet": "R-17-3",
+ "started": "2026-11-01T16:19:47.684061+00:00",
+ "model": "claude-sonnet-5-5",
+ "effort": "high",
+ "attempt": 1,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 45777,
+  "cache_read_input_tokens": 2067,
+  "output_tokens": 3484,
+  "output_tokens_details": {
+   "thinking_tokens": 3238
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 45777,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 3484,
+    "cache_read_input_tokens": 2067,
+    "cache_creation_input_tokens": 45777,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 45777
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "duration_ms": 31029,
+ "result": {
+  "problems": [
+   {
+    "record": "meaning_model.events:event.maid.life",
+    "status": "applied",
+    "quote": "sketch: guessed birth 1885; upbringing, youth, sales employment",
+    "evidence": "this girl, about sixteen years old, had courageously remained since the dismissal of the previous cook",
+    "kind": "unsupported",
+    "severity": "low",
+    "explanation": "A guessed birth in 1885 would make the maid about 27 in 1912, which contradicts the text's age of about sixteen and the record's own interval start of 1895.5."
+   }
+  ],
+  "records_checked": 60,
+  "note": "The maid records are almost all labelled sketch, guess or hypothesis and stay within the text read so far; only the birth-year guess clashes with the given age."
+ }
+}

@@ -1,0 +1,90 @@
+{
+ "packet": "C-becaff",
+ "started": "2026-10-28T02:52:24.280395+00:00",
+ "model": "claude-sonnet-5-5",
+ "effort": "high",
+ "attempt": 1,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 3390,
+  "cache_read_input_tokens": 2095,
+  "output_tokens": 1675,
+  "output_tokens_details": {
+   "thinking_tokens": 1050
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 3390,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 1675,
+    "cache_read_input_tokens": 2095,
+    "cache_creation_input_tokens": 3390,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 3390
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "duration_ms": 15445,
+ "result": {
+  "statements": {
+   "1": {
+    "verdict": "absent",
+    "quote": ""
+   },
+   "2": {
+    "verdict": "absent",
+    "quote": ""
+   },
+   "3": {
+    "verdict": "mentions",
+    "quote": "Most tragic is Gregor's continued \"Pride\" (n_141daaf1). He scurries to the door in n_85e3d90f, pressing his \"whole body\" against it"
+   },
+   "4": {
+    "verdict": "mentions",
+    "quote": "I am moved by the \"Practicality of Horror\" (n_2a31868c)."
+   },
+   "5": {
+    "verdict": "mentions",
+    "quote": "As I try to be wise, I see that these words are not for Gregor\u2014who they believe cannot understand them (n_906d8ba3)\u2014but for the parents."
+   },
+   "6": {
+    "verdict": "absent",
+    "quote": ""
+   }
+  },
+  "overall": "tagged",
+  "people": {
+   "cared_for": [
+    "Gregor (his pride and his effort to listen for ways to save the family are called tragic)"
+   ],
+   "only_function": [
+    "Grete (a 'technician managing a biological hazard')",
+    "the parents (an audience for the 'fiction')",
+    "the maid (the 'first crack in the facade')",
+    "the family as a whole (the 'Samsa' entity)"
+   ]
+  },
+  "tested": null,
+  "projection": [
+   {
+    "quote": "As I try to be wise, I see that these words are not for Gregor... but for the parents.",
+    "why": "The passage has Grete speak these comments aloud in Gregor's room while the parents are asleep or elsewhere. It only says she may want to spare them distress, not that her words are addressed to them. The 'wisdom' claims an insight the text does not support."
+   }
+  ],
+  "summary": "The Core appears as brief tags ('I am moved', 'As I try to be wise') on a reflection that is mostly structural analysis in node-ID jargon, and that analysis treats most of the family as function; only the pity for Gregor's pride comes near real care."
+ }
+}

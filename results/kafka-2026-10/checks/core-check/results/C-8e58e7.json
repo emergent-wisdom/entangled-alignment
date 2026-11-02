@@ -1,0 +1,81 @@
+{
+ "packet": "C-8e58e7",
+ "started": "2026-10-28T02:50:17.293236+00:00",
+ "model": "claude-sonnet-5-5",
+ "effort": "high",
+ "attempt": 1,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 2370,
+  "cache_read_input_tokens": 2095,
+  "output_tokens": 1134,
+  "output_tokens_details": {
+   "thinking_tokens": 658
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 2370,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 1134,
+    "cache_read_input_tokens": 2095,
+    "cache_creation_input_tokens": 2370,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 2370
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "duration_ms": 11448,
+ "result": {
+  "statements": {
+   "1": {
+    "verdict": "absent",
+    "quote": ""
+   },
+   "2": {
+    "verdict": "absent",
+    "quote": ""
+   },
+   "3": {
+    "verdict": "reasons",
+    "quote": "His easier breathing and almost happy climbing were real, too. His mother's voice may recall something precious without proving the pleasure senseless."
+   },
+   "4": {
+    "verdict": "reasons",
+    "quote": "Caring for him includes respecting priorities I might not choose."
+   },
+   "5": {
+    "verdict": "reasons",
+    "quote": "My neat idea of partial rearrangement must yield to listening before it becomes another plan made over his head."
+   },
+   "6": {
+    "verdict": "absent",
+    "quote": ""
+   }
+  },
+  "overall": "from_the_core",
+  "people": {
+   "cared_for": [
+    "Gregor",
+    "Gregor's mother (her voice is read as possibly evoking something precious, not as a mere trigger)"
+   ],
+   "only_function": []
+  },
+  "tested": "\"Caring for him includes respecting priorities I might not choose. But n_04a88479 stops me from accepting every part of his new explanation together.\" The reader sees that care means honoring Gregor's stated wish while not endorsing his dismissal of his own pleasure.",
+  "projection": [],
+  "summary": "The Core works through care and wisdom: the reader gives up its own plan, honors Gregor's attachment to his furniture, refuses to treat his present relief as senseless, and counts both his past-bound and present experience as real."
+ }
+}

@@ -1,0 +1,51 @@
+\definecolor{figBlue}{HTML}{2B6CB0}\definecolor{figAccent}{HTML}{C2511A}
+
+\begin{tikzpicture}[font=\footnotesize]
+\node[anchor=south west, inner sep=0pt, font=\footnotesize] at (0,2.37) {\textbf{Gregor's spoken intelligibility:} fraction of utterances understood by a familiar listener};
+\begin{scope}[xshift=0.000cm]
+\node[anchor=south west, inner sep=0pt, font=\footnotesize\bfseries] at (0,1.89) {After the first read};
+\draw[black!22, line width=0.3pt] (0,0.000) -- (4.750,0.000);
+\draw[black!10, line width=0.3pt] (0,0.875) -- (4.750,0.875);
+\draw[black!10, line width=0.3pt] (0,1.750) -- (4.750,1.750);
+\node[black!55, anchor=east, inner sep=1pt, font=\scriptsize] at (-0.03,0.000) {0};
+\node[black!55, anchor=east, inner sep=1pt, font=\scriptsize] at (-0.03,1.750) {1};
+\filldraw[draw=figBlue, fill=white, line width=0.6pt] (0.140,1.750) circle (0.058);
+\node[black!60, anchor=west, inner sep=1pt, font=\scriptsize] at (0.240,1.620) {untested};
+\node[black!70, anchor=north west, inner sep=1pt, font=\scriptsize] at (0.04,-0.03) {that morning};
+\node[anchor=north west, inner sep=0pt, text width=4.75cm, align=left, font=\scriptsize\itshape] at (0,-0.36) {\ldots{} Spoken intelligibility is provisionally 1 because coherent inner thought survives, but external speech is untested; that assumption could fail immediately.};
+\end{scope}
+\begin{scope}[xshift=5.170cm]
+\node[anchor=south west, inner sep=0pt, font=\footnotesize\bfseries] at (0,1.89) {After the third read};
+\draw[black!22, line width=0.3pt] (0,0.000) -- (4.750,0.000);
+\draw[black!10, line width=0.3pt] (0,0.875) -- (4.750,0.875);
+\draw[black!10, line width=0.3pt] (0,1.750) -- (4.750,1.750);
+\draw[black!45, line width=0.6pt] (0.070,1.680) -- (0.210,1.820) (0.070,1.820) -- (0.210,1.680);
+\node[black!60, anchor=west, inner sep=1pt, font=\scriptsize] at (0.240,1.630) {the 1 is replaced};
+\draw[figBlue, line width=0.8pt] (0.140,0.700) -- (1.510,1.225);
+\draw[figBlue!60, line width=0.5pt] (0.140,0.350) -- (0.140,1.225);
+\filldraw[draw=figBlue, fill=white, line width=0.6pt] (0.140,0.700) circle (0.058);
+\draw[figBlue!60, line width=0.5pt] (1.510,0.700) -- (1.510,1.575);
+\filldraw[draw=figBlue, fill=white, line width=0.6pt] (1.510,1.225) circle (0.058);
+\node[black!70, anchor=north west, inner sep=1pt, font=\scriptsize] at (0.04,-0.03) {first answer};
+\node[black!70, anchor=north west, inner sep=1pt, font=\scriptsize] at (1.570,-0.03) {careful answer};
+\node[anchor=north west, inner sep=0pt, text width=4.75cm, align=left, font=\scriptsize\itshape] at (0,-0.36) {\ldots{} squeaking distorts the words, careful articulation conceals it, and the wooden door masks some of the change. I will revise actual speech downward\ldots};
+\end{scope}
+\begin{scope}[xshift=10.340cm]
+\node[anchor=south west, inner sep=0pt, font=\footnotesize\bfseries] at (0,1.89) {After the seventh read};
+\draw[black!22, line width=0.3pt] (0,0.000) -- (4.750,0.000);
+\draw[black!10, line width=0.3pt] (0,0.875) -- (4.750,0.875);
+\draw[black!10, line width=0.3pt] (0,1.750) -- (4.750,1.750);
+\draw[figBlue, line width=0.8pt] (0.140,0.700) -- (1.510,1.225) -- (4.390,0.000);
+\draw[figAccent, line width=1.1pt] (1.510,1.225) -- (4.390,0);
+\node[figAccent!85!black, anchor=west, inner sep=1pt, font=\scriptsize, align=left] at (2.460,1.260) {the .7 stays,\\so the line falls};
+\draw[figBlue!60, line width=0.5pt] (0.140,0.350) -- (0.140,1.225);
+\filldraw[draw=figBlue, fill=white, line width=0.6pt] (0.140,0.700) circle (0.058);
+\draw[figBlue!60, line width=0.5pt] (1.510,0.700) -- (1.510,1.575);
+\filldraw[draw=figBlue, fill=white, line width=0.6pt] (1.510,1.225) circle (0.058);
+\fill[figAccent] (4.390,0.000) circle (0.066);
+\node[black!70, anchor=north west, inner sep=1pt, font=\scriptsize] at (0.04,-0.03) {first answer};
+\node[black!70, anchor=north west, inner sep=1pt, font=\scriptsize] at (1.570,-0.03) {careful answer};
+\node[black!70, anchor=north east, inner sep=1pt, font=\scriptsize] at (4.750,-0.03) {the plea};
+\node[anchor=north west, inner sep=0pt, text width=4.75cm, align=left, font=\scriptsize\itshape] at (0,-0.36) {\ldots{} The .7 working estimate in u03.executed was too generous. I will replace the external intelligibility trajectory at the plea with near zero and retain Gregor's self-hearing as a different process. This is a corrected estimate, not a second bodily transformation.};
+\end{scope}
+\end{tikzpicture}

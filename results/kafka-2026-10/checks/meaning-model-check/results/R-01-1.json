@@ -1,0 +1,47 @@
+{
+ "packet": "R-01-1",
+ "started": "2026-11-01T16:14:43.028901+00:00",
+ "model": "claude-sonnet-5-5",
+ "effort": "high",
+ "attempt": 1,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 24306,
+  "cache_read_input_tokens": 649,
+  "output_tokens": 2130,
+  "output_tokens_details": {
+   "thinking_tokens": 2028
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 24306,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 2130,
+    "cache_read_input_tokens": 649,
+    "cache_creation_input_tokens": 24306,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 24306
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "duration_ms": 19229,
+ "result": {
+  "problems": [],
+  "records_checked": 60,
+  "note": "The records either rest on the text read so far (waking as a bug, failed turning onto his right side, new pain, the room, picture, sample cloth and window) or are labelled sketch, guessed, inferred or exploring, and none states anything from later in the book."
+ }
+}

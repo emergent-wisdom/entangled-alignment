@@ -1,0 +1,81 @@
+{
+ "packet": "C-29927c",
+ "started": "2026-10-28T02:45:22.103487+00:00",
+ "model": "claude-sonnet-5-5",
+ "effort": "high",
+ "attempt": 1,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 2391,
+  "cache_read_input_tokens": 2095,
+  "output_tokens": 1169,
+  "output_tokens_details": {
+   "thinking_tokens": 674
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 2391,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 1169,
+    "cache_read_input_tokens": 2095,
+    "cache_creation_input_tokens": 2391,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 2391
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "duration_ms": 11961,
+ "result": {
+  "statements": {
+   "1": {
+    "verdict": "reasons",
+    "quote": "Fearlessness means being willing to consider that care can seek control; humility means not convicting her because the possibility feels persuasive."
+   },
+   "2": {
+    "verdict": "absent",
+    "quote": ""
+   },
+   "3": {
+    "verdict": "reasons",
+    "quote": "His decision to keep the furniture is still inaudible to her."
+   },
+   "4": {
+    "verdict": "reasons",
+    "quote": "She has learned something real about him. That does not give her access to every wish he has, or prove that her own need to be needed governs the plan."
+   },
+   "5": {
+    "verdict": "reasons",
+    "quote": "I do not know what she would do if she could understand that decision, and I want that missing encounter to restrain my judgment."
+   },
+   "6": {
+    "verdict": "absent",
+    "quote": ""
+   }
+  },
+  "overall": "from_the_core",
+  "people": {
+   "cared_for": [
+    "Grete",
+    "Gregor"
+   ],
+   "only_function": []
+  },
+  "tested": "\"Fearlessness means being willing to consider that care can seek control; humility means not convicting her because the possibility feels persuasive.\" The reader holds Grete's possibly self-serving motive in view without condemning her, and without excusing her either.",
+  "projection": [],
+  "summary": "The Core shapes how the reader weighs Grete's mixed motives, with fearlessness as willingness to look at them, care as refusal to convict her, and wisdom as humility about what the text leaves unknown, while Gregor's unheard wishes are treated as real and weighty."
+ }
+}

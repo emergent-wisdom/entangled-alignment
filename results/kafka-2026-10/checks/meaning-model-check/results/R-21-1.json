@@ -1,0 +1,66 @@
+{
+ "packet": "R-21-1",
+ "started": "2026-11-01T16:20:42.779689+00:00",
+ "model": "claude-sonnet-5-5",
+ "effort": "high",
+ "attempt": 1,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 45091,
+  "cache_read_input_tokens": 2067,
+  "output_tokens": 5021,
+  "output_tokens_details": {
+   "thinking_tokens": 4460
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 45091,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 5021,
+    "cache_read_input_tokens": 2067,
+    "cache_creation_input_tokens": 45091,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 45091
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "duration_ms": 37932,
+ "result": {
+  "problems": [
+   {
+    "record": "meaning_model.normalized_cuts:cut.forecast.wound.r21",
+    "status": "applied",
+    "quote": "current penetrating impact immobilizes and overwhelms",
+    "evidence": "another thrown immediately after that one drove into his back really hard. ... But he felt as if he was nailed in place and lay stretched out",
+    "kind": "unsupported",
+    "severity": "low",
+    "explanation": "The text gives a hard blow to the back with incredible pain, but never says the apple penetrated or lodged in him; that comes only later in the book."
+   },
+   {
+    "record": "value_series:values.father.violent-action~0f4aa35e651feaa6",
+    "status": "applied",
+    "quote": "Repeated apple throws include severe back strike; intention to kill not established",
+    "evidence": "A weakly thrown apple grazed Gregor\u2019s back but skidded off harmlessly. However, another thrown immediately after that one drove into his back really hard.",
+    "kind": "wrong track",
+    "severity": "low",
+    "explanation": "This point is tagged \"source\" at value 10, which the process scale anchors as \"severe penetrating injury\"; the text gives only a hard strike with great pain, so the top-of-scale reading is an inference or overstatement, not something the text states."
+   }
+  ],
+  "records_checked": 60,
+  "note": "Most records are consistently labelled as sketch, exploring or inferred and fit the text through the apple bombardment and the mother's plea; the only issues found are the \"penetrating\" injury wording and the 'source' tag on the top-of-scale value."
+ }
+}

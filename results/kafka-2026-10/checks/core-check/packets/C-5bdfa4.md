@@ -1,0 +1,15 @@
+# One reflection
+
+## The passage the reader had just read
+
+<<<PASSAGE
+And so she did not let herself be dissuaded from her decision by her mother, who in her sheer agitation seemed uncertain of herself in the room as it was. She soon fell quiet, and helped his sister with all the energy she could muster to get the chest of drawers out of the room. Now, Gregor could still do without the chest of drawers if need be, but the writing desk really had to stay. And scarcely had the women left the room with the chest of drawers, groaning as they pushed it, when Gregor stuck his head out from under the sofa to see how he could intervene, cautiously and with as much consideration as possible. But unfortunately it was his mother who came back into the room first; Grete had her arms wrapped around the chest of drawers in the next room and was rocking it back and forth by herself, of course without moving it from its position. But his mother was not used to the sight of Gregor; just seeing him could have made her ill, and so, frightened, Gregor scurried backwards right to the other end of the sofa. However, he could no longer prevent the front of the sheet from moving a little. That was enough to catch his mother’s attention. She came to a halt, stood still for a moment, and then went back to Grete.
+
+Although Gregor kept repeating to himself over and over that really nothing unusual was going on, that only a few pieces of furniture were being rearranged, he soon had to admit to himself that the movements of the women to and fro, their quiet conversations, and the scraping of the furniture on the floor affected him like a great commotion stirred up on all sides. He was pulling in his head and legs and pressing his body into the floor so firmly that he had to tell himself unequivocally he would not be able to endure all this much longer. They were cleaning out his room, taking away from him everything he cherished; they had already dragged out the chest of drawers in which the fret saw and other tools were kept, and they were now loosening the writing desk which was fixed tight to the floor, the desk on which he, as a business student, as a high school student, indeed even as an elementary school student, had written out his assignments. At that moment he really did not have any more time to consider the good intentions of the two women, whose existence he had in any case almost forgotten, because in their exhaustion they were working really silently; the heavy stumbling of their feet was the only sound to be heard.
+PASSAGE>>>
+
+## The reflection (the Core recital removed)
+
+<<<REFLECTION
+u18.desk-history makes source.r018.segment.000001 reach back through the school years, while u18.noise keeps the present body's overload in view. The women are moving furniture with good intentions; he experiences the removal of a life he can no longer make audible. The desk is not simply a symbol I need to invent: it is the same working surface on which he learned, now fixed to this floor. Keeping knowledge, tool use and access separate prevents the new body from erasing everything the person has learned.
+REFLECTION>>>

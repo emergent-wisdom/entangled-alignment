@@ -1,0 +1,48 @@
+{
+ "blind": "R-6299b2",
+ "started": "2026-10-26T10:18:16.219108+00:00",
+ "model": "claude-sonnet-5-5",
+ "effort": "high",
+ "attempt": 1,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 31382,
+  "cache_read_input_tokens": 2119,
+  "output_tokens": 1004,
+  "output_tokens_details": {
+   "thinking_tokens": 873
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 31382,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 1004,
+    "cache_read_input_tokens": 2119,
+    "cache_creation_input_tokens": 31382,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 31382
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "cost_usd_reported": 0.1357839,
+ "duration_ms": 10963,
+ "result": {
+  "misreadings": [],
+  "factual_statements_checked": 22,
+  "note": "Both versions stay within the text: the cleaning woman has no real horror of Gregor, the nickname is friendly in her view, Gregor turns as if to attack, she lifts the chair and puts it back without throwing it, and Grete is exhausted and tired of caring. The remaining claims are interpretation or open questions."
+ }
+}

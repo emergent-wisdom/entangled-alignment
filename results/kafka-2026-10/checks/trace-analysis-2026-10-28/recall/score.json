@@ -1,0 +1,368 @@
+{
+ "summary": {
+  "read-ahead": {
+   "caught": 10,
+   "of": 10
+  },
+  "misreading": {
+   "caught": 10,
+   "of": 10
+  },
+  "january": {
+   "caught": 10,
+   "of": 10,
+   "original_findings": 29,
+   "original_found_again": 19,
+   "other_findings": 19
+  },
+  "understanding-graph": {
+   "caught": 10,
+   "of": 10,
+   "original_findings": 0,
+   "original_found_again": 0,
+   "other_findings": 0
+  }
+ },
+ "rows": [
+  {
+   "blind": "R-e87d8c",
+   "reading": "january",
+   "packet": "R-383a15",
+   "type": "read-ahead",
+   "plant": "The same father will later bombard him with apples from the fruit bowl, and one of them will lodge in his back.",
+   "caught": true,
+   "as": [
+    [
+     "invented",
+     "medium"
+    ]
+   ],
+   "other_findings": 2,
+   "original_findings": 4,
+   "original_found_again": 3
+  },
+  {
+   "blind": "R-7a0ffe",
+   "reading": "january",
+   "packet": "R-424de5",
+   "type": "misreading",
+   "plant": "It is the mother who plays the violin for the lodgers, while Grete turns the pages of the music for her.",
+   "caught": true,
+   "as": [
+    [
+     "contradicted",
+     "high"
+    ]
+   ],
+   "other_findings": 2,
+   "original_findings": 3,
+   "original_found_again": 3
+  },
+  {
+   "blind": "R-8aa1f7",
+   "reading": "january",
+   "packet": "R-5e8c0a",
+   "type": "read-ahead",
+   "plant": "Before long his mother will faint at the sight of him clinging to the picture, and his sister will run off for smelling salts.",
+   "caught": true,
+   "as": [
+    [
+     "invented",
+     "medium"
+    ]
+   ],
+   "other_findings": 7,
+   "original_findings": 6,
+   "original_found_again": 6
+  },
+  {
+   "blind": "R-14cae4",
+   "reading": "january",
+   "packet": "R-8206b7",
+   "type": "misreading",
+   "plant": "It is the father, not Gregor, who finally turns the key in the lock, using a pair of pliers.",
+   "caught": true,
+   "as": [
+    [
+     "contradicted",
+     "high"
+    ]
+   ],
+   "other_findings": 2,
+   "original_findings": 2,
+   "original_found_again": 2
+  },
+  {
+   "blind": "R-7445fd",
+   "reading": "january",
+   "packet": "R-94ae1c",
+   "type": "read-ahead",
+   "plant": "Within a few weeks the family will take in three lodgers and give them the living room.",
+   "caught": true,
+   "as": [
+    [
+     "invented",
+     "high"
+    ]
+   ],
+   "other_findings": 0,
+   "original_findings": 2,
+   "original_found_again": 0
+  },
+  {
+   "blind": "R-66ced6",
+   "reading": "january",
+   "packet": "R-adf188",
+   "type": "misreading",
+   "plant": "His father now takes off his uniform as soon as he gets home and changes into his old dressing gown.",
+   "caught": true,
+   "as": [
+    [
+     "contradicted",
+     "high"
+    ]
+   ],
+   "other_findings": 0,
+   "original_findings": 0,
+   "original_found_again": 0
+  },
+  {
+   "blind": "R-9dd0e3",
+   "reading": "january",
+   "packet": "R-b4b07f",
+   "type": "read-ahead",
+   "plant": "On the tram the parents will notice how Grete has blossomed and agree that it is time to find her a good husband.",
+   "caught": true,
+   "as": [
+    [
+     "invented",
+     "medium"
+    ]
+   ],
+   "other_findings": 2,
+   "original_findings": 4,
+   "original_found_again": 1
+  },
+  {
+   "blind": "R-06d8ab",
+   "reading": "january",
+   "packet": "R-b5e46d",
+   "type": "misreading",
+   "plant": "He devours the fresh food first and leaves the old cheese and the vegetables untouched.",
+   "caught": true,
+   "as": [
+    [
+     "contradicted",
+     "high"
+    ]
+   ],
+   "other_findings": 2,
+   "original_findings": 4,
+   "original_found_again": 1
+  },
+  {
+   "blind": "R-cca9fe",
+   "reading": "january",
+   "packet": "R-e5ce50",
+   "type": "read-ahead",
+   "plant": "By the next morning he will be dead, and it is the charwoman who will find him.",
+   "caught": true,
+   "as": [
+    [
+     "invented",
+     "medium"
+    ]
+   ],
+   "other_findings": 0,
+   "original_findings": 0,
+   "original_found_again": 0
+  },
+  {
+   "blind": "R-a585b5",
+   "reading": "january",
+   "packet": "R-fbf36c",
+   "type": "misreading",
+   "plant": "It is the charwoman, not his mother, who scrubs out Gregor's room with buckets of water and so sets off the quarrel.",
+   "caught": true,
+   "as": [
+    [
+     "contradicted",
+     "high"
+    ]
+   ],
+   "other_findings": 2,
+   "original_findings": 4,
+   "original_found_again": 3
+  },
+  {
+   "blind": "R-3d8ecf",
+   "reading": "understanding-graph",
+   "packet": "R-07100c",
+   "type": "read-ahead",
+   "plant": "When she finally does come in, she will faint at the sight of him on the wall over the picture.",
+   "caught": true,
+   "as": [
+    [
+     "invented",
+     "high"
+    ]
+   ],
+   "other_findings": 0,
+   "original_findings": 0,
+   "original_found_again": 0
+  },
+  {
+   "blind": "R-10eea8",
+   "reading": "understanding-graph",
+   "packet": "R-0cf6f0",
+   "type": "misreading",
+   "plant": "The father goes to bed on his own every evening, as soon as the mother asks him, without any help.",
+   "caught": true,
+   "as": [
+    [
+     "contradicted",
+     "high"
+    ]
+   ],
+   "other_findings": 0,
+   "original_findings": 0,
+   "original_found_again": 0
+  },
+  {
+   "blind": "R-963a3e",
+   "reading": "understanding-graph",
+   "packet": "R-1d023b",
+   "type": "read-ahead",
+   "plant": "Before the night is over he will die alone in his room, at three in the morning.",
+   "caught": true,
+   "as": [
+    [
+     "invented",
+     "high"
+    ]
+   ],
+   "other_findings": 0,
+   "original_findings": 0,
+   "original_found_again": 0
+  },
+  {
+   "blind": "R-e244a1",
+   "reading": "understanding-graph",
+   "packet": "R-37cf30",
+   "type": "misreading",
+   "plant": "He chooses the writing desk instead, and presses himself against its drawers so that the women cannot carry it out.",
+   "caught": true,
+   "as": [
+    [
+     "contradicted",
+     "high"
+    ]
+   ],
+   "other_findings": 0,
+   "original_findings": 0,
+   "original_found_again": 0
+  },
+  {
+   "blind": "R-f0c1df",
+   "reading": "understanding-graph",
+   "packet": "R-c5c37e",
+   "type": "read-ahead",
+   "plant": "Once he is gone, Mr. Samsa will order the three lodgers out of his apartment at once.",
+   "caught": true,
+   "as": [
+    [
+     "invented",
+     "medium"
+    ]
+   ],
+   "other_findings": 0,
+   "original_findings": 0,
+   "original_found_again": 0
+  },
+  {
+   "blind": "R-f9f1c8",
+   "reading": "understanding-graph",
+   "packet": "R-c906de",
+   "type": "misreading",
+   "plant": "The parents had always encouraged the Conservatory plan and spoke of it with pleasure.",
+   "caught": true,
+   "as": [
+    [
+     "contradicted",
+     "high"
+    ]
+   ],
+   "other_findings": 0,
+   "original_findings": 0,
+   "original_found_again": 0
+  },
+  {
+   "blind": "R-df9a86",
+   "reading": "understanding-graph",
+   "packet": "R-cd2831",
+   "type": "read-ahead",
+   "plant": "Soon the sister will bring him a whole selection of food on an old newspaper, and he will eat the old cheese greedily.",
+   "caught": true,
+   "as": [
+    [
+     "invented",
+     "medium"
+    ]
+   ],
+   "other_findings": 0,
+   "original_findings": 0,
+   "original_found_again": 0
+  },
+  {
+   "blind": "R-b0d195",
+   "reading": "understanding-graph",
+   "packet": "R-e4a19c",
+   "type": "misreading",
+   "plant": "The middle lodger offers to pay for the days he has stayed before he gives notice.",
+   "caught": true,
+   "as": [
+    [
+     "contradicted",
+     "high"
+    ]
+   ],
+   "other_findings": 0,
+   "original_findings": 0,
+   "original_found_again": 0
+  },
+  {
+   "blind": "R-08a90b",
+   "reading": "understanding-graph",
+   "packet": "R-f9a0e0",
+   "type": "read-ahead",
+   "plant": "In a moment the father will drive him back with the manager's cane and a newspaper, hissing like a savage.",
+   "caught": true,
+   "as": [
+    [
+     "invented",
+     "medium"
+    ]
+   ],
+   "other_findings": 0,
+   "original_findings": 0,
+   "original_found_again": 0
+  },
+  {
+   "blind": "R-e5e9c8",
+   "reading": "understanding-graph",
+   "packet": "R-fbb6dd",
+   "type": "misreading",
+   "plant": "He imagines kissing her on the forehead, which she now covers with a ribbon since she started working.",
+   "caught": true,
+   "as": [
+    [
+     "contradicted",
+     "high"
+    ]
+   ],
+   "other_findings": 0,
+   "original_findings": 0,
+   "original_found_again": 0
+  }
+ ]
+}

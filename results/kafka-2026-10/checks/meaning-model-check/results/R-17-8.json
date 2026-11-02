@@ -1,0 +1,47 @@
+{
+ "packet": "R-17-8",
+ "started": "2026-11-01T16:20:19.908413+00:00",
+ "model": "claude-sonnet-5-5",
+ "effort": "high",
+ "attempt": 1,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 43241,
+  "cache_read_input_tokens": 2067,
+  "output_tokens": 1239,
+  "output_tokens_details": {
+   "thinking_tokens": 1119
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 43241,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 1239,
+    "cache_read_input_tokens": 2067,
+    "cache_creation_input_tokens": 43241,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 43241
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "duration_ms": 12174,
+ "result": {
+  "problems": [],
+  "records_checked": 57,
+  "note": "Every record is a timeline event, containment relation, cut or revision bookkeeping entry; the dated periods fit the text's span (first day, about a fortnight, about a month, 'these two months'), the cut weights are labelled source-constrained estimates, and nothing draws on events after the furniture dispute."
+ }
+}

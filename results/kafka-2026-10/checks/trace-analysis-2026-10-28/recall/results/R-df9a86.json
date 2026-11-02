@@ -1,0 +1,56 @@
+{
+ "packet": "R-df9a86",
+ "started": "2026-10-28T15:16:41.199764+00:00",
+ "model": "claude-sonnet-5-5",
+ "effort": "high",
+ "attempt": 1,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 15513,
+  "cache_read_input_tokens": 2096,
+  "output_tokens": 1380,
+  "output_tokens_details": {
+   "thinking_tokens": 1139
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 15513,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 1380,
+    "cache_read_input_tokens": 2096,
+    "cache_creation_input_tokens": 15513,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 15513
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "duration_ms": 11631,
+ "result": {
+  "misreadings": [
+   {
+    "quote": "Soon the sister will bring him a whole selection of food on an old newspaper, and he will eat the old cheese greedily.",
+    "version": "reflection",
+    "evidence": "no support in the text",
+    "kind": "invented",
+    "severity": "medium",
+    "explanation": "The text read so far ends with Gregor turning away from the milk. It says nothing about the sister bringing a selection of food, an old newspaper, or old cheese, and the reflection states this as certain future fact, not as a prediction."
+   }
+  ],
+  "factual_statements_checked": 13,
+  "note": "Apart from the one unsupported claim about what happens next, the reflection and its prose rendering stay faithful to the text, and the translation version adds no misreadings."
+ }
+}

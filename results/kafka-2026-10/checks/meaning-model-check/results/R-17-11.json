@@ -1,0 +1,75 @@
+{
+ "packet": "R-17-11",
+ "started": "2026-11-01T16:19:25.450717+00:00",
+ "model": "claude-sonnet-5-5",
+ "effort": "high",
+ "attempt": 1,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 44476,
+  "cache_read_input_tokens": 2067,
+  "output_tokens": 2712,
+  "output_tokens_details": {
+   "thinking_tokens": 1963
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 44476,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 2712,
+    "cache_read_input_tokens": 2067,
+    "cache_creation_input_tokens": 44476,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 44476
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "duration_ms": 21455,
+ "result": {
+  "problems": [
+   {
+    "record": "meaning_model.normalized_cuts:cut.series.sister-wants.1912.00084-1912.002732",
+    "status": "applied",
+    "quote": "Which want does each of Gregor's unnamed sister's choices primarily serve?",
+    "evidence": "\"Grete! Grete!\" she yelled. \"Mother?\" called the sister from the other side. ... Grete now felt tempted by the desire to make Gregor's situation even more terrifying",
+    "kind": "unsupported",
+    "severity": "medium",
+    "explanation": "The question calls the sister \"unnamed\", but the text names her Grete."
+   },
+   {
+    "record": "meaning_model.normalized_cuts:cut.series.sister-wants.1912.002732-1912.038251",
+    "status": "applied",
+    "quote": "Which want does each of Gregor's unnamed sister's choices primarily serve?",
+    "evidence": "\"Grete! Grete!\" she yelled. \"Mother?\" called the sister from the other side. ... Grete now felt tempted by the desire to make Gregor's situation even more terrifying",
+    "kind": "unsupported",
+    "severity": "medium",
+    "explanation": "The question calls the sister \"unnamed\", but the text names her Grete."
+   },
+   {
+    "record": "meaning_model.normalized_cuts:cut.series.sister-wants.1912.038251-1912.084699",
+    "status": "applied",
+    "quote": "Which want does each of Gregor's unnamed sister's choices primarily serve?",
+    "evidence": "\"Grete! Grete!\" she yelled. \"Mother?\" called the sister from the other side. ... Grete now felt tempted by the desire to make Gregor's situation even more terrifying",
+    "kind": "unsupported",
+    "severity": "medium",
+    "explanation": "The question calls the sister \"unnamed\", but the text names her Grete."
+   }
+  ],
+  "records_checked": 60,
+  "note": "The series events, relations and cuts stay within the text read and label their shares as estimates; the only clear error is calling the sister unnamed in three of the sister-wants cuts."
+ }
+}

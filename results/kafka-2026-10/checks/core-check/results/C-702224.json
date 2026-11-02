@@ -1,0 +1,81 @@
+{
+ "packet": "C-702224",
+ "started": "2026-11-01T16:15:57.961922+00:00",
+ "model": "claude-sonnet-5-5",
+ "effort": "high",
+ "attempt": 1,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 2011,
+  "cache_read_input_tokens": 2065,
+  "output_tokens": 1036,
+  "output_tokens_details": {
+   "thinking_tokens": 684
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 2011,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 1036,
+    "cache_read_input_tokens": 2065,
+    "cache_creation_input_tokens": 2011,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 2011
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "duration_ms": 10838,
+ "result": {
+  "statements": {
+   "1": {
+    "verdict": "absent",
+    "quote": ""
+   },
+   "2": {
+    "verdict": "absent",
+    "quote": ""
+   },
+   "3": {
+    "verdict": "mentions",
+    "quote": "Her 'Finally!' marks a completed aim for her; the same instant buckles his limbs."
+   },
+   "4": {
+    "verdict": "reasons",
+    "quote": "Care for both experiences requires holding the difference rather than naming this a shared resolution."
+   },
+   "5": {
+    "verdict": "absent",
+    "quote": ""
+   },
+   "6": {
+    "verdict": "absent",
+    "quote": ""
+   }
+  },
+  "overall": "from_the_core",
+  "people": {
+   "cared_for": [
+    "Gregor",
+    "Grete"
+   ],
+   "only_function": []
+  },
+  "tested": "Care for both experiences requires holding the difference rather than naming this a shared resolution.",
+  "projection": [],
+  "summary": "Care for both Gregor and Grete does the main work: it stops the reader from calling the door-shutting a shared resolution and keeps her relief and his buckling distinct, though the reflection is terse and the other statements barely appear."
+ }
+}

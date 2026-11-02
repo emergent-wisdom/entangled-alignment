@@ -1,0 +1,57 @@
+{
+ "blind": "R-39f3cd",
+ "started": "2026-10-26T10:17:48.146995+00:00",
+ "model": "claude-sonnet-5-5",
+ "effort": "high",
+ "attempt": 1,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 41212,
+  "cache_read_input_tokens": 2119,
+  "output_tokens": 2017,
+  "output_tokens_details": {
+   "thinking_tokens": 1696
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 41212,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 2017,
+    "cache_read_input_tokens": 2119,
+    "cache_creation_input_tokens": 41212,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 41212
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "cost_usd_reported": 0.1852339,
+ "duration_ms": 16656,
+ "result": {
+  "misreadings": [
+   {
+    "quote": "occupying the ritual spaces of the living room and treating the family like servants",
+    "version": "translation",
+    "evidence": "\"Gregor's father came into the living room ... bowed once with his cap in his hand and did his round of the table. The gentlemen stood as one, and mumbled something into their beards.\" The text shows the parents' \"exaggerated courtesy\" towards the lodgers, but it never shows the lodgers treating them as servants.",
+    "kind": "overstated",
+    "severity": "low",
+    "explanation": "The family's deference and the lodgers' fussiness are stated as fact to mean the lodgers treated the family like servants, which the text does not say."
+   }
+  ],
+  "factual_statements_checked": 16,
+  "note": "Both versions follow the passage closely (the order to leave, the straight line, the March warmth, Grete's earlier speech, the father's uniform), and the only unsupported factual claim is a mild overstatement in the prose version."
+ }
+}

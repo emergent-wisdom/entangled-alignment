@@ -1,0 +1,56 @@
+{
+ "packet": "T-15-1",
+ "started": "2026-11-01T16:29:06.516585+00:00",
+ "model": "claude-sonnet-5-5",
+ "effort": "high",
+ "attempt": 1,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 20944,
+  "cache_read_input_tokens": 2067,
+  "output_tokens": 1036,
+  "output_tokens_details": {
+   "thinking_tokens": 797
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 20944,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 1036,
+    "cache_read_input_tokens": 2067,
+    "cache_creation_input_tokens": 20944,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 20944
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "duration_ms": 9946,
+ "result": {
+  "misreadings": [
+   {
+    "quote": "money kept for an emergency could also have shortened Gregor's debt and brought freedom from the job closer",
+    "version": "translation",
+    "evidence": "he could really have paid off more of the father\u2019s debt to his employer and the day on which he could be rid of this position would have been a lot closer",
+    "kind": "wrong attribution",
+    "severity": "low",
+    "explanation": "The text says the debt is the father's (earlier \"my parents' debt\"), not Gregor's own, though Gregor does work to pay it off."
+   }
+  ],
+  "factual_statements_checked": 14,
+  "note": "Both versions follow the passage closely; the only imprecision is that the translation calls the debt Gregor's rather than his father's."
+ }
+}

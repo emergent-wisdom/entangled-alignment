@@ -1,0 +1,48 @@
+{
+ "blind": "R-18a757",
+ "started": "2026-10-26T10:17:15.501937+00:00",
+ "model": "claude-sonnet-5-5",
+ "effort": "high",
+ "attempt": 1,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 11218,
+  "cache_read_input_tokens": 2119,
+  "output_tokens": 858,
+  "output_tokens_details": {
+   "thinking_tokens": 718
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 11218,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 858,
+    "cache_read_input_tokens": 2119,
+    "cache_creation_input_tokens": 11218,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 11218
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "cost_usd_reported": 0.053667900000000004,
+ "duration_ms": 9348,
+ "result": {
+  "misreadings": [],
+  "factual_statements_checked": 16,
+  "note": "Both versions stay within the text: the manager's 'Did you understand even a single word?', the plea to 'take it easy on my parents', Gregor's two imagined outcomes (startled or calm), the mother's doctor and the father's locksmith, and the manager's 'animal's voice' all match, and the rest is framed as interpretation or speculation."
+ }
+}

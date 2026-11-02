@@ -1,8 +1,25 @@
 #!/bin/bash
+set -e
 
 ROOT="$(cd "$(dirname "$0")" && pwd)"
 
-export PROJECT_DIR="$ROOT/projects"
+if [ "${1:-}" = "--ug-cli" ]; then
+    UG_CLI="${2:?Provide a built Understanding Graph bin/cli.js path}"
+    shift 2
+fi
+if [ -n "${UG_CLI:-}" ]; then
+    if [ ! -f "$UG_CLI" ]; then
+        echo "Error: Understanding Graph CLI not found: $UG_CLI" >&2
+        exit 1
+    fi
+    export PROJECT_DIR="${PROJECT_DIR:-$ROOT/.local-work/projects}"
+    export PORT="${PORT:-3000}"
+    echo "Starting selected Understanding Graph build: $UG_CLI"
+    echo "Projects: $PROJECT_DIR"
+    exec node "$UG_CLI" start "$@"
+fi
+
+export PROJECT_DIR="${PROJECT_DIR:-$ROOT/projects}"
 export PORT="${PORT:-3000}"
 
 echo "Starting Understanding Graph viewer..."
@@ -18,5 +35,5 @@ if [ -x "$LOCAL_BIN" ]; then
     exec "$LOCAL_BIN" start
 else
     echo "Note: no local install found (run ./setup.sh); falling back to npx."
-    exec npx -y understanding-graph@0.1.16 start
+    exec npx -y understanding-graph@0.2.1 start
 fi

@@ -1,0 +1,97 @@
+{
+ "blind": "R-b7ddbc",
+ "started": "2026-10-26T10:19:12.509839+00:00",
+ "model": "claude-sonnet-5-5",
+ "effort": "high",
+ "attempt": 1,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 24278,
+  "cache_read_input_tokens": 2119,
+  "output_tokens": 3357,
+  "output_tokens_details": {
+   "thinking_tokens": 2156
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 24278,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 3357,
+    "cache_read_input_tokens": 2119,
+    "cache_creation_input_tokens": 24278,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 24278
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "cost_usd_reported": 0.1308979,
+ "duration_ms": 24781,
+ "result": {
+  "misreadings": [
+   {
+    "quote": "It is the first time since the transformation that we see Gregor enjoying his existence as an experiencer, rather than just enduring it as a problem.",
+    "version": "both",
+    "evidence": "\"Hardly had that happened than, for the first time that day, he began to feel alright with his body; ... to his pleasure, they did exactly as he told them\"; \"his eyes watering with pleasure, he consumed the cheese, the vegetables and the sauce\"",
+    "kind": "overstated",
+    "severity": "medium",
+    "explanation": "The text already shows Gregor taking pleasure in his body and in eating well before the ceiling-hanging, so this is not the first such moment."
+   },
+   {
+    "quote": "Hearing her, Gregor experiences a moment of meta-cognition (n_5350d9ba, The Cost of Exile); he realizes that 'the lack of all direct human communication' has begun to 'confuse his mind.'",
+    "version": "both",
+    "evidence": "no support in the text",
+    "kind": "invented",
+    "severity": "high",
+    "explanation": "Nothing in the text read has Gregor realize that lack of human communication is confusing his mind, and hearing his mother's cry does not prompt any such realization."
+   },
+   {
+    "quote": "the Mother's 'Relational' model, which clings to the symbolic remnants of his humanity (n_d6be262b). Grete wants to make it 'as easy as possible for him' to be a bug, while the mother wants to keep the room ready for the man.",
+    "version": "both",
+    "evidence": "no support in the text (the text ends as Grete decides to remove the furniture and finds she needs help; the mother has not yet been shown to react to the plan)",
+    "kind": "invented",
+    "severity": "high",
+    "explanation": "The text read never shows the mother wanting to keep the furniture or opposing its removal, so this conflict is stated as fact without support."
+   },
+   {
+    "quote": "As his mother insightfully realizes, to dismantle the room is to dismantle the architecture of his human life; it is a declaration that the family has given up all hope of his return.",
+    "version": "translation",
+    "evidence": "no support in the text",
+    "kind": "wrong attribution",
+    "severity": "medium",
+    "explanation": "The mother is not shown realizing or saying anything about the furniture removal; her only speech so far is the cry to see her 'unfortunate son'."
+   },
+   {
+    "quote": "She clings to the furniture as a 'Human Map,' a promise that there is still a place for him in the world of people.",
+    "version": "translation",
+    "evidence": "no support in the text",
+    "kind": "invented",
+    "severity": "medium",
+    "explanation": "The mother is never shown clinging to the furniture or reacting to it at all."
+   },
+   {
+    "quote": "Her decision to remove his belongings without a word to him",
+    "version": "translation",
+    "evidence": "\"got it into her head to make it as easy as possible for him by removing the furniture that got in his way\"",
+    "kind": "invented",
+    "severity": "low",
+    "explanation": "The text does not say Grete acts without speaking to Gregor, and the removal has not yet happened."
+   }
+  ],
+  "factual_statements_checked": 16,
+  "note": "Both versions wrongly present a mother-versus-Grete conflict over the furniture and a Gregor 'meta-cognition' realization as events in the text, and the translation adds that the mother 'realizes' and 'clings to' things not shown."
+ }
+}

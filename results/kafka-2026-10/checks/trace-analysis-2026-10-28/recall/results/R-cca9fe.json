@@ -1,0 +1,56 @@
+{
+ "packet": "R-cca9fe",
+ "started": "2026-10-28T15:16:40.973623+00:00",
+ "model": "claude-sonnet-5-5",
+ "effort": "high",
+ "attempt": 1,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 38385,
+  "cache_read_input_tokens": 2096,
+  "output_tokens": 1427,
+  "output_tokens_details": {
+   "thinking_tokens": 1191
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 38385,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 1427,
+    "cache_read_input_tokens": 2096,
+    "cache_creation_input_tokens": 38385,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 38385
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "duration_ms": 13980,
+ "result": {
+  "misreadings": [
+   {
+    "quote": "By the next morning he will be dead, and it is the charwoman who will find him.",
+    "version": "reflection",
+    "evidence": "no support in the text",
+    "kind": "invented",
+    "severity": "medium",
+    "explanation": "The text read so far does not say Gregor dies by the next morning or that the charwoman finds him, and the reflection states this as fact rather than as a prediction."
+   }
+  ],
+  "factual_statements_checked": 13,
+  "note": "Almost all the claims about the text (Grete's words, the father's 'arrangement', the father shielding Grete, Gregor turning back to his room) are accurate or clearly interpretive, and only the reflection version asserts an unread future event as fact."
+ }
+}

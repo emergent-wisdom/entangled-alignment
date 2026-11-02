@@ -1,0 +1,47 @@
+{
+ "packet": "T-21-1",
+ "started": "2026-11-01T16:29:28.494551+00:00",
+ "model": "claude-sonnet-5-5",
+ "effort": "high",
+ "attempt": 1,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 28228,
+  "cache_read_input_tokens": 2067,
+  "output_tokens": 939,
+  "output_tokens_details": {
+   "thinking_tokens": 803
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 28228,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 939,
+    "cache_read_input_tokens": 2067,
+    "cache_creation_input_tokens": 28228,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 28228
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "duration_ms": 10066,
+ "result": {
+  "misreadings": [],
+  "factual_statements_checked": 11,
+  "note": "Both versions stay within the text: the father's uniform, upright and alert bearing, Gregor's neglect of the apartment while creeping, the slow chase, his breathlessness, his near-forgetting of the walls and his fear that climbing would read as malice are all supported, and the remaining claims are interpretation or the reader's own notes."
+ }
+}

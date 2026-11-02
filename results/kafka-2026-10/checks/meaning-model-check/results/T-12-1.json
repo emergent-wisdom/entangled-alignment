@@ -1,0 +1,47 @@
+{
+ "packet": "T-12-1",
+ "started": "2026-11-01T16:28:57.209801+00:00",
+ "model": "claude-sonnet-5-5",
+ "effort": "high",
+ "attempt": 1,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 18485,
+  "cache_read_input_tokens": 2067,
+  "output_tokens": 778,
+  "output_tokens_details": {
+   "thinking_tokens": 662
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 18485,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 778,
+    "cache_read_input_tokens": 2067,
+    "cache_creation_input_tokens": 18485,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 18485
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "duration_ms": 8013,
+ "result": {
+  "misreadings": [],
+  "factual_statements_checked": 11,
+  "note": "Both versions stay within the text: Grete's shock, her closing then reopening the door, the untouched milk, the food selection, Gregor preferring to starve rather than point out the milk, and his near-asphyxiation under the couch are all supported, and the rest is interpretation."
+ }
+}

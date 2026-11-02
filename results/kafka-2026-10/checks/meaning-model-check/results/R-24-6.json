@@ -1,0 +1,47 @@
+{
+ "packet": "R-24-6",
+ "started": "2026-11-01T16:23:49.026394+00:00",
+ "model": "claude-sonnet-5-5",
+ "effort": "high",
+ "attempt": 1,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 55006,
+  "cache_read_input_tokens": 2067,
+  "output_tokens": 1954,
+  "output_tokens_details": {
+   "thinking_tokens": 1820
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 55006,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 1954,
+    "cache_read_input_tokens": 2067,
+    "cache_creation_input_tokens": 55006,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 55006
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "duration_ms": 17316,
+ "result": {
+  "problems": [],
+  "records_checked": 60,
+  "note": "All 60 records are event-series records whose descriptions match events in the text read so far (the first morning, the first fortnight, the care routine and concealment, the second month with the mother's visit and furniture dispute). The backstory and calendar dates are labelled as guessed or sketched, so none count as ahead, unsupported, wrong-track or mistimed."
+ }
+}

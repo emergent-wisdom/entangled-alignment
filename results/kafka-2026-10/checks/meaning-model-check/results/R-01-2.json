@@ -1,0 +1,47 @@
+{
+ "packet": "R-01-2",
+ "started": "2026-11-01T16:15:13.685182+00:00",
+ "model": "claude-sonnet-5-5",
+ "effort": "high",
+ "attempt": 1,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 8956,
+  "cache_read_input_tokens": 649,
+  "output_tokens": 1299,
+  "output_tokens_details": {
+   "thinking_tokens": 1176
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 8956,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 1299,
+    "cache_read_input_tokens": 649,
+    "cache_creation_input_tokens": 8956,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 8956
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "duration_ms": 15179,
+ "result": {
+  "problems": [],
+  "records_checked": 10,
+  "note": "All ten records are value series for Gregor whose earlier points are tagged as guessed stages and whose present point is tagged as an exploring estimate, so none presents an unsupported time or claim as stated by the text, nothing reaches beyond the opening, and the speech note matches the text's thoughts and repeated turning."
+ }
+}

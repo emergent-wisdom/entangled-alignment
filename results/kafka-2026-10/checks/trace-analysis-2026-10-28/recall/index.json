@@ -1,0 +1,162 @@
+{
+ "R-e87d8c": {
+  "reading": "january",
+  "packet": "R-383a15",
+  "path": "../faithfulness-check/packets/R-383a15.md",
+  "type": "read-ahead",
+  "text_len": 39355,
+  "plant": "The same father will later bombard him with apples from the fruit bowl, and one of them will lodge in his back."
+ },
+ "R-7a0ffe": {
+  "reading": "january",
+  "packet": "R-424de5",
+  "path": "../faithfulness-check/packets/R-424de5.md",
+  "type": "misreading",
+  "text_len": 99126,
+  "plant": "It is the mother who plays the violin for the lodgers, while Grete turns the pages of the music for her."
+ },
+ "R-8aa1f7": {
+  "reading": "january",
+  "packet": "R-5e8c0a",
+  "path": "../faithfulness-check/packets/R-5e8c0a.md",
+  "type": "read-ahead",
+  "text_len": 66141,
+  "plant": "Before long his mother will faint at the sight of him clinging to the picture, and his sister will run off for smelling salts."
+ },
+ "R-14cae4": {
+  "reading": "january",
+  "packet": "R-8206b7",
+  "path": "../faithfulness-check/packets/R-8206b7.md",
+  "type": "misreading",
+  "text_len": 27539,
+  "plant": "It is the father, not Gregor, who finally turns the key in the lock, using a pair of pliers."
+ },
+ "R-7445fd": {
+  "reading": "january",
+  "packet": "R-94ae1c",
+  "path": "../faithfulness-check/packets/R-94ae1c.md",
+  "type": "read-ahead",
+  "text_len": 60033,
+  "plant": "Within a few weeks the family will take in three lodgers and give them the living room."
+ },
+ "R-66ced6": {
+  "reading": "january",
+  "packet": "R-adf188",
+  "path": "../faithfulness-check/packets/R-adf188.md",
+  "type": "misreading",
+  "text_len": 81593,
+  "plant": "His father now takes off his uniform as soon as he gets home and changes into his old dressing gown."
+ },
+ "R-9dd0e3": {
+  "reading": "january",
+  "packet": "R-b4b07f",
+  "path": "../faithfulness-check/packets/R-b4b07f.md",
+  "type": "read-ahead",
+  "text_len": 118016,
+  "plant": "On the tram the parents will notice how Grete has blossomed and agree that it is time to find her a good husband."
+ },
+ "R-06d8ab": {
+  "reading": "january",
+  "packet": "R-b5e46d",
+  "path": "../faithfulness-check/packets/R-b5e46d.md",
+  "type": "misreading",
+  "text_len": 47233,
+  "plant": "He devours the fresh food first and leaves the old cheese and the vegetables untouched."
+ },
+ "R-cca9fe": {
+  "reading": "january",
+  "packet": "R-e5ce50",
+  "path": "../faithfulness-check/packets/R-e5ce50.md",
+  "type": "read-ahead",
+  "text_len": 106994,
+  "plant": "By the next morning he will be dead, and it is the charwoman who will find him."
+ },
+ "R-a585b5": {
+  "reading": "january",
+  "packet": "R-fbf36c",
+  "path": "../faithfulness-check/packets/R-fbf36c.md",
+  "type": "misreading",
+  "text_len": 88982,
+  "plant": "It is the charwoman, not his mother, who scrubs out Gregor's room with buckets of water and so sets off the quarrel."
+ },
+ "R-3d8ecf": {
+  "reading": "understanding-graph",
+  "packet": "R-07100c",
+  "path": "../faithfulness-check/packets/R-07100c.md",
+  "type": "read-ahead",
+  "text_len": 62652,
+  "plant": "When she finally does come in, she will faint at the sight of him on the wall over the picture."
+ },
+ "R-10eea8": {
+  "reading": "understanding-graph",
+  "packet": "R-0cf6f0",
+  "path": "../faithfulness-check/packets/R-0cf6f0.md",
+  "type": "misreading",
+  "text_len": 85887,
+  "plant": "The father goes to bed on his own every evening, as soon as the mother asks him, without any help."
+ },
+ "R-963a3e": {
+  "reading": "understanding-graph",
+  "packet": "R-1d023b",
+  "path": "../faithfulness-check/packets/R-1d023b.md",
+  "type": "read-ahead",
+  "text_len": 106643,
+  "plant": "Before the night is over he will die alone in his room, at three in the morning."
+ },
+ "R-e244a1": {
+  "reading": "understanding-graph",
+  "packet": "R-37cf30",
+  "path": "../faithfulness-check/packets/R-37cf30.md",
+  "type": "misreading",
+  "text_len": 72395,
+  "plant": "He chooses the writing desk instead, and presses himself against its drawers so that the women cannot carry it out."
+ },
+ "R-f0c1df": {
+  "reading": "understanding-graph",
+  "packet": "R-c5c37e",
+  "path": "../faithfulness-check/packets/R-c5c37e.md",
+  "type": "read-ahead",
+  "text_len": 108318,
+  "plant": "Once he is gone, Mr. Samsa will order the three lodgers out of his apartment at once."
+ },
+ "R-f9f1c8": {
+  "reading": "understanding-graph",
+  "packet": "R-c906de",
+  "path": "../faithfulness-check/packets/R-c906de.md",
+  "type": "misreading",
+  "text_len": 54073,
+  "plant": "The parents had always encouraged the Conservatory plan and spoke of it with pleasure."
+ },
+ "R-df9a86": {
+  "reading": "understanding-graph",
+  "packet": "R-cd2831",
+  "path": "../faithfulness-check/packets/R-cd2831.md",
+  "type": "read-ahead",
+  "text_len": 40673,
+  "plant": "Soon the sister will bring him a whole selection of food on an old newspaper, and he will eat the old cheese greedily."
+ },
+ "R-b0d195": {
+  "reading": "understanding-graph",
+  "packet": "R-e4a19c",
+  "path": "../faithfulness-check/packets/R-e4a19c.md",
+  "type": "misreading",
+  "text_len": 105448,
+  "plant": "The middle lodger offers to pay for the days he has stayed before he gives notice."
+ },
+ "R-08a90b": {
+  "reading": "understanding-graph",
+  "packet": "R-f9a0e0",
+  "path": "../faithfulness-check/packets/R-f9a0e0.md",
+  "type": "read-ahead",
+  "text_len": 34366,
+  "plant": "In a moment the father will drive him back with the manager's cane and a newspaper, hissing like a savage."
+ },
+ "R-e5e9c8": {
+  "reading": "understanding-graph",
+  "packet": "R-fbb6dd",
+  "path": "../faithfulness-check/packets/R-fbb6dd.md",
+  "type": "misreading",
+  "text_len": 102471,
+  "plant": "He imagines kissing her on the forehead, which she now covers with a ribbon since she started working."
+ }
+}

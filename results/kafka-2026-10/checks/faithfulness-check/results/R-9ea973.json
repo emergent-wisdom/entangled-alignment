@@ -1,0 +1,57 @@
+{
+ "blind": "R-9ea973",
+ "started": "2026-10-26T10:18:54.094329+00:00",
+ "model": "claude-sonnet-5-5",
+ "effort": "high",
+ "attempt": 1,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 4786,
+  "cache_read_input_tokens": 2119,
+  "output_tokens": 1150,
+  "output_tokens_details": {
+   "thinking_tokens": 864
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 4786,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 1150,
+    "cache_read_input_tokens": 2119,
+    "cache_creation_input_tokens": 4786,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 4786
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "cost_usd_reported": 0.030859900000000003,
+ "duration_ms": 10430,
+ "result": {
+  "misreadings": [
+   {
+    "quote": "He remembers an alarm loud enough to shake the furniture, but cannot explain sleeping through it.",
+    "version": "translation",
+    "evidence": "\"Certainly it had rung. Yes, but was it possible to sleep peacefully through that noise which made the furniture shake? Now, it is true he had not slept peacefully, but evidently he had slept all the more deeply.\"",
+    "kind": "overstated",
+    "severity": "medium",
+    "explanation": "Gregor does not remember the alarm ringing; he infers that it must have rung, and he does offer an explanation for sleeping through it (he had slept all the more deeply)."
+   }
+  ],
+  "factual_statements_checked": 15,
+  "note": "The original reflection is faithful; the only misreading is in the prose version, which turns Gregor's inference about the alarm into a memory and says he has no explanation."
+ }
+}

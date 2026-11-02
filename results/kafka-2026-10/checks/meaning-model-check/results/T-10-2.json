@@ -1,0 +1,47 @@
+{
+ "packet": "T-10-2",
+ "started": "2026-11-01T16:28:56.452022+00:00",
+ "model": "claude-sonnet-5-5",
+ "effort": "high",
+ "attempt": 1,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 16006,
+  "cache_read_input_tokens": 2067,
+  "output_tokens": 791,
+  "output_tokens_details": {
+   "thinking_tokens": 677
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 16006,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 791,
+    "cache_read_input_tokens": 2067,
+    "cache_creation_input_tokens": 16006,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 16006
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "duration_ms": 8850,
+ "result": {
+  "misreadings": [],
+  "factual_statements_checked": 11,
+  "note": "Both versions stay within the text: the evening waking, stretched scar, dragging leg, rested state, the 'included in the circle of humanity' feeling, the father's forceful drive into the room, and the absence of Grete's or the doctor's arrival on the page all match."
+ }
+}

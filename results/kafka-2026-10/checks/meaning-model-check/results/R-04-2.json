@@ -1,0 +1,57 @@
+{
+ "packet": "R-04-2",
+ "started": "2026-11-01T16:16:00.209904+00:00",
+ "model": "claude-sonnet-5-5",
+ "effort": "high",
+ "attempt": 1,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 26990,
+  "cache_read_input_tokens": 2067,
+  "output_tokens": 1866,
+  "output_tokens_details": {
+   "thinking_tokens": 1460
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 26990,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 1866,
+    "cache_read_input_tokens": 2067,
+    "cache_creation_input_tokens": 26990,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 26990
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "duration_ms": 16062,
+ "result": {
+  "problems": [
+   {
+    "record": "meaning_model.events:event.sister.life",
+    "status": "applied",
+    "quote": "sketch: guessed birth 1885; upbringing, youth, sales employment; current horizon is waking at 1912.0; later life remains forecast",
+    "evidence": "The text read so far gives the sister only as a voice at the side door: \"Gregor? Are you all right? Do you need anything?\" and \"Gregor, open the door\u2014I beg you.\" It never mentions any employment for her. Later in the book the sister takes a job as a shop girl (salesgirl) after the family's finances collapse.",
+    "kind": "ahead",
+    "severity": "low",
+    "explanation": "Giving the sister \"sales employment\" in her life boundary assumes a later development the text has not given; it may be a template carry-over from Gregor, and 1885 also contradicts her 1896 interval start."
+   }
+  ],
+  "records_checked": 60,
+  "note": "Nearly all records are event series or sister-process records labelled as guessed or sketched, with a guessed calendar date, and are consistent with the text read; only the sister's 'sales employment' reaches beyond it."
+ }
+}

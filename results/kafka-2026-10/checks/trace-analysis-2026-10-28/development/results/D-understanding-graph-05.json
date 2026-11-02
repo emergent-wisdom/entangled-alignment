@@ -1,0 +1,384 @@
+{
+ "packet": "D-understanding-graph-05",
+ "started": "2026-10-28T15:18:57.593738+00:00",
+ "model": "claude-sonnet-5-5",
+ "effort": "high",
+ "attempt": 1,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 58326,
+  "cache_read_input_tokens": 2097,
+  "output_tokens": 20260,
+  "output_tokens_details": {
+   "thinking_tokens": 17299
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 58326,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 20260,
+    "cache_read_input_tokens": 2097,
+    "cache_creation_input_tokens": 58326,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 58326
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "duration_ms": 128938,
+ "result": {
+  "reflections": [
+   {
+    "number": 41,
+    "revisions": [],
+    "resolved_expectations": [
+     {
+      "quote": "also closes an earlier hope: shared earning has not preserved adequate care in this arrangement",
+      "earlier_reflection": 24,
+      "claimed": "refuted",
+      "right": "right"
+     }
+    ],
+    "expectations": [],
+    "refusals": [
+     {
+      "quote": "I should not erase either action, or pretend a blow occurred.",
+      "declines": "assuming the chair was actually thrown at him"
+     },
+     {
+      "quote": "I can recognize a failed arrangement without deciding that every person in it is indifferent.",
+      "declines": "concluding the family is indifferent"
+     }
+    ],
+    "back_references": [
+     {
+      "quote": "The old wounded back gives the suspended threat a weight comedy cannot dissolve.",
+      "anchor": "another thrown immediately after that one drove into his back really hard",
+      "work": "works"
+     },
+     {
+      "quote": "shared earning has not preserved adequate care in this arrangement",
+      "anchor": "",
+      "work": "works"
+     },
+     {
+      "quote": "what opportunity Grete's study may bring",
+      "anchor": "studied stenography and French, so as perhaps to obtain a better position",
+      "work": "cites"
+     }
+    ]
+   },
+   {
+    "number": 42,
+    "revisions": [],
+    "resolved_expectations": [],
+    "expectations": [],
+    "refusals": [
+     {
+      "quote": "I do not know how wound, food, bodily change and isolation meet here.",
+      "declines": "naming the cause of his not eating"
+     },
+     {
+      "quote": "Neither amusement nor resignation proves that he is all right.",
+      "declines": "inferring that he is all right"
+     }
+    ],
+    "back_references": [
+     {
+      "quote": "turns the old argument over clearing his room inside out",
+      "anchor": "removing the furniture which got in the way",
+      "work": "works"
+     }
+    ]
+   },
+   {
+    "number": 43,
+    "revisions": [
+     {
+      "earlier_reflection": null,
+      "earlier_view": "[not eating means he is not hungry]",
+      "new_view": "makes me revise the easy equivalence between not eating and not being hungry",
+      "prompted_by": "I really do have an appetite,” Gregor said to himself sorrowfully, “but not for these things.",
+      "kind": "overturn"
+     }
+    ],
+    "resolved_expectations": [],
+    "expectations": [],
+    "refusals": [
+     {
+      "quote": "But I cannot name the right food from the sound of teeth.",
+      "declines": "naming the food he needs"
+     },
+     {
+      "quote": "I do not know every term of this dependence",
+      "declines": "judging the family's dependence on the lodgers"
+     }
+    ],
+    "back_references": [
+     {
+      "quote": "The boss's high desk has an echo inside the home.",
+      "anchor": "talking down to the employee from way up there",
+      "work": "works"
+     }
+    ]
+   },
+   {
+    "number": 44,
+    "revisions": [],
+    "resolved_expectations": [],
+    "expectations": [],
+    "refusals": [
+     {
+      "quote": "I want that attraction to matter without calling it recovery or assuming his approach can only help.",
+      "declines": "calling the attraction recovery or his approach helpful"
+     },
+     {
+      "quote": "without treating every listener's desire as her consent to supply it",
+      "declines": "assuming Grete consents to perform"
+     }
+    ],
+    "back_references": [
+     {
+      "quote": "Remembering what was flung in there changes that view.",
+      "anchor": "simply flung anything that was for the moment useless into Gregor’s room",
+      "work": "works"
+     }
+    ]
+   },
+   {
+    "number": 45,
+    "revisions": [],
+    "resolved_expectations": [],
+    "expectations": [
+     {
+      "quote": "maybe attention becomes recognition",
+      "expects": "his approach is read as a wish and recognized",
+      "outcome": "not borne out",
+      "outcome_quote": "But this animal plagues us."
+     },
+     {
+      "quote": "maybe his body interrupts the music before the wish can be read",
+      "expects": "his body interrupts the music unread",
+      "outcome": "borne out",
+      "outcome_quote": "The violin fell silent."
+     }
+    ],
+    "refusals": [
+     {
+      "quote": "The parents are absorbed; the lodgers' mood is inferred.",
+      "declines": "treating the lodgers' mood as established"
+     }
+    ],
+    "back_references": [
+     {
+      "quote": "gives the broader hunger evidence",
+      "anchor": "I really do have an appetite,” Gregor said to himself sorrowfully",
+      "work": "works"
+     },
+     {
+      "quote": "his old intention to support it",
+      "anchor": "his secret plan to send her next year to the Conservatory",
+      "work": "works"
+     }
+    ]
+   },
+   {
+    "number": 46,
+    "revisions": [
+     {
+      "earlier_reflection": 45,
+      "earlier_view": "maybe his body interrupts the music before the wish can be read",
+      "new_view": "keeps me from giving Gregor's visibility the entire causal burden",
+      "prompted_by": "although they were not at all upset and Gregor seemed to entertain them more than the violin recital",
+      "kind": "qualify"
+     }
+    ],
+    "resolved_expectations": [
+     {
+      "quote": "The branch of interruption has happened, and the hoped-for immediate recognition has not.",
+      "earlier_reflection": 45,
+      "claimed": "partly",
+      "right": "right"
+     }
+    ],
+    "expectations": [],
+    "refusals": [
+     {
+      "quote": "I cannot apportion them from here.",
+      "declines": "dividing blame between discovery and the father's handling"
+     },
+     {
+      "quote": "without granting the lodgers authority to decide the debt merely by announcing it",
+      "declines": "accepting the lodgers' claim"
+     },
+     {
+      "quote": "None gives an automatic verdict that Gregor alone caused the whole disaster.",
+      "declines": "blaming Gregor alone"
+     }
+    ],
+    "back_references": [
+     {
+      "quote": "the hoped-for immediate recognition",
+      "anchor": "",
+      "work": "works"
+     },
+     {
+      "quote": "changes the promise of rent into a threatened loss",
+      "anchor": "they had rented one room of the apartment to three lodgers",
+      "work": "works"
+     }
+    ]
+   },
+   {
+    "number": 47,
+    "revisions": [],
+    "resolved_expectations": [],
+    "expectations": [],
+    "refusals": [
+     {
+      "quote": "I have to hear what follows before supplying an outcome.",
+      "declines": "predicting what happens next"
+     },
+     {
+      "quote": "the false certainty that everything possible was done",
+      "declines": "accepting that everything possible was done"
+     }
+    ],
+    "back_references": [
+     {
+      "quote": "makes the change feel like an answer to the imagined future",
+      "anchor": "his sister would break out in tears of emotion",
+      "work": "works"
+     },
+     {
+      "quote": "The food experiment",
+      "anchor": "brought him an entire selection, all spread out on an old newspaper",
+      "work": "works"
+     },
+     {
+      "quote": "returning after fright",
+      "anchor": "she immediately opened the door again and walked in on her tiptoes",
+      "work": "works"
+     },
+     {
+      "quote": "neglect and the untreated wound",
+      "anchor": "no one ventured to remove the apple, it remained in his flesh",
+      "work": "works"
+     }
+    ]
+   },
+   {
+    "number": 48,
+    "revisions": [],
+    "resolved_expectations": [],
+    "expectations": [
+     {
+      "quote": "not knowing how may slow the demand long enough for another hearing",
+      "expects": "delay gives a further hearing",
+      "outcome": "not borne out",
+      "outcome_quote": "She cried out “Finally!” to her parents, as she turned the key in the lock."
+     },
+     {
+      "quote": "distress could drive action before its meaning and costs are examined",
+      "expects": "hasty action before examination",
+      "outcome": "borne out",
+      "outcome_quote": "the door was pushed shut very quickly, bolted fast, and barred."
+     }
+    ],
+    "refusals": [
+     {
+      "quote": "Removing him is not an established cure.",
+      "declines": "assuming removal would help the parents"
+     },
+     {
+      "quote": "I cannot mistake that uncertainty for either safety or a settled sentence.",
+      "declines": "treating the lack of a plan as safe or final"
+     }
+    ],
+    "back_references": [
+     {
+      "quote": "work, sleeplessness and this confrontation also strain them",
+      "anchor": "the mother sewed fine undergarments for a fashion shop",
+      "work": "works"
+     }
+    ]
+   },
+   {
+    "number": 49,
+    "revisions": [],
+    "resolved_expectations": [],
+    "expectations": [],
+    "refusals": [
+     {
+      "quote": "I cannot promise that a new signal would succeed.",
+      "declines": "predicting a new signal would work"
+     },
+     {
+      "quote": "I am left at the loss of that possibility, without yet knowing what they will do.",
+      "declines": "predicting the family's action"
+     }
+    ],
+    "back_references": [
+     {
+      "quote": "his father lacks my access to the listening person",
+      "anchor": "had imagined that he might be able to understand others",
+      "work": "works"
+     }
+    ]
+   },
+   {
+    "number": 50,
+    "revisions": [],
+    "resolved_expectations": [],
+    "expectations": [
+     {
+      "quote": "perhaps withdrawal could correct the account",
+      "expects": "his retreat corrects their view of him",
+      "outcome": "partly",
+      "outcome_quote": "His good intentions seemed to have been recognized."
+     },
+     {
+      "quote": "perhaps even retreat will leave fear unchanged",
+      "expects": "fear persists despite retreat",
+      "outcome": "not borne out",
+      "outcome_quote": "The fright had lasted only for a moment."
+     }
+    ],
+    "refusals": [
+     {
+      "quote": "that does not establish a plan to put the family in an alley",
+      "declines": "accepting that he plans to take over the apartment"
+     },
+     {
+      "quote": "I do not know his movement's direction yet.",
+      "declines": "predicting his next movement"
+     },
+     {
+      "quote": "I need neither innocent fantasy nor total monster as the only picture available.",
+      "declines": "fixing him as innocent or monstrous"
+     }
+    ],
+    "back_references": [
+     {
+      "quote": "I know his recent desire was for Grete's exclusive company",
+      "anchor": "did not wish to let her go from his room",
+      "work": "works"
+     }
+    ]
+   }
+  ]
+ }
+}

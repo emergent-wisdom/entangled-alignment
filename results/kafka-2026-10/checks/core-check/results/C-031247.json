@@ -1,0 +1,82 @@
+{
+ "packet": "C-031247",
+ "started": "2026-10-28T02:43:42.258830+00:00",
+ "model": "claude-sonnet-5-5",
+ "effort": "high",
+ "attempt": 1,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 2461,
+  "cache_read_input_tokens": 2095,
+  "output_tokens": 1049,
+  "output_tokens_details": {
+   "thinking_tokens": 541
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 2461,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 1049,
+    "cache_read_input_tokens": 2095,
+    "cache_creation_input_tokens": 2461,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 2461
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "duration_ms": 10622,
+ "result": {
+  "statements": {
+   "1": {
+    "verdict": "absent",
+    "quote": ""
+   },
+   "2": {
+    "verdict": "absent",
+    "quote": ""
+   },
+   "3": {
+    "verdict": "reasons",
+    "quote": "makes me feel the return through his rests and stiff neck, then hear the door close at Grete's speed"
+   },
+   "4": {
+    "verdict": "reasons",
+    "quote": "Their need to end the confrontation is real; so is his need for someone to notice what happens after it."
+   },
+   "5": {
+    "verdict": "reasons",
+    "quote": "I want to let the next evidence decide between recovery and dangerous neglect, rather than let the family's relief stand in for his condition."
+   },
+   "6": {
+    "verdict": "absent",
+    "quote": ""
+   }
+  },
+  "overall": "from_the_core",
+  "people": {
+   "cared_for": [
+    "Gregor",
+    "Grete",
+    "the family (parents, whose need to end the confrontation is called real)"
+   ],
+   "only_function": []
+  },
+  "tested": "\"I do not know every feeling behind the word, but its benefit is not shared in the same way.\" and \"Their need to end the confrontation is real; so is his need for someone to notice what happens after it.\" Here the reflection holds understanding for Grete, who bolts the door and cries \"Finally!\", while still weighing what the lock costs Gregor.",
+  "projection": [],
+  "summary": "The Core works through care held for both Gregor and the relieved family, with Gregor's bodily experience treated as real, and through a wise refusal to let the family's relief or a hopeful reading settle Gregor's condition before the text shows it."
+ }
+}

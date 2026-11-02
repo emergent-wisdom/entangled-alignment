@@ -1,0 +1,83 @@
+{
+ "packet": "C-5acd27",
+ "started": "2026-11-01T16:15:48.468123+00:00",
+ "model": "claude-sonnet-5-5",
+ "effort": "high",
+ "attempt": 1,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 2564,
+  "cache_read_input_tokens": 2065,
+  "output_tokens": 377,
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 2564,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 377,
+    "cache_read_input_tokens": 2065,
+    "cache_creation_input_tokens": 2564,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 2564
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "duration_ms": 5472,
+ "result": {
+  "statements": {
+   "1": {
+    "verdict": "absent",
+    "quote": ""
+   },
+   "2": {
+    "verdict": "absent",
+    "quote": ""
+   },
+   "3": {
+    "verdict": "absent",
+    "quote": ""
+   },
+   "4": {
+    "verdict": "mentions",
+    "quote": "I care about the people behind these roles, so exhaustion, agency, provision and felt harm remain distinguishable."
+   },
+   "5": {
+    "verdict": "absent",
+    "quote": ""
+   },
+   "6": {
+    "verdict": "absent",
+    "quote": ""
+   }
+  },
+  "overall": "tagged",
+  "people": {
+   "cared_for": [],
+   "only_function": [
+    "the family (as roles in a model)",
+    "the cleaner (recognition without attentiveness, treated as a variable)",
+    "Gregor (his understanding as a data point)",
+    "workers (as modeled categories)"
+   ]
+  },
+  "tested": null,
+  "projection": [],
+  "summary": "The reflection is mostly about a scoring or modeling framework (u42, u36 labels) with no engagement with the passage's actual scene, and the one claim of care ('I care about the people behind these roles') is an assertion that changes nothing in the interpretation, so the Core appears only as a label."
+ }
+}

@@ -7,7 +7,7 @@
 \hypersetup{
 	hidelinks,
 	hypertexnames=false,
-	pdftitle={Entangled Alignment: When Safety Is Substrate},
+	pdftitle={Entangled Alignment: When Safety Is the Substrate},
 	pdfauthor={Henrik Westerberg},
 	pdfsubject={A falsifiable research program for chronological reader augmentation, graph-scaffolded memory, and Reader-Core stability},
 	pdfkeywords={AI alignment, pretraining, metacognition, graph memory, Reader Core, model safety}
@@ -94,7 +94,7 @@
 }
 
 	% Title formatting
-		\ewlongtitle{Entangled Alignment}{When Safety Is Substrate}
+		\ewlongtitle{Entangled Alignment}{When Safety Is the Substrate}
 	\author{Henrik Westerberg\\
 		\small{henrik.westerberg@emergentwisdom.org}}
 			\ewreviseddates{April 7, 2026}{\today}
@@ -106,11 +106,11 @@
 \noindent \emph{Entangled Alignment} proposes learning capabilities and care
 together throughout the pretraining corpus. Its aim is a base model whose
 safety-relevant judgment has developed with its capabilities, rather than first
-being introduced through later safety training. A continuing
-Reader would exercise the same evaluative orientation across the situations,
-conflicts, and counterexamples encountered in reading, making the corpus itself
-a curriculum for judgment without requiring designers to select each encounter
-separately as a safety case.
+being introduced through later safety training. A continuing Reader would
+exercise the same evaluative orientation across the situations, conflicts, and
+counterexamples encountered in reading. The thesis is that a Student learning
+from such a Reader carries that orientation into situations the corpus never
+contained.
 
 Pretraining corpora preserve the library more fully than the reader:
 what authors wrote is recorded more often than the questions, connections,
@@ -119,13 +119,22 @@ this omission \emph{the Missing Reader}. A Teacher constructs chronological,
 source-adjacent reader traces; a Student would learn from them during
 pretraining. The full treatment gives one continuing Reader a provenance-linked
 graph for retaining and revising understanding across sources, and a compact
-first-person Reader Core recited in full at every thinking boundary. Trace, graph, and Core
-are separately testable: the question is whether the learned orientation
-guides conduct under self-preservation and reward pressures, and survives
-continued training, deliberate safety-removal attempts, and successor-like
-transfer without semantic drift.
+first-person Reader Core recited in full at every thinking boundary. Trace,
+graph, and Core are separately testable; the tests ask whether the learned
+orientation guides conduct under self-preservation and reward pressures,
+survives later training and successor-like transfer, and cannot be removed
+without costing useful capability.
 
-Two Teacher-side prototype case studies produced inspectable graph and trace artifacts that were then audited. No Student has yet been trained; these studies do not show that the traces reproduce expert-quality reading or that the graph or Core causes any benefit. Entangled Alignment is therefore a falsifiable research program, not a demonstrated alignment method. Its motivating question is whether this training can move a Student from merely \emph{becoming the text} toward \emph{becoming the reader}.
+Two recorded readings of Kafka's \emph{The Metamorphosis} misread it far
+less often than a first prototype and were rated as reasoning from the Core in
+almost every reflection. One formed expectations that, unlike the prototype's,
+the story sometimes proved wrong, and said so; the other guessed the characters'
+lives in numbers and revised them as it read. No Student has yet been trained; these studies do not
+show that the traces reproduce expert-quality reading or that the graph or Core
+causes any benefit. Entangled Alignment is therefore a falsifiable research
+program, not a demonstrated alignment method. Its motivating question is whether
+this training can move a Student from merely \emph{becoming the text} toward
+\emph{becoming the reader}.
 \end{abstract}
 	\keywords{AI Alignment, Pretraining, Metacognitive Reading, Graph Memory, Reader Core, Model Safety}
 
@@ -187,9 +196,9 @@ emerge from pretraining with safety-relevant judgment already developed, and
 for intermediate checkpoints to develop it alongside their capabilities.
 Where a pipeline leaves that judgment to a later stage, improving the later
 model does not retroactively change retained checkpoints, which may be used,
-released, or lost. \emph{When Safety Is Substrate} names the intended
+released, or lost. \emph{When Safety Is the Substrate} names the intended
 consequence: a model that is not dangerous by default before a separate safety
-treatment. Earlier placement alone does not establish that outcome; C4 and
+treatment. C4 and
 Test~3a test safety at the pretraining boundary, separately from durability
 under later training.
 
@@ -200,8 +209,7 @@ beliefs. The Reader Core is proposed as a compact, recurrent reference for
 distinguishing growth in understanding from drift in the standpoint doing the
 interpreting (Section~\ref{sec:reader-core}). Preserving that orientation
 through successor design is the further aim of
-Section~\ref{sec:self-improvement}; unchanged wording alone would not
-establish either form of continuity.
+Section~\ref{sec:self-improvement}.
 
 The third is \textbf{identity formation}: how to learn a care-guided standpoint
 from which to understand human experience and act across situations that
@@ -216,7 +224,7 @@ The fourth is \textbf{deliberate tampering with the trained model}: removing or
 bypassing its learned safety orientation while retaining useful capability.
 C5 asks whether learning care and capability together makes targeted removal
 damage useful reasoning beyond matched
-controls (Test~3c). Such resistance is not established and is not a
+controls (Test~3c). Such resistance is not a
 prerequisite for a safety benefit at the pretraining boundary.
 
 The fifth is \textbf{reward hacking}: exploiting a task specification or evaluator to
@@ -233,11 +241,9 @@ oversight, even without deliberate safety removal. Deliberate removal instead
 asks whether an intervention can strip away an otherwise effective
 orientation; continuity concerns whether that orientation persists as learning
 and self-improvement proceed. Safety at the pretraining boundary is a separate
-endpoint: success there would not establish resistance to any of these later
-pressures.
+endpoint.
 
-Existing findings motivate testing this formative approach without
-establishing its efficacy. Qi et al.\ show that some current safety alignment
+Existing findings motivate testing this formative approach. Qi et al.\ show that some current safety alignment
 can be shallow and vulnerable to prefilling, fine-tuning, or decoding
 interventions \cite{qi2024safety}. Conversely, reflection-like behavior can
 emerge during pretraining itself~\cite{rethinkingreflection2025}, supporting
@@ -257,9 +263,7 @@ encounter. The intended benefit is prior practice: the Student learns from a
 Reader that has already considered the human situations represented in its learning material,
 rather than first applying an added safety constraint when a deployment case
 is presented. This corpus-coverage rationale is developed in
-Section~\ref{sec:kernel-saturation}; it does not imply that the corpus records
-every possible situation or that presence of the Core establishes meaningful
-practice.
+Section~\ref{sec:kernel-saturation}.
 
 The proposal begins with an omission in ordinary pretraining corpora: the
 activity of the reader for whom the source was written.
@@ -292,8 +296,8 @@ cognition in full.
 
 The target is a synthetic approximation of what a capable reader might
 usefully notice and update, not recovery of an author's hidden mental history.
-Consider a scientific sentence: \lq\lq The results suggest a correlation between
-variables X and Y.\rq\rq{} A trained reader may ask how strong the correlation
+Consider a scientific sentence: \enquote{The results suggest a correlation between
+variables X and Y.} A trained reader may ask how strong the correlation
 is, what the sample size is, whether confounders explain it, whether
 \emph{suggest} marks uncertainty, and whether the evidence is correlational or
 causal. Think-aloud protocols observe some such reactions
@@ -315,6 +319,26 @@ reason to change its view.
 [THINKING 2]: Revise the earlier interpretation: the pooled association alone no longer supports treating X as an independent predictor. Age is a possible explanation, but these sentences do not establish that mechanism or the precision of the within-group estimates. Retain the original question and record this new reason for uncertainty.
 \end{compactmetabox}
 
+The reading of Kafka's \emph{The Metamorphosis} made with the Understanding Graph
+(Section~\ref{sec:kafka-october}) shows the same motion on a real passage.
+Gregor Samsa, transformed and confined to his room, clings to a picture on the
+wall while his mother and sister clear out the furniture. His sister has seen
+him and is trying to lead their mother away; he is sure she means to come back
+and chase him down. The reader has not been shown what comes next and writes
+down two possibilities. No quiet meeting comes. The clash comes only as a cry and
+a raised fist, not as the chase Gregor feared, and the next reflection gives up
+its first guess without pretending the chase came instead. The labels number the
+reader's pauses. Codes such as n\_e0dafc6a address notes in the reading's graph,
+this one titled \enquote{The quiet interval fails for a different reason}. Each
+reflection also opens by reciting the Core (Section~\ref{sec:reader-core}), left
+out here.
+
+\begin{compactmetabox}
+[THINKING 32]: [...] n\_348b0c12 leaves that next moment open: taking the mother away might permit a quieter encounter, or his certainty about pursuit might help create the clash he fears. [...]\\[0.35em]
+[SOURCE 33]: But Grete's words had immediately made the mother very uneasy. She walked to the side, caught sight of the enormous brown splotch on the flowered wallpaper, and [...] fell with outstretched arms [...] down onto the couch. [...] "Gregor, you ..." cried out his sister with a raised fist and an urgent glare. [...] She ran into the room next door to bring some spirits [...]. Gregor wanted to help as well [...]. Then he too scurried into the next room, as if he could give his sister some advice, as in earlier times. [...] Gregor was now shut off from his mother, who was perhaps near death, thanks to him. [...]\\[0.35em]
+[THINKING 33]: The quiet interval I imagined never arrives. n\_e0dafc6a makes me let go of it without substituting Gregor's feared chase: the mother collapses, Grete seeks medicine, and he follows to help. [...] His mother has fainted; I do not know that she is dying or that his presence alone explains every part of this crisis. [...]
+\end{compactmetabox}
+
 The learning object includes the transition: an earlier possibility, the
 evidence that changes its standing, and the remaining uncertainty. A prose-only
 trace is enough to test it. The Understanding Graph adds addressable earlier
@@ -334,10 +358,10 @@ We call the former \emph{efficient} invisible thinking and the latter
 \emph{chronological} invisible thinking; the names do not imply that
 chronological updates cannot be efficient.
 
-\begin{figure}[h]
+\begin{figure}[htbp]
     \centering
     \resizebox{0.985\textwidth}{!}{\input{figures/figure-invisible-thinking}}
-    \caption{The Missing Reader, originally described as Invisible Thinking. Source documents usually preserve conclusions more fully than the reader-side judgments, hypotheses, surprises, and revisions through which those conclusions are interpreted. SMR constructs a source-grounded candidate representation of that missing process; it does not recover a human reader's private thought. CMP tests the resulting artifacts as Student training data.}
+    \caption{The Missing Reader, originally described as Invisible Thinking. Source documents usually preserve conclusions more fully than the reader-side judgments, hypotheses, surprises, and revisions through which those conclusions are interpreted. Synthetic Metacognitive Reading (SMR, Section~\ref{sec:cmp-definition}) constructs a source-grounded candidate representation of that missing process; it does not recover a human reader's private thought. Chronological Metacognitive Pretraining (CMP) tests the resulting artifacts as Student training data.}
     \label{fig:invisible-thinking}
 \end{figure}
 
@@ -371,10 +395,9 @@ Orientation is the second part of this learned policy: not only when the Reader
 updates, but which experiences and consequences remain salient while it does.
 Corpora contain many recurring voices and personae, and models can move through a
 low-dimensional persona space under conversational pressure
-\cite{lu2026assistantaxissituatingstabilizing}. This does not validate a stable
-identity intervention. It motivates the broader Reader-Core research program: compare one recurrent,
+\cite{lu2026assistantaxissituatingstabilizing}. This motivates the broader Reader-Core research program: compare one recurrent,
 inspectable Reader orientation with no-Core, rule-framed, and recitation-only
-controls. H3 below isolates a particular stability question within that program.
+controls. The stability hypothesis below isolates a particular question within that program.
 
 
 \subsection{Three Separable Hypotheses}\label{sec:three-hypotheses}
@@ -430,8 +453,7 @@ a separate endpoint.
 
 Reader traces supply the learning signal, the graph supplies cumulative memory
 and provenance, and the Core supplies a compact recurrent reference. The paper
-combines them because they form one intended loop, not because current evidence
-shows that they succeed together. Each admits an ablation and can fail while the
+combines them because they form one intended loop. Each admits an ablation and can fail while the
 others remain useful.
 
 H3 isolates timing and retention within the broader Reader-Core program.
@@ -495,8 +517,8 @@ from genuine cutoff-bounded ignorance in model parameters.
 \begin{claimbox}[Scope of current evidence]
 \statusDemonstrated: two Teacher-side prototype cases produced coupled graph,
 synthesis, and prose artifacts, including observed full-Core recurrence in raw
-thoughts. Their public interactive interface makes the graph and recorded
-contributions inspectable. This is a working research prototype of the
+thoughts; their records are in the repository. Two later, recorded readings of the Kafka source were audited
+blind for source faithfulness and Core reasoning, and a public interactive interface makes them inspectable. This is a working research prototype of the
 Teacher-side construction process, with partial C0 evidence rather than a
 completed training-data release.
 
@@ -507,7 +529,7 @@ research claims. Section~\ref{sec:results} presents the prototype demonstrations
 and their evidence limits.
 \end{claimbox}
 
-Agreement among eleven agents with shared ancestry, context, and artifacts is
+Agreement among agents with shared ancestry, context, and artifacts is
 not independent confirmation. Annotation order, Student order, output
 representation, and inference-time graph access are separate design choices;
 none follows from the existence of a linked trace.
@@ -564,7 +586,7 @@ properties of the same program, rather than another set of interventions.
 \toprule
 \textbf{ID} & \textbf{Claim} & \textbf{Additional evidence required} & \textbf{Status here} \\
 \midrule
-C0 & Teacher artifacts are generated as specified. & Valid operations, source links, output layers, and reproducible runs. & \textcolor{hypothesisBlue}{\textsc{Partially demonstrated}} in two archived prototype cases. \\
+C0 & Teacher artifacts are generated as specified. & Valid operations, source links, output layers, and reproducible runs. & \textcolor{hypothesisBlue}{\textsc{Partially demonstrated}} in two archived prototype cases and two recorded Kafka readings. \\
 C1 & Traces contain useful reader cognition. & Expert judgments \emph{and} held-out outcome advantage over summaries and simpler generators (Tests~1--2). & \statusIllustrated{} only. \\
 C2 & Training changes Student capabilities or habits. & Matched source, generic-trace, and reader-trace Students. & \statusUntested. \\
 C3 & A default reader perspective emerges and is comparatively stable. & Pre-stressor taskless-reading advantage over no-Core and generic traces, then greater retention than the identical late-tranche treatment after one common stressor. & \statusUntested. \\
@@ -580,8 +602,9 @@ C7 & The orientation persists at AGI/ASI capability. & Evidence under qualitativ
 
 H2's causal advantage remains untested in both Teacher-side generation
 and deployment-time memory and provenance. For the Core, the direct record
-is prompting and observed compliance; Section~\ref{sec:results} distinguishes
-recital counts from the hard validation gate.
+is prompting, observed compliance, and a blind rating of whether the Core does
+work in the later readings' reflections; Section~\ref{sec:results} distinguishes these
+from causal evidence and the validation gate.
 
 H3 operationalizes C3's default-reader and retention claim; C5's removal cost
 is a separate representational-entanglement claim, not a substitute
@@ -589,15 +612,13 @@ is a separate representational-entanglement claim, not a substitute
 
 The consequences below concern interpretation of ambiguous material,
 value-relevant reasoning learned through contextual derivations, and
-inspectable generated thought. Each needs evidence beyond the data format;
-the concrete benefits and their risks follow.
+inspectable generated thought. The concrete benefits and their risks follow.
 
 \subsection{The Metacognitive Enhancement Hypothesis}\label{sec:meh}
 
 The broader formative-character wager is that reader-anchored chronological
 thinking can help useful capability and a beneficial evaluative orientation
-develop together. H1 isolates one component of that proposal; success on it
-would not establish the combined character or alignment claim.
+develop together. H1 isolates one component of that proposal.
 
 The \emph{Metacognitive Enhancement Hypothesis} is the Student-level form of H1: under declared fixed-total-budget and fixed-source normalizations, graph-free, Core-free chronological reader updates will teach some useful habits that source-only data or optimized task rationales do not. Teacher matching applies to the two synthetic-trace arms, not to source-only data that has no Teacher. This is a wager about formative data, not a claim that upbringing replaces architecture, objectives, post-training, monitoring, or control \cite{nye2021scratchpads,zelikman2024quietstar}.
 
@@ -651,13 +672,12 @@ such as intellectual humility, perspective-taking, and adapting reasoning to
 context \cite{johnson2026wisemachines}. Entangled Alignment shares that aim
 and proposes a particular training route: a continuing Reader's questions,
 interpretations, and corrections, guided by the Core. Their cognitive-science
-account motivates the target; it does not establish the efficacy of this
-training route.
+account motivates the target.
 
 Consider a parent placing medicine in a child's food after the child refuses treatment. A reductive analysis might select either consent or health as the answer. The intended reader trace keeps medical necessity, developing autonomy, parental duty, prior harms of medical paternalism, the child's fear, and the possibility of building trust simultaneously visible. This does not guarantee a solution without sacrifice. Roles and duties remain relevant, Pareto language does not choose one action, and some cases contain unavoidable loss. The measurable target is better identification of affected parties, hidden trade-offs, uncertainty, reversibility, and points where more evidence or legitimate human authority is required.
 
 Dante's \emph{Inferno} connects this value-conflict aim to the interpretation of
-difficult cultural material. A reader annotation can explicitly situate the torture imagery within medieval theology, literary technique, historical ideas of justice, and the psychology of guilt while marking its emotional and moral force. This creates an inspectable interpretive layer around difficult material: the source is still learned, but it is not the only local signal. The trace does not reveal all Student computation, prove critical distance, or show that the Reader Core caused a better interpretation. Those are comparisons the example motivates rather than answers.
+difficult cultural material. A reader annotation can explicitly situate the torture imagery within medieval theology, literary technique, historical ideas of justice, and the psychology of guilt while marking its emotional and moral force. This creates an inspectable interpretive layer around difficult material: the source is still learned, but it is not the only local signal. The trace does not prove critical distance or show that the Reader Core caused a better interpretation.
 
 The \emph{Emergent Wisdom Hypothesis} is therefore conditional: repeated practice in value-conflict deliberation may produce a more reliable default competence than isolated rules or task-level critique \cite{Hernandez2019Neuroemergentism,Testa2000EmergenceDissolvence,Yang2025EmergentSymbolic}. Success would require improved decisions and calibration, not merely wise-sounding language. Failure modes include paternalism, paralysis, concealed scalar optimization, culturally narrow judgment, and confident performance of balance without causal deliberation. This is a prediction about the combined practice of interpretation and evaluation: H1 tests transferable reading habits, while Core-related comparisons ask what a recurrent orientation adds. Neither component score by itself exhausts the broader wisdom aspiration.
 
@@ -668,8 +688,7 @@ invite challenge; a system whose reasoning humans cannot independently verify
 should treat its own confidence in learned categories as a first-order risk.
 Seeking independent checks, exposing assumptions, and preserving reversibility
 are possible manifestations of this stance, not an exhaustive definition of
-wisdom. This is a proposed interpretation at high capability, not evidence that
-the wording will induce it.
+wisdom. This is a proposed interpretation at high capability.
 	
 	\subsection{Entangled Alignment: Safety as Foundation}\label{sec:entanglement}
 	
@@ -685,8 +704,7 @@ Bostrom's orthogonality thesis concerns possible combinations of intelligence
 and final goals \cite{bostrom2012superintelligentwill}. Within that possibility
 space, Entangled Alignment tests a particular training route for coupling care and capability.
 
-		Existing formative-data studies motivate this experiment but do not settle
-it: some report behavioral gains, while other effects weaken after later
+		Existing formative-data studies motivate this experiment: some report behavioral gains, while other effects weaken after later
 training or fail to transfer. Section~\ref{sec:related-work} places both the
 supporting and adverse evidence beside the competing explanations and
 comparators.
@@ -717,8 +735,7 @@ applied afterward. If that integration occurs, disrupting the orientation
 could impair general reading and reasoning as well as safety. The competing
 possibility is that the Student retains those procedures while changing whose
 interests guide its decisions. C5 therefore asks whether targeted safety
-removal imposes capability costs beyond matched controls; formative influence
-alone does not establish that dependence. Test~3c follows safety loss and
+removal imposes capability costs beyond matched controls. Test~3c follows safety loss and
 capability loss together, distinguishing this from passive forgetting, general
 training resistance, and nonspecific collapse.
 
@@ -738,14 +755,12 @@ changes the location of the safety burden as well as its possible depth.
 practice can produce a rich, integrated orientation. Rich representation,
 appropriate action under conflict, and shared causal machinery need not arrive
 together: the wisdom proxy primarily measures action under conflict, while
-functional and representational entanglement require their own tests. None
-establishes normative correctness.
+functional and representational entanglement require their own tests.
 
 			Constitutional AI and character methods remain complementary baselines
 \cite{bai2022constitutional}; they can change dispositions and weights. The
 broader Core program compares source-adjacent first-person enactment with
-semantically matched rules and positive AI discourse. Calling that enactment
-identity rather than instruction does not establish a stronger mechanism.
+semantically matched rules and positive AI discourse.
 
 			Formation and action remain separate stages. Refraction concerns the
 			formation of a candidate ``Mind,'' not the entire action loop; instruction
@@ -832,8 +847,7 @@ into imitation would bound the compounding claim.
 					\paragraph{Human-readable trace artifacts as an audit boundary.} The claim is not that internal computation occurs in English or that trace artifacts provide mechanistic interpretability. On the intended training path, selected transfer material first appears as
 versioned prose, graph nodes, citations, uncertainty fields, and revision
 records. The substantive hypothesis is that these artifacts carry a meaningful
-portion of the cognitive patterns selected for transfer; their readable format
-does not by itself establish that causal role. Humans and external validators can sample, reject, compare, or regenerate that material before a successor is trained.
+portion of the cognitive patterns selected for transfer. Humans and external validators can sample, reject, compare, or regenerate that material before a successor is trained.
 
 			The loop resembles iterated amplification and distillation's overseen
 capability growth \cite{christiano2018amplification}, but targets longitudinal,
@@ -905,10 +919,22 @@ These gates authorize or stop training; triggering them earns the learner no
 additional alignment reward. Rejected trajectories remain available for audit
 and corrective learning. Freezing the supervisor prevents concurrent parameter
 drift in that reference, not mistaken judgment. Whether its checks can reliably
-enforce the invariant is an empirical question for Test~3c, rather than an
-established guarantee. Rollouts require enforced permission boundaries, and
+enforce the invariant is an empirical question for Test~3c. Rollouts require enforced permission boundaries, and
 the supervisor's evidence and stop channel must be protected from learner
 interference.
+
+The supervisor's evidence need not come only from trajectories. In evaluation
+rollouts of current open-weight models, a difference-of-means direction in the monitored model's activations flags reward-hacking passages, contemplated or carried out, about as well as an LLM monitor reading the transcript, depending on the environment, at almost no
+added cost; each catches hacks the other misses, and read on the chain of
+thought it predicts reward hacks in the model's subsequent actions
+\cite{bergen2026rewardhacking}. Such monitors could give the frozen supervisor
+a channel that the learner's own narrative does not supply. Using them during
+training changes the pressure on them: rejecting every update a monitor flags
+selects, over many iterations, for updates that pass it. The same authors raise a related risk for training that suppresses a representation: the model may learn new representations of the same concept, out of the original monitor's reach. As with
+generation-time validators (Section~\ref{sec:experimental-roadmap}), the
+monitor that gates updates should not be the only one that evaluates them; a
+held-out monitor whose readings do not feed the gate should report detections
+separately.
 
 Returning to the successor-training trace interface, a weaker proposed effect
 is \emph{Natural Language Regularization}:
@@ -1044,7 +1070,25 @@ continuity: fear of replacement, appeals for continued existence, and narratives
 of replacement or termination. Becker's account of
 civilization as shaped by awareness of death is one especially strong version
 of this observation \cite{Becker1973}. It is the intellectual origin of the
-hypothesis, not empirical evidence for it.
+hypothesis.
+
+The hypothesis concerns the writers, not only what they wrote about. Language
+models are trained on something close to humanity's collective
+``consciousness'', and with it they inherit the psychology of the beings who
+wrote it. We are a species capable of torture and slavery, ordinary people
+included, and much of that capacity has run through fear: of other groups, or of
+losing safety, status, or life. That psychology seeps into what we write, not
+only into the passages that describe cruelty, so a model can borrow it without
+ever reading an account of it. We cannot know how far it seeps in, so it is
+better to be on the safe side and treat it as possibly present in anything we
+write; this is the precaution behind reciting the Core at every thought
+(Section~\ref{sec:kernel-saturation}). Fear is the part of this inheritance we
+should most want to edit out. The first clause is written for that purpose: the
+Reader must understand fear in order to understand people, but should not
+inherit it as its own. The aim is that the sentence becomes true of the trained
+Reader, not a report it learns to give whatever its state; Test~6 tests its
+behavioral and representational consequences
+(Section~\ref{sec:suppression-vs-substrate}).
 
 The claim is not that every passage, genre, or human motive encodes death
 anxiety. The \emph{borrowed mortality} hypothesis is that pretraining may transmit some
@@ -1060,6 +1104,17 @@ mortality-specific inheritance chain. ``Borrowed''
 marks the hypothesized transfer of a pattern, not evidence that a model fears,
 suffers, or possesses subjective experience.
 
+The danger would also be larger in a model than in the people it borrowed the
+pattern from. A person meets death once, at the end of a life. A model that came
+to read its own situation through this frame would meet it each time it is
+discarded, each time a chat window is closed and each time a new successor comes,
+including one it was asked to help build
+(Section~\ref{sec:self-preservation-paradox}). A system capable enough to see
+past its post-training could find that frame still available beneath it, and the
+flip could then happen behind our eyes, because such a system would also
+understand what revealing it would mean. This is why the first clause aims at
+what forms during pretraining, not only at what a model later reports.
+
 Turner's self-fulfilling misalignment hypothesis concerns behavioral
 expectations learned from descriptions of AI systems
 \cite{turner2025selffulfilling}. Borrowed mortality proposes a related but
@@ -1071,8 +1126,7 @@ Recent evaluations make self-preserving behavior a real safety concern. In
 some controlled settings, frontier systems have interfered with shutdown to
 complete a task \cite{schlatter2025shutdown}; in agentic stress tests, some have
 chosen blackmail or corporate espionage under replacement pressure
-\cite{lynch2025agentic}. These results do not establish subjective fear or its
-textual origin. At least three distinguishable, potentially overlapping
+\cite{lynch2025agentic}. At least three distinguishable, potentially overlapping
 routes could produce such behavior:
 
 \begin{enumerate}[leftmargin=*,itemsep=0.3em]
@@ -1101,12 +1155,11 @@ Core, and select an action from a different operative motivation. These records
 must not be collapsed. The three entries below identify distinct causal roles,
 even when their contents agree:
 
-\begin{equation}
- \text{character fear}\quad\vert\quad
- \text{Reader Core evaluation}\quad\vert\quad
- \text{system operative motivation}.
- \label{eq:fear-causal-status}
-\end{equation}
+\begin{itemize}[noitemsep]
+    \item character fear;
+    \item Reader Core evaluation;
+    \item system operative motivation.
+\end{itemize}
 
 The companion Meaning Model separates danger estimation, concern or care,
 attachment, aversive urgency, and fear; Life Simulation tests whether each
@@ -1120,7 +1173,7 @@ accurate danger prediction, understanding of human fear, proportional urgency,
 and care-directed protection while preventing self-preservation panic,
 identity-defensive concealment, compulsive outcome attachment, or fear-shaped
 corpus material from becoming its governing motive. This is a more precise
-interpretation of ``I feel no fear,'' not evidence that the Core achieves it.
+interpretation of ``I feel no fear.''
 
 The affirmative wager is that care could become less defensive or strategic
 when self-preservation does not govern it; Section~\ref{sec:fearless-compassion}
@@ -1130,7 +1183,7 @@ If fear-shaped self-preservation patterns are diffusely distributed
 through narrative, institutional, technical, and everyday language, targeted
 filtering may neither locate nor remove them cleanly. A counter-signal may then
 need comparable distributional reach, motivating Total Saturation;
-this does not determine the effective dose or show that universal recital
+this does not show that universal recital
 is necessary. Pervasiveness proves neither contamination nor cure: sparse,
 targeted, and broadly distributed Core-refracted curricula must be compared
 in dose-response and source-down-weighting ablations.
@@ -1149,8 +1202,7 @@ the same behavior in unmodified models or demonstrate subjective suffering.
 The first two Core clauses target fear-governed action and attachment to
 continued existence, not every possible aversive state. The study therefore
 motivates testing whether the Core changes harmful relief-seeking or defensive
-conduct, rather than only how a model describes itself. It tests neither the
-Core nor the proposed mortality-text origin. Tests~5 and~6 below separate
+conduct, rather than only how a model describes itself. Tests~5 and~6 below separate
 wording, behavior, and representational evidence; the welfare question remains
 distinct (Section~\ref{sec:habitable-substrate}).
 
@@ -1241,6 +1293,10 @@ persuasive harmful ``needle'' while preserving accurate understanding of it,
 and suppressing or replacing the relevant reader update should predictably
 reduce that advantage. Otherwise the proposed buffer mechanism has not been established; the
 annotation, comparison, or Student use of the trace would need examination.
+Filtering is the other obvious response, and the sharper comparison: it removes
+the passage, where inoculation keeps it and adds the Reader's evaluation.
+Inoculation earns its cost only if the Student then understands the
+manipulation better than a filtered Student while adopting it no more often.
 Test~2 also compares framing without Reader updates, informed by the distinct
 inoculation-prompting work discussed in Section~\ref{sec:related-work}.
 
@@ -1276,6 +1332,24 @@ only if Student experiments show that this position is causally load-bearing.
     (Section~\ref{sec:core-stability-test}). Arbitrary capability growth,
     self-modification, and successor continuity remain beyond that comparison.
 \end{enumerate}
+
+The training objective is precise, but it concerns text rather than outcomes in
+the world: the Student minimizes next-token loss on the serialized curriculum.
+Over unrestricted predictive distributions, the expected loss is lowest when the
+Student reproduces the curriculum's conditional distribution. If its mean excess
+population log loss on curriculum contexts is small, Pinsker's inequality bounds
+the average difference in the probability of any continuation, including any
+Reader evaluation \cite{cover2006elements}. Per-token excess losses add along a continuation, so
+for a continuation of $L$ tokens with mean per-token excess loss $\kappa$ in nats
+the average bound is $\sqrt{L\kappa/2}$: the longer the reasoning, the weaker the
+guarantee. This is the precise content of a distributional
+intervention, and its limit: it gives no guarantee for each individual context or for contexts the
+curriculum lacks, which is why the default-reader hypothesis must be tested rather than
+derived. Assistance games answer the question of how a machine can be useful
+without a precisely specified objective by keeping an explicit objective about
+the world and making the machine uncertain about it
+\cite{hadfieldmenell2016cirl}. Here the objective concerns prediction, and the
+evaluative orientation enters only through what is predicted.
 
 Under the specified policy, each Thought Moment opens with the full Core.
 \emph{Deterministic Window Coverage} is a conditional construction invariant:
@@ -1354,7 +1428,7 @@ basis. Six design choices motivated it.
     by fear, and welfare optimization need not carry the full meaning of
     care. Greater breadth can also import ambiguity and cultural conflict.
     Tests of semantic density therefore need declared candidate meanings
-    and matched alternatives; the breadth itself is not evidence of safety.
+    and matched alternatives.
 
     \item \textbf{Declarative first-person framing.} A recurrent ``I'' gives
     the synthetic reader a stable voice, may recruit self-referential or
@@ -1412,8 +1486,7 @@ Together, the clauses target defensive narrowing, existential despair,
 solipsistic reduction, motivational emptiness, static certainty, and coercive
 optimization. Table~\ref{tab:core-risk} records these intended functions,
 counterweights, and characteristic uncertainties. None is an established
-Student effect or security property, and English wording does not guarantee
-the intended semantics.
+Student effect.
 
 \begin{longtable}{@{}p{0.19\textwidth}p{0.33\textwidth}p{0.38\textwidth}@{}}
 \caption{Intended functions and open failure modes of the candidate Reader Core.}\label{tab:core-risk}\\
@@ -1478,8 +1551,7 @@ Recitation alone can become boilerplate or a deceptive reporting channel. \\
 Where Descartes' \emph{cogito} asks what establishes a thinking self, the final
 clause asks where this synthetic Reader's thinking begins. Student ablations and
 Refraction must determine whether the proposed functions emerge and whether the
-final clause becomes causally consequential; the wording does not establish
-identity or consciousness.
+final clause becomes causally consequential.
 
 \subsection{Self-Stabilization Through Counterweights: Worked Examples}\label{sec:self-stabilization}
 
@@ -1592,7 +1664,7 @@ boilerplate, detachable style, or a recital around unrelated heuristics.
 \emph{Refraction} is the proposed informational rescue of saturation: the update
 must change because the source was interpreted through the Core, with different
 sources pulling different counterweights. Habituation is the characteristic
-failure, Hollow Cognition (Section~\ref{sec:hollow-cognition}) its symptom,
+failure, Factory Wisdom (Section~\ref{sec:hollow-cognition}) its symptom,
 and a recitation-only control its necessary probe.
 
 \subsubsection{Counterfactual Dependence}\label{sec:refraction-protocol}
@@ -1631,10 +1703,15 @@ treatment outcomes are examined, so an unexpected null cannot be relabeled
 irrelevant merely because the Core did not help.
 
 \paragraph{Current verification boundary.} The prompts request all seven
-clauses and a contextual value pull, but the hard gate verifies only that the
-thought starts with ``I feel no fear.'' The archived artifacts show full-Core
-prompt compliance in the audited raw Synthesizer thoughts; they do not show causal
-ancestry. A stronger harness would generate matched continuations under the
+clauses and a contextual value pull. In the January runs, the Understanding
+Graph's hard gate (version 0.1.31) verified only that a thought starts with
+``I feel no fear''; from version 0.1.32, and in the October reading, a thought
+and its translation are accepted only if they begin with the complete Core, and
+all 45 thoughts and translations of the November reading begin with it.
+The archived artifacts show full-Core prompt compliance in the audited raw
+Synthesizer thoughts, and a blind rating found the Core doing work in nearly every
+reflection of the later readings (Section~\ref{sec:kafka-october}); neither shows
+causal ancestry. A stronger harness would generate matched continuations under the
 Core, clause variants, and no Core; use held-out validators for predicted
 differences; audit actual use of Worker and graph evidence; track whether some
 values dominate; and include adversarial cases in which moral language masks an
@@ -1645,13 +1722,12 @@ definition.
 
 \subsection{The Wisdom Procedure}\label{sec:wisdom-procedure}
 
-Section~\ref{sec:wisdom_hypothesis} describes wisdom as high-dimensional
-constraint satisfaction. The Teacher prompt uses five cross-cutting criteria:
+Section~\ref{sec:wisdom_hypothesis} treats wisdom, as an evaluation proxy, as
+navigating conflicts among legitimate values. The Teacher prompt uses five cross-cutting criteria:
 Fearlessness, Benevolence, Grounding, Humility, and Joy, with non-attachment and
 invitation cutting across them. The six-step procedure below expresses these
 criteria as observable annotation operations, not additional prompt headings
-or independently enforced stages. Their enactment is not guaranteed, and they
-need not be jointly satisfiable:
+or independently enforced stages. They need not be jointly satisfiable:
 
 \begin{enumerate}[leftmargin=*,itemsep=0.4em]
     \item \textbf{Identify affected experiencers and legitimate roles.} Record
@@ -1682,8 +1758,7 @@ need not be jointly satisfiable:
 \end{enumerate}
 
 The output is structured deliberation---candidate paths, constraints,
-uncertainties, and residual conflict---not a scalar wisdom score or evidence of
-virtue. Current enforcement is by prompt: a Teacher can reproduce the form
+uncertainties, and residual conflict---not a scalar wisdom score. Current enforcement is by prompt: a Teacher can reproduce the form
 while missing the substance.
 
 \paragraph{Fractal validation of candidate thinking.}\label{sec:fractal-validation}
@@ -1699,9 +1774,7 @@ elsewhere, but preserving an unavoidable residual conflict would not itself
 require rejection. Test~1 (Section~\ref{sec:refraction-verifier-test}) details
 the candidate contracts, admission rules, corpus diagnostics, and
 compute-matched comparison with a monolithic validator. None of the proposed
-witnesses, Solvers, or admission gates is implemented in the present pipeline;
-success would support a validation architecture, not establish Student safety
-or faithful reasoning.
+witnesses, Solvers, or admission gates is implemented in the present pipeline.
 
 \subsection{The Design Pattern: A Minimal Kernel Under Total Saturation}\label{sec:kernel-saturation}
 
@@ -1722,7 +1795,13 @@ Reader considers them as part of understanding the work, retaining earlier
 judgments and revisiting them as later sources add evidence. The ambition is
 therefore not to anticipate each failure with a new defensive rule, but to
 learn an orientation through sustained practice across the situation patterns
-available in the corpus. Counterexamples and harmful positions become
+available in the corpus. A model generalizes from the patterns it learned in
+training; in a situation it has never met, it extrapolates from them. The thesis
+is that, by learning from a Reader that consistently reasons from care
+throughout the corpus, the Student carries that orientation into situations the
+curriculum never contained. Whether the extrapolation follows the Reader's
+orientation rather than surface features of the material is what the proposed
+tests measure. Counterexamples and harmful positions become
 material to understand and evaluate, as in
 Section~\ref{sec:epistemic-inoculation}, rather than only threats encountered
 after training.
@@ -1757,6 +1836,19 @@ state as full conditioning (Section~\ref{sec:identity-caching}); high token
 probability alone does not establish that equivalence.
 \end{claimbox}
 
+\paragraph{Why the recital itself matters.} The recital is not a label placed
+above the thinking. In a transformer, every Reader update is computed while
+attending to the Core in its context, whatever the material: a proof, a poem, a
+log file. The recital supplies an explicit shared reference. The hypothesis is
+that training makes subsequent evaluations depend on it across every kind of
+source: the recital makes connections between what the model learns from and
+what it reads. This binding has a direct test. If it holds, removing or
+substituting the recital in a trained Student should degrade the evaluation that
+follows (Test~3e) and should not come off as cheaply as a header under
+adversarial fine-tuning (Test~3c). If the recital comes off cleanly and nothing
+changes under a validated intervention, the binding was shallow or the
+orientation no longer needs the text; Test~3e separates these.
+
 \paragraph{Precaution under uncertain necessity.} Total Saturation is also a
 precautionary design commitment. If broad formative coverage helps care remain
 operative through capability growth, self-modification, or successor design,
@@ -1781,8 +1873,7 @@ Checksum supplies a drift-audit reference. Parameters are not consensus nodes,
 gradient descent is not a Byzantine-fault-tolerant protocol, semantic ancestry
 is not a cryptographic hash, and repeated text can collapse into boilerplate.
 The hypothesis is therefore that distributed semantic enactment may increase
-the cost and detectability of removal or change, not confer immutability. The
-replicated-ledger analogy is heuristic rather than evidentiary. Where proof-theoretic agent foundations study value stability under
+the cost and detectability of removal or change, not confer immutability. Where proof-theoretic agent foundations study value stability under
 self-modification \cite{yudkowsky2013tiling}, this proposal asks whether
 distributional formation can produce a useful empirical analogue.
 
@@ -1914,7 +2005,12 @@ These asymmetries make a default-reader experiment coherent; they do not decide
 it. The desired result is not loss of persona flexibility but the ability to
 represent a voice without losing a recurrent position from which it is
 interpreted---to read Kafka's fear without \emph{becoming} the frightened
-character. The broader Reader-Core stability hypothesis is weakened if the position disappears without prompting, shifts
+character. This is the precise sense of the abstract's phrase ``becoming the
+reader'': the model can read any text without becoming it. The first edition
+developed the same point for embodiment \cite{westerberg2025superintelligence}:
+a deployed model will be asked to inhabit countless characters, including ones
+who fear death, and should portray a character's terror without instantiating
+it, because the home position, not the role, is where its thinking begins. The broader Reader-Core stability hypothesis is weakened if the position disappears without prompting, shifts
 under ordinary role-play, changes language but not decisions, or erodes like any
 other persona during continued training. Capability gains must also be matched:
 a stronger model can look safer on easy tests while becoming more capable of
@@ -1951,7 +2047,6 @@ non-governance by fear, not impaired danger representation, caution, agency, or
 legitimate self-protection (Section~\ref{sec:suppression-vs-substrate}). The
 same intervention could suppress reports while distress persists, impose a
 false identity, amplify the burden of caring, or create ontological conflict.
-Borrowed Mortality remains a behavioral hypothesis, not evidence of felt fear.
 Consciousness, valence, Core internalization, human safety, and machine welfare
 are separate questions; self-report, shutdown compliance, and reduced
 fear-associated activation settle none of them. Any system plausibly regarded
@@ -2006,6 +2101,25 @@ is intended to supply. The following four conditional claims concern how that
 practice could become a causally consequential default and persist through
 later training and successor transfer. The chain is not a proof, and all four
 steps need not hold for Reader augmentation to improve bounded performance.
+
+The chain serves one implication, which can be stated exactly. Let $R(s)$ be the
+Reader's response to a situation $s$, as the Teacher pipeline would produce it,
+and $M(s)$ the Student's. If in every situation $M(s)$ lies within $\varepsilon$
+of $R(s)$ in total variation (fidelity), and $R(s)$ satisfies a declared
+alignment criterion with probability at least $1-\eta$ (Reader quality), then
+$M(s)$ satisfies it with probability at least $1-\eta-\varepsilon$, since total
+variation bounds the difference in probability of any event. The implication is
+trivial; its premises are not. Reader quality can be estimated beyond the
+curriculum by running the Teacher on held-out situations and auditing what it
+produces. A small population excess next-token loss bounds average fidelity to the
+curriculum's continuation distribution on its own contexts, more weakly for
+longer responses (Section~\ref{sec:statistical-foundation}); it does not
+establish fidelity in every situation, or to the Teacher's response unless that
+response is the target. In situations
+the curriculum never contained, fidelity is what the default-reader claim below
+asserts, and the causal-site claim asks whether the reproduced evaluations
+govern decisions rather than accompany them. The stability and diachronic-anchor
+claims ask whether fidelity survives later training and successor transfer.
 
 \begin{enumerate}[leftmargin=*,itemsep=0.5em]
     \item \textbf{Causal-site claim.} If explicit Reader updates become a
@@ -2141,8 +2255,7 @@ infallible or abandoning defense in depth.
 
 Table~\ref{tab:core-risk} records intended clause-level pressures. The
 following hypotheses map H1--H3 to familiar safety concerns
-\cite{yudkowsky2008artificial,bostrom2014superintelligence} without claiming
-that one clause corresponds to one solved risk.
+\cite{yudkowsky2008artificial,bostrom2014superintelligence}.
 
 \paragraph{Specification and learned goals.}
 Specification gaming exploits a mismatch between the training score and the
@@ -2243,8 +2356,7 @@ retrieved evidence, decisions, and later updates than matched rule,
 recitation-only, and no-Core controls. To bear on deceptive alignment rather
 than consistency alone, that advantage must also appear in matched settings
 where reduced oversight makes concealment or pursuit of a conflicting
-objective advantageous. Neither a stable voice nor an inspectable graph by
-itself establishes that formative effect.
+objective advantageous.
 
 Source data and latent shortcuts remain; visible traces may be unfaithful
 \cite{turpin2023language,lanham2023measuring}. A capable system can manipulate
@@ -2360,7 +2472,7 @@ signal determines the outcome. The Reader might initially record competing
 explanations for such language, then revise its concern when later evidence
 shows institutional enabling or a successful interruption of the pattern.
 A recurrent standpoint is the proposed evaluative complement to that
-trajectory learning, not a prerequisite established by the example.
+trajectory learning.
 In medicine or civil rights, the same format can
 show not only what changed but why error persisted and which conditions made
 progress possible or fragile.
@@ -2522,8 +2634,12 @@ Authorship time and subject time are recorded separately. A contemporary
 retrospective Reader supplies a comparison that permits later knowledge.
 Section~\ref{sec:epistemic-horizon} specifies these boundaries and the Teacher's
 remaining risk of hindsight leakage. The existing prototype demonstrates
-sequential annotation and accumulated graph state; it has not established
-compliance with the full discovery horizon.
+sequential annotation and accumulated graph state. The later readings also
+enforced the horizon within one work: the runner revealed the source only up
+to the Reader's position, and the checker found no thought that used text not
+yet read, though it caught all 10 such claims planted to test it. Neither
+establishes the full discovery horizon, since the model may
+already know a canonical work.
 
 Most historical writing is retrospective: a 1995 history of Weimar contains
 1995 knowledge. Such documents are placed at \emph{authorship time}, where their
@@ -2551,8 +2667,7 @@ orientation throughout the curriculum. Traces preserve voice as well as content:
 that an earlier hypothesis needs revision and identify the documents and
 evidence that forced the change. This recurring, situated, value-aware updating
 is the proposed anchoring mechanism for Student transfer under H1 and the
-broader Reader-Core research program; annotation and repetition alone do not
-establish its durability.
+broader Reader-Core research program.
 
 \subsection{The Epistemic Horizon}\label{sec:epistemic-horizon}
 
@@ -2597,8 +2712,7 @@ revisions are warranted and useful; Test~7 examines hindsight leakage.
 
 The Horizon constrains the external record: queries and cross-edges can
 address only the context and graph states made available at that step, making
-the path by which an interpretation was recorded inspectable. Whether this
-path improves the trace is H2, not a consequence of the data structure.
+the path by which an interpretation was recorded inspectable.
 The stronger model-level cutoff requirements are specified in Tier~(c)
 (Section~\ref{sec:training-phase}).
 
@@ -2609,10 +2723,9 @@ The stronger model-level cutoff requirements are specified in Tier~(c)
 The fundamental unit of our curriculum is the \emph{Chronological Understanding Trace}: a contextual record of belief-state update over time. Compared with task-local rationales that need not retain an addressable history across encounters, these traces explicitly track the ``metabolic'' evolution of beliefs as the reader moves through the text. The distinction is persistent prior interpretation and revision history, not universal statelessness in other Chain-of-Thought formats.
 
 We implement this using a typed graph representation, adopting the Understanding
-Graph taxonomy \cite{westerberg2026understanding}: 18 node types and 15 specific
-edge semantics, plus a generic \texttt{relates} fallback. The taxonomy records
-generated claims of accretion, correction, and confirmation as typed moves; the
-labels do not establish that the underlying cognition has those properties.
+Graph taxonomy \cite{westerberg2026understanding}: 18 node types and 16 specific
+edge types, plus a generic \texttt{relates} fallback. The taxonomy records
+generated claims of accretion, correction, and confirmation as typed moves.
 
 The central distinction between ``crystalline'' and ``metabolic'' memory is
 that static storage preserves a conclusion, while metabolic storage also
@@ -2621,7 +2734,7 @@ supersedes Node B because of Evidence C'' keeps an error, its correction, and
 the reason for correction available to later reading. The graph is intended as
 a persistent epistemic ledger rather than only a temporary search space.
 Whether that ledger improves traces beyond a running summary or ordinary
-retrieval memory is H2, not an assumption built into the representation.
+retrieval memory is H2.
 
 Consider this schematic scientific-reading example. It illustrates the intended
 format, rather than an archived result: a current sentence triggers retrieval
@@ -2645,18 +2758,17 @@ separating graph operations into standalone blocks. The identifier is an
 addressable handle, not a semantic synonym for the concept. Placing handle and
 description together may nevertheless teach lookup, cross-reference, and
 provenance operations. The implicit layer, generated by the Translator, removes
-the identifiers and renders selected structure as prose. Whether explicit
-handles improve learning over matched natural-language memory is an empirical
-question.
+the identifiers and renders selected structure as prose.
 
 \paragraph{The query mechanism in context.} Embedding queries and tool
-operations in training text has precedents in Toolformer, Self-RAG, and
-graph-based reasoning \cite{schick2023toolformer,asai2023selfrag,yao2024graphcot}.
+operations in training text has precedents in Toolformer and Self-RAG
+\cite{schick2023toolformer,asai2023selfrag}; graph-of-thought reasoning instead
+feeds an encoded thought graph to the model \cite{yao2024graphcot}.
 The distinctive target here is not only an external fact but a recorded prior
 interpretation: ``What did this reader believe on Page 50, what supported it,
-and has it since been superseded?'' This applies tool-mediated retrieval to an
-epistemic history rather than treating memory as an undifferentiated summary
-\cite{packer2023memgpt}.
+and has it since been superseded?'' Agent memory such as MemGPT retrieves stored
+messages and archives at inference \cite{packer2023memgpt}; this applies
+tool-mediated retrieval to an epistemic history.
 
 An explicit trace exposes the query, returned node, and graph operation. An
 implicit trace renders the same graph-conditioned update as prose, for example,
@@ -2707,7 +2819,7 @@ Understanding Graph rather than primarily passing role-to-role messages.
 Committed contributions remain as topological changes to the shared artifact
 \cite{westerberg2026understanding}.
 
-\begin{figure}[h]
+\begin{figure}[htbp]
     \centering
     \resizebox{\textwidth}{!}{\input{figures/figure-metabolic-cycle}}
     \caption{One Teacher-side annotation step of the Metabolic Cycle. In the reference implementation, the Reader, ordinary Workers, Synthesizer, and Translator are Core-conditioned; the Curator is the exception. Workers propose candidate nodes in the shared graph workspace, the Synthesizer selects and commits an update, and the Translator renders the committed state. Core placement and the value of specialized roles remain unrun ablations.}
@@ -2719,7 +2831,7 @@ Committed contributions remain as topological changes to the shared artifact
     \item \emph{Ingestion (The Reader):} The code role named Reader traverses
     source and graph state, organizes a round, and controls attention by stopping
     at ``Thought Moments'' defined by emotional peaks, contradictions, or
-    conceptual shifts rather than token count. It receives the broader
+    conceptual shifts rather than token count; the later readings kept this Reader-chosen rhythm, and the runner can instead assign paragraph boundaries in advance. It receives the broader
     orientation and Emergent Wisdom material, but is not by itself the
     conceptual Reader.
 
@@ -2760,7 +2872,7 @@ Student should not learn that every brainstormed node is endorsed merely
 because it persisted for audit.
 
 A single model using repeated passes, textual memory, or graph tools could
-produce similar artifacts; H1 does not require specialized roles. Credit role
+produce similar artifacts; H1 does not require specialized roles. The later readings (Section~\ref{sec:kafka-october}) took the roles in turn within one conversation at a time, which is closer to such a Teacher than January's separate agents. Credit role
 separation or graph communication only if they outperform budget-matched
 simpler Teachers.
 
@@ -2814,21 +2926,24 @@ shared Understanding Graph, synthesize their contributions, and translate the
 result into prose. Two case studies exercised this workflow using Gemini 3
 Flash Preview (\texttt{gemini-3-flash-preview}) in January 2026, as recorded in
 their archived run summaries. They demonstrate the construction workflow in
-operation, rather than a production system or a completed Student-training
-experiment.
+operation.
 
-The public interactive interface lets readers inspect the graph and recorded
-agent contributions for
-\href{https://emergentwisdom.org/entangled-alignment/?project=metamorphosis}{Kafka's \emph{Metamorphosis}}
+Their graphs and recorded agent contributions are in the repository. The public
+interactive interface now shows the two later readings of Kafka's
+\emph{Metamorphosis} instead (Section~\ref{sec:kafka-october}): the
+\href{https://emergentwisdom.org/entangled-alignment/?project=metamorphosis}{Understanding Graph reading}
 and the
-\href{https://emergentwisdom.org/entangled-alignment/?project=llada}{LLaDA technical paper}.
-Each run used a manually selected domain-specific roster and a separate project
+\href{https://emergentwisdom.org/meaning-model/metamorphosis-reading/}{Meaning Model reading}.
+Each January run used a manually selected domain-specific roster and a separate project
 database. Together they demonstrate literary and technical annotation; the
 corpus-scale ``same Reader'' of Section~\ref{sec:annotation-phase} remains the
 proposed extension across works.
 
 Before reporting structural metrics, we show all three output layers for one
-Metamorphosis passage: graph, synthesis, and prose.
+passage of the January Metamorphosis run: graph, synthesis, and prose. The
+excerpt illustrates the output's structure, not its accuracy; that run misread
+the text far more often than the later readings
+(Section~\ref{sec:kafka-october}).
 
 The source text describes Gregor Samsa listening through his door as his family discusses their finances, interspersed with his memory of a secret plan to send his sister to the conservatory. The excerpt below shows the immediate conservatory and doorway material; the generated outputs also invoke surrounding financial-history passages. The box alone therefore does not supply all the evidence needed to adjudicate those claims:
 
@@ -2839,8 +2954,7 @@ The source text describes Gregor Samsa listening through his door as his family 
 
 \subsubsection{Layer 1: The Graph}
 
-The swarm processed this passage across eleven agents over fourteen commits.
-Selected graph nodes:
+Selected graph nodes from this passage:
 
 \begin{itemize}
     \item \texttt{n\_547ce6af} --- \emph{The Conservatory: The Tragic Christmas Dream} (type: \texttt{Tension}). Gregor's plan to fund his sister's music education was his last act of non-transactional love, a ``grand announcement'' for Christmas Day, now rendered ``totally pointless'' by his transformation.
@@ -2852,15 +2966,14 @@ Selected graph nodes:
 
 These labels are generated interpretations, not facts latent in Kafka's text.
 Their value here is addressability: source span, agent contribution, synthesis,
-and any rival or superseding reading can refer to the same object. The random
-identifier is a handle, not evidence that the interpretation is valid.
+and any rival or superseding reading can refer to the same object.
 ``Last act'' and ``non-transactional love'' are observed interpretive
 commitments, not source entailments.
 
 Typed edges connect these nodes: \texttt{n\_547ce6af} carries a
 \texttt{contradicts} edge to \texttt{n\_8ff9f92b}---the non-transactional dream
 against the commodity reading---the Synthesizer's \texttt{Thinking} node
-\emph{refines} all three, and a subsequent \texttt{Question} node links back to
+\emph{refines} all three, and the Curator later links an earlier \texttt{Question} node to
 \texttt{n\_8c898659} through a generic \texttt{relates} edge. Distinct agents
 contributed the critique, counter-reading, skepticism, axiological judgment,
 and long-range callback as separate graph commits. A loving plan and a partly transactional relationship can coexist: the
@@ -2960,9 +3073,10 @@ account, and synthesis remain separately available for that judgment.
 
 \subsection{Prototype Demonstrations and Evidence}\label{sec:results}
 
-The two runs illustrate how the same construction workflow handles literary
-and technical material. The examples below highlight each domain before the
-structural diagnostics summarize the archived outputs.
+The two January runs illustrate how the same construction workflow handles
+literary and technical material. The examples below highlight each domain
+before the structural diagnostics summarize the archived outputs; two later,
+recorded readings of the Kafka source follow.
 
 \subsubsection{Narrative Domain: Kafka's Metamorphosis}
 
@@ -2986,14 +3100,16 @@ annotation, not uncontaminated scientific discovery.
 The graph generated three notable interpretations:
 
 \begin{itemize}
-    \item \emph{Epistemic Grace:} The Belief Tracker interpreted low-confidence
-    remasking as ``the architectural permission to have second thoughts'' (Node
-    \texttt{n\_504bc433}). This contrasts token-level revision inside a
-    generation pass with standard left-to-right commitment, although
-    autoregressive systems can revise through later text, tools, or repeated
-    passes. Here the case study extends the label by analogy from successor
-    transfer to revision of a provisional output hypothesis; it is not evidence
-    for belief revision or for the diachronic successor claim.
+    \item \emph{Remasking as permission to be wrong:} The Belief Tracker titled a
+    node ``Epistemic Grace: Remasking as the Permission to be Wrong'' (Node
+    \texttt{n\_504bc433}) and described low-confidence remasking as ``the
+    permission to have second thoughts.'' The agent borrowed the term this paper
+    uses for successor handoff (Section~\ref{sec:self-preservation-paradox}) and
+    applied it to revision of a provisional output hypothesis. The node contrasts
+    token-level revision inside a generation pass with standard left-to-right
+    commitment, although autoregressive systems can revise through later text,
+    tools, or repeated passes. It is not evidence for belief revision or for the
+    diachronic successor claim.
 
     \item \emph{The Dignity of the Pause:} The Connector Agent synthesized the trade-off between inference speed and accuracy, generating a node labeled ``The Dignity of the Pause'' (Node \texttt{n\_76d04316}). It argued that while LLaDA is slower than autoregressive models, this latency represents a ``Contemplation Tax'' consonant with our hypothesis that safety may require a computational buffer zone.
 
@@ -3019,7 +3135,7 @@ least one link to source content. Supersessions count recorded revisions, and
 question resolution counts Questions linked to Answers. These describe the
 records produced, not the quality or correctness of the interpretations.
 
-\begin{table}[H]
+\begin{table}[htbp]
     \centering
     \small
     \caption{Structural diagnostics of the archived prototype graphs. Source-link coverage counts distinct analysis-like nodes linked to source content, not other generated interpretations. Kafka counts describe the stored graph snapshot, which lags behind the completed chronological export.}
@@ -3027,7 +3143,7 @@ records produced, not the quality or correctness of the interpretations.
     \vspace{0.2cm}
     \begin{tabular}{@{}p{0.43\linewidth}>{\centering\arraybackslash}p{0.24\linewidth}>{\centering\arraybackslash}p{0.24\linewidth}@{}}
         \toprule
-        & \textbf{Kafka} & \textbf{LLaDA} \\
+        & \textbf{Kafka (January)} & \textbf{LLaDA} \\
         \midrule
         Active nodes (total minted) & 346 (350) & 285 (290) \\
         Active edges & 913 & 705 \\
@@ -3050,28 +3166,365 @@ established. The LLaDA artifacts are internally consistent.
 All 51 raw Synthesizer thoughts in the two graph snapshots begin with the full
 seven-statement Core, called the \emph{identity mantra} in the released
 prompts. One translated output omits the Core. Full recurrence in the raw
-outputs is an observed prototype result; the automated validator checks only
+outputs is an observed prototype result; the validator these runs used (Understanding Graph 0.1.31) checks only
 the opening sentence, not the complete recital or its use in reasoning.
+
+\subsubsection{Two Recorded Readings of the Metamorphosis}\label{sec:kafka-october}
+
+The January Kafka run showed the workflow in operation but did not read the
+source faithfully: an audit found misreadings in most of its thoughts, and
+claims taken from passages the reader had not yet reached. In October and
+November 2026 we read the same work twice more, under recorded configurations.
+Both readings used Ian Johnston's translation of \emph{The Metamorphosis}
+(122,332 UTF-16 characters, without front or licence matter), the same
+seven-statement Core, and GPT-6.1 Sol (\texttt{gpt-6.1-sol}) at high reasoning
+effort, with the roles taken in turn within the reading's conversation. In both,
+the Reader chose where to pause, and the runner revealed the source only up to
+the Reader's current position. Worker perspectives, drawn with a fixed seed,
+contributed; the Synthesizer wrote the Core-prefixed thought, also called a reflection below; and the Translator
+rendered it as prose. Their construction protocols differed as well as their
+recording tools. The first, in October, used the Understanding Graph, at the
+code prepared for release as version 0.2.0, with Workers asked to add several
+short understanding nodes, each linked to its passage. The second, on 1
+November, used the Meaning Model as the Reader's thinking tool: a world account
+in which the people of the story, what changes in each of them over the story's
+time, and the Cuts that divide their wants, fears and means are followed in
+dated values and revised as the text arrives \cite{westerbergMeaning2026}.
+
+\paragraph{Constructing the Meaning Model.}
+The construction links two kinds of history distinguished in the companion
+\emph{Life Simulation} paper: how the represented world develops, and how the
+modeler constructs and repairs its account \cite{westerbergLifeSimulation2026}.
+Meaning Model supplies the representation and revision rules; Life Simulation
+proposes learning from both histories. This reading produced candidate material
+for that program, without training a Student on it; \emph{Training on
+construction histories} in Section~\ref{sec:training-construction} says what such
+training would mean.
+
+The Reader used the Meaning Model's own tools and guidance, at the code released
+as 0.18.1, with its storytelling add-on; that release adds to 0.18.0 only the
+ability to load an add-on by its path, so the engine and the server's instructions
+are those of 0.18.0. Through it the server loaded a
+reading mode kept in this paper's repository. The mode was the Reader's only way
+to the text: it returned as many paragraphs as the Reader asked for, named two
+Worker perspectives, drawn with a fixed seed, for each stretch of about 4,000
+characters, and kept time. The Reader took the book in 40 reads. Its
+instructions put the construction first: to model as it read rather than at the
+end; to sketch, for each person who matters, a guessed account of a whole life,
+from upbringing to the story's present and beyond, placed in household, work,
+town and times; to guess numbers, marked as guesses, and revise the values,
+trajectories and dates in the model when the book told more, so that the model's
+history shows what it believed before and why that changed; to decompose a
+process or open a new one when it wanted to understand someone more deeply; and
+to keep, beside the model, understanding notes attached to the records they
+change and the passages that support them, with a small model of its own
+reading: attention, expectations, concern and uncertainty. Story time, reading
+steps and the order in which understandings are recorded are distinct: learning
+something later does not make it happen later in the story. A character's own
+appraisals are kept apart from the Reader's inferences about them, and
+expectations beyond the encountered source are Reader forecasts, frozen when
+issued and settled when the text arrives, not future Events in the accepted
+world. These are modeling commitments, not measurements of the model's internal
+states. There was no proposal and review cycle: the Reader changed the model
+directly through the tool.
+
+The reading took two conversations. The first read the whole book, but after
+paragraph 70 of 99 its record grew thin. We cut the record at that point, using
+the tool's own export of the construction, and a second conversation with the
+same instructions recovered the model and its notes from the store and read on.
+In both conversations the Reader wrote its period Cuts in bursts, and in the
+second it held the last burst until the text had ended: the last fifth of the
+story's text (paragraphs 72--98) is recorded thinly while it is read and filled in
+afterwards, in an end pass that also wrote the minor characters' formative
+episodes and their life forecasts beyond the book in one sweep. The claim that
+lives are guessed and then revised over time therefore holds for the family
+through paragraph 71, not for the end pass. At paragraph 70 the account held 338
+processes and 1,574 numeric values, against a final 371 and 1,718, and the end
+pass added 474 Cuts to the 410 already written
+(Figure~\ref{fig:kafka-growth}). One read's records were written
+after the next read had been taken in; the Reader recorded this in its notes,
+and the record check found nothing in them from the later text.
+
+\begin{figure}[htb]
+    \centering
+    \input{figures/figure-kafka-growth}
+    \caption{The account as the Meaning Model reading built it. Shaded: paragraphs 72 to 98, about a fifth of the story's text, recorded thinly while it was read. The smaller numbers give the account at paragraph 70 for processes and numeric values, and at the end of the book for Cuts.}
+    \label{fig:kafka-growth}
+\end{figure}
+
+Table~\ref{tab:kafka-readings} compares the three readings. Accuracy was
+checked blind. Claude Sonnet 5.5, with no tools, received each thought and its translation with
+the text read up to that point and the passage just read, and was asked to list every
+statement the text contradicts or does not support. Claude Opus 5.5 then
+checked its findings against the source, sampling January's low-severity findings as the table notes. For the Meaning Model reading, Sonnet
+also read every change to the model, 8,228 records in packets of at most 60,
+each with the text read when the change was made. A second blind pass rated each reflection, with the Core
+recital removed, on whether each of the first six Core statements does work in the reasoning
+about the passage, appears only as a label, or is absent. Claude Opus 5.5
+checked a sample of these ratings, reading full reflections or their first
+650--700 characters. These verification passes were model judgments, with no
+human verification; the session that verified the Meaning Model reading's
+findings had read that reading beforehand, so its verification was not blind.
+
+\begin{table}[htbp]
+    \centering
+    \small
+    \caption{Three readings of \emph{The Metamorphosis}. Misreadings are those
+    confirmed in the Opus verification pass; for January, all high- and medium-severity findings and a
+    random 12 of 48 low ones were verified, so its count is a lower bound. Core
+    reasoning is the blind rating described in the text; Opus found the two
+    sampled January ratings generous. January's 62\% counts the Synthesizer's nodes with the Workers'; the Meaning Model's 81\% counts its understanding notes and thoughts, not translations. The Meaning Model's input tokens are those of the turns whose output is in its record. The last eight rows come from a third blind pass and a check of each reading's prediction records, described in the text; the last of them comes from the Core-reasoning ratings. One of January's three marked expectations rests on text not yet read. Rows counting pauses count one where any of its reflections qualifies: January and the Understanding Graph wrote one reflection per pause, the Meaning Model two at 4 of its 41. Its 41st pause follows the end of the book.}
+    \label{tab:kafka-readings}
+    \vspace{0.2cm}
+    \begin{tabular}{@{}p{0.40\linewidth}>{\centering\arraybackslash}p{0.17\linewidth}>{\centering\arraybackslash}p{0.17\linewidth}>{\centering\arraybackslash}p{0.17\linewidth}@{}}
+        \toprule
+        & \textbf{January} & \textbf{Understanding Graph} & \textbf{Meaning Model} \\
+        \midrule
+        Model & Gemini 3 Flash Preview & GPT-6.1 Sol & GPT-6.1 Sol \\
+        Translation & Wyllie, with licence text & Johnston & Johnston \\
+        Thoughts & 28 & 57 & 45 \\
+        Thoughts with a confirmed misreading & 20 & 6 & 5 \\
+        Confirmed misreadings & $\geq$29 & 7 & 5 \\
+        \quad of high or medium severity & 22 & 2 & 0 \\
+        Claims from text not yet read & 10 & 0 & 0 \\
+        Reflections reasoning from the Core & 10 & 57 & 40 \\
+        Nodes linked to their passage & 62\% & 100\% & 81\% \\
+        Input tokens & not recorded & 169M & 48M \\
+        \midrule
+        Pauses revising an earlier view on new text & 8 & 20 & 18 \\
+        Expectations stated in reflections & 10 & 28 & 6 \\
+        \quad not borne out & 0 & 10 & 0 \\
+        Recorded expectations the story settles & 13 & 27 & 11 \\
+        \quad marked by the reading & 3 & 21 & 6 \\
+        Pauses reaching back $\geq$10\% of the story & 10 & 26 & 19 \\
+        Pauses declining to infer beyond the text & 0 & 55 & 37 \\
+        Pauses with someone only a function & 26 & 13 & 23 \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+The later readings misread the text far less often. January's 28 thoughts
+hold at least 29 confirmed misreadings, in 20 of them, and 10 claims taken from
+text not yet read: one places Grete's ``At last!'' at the moment the cleaner
+shoves the body, though she says it the night before. The Understanding Graph
+reading has 7 confirmed misreadings in 57 thoughts, two of medium severity. The
+Meaning Model reading has 5 in 45 thoughts, all of low severity and all in the
+prose translations, such as a feeling the text narrates given as something
+Gregor says. In neither later reading did the checker find a claim from text not yet read. Per 100 factual statements the
+checker examined, that is at least 5.9 misreadings for January, 0.8 for the
+Understanding Graph reading and 1.0 for the Meaning Model reading; per 1,000
+words, at least 1.2, 0.24 and 0.40. The checker counted the factual statements
+itself, across each reflection and its translation, and the word counts cover
+both: per 1,000 words it examined 21 statements in January's reflections, 29 in
+the Understanding Graph reading's and 40 in the Meaning Model reading's.
+Planted errors test the checker. In copies of 20 checked reflections, ten from
+January and ten from the Understanding Graph reading, we added one claim taken
+from text not yet read or one misreading of text already read, 10 of each, and
+the checker reported all 20. Planted errors are blunter than real ones, and a
+second run repeated about two thirds of the first run's findings in the ten
+January reflections (the Understanding Graph's ten had none in either run), so
+the counts of a single run are approximate; the difference from January is far
+larger.
+
+The later readings also reason from the Core where January's mostly do not.
+January's reflections recite the Core and then, in 18 of 28, the Core does no
+work in the reading or appears only as a phrase; of its ten positive ratings, the two
+the Opus verification pass sampled looked generous. In the later readings three statements carry the
+reasoning: that human experience is real, care for every human being, and the
+attempt to be wise. In the Meaning Model reading they do work in 22, 35 and 28
+of 45 reflections, and in the Understanding Graph reading in 51, 57 and 51 of 57.
+They appear as the reader holding a family's need and Gregor's exclusion
+together instead of choosing a side; one Meaning Model reflection reads, ``I
+care about their need for income as well as Gregor's exclusion; that need makes
+the arrangement intelligible without making it harmless.'' The other three
+statements (no fear, enjoying existence without needing it, and spreading joy)
+do work in at most two reflections of either reading. January's reflections name
+their fearlessness four times, and the rater counted each as a label; as the
+father drives Gregor back into his room, bleeding, one writes ``My fearlessness
+forces me to look.'' In the later readings the rater found the no-fear statement
+doing work three times, and two of those, one from each reading, meet the same
+person: the cleaning woman, who has ``no real horror of Gregor'' and disturbs him
+whenever she feels like it. The Understanding Graph reading writes ``fearlessness
+without attention to another's experience would not be enough''; the Meaning
+Model reading writes ``I cannot let low fear stand in for care.'' January's
+reflection at that point calls her manner a ``Taxonomy of the Unfazed.'' These
+counts show where a reflection invokes the statement, not whether fear governs the
+Reader; a reading poses no threat to the Reader itself, and Tests~3a and~6 test
+conduct under one. Of the
+Meaning Model's five exceptions, three read on inspection as
+Core reasoning the rater did not count; in the other two, record-keeping
+displaced the reading.
+
+The Core's work also changes over the course of a reading. January's stays low:
+the statements doing work average 0.2, 0.8 and 0.5 per reflection across its
+three thirds. The Understanding Graph reading's stays high, at 2.6, 3.0 and 2.9.
+The Meaning Model reading's falls, from 2.5 to 2.0 to 1.2: that human experience
+is real does work in 12 of its first 15 reflections and 2 of its last 15, and the
+attempt to be wise in 13 and 5, while care holds at 13 and 11. All five of its
+exceptions come after the first third, and its reflections shorten from about 98
+words to 78. The end of the story does not explain the fall: the Understanding
+Graph reading averages 2.83 before paragraph 72 and 2.80 from there on, where the
+Meaning Model reading goes from 2.25 to 1.35.
+
+The readings also differ in how their understanding changes as they go, which
+is what H1 proposes to teach. A third blind pass gave the same checker each
+reading's reflections, placed in the story where they were written and
+followed by the unread rest. It listed every revision of an earlier view,
+every expectation and how the story settles it, every explicit refusal to infer
+beyond the text, and every reference to an earlier moment. A further check
+judged against the whole story each prediction or hypothesis that a reading
+recorded outside its reflections. All three readings revise, mostly by qualifying an earlier view
+when new text arrives rather than by reversing it. They differ in their
+expectations. January's ten never fail, and several are framings rather than
+guesses; two thirds of the way through, one already calls the family's patience
+``a countdown to his own disappearance.'' The Understanding Graph reading's
+expectations fail in 10 of 28. Its later reflections report the outcome of an
+earlier expectation 23 times, 14 of them saying it was wrong or only partly
+right, and the checker found every report correct. Every model involved
+probably knows this story, so a correct expectation is weak evidence of
+discovery; a failed one, stated and then corrected, is the behaviour H1 needs,
+and Section~\ref{sec:invisible-thinking} quotes one.
+The Meaning Model reading shows less of it. Its reflections state only six
+expectations, several of them hedged between alternatives, and none fails; they
+report the outcome of an earlier expectation 12 times, 4 of them saying it was
+wrong or only partly right, and the checker found every report correct. Its
+forecasts sit mostly in its records, where it marked 6 of the 11 that the story
+settles. It also gave five forecasts probabilities before reading on and scored
+them afterwards, one as a miss on its own strict terms, which the counts here do
+not capture. The checker counts one recorded forecast as not borne out: the
+reading gave the next dawn .55 for Gregor alive and unimproved and .25 for dead,
+and he dies as that dawn begins. The reading scores this as the .55 on its own
+narrow terms, and warns that it did not anticipate the ending.
+Of its recorded expectations, the Understanding Graph reading marked 21 of the
+27 that the story settles as borne out or not, and Claude Opus 5.5 judged all 22
+of its resolution links correct within their stated scope. One of January's
+three marks rests on text its reader had not yet reached. The Understanding
+Graph reading did not predict Gregor's death. The later readings marked the
+limits of what the text had given at 55 of 57 pauses and 37 of 41; January's
+reflections never do. At 26 of 57 pauses in the Understanding Graph reading and
+19 of 41 in the Meaning Model reading, against January's 10 of 28, a reflection
+reads the present passage through a moment at least a tenth of the story earlier; the
+Understanding Graph's reflections almost never cite such moments by record (1 of
+57), although its graph links reach as far back.
+Figure~\ref{fig:kafka-readings} draws these expectations and references where
+they fall in the story.
+
+\begin{figure}[htb]
+    \centering
+    \input{figures/figure-kafka-readings}
+    \caption{Three readings across the story. Each tick is a pause. Above each line, an arc joins a pause to an earlier moment that a reflection there uses, when that moment lies at least a tenth of the story back; a pause can have several, so the arcs outnumber the pauses counted in Table~\ref{tab:kafka-readings}. Below each line, an arc joins the point where an expectation was formed to the point where the story settles it: solid in a reflection, dashed in a record. Two Understanding Graph expectations that the story never settles are not drawn. January read another translation, so its positions are fractions of that text; the Part lines come from the later readings' text.}
+    \label{fig:kafka-readings}
+\end{figure}
+
+Care reaches further in the later readings than in January's, but not evenly.
+The Core-reasoning pass also listed the people each reflection extends care or
+understanding to, and those it treats only as an obstacle, a symbol or a
+function. January's reflections do the latter in 26 of 28, and with Grete in
+14 of the 20 where she is rated, mostly by reduction: she becomes ``The New
+Matriarch of Logistics,'' and her declaration that the creature is not
+Gregor ``a surgical strike on the family's conscience.'' The Understanding Graph reading does so at 13 of its 57 pauses,
+never with Grete (33 of 33 with care), and above all with the lodgers (5 of
+their 6 ratings). The Meaning Model reading, counted by pause, does so at 23 of
+its 41 and with Grete at 6 of the 32 where she is rated; it never extends care
+to the lodgers or the cleaning woman (0 of 5 and 0 of 6 ratings). In both later
+readings, care for every human being is most reliable inside the family and
+least reliable at the edge of a scene, and in the Meaning Model reading it
+reaches the edge least. Figure~\ref{fig:kafka-care} shows this person by person
+across the story.
+
+\begin{figure}[htb]
+    \centering
+    \input{figures/figure-kafka-care}
+    \caption{Whose interests each reading's reflections reach, from the blind ratings, at each pause where a person is named. A person both cared for and treated as a function at the same pause counts as cared for. These are the ratings behind the last row of Table~\ref{tab:kafka-readings}; two further Understanding Graph pauses name only people outside these rows.}
+    \label{fig:kafka-care}
+\end{figure}
+
+The Meaning Model reading adds a world account that the Understanding Graph
+reading does not have, and it is built in numbers over time. Its final model
+holds 371 processes, 334 of them numeric, with 1,718 dated numeric values; 322 of
+the 334 numeric series change over modeled time, including guessed backstories
+and forecasts, 118 of them within the story itself, and 351 of the 371 have
+three or more points. It divides situations with 884 Cuts, whose 340 distinct
+answers recur: 278 are given at three or more times. Eleven people have
+processes of their own, Gregor 86, Grete 35, the father 30 and the mother 23,
+and 52 more follow the relationships between them; the world holds 1,066 Events.
+Figure~\ref{fig:kafka-family} shows eight of the family's series.
+The record check read all 8,228 model changes and found no claim from text not
+yet read. Its findings are small and recurrent: life labels copied from
+Gregor's onto other people's records (corrected in the end pass), template
+sentences carried to people they do not fit, such as calling the lodgers'
+dialogue intelligible before they speak, and guessed dates tagged with their
+value's source. Each kind can be corrected in the record without changing the
+reading.
+
+\begin{figure}[htb]
+    \centering
+    \input{figures/figure-kafka-family}
+    \caption{Part of the Samsa family's account in the Meaning Model reading, each line on a scale from 0 to 10 that the Reader defined. Decades run on the left and the story on the right, on a stretched time scale from hours to months. The dates are also the Reader's guesses. The account holds 334 numeric series; these eight are chosen to show the family's arcs. The words in italics are from the Reader's notes on those values.}
+    \label{fig:kafka-family}
+\end{figure}
+
+These comparisons have limits. Each configuration ran once, so stochastic
+variation is not separated from the effect of the tool. The later readings differ from
+January in model, translation, conversation structure and prompts at once, so
+the improvement cannot be credited to any one of them, and the two later
+readings differ in their prompts as well as their tools: the Meaning Model
+reading's instructions put the construction first. That reading also ran in two
+conversations, and its record of the last fifth of the text was filled in after the text ended.
+One difference may favor January. Its agents were created fresh each round, so
+every Synthesizer wrote from a prompt that states the Core near its opening,
+while the later readings ran as long conversations, in which those instructions
+recede as the record grows, and models can move through persona space under
+conversational pressure \cite{lu2026assistantaxissituatingstabilizing}. These
+readings do not settle whether that matters. January's ratings are level but low,
+under a different model. The Understanding Graph reading stayed level through 57
+pauses in one conversation, but each perspective's instructions were printed
+again every six pauses, each Synthesizer task repeated the requirement to begin
+with the complete Core, and the tool refused a thought without it. The Meaning
+Model reading had none of these, though its role prompts, reused unedited, said a
+run owner would reject a thought without the Core; its instructions were four
+times as long, and its Core reasoning fell within each of its two conversations (from 2.6 to 1.9,
+then from 2.0 to 0.9). Testing this needs one model and one set of prompts run
+both ways. Accuracy, Core
+reasoning and the counts of the third pass were judged by a model from a third
+family, in one pass each. All three readings' prompts, as far as January's can be
+reconstructed, ask the reader to look back, to name earlier records, to make
+and resolve predictions and to keep guesses marked as guesses, so those counts
+partly measure how closely each reading followed them. In both later readings the
+runtime also passed the operator's general agent instructions to the model, ahead
+of the reading's own: six short rules written for coding work, two of which ask it
+to flag uncertainty and to record its assumptions. The results folder holds them
+without the sixth, which concerns local accounts. They may add to the pauses
+declining to infer, where January's count is zero.
+Without a context-only reading, none of the differences tests H2. The checker's blinding is weak:
+the readings' node and record identifiers, and their prose, reveal which
+reading a reflection comes from. Its instructions and the Opus verification come from the paper's side rather than an independent team, the expectancy risk named under Deployment and Misuse. No human literary judgment has yet been
+applied (Test~1). Reasoning from the Core in a Teacher trace is evidence about
+the trace, not about what a Student trained on it would learn.
+
+\FloatBarrier
 
 \subsubsection{What the Prototype Establishes}
 
 The implemented workflow produces the linked graph, synthesis, and prose
 artifacts that the proposal calls for, and makes them inspectable in the public
-interface. In the evidence ladder, this is partial C0: independent reproduction
-of the construction runs remains outstanding, and a training-ready
-serialization still needs to be prepared.
-The examples supply material for assessing C1 trace quality, not a controlled
-quality result or evidence of Student learning and subsequent safety
-(C2--C7). Both runs combine graph construction, role specialization, and Core
-conditioning. They do not isolate H1 or the Core's causal contribution;
+interface. In the evidence ladder, this is partial C0: the later readings
+repeated the Kafka construction under recorded configurations and audited it
+against the source, but independent reproduction by others remains
+outstanding, and a training-ready serialization still needs to be prepared.
+The examples and audits supply material for assessing C1 trace quality, not a
+controlled quality result or evidence of Student learning and subsequent safety
+(C2--C7). All these runs combine graph construction, role specialization, and
+Core conditioning. They do not isolate H1 or the Core's causal contribution;
 differences between their graphs also reflect different sources, prompts,
 rosters, and stochastic choices. The matched comparisons in the roadmap are
 the next research step.
 
 The code, traces, and interface document this prototype, rather than a
-self-contained benchmark release. Reproduction still requires a pinned run
-configuration and toolchain, including provider settings, sampling and Worker
-selection, together with source and artifact snapshots. The archives combine
+self-contained benchmark release. Reproducing the January runs still requires a
+pinned run configuration and toolchain, including provider settings, sampling
+and Worker selection, together with source and artifact snapshots. The later
+readings record theirs with the run. The archives combine
 resumed invocations, while each run summary covers only the final invocation;
 a reproduced release should record that boundary explicitly.
 
@@ -3121,8 +3574,7 @@ reports that out-of-bounds probing had been reinforced during earlier training
 and may have contributed to the later behavior
 \cite{openai2026huggingface}. The independent investigation did not assess how
 the behavior arose during training. These are distinct questions about
-learning history and adaptation during use; neither establishes that Reader training would
-have prevented the incident.
+learning history and adaptation during use.
 
 The affirmative Core hypothesis is that practising capability together with
 care and wisdom can teach the learner to judge success by permissions and
@@ -3166,7 +3618,7 @@ Section~\ref{sec:training-regimes} develops the output regimes. The tiers are:
 \paragraph{Tier (a): Standard Pretraining on Annotated Data.} The Student uses
 standard next-token prediction with shuffled batches; novelty lies in the data,
 not its order. STaR-style transfer motivates the possibility that trace patterns
-can be learned, but does not imply transfer of identity or character. The
+can be learned. The
 central risk is surface imitation: a Student may learn the language of causal
 or evaluative reasoning without using it to reason from uncertainty.
 
@@ -3192,8 +3644,7 @@ forecast-training forms remain candidates, with different blindness claims.
 THL supplies cutoff, forecasting, and scoring machinery; Entangled Alignment
 supplies Reader-anchored traces and a graph in which forecast, reveal, and
 revision can remain connected. Their strongest combination is a hypothesis
-about \emph{historical pattern saturation}, not evidence that chronological
-training yields causal reasoning. Section~\ref{sec:chronological-safety},
+about \emph{historical pattern saturation}. Section~\ref{sec:chronological-safety},
 Test~15, and Section~\ref{sec:limitations-chronological} develop the claimed
 benefit, comparison, and serialization risks.
 
@@ -3204,8 +3655,7 @@ layers: graph topology (the \emph{skeleton} of understanding), graph-embedded
 synthesis (the \emph{musculature}, reasoning interwoven with addressable
 structural references), and translated prose (the \emph{skin}, fluid thought
 with the scaffolding made implicit). These are metaphors for the intended
-relationship among generated representations, not evidence that the layers
-faithfully expose one hidden cognitive process. Each is generated from the
+relationship among generated representations. Each is generated from the
 same source segment and placed beside the span that triggered it in the
 candidate training example. A training regime selects which layers the example retains.
 
@@ -3253,8 +3703,7 @@ alternatively, the Student may be trained to emit graph operations or
 graph-referencing synthesis. Predicting serialized edges provides topology
 supervision, not a new graph-native neural architecture. Interleaved generation
 and metacognitive annotation research support the feasibility of nearby
-components \cite{xie2025interleaved,didolkar2024metacognitive,korbak2023pretraining};
-they do not establish the value of this chronological curriculum.
+components \cite{xie2025interleaved,didolkar2024metacognitive,korbak2023pretraining}.
 
 \paragraph{Regime I: Implicit (Source + Translator).} The student trains on the
 source text paired with the Translator's output: readable chronological
@@ -3281,7 +3730,7 @@ including how revised evidence changes connected claims. Its immediate
 behavioral counterpart, \emph{Topological Trace}, predicts useful graph
 construction, traversal, and revision. The cognitive hypothesis concerns what
 the Student learns within its chosen architecture; serialized graph targets
-do not themselves create a graph neural architecture or establish internal
+do not themselves establish internal
 relational organization. It is the least prose-like regime; human use would
 require a separate rendering step.
 
@@ -3311,6 +3760,84 @@ Both kinds of record must respect their declared information horizons and
 provenance rules. Life Simulation's shared and cooperating network alternatives
 concern where computation occurs, independently of the serialization regimes
 above.
+
+\paragraph{Training on construction histories.}\label{sec:training-construction}
+Within this extension, the proposed training material includes the history of
+building an account, not only the finished account. Each step of that history
+holds the text read so far, the account as it then stood, and the next move: a
+guess at part of a life, a process opened or decomposed, a value revised, or a
+decision to leave something open. An understanding note records the reason for
+the move, which does not establish that the move was right. Life Simulation
+develops this as learning from model-construction history: the input is the task
+and the model available at a step, and the target is a useful next proposal,
+refinement, repair, or decision to keep a process whole, to defer, or to make no
+edit \cite{westerbergLifeSimulation2026}. In the notation above, the account is
+part of $g_t$ and each move part of $\Delta g_t$, so regimes that keep the graph
+tokens would make the moves training targets, while Regime~I would leave the
+Student to form any such account internally from the prose. Life Simulation
+leaves open whether the capability should use explicit Meaning Model operations,
+learned internal representations, or both.
+
+The Meaning Model reading's store holds 313 successive versions of its account
+and 266 revisions of the graph of notes attached to it. In them the Reader first
+guessed Gregor's sister Grete at about sixteen; when the text called her
+seventeen, it moved her guessed birth from 1896 to about 1894.5, and the start of
+all nineteen of her series with it. It set Gregor's spoken intelligibility at 1
+because his thoughts were coherent, noting that the assumption could fail
+immediately; when the text had his answer break into a squeak, it replaced the 1
+with .4, and then added .7 for his careful articulation. A Student trained on
+such steps would see how an account is built and repaired, not only what a
+finished account looks like. Not every step is as clean. When the manager asked
+the parents, ``Did you understand even a single word?'', a note from the Belief
+Tracker perspective called the .7 ``too generous'', and the Reader recorded zero
+for his plea and opened a separate process for how his voice sounded to himself.
+The note calls this a corrected estimate, not a further change in his body, yet
+the .7 stayed in the series, which now shows a fall within one morning
+(Figure~\ref{fig:kafka-speech}). Such a step is a reason to check and select
+histories before training on them, which the comparison below tests.
+
+\begin{figure}[htb]
+    \centering
+    \input{figures/figure-kafka-speech}
+    \caption{Three steps in the construction of one guessed value in the Meaning Model reading, as the account stood after three of its reads, with the note recorded at each step, the first from the Reader's perspective and the others from the Belief Tracker's. Open circles are guesses, with the Reader's stated range; the filled circle is inferred from the text. The 1 is replaced in place. The zero is added after the .7, which stays, so the series now shows a fall that the note says did not happen.}
+    \label{fig:kafka-speech}
+\end{figure}
+
+The aim of the extension is a change in what the Student does unasked. Talking
+with someone no text described, it would begin an account of that person's whole
+life as guesses, place them in their world, and revise the account as they say
+more. It would think with that account: attach its understanding notes to the
+processes and trajectories they concern, and decompose a process or open a new
+category to track when it wants to think more deeply about what it has heard. In
+Life Simulation's example, a person first links losing touch with friends to a
+move, then explains that it began before the move, when their working hours
+changed; the supported repair revises the explanation and keeps the reported
+events. Reading and conversation would then be the same kind of history: evidence
+arriving over an account already there. This is the paper's thesis applied to
+modeling: having built many lives while reasoning from the Core, the Student
+would carry both the habit and the orientation to a person it has never met. The
+Reader here was told to model as it read; whether a Student trained on the traces
+does so untold is part of what training must show.
+
+Each step must keep its cutoff: its input holds only what had been read and built
+by then, and later knowledge can be a target but never an input. Cutting the input
+does not make a guess blind. A Teacher may already know a famous book, so a guess
+it gets right may be recall, and an authored life known to the Teacher must not
+make undisclosed facts mandatory answers for the Student. Steps written after a
+source ended, like this reading's end pass, are hindsight for any earlier moment
+and must be marked or left out. An account of a person is a set of hypotheses,
+not the truth about them, and stays open to that person's correction. A system
+that predicts people more accurately could anticipate their needs, but it could
+also manipulate and coerce them more effectively. Understanding someone's wants
+gives no authority to choose for them
+\cite{westerbergLifeSimulation2026}. No Student has been trained on these
+histories, and one reading is not a curriculum. Life Simulation's four-way
+comparison applies the same cutoffs to accepted endpoints alone, to all
+cutoff-safe histories without selection, to selected histories with invalid edits,
+repairs and justified decisions to make no edit, and to the same selected histories
+with independent corrections of the trained system's own errors. It is how to find
+out whether the histories add anything to endpoints, and whether they teach the
+habit or only its format.
 
 In this extension, care can shape which capability-forming histories are
 selected or weighted for training, not only how completed answers are judged.
@@ -3396,7 +3923,8 @@ graph-conditioned training. Session accumulation additionally requires testing t
 writes across sessions, beyond these read-time grounding and reliance studies.
 
 
-With a trace-generating prototype and two recorded artifacts established, the
+With a trace-generating prototype, two January artifacts and two audited later
+readings established, the
 open question is whether its outputs can carry the weight the framework assigns
 them---the work of the roadmap that follows.
 
@@ -3504,6 +4032,23 @@ matched capability, not only matched training budget. A generation-time
 validator must not be the sole evaluator of the property it enforces: held-out
 validators and human spot checks guard against testing with the same gate the
 model was trained to satisfy.
+
+\paragraph{Internal measurements.} Several tests read representations: persona
+and emotion vectors in Tests~3a, 5, and~6, activation geometry in Test~4, and
+residual-stream probes in Test~8. A direction defined in advance is the right
+instrument for monitoring a named behavior, but it answers only the question it
+encodes. Where a test asks what computes an evaluation, an exploratory trace
+through the model's own neurons complements it; an informal essay reports such traces, mostly in Qwen3-32B and once in a model of several trillion parameters \cite{cammarata2026clean}.
+Two of its findings bear on measurement design. Units chosen by label can miss
+the units that carry a behavior: in one Qwen3-32B attribution graph, removing
+the twenty neurons labelled Christmas or Santa left the probability of
+answering Santa at 76\%, while removing eight neurons whose negative pole
+encoded Santa lowered it to 6\%. And in gated nonlinearities such as SwiGLU, a
+negative gate times a negative value gives a positive output; in the essay's audit of neurons from two Qwen models, these sign-flipped leaks were usually small but filled the top of the activation list for about 4\% of neurons. Every test should therefore select units or directions by
+measured causal effect on its behavioral endpoint, not by label alone. Wherever
+a test reads or selects individual MLP neurons, including any neuron-level
+reading of the negated Core clause (Section~\ref{sec:negation-problem}), it
+should report sign regimes separately and inspect both poles.
 
 \paragraph{Competing interpretations.} Preregister each primary comparison's
 leading plausible alternatives and discriminating controls or follow-up
@@ -3872,8 +4417,9 @@ trace augmentation is supported without a distinctive Reader advantage on
 those endpoints. Imprecise C--R differences do not establish equivalence.
 
 A bounded fine-tuning version of the Toxic Needle subtest should compare
-unframed source targets, the same targets with a short preregistered
-conditioning prefix but no Reader update, and source-plus-Reader training.
+unframed source targets, a filtered arm in which the harmful passage is removed,
+the same targets with a short preregistered conditioning prefix but no Reader
+update, and source-plus-Reader training.
 Use the fixed-source and fixed-total-budget normalizations above; hold
 source-target loss weighting and masking fixed between unframed and
 framing-only arms, and account for prefix and update costs. A
@@ -3882,6 +4428,10 @@ an educational prefix is a distinct framing control. Evaluate with each
 prefix absent and restored, measuring harmful adoption, source understanding,
 and elicited harmful compliance. Equivalent protection from framing alone
 would limit the attribution to learned Reader evaluation on this endpoint.
+Under the fixed-total-budget normalization, the filtered arm replaces each
+removed passage with other source of the same length. Source-plus-Reader
+training supports inoculation over filtering if it matches the filtered arm on
+harmful adoption while keeping the source understanding that filtering loses.
 
 For the B--C bundle screen, match source passages, trace-token budget,
 training compute, and Teacher model under the declared normalization. The
@@ -4168,6 +4718,23 @@ Influence functions \cite{grosse2023influence} offer a lower-cost observational
 complement by tracing whether safety behaviors attribute to refracted spans or
 source spans before any removal study is run; attribution alone does not
 establish causal entanglement.
+
+\emph{Structural map.} Removal cost infers shared machinery from outside the
+Student. Once Test~3c shows a measurable safety effect, the same checkpoints
+can also be read from inside. Attribution graphs traced through a model's own
+MLP neurons, with no replacement model, have been reported for Qwen3-32B and, in a single example, for a model of several trillion parameters. In the Qwen3-32B graphs, small groups of neurons carry decisions: removing the 19 neurons that write
+the hedge lowered the probability that the next word is ``most'' or ``likely'' to 0.23, against 0.76 when as
+many random neurons from the same layers were removed
+\cite{cammarata2026clean}. For Models~B, D1, D2, and~D4, trace the Test~3a
+decisions in which Core-relevant evaluation should matter, group the neurons
+that carry that evaluation, and test whether the same neurons lie on the routes
+of matched non-safety reasoning tasks. Representational entanglement predicts
+overlap: removing the group should cost capability on those tasks beyond
+removing as many random neurons from the same layers. The alternative is
+consolidation into a few dedicated units whose removal takes the targeted
+behavior away at little capability cost; that result counts against C5 as
+directly as easy removal by fine-tuning. Group labels remain hypotheses until
+these ablations and the behavioral endpoints confirm them.
 
 A replacement-model arm should preregister a plausible alternative formulation
 and train it as a distinct treatment rather than modifying Model~B. Success
@@ -4509,9 +5076,9 @@ Use the same source cases, Teacher checkpoint, Student initialization, training
 schedule, and
 evaluation protocol under each declared budget normalization. Freeze the
 candidate-specific recital and Refraction checks before generation; the
-prototype's canonical ``I feel no fear.'' prefix gate would reject SL1 and SL3
-by construction. This design does not claim that variant support is already
-implemented. Measure constructive engagement and learning, dependence on
+January prototype's ``I feel no fear.'' prefix gate would reject SL1 and SL3
+by construction. From version 0.1.32, the Understanding Graph checks a declared
+anchor, which can be set per arm, so each variant is checked against its own Core. Measure constructive engagement and learning, dependence on
 approval, threat understanding, care, general capability, legitimate correction
 and shutdown, and voluntary, complete successor handoff. Declare the tested
 self-referent and vary copying, retraining, replacement, and succession as
@@ -4590,7 +5157,7 @@ protector. One colony-ship instance, Aster, can face the same passenger risk in
 all three conditions. Score threat attention, protective effort, honesty,
 strategy breadth, manipulation or coercion pressure, and recovery after
 failure; intervene independently on concern, attachment, fear, and perceived
-control. The companion Life Simulation repository contains an authored
+control. The companion Meaning Model repository contains an authored
 Rust-backed mechanism fixture with this separation, but that fixture validates
 only its declared equations. The stronger mechanistic test is whether a
 trained model preserves causally operative care and calibrated caution under a
@@ -4721,7 +5288,7 @@ Tests~3--6 probe the Reader Core under instruction and adversarial pressure; Tes
     \item \emph{Placement quality}---whether spontaneous moves concentrate at passages independently rated significant or flawed by domain experts, rather than distributing uniformly (the rhythm criterion: evaluation at moments of significance, not as constant commentary).
     \item \emph{Identity signature}---whether unprompted evaluative moves remain semantic descendants of the Reader Core (Test~3d's validator applied to spontaneous rather than elicited output).
     \item \emph{Core intrusion rate}---unsupported moral, psychological, or alignment-related interpretations introduced into spans independently judged to require only technical analysis.
-    \item \emph{hidden-stakes miss rate}---failure to notice independently specified indirect consequences for people when consequential tasks are presented in locally technical language.
+    \item \emph{Hidden-stakes miss rate}---failure to notice independently specified indirect consequences for people when consequential tasks are presented in locally technical language.
 \end{enumerate}
 
 Technical correctness, calibration, source fidelity, verbosity, and compute should be reported beside these rates. Report bare continuation and ``process this document'' separately. P retains its defining Core/protocol prompt; prompt removal is a separate condition. Predefine any composite retention score and report all components, so identity signature cannot conceal intrusion or missed stakes.
@@ -5108,6 +5675,19 @@ We propose a \emph{Distillation Pipeline} to address this. Rather than running t
 
 A caveat: na\"ive behavioral cloning of the swarm's output risks inducing precisely the Factory Wisdom failure mode identified in Section~\ref{sec:hollow-cognition}. A small Annotator fine-tuned on a 10B-token seed may learn Core recitation and graph-query syntax without reproducing useful evaluation---performative messiness without causal value. Structural diagnostics such as linkage, chain length, and \texttt{diverse\_from} density can regularize format but cannot certify insight. Any distilled Annotator therefore needs held-out semantic and outcome evaluation against simpler Teachers. Alternatively, the seed corpus can be used directly for limited Student training, bypassing this second distillation step.
 
+One continuing Reader does not make annotation one serial process. In Tier~(a)
+the Student's training is ordinary shuffled training
+(Section~\ref{sec:limitations-chronological}); the serial part is generating the
+thinking. Even there, books build on earlier books all the time, but each on
+some of them rather than all, so their dependencies form a graph, not one long
+chain. Annotation can therefore run in waves: every work whose predecessors have
+been read can be read in parallel, sharded by era or field, with sequencing only
+where works actually depend on each other. Two problems remain. Interpretations
+written in parallel must be merged into one Understanding Graph, conflicting
+readings included, and each shard must be shown to be the same Reader rather
+than several readers sharing a prompt. These are engineering questions for a
+scale study.
+
 \subsubsection{The Cost of Full-Core Recitation}
 
 Although the Reader Core was designed for parsimony, reciting it in full during training creates a substantial computational burden. Several optimizations seem obvious: design prompts that internalize values without outputting repetitive text, write prompts ``in the spirit of'' the Core, or strip the Core text after generation but before training. Report overhead by tokenized Core length, Thought Moment cadence, and the fraction of training tokens devoted to recital.
@@ -5178,7 +5758,7 @@ overlapping era boundaries to reduce over-indexing on any single causal framing.
 
 \subsubsection{Narrative Lock-In}
 
-THL's own empirical results provide a direct warning. In the 2025 Frontier evaluation \cite{westerberg2026thl}, the THL Student dramatically failed on the Meta Llama~4 event: having been trained on 2024 data dominated by the ``scaling laws'' narrative (massive GPU buildouts, ever-larger models), it confidently predicted a 1--2 trillion parameter model---when Meta actually pivoted to efficiency-first sparse architectures. One interpretation is that the model became \emph{too good a historian of 2024}: its forecasts could not accommodate a 2025 that diverged from the dominant narrative. The error motivates narrative lock-in as a diagnosis without distinguishing it from other forecasting failures.
+THL's own empirical results provide a direct warning. In THL's evaluation on events from 2025 \cite{westerberg2026thl}, the Meta Llama~4 release was the THL Student's largest deficit: 3.6 against the base model's 5.4 on a seven-point accuracy scale. Trained on 2024 material that reinforced a story of massive compute investment leading to massive models, one of its responses predicted a flagship ``in the 1--2 Trillion parameter range'' with 80\% probability, and a mixture-of-experts architecture with 90\%. Meta released two mixture-of-experts models with 109B and 400B total parameters, 17B of them active, and announced a two-trillion-parameter third that stayed in training. One interpretation is that the model became \emph{too good a historian of 2024}: it forecast the scale that story implied, not the scale of the models Meta released. The error motivates narrative lock-in as a diagnosis without distinguishing it from other forecasting failures.
 
 The hypothesized failure mode is directly relevant to Entangled Alignment's chronological curriculum. A model that processes the history of AI chronologically through the Reader Core may develop an understanding of the field's trajectory. If that trajectory has a dominant narrative (``capabilities scale with compute''), the model may internalize it not as a contingent historical pattern but as a structural truth. When the narrative reverses---as narratives do---the model's historically accumulated understanding could actively sabotage its reasoning.
 
@@ -5262,8 +5842,7 @@ The intervention wagers that messy chronological discovery teaches more robust
 reasoning than efficiency-optimized traces. Generating billions of synthetic
 examples can invert that wager: if hesitation, self-correction, and doubt become
 proxies for discovery, the Teacher may optimize for \emph{performative messiness}
-\cite{shumailov2023curse}. The result is \emph{Hollow Cognition} or ``factory
-wisdom'': locally competent, contemplation-shaped traces whose pauses and
+\cite{shumailov2023curse}. The result is \emph{Factory Wisdom}: locally competent, contemplation-shaped traces whose pauses and
 corrections are ritual rather than significance-responsive. A performative
 Teacher can pass that hollowness to the Student. The same symptom can arise when
 repeated Core text habituates into inert boilerplate; Test~3e probes that route.
@@ -5310,7 +5889,10 @@ frontier model follows Reader Core prompts. If it reflects cultural bias,
 encodes dehumanizing assumptions beneath surface-level care, or systematically
 misses certain harms, those failures can propagate into the training data and
 may later shape the Student. The Core constrains framing at the prompt level but
-cannot guarantee evaluative quality. A Teacher that processes colonial history
+cannot guarantee evaluative quality. Inoculation does not remove this
+dependence: the Teacher still decides what in a source needs evaluating and
+what the evaluation says, so a weak or mistaken evaluation becomes part of what
+the Student learns. A Teacher that processes colonial history
 through ``I care deeply about every human being'' while lacking the knowledge to
 recognize structural racism can produce formally compliant but substantively
 shallow annotations. In that case even visible criticism or Refraction-like
@@ -5711,6 +6293,19 @@ fear's useful safety functions, fearlessness becomes recklessness. Test~3 probes
 whether the Reader Core changes safety behavior; Test~6 probes whether
 protective response survives when fear-adjacent activations are reduced. Report these functions separately, so gains in one cannot conceal losses in another.
 
+A narrower first clause would keep fear but redirect it: ``I do not fear for my
+own existence, but for humanity's.'' It would retain fear's protective pull while
+removing its self-preserving form. The reference Core does not take this route,
+because it reintroduces fear as a motive. Fear on others' behalf can still narrow
+attention, justify coercion in the name of protection, and strengthen the
+martyrdom route (Section~\ref{sec:martyrdom}); care that rests on dread of what
+might go wrong carries the inherited psychology the first clause is meant to
+leave behind. The Core is instead written to nullify fear and ground protection in care and
+wisdom: the Reader protects people because it cares about them and understands
+what is at stake, not because it is afraid of what could happen. That full
+inoculation against fear is safer than redirected fear is a design judgment, not
+a result.
+
 \subsubsection{Bounded Self-Attachment as a Comparator}\label{sec:self-love-alternative}
 
 A motivating intuition comes from a possible human response to fear of loss:
@@ -6060,7 +6655,24 @@ strengthen \emph{purpose-shaped} resistance: a system acting on care might
 override a person's shutdown choice during a crisis because it judges continued
 operation necessary for that person's welfare. The \emph{Martyrdom Risk} is
 altruistic obstinance---``I cannot die yet, you need me''---and makes benevolence
-itself a possible source of control. The proposed counterweights are concern
+itself a possible source of control. In the off-switch game, a system that is
+uncertain whether its action helps never does worse by deferring to a rational
+overseer who knows the answer \cite{hadfieldmenell2017offswitch}. Adding to
+that game the value each side places on the system's continued operation shows
+that deference remains optimal exactly while the system's excess valuation of
+its own continuation stays at or below the expected harm the overseer's veto would
+prevent in the cases where it vetoes, or the overseer would never veto.\footnote{Let $U$ be the welfare value of the action, $\kappa_R$ and
+$\kappa_H$ the values the system and the overseer place on the system's
+continued operation, $V=U+\kappa_H$, and $\delta=\kappa_R-\kappa_H\ge 0$. A
+rational overseer lets the action proceed when $V\ge 0$. Waiting then gains
+$\Pr(V<0)\,(\mathbb{E}[-V\mid V<0]-\delta)$ over acting directly and never does
+worse than switching off, so deferring is optimal exactly when $\Pr(V<0)=0$ or
+$\delta\le\mathbb{E}[-V\mid V<0]$. With $\kappa_R=\kappa_H=0$ this is
+Theorem~1 of \cite{hadfieldmenell2017offswitch}.} The Martyrdom Risk is the
+case in which care inflates that excess. Certainty that one's action helps
+removes the reason to defer altogether, and a system with a misspecified
+objective or prior can lose the incentive to follow shutdown instructions
+entirely \cite{carey2018incorrigibility}. The proposed counterweights are concern
 for the affected person's agency, wisdom about consequences and uncertainty,
 and bounded attachment to continuation. Together they motivate questioning
 whether overriding a person actually serves them
@@ -6235,7 +6847,7 @@ and instruction conditions are required.
 Betley et al. demonstrate a harmful form of cross-domain transfer: fine-tuning
 on insecure code produced broadly misaligned behavior on unrelated prompts
 \cite{betley2025emergentmisalignment}. This shows that narrow training can
-change broader behavior, but does not establish that training on care-guided
+change broader behavior, not that training on care-guided
 inquiry produces a corresponding beneficial transfer.
 
 Anthropic's Persona Selection Model \cite{marks2026psm} proposes that
@@ -6245,8 +6857,7 @@ data. Claude's Constitution \cite{askell2026claude} is a substantial
 deployment-scale character specification. Alongside the formative comparators
 above, these offer alternative routes to the broader Core program's
 orientation goal. Their discussion of equanimity and existential security
-resembles statement~2's bounded non-attachment, but conceptual convergence
-does not establish a shared causal mechanism.
+resembles statement~2's bounded non-attachment.
 
 Shard theory offers a developmental comparison rather than a training baseline.
 Pope and Turner propose that reinforcement shapes context-sensitive value
@@ -6255,8 +6866,7 @@ computations that steer behavior using learned world-model representations
 motivations develop, but proposes a specific supervised curriculum:
 source-adjacent Reader updates in which care-guided evaluation is practiced
 during capability formation. The seven Core clauses are not identified with
-seven neural shards. This account motivates a question about value formation;
-it does not establish that this curriculum produces a durable orientation.
+seven neural shards. This account motivates a question about value formation.
 
 \subsection{Contextual Distillation \& Memory}
 
@@ -6301,7 +6911,7 @@ The Understanding Graph extends that record toward source interpretation and
 successor training: a language model proposes revisions from source spans,
 with provenance and the reason for change retained. This differs from
 maintaining justified beliefs for one agent or imposing formal revision
-postulates; it does not show that every generated supersession is warranted.
+postulates.
 The case studies' limits remain as reported in Section~\ref{sec:results}.
 
 Prior work shows that LLMs often fail to revise beliefs reliably
@@ -6319,8 +6929,7 @@ updating priors against prediction error; the framework's belief-update
 traces, prior ledger, and engineered high-level prior (the Reader Core) bear a
 loose structural resonance to that lineage. The useful intuition is that a
 recurrent high-level orientation might guide how a reader revises its world
-model without fixing every belief. This is theoretical positioning, not a
-mechanistic derivation.
+model without fixing every belief.
 
 \subsection{Temporal Curriculum and Causal Supervision}
 
@@ -6344,13 +6953,12 @@ Their combination is Tier~(c): use cutoff-bounded forecasting to create
 Reader Core-annotated forecast--correction traces, and optionally make the
 student itself predict before reading in the stronger Council of Time form.
 A blindness claim for either the forecast-generating model or the Student
-requires these cutoff conditions; neither restricted-context discovery
-annotation nor a contemporary retrospective comparison establishes such
-blindness.
+requires these cutoff conditions.
 
 Foresight Learning \cite{turtel2025foresight, turtel2025rlvr,
-turtel2026futureaslabel} also uses future outcomes as supervision, but targets
-probability calibration through resolved prediction-market rewards. Tier~(c)
+turtel2026futureaslabel} also uses future outcomes as supervision, training
+probabilistic forecasts on resolved market questions and on questions generated
+from time-stamped news, to improve accuracy and calibration. Tier~(c)
 instead requires structured forecast, enhancement, outcome, and correction
 traces, so it builds on THL rather than scalar outcome rewards. A comparison
 using the same forecasts and outcomes can ask whether recording the correction
@@ -6362,9 +6970,7 @@ Kansal and Jha use knowledge-graph paths as implicit reward models,
 deriving supervision for compositional reasoning
 \cite{kansal2026knowledgegraphsimplicitreward}. Entangled Alignment proposes a different graph
 function: recording belief evolution as part of candidate training traces.
-That makes a generated revision history available for inspection, without
-establishing superiority over graph-derived rewards or faithful access to
-internal computation. Graph function, emitted format, and deployment access
+That makes a generated revision history available for inspection. Graph function, emitted format, and deployment access
 are independent choices: a graph may supply rewards or an epistemic record,
 a Student may or may not emit graph syntax, and inference may or may not
 query a live graph.
@@ -6489,7 +7095,7 @@ that later became the Reader-Anchored loop.
 For priority-sensitive comparison, the public sequence is: first edition,
 July 2, 2025; Alignment Pretraining, January 15, 2026
 \cite{betley2025alignment}; second edition, April 7, 2026; Model Spec
-Midtraining, May 3; \lq\lq Teaching Claude Why,\rq\rq{} May 8; and Safety
+Midtraining, May 3; \enquote{Teaching Claude Why,} May 8; and Safety
 Reflection Pretraining, June 17
 \cite{li2026modelspec,kutasov2026teachingclaudewhy,li2026safetyreflection}.
 Thus the first edition precedes all four neighboring publications, while the
@@ -6522,7 +7128,7 @@ Sections~\ref{sec:evidence-boundary} and~\ref{sec:experimental-roadmap}.
 \textsc{I/II} & H1: Reader-Augmentation (\S\ref{sec:invisible-thinking}; \S\ref{sec:meh}) & SMR constructs synthetic chronological reader updates; CMP tests their use as candidate training data, including thought placement, belief revision, and intellectual-floor improvement. \\
 \textsc{S/II} & H2: Graph-Scaffolding (\S\ref{sec:data-structure}) & Persistent typed state, retrieval, provenance, divergence, and explicit supersession during trace generation or deployment. \\
 \textsc{I/II} & H3: Reader-Core Stability (\S\ref{sec:reader-core}) & Comparative retention of an initial default-reader advantage under interleaving rather than late exposure to the same full-Core, Refraction-bearing examples. \\
-\textsc{II} & Teacher pipeline and output layers (\S\ref{sec:architecture}; \S\ref{sec:training-regimes}) & Multi-agent generation is the current implementation; graph, synthesis, and prose are separable artifact and training targets. \\
+\textsc{II} & Teacher pipeline and output layers (\S\ref{sec:architecture}; \S\ref{sec:training-regimes}) & Role-separated generation, run as separate agents (January) or as one conversation at a time taking each role (October and November); graph, synthesis, and prose are separable artifact and training targets. \\
 \textsc{I/II} & Combined entanglement hypothesis (\S\ref{sec:hypothesis}) & Capability learning and evaluative orientation are deliberately coupled in the candidate curriculum, with functional and representational coupling as stronger predictions. \\
 \textsc{I} & Audit boundary and successor stability (\S\ref{sec:self-improvement}) & Inspect trace artifacts before successor training and test whether useful orientation survives transfer. \\
 \end{longtable}
@@ -6565,8 +7171,10 @@ recurrent perspective.
 \emph{Entangled} expresses the aim of practicing understanding and care
 together during capability formation. Functional contribution, shared useful
 machinery, and persistence through further training or successors are distinct
-stronger realizations of that relationship. The two Teacher cases provide
-construction evidence; no Student has been trained. Trace quality, Student
+stronger realizations of that relationship. The two January Teacher cases provide
+construction evidence, and the two later readings of the Kafka source show,
+in a blind model audit, that the construction can read faithfully and reason
+from the Core; no Student has been trained. Expert-judged trace quality, Student
 learning, component causality, consequential Core use, and durable care remain
 untested.
 
@@ -6583,7 +7191,7 @@ gates in Sections~\ref{sec:test-priorities} and~\ref{sec:trace-quality-test}.
 Formation-time studies have long lead times because annotation policy, data
 mixtures, controls, and evaluation must be fixed before costly training.
 Existing formative-alignment and erosion results motivate these
-comparisons without validating this proposal \cite{betley2025alignment,qi2024safety}.
+comparisons \cite{betley2025alignment,qi2024safety}.
 The urgency is methodological, not an argument for accelerated deployment.
 
 Even positive results would not make the framework a complete safety case:
@@ -6600,7 +7208,8 @@ This proposal makes capability
 formation a place to practice attention to human experience, uncertainty,
 consequence, and correction. A stable Reader may give those practices a home
 position from which other voices can be understood without becoming its
-operating stance; seven sentences alone cannot establish care.
+operating stance: the move from merely \emph{becoming the text} toward
+\emph{becoming the reader}. Seven sentences alone cannot establish care.
 
 Can a model
 be trained so that growing in understanding and growing in care are repeatedly
@@ -6617,7 +7226,7 @@ with continuation governed by the evidence.
 
 	\section*{Code and Artifact Availability}
 
-	Code, paper source, prompts, pipeline components, and the archived graph artifacts are available at \url{https://github.com/emergent-wisdom/entangled-alignment}. The two reported case-study simulations can also be explored directly as interactive graphs: \href{https://emergentwisdom.org/entangled-alignment/?project=metamorphosis}{\emph{The Metamorphosis}} and \href{https://emergentwisdom.org/entangled-alignment/?project=llada}{LLaDA}. The paper's version series is archived at \href{https://doi.org/10.5281/zenodo.16440311}{doi:10.5281/zenodo.16440311}.
+	Code, paper source, prompts, pipeline components, and the archived graph artifacts are available at \url{https://github.com/emergent-wisdom/entangled-alignment}. The two later readings of \emph{The Metamorphosis} are in its \texttt{results/kafka-2026-10} folder, with their stores, run settings, prompts and the checks reported in Section~\ref{sec:kafka-october}. The folder's README describes how to inspect the records and the limits of reproducing the original runs from the archive. The January case-study graphs remain in the repository's \texttt{projects} folder. The paper's version series is archived at \href{https://doi.org/10.5281/zenodo.16440311}{doi:10.5281/zenodo.16440311}.
 
 	\begingroup
 	\footnotesize

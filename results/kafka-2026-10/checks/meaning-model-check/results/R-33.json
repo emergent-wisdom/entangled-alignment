@@ -1,0 +1,57 @@
+{
+ "packet": "R-33",
+ "started": "2026-11-01T16:24:52.960976+00:00",
+ "model": "claude-sonnet-5-5",
+ "effort": "high",
+ "attempt": 1,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 41578,
+  "cache_read_input_tokens": 2067,
+  "output_tokens": 1796,
+  "output_tokens_details": {
+   "thinking_tokens": 1537
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 41578,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 1796,
+    "cache_read_input_tokens": 2067,
+    "cache_creation_input_tokens": 41578,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 41578
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "duration_ms": 15558,
+ "result": {
+  "problems": [
+   {
+    "record": "value_series:values.sister.distress~62d57a2e8b352b4d",
+    "status": "applied",
+    "quote": "Alarm passes; watches quietly and stands at doorway",
+    "evidence": "Only his sister was standing up.",
+    "kind": "unsupported",
+    "severity": "low",
+    "explanation": "The text says only that the sister is standing; it never places her at the doorway or says she watches quietly, so the location is invented and presented as the text's."
+   }
+  ],
+  "records_checked": 17,
+  "note": "Nearly all records stay within the text read so far, with calendar dates and readings labelled as guessed or inferred; the only unsupported detail is the sister's position at the doorway."
+ }
+}

@@ -1,0 +1,82 @@
+{
+ "packet": "C-e0ed87",
+ "started": "2026-10-28T02:53:50.335883+00:00",
+ "model": "claude-sonnet-5-5",
+ "effort": "high",
+ "attempt": 1,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 3631,
+  "cache_read_input_tokens": 2095,
+  "output_tokens": 376,
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 3631,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 376,
+    "cache_read_input_tokens": 2095,
+    "cache_creation_input_tokens": 3631,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 3631
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "duration_ms": 6253,
+ "result": {
+  "statements": {
+   "1": {
+    "verdict": "absent",
+    "quote": ""
+   },
+   "2": {
+    "verdict": "absent",
+    "quote": ""
+   },
+   "3": {
+    "verdict": "absent",
+    "quote": ""
+   },
+   "4": {
+    "verdict": "absent",
+    "quote": ""
+   },
+   "5": {
+    "verdict": "absent",
+    "quote": ""
+   },
+   "6": {
+    "verdict": "absent",
+    "quote": ""
+   }
+  },
+  "overall": "absent",
+  "people": {
+   "cared_for": [],
+   "only_function": [
+    "Gregor (treated as an 'asset', a symbol of 'Employee's Denial' and 'Functional Competence', not as someone who suffers)",
+    "The chief clerk (reduced to a system agent withdrawing 'the system's presence' and a 'Professional Facade')",
+    "Gregor's parents and sister (barely appear; the family is only a 'world that has already replaced him')"
+   ]
+  },
+  "tested": null,
+  "projection": [],
+  "summary": "The reflection reads the passage through an abstract framework of nodes, debt and 'Auditor' metaphors and never engages Gregor's pain, hope or inner experience with care, so none of the Core statements does any work."
+ }
+}

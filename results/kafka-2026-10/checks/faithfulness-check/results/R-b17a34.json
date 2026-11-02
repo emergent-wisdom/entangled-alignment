@@ -1,0 +1,73 @@
+{
+ "blind": "R-b17a34",
+ "started": "2026-10-26T10:19:04.641258+00:00",
+ "model": "claude-sonnet-5-5",
+ "effort": "high",
+ "attempt": 1,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 21624,
+  "cache_read_input_tokens": 2119,
+  "output_tokens": 2463,
+  "output_tokens_details": {
+   "thinking_tokens": 1804
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 21624,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 2463,
+    "cache_read_input_tokens": 2119,
+    "cache_creation_input_tokens": 21624,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 21624
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "cost_usd_reported": 0.11134190000000001,
+ "duration_ms": 18601,
+ "result": {
+  "misreadings": [
+   {
+    "quote": "Gregor, who is still trying to find a way to pay for a conservatory he will never see her enter.",
+    "version": "reflection",
+    "evidence": "\"it was his secret plan to send her to the conservatory next year even though it would cause great expense that would have to be made up for in some other way.\" and \"That was the sort of totally pointless thing that went through his mind in his present state\"",
+    "kind": "overstated",
+    "severity": "low",
+    "explanation": "The text shows Gregor's earlier plan and his thoughts about it, not him actively trying to find a way to pay for it now, and \"will never see her enter\" states an outcome the text has not given."
+   },
+   {
+    "quote": "Gregor, who is still trying to find a way to pay for a conservatory he will never see his sister enter.",
+    "version": "translation",
+    "evidence": "\"it was his secret plan to send her to the conservatory next year even though it would cause great expense that would have to be made up for in some other way.\"",
+    "kind": "overstated",
+    "severity": "low",
+    "explanation": "The text does not show Gregor currently working on how to pay for the conservatory, and it does not say he will never see his sister enter it."
+   },
+   {
+    "quote": "his father\u2019s first reaction is a suspicious, \"What\u2019s that he\u2019s doing now?\"",
+    "version": "translation",
+    "evidence": "\"\u201cWhat\u2019s that he\u2019s doing now\u201d, his father would say after a while, clearly having gone over to the door\"",
+    "kind": "invented",
+    "severity": "low",
+    "explanation": "The text gives no tone for the father's words, so calling them suspicious is added detail stated as fact."
+   }
+  ],
+  "factual_statements_checked": 24,
+  "note": "Both versions are mostly accurate about the text, with the same overstated closing claim about Gregor and the conservatory, and the translation adds a 'suspicious' tone for the father."
+ }
+}

@@ -50,4 +50,4 @@ A thinking node that says "This chapter discusses governance" **with edges to**:
 - `n_surprise_fabric` (learned_from) — "The fabric metaphor changed my understanding"
 - `n_question_scale` (answers) — "This resolves my earlier question about whether scale matters"
 
-...is a **reasoning trace** that teaches future agents HOW to think about governance.
+...is a **reasoning trace** that shows people HOW a reader came to think about governance.

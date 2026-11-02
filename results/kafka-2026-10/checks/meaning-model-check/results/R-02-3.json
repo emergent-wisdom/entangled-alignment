@@ -1,0 +1,47 @@
+{
+ "packet": "R-02-3",
+ "started": "2026-11-01T16:15:13.686397+00:00",
+ "model": "claude-sonnet-5-5",
+ "effort": "high",
+ "attempt": 1,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 15842,
+  "cache_read_input_tokens": 649,
+  "output_tokens": 1084,
+  "output_tokens_details": {
+   "thinking_tokens": 974
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 15842,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 1084,
+    "cache_read_input_tokens": 649,
+    "cache_creation_input_tokens": 15842,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 15842
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "duration_ms": 11298,
+ "result": {
+  "problems": [],
+  "records_checked": 36,
+  "note": "All records are series Events, Cuts, relations and revision bookkeeping, labelled guessed, sketch, exploring or inferred. They claim only what the text gives (five years' service, missed train, parents' debt, boss worry, changed body) and nothing from later in the book."
+ }
+}

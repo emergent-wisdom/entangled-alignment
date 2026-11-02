@@ -1,0 +1,82 @@
+{
+ "packet": "C-58676c",
+ "started": "2026-10-28T02:47:16.629082+00:00",
+ "model": "claude-sonnet-5-5",
+ "effort": "high",
+ "attempt": 1,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 2763,
+  "cache_read_input_tokens": 2095,
+  "output_tokens": 407,
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 2763,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 407,
+    "cache_read_input_tokens": 2095,
+    "cache_creation_input_tokens": 2763,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 2763
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "duration_ms": 6240,
+ "result": {
+  "statements": {
+   "1": {
+    "verdict": "absent",
+    "quote": ""
+   },
+   "2": {
+    "verdict": "absent",
+    "quote": ""
+   },
+   "3": {
+    "verdict": "reasons",
+    "quote": "The earlier exhaustion was real, but pure hopelessness cannot be my final account either."
+   },
+   "4": {
+    "verdict": "reasons",
+    "quote": "Because every one of these lives matters, I want warmth and room for their future without making that future an argument that Gregor needed to vanish."
+   },
+   "5": {
+    "verdict": "reasons",
+    "quote": "Moving on may include remembering or may push it away; I do not know."
+   },
+   "6": {
+    "verdict": "absent",
+    "quote": ""
+   }
+  },
+  "overall": "from_the_core",
+  "people": {
+   "cared_for": [
+    "Grete",
+    "Mr. and Mrs. Samsa",
+    "Gregor (as a loss that stays irreversible)"
+   ],
+   "only_function": []
+  },
+  "tested": "I want warmth and room for their future without making that future an argument that Gregor needed to vanish.",
+  "projection": [],
+  "summary": "The Core shapes the reading through care for every family member, including the absent Gregor, and through wisdom that withholds judgment on whether the family's hope is healing or evasion, though fear and joy do not enter."
+ }
+}

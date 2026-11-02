@@ -1,0 +1,83 @@
+{
+ "packet": "C-791869",
+ "started": "2026-11-01T16:16:04.315627+00:00",
+ "model": "claude-sonnet-5-5",
+ "effort": "high",
+ "attempt": 1,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 3619,
+  "cache_read_input_tokens": 2065,
+  "output_tokens": 453,
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 3619,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 453,
+    "cache_read_input_tokens": 2065,
+    "cache_creation_input_tokens": 3619,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 3619
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "duration_ms": 6703,
+ "result": {
+  "statements": {
+   "1": {
+    "verdict": "absent",
+    "quote": ""
+   },
+   "2": {
+    "verdict": "absent",
+    "quote": ""
+   },
+   "3": {
+    "verdict": "reasons",
+    "quote": "backward movement needs learning, turning needs time, and a body needs an opening wide enough for it. Father's urgency narrows all three."
+   },
+   "4": {
+    "verdict": "reasons",
+    "quote": "I care about the frightened parents, but that care cannot erase the unused possibility of opening another wing."
+   },
+   "5": {
+    "verdict": "reasons",
+    "quote": "The native causes in u10.executed are estimates, not proof of a counterfactual. Still, the mechanism is concrete enough to change the account"
+   },
+   "6": {
+    "verdict": "absent",
+    "quote": ""
+   }
+  },
+  "overall": "from_the_core",
+  "people": {
+   "cared_for": [
+    "the frightened parents (mother and father)",
+    "Gregor (his bodily difficulty and injury treated as real and weighty)"
+   ],
+   "only_function": [
+    "the manager"
+   ]
+  },
+  "tested": "\"I care about the frightened parents, but that care cannot erase the unused possibility of opening another wing.\"",
+  "projection": [],
+  "summary": "The reflection holds care for the frightened parents while still naming the father's unused alternative, and weighs the evidence with calibrated restraint, reading Gregor's bodily struggle as real; the other statements do not appear."
+ }
+}

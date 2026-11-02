@@ -9,10 +9,9 @@ You receive content nodes. You must process them **ONE BY ONE**, in order.
 
 ### 1. Initialize
 ```javascript
-// Get all content nodes in chronological order
-const chunks = graph_find_by_trigger({ trigger: "chunk" })
-// Sort by creation order (earliest first)
-chunks.sort((a, b) => a.created_at - b.created_at)
+// The runner supplies the current content IDs at this reading boundary.
+// Fetch them with graph_context and follow their source positions in order.
+const chunks = current_passage_nodes  // Supplied by the runner in source order
 ```
 
 ### 2. The Processing Loop
@@ -23,7 +22,7 @@ For each chunk at index `i`:
 ┌─────────────────────────────────────────────────────────┐
 │  FOCUS: Content Node at position i                      │
 ├─────────────────────────────────────────────────────────┤
-│  1. FETCH: graph_context({ nodeId: chunks[i].id })      │
+│  1. FETCH: graph_context({ nodeId: chunks[i].id })        │
 │                                                         │
 │  2. LOOK BACK: What exists at positions 0..i-1?         │
 │     - What concepts were established?                   │
@@ -47,10 +46,18 @@ For each chunk at index `i`:
 Every node you create MUST be anchored to the content node you're analyzing:
 
 ```javascript
-graph_batch([
-  { op: "add", trigger: "tension", title: "...", understanding: "..." },
-  { op: "connect", from: "$0", to: "<content_node_id>", edge: "analyzes" }
-])
+graph_batch({
+  operations: [
+    { tool: "graph_add_understanding", params: {
+      trigger: "tension", title: "...", understanding: "...", why: "..."
+    }},
+    { tool: "graph_connect", params: {
+      from: "$0.id", to: "<content_node_id>", type: "learned_from",
+      relation: "analyzes", why: "This passage sparked the thought"
+    }}
+  ],
+  commit_message: "What this passage made me notice"
+})
 ```
 
 This creates a traceable record: "At this point in the text, I noticed X."

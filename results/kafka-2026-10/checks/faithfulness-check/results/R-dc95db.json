@@ -1,0 +1,89 @@
+{
+ "blind": "R-dc95db",
+ "started": "2026-10-26T10:19:50.294890+00:00",
+ "model": "claude-sonnet-5-5",
+ "effort": "high",
+ "attempt": 1,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 20159,
+  "cache_read_input_tokens": 2119,
+  "output_tokens": 2254,
+  "output_tokens_details": {
+   "thinking_tokens": 1372
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 20159,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 2254,
+    "cache_read_input_tokens": 2119,
+    "cache_creation_input_tokens": 20159,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 20159
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "cost_usd_reported": 0.1033919,
+ "duration_ms": 20095,
+ "result": {
+  "misreadings": [
+   {
+    "quote": "pressing his \"whole body\" against it to hear the family's financial talk",
+    "version": "both",
+    "evidence": "\"There was seldom any conversation, especially at first, that was not about him in some way... all the talk at every mealtime was about what they should do now\"",
+    "kind": "invented",
+    "severity": "medium",
+    "explanation": "The text says the talk was about Gregor and what to do now; nothing read so far says it was financial."
+   },
+   {
+    "quote": "the maid's desperate exit (n_85e3d90f) is the first crack in the facade",
+    "version": "both",
+    "evidence": "\"on the very first day the maid had fallen to her knees and begged Gregor's mother to let her go without delay. It was not very clear how muc\"",
+    "kind": "overstated",
+    "severity": "low",
+    "explanation": "The text only shows the maid begging to be let go, and the passage cuts off before saying whether she left."
+   },
+   {
+    "quote": "The family has established a ritualized schedule (n_171da4b8) to avoid seeing Gregor feed.",
+    "version": "both",
+    "evidence": "\"Gregor's father and mother certainly did not want him to starve either, but perhaps it would have been more than they could stand to have any more experience of his feeding than being told about it, and perhaps his sister wanted to spare them\"",
+    "kind": "overstated",
+    "severity": "low",
+    "explanation": "The text presents the feeding arrangement, run by the sister, and the motive of sparing the parents only as a tentative 'perhaps', while the reflection states it as a family-established fact."
+   },
+   {
+    "quote": "these words are not for Gregor\u2014who they believe cannot understand them (n_906d8ba3)\u2014but for the parents. They are verbalizing a monster into a patient",
+    "version": "both",
+    "evidence": "\"she might say when he had diligently cleared away all the food left for him\" (said by the sister as she moved about his room; no parents are mentioned as hearing)",
+    "kind": "overstated",
+    "severity": "low",
+    "explanation": "The text gives the comments only to the sister, speaking in Gregor's room, and never says they are aimed at the parents or that 'they' are doing the verbalizing."
+   },
+   {
+    "quote": "he is still viewing himself through the eyes of the boss who discarded him",
+    "version": "translation",
+    "evidence": "no support in the text",
+    "kind": "invented",
+    "severity": "medium",
+    "explanation": "Gregor has not been dismissed or discarded by the boss in the text read so far."
+   }
+  ],
+  "factual_statements_checked": 14,
+  "note": "The reflection is mostly faithful on the broom, bin, rag, schedule and Gregor's listening at doors; the main errors are the invented 'financial talk', the unsupported maid 'exit', and, in the prose version only, the boss who 'discarded' Gregor."
+ }
+}

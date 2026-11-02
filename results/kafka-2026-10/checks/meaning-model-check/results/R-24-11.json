@@ -1,0 +1,57 @@
+{
+ "packet": "R-24-11",
+ "started": "2026-11-01T16:21:51.678663+00:00",
+ "model": "claude-sonnet-5-5",
+ "effort": "high",
+ "attempt": 1,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 59878,
+  "cache_read_input_tokens": 2067,
+  "output_tokens": 3511,
+  "output_tokens_details": {
+   "thinking_tokens": 3200
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 59878,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 3511,
+    "cache_read_input_tokens": 2067,
+    "cache_creation_input_tokens": 59878,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 59878
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "duration_ms": 26100,
+ "result": {
+  "problems": [
+   {
+    "record": "value_series:values.gregor.move-feasibility-belief~9c2dc93ccf96da37",
+    "status": "applied",
+    "quote": "His suitable-box-with-air-holes proposal; no route or transport experiment executed",
+    "evidence": "Gregor fully recognized that it was not just consideration for him which was preventing a move, for he could have been transported easily in a suitable box with a few air holes.",
+    "kind": "wrong track",
+    "severity": "low",
+    "explanation": "The text gives the box as Gregor's private recognition of what could have been done, not a proposal he made, yet the record labels it a source-given proposal."
+   }
+  ],
+  "records_checked": 60,
+  "note": "Almost all points are labelled guessed, inferred or exploring, or match the text read so far; no later events or states appear, and the one problem is a minor mislabel."
+ }
+}

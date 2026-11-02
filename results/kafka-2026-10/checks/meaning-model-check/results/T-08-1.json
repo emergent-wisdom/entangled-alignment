@@ -1,0 +1,47 @@
+{
+ "packet": "T-08-1",
+ "started": "2026-11-01T16:28:46.979500+00:00",
+ "model": "claude-sonnet-5-5",
+ "effort": "high",
+ "attempt": 1,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 12429,
+  "cache_read_input_tokens": 2067,
+  "output_tokens": 838,
+  "output_tokens_details": {
+   "thinking_tokens": 711
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 12429,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 838,
+    "cache_read_input_tokens": 2067,
+    "cache_creation_input_tokens": 12429,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 12429
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "duration_ms": 8334,
+ "result": {
+  "misreadings": [],
+  "factual_statements_checked": 14,
+  "note": "Both versions stay within the text: the key and lock, the brown fluid from his mouth, the mother's two steps and collapse, the father's hostile fist, uncertain look and weeping, and the lieutenant's photograph. Their remaining claims are interpretation or the reader's own commentary."
+ }
+}

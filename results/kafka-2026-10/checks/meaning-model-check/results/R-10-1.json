@@ -1,0 +1,47 @@
+{
+ "packet": "R-10-1",
+ "started": "2026-11-01T16:17:36.773511+00:00",
+ "model": "claude-sonnet-5-5",
+ "effort": "high",
+ "attempt": 1,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 36609,
+  "cache_read_input_tokens": 2067,
+  "output_tokens": 1222,
+  "output_tokens_details": {
+   "thinking_tokens": 1125
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 36609,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 1222,
+    "cache_read_input_tokens": 2067,
+    "cache_creation_input_tokens": 36609,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 36609
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "duration_ms": 10871,
+ "result": {
+  "problems": [],
+  "records_checked": 60,
+  "note": "All 60 records are applied Event sketches whose guessed dates and biographies are labelled as guesses, and the details they cite (weak fist, soft voice, friendly address, servant opening the door) match the text read so far."
+ }
+}

@@ -1,0 +1,57 @@
+{
+ "packet": "R-27",
+ "started": "2026-11-01T16:24:23.451176+00:00",
+ "model": "claude-sonnet-5-5",
+ "effort": "high",
+ "attempt": 1,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 41372,
+  "cache_read_input_tokens": 2067,
+  "output_tokens": 1602,
+  "output_tokens_details": {
+   "thinking_tokens": 1234
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 41372,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 1602,
+    "cache_read_input_tokens": 2067,
+    "cache_creation_input_tokens": 41372,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 41372
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "duration_ms": 16811,
+ "result": {
+  "problems": [
+   {
+    "record": "value_series:values.gregor.imagined-voluntariness~bba938cea191bda4",
+    "status": "applied",
+    "quote": "\"note\": \"Does not establish agreed\", \"state\": \"desired\", \"tag\": \"source\", \"time\": 1912.1935655737705",
+    "evidence": "no support in the text. The text gives no calendar date or clock time for this fantasy. The event record itself says the \"calendar date guessed\".",
+    "kind": "timing",
+    "severity": "low",
+    "explanation": "The point is tagged \"source\" at a precise calendar time that the text does not give and the model elsewhere calls guessed, so the time is presented as text-given."
+   }
+  ],
+  "records_checked": 36,
+  "note": "The imagined-scene content (tug at dress, voluntary stay, guarding doors, Conservatory disclosure, tears and kiss) is supported by the final passage and labelled as imagined with no public fulfilment; the only issue found is a precise time tagged as sourced."
+ }
+}

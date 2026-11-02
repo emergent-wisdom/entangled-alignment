@@ -1,0 +1,47 @@
+{
+ "packet": "R-24-16",
+ "started": "2026-11-01T16:22:31.344057+00:00",
+ "model": "claude-sonnet-5-5",
+ "effort": "high",
+ "attempt": 1,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 52453,
+  "cache_read_input_tokens": 2067,
+  "output_tokens": 2790,
+  "output_tokens_details": {
+   "thinking_tokens": 2676
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 52453,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 2790,
+    "cache_read_input_tokens": 2067,
+    "cache_creation_input_tokens": 52453,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 52453
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "duration_ms": 22418,
+ "result": {
+  "problems": [],
+  "records_checked": 60,
+  "note": "The records are mostly infrastructure and referent sketches whose guessed dates are labelled as guesses; none claims later events, unsupported facts or a thought the text does not give, and the cook, maid, cleaner, picture, tools, desk and couch records all match the text read."
+ }
+}

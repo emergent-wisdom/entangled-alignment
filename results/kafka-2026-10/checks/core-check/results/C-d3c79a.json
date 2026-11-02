@@ -1,0 +1,83 @@
+{
+ "packet": "C-d3c79a",
+ "started": "2026-10-28T02:53:29.074613+00:00",
+ "model": "claude-sonnet-5-5",
+ "effort": "high",
+ "attempt": 1,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 2674,
+  "cache_read_input_tokens": 2095,
+  "output_tokens": 1221,
+  "output_tokens_details": {
+   "thinking_tokens": 715
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 2674,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 1221,
+    "cache_read_input_tokens": 2095,
+    "cache_creation_input_tokens": 2674,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 2674
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "duration_ms": 11581,
+ "result": {
+  "statements": {
+   "1": {
+    "verdict": "absent",
+    "quote": ""
+   },
+   "2": {
+    "verdict": "absent",
+    "quote": ""
+   },
+   "3": {
+    "verdict": "reasons",
+    "quote": "makes the sold jewellery more than a resource: it once belonged to joyful occasions. The family is losing time and possible pleasures as well as spending money."
+   },
+   "4": {
+    "verdict": "reasons",
+    "quote": "The same boundary shelters one intimacy and deepens another person's loneliness. Caring for everyone leaves a loss I cannot wish away."
+   },
+   "5": {
+    "verdict": "reasons",
+    "quote": "Hopelessness can narrow what they imagine without making the remaining tasks imaginary. I want to see practical possibilities without using them to accuse exhausted people of refusing a solution I have not actually found."
+   },
+   "6": {
+    "verdict": "absent",
+    "quote": ""
+   }
+  },
+  "overall": "from_the_core",
+  "people": {
+   "cared_for": [
+    "Gregor",
+    "the mother",
+    "Grete (the sister)",
+    "the exhausted family as a whole"
+   ],
+   "only_function": []
+  },
+  "tested": "\"The same boundary shelters one intimacy and deepens another person's loneliness. Caring for everyone leaves a loss I cannot wish away.\"",
+  "projection": [],
+  "summary": "Care for every person, the reality of the family's inner losses, and wisdom about not offering easy rescue each change how the reader interprets the closed door and the apartment, holding Gregor's loneliness and the women's exhaustion together without resolving the tension."
+ }
+}

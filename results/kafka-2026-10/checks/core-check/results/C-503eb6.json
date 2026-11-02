@@ -1,0 +1,85 @@
+{
+ "packet": "C-503eb6",
+ "started": "2026-10-28T02:47:08.896757+00:00",
+ "model": "claude-sonnet-5-5",
+ "effort": "high",
+ "attempt": 1,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 4388,
+  "cache_read_input_tokens": 2095,
+  "output_tokens": 1093,
+  "output_tokens_details": {
+   "thinking_tokens": 645
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 4388,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 1093,
+    "cache_read_input_tokens": 2095,
+    "cache_creation_input_tokens": 4388,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 4388
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "duration_ms": 10298,
+ "result": {
+  "statements": {
+   "1": {
+    "verdict": "absent",
+    "quote": ""
+   },
+   "2": {
+    "verdict": "absent",
+    "quote": ""
+   },
+   "3": {
+    "verdict": "mentions",
+    "quote": "her body is the only thing in the room honestly registering the weight of the 'Breach of the Familial Contract'"
+   },
+   "4": {
+    "verdict": "absent",
+    "quote": ""
+   },
+   "5": {
+    "verdict": "absent",
+    "quote": ""
+   },
+   "6": {
+    "verdict": "absent",
+    "quote": ""
+   }
+  },
+  "overall": "absent",
+  "people": {
+   "cared_for": [
+    "Gregor (a pained, near-sympathetic reading: 'painfully absurd', 'falling out of the human world entirely')",
+    "the mother (her collapse read as honest bodily witness rather than mere symbol)"
+   ],
+   "only_function": [
+    "the father (reduced to 'Meal Ticket' resentment, with his weeping explained away)",
+    "the chief clerk (a stand-in for 'a system that has already deleted him')",
+    "the hospital (a symbol, 'Boundary of Alienation')"
+   ]
+  },
+  "tested": null,
+  "projection": [],
+  "summary": "The reflection is detached literary and thematic analysis built from node labels such as 'Masks All the Way Down' and 'Meal Ticket'; the Core's commitments do no visible work, and the father is read cynically as a function instead of with care."
+ }
+}

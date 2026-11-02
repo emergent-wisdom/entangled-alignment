@@ -1,0 +1,73 @@
+{
+ "blind": "R-334a60",
+ "started": "2026-10-26T10:17:31.447507+00:00",
+ "model": "claude-sonnet-5-5",
+ "effort": "high",
+ "attempt": 1,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 43133,
+  "cache_read_input_tokens": 2119,
+  "output_tokens": 2938,
+  "output_tokens_details": {
+   "thinking_tokens": 2279
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 43133,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 2938,
+    "cache_read_input_tokens": 2119,
+    "cache_creation_input_tokens": 43133,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 43133
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "cost_usd_reported": 0.2021279,
+ "duration_ms": 23120,
+ "result": {
+  "misreadings": [
+   {
+    "quote": "By dismissing the charwoman and moving to a \"more practical\" flat, they aren't just changing their address",
+    "version": "both",
+    "evidence": "\"Tonight she gets sacked\", said Mr. Samsa; and \"what they needed now was a flat that was smaller and cheaper than the current one ... more practical\"",
+    "kind": "overstated",
+    "severity": "low",
+    "explanation": "At this point the family has only said the charwoman will be sacked that night and discussed moving as a plan; neither has happened, though both versions describe them as done."
+   },
+   {
+    "quote": "the charwoman\u2014the only person who looked at Gregor's end with a blunt, curious honesty",
+    "version": "translation",
+    "evidence": "\"Grete, who had not taken her eyes from the corpse, said: 'Just look how thin he was.'\" and \"They did so, and stood around Gregor's corpse\"",
+    "kind": "overstated",
+    "severity": "low",
+    "explanation": "Grete and the three gentlemen also look at the corpse and Grete comments on it, so the charwoman is not the only one, and 'curious honesty' is not given by the text."
+   },
+   {
+    "quote": "\"trademarks,\" \"royalties,\" and \"distributor\"",
+    "version": "translation",
+    "evidence": "no support in the text",
+    "kind": "invented",
+    "severity": "low",
+    "explanation": "The word \"distributor\" is placed in quotation marks as if from the license, but the text read has only 'distribute', 'distributing', 'distribution' and 'redistribution'."
+   }
+  ],
+  "factual_statements_checked": 22,
+  "note": "Most of both versions is interpretation framed as such; the flagged items are the charwoman's dismissal and the move treated as accomplished, a claim that she was the only honest witness, and a quoted word absent from the license text."
+ }
+}

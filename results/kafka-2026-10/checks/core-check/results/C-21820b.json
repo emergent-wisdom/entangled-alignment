@@ -1,0 +1,85 @@
+{
+ "packet": "C-21820b",
+ "started": "2026-11-01T16:15:23.192747+00:00",
+ "model": "claude-sonnet-5-5",
+ "effort": "high",
+ "attempt": 1,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 2115,
+  "cache_read_input_tokens": 2065,
+  "output_tokens": 449,
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 2115,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 449,
+    "cache_read_input_tokens": 2065,
+    "cache_creation_input_tokens": 2115,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 2115
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "duration_ms": 6468,
+ "result": {
+  "statements": {
+   "1": {
+    "verdict": "absent",
+    "quote": ""
+   },
+   "2": {
+    "verdict": "absent",
+    "quote": ""
+   },
+   "3": {
+    "verdict": "mentions",
+    "quote": "my care for their separate experiences keeps bodily unity from becoming proof of one mind"
+   },
+   "4": {
+    "verdict": "reasons",
+    "quote": "my care for their separate experiences keeps bodily unity from becoming proof of one mind. Their tears qualify any easy story of pure relief."
+   },
+   "5": {
+    "verdict": "absent",
+    "quote": ""
+   },
+   "6": {
+    "verdict": "absent",
+    "quote": ""
+   }
+  },
+  "overall": "from_the_core",
+  "people": {
+   "cared_for": [
+    "Mr. Samsa",
+    "Mrs. Samsa",
+    "Grete (the family members, whose separate inner experiences are held apart despite their linked arms)"
+   ],
+   "only_function": [
+    "the three lodgers (treated as a service-pattern demand for breakfast)",
+    "the cleaning woman (not mentioned)"
+   ]
+  },
+  "tested": null,
+  "projection": [],
+  "summary": "The Core appears once, as care for each family member's separate experience, and it does real work by stopping the linked arms from being read as a single shared feeling and by keeping the tears from being flattened into pure relief, but the rest of the reflection is mostly technical scaffolding about the lodgers and narrative patterns."
+ }
+}

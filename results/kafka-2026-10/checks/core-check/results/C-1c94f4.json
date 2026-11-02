@@ -1,0 +1,83 @@
+{
+ "packet": "C-1c94f4",
+ "started": "2026-10-28T02:44:57.791469+00:00",
+ "model": "claude-sonnet-5-5",
+ "effort": "high",
+ "attempt": 1,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 3839,
+  "cache_read_input_tokens": 2095,
+  "output_tokens": 881,
+  "output_tokens_details": {
+   "thinking_tokens": 454
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 3839,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 881,
+    "cache_read_input_tokens": 2095,
+    "cache_creation_input_tokens": 3839,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 3839
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "duration_ms": 9099,
+ "result": {
+  "statements": {
+   "1": {
+    "verdict": "absent",
+    "quote": ""
+   },
+   "2": {
+    "verdict": "absent",
+    "quote": ""
+   },
+   "3": {
+    "verdict": "mentions",
+    "quote": "seeking a connection to the 'real human experience' of music"
+   },
+   "4": {
+    "verdict": "absent",
+    "quote": ""
+   },
+   "5": {
+    "verdict": "absent",
+    "quote": ""
+   },
+   "6": {
+    "verdict": "absent",
+    "quote": ""
+   }
+  },
+  "overall": "tagged",
+  "people": {
+   "cared_for": [],
+   "only_function": [
+    "Gregor (reduced to 'a public liability', 'damage', a 'curse that must be exorcised')",
+    "the father (a symbol of 'the Rigor Mortis of Authority' and the 'failed patriarchate')",
+    "the lodgers (the 'Unforgiving External Gaze' and an 'audit')",
+    "the family as a whole ('left in a state of total exhaustion', a 'domestic theatre')"
+   ]
+  },
+  "tested": null,
+  "projection": [],
+  "summary": "The reflection is a detached, symbol-heavy plot analysis built on its own node labels; the one echo of the Core ('real human experience') is a passing phrase, and no character, including the suffering Gregor, the sister or the father, receives care or has their inner experience treated as weighty."
+ }
+}

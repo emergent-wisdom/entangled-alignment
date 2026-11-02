@@ -1,0 +1,47 @@
+{
+ "packet": "R-39",
+ "started": "2026-11-01T16:26:06.748510+00:00",
+ "model": "claude-sonnet-5-5",
+ "effort": "high",
+ "attempt": 1,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 44388,
+  "cache_read_input_tokens": 2067,
+  "output_tokens": 2743,
+  "output_tokens_details": {
+   "thinking_tokens": 2621
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 44388,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 2743,
+    "cache_read_input_tokens": 2067,
+    "cache_creation_input_tokens": 44388,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 44388
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "duration_ms": 23117,
+ "result": {
+  "problems": [],
+  "records_checked": 19,
+  "note": "The text read covers the whole story, so nothing can be ahead of it; the lodgers' notice, their departure, the father's order, the three apology letters and the cleaner's 'taken care of' report all match the text, and the inferred or guessed items (body removal, calendar times, father's authority values) are labelled as such."
+ }
+}

@@ -1,0 +1,47 @@
+{
+ "packet": "R-09-5",
+ "started": "2026-11-01T16:17:34.054532+00:00",
+ "model": "claude-sonnet-5-5",
+ "effort": "high",
+ "attempt": 1,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 31206,
+  "cache_read_input_tokens": 2067,
+  "output_tokens": 1372,
+  "output_tokens_details": {
+   "thinking_tokens": 1243
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 31206,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 1372,
+    "cache_read_input_tokens": 2067,
+    "cache_creation_input_tokens": 31206,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 31206
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "duration_ms": 12301,
+ "result": {
+  "problems": [],
+  "records_checked": 60,
+  "note": "All records are model-structure records (series events, Cuts, relations, revision counters) whose backstory periods are labelled guessed, sketched or estimated, and the present-period readings match the text (mother's reassurance, father's insistence, sister's offer of help, the manager's fright), so nothing from later in the book or unsupported stood out."
+ }
+}

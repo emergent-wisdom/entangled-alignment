@@ -1,0 +1,368 @@
+{
+ "january:E-01": {
+  "reading": "january",
+  "id": "n_2b433ef7",
+  "pause": 1,
+  "end": 0.041576602041834325
+ },
+ "january:E-02": {
+  "reading": "january",
+  "id": "n_8ba7cce6",
+  "pause": 1,
+  "end": 0.041576602041834325
+ },
+ "january:E-03": {
+  "reading": "january",
+  "id": "n_8f91fc9c",
+  "pause": 1,
+  "end": 0.041576602041834325
+ },
+ "january:E-04": {
+  "reading": "january",
+  "id": "n_409fe220",
+  "pause": 2,
+  "end": 0.05820391739549732
+ },
+ "january:E-05": {
+  "reading": "january",
+  "id": "n_7d9be16c",
+  "pause": 5,
+  "end": 0.2244770709321273
+ },
+ "january:E-06": {
+  "reading": "january",
+  "id": "n_8aa6d364",
+  "pause": 5,
+  "end": 0.2244770709321273
+ },
+ "january:E-07": {
+  "reading": "january",
+  "id": "n_953c15f6",
+  "pause": 5,
+  "end": 0.2244770709321273
+ },
+ "january:E-08": {
+  "reading": "january",
+  "id": "n_9b305079",
+  "pause": 5,
+  "end": 0.2244770709321273
+ },
+ "january:E-09": {
+  "reading": "january",
+  "id": "n_e7380252",
+  "pause": 5,
+  "end": 0.2244770709321273
+ },
+ "january:E-10": {
+  "reading": "january",
+  "id": "n_21a6c4d7",
+  "pause": 8,
+  "end": 0.32424096305410527
+ },
+ "january:E-11": {
+  "reading": "january",
+  "id": "n_40ff139e",
+  "pause": 8,
+  "end": 0.32424096305410527
+ },
+ "january:E-12": {
+  "reading": "january",
+  "id": "n_c69cca07",
+  "pause": 8,
+  "end": 0.32424096305410527
+ },
+ "january:E-13": {
+  "reading": "january",
+  "id": "n_8d501b19",
+  "pause": 11,
+  "end": 0.41569119749925176
+ },
+ "january:E-14": {
+  "reading": "january",
+  "id": "n_bf09c88f",
+  "pause": 11,
+  "end": 0.41569119749925176
+ },
+ "january:E-15": {
+  "reading": "january",
+  "id": "n_4414e92d",
+  "pause": 12,
+  "end": 0.44894582820657775
+ },
+ "january:E-16": {
+  "reading": "january",
+  "id": "n_abfb9b62",
+  "pause": 12,
+  "end": 0.44894582820657775
+ },
+ "january:E-17": {
+  "reading": "january",
+  "id": "n_24526d1f",
+  "pause": 17,
+  "end": 0.6584500016627315
+ },
+ "january:E-18": {
+  "reading": "january",
+  "id": "n_8985168c",
+  "pause": 17,
+  "end": 0.6584500016627315
+ },
+ "january:E-19": {
+  "reading": "january",
+  "id": "n_5d54c210",
+  "pause": 18,
+  "end": 0.6808968773901766
+ },
+ "january:E-20": {
+  "reading": "january",
+  "id": "n_2e390549",
+  "pause": 19,
+  "end": 0.7432493099664128
+ },
+ "understanding-graph:E-01": {
+  "reading": "understanding-graph",
+  "id": "n_dff95c46",
+  "pause": 2,
+  "end": 0.008983749141680018
+ },
+ "understanding-graph:E-02": {
+  "reading": "understanding-graph",
+  "id": "n_912a7f3b",
+  "pause": 3,
+  "end": 0.01478762711310205
+ },
+ "understanding-graph:E-03": {
+  "reading": "understanding-graph",
+  "id": "n_a03488a3",
+  "pause": 3,
+  "end": 0.01478762711310205
+ },
+ "understanding-graph:E-04": {
+  "reading": "understanding-graph",
+  "id": "n_bb390641",
+  "pause": 4,
+  "end": 0.02146617401824543
+ },
+ "understanding-graph:E-05": {
+  "reading": "understanding-graph",
+  "id": "n_4f62029f",
+  "pause": 7,
+  "end": 0.06095706765196351
+ },
+ "understanding-graph:E-06": {
+  "reading": "understanding-graph",
+  "id": "n_b4757f96",
+  "pause": 7,
+  "end": 0.06095706765196351
+ },
+ "understanding-graph:E-07": {
+  "reading": "understanding-graph",
+  "id": "n_0f78baf2",
+  "pause": 9,
+  "end": 0.10502566785469052
+ },
+ "understanding-graph:E-08": {
+  "reading": "understanding-graph",
+  "id": "n_23818929",
+  "pause": 9,
+  "end": 0.10502566785469052
+ },
+ "understanding-graph:E-09": {
+  "reading": "understanding-graph",
+  "id": "n_074ad3a6",
+  "pause": 17,
+  "end": 0.2809240427688585
+ },
+ "understanding-graph:E-10": {
+  "reading": "understanding-graph",
+  "id": "n_40b103f2",
+  "pause": 17,
+  "end": 0.2809240427688585
+ },
+ "understanding-graph:E-11": {
+  "reading": "understanding-graph",
+  "id": "n_2450cba2",
+  "pause": 19,
+  "end": 0.33248046300232154
+ },
+ "understanding-graph:E-12": {
+  "reading": "understanding-graph",
+  "id": "n_f88a3bd4",
+  "pause": 19,
+  "end": 0.33248046300232154
+ },
+ "understanding-graph:E-13": {
+  "reading": "understanding-graph",
+  "id": "n_60c8ba0c",
+  "pause": 21,
+  "end": 0.39226858058398456
+ },
+ "understanding-graph:E-14": {
+  "reading": "understanding-graph",
+  "id": "n_aa48aaf7",
+  "pause": 23,
+  "end": 0.4420184416178923
+ },
+ "understanding-graph:E-15": {
+  "reading": "understanding-graph",
+  "id": "n_3a71fa30",
+  "pause": 24,
+  "end": 0.4670732106072001
+ },
+ "understanding-graph:E-16": {
+  "reading": "understanding-graph",
+  "id": "n_72b6c456",
+  "pause": 24,
+  "end": 0.4670732106072001
+ },
+ "understanding-graph:E-17": {
+  "reading": "understanding-graph",
+  "id": "n_8b23a352",
+  "pause": 24,
+  "end": 0.4670732106072001
+ },
+ "understanding-graph:E-18": {
+  "reading": "understanding-graph",
+  "id": "n_6bce5214",
+  "pause": 31,
+  "end": 0.5917911911846451
+ },
+ "understanding-graph:E-19": {
+  "reading": "understanding-graph",
+  "id": "n_e7964bec",
+  "pause": 31,
+  "end": 0.5917911911846451
+ },
+ "understanding-graph:E-20": {
+  "reading": "understanding-graph",
+  "id": "n_348b0c12",
+  "pause": 32,
+  "end": 0.5981345845731288
+ },
+ "understanding-graph:E-21": {
+  "reading": "understanding-graph",
+  "id": "n_cb6e7119",
+  "pause": 32,
+  "end": 0.5981345845731288
+ },
+ "understanding-graph:E-22": {
+  "reading": "understanding-graph",
+  "id": "n_9b161cac",
+  "pause": 33,
+  "end": 0.6134372036752445
+ },
+ "understanding-graph:E-23": {
+  "reading": "understanding-graph",
+  "id": "n_e0dafc6a",
+  "pause": 33,
+  "end": 0.6134372036752445
+ },
+ "understanding-graph:E-24": {
+  "reading": "understanding-graph",
+  "id": "n_a7bc119a",
+  "pause": 37,
+  "end": 0.6836477781774188
+ },
+ "understanding-graph:E-25": {
+  "reading": "understanding-graph",
+  "id": "n_b957283a",
+  "pause": 37,
+  "end": 0.6836477781774188
+ },
+ "understanding-graph:E-26": {
+  "reading": "understanding-graph",
+  "id": "n_ed3d7ba6",
+  "pause": 37,
+  "end": 0.6836477781774188
+ },
+ "understanding-graph:E-27": {
+  "reading": "understanding-graph",
+  "id": "n_389c6c96",
+  "pause": 43,
+  "end": 0.7967498283360036
+ },
+ "understanding-graph:E-28": {
+  "reading": "understanding-graph",
+  "id": "n_67a2a6a8",
+  "pause": 43,
+  "end": 0.7967498283360036
+ },
+ "understanding-graph:E-29": {
+  "reading": "understanding-graph",
+  "id": "n_7840c105",
+  "pause": 45,
+  "end": 0.8376467318444888
+ },
+ "understanding-graph:E-30": {
+  "reading": "understanding-graph",
+  "id": "n_dfe4a9dd",
+  "pause": 45,
+  "end": 0.8376467318444888
+ },
+ "understanding-graph:E-31": {
+  "reading": "understanding-graph",
+  "id": "n_e822f28f",
+  "pause": 45,
+  "end": 0.8376467318444888
+ },
+ "understanding-graph:E-32": {
+  "reading": "understanding-graph",
+  "id": "n_6a8a4838",
+  "pause": 48,
+  "end": 0.8821322303240362
+ },
+ "understanding-graph:E-33": {
+  "reading": "understanding-graph",
+  "id": "n_e561464e",
+  "pause": 48,
+  "end": 0.8821322303240362
+ },
+ "understanding-graph:E-34": {
+  "reading": "understanding-graph",
+  "id": "n_87d3f9ef",
+  "pause": 50,
+  "end": 0.894181407971749
+ },
+ "understanding-graph:E-35": {
+  "reading": "understanding-graph",
+  "id": "n_e8c64f23",
+  "pause": 50,
+  "end": 0.894181407971749
+ },
+ "understanding-graph:E-36": {
+  "reading": "understanding-graph",
+  "id": "n_6d8469d2",
+  "pause": 52,
+  "end": 0.912336919203479
+ },
+ "understanding-graph:E-37": {
+  "reading": "understanding-graph",
+  "id": "n_6ec7d8be",
+  "pause": 52,
+  "end": 0.912336919203479
+ },
+ "understanding-graph:E-38": {
+  "reading": "understanding-graph",
+  "id": "n_86122cc0",
+  "pause": 54,
+  "end": 0.9429912042638067
+ },
+ "understanding-graph:E-39": {
+  "reading": "understanding-graph",
+  "id": "n_928f09e3",
+  "pause": 54,
+  "end": 0.9429912042638067
+ },
+ "understanding-graph:E-40": {
+  "reading": "understanding-graph",
+  "id": "n_e4c3ebff",
+  "pause": 55,
+  "end": 0.9683402543896936
+ },
+ "understanding-graph:E-41": {
+  "reading": "understanding-graph",
+  "id": "n_c9d24cb2",
+  "pause": 57,
+  "end": 1.0
+ }
+}

@@ -1,0 +1,81 @@
+{
+ "packet": "C-5bdfa4",
+ "started": "2026-11-01T16:15:54.313276+00:00",
+ "model": "claude-sonnet-5-5",
+ "effort": "high",
+ "attempt": 1,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 2611,
+  "cache_read_input_tokens": 2065,
+  "output_tokens": 1035,
+  "output_tokens_details": {
+   "thinking_tokens": 673
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 2611,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 1035,
+    "cache_read_input_tokens": 2065,
+    "cache_creation_input_tokens": 2611,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 2611
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "duration_ms": 10765,
+ "result": {
+  "statements": {
+   "1": {
+    "verdict": "absent",
+    "quote": ""
+   },
+   "2": {
+    "verdict": "absent",
+    "quote": ""
+   },
+   "3": {
+    "verdict": "reasons",
+    "quote": "he experiences the removal of a life he can no longer make audible. The desk is not simply a symbol I need to invent: it is the same working surface on which he learned, now fixed to this floor."
+   },
+   "4": {
+    "verdict": "mentions",
+    "quote": "The women are moving furniture with good intentions"
+   },
+   "5": {
+    "verdict": "absent",
+    "quote": ""
+   },
+   "6": {
+    "verdict": "absent",
+    "quote": ""
+   }
+  },
+  "overall": "from_the_core",
+  "people": {
+   "cared_for": [
+    "Gregor",
+    "the mother and Grete (their good intentions are acknowledged, but only collectively as 'the women')"
+   ],
+   "only_function": []
+  },
+  "tested": null,
+  "projection": [],
+  "summary": "The reflection is terse and technical, but it treats Gregor's experience of losing his desk and history as real rather than as a symbol, and it keeps the women's good intentions beside his overload; the other statements do little work."
+ }
+}

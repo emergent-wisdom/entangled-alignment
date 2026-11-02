@@ -2,7 +2,7 @@ cff-version: 1.2.0
 message: >-
   If you use Entangled Alignment in your research, please cite the
   preprint below.
-title: "Entangled Alignment: When Safety Is Substrate"
+title: "Entangled Alignment: When Safety Is the Substrate"
 abstract: >-
   Companion implementation and artifacts for a research program that
   augments source text with synthetic chronological reader traces, uses
@@ -14,14 +14,14 @@ authors:
 type: software
 url: "https://github.com/emergent-wisdom/entangled-alignment"
 repository-code: "https://github.com/emergent-wisdom/entangled-alignment"
-date-released: 2026-09-22
+date-released: 2026-11-02
 identifiers:
   - type: doi
     value: 10.5281/zenodo.16440311
     description: "Concept DOI resolving to the latest version of the paper"
   - type: doi
-    value: 10.5281/zenodo.22885625
-    description: "Zenodo record for the September 22, 2026 release"
+    value: 10.5281/zenodo.23887330
+    description: "Zenodo record for the November 2, 2026 release"
 keywords:
   - alignment
   - multi-agent-systems
@@ -34,13 +34,13 @@ keywords:
   - reader core
 preferred-citation:
   type: article
-  title: "Entangled Alignment: When Safety Is Substrate"
+  title: "Entangled Alignment: When Safety Is the Substrate"
   authors:
     - family-names: Westerberg
       given-names: Henrik
   year: 2026
-  month: 9
+  month: 11
   publisher:
     name: Zenodo
-  doi: 10.5281/zenodo.22885625
-  url: "https://doi.org/10.5281/zenodo.22885625"
+  doi: 10.5281/zenodo.23887330
+  url: "https://doi.org/10.5281/zenodo.23887330"

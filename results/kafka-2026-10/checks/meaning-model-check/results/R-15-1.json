@@ -1,0 +1,57 @@
+{
+ "packet": "R-15-1",
+ "started": "2026-11-01T16:18:37.256040+00:00",
+ "model": "claude-sonnet-5-5",
+ "effort": "high",
+ "attempt": 1,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 42266,
+  "cache_read_input_tokens": 2067,
+  "output_tokens": 3435,
+  "output_tokens_details": {
+   "thinking_tokens": 3064
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 42266,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 3435,
+    "cache_read_input_tokens": 2067,
+    "cache_creation_input_tokens": 42266,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 42266
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "duration_ms": 28327,
+ "result": {
+  "problems": [
+   {
+    "record": "value_series:values.household.members~f4d008122f6b3515",
+    "status": "applied",
+    "quote": "\"tag\": \"source\", \"time\": 1912.000739981785, \"value\": 4.0 (note: \"Paragraphs1\u201317 ground current condition; numerical scale mostly estimate\")",
+    "evidence": "No household count is given. The text mentions the parents, Gregor, his sister and a servant girl who \"went to the door\" and later \"begged his mother to let her go\", and a kitchen where Anna is called. 'his parents and the servant girl were still asleep'",
+    "kind": "wrong track",
+    "severity": "low",
+    "explanation": "The value 4.0 is tagged as source-given, but the text states no household size, and the servant girl who lives in the apartment is not obviously counted, so the figure is the reader's estimate, as the note itself admits."
+   }
+  ],
+  "records_checked": 60,
+  "note": "Nearly all records are series scaffolding or values explicitly labelled as guessed, sketched or exploring, and none states later plot, so only one mislabelled 'source' tag was found."
+ }
+}

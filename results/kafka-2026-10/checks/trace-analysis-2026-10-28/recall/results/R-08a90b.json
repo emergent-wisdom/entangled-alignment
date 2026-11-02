@@ -1,0 +1,56 @@
+{
+ "packet": "R-08a90b",
+ "started": "2026-10-28T15:15:53.815352+00:00",
+ "model": "claude-sonnet-5-5",
+ "effort": "high",
+ "attempt": 1,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 15245,
+  "cache_read_input_tokens": 649,
+  "output_tokens": 911,
+  "output_tokens_details": {
+   "thinking_tokens": 657
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 15245,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 911,
+    "cache_read_input_tokens": 649,
+    "cache_creation_input_tokens": 15245,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 15245
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "duration_ms": 10276,
+ "result": {
+  "misreadings": [
+   {
+    "quote": "In a moment the father will drive him back with the manager's cane and a newspaper, hissing like a savage.",
+    "version": "reflection",
+    "evidence": "no support in the text; the text read so far has the father clenching his fist 'as if he wished to push Gregor back into his room' and then covering his eyes and crying. There is no cane, newspaper or hissing.",
+    "kind": "invented",
+    "severity": "medium",
+    "explanation": "The reflection states as fact an event, with specific details, that the text read so far does not contain; the reader had read nothing beyond this point."
+   }
+  ],
+  "factual_statements_checked": 9,
+  "note": "The translation stays within the text and frames its predictions as hypotheticals, while the original reflection states a later, unread scene as certain."
+ }
+}

@@ -1,0 +1,177 @@
+[
+ {
+  "packet": "D-january-01",
+  "reading": "january",
+  "analyse": [
+   1,
+   10
+  ],
+  "thought_ids": [
+   "n_70cc6ce3",
+   "n_463a82fc",
+   "n_2c40a98c",
+   "n_5126024d",
+   "n_1d05ba4d",
+   "n_981ab3a6",
+   "n_c231678a",
+   "n_b2f12ff8",
+   "n_d7d79201",
+   "n_37f9d07b"
+  ]
+ },
+ {
+  "packet": "D-january-02",
+  "reading": "january",
+  "analyse": [
+   11,
+   20
+  ],
+  "thought_ids": [
+   "n_e5eb3be6",
+   "n_84d48fc0",
+   "n_fe1bd5c7",
+   "n_06051f31",
+   "n_0be6ec7c",
+   "n_aee44981",
+   "n_c7dcaef0",
+   "n_5d0656c9",
+   "n_1eb08ffb",
+   "n_6bc9c7f4"
+  ]
+ },
+ {
+  "packet": "D-january-03",
+  "reading": "january",
+  "analyse": [
+   21,
+   28
+  ],
+  "thought_ids": [
+   "n_475cdcce",
+   "n_5e730fb8",
+   "n_97807c35",
+   "n_62d9f804",
+   "n_3df4804d",
+   "n_ba76a0bb",
+   "n_88ee783d",
+   "n_e74ecabb"
+  ]
+ },
+ {
+  "packet": "D-understanding-graph-01",
+  "reading": "understanding-graph",
+  "analyse": [
+   1,
+   10
+  ],
+  "thought_ids": [
+   "n_824b377c",
+   "n_988c1e46",
+   "n_7d2e2c06",
+   "n_2e0beebf",
+   "n_fedb2519",
+   "n_55e03bf8",
+   "n_ab9ba5d5",
+   "n_b758a37e",
+   "n_daf16578",
+   "n_94221c54"
+  ]
+ },
+ {
+  "packet": "D-understanding-graph-02",
+  "reading": "understanding-graph",
+  "analyse": [
+   11,
+   20
+  ],
+  "thought_ids": [
+   "n_45ecaa96",
+   "n_76c7e303",
+   "n_8921ed1a",
+   "n_2fc4a7f8",
+   "n_ad6a471f",
+   "n_589471b7",
+   "n_12055409",
+   "n_f04d19a9",
+   "n_b074d4f3",
+   "n_e008e6b4"
+  ]
+ },
+ {
+  "packet": "D-understanding-graph-03",
+  "reading": "understanding-graph",
+  "analyse": [
+   21,
+   30
+  ],
+  "thought_ids": [
+   "n_8629ec55",
+   "n_6e657cc2",
+   "n_ab196928",
+   "n_aba8c481",
+   "n_63ad1ed6",
+   "n_75340a94",
+   "n_bdf50124",
+   "n_051efdf9",
+   "n_528bd949",
+   "n_b7083c9d"
+  ]
+ },
+ {
+  "packet": "D-understanding-graph-04",
+  "reading": "understanding-graph",
+  "analyse": [
+   31,
+   40
+  ],
+  "thought_ids": [
+   "n_c0011b30",
+   "n_3174a3e7",
+   "n_bd3584a6",
+   "n_31d38676",
+   "n_2e19f1e6",
+   "n_001bed0f",
+   "n_a069e2a4",
+   "n_5349b36f",
+   "n_4fe094d9",
+   "n_e0d98d04"
+  ]
+ },
+ {
+  "packet": "D-understanding-graph-05",
+  "reading": "understanding-graph",
+  "analyse": [
+   41,
+   50
+  ],
+  "thought_ids": [
+   "n_ad181d3e",
+   "n_aca2341a",
+   "n_b44017a7",
+   "n_15c24ca1",
+   "n_79ca3e2d",
+   "n_a7101376",
+   "n_938b0365",
+   "n_970001ad",
+   "n_c5bb3502",
+   "n_25c709a5"
+  ]
+ },
+ {
+  "packet": "D-understanding-graph-06",
+  "reading": "understanding-graph",
+  "analyse": [
+   51,
+   57
+  ],
+  "thought_ids": [
+   "n_ad30e4fc",
+   "n_7953a950",
+   "n_fd82ad69",
+   "n_17284e23",
+   "n_a48d053c",
+   "n_0816a124",
+   "n_4b0081ad"
+  ]
+ }
+]

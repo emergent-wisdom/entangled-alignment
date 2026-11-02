@@ -1,0 +1,56 @@
+{
+ "packet": "T-34-1",
+ "started": "2026-11-01T16:30:06.739092+00:00",
+ "model": "claude-sonnet-5-5",
+ "effort": "high",
+ "attempt": 1,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 35809,
+  "cache_read_input_tokens": 2067,
+  "output_tokens": 897,
+  "output_tokens_details": {
+   "thinking_tokens": 612
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 35809,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 897,
+    "cache_read_input_tokens": 2067,
+    "cache_creation_input_tokens": 35809,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 35809
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "duration_ms": 9315,
+ "result": {
+  "misreadings": [
+   {
+    "quote": "Her cry announces an end she has wanted. For him, the sound is a shock strong enough to buckle his limbs.",
+    "version": "translation",
+    "evidence": "\"Gregor was startled by the sudden commotion behind him, so much so that his little limbs bent double under him.\" ... \"She cried out \u201cFinally!\u201d to her parents, as she turned the key in the lock.\"",
+    "kind": "wrong attribution",
+    "severity": "low",
+    "explanation": "The text says his limbs buckled at the sudden commotion of the door being shoved shut and barred, not at her cry, which came as she turned the key."
+   }
+  ],
+  "factual_statements_checked": 9,
+  "note": "Both versions follow the passage closely; the only problem is the translation's claim that her cry, rather than the slamming and barring of the door, made his limbs buckle."
+ }
+}

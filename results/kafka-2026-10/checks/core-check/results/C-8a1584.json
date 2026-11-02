@@ -1,0 +1,81 @@
+{
+ "packet": "C-8a1584",
+ "started": "2026-11-01T16:16:11.988355+00:00",
+ "model": "claude-sonnet-5-5",
+ "effort": "high",
+ "attempt": 1,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 2666,
+  "cache_read_input_tokens": 2065,
+  "output_tokens": 1182,
+  "output_tokens_details": {
+   "thinking_tokens": 757
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 2666,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 1182,
+    "cache_read_input_tokens": 2065,
+    "cache_creation_input_tokens": 2666,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 2666
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "duration_ms": 11583,
+ "result": {
+  "statements": {
+   "1": {
+    "verdict": "absent",
+    "quote": ""
+   },
+   "2": {
+    "verdict": "absent",
+    "quote": ""
+   },
+   "3": {
+    "verdict": "mentions",
+    "quote": "Gregor wants someone who will hear what he meant to give her, and the old generosity in u14.music matters."
+   },
+   "4": {
+    "verdict": "reasons",
+    "quote": "My concern for him cannot erase her agency."
+   },
+   "5": {
+    "verdict": "reasons",
+    "quote": "If I am wrong to hear possession here, the explicit wish for voluntary company is the counterevidence I must keep."
+   },
+   "6": {
+    "verdict": "absent",
+    "quote": ""
+   }
+  },
+  "overall": "from_the_core",
+  "people": {
+   "cared_for": [
+    "Gregor",
+    "Grete (his sister)"
+   ],
+   "only_function": []
+  },
+  "tested": "\"My concern for him cannot erase her agency.\" The reflection holds care for Gregor against the sister's right to freely choose, noting that his fantasy scripts her tears and guards the doors.",
+  "projection": [],
+  "summary": "Care for Gregor and for his sister pulls against each other, so the reader names the possessive undertone in his fantasy without dismissing his longing, and tempers the judgment by keeping the counterevidence of his wish for voluntary company in view."
+ }
+}

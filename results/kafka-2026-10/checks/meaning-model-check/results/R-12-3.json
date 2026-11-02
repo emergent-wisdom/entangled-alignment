@@ -1,0 +1,47 @@
+{
+ "packet": "R-12-3",
+ "started": "2026-11-01T16:18:12.629435+00:00",
+ "model": "claude-sonnet-5-5",
+ "effort": "high",
+ "attempt": 1,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 35715,
+  "cache_read_input_tokens": 2067,
+  "output_tokens": 2080,
+  "output_tokens_details": {
+   "thinking_tokens": 1972
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 35715,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 2080,
+    "cache_read_input_tokens": 2067,
+    "cache_creation_input_tokens": 35715,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 35715
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "duration_ms": 17969,
+ "result": {
+  "problems": [],
+  "records_checked": 57,
+  "note": "No problems found: every claim from the text (couch hiding, anxiety in the open room, Grete's food trial, five years in the room, sister's letters) is supported by what had been read, and the invented calendar dates and sibling-history values are labelled as guessed or exploring."
+ }
+}

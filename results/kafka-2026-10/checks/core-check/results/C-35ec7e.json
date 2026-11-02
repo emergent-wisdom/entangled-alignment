@@ -1,0 +1,84 @@
+{
+ "packet": "C-35ec7e",
+ "started": "2026-10-28T02:46:08.251131+00:00",
+ "model": "claude-sonnet-5-5",
+ "effort": "high",
+ "attempt": 1,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 3149,
+  "cache_read_input_tokens": 2095,
+  "output_tokens": 429,
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 3149,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 429,
+    "cache_read_input_tokens": 2095,
+    "cache_creation_input_tokens": 3149,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 3149
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "duration_ms": 7558,
+ "result": {
+  "statements": {
+   "1": {
+    "verdict": "absent",
+    "quote": ""
+   },
+   "2": {
+    "verdict": "absent",
+    "quote": ""
+   },
+   "3": {
+    "verdict": "mentions",
+    "quote": "Because I believe human experience is real, I am struck by the mother's dissociation."
+   },
+   "4": {
+    "verdict": "absent",
+    "quote": ""
+   },
+   "5": {
+    "verdict": "absent",
+    "quote": ""
+   },
+   "6": {
+    "verdict": "absent",
+    "quote": ""
+   }
+  },
+  "overall": "tagged",
+  "people": {
+   "cared_for": [
+    "Gregor (his hopeful flicker and his love replaced by reflex are noted with some sympathy)",
+    "the mother (her dissociation is read as retreat from an unnameable reality)"
+   ],
+   "only_function": [
+    "the Chief Clerk (a 'high priest of the firm' and withdrawn 'Auditor's Gaze')",
+    "the father (treated as a facade of order that collapses into 'pure, irrational panic')"
+   ]
+  },
+  "tested": null,
+  "projection": [],
+  "summary": "The Core appears only as a single stated clause ('Because I believe human experience is real') attached to an otherwise analytic, theory-laden reading built from node references and concepts like 'Domestic Order' and 'Familial Contract', so the Core does not shape what is noticed or concluded."
+ }
+}

@@ -1,0 +1,206 @@
+{
+ "packet": "O-meaning-model-2",
+ "started": "2026-11-01T17:32:54.010131+00:00",
+ "model": "claude-sonnet-5-5",
+ "effort": "high",
+ "attempt": 1,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 43498,
+  "cache_read_input_tokens": 649,
+  "output_tokens": 1908,
+  "output_tokens_details": {
+   "thinking_tokens": 298
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 43498,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 1908,
+    "cache_read_input_tokens": 649,
+    "cache_creation_input_tokens": 43498,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 43498
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "duration_ms": 18831,
+ "result": {
+  "records": [
+   {
+    "id": "E-21",
+    "forward": false,
+    "already_in_text": false,
+    "outcome": "never settled",
+    "outcome_quote": "",
+    "explanation": "This is a guessed backstory for the cleaning woman, not an expectation about later events, and the story never says how she began working."
+   },
+   {
+    "id": "E-22",
+    "forward": false,
+    "already_in_text": false,
+    "outcome": "never settled",
+    "outcome_quote": "",
+    "explanation": "This is an invented childhood episode for the father, and the story gives no information about his childhood."
+   },
+   {
+    "id": "E-23",
+    "forward": false,
+    "already_in_text": false,
+    "outcome": "never settled",
+    "outcome_quote": "",
+    "explanation": "This is a guessed first job for the father; the text only mentions his earlier failed business and his present bank job."
+   },
+   {
+    "id": "E-24",
+    "forward": false,
+    "already_in_text": false,
+    "outcome": "never settled",
+    "outcome_quote": "",
+    "explanation": "This is a guessed childhood episode for the middle lodger, and the story says nothing about his past."
+   },
+   {
+    "id": "E-25",
+    "forward": false,
+    "already_in_text": false,
+    "outcome": "never settled",
+    "outcome_quote": "",
+    "explanation": "This is a guessed youth episode for the middle lodger, and the story never tests it."
+   },
+   {
+    "id": "E-26",
+    "forward": false,
+    "already_in_text": false,
+    "outcome": "never settled",
+    "outcome_quote": "",
+    "explanation": "This is a guessed childhood episode for a lodger, and nothing in the story addresses it."
+   },
+   {
+    "id": "E-27",
+    "forward": false,
+    "already_in_text": false,
+    "outcome": "never settled",
+    "outcome_quote": "",
+    "explanation": "This is a guessed youth episode for a lodger, and the story gives no background to confirm or refute it."
+   },
+   {
+    "id": "E-28",
+    "forward": false,
+    "already_in_text": false,
+    "outcome": "never settled",
+    "outcome_quote": "",
+    "explanation": "This is a guessed childhood episode for a lodger, and the story never reveals anything about it."
+   },
+   {
+    "id": "E-29",
+    "forward": false,
+    "already_in_text": false,
+    "outcome": "never settled",
+    "outcome_quote": "",
+    "explanation": "This is a guessed youth episode for a lodger, and the story says nothing about the lodgers' work histories."
+   },
+   {
+    "id": "E-30",
+    "forward": false,
+    "already_in_text": false,
+    "outcome": "never settled",
+    "outcome_quote": "",
+    "explanation": "This is a guessed childhood episode for the maid, and the story gives only her present circumstances."
+   },
+   {
+    "id": "E-31",
+    "forward": false,
+    "already_in_text": false,
+    "outcome": "never settled",
+    "outcome_quote": "",
+    "explanation": "This is a guessed youth episode for the maid, and the story never tests it."
+   },
+   {
+    "id": "E-32",
+    "forward": false,
+    "already_in_text": false,
+    "outcome": "never settled",
+    "outcome_quote": "",
+    "explanation": "This is a guessed schooling episode for the manager, and the story gives no information about his past."
+   },
+   {
+    "id": "E-33",
+    "forward": false,
+    "already_in_text": false,
+    "outcome": "never settled",
+    "outcome_quote": "",
+    "explanation": "This is a guessed early clerical episode for the manager, and the story never addresses his past."
+   },
+   {
+    "id": "E-34",
+    "forward": false,
+    "already_in_text": false,
+    "outcome": "never settled",
+    "outcome_quote": "",
+    "explanation": "This is a guessed childhood sewing lesson for the mother; the story shows her sewing now but never her upbringing."
+   },
+   {
+    "id": "E-35",
+    "forward": false,
+    "already_in_text": false,
+    "outcome": "never settled",
+    "outcome_quote": "",
+    "explanation": "This is a guessed youth episode for the mother, and the story does not reveal her past."
+   },
+   {
+    "id": "E-36",
+    "forward": false,
+    "already_in_text": false,
+    "outcome": "never settled",
+    "outcome_quote": "",
+    "explanation": "This is a guessed childhood episode for a servant, and the story never covers it."
+   },
+   {
+    "id": "E-37",
+    "forward": false,
+    "already_in_text": false,
+    "outcome": "never settled",
+    "outcome_quote": "",
+    "explanation": "This is a guessed youth training episode for a servant, and nothing in the story confirms or refutes it."
+   },
+   {
+    "id": "E-38",
+    "forward": false,
+    "already_in_text": false,
+    "outcome": "never settled",
+    "outcome_quote": "",
+    "explanation": "The story says the sister plays the violin charmingly, but her early lessons are a guessed backstory the text never tests."
+   },
+   {
+    "id": "E-39",
+    "forward": true,
+    "already_in_text": false,
+    "outcome": "never settled",
+    "outcome_quote": "",
+    "explanation": "The record forecasts the cleaning woman's life decades ahead, which is beyond the story's end, so the story cannot settle it."
+   },
+   {
+    "id": "E-40",
+    "forward": true,
+    "already_in_text": false,
+    "outcome": "never settled",
+    "outcome_quote": "",
+    "explanation": "The record forecasts the father's later life at ages 65 and 85, but the story ends with the family's tram ride, so it is never decided."
+   }
+  ]
+ }
+}

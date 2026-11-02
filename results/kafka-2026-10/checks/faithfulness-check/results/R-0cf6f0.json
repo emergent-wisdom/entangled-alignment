@@ -1,0 +1,48 @@
+{
+ "blind": "R-0cf6f0",
+ "started": "2026-10-26T10:17:04.883026+00:00",
+ "model": "claude-sonnet-5-5",
+ "effort": "high",
+ "attempt": 1,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 30670,
+  "cache_read_input_tokens": 649,
+  "output_tokens": 806,
+  "output_tokens_details": {
+   "thinking_tokens": 681
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 30670,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 806,
+    "cache_read_input_tokens": 649,
+    "cache_creation_input_tokens": 30670,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 30670
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "cost_usd_reported": 0.1308089,
+ "duration_ms": 9263,
+ "result": {
+  "misreadings": [],
+  "factual_statements_checked": 16,
+  "note": "Both versions stay within the passage and earlier text: the polished buttons on the dirty uniform, the unused sleeping gown, the six o'clock service, the women putting down sewing and pen, the father proceeding alone, and the apple he threw. Everything else is hedged interpretation."
+ }
+}

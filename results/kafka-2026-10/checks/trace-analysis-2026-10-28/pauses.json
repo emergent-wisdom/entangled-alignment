@@ -1,0 +1,190 @@
+{
+ "january": {
+  "pauses": 28,
+  "median_passage": 0.03325463070732598,
+  "max_passage": 0.08563067407136449,
+  "turns_located": 14,
+  "median_turn_to_pause": 0.01153499117675149,
+  "turns_within_1pct": 6,
+  "rows": [
+   {
+    "turn": "the manager arrives",
+    "found": true,
+    "at": 0.11263165012763511,
+    "next_pause_after": 0.012081528682514206
+   },
+   {
+    "turn": "the lock opens",
+    "found": true,
+    "at": 0.21615978902168953,
+    "next_pause_after": 0.008317281910437763
+   },
+   {
+    "turn": "the father drives him back",
+    "found": true,
+    "at": 0.32074450999949283,
+    "next_pause_after": 0.003496453054612436
+   },
+   {
+    "turn": "the milk",
+    "found": true,
+    "at": 0.3309891298835224,
+    "next_pause_after": 0.026506463877908837
+   },
+   {
+    "turn": "the savings",
+    "found": true,
+    "at": 0.45300322891484796,
+    "next_pause_after": 0.04582454535271879
+   },
+   {
+    "turn": "the picture",
+    "found": true,
+    "at": 0.5851351579801531,
+    "next_pause_after": 0.00680558226792638
+   },
+   {
+    "turn": "the mother faints",
+    "found": true,
+    "at": 0.6122935438608355,
+    "next_pause_after": 0.046156457801896034
+   },
+   {
+    "turn": "the apple lodges",
+    "found": true,
+    "at": 0.6535086977837135,
+    "next_pause_after": 0.004941303879018033
+   },
+   {
+    "turn": "the lodgers arrive",
+    "found": true,
+    "at": 0.7630128649434518,
+    "next_pause_after": 0.06586711909432552
+   },
+   {
+    "turn": "the violin",
+    "found": true,
+    "at": 0.8082514834412455,
+    "next_pause_after": 0.020628500596531762
+   },
+   {
+    "turn": "\"we must try to get rid of it\"",
+    "found": true,
+    "at": 0.8683583250215543,
+    "next_pause_after": 0.02703092043087496
+   },
+   {
+    "turn": "the death",
+    "found": true,
+    "at": 0.9193954659949622,
+    "next_pause_after": 0.00675431286174355
+   },
+   {
+    "turn": "the lodgers are dismissed",
+    "found": true,
+    "at": 0.9503744526904806,
+    "next_pause_after": 0.009029956873551237
+   },
+   {
+    "turn": "the tram",
+    "found": true,
+    "at": 0.9890115463290112,
+    "next_pause_after": 0.010988453670988774
+   }
+  ]
+ },
+ "understanding-graph": {
+  "pauses": 57,
+  "median_passage": 0.016357126508190878,
+  "max_passage": 0.042392832619429055,
+  "turns_located": 14,
+  "median_turn_to_pause": 0.007680428605669365,
+  "turns_within_1pct": 8,
+  "rows": [
+   {
+    "turn": "the manager arrives",
+    "found": true,
+    "at": 0.1113683590490371,
+    "next_pause_after": 0.010349588830503825
+   },
+   {
+    "turn": "the lock opens",
+    "found": true,
+    "at": 0.2153001619843906,
+    "next_pause_after": 0.011353534513663888
+   },
+   {
+    "turn": "the father drives him back",
+    "found": true,
+    "at": 0.3177511985208698,
+    "next_pause_after": 0.0002604419329770846
+   },
+   {
+    "turn": "the milk",
+    "found": true,
+    "at": 0.3270039432563771,
+    "next_pause_after": 0.00547651974594443
+   },
+   {
+    "turn": "the savings",
+    "found": true,
+    "at": 0.4524927597886022,
+    "next_pause_after": 0.014580450818597879
+   },
+   {
+    "turn": "the picture",
+    "found": true,
+    "at": 0.588968699379878,
+    "next_pause_after": 0.0028224918047671244
+   },
+   {
+    "turn": "the mother faints",
+    "found": true,
+    "at": 0.6172259764059099,
+    "next_pause_after": 0.006372100957331095
+   },
+   {
+    "turn": "the apple lodges",
+    "found": true,
+    "at": 0.6585892632164537,
+    "next_pause_after": 0.007401646766216352
+   },
+   {
+    "turn": "the lodgers arrive",
+    "found": true,
+    "at": 0.7676260287645009,
+    "next_pause_after": 0.011532327184882729
+   },
+   {
+    "turn": "the violin",
+    "found": true,
+    "at": 0.8095292635436949,
+    "next_pause_after": 0.007959210445122378
+   },
+   {
+    "turn": "\"we must try to get rid of it\"",
+    "found": true,
+    "at": 0.8706906425380827,
+    "next_pause_after": 0.0010600032455225783
+   },
+   {
+    "turn": "the death",
+    "found": true,
+    "at": 0.9197850025361193,
+    "next_pause_after": 0.0018054235175706257
+   },
+   {
+    "turn": "the lodgers are dismissed",
+    "found": true,
+    "at": 0.9521409755059967,
+    "next_pause_after": 0.016199278883696877
+   },
+   {
+    "turn": "the tram",
+    "found": true,
+    "at": 0.9884320238231589,
+    "next_pause_after": 0.011567976176841133
+   }
+  ]
+ }
+}

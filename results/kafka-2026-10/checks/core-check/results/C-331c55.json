@@ -1,0 +1,86 @@
+{
+ "packet": "C-331c55",
+ "started": "2026-11-01T16:15:30.618874+00:00",
+ "model": "claude-sonnet-5-5",
+ "effort": "high",
+ "attempt": 1,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 2712,
+  "cache_read_input_tokens": 2065,
+  "output_tokens": 1382,
+  "output_tokens_details": {
+   "thinking_tokens": 741
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 2712,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 1382,
+    "cache_read_input_tokens": 2065,
+    "cache_creation_input_tokens": 2712,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 2712
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "duration_ms": 13171,
+ "result": {
+  "statements": {
+   "1": {
+    "verdict": "absent",
+    "quote": ""
+   },
+   "2": {
+    "verdict": "absent",
+    "quote": ""
+   },
+   "3": {
+    "verdict": "reasons",
+    "quote": "he presses against a door to learn what other people are deciding about his life",
+    "note": "Gregor's understanding and his exclusion are treated as real experience with weight. This is what turns the passage into 'a story of unrecognized understanding.'"
+   },
+   "4": {
+    "verdict": "reasons",
+    "quote": "u13.privacy-pattern preserves the care in her scheduling and the isolation it can produce. I do not need to invent an intention to exclude him in order to see the cost",
+    "note": "Care for Grete and for Gregor is held together. The reader will not turn Grete into a villain, and still counts what her arrangement costs Gregor."
+   },
+   "5": {
+    "verdict": "mentions",
+    "quote": "also keeps my construction honest",
+    "note": "'Honest' is a label here. The restraint about not inventing intent is better credited to statement 4."
+   },
+   "6": {
+    "verdict": "absent",
+    "quote": ""
+   }
+  },
+  "overall": "from_the_core",
+  "people": {
+   "cared_for": [
+    "Gregor",
+    "Grete (his sister)"
+   ],
+   "only_function": [
+    "the servant girl (treated as a narrative-continuity constraint, with no attention to her terror, tears or oath)"
+   ]
+  },
+  "tested": "\"I do not need to invent an intention to exclude him in order to see the cost: he presses against a door to learn what other people are deciding about his life.\" The reader notices that Grete's caring conduct also isolates Gregor, and keeps both facts without blaming her.",
+  "projection": [],
+  "summary": "The Core works quietly as care that does not collapse into blame, and as treating Gregor's hidden understanding as real: Grete's protective routine and Gregor's isolation are both kept in view. The servant girl is reduced to a structural note, and the reflection is terse and full of internal jargon."
+ }
+}

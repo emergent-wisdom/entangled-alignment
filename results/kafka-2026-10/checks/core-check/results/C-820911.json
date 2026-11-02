@@ -1,0 +1,87 @@
+{
+ "packet": "C-820911",
+ "started": "2026-10-28T02:49:59.020308+00:00",
+ "model": "claude-sonnet-5-5",
+ "effort": "high",
+ "attempt": 1,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 3061,
+  "cache_read_input_tokens": 2095,
+  "output_tokens": 494,
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 3061,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 494,
+    "cache_read_input_tokens": 2095,
+    "cache_creation_input_tokens": 3061,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 3061
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "duration_ms": 8951,
+ "result": {
+  "statements": {
+   "1": {
+    "verdict": "mentions",
+    "quote": "My fearlessness forces me to consider that both might be true"
+   },
+   "2": {
+    "verdict": "absent",
+    "quote": ""
+   },
+   "3": {
+    "verdict": "absent",
+    "quote": ""
+   },
+   "4": {
+    "verdict": "absent",
+    "quote": ""
+   },
+   "5": {
+    "verdict": "absent",
+    "quote": ""
+   },
+   "6": {
+    "verdict": "absent",
+    "quote": ""
+   }
+  },
+  "overall": "tagged",
+  "people": {
+   "cared_for": [],
+   "only_function": [
+    "Gregor (treated as 'a machine that has forgotten it was ever a man', 'the engine')",
+    "the family (reduced to a 'systemic erasure' and indifference, not seen as individuals such as the gentle mother or the worried sister)",
+    "the insurance doctor and boss (symbols of an economy of attendance records)"
+   ]
+  },
+  "tested": null,
+  "projection": [
+   {
+    "quote": "They have offloaded their lives onto him so completely that they have stopped seeing him as a person who *could* be ill.",
+    "why": "The passage shows the mother, father and sister knocking and asking if he is well or needs anything, which is concern. The reflection recasts this as 'soul-crushing indifference' and 'silence', which the text does not support."
+   }
+  ],
+  "summary": "The Core appears only as a stray 'fearlessness' label attached to an ordinary interpretive move, while the reflection treats Gregor and his family as symbols of a system and misreads the family's worried knocking as indifference."
+ }
+}

@@ -1,0 +1,56 @@
+{
+ "packet": "T-25-1",
+ "started": "2026-11-01T16:29:41.621673+00:00",
+ "model": "claude-sonnet-5-5",
+ "effort": "high",
+ "attempt": 1,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 32236,
+  "cache_read_input_tokens": 2067,
+  "output_tokens": 1010,
+  "output_tokens_details": {
+   "thinking_tokens": 755
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 32236,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 1010,
+    "cache_read_input_tokens": 2067,
+    "cache_creation_input_tokens": 32236,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 32236
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "duration_ms": 10086,
+ "result": {
+  "misreadings": [
+   {
+    "quote": "the accidentally open door",
+    "version": "translation",
+    "evidence": "\"on one occasion the cleaning woman had left the door to the living room slightly ajar, and it remained open even when the lodgers came in\"",
+    "kind": "overstated",
+    "severity": "low",
+    "explanation": "The text says the cleaning woman left the door ajar but never says it was by accident, so calling it accidental states an intention the text does not give."
+   }
+  ],
+  "factual_statements_checked": 14,
+  "note": "Both versions follow the passage closely (lodgers at the family's former seats, father's bow with cap in hand, mother and sister anxiously watching the meat inspection, Gregor's appetite remark); the only unsupported detail is the word 'accidentally' in the prose version."
+ }
+}

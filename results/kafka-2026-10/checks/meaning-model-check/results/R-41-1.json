@@ -1,0 +1,57 @@
+{
+ "packet": "R-41-1",
+ "started": "2026-11-01T16:26:08.186451+00:00",
+ "model": "claude-sonnet-5-5",
+ "effort": "high",
+ "attempt": 1,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 58448,
+  "cache_read_input_tokens": 2067,
+  "output_tokens": 2736,
+  "output_tokens_details": {
+   "thinking_tokens": 2400
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 58448,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 2736,
+    "cache_read_input_tokens": 2067,
+    "cache_creation_input_tokens": 58448,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 58448
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "duration_ms": 24373,
+ "result": {
+  "problems": [
+   {
+    "record": "meaning_model.events:event.series.cleaner-wants-v2.1912.120219-1912.238957",
+    "status": "applied",
+    "quote": "cleaner-wants-v2 1912.120219 to 1912.238957",
+    "evidence": "no support in the text. The text gives no year and no date for when the cleaning woman began; it says only \"It was already almost the end of March.\"",
+    "kind": "timing",
+    "severity": "low",
+    "explanation": "The year 1912 and the mid-February start of the Samsa employment appear as precise dates without being labelled as estimates with a reason; the 'hypotheses' label covers only the shares, not these times."
+   }
+  ],
+  "records_checked": 61,
+  "note": "Nearly all records are labelled guesses or hypotheses about the cleaning woman's unobserved life and stay within the text read; only the unlabelled precise dating of the Samsa-employment interval is flagged."
+ }
+}

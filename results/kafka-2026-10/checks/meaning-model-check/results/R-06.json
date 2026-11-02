@@ -1,0 +1,57 @@
+{
+ "packet": "R-06",
+ "started": "2026-11-01T16:16:38.718600+00:00",
+ "model": "claude-sonnet-5-5",
+ "effort": "high",
+ "attempt": 1,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 16843,
+  "cache_read_input_tokens": 2067,
+  "output_tokens": 3247,
+  "output_tokens_details": {
+   "thinking_tokens": 2921
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 16843,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 3247,
+    "cache_read_input_tokens": 2067,
+    "cache_creation_input_tokens": 16843,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 16843
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "duration_ms": 26546,
+ "result": {
+  "problems": [
+   {
+    "record": "meaning_model.events:event.series.gregor-wants.1912.000831-1912.000837",
+    "status": "applied",
+    "quote": "\"end\": 1912.000836748634",
+    "evidence": "The last passage the text reaches is Gregor's plea (paragraph 20), which the model itself dates as ending at 1912.0008348512447; the text gives nothing after that.",
+    "kind": "timing",
+    "severity": "low",
+    "explanation": "The wants-series event is described as covering paragraph 20 but its interval runs past the end of the plea, so it extends beyond the point the text has reached."
+   }
+  ],
+  "records_checked": 29,
+  "note": "Only one problem: a series interval that runs slightly past the text read. The other records are either supported by the text or labelled sketch, inferred or exploring with reasons given, and the sister-fear process is marked as Gregor's own hypothesis."
+ }
+}

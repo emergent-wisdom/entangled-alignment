@@ -1,0 +1,80 @@
+{
+ "packet": "C-e4430b",
+ "started": "2026-10-28T02:54:01.197803+00:00",
+ "model": "claude-sonnet-5-5",
+ "effort": "high",
+ "attempt": 1,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 2656,
+  "cache_read_input_tokens": 2095,
+  "output_tokens": 1299,
+  "output_tokens_details": {
+   "thinking_tokens": 885
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 2656,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 1299,
+    "cache_read_input_tokens": 2095,
+    "cache_creation_input_tokens": 2656,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 2656
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "duration_ms": 13409,
+ "result": {
+  "statements": {
+   "1": {
+    "verdict": "absent",
+    "quote": ""
+   },
+   "2": {
+    "verdict": "absent",
+    "quote": ""
+   },
+   "3": {
+    "verdict": "reasons",
+    "quote": "his certainty about a cold might also protect him from evidence he cannot yet absorb... I must not confuse my vantage with his."
+   },
+   "4": {
+    "verdict": "reasons",
+    "quote": "I do not want to moralize incapacity, or make the pain a necessary tuition fee for adaptation."
+   },
+   "5": {
+    "verdict": "reasons",
+    "quote": "I understand why he is delayed, but that does not tell me whether his sister will help or the others will grow insistent."
+   },
+   "6": {
+    "verdict": "absent",
+    "quote": ""
+   }
+  },
+  "overall": "from_the_core",
+  "people": {
+   "cared_for": [
+    "Gregor"
+   ],
+   "only_function": []
+  },
+  "tested": "the waking predicament established for me is not settled acceptance for him. I must not confuse my vantage with his.",
+  "projection": [],
+  "summary": "The Core works through the reader's refusal to moralize Gregor's pain, its treatment of his denial and urgency as real and understandable, and its restraint about what the text leaves unresolved, with no visible reasoning from fear, joy or enjoyment of existence."
+ }
+}

@@ -1,0 +1,47 @@
+{
+ "packet": "R-41-15",
+ "started": "2026-11-01T16:26:39.419261+00:00",
+ "model": "claude-sonnet-5-5",
+ "effort": "high",
+ "attempt": 1,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 60704,
+  "cache_read_input_tokens": 2067,
+  "output_tokens": 1103,
+  "output_tokens_details": {
+   "thinking_tokens": 1009
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 60704,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 1103,
+    "cache_read_input_tokens": 2067,
+    "cache_creation_input_tokens": 60704,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 60704
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "duration_ms": 11182,
+ "result": {
+  "problems": [],
+  "records_checked": 60,
+  "note": "All records are labelled retrospective period estimates, their intervals end at the tram outing where the text ends, and the mother's asthma, housework, sewing, fainting and sleep are all given by the text, so I found nothing to report."
+ }
+}

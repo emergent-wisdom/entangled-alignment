@@ -1,0 +1,47 @@
+{
+ "packet": "R-02-2",
+ "started": "2026-11-01T16:15:13.685594+00:00",
+ "model": "claude-sonnet-5-5",
+ "effort": "high",
+ "attempt": 1,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 23679,
+  "cache_read_input_tokens": 649,
+  "output_tokens": 1177,
+  "output_tokens_details": {
+   "thinking_tokens": 1065
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 23679,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 1177,
+    "cache_read_input_tokens": 649,
+    "cache_creation_input_tokens": 23679,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 23679
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "duration_ms": 12210,
+ "result": {
+  "problems": [],
+  "records_checked": 60,
+  "note": "Every substantive record rests on text the reader had read (the transformation, the five years' service, the missed train, the parents' debt, the boss), and the years and weights in the childhood, youth and 1912 records are labelled guessed, exploring or inferred, with no claim from later in the book."
+ }
+}

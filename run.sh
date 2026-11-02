@@ -11,13 +11,8 @@ else
     exit 1
 fi
 
-# Load env
-if [ -f "$ROOT/.env" ]; then
-    export $(grep -v '^#' "$ROOT/.env" | xargs)
-else
-    echo "Error: No .env found. Copy .env.example to .env and add your API key."
-    exit 1
-fi
+# run_reader.py loads .env with python-dotenv, including quoted values and
+# inline comments. Environment variables supplied by the caller take precedence.
 
 # Set PYTHONPATH for orchestrator
 export PYTHONPATH="$ROOT/orchestrator/src:$PYTHONPATH"

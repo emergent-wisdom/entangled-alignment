@@ -1,0 +1,47 @@
+{
+ "packet": "R-16-1",
+ "started": "2026-11-01T16:18:57.052866+00:00",
+ "model": "claude-sonnet-5-5",
+ "effort": "high",
+ "attempt": 1,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 42886,
+  "cache_read_input_tokens": 2067,
+  "output_tokens": 1451,
+  "output_tokens_details": {
+   "thinking_tokens": 1342
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 42886,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 1451,
+    "cache_read_input_tokens": 2067,
+    "cache_creation_input_tokens": 42886,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 42886
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "duration_ms": 13188,
+ "result": {
+  "problems": [],
+  "records_checked": 60,
+  "note": "All 60 records are applied background-life Events with guessed calendar dates, and each one says it is guessed or a sketch; none states a later event, an unsupported fact, or an unlabeled inference, and the shared end point (about one month after the transformation) matches the text read so far."
+ }
+}

@@ -1,0 +1,47 @@
+{
+ "packet": "R-40",
+ "started": "2026-11-01T16:26:07.643746+00:00",
+ "model": "claude-sonnet-5-5",
+ "effort": "high",
+ "attempt": 1,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 45790,
+  "cache_read_input_tokens": 2067,
+  "output_tokens": 1721,
+  "output_tokens_details": {
+   "thinking_tokens": 1615
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 45790,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 1721,
+    "cache_read_input_tokens": 2067,
+    "cache_creation_input_tokens": 45790,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 45790
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "duration_ms": 16930,
+ "result": {
+  "problems": [],
+  "records_checked": 27,
+  "note": "No problems found: the plans (cleaner's notice, smaller apartment, a husband for Grete) are kept as intentions, and the favorable job outlook and the tram outing match the closing paragraphs. The invented dates are labelled as guessed in the packet."
+ }
+}

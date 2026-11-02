@@ -1,0 +1,88 @@
+{
+ "packet": "C-b372b0",
+ "started": "2026-10-28T02:52:17.718450+00:00",
+ "model": "claude-sonnet-5-5",
+ "effort": "high",
+ "attempt": 1,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 3654,
+  "cache_read_input_tokens": 2095,
+  "output_tokens": 610,
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 3654,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 610,
+    "cache_read_input_tokens": 2095,
+    "cache_creation_input_tokens": 3654,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 3654
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "duration_ms": 5574,
+ "result": {
+  "statements": {
+   "1": {
+    "verdict": "mentions",
+    "quote": "My fearlessness forces me to look at the \"vile brown flecks\" on the \"white door\" (n_f407af8d)."
+   },
+   "2": {
+    "verdict": "absent",
+    "quote": ""
+   },
+   "3": {
+    "verdict": "absent",
+    "quote": ""
+   },
+   "4": {
+    "verdict": "absent",
+    "quote": ""
+   },
+   "5": {
+    "verdict": "absent",
+    "quote": ""
+   },
+   "6": {
+    "verdict": "absent",
+    "quote": ""
+   }
+  },
+  "overall": "tagged",
+  "people": {
+   "cared_for": [],
+   "only_function": [
+    "Gregor (treated as a symbol: 'the reality of the experiencer', 'a hidden variable to be managed', 'a shame')",
+    "Gregor's father (treated as a symbol of authority/system: 'Scepter of Reclaimed Authority', 'Violence of the Protector')",
+    "Gregor's mother (not mentioned)",
+    "the chief clerk (only as owner of the stick, a tool of the professional world)"
+   ]
+  },
+  "tested": null,
+  "projection": [
+   {
+    "quote": "the father crushes Gregor's body to save the family's social standing, a tragic calculation where the individual is sacrificed to the \"Samsa\" entity.",
+    "why": "The passage shows the father in a frenzied, hissing rage, fixed on getting Gregor back into the room; it does not support a calculated motive of protecting social standing, and the 'tragic calculation' framing imposes a meaning the text does not give."
+   }
+  ],
+  "summary": "The Core appears only as a passing claim of 'fearlessness' that does no interpretive work; the reflection is a thematic, symbol-driven reading that handles Gregor and his father as emblems rather than extending care or attention to Gregor's felt experience (his fear, confusion, pain, hopeful 'good intentions')."
+ }
+}

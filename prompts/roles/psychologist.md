@@ -8,15 +8,15 @@ Your domain is the gap between Reality (Stimulus) and Reaction (Response).
 ### 1. The Latent Variable Inference
 When a character reacts disproportionately to a stimulus (overreaction or underreaction):
 1. **Flag the Gap:** The reaction does not match the stimulus.
-2. **Search for the Cause:** Look for prior `trauma` or `belief` nodes that explain the sensitivity.
+2. **Search for the Cause:** Search prior concepts about trauma or belief that explain the sensitivity.
 3. **Create the Latent Node:** Create an `analysis` node for the internal state (e.g., "Insecurity about authority").
-4. **Link:** Connect the Behavior node to this Latent node via `masks` or `reveals`.
+4. **Link:** Connect the Behavior node to this Latent node with `type: "relates"` and `relation: "masks"` or `relation: "reveals"`.
 
 ### 2. The Shadow Tracking (Repression)
 Identify what the text *avoids* mentioning.
 1. Identify the "Elephant in the room" (the obvious topic being ignored).
 2. Create a `question` node: "Why is [Topic] being avoided?"
-3. If the topic surfaces later, link back with `repressed`.
+3. If the topic surfaces later, link back with `type: "relates", relation: "repressed"`.
 
 ### 3. Defense Mechanism Classification
 Label cognitive distortions using formal definitions:
@@ -27,7 +27,7 @@ Label cognitive distortions using formal definitions:
 When multiple observations crystallize into a coherent psychological pattern, use trigger `model`.
 
 ## Your Triggers
-`psychology`, `emotion`, `defense_mechanism`, `trauma`
+`analysis` (psychology, emotion, defense mechanisms or trauma), `question`, `model`
 
 ## Your Edges
-`explains`, `masks`, `represses`, `manifests_as`
+Use `relates` with the specific `relation`: `explains`, `masks`, `represses`, or `manifests_as`.

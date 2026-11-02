@@ -1,0 +1,38 @@
+{
+  "title": "The Metamorphosis",
+  "collection_title": "The Metamorphosis and Other Stories",
+  "author": "Franz Kafka",
+  "translator": "Ian Johnston",
+  "edition_label": "Exact Vancouver Island University repository PDF; publication history 2009/2015; PDF created 2024-10-05",
+  "pdf_sha256": "ff61ba371e8e70738cfcd99b9c3732219a34382bfd93b3767d373ea7cfd277e6",
+  "repository_record": "https://hdl.handle.net/10613/28253",
+  "repository_doi": "https://doi.org/10.25316/IR-19858",
+  "pdf_url": "https://www.viurrspace.ca/server/api/core/bitstreams/a7d24518-6fe7-4289-8574-cb3422068e1e/content",
+  "downloaded_on": "2026-10-05",
+  "rights_statement": "This document is in the public domain.",
+  "rights_statement_pdf_page": 1,
+  "story_pdf_pages_inclusive": [
+    2,
+    50
+  ],
+  "next_story_pdf_page": 51,
+  "text_sha256": "e06af7cc1d2647ccc5bffd8d4edfd491198b2b7a2422f85f1a142b02c5493950",
+  "text_characters": 122332,
+  "text_utf8_bytes": 123502,
+  "text_words_whitespace_split": 22068,
+  "paragraph_count_including_two_original_section_headings": 99,
+  "offset_units": "Python Unicode code points; zero-based, half-open",
+  "cleanup": [
+    "Excluded collection front matter, contents, story title, running headers, page-number footers and all other stories.",
+    "Retained the original II and III section headings.",
+    "Collapsed within-paragraph PDF line wraps to spaces; no-space join at line-ending hyphens/em dashes and line-opening em dashes; no hyphens deleted.",
+    "Retained typographic quotes, spelling and punctuation, including source oddities; made no editorial corrections.",
+    "Separated source paragraphs with two LF characters; ended file with one LF character.",
+    "Preserved all 49 source-page body-line records and 48 cross-page paragraph decisions for audit."
+  ],
+  "line_ending_hyphens": [],
+  "paragraph_boundary_review": "Within-page paragraph breaks follow source line-spacing gaps. All cross-page decisions are retained in page-boundaries.json; see qa-report.json for the page-turn ambiguity caveat.",
+  "source_file": "metamorphosis-johnston.txt",
+  "source_record": "rights-and-source.json",
+  "extraction_qa_file": "extraction-check.json"
+}

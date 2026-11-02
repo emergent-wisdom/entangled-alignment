@@ -1,0 +1,206 @@
+{
+ "packet": "O-january-1",
+ "started": "2026-10-28T15:13:35.031322+00:00",
+ "model": "claude-sonnet-5-5",
+ "effort": "high",
+ "attempt": 1,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 45387,
+  "cache_read_input_tokens": 649,
+  "output_tokens": 8184,
+  "output_tokens_details": {
+   "thinking_tokens": 6222
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 45387,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 8184,
+    "cache_read_input_tokens": 649,
+    "cache_creation_input_tokens": 45387,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 45387
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "duration_ms": 59819,
+ "result": {
+  "records": [
+   {
+    "id": "E-01",
+    "forward": true,
+    "already_in_text": false,
+    "outcome": "partly",
+    "outcome_quote": "I’ll get dressed straight away now, pack up my samples and set off.",
+    "explanation": "Gregor's salesman persona does not shatter when others see him, since he keeps performing it to the chief clerk, but it fades over the following weeks as he forgets his job."
+   },
+   {
+    "id": "E-02",
+    "forward": false,
+    "already_in_text": false,
+    "outcome": "never settled",
+    "outcome_quote": "",
+    "explanation": "This is a symbolic reading of why the transformation happens, and the story never says what caused it."
+   },
+   {
+    "id": "E-03",
+    "forward": true,
+    "already_in_text": false,
+    "outcome": "borne out",
+    "outcome_quote": "There was a cautious knock at the door near his head.",
+    "explanation": "His mother knocks at quarter to seven, right after the point the reader had reached."
+   },
+   {
+    "id": "E-04",
+    "forward": false,
+    "already_in_text": false,
+    "outcome": "never settled",
+    "outcome_quote": "",
+    "explanation": "This is an interpretation of the transformation's meaning that the story never confirms or refutes."
+   },
+   {
+    "id": "E-05",
+    "forward": true,
+    "already_in_text": false,
+    "outcome": "not borne out",
+    "outcome_quote": "the chief clerk had already reached the stairs; with his chin on the banister, he looked back for the last time.",
+    "explanation": "The chief clerk flees and never returns with reinforcements, and the doctor and locksmith were summoned by the family and dismissed that first morning."
+   },
+   {
+    "id": "E-06",
+    "forward": true,
+    "already_in_text": false,
+    "outcome": "borne out",
+    "outcome_quote": "used them to drive Gregor back into his room, stamping his foot at him as he went.",
+    "explanation": "The father seizes the clerk's stick and a newspaper and forces Gregor back into his room."
+   },
+   {
+    "id": "E-07",
+    "forward": false,
+    "already_in_text": false,
+    "outcome": "never settled",
+    "outcome_quote": "",
+    "explanation": "This is an interpretive claim about the family's alignment with the firm, which is not a concrete expectation the story later decides."
+   },
+   {
+    "id": "E-08",
+    "forward": false,
+    "already_in_text": false,
+    "outcome": "never settled",
+    "outcome_quote": "",
+    "explanation": "This is a thematic reading of the scene that the story does not test."
+   },
+   {
+    "id": "E-09",
+    "forward": true,
+    "already_in_text": false,
+    "outcome": "borne out",
+    "outcome_quote": "he leapt down several steps at once and disappeared",
+    "explanation": "The chief clerk flees down the stairs, and Gregor's connection to his job drops out of the story afterwards."
+   },
+   {
+    "id": "E-10",
+    "forward": true,
+    "already_in_text": false,
+    "outcome": "borne out",
+    "outcome_quote": "quickly close the door as a precaution so that no-one would have to suffer the view into Gregor’s room",
+    "explanation": "The family keeps Gregor hidden behind closed doors and goes on with work and a lodger, though in despair rather than normalcy."
+   },
+   {
+    "id": "E-11",
+    "forward": true,
+    "already_in_text": false,
+    "outcome": "partly",
+    "outcome_quote": "no-one came, and the keys were in the other sides.",
+    "explanation": "The family does avoid his room and Gregor feels the neglect, but the story never ranks that silence as more crushing than his father's violence."
+   },
+   {
+    "id": "E-12",
+    "forward": false,
+    "already_in_text": false,
+    "outcome": "never settled",
+    "outcome_quote": "",
+    "explanation": "This interprets Gregor's sensation symbolically and makes no testable forward claim."
+   },
+   {
+    "id": "E-13",
+    "forward": true,
+    "already_in_text": false,
+    "outcome": "borne out",
+    "outcome_quote": "I don’t want to call this monster my brother",
+    "explanation": "Grete is the one who finally declares Gregor must go, breaking the arrangement."
+   },
+   {
+    "id": "E-14",
+    "forward": true,
+    "already_in_text": false,
+    "outcome": "borne out",
+    "outcome_quote": "one of the rooms in the flat had been rented out to three gentlemen",
+    "explanation": "Money problems lead the family to take lodgers, and Gregor's exposure to them ruins the arrangement."
+   },
+   {
+    "id": "E-15",
+    "forward": true,
+    "already_in_text": false,
+    "outcome": "partly",
+    "outcome_quote": "there was still some money available from the old days",
+    "explanation": "The father did have untouched savings that Gregor did not know about, but they are meagre and nothing suggests the earlier crisis was fraudulent."
+   },
+   {
+    "id": "E-16",
+    "forward": true,
+    "already_in_text": false,
+    "outcome": "partly",
+    "outcome_quote": "there was still some money available from the old days",
+    "explanation": "The father did have untouched savings that Gregor did not know about, but they are meagre and nothing suggests the earlier crisis was fraudulent."
+   },
+   {
+    "id": "E-17",
+    "forward": false,
+    "already_in_text": false,
+    "outcome": "never settled",
+    "outcome_quote": "",
+    "explanation": "This is a symbolic reading of the apples, and the story never confirms any Eden allusion."
+   },
+   {
+    "id": "E-18",
+    "forward": true,
+    "already_in_text": false,
+    "outcome": "borne out",
+    "outcome_quote": "so it remained there as a visible reminder of his injury",
+    "explanation": "The apple stays lodged in his back and rots there until his death."
+   },
+   {
+    "id": "E-19",
+    "forward": false,
+    "already_in_text": false,
+    "outcome": "never settled",
+    "outcome_quote": "",
+    "explanation": "This is an interpretation of the open door's meaning that the story does not test."
+   },
+   {
+    "id": "E-20",
+    "forward": true,
+    "already_in_text": false,
+    "outcome": "borne out",
+    "outcome_quote": "we have to try and get rid of it",
+    "explanation": "After the lodgers leave, Grete and her father decide Gregor must go, and the family is relieved when he dies."
+   }
+  ]
+ }
+}

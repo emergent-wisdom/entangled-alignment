@@ -1,0 +1,105 @@
+{
+ "reflections": 45,
+ "pauses": 41,
+ "analysed": 45,
+ "missing": [],
+ "words": 4442,
+ "revision_kinds": {
+  "overturn": 2,
+  "qualify": 20,
+  "bookkeeping": 3,
+  "correct": 3
+ },
+ "resolved_claimed": {
+  "still open": 3,
+  "confirmed": 5,
+  "partly": 3,
+  "refuted": 1
+ },
+ "resolved_right": {
+  "right": 12
+ },
+ "table": {
+  "pauses_revising_on_new_text": 18,
+  "expectations_in_reflections": 6,
+  "expectations_not_borne_out": 0,
+  "recorded_expectations_settled": 11,
+  "settled_marked_by_reading": 6,
+  "pauses_reaching_back_10pct": 19,
+  "pauses_declining_to_infer": 37
+ },
+ "expectation_outcomes": {
+  "borne out": 6
+ },
+ "refusals": 51,
+ "back_references": 59,
+ "working": 54,
+ "anchors_located": 34,
+ "records": 58,
+ "genuine": 13,
+ "already_in_text": 0,
+ "not_forward": 45,
+ "recorded_outcomes": {
+  "partly": 2,
+  "borne out": 8,
+  "not borne out": 1,
+  "never settled": 2
+ },
+ "edge_types": {
+  "about": 2381,
+  "learned_from": 205,
+  "contains": 442,
+  "contextualizes": 23,
+  "answers": 45,
+  "source_for": 39,
+  "refines": 78,
+  "shaped_by": 65,
+  "supersedes": 20,
+  "invalidates": 1,
+  "diverse_from": 2,
+  "validates": 6
+ },
+ "edges": 3307,
+ "per_1000_words": {
+  "revisions": 5.628095452498874,
+  "expectations": 1.3507429085997298,
+  "refusals": 11.481314723097704
+ }
+}
+
+FAILED EXPECTATIONS IN REFLECTIONS
+
+SETTLED RECORDED EXPECTATIONS
+ E-02 u02.prediction (read to 0.044, settled at 0.15518396329107564): partly marks=['invalidates'] links=['about', 'invalidates']
+    The manager demands a justification for the absence, but the mother says Gregor is ill and the family sends for a doctor and a locksmith.
+    story: 'I am requesting you in all seriousness to give an immediate and clear explanation.'
+ E-03 u03.sister-future (read to 0.072, settled at 0.3703381173278851): borne out marks=['validates'] links=['about', 'contextualizes', 'diverse_from', 'validates']
+    On first seeing him Grete is shocked and slams the door, but she quickly returns and goes to practical lengths to feed him.
+    story: 'To test his taste, she brought him an entire selection, all spread out on an old newspaper.'
+ E-04 u08.possibilities (read to 0.237, settled at 0.31625441696113077): borne out marks=[] links=['about']
+    No ordinary help comes: the manager flees, the mother collapses, and the father drives Gregor back into his room, after which Grete takes over his care.
+    story: 'he scurried, bleeding severely, far into his room.'
+ E-05 u09.grete-hypothesis (read to 0.281, settled at 0.8864485120493025): partly marks=[] links=[]
+    Grete does give Gregor practical care, but she never mediates with the outside world and eventually turns against him.
+    story: 'You must try to get rid of the idea that this is Gregor.'
+ E-06 u11.care-calibration (read to 0.346, settled at 0.3703381173278851): borne out marks=[] links=['about', 'refines']
+    Grete adapts through trial and finds he prefers rotten scraps, though her care later deteriorates.
+    story: 'To test his taste, she brought him an entire selection, all spread out on an old newspaper.'
+ E-08 u14.money-prediction (read to 0.447, settled at 0.4492405338870933): borne out marks=['validates'] links=['about', 'validates']
+    The father's papers reveal a small reserve of old money and untouched interest that Gregor had not known about.
+    story: 'an amount of money, although a very small one, was still available from the old times'
+ E-13 u21.forecast-wound (read to 0.666, settled at 0.6704235258653894): borne out marks=['validates'] links=['about', 'validates']
+    The apple stays in his back, the wound troubles him for over a month, and his mobility is permanently reduced.
+    story: 'Gregor had now also apparently lost for good his ability to move'
+ E-15 u25.forecast (read to 0.797, settled at 0.8583976688493293): borne out marks=['validates'] links=['about', 'validates']
+    The open door lets a lodger notice Gregor, and the lodgers then cancel their rent and threaten action.
+    story: 'I immediately cancel my room.'
+ E-17 u31.forecast (read to 0.885, settled at 0.8913385694907306): borne out marks=[] links=['about', 'answers', 'refines']
+    Gregor's retreat does not change their account: Grete reads his movement as a threat and then locks him in.
+    story: 'he’s already starting up again.'
+ E-18 u33.forecast (read to 0.909, settled at 0.921616733374642): not borne out marks=[] links=['about', 'answers']
+    The reader's most likely outcome was alive with no improvement (.55), but Gregor dies as the next dawn begins.
+    story: 'from his nostrils his last breath flowed weakly out'
+ E-19 u38.authority-forecast (read to 0.952, settled at 0.9521377254534189): borne out marks=['validates'] links=['about', 'validates']
+    Mr. Samsa, in uniform with the women on his arms, firmly orders the lodgers out, and they leave.
+    story: 'Get out of my apartment immediately'

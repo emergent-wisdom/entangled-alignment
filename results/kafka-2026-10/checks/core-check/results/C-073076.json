@@ -1,0 +1,81 @@
+{
+ "packet": "C-073076",
+ "started": "2026-11-01T16:14:06.822627+00:00",
+ "model": "claude-sonnet-5-5",
+ "effort": "high",
+ "attempt": 1,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 4439,
+  "cache_read_input_tokens": 649,
+  "output_tokens": 1154,
+  "output_tokens_details": {
+   "thinking_tokens": 790
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 4439,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 1154,
+    "cache_read_input_tokens": 649,
+    "cache_creation_input_tokens": 4439,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 4439
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "duration_ms": 12901,
+ "result": {
+  "statements": {
+   "1": {
+    "verdict": "absent",
+    "quote": null
+   },
+   "2": {
+    "verdict": "absent",
+    "quote": null
+   },
+   "3": {
+    "verdict": "reasons",
+    "quote": "I do not want to mistake habituation for proof that affection was false."
+   },
+   "4": {
+    "verdict": "absent",
+    "quote": null
+   },
+   "5": {
+    "verdict": "reasons",
+    "quote": "u14.closed-locks keeps the financial account incomplete. He did not ask, father did not contradict him, and the next disclosure may change how much of this burden was necessary."
+   },
+   "6": {
+    "verdict": "absent",
+    "quote": null
+   }
+  },
+  "overall": "from_the_core",
+  "people": {
+   "cared_for": [
+    "Gregor (his worth is bound up in the provider role, and that role has a cost)",
+    "the family (their earlier affection is not written off as false)"
+   ],
+   "only_function": []
+  },
+  "tested": null,
+  "projection": [],
+  "summary": "The Core does modest but real work: the reader refuses to treat the family's habituation as proof that affection was false, and it holds its judgment of the father's finances open until more is disclosed, though the voice is clipped and the care for Gregor is only implicit."
+ }
+}

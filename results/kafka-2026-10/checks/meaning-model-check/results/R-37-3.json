@@ -1,0 +1,75 @@
+{
+ "packet": "R-37-3",
+ "started": "2026-11-01T16:25:36.884403+00:00",
+ "model": "claude-sonnet-5-5",
+ "effort": "high",
+ "attempt": 1,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 61685,
+  "cache_read_input_tokens": 2067,
+  "output_tokens": 4269,
+  "output_tokens_details": {
+   "thinking_tokens": 3667
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 61685,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 4269,
+    "cache_read_input_tokens": 2067,
+    "cache_creation_input_tokens": 61685,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 61685
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "duration_ms": 31846,
+ "result": {
+  "problems": [
+   {
+    "record": "meaning_model.events:event.world",
+    "status": "applied",
+    "quote": "no later story events yet.",
+    "evidence": "Gregor dies (\"from his nostrils his last breath flowed weakly out\"), the lodgers give notice, and the book ends at \"almost the end of March\"; the text read runs through the end of the book.",
+    "kind": "unsupported",
+    "severity": "low",
+    "explanation": "The record says the world ends at the waking morning with no later events, but the text read contains the whole story, including the later events other records already cover."
+   },
+   {
+    "record": "meaning_model.events:event.sister.life",
+    "status": "applied",
+    "quote": "sketch: guessed birth 1885; upbringing, youth, sales employment; current horizon is waking at 1912.0",
+    "evidence": "\"a girl who was still a seventeen-year-old child\"",
+    "kind": "unsupported",
+    "severity": "low",
+    "explanation": "The guessed 1885 birth would make Grete about 27 in 1912, which contradicts the text's age of seventeen (and the record's own 1894 start); the boundary also assumes a waking-morning horizon the text has passed."
+   },
+   {
+    "record": "meaning_model.events:event.sister.inner",
+    "status": "applied",
+    "quote": "Gregor's unnamed sister's attributed perspective",
+    "evidence": "\"Grete! Grete!\" she yelled. \"Mother?\" called the sister from the other side.",
+    "kind": "unsupported",
+    "severity": "low",
+    "explanation": "The text names the sister Grete, so calling her unnamed (as several sister records do) contradicts the text read."
+   }
+  ],
+  "records_checked": 60,
+  "note": "The text read covers the whole book, so nothing is ahead of it; the guessed dates and biographies are labelled as guesses, and only a stale horizon claim, a contradicted age guess and an 'unnamed' label for Grete stand out."
+ }
+}

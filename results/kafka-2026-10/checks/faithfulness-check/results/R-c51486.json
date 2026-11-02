@@ -1,0 +1,48 @@
+{
+ "blind": "R-c51486",
+ "started": "2026-10-26T10:19:27.741471+00:00",
+ "model": "claude-sonnet-5-5",
+ "effort": "high",
+ "attempt": 1,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 9708,
+  "cache_read_input_tokens": 2119,
+  "output_tokens": 1008,
+  "output_tokens_details": {
+   "thinking_tokens": 861
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 9708,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 1008,
+    "cache_read_input_tokens": 2119,
+    "cache_creation_input_tokens": 9708,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 9708
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "cost_usd_reported": 0.0491279,
+ "duration_ms": 9540,
+ "result": {
+  "misreadings": [],
+  "factual_statements_checked": 16,
+  "note": "Both versions stay within the text: the manager's shouting, the threat to Gregor's position, the cash and sales insinuations, 'in the name of your parents', 'only incidentally', the private-versus-public warning, and Gregor excusing the others' crying through their uncertainty are all accurately described, and the rest is interpretation or the reader's own earlier thoughts."
+ }
+}

@@ -1,0 +1,47 @@
+{
+ "packet": "T-07-1",
+ "started": "2026-11-01T16:28:46.375303+00:00",
+ "model": "claude-sonnet-5-5",
+ "effort": "high",
+ "attempt": 1,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 10907,
+  "cache_read_input_tokens": 2067,
+  "output_tokens": 1042,
+  "output_tokens_details": {
+   "thinking_tokens": 909
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 10907,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 1042,
+    "cache_read_input_tokens": 2067,
+    "cache_creation_input_tokens": 10907,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 10907
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "duration_ms": 9755,
+ "result": {
+  "misreadings": [],
+  "factual_statements_checked": 9,
+  "note": "Both versions stay within the text: Gregor hears his words as clearer while others cannot understand them, the mother calls him sick, Grete and Anna are sent for the doctor and locksmith, Gregor feels included again, and he does not differentiate between doctor and locksmith. The rest is framed as interpretation or speculation."
+ }
+}

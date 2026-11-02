@@ -1,0 +1,57 @@
+{
+ "packet": "R-11-2",
+ "started": "2026-11-01T16:17:48.559820+00:00",
+ "model": "claude-sonnet-5-5",
+ "effort": "high",
+ "attempt": 1,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 32399,
+  "cache_read_input_tokens": 2067,
+  "output_tokens": 3249,
+  "output_tokens_details": {
+   "thinking_tokens": 2883
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 32399,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 3249,
+    "cache_read_input_tokens": 2067,
+    "cache_creation_input_tokens": 32399,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 32399
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "duration_ms": 25725,
+ "result": {
+  "problems": [
+   {
+    "record": "value_series:values.father.newspaper-ritual~5b7a8073b0b36d21",
+    "status": "applied",
+    "quote": "\"note\": \"No reading heard this evening; does not assert permanent disappearance\", \"tag\": \"source\", \"time\": 1912.0020681542198, \"value\": 0.0",
+    "evidence": "\"at the moment no sound was audible. Perhaps this reading aloud, about which his sister had always spoken and written to him, had recently fallen out of their general routine.\"",
+    "kind": "wrong track",
+    "severity": "low",
+    "explanation": "The text gives only one silent evening and Gregor's tentative guess that the routine lapsed, so a weekly frequency of 0 tagged \"source\" is an inference mislabelled as stated."
+   }
+  ],
+  "records_checked": 60,
+  "note": "Almost all records are labelled sketch, inferred or exploring and stay within the text read; only one value point is tagged as stated by the text when it is an inference."
+ }
+}

@@ -1,0 +1,47 @@
+{
+ "packet": "R-28",
+ "started": "2026-11-01T16:24:31.531093+00:00",
+ "model": "claude-sonnet-5-5",
+ "effort": "high",
+ "attempt": 1,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 43845,
+  "cache_read_input_tokens": 2067,
+  "output_tokens": 2520,
+  "output_tokens_details": {
+   "thinking_tokens": 2404
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 43845,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 2520,
+    "cache_read_input_tokens": 2067,
+    "cache_creation_input_tokens": 43845,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 43845
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "duration_ms": 21310,
+ "result": {
+  "problems": [],
+  "records_checked": 31,
+  "note": "All records stay within the text read so far: the lodgers' notice and refusal to pay, Gregor's expected combined attack, Grete's playing then bed-making, and the parents' distress match the passage, and guessed dates and values are labelled as sketch, exploring or inferred."
+ }
+}

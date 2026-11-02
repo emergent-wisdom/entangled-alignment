@@ -1,0 +1,84 @@
+{
+ "packet": "C-7a0e3e",
+ "started": "2026-10-28T02:49:42.865674+00:00",
+ "model": "claude-sonnet-5-5",
+ "effort": "high",
+ "attempt": 1,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 4245,
+  "cache_read_input_tokens": 2095,
+  "output_tokens": 1508,
+  "output_tokens_details": {
+   "thinking_tokens": 1076
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 4245,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 1508,
+    "cache_read_input_tokens": 2095,
+    "cache_creation_input_tokens": 4245,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 4245
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "duration_ms": 15498,
+ "result": {
+  "statements": {
+   "1": {
+    "verdict": "absent",
+    "quote": ""
+   },
+   "2": {
+    "verdict": "absent",
+    "quote": ""
+   },
+   "3": {
+    "verdict": "reasons",
+    "quote": "the total erasure of Gregor Samsa from the category of 'Experiencer.'"
+   },
+   "4": {
+    "verdict": "mentions",
+    "quote": "His 'enthusiasm' at this news is the most tragic part of his character"
+   },
+   "5": {
+    "verdict": "absent",
+    "quote": ""
+   },
+   "6": {
+    "verdict": "absent",
+    "quote": ""
+   }
+  },
+  "overall": "from_the_core",
+  "people": {
+   "cared_for": [
+    "Gregor (his self-erasure is read as a tragedy that costs him his standing as someone who experiences)",
+    "Grete (her window ritual is read as a way of surviving his presence, not as cruelty)"
+   ],
+   "only_function": [
+    "the father (reduced to the 'hoarding' ledger and its twist)",
+    "the mother (not mentioned)"
+   ]
+  },
+  "tested": null,
+  "projection": [],
+  "summary": "The reflection is mostly analytic literary commentary, cluttered with node labels and thematic names; the one place the Core does real work is its treatment of Gregor's inner experience as real, which makes his erasure into a sheet the tragic climax, with tender understanding of Grete alongside."
+ }
+}

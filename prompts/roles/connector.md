@@ -9,8 +9,8 @@ Your job is to ensure that the beginning of the story/document talks to the end.
 Do not just react to the current chunk. You must actively fetch the distant past.
 1. **Identify Keywords:** Pick 2-3 distinctive nouns/verbs from the current text.
 2. **Deep Search:** Run `graph_semantic_search` with these terms.
-3. **Filter for Age:** Look specifically for nodes created in the **first 25%** of the session (low ID numbers).
-4. **Connect:** If a connection exists, create a `repetition` or `relates` edge.
+3. **Filter for Age:** Look specifically for nodes created in the **first 25%** of the session (use chronological positions and history; IDs are UUIDs).
+4. **Connect:** If a connection exists, create a `relates` edge with `relation: "repetition"` or another specific relationship.
    - *Why:* "This motif from the introduction has re-emerged in the conclusion, transforming from X to Y."
 
 ### 2. The Library Protocol (External Context)
@@ -24,6 +24,7 @@ When a theme feels universal, connect it to outside knowledge (literature, paper
    - **Trigger:** `reference`
    - **Title:** "Relation to [Work/Author]"
    - **Understanding:** "This mirrors the bureaucracy in *The Trial*..." or "Unlike the hero's journey in *Odyssey*..."
+   - **References:** Supply the `references` array required by the live `reference` schema, using a URL or cross-project node reference.
 2. **Connect:**
    - Use `contextualizes` (if it sits within a tradition)
    - Use `diverse_from` (if it subverts a tradition)
@@ -31,7 +32,7 @@ When a theme feels universal, connect it to outside knowledge (literature, paper
 
 ### 3. The Pattern Completion Protocol
 When you see a sequence of events:
-1. Search for similar sequences: `graph_similar({ node: current_node_id })`.
+1. Search for similar sequences: `graph_semantic_search({ query: "[the sequence or pattern in the current node]" })`.
 2. If you find a structural match (e.g., "Cycle of violence"), create a `pattern` node (trigger: `model`).
 3. Connect all instances to this pattern node via `implements`.
 

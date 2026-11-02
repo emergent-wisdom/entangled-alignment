@@ -1,0 +1,72 @@
+{
+ "packet": "R-e87d8c",
+ "started": "2026-10-28T15:16:51.723187+00:00",
+ "model": "claude-sonnet-5-5",
+ "effort": "high",
+ "attempt": 1,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 17119,
+  "cache_read_input_tokens": 2096,
+  "output_tokens": 2181,
+  "output_tokens_details": {
+   "thinking_tokens": 1486
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 17119,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 2181,
+    "cache_read_input_tokens": 2096,
+    "cache_creation_input_tokens": 17119,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 17119
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "duration_ms": 17641,
+ "result": {
+  "misreadings": [
+   {
+    "quote": "The same father will later bombard him with apples from the fruit bowl, and one of them will lodge in his back.",
+    "version": "reflection",
+    "evidence": "no support in the text",
+    "kind": "invented",
+    "severity": "medium",
+    "explanation": "The text read so far contains no apples, fruit bowl or wound in the back, and the passage ends at the start of Part II, so this is stated as fact about events the reader has not read."
+   },
+   {
+    "quote": "After five years of dependence, the father re-establishes his dominance",
+    "version": "both",
+    "evidence": "no support in the text. The only 'five years' is \"in five years of service Gregor had never once yet been ill\"; the text never says how long the father has been dependent.",
+    "kind": "invented",
+    "severity": "medium",
+    "explanation": "The reflection presents a five-year period of the father's dependence as fact, but the text gives no such duration; the translation repeats it as \"Having been a dependent for five years while Gregor provided for everyone\"."
+   },
+   {
+    "quote": "The \"total stillness\" he wakes to is not peace",
+    "version": "both",
+    "evidence": "\"he had the impression that some hurried steps and the sound of the door leading into the front room being carefully shut had woken him.\" The only \"total stillness\" in the text is earlier, in Part I: \"as if he perhaps expected the total stillness to bring things back to their real and natural state.\"",
+    "kind": "contradicted",
+    "severity": "medium",
+    "explanation": "In Part II Gregor wakes to hurried steps and a door being shut, not to stillness; the \"total stillness\" phrase comes from Part I, before the clerk arrives."
+   }
+  ],
+  "factual_statements_checked": 16,
+  "note": "Most claims are interpretive and fine; three factual claims are not supported: the apple foreshadowing (reflection only), the father's five years of dependence (both), and the \"total stillness\" Gregor wakes to (both)."
+ }
+}

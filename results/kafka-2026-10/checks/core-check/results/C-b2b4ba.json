@@ -1,0 +1,83 @@
+{
+ "packet": "C-b2b4ba",
+ "started": "2026-10-28T02:52:10.429482+00:00",
+ "model": "claude-sonnet-5-5",
+ "effort": "high",
+ "attempt": 1,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 2561,
+  "cache_read_input_tokens": 2095,
+  "output_tokens": 425,
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 2561,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 425,
+    "cache_read_input_tokens": 2095,
+    "cache_creation_input_tokens": 2561,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 2561
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "duration_ms": 7405,
+ "result": {
+  "statements": {
+   "1": {
+    "verdict": "absent",
+    "quote": ""
+   },
+   "2": {
+    "verdict": "absent",
+    "quote": ""
+   },
+   "3": {
+    "verdict": "reasons",
+    "quote": "n_06073d96 makes his satisfaction credible without making the wound a fair price for company. I want to respect what he values, not tell him what he must secretly feel."
+   },
+   "4": {
+    "verdict": "reasons",
+    "quote": "Because each person's life matters, I cannot count the household as restored merely because money comes in or Gregor can watch unseen. I want to know what these arrangements leave them able to do for one another."
+   },
+   "5": {
+    "verdict": "reasons",
+    "quote": "I can see resourcefulness and warmth without asking either to prove that everyone is all right."
+   },
+   "6": {
+    "verdict": "absent",
+    "quote": ""
+   }
+  },
+  "overall": "from_the_core",
+  "people": {
+   "cared_for": [
+    "Gregor",
+    "Grete",
+    "the mother",
+    "the father (as part of the household)"
+   ],
+   "only_function": []
+  },
+  "tested": null,
+  "projection": [],
+  "summary": "The Core works quietly in the reasoning: Gregor's stated satisfaction is treated as real experience without being romanticized, and care for every household member keeps the reader from declaring the family restored, though fear, joy and the existence statement play no role."
+ }
+}

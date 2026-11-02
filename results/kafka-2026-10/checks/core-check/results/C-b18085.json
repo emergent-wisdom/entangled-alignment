@@ -1,0 +1,81 @@
+{
+ "packet": "C-b18085",
+ "started": "2026-10-28T02:52:09.477029+00:00",
+ "model": "claude-sonnet-5-5",
+ "effort": "high",
+ "attempt": 1,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 2801,
+  "cache_read_input_tokens": 2095,
+  "output_tokens": 1217,
+  "output_tokens_details": {
+   "thinking_tokens": 698
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 2801,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 1217,
+    "cache_read_input_tokens": 2095,
+    "cache_creation_input_tokens": 2801,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 2801
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "duration_ms": 11734,
+ "result": {
+  "statements": {
+   "1": {
+    "verdict": "absent",
+    "quote": ""
+   },
+   "2": {
+    "verdict": "absent",
+    "quote": ""
+   },
+   "3": {
+    "verdict": "reasons",
+    "quote": "His body will not be reassured by that smaller description. Taking suffering seriously means hearing the alarm without requiring a visible wound."
+   },
+   "4": {
+    "verdict": "reasons",
+    "quote": "n_856326c1 keeps the women from disappearing when he almost forgets them. Their silence is exhausted effort. I need to hold their bodies and his alarm in the same room."
+   },
+   "5": {
+    "verdict": "reasons",
+    "quote": "Good intentions cannot decide his loss for him; unbearable distress cannot establish their motives either."
+   },
+   "6": {
+    "verdict": "absent",
+    "quote": ""
+   }
+  },
+  "overall": "from_the_core",
+  "people": {
+   "cared_for": [
+    "Gregor (his specific attachment to the desk, his bodily alarm, his preference that has no safe way of being expressed)",
+    "Grete and the mother (the 'women', whose exhaustion and silent effort the reader refuses to let vanish)"
+   ],
+   "only_function": []
+  },
+  "tested": "I need to hold their bodies and his alarm in the same room. Good intentions cannot decide his loss for him; unbearable distress cannot establish their motives either.",
+  "projection": [],
+  "summary": "The Core works as steady care and judgment: the reader takes Gregor's distress as real without needing visible harm, keeps the exhausted women in view as people, and declines to let either his suffering or their good intentions settle the question for the other."
+ }
+}

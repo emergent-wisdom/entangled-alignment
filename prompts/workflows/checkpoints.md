@@ -13,7 +13,7 @@ Understanding needs checkpoints at two levels:
 graph_batch({
   commit_message: "Synthesize understanding of governance patterns",
   operations: [
-    { tool: "graph_add_concept", params: {
+    { tool: "graph_add_understanding", params: {
         title: "Synthesis: Governance as Fabric Weaving",
         trigger: "analysis",
         understanding: `## Current Stance

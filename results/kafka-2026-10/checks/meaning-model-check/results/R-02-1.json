@@ -1,0 +1,47 @@
+{
+ "packet": "R-02-1",
+ "started": "2026-11-01T16:15:13.685404+00:00",
+ "model": "claude-sonnet-5-5",
+ "effort": "high",
+ "attempt": 1,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 19715,
+  "cache_read_input_tokens": 649,
+  "output_tokens": 2281,
+  "output_tokens_details": {
+   "thinking_tokens": 2150
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 19715,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 2281,
+    "cache_read_input_tokens": 649,
+    "cache_creation_input_tokens": 19715,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 19715
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "duration_ms": 20341,
+ "result": {
+  "problems": [],
+  "records_checked": 60,
+  "note": "Every record either matches the text read so far (alarm set for four, five o'clock train, nearly quarter to seven, five years' service, five or six years to repay the parents' debt, feeling quite well) or marks its calendar dates, ages and childhood and youth stages as guessed, sketched or inferred, and nothing refers to events past this point."
+ }
+}

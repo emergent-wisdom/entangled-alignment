@@ -1,0 +1,47 @@
+{
+ "packet": "T-19-1",
+ "started": "2026-11-01T16:29:26.922142+00:00",
+ "model": "claude-sonnet-5-5",
+ "effort": "high",
+ "attempt": 1,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 24567,
+  "cache_read_input_tokens": 2067,
+  "output_tokens": 681,
+  "output_tokens_details": {
+   "thinking_tokens": 576
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 24567,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 681,
+    "cache_read_input_tokens": 2067,
+    "cache_creation_input_tokens": 24567,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 24567
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "duration_ms": 8593,
+ "result": {
+  "misreadings": [],
+  "factual_statements_checked": 13,
+  "note": "Both versions stay within the text: Gregor's indecision about what to rescue, his pressing against the picture's glass, Grete shielding her mother's view, and his readiness to spring at Grete are all supported, and the rest is interpretation."
+ }
+}

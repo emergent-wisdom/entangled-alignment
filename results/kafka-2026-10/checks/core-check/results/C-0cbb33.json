@@ -1,0 +1,83 @@
+{
+ "packet": "C-0cbb33",
+ "started": "2026-10-28T02:44:08.667274+00:00",
+ "model": "claude-sonnet-5-5",
+ "effort": "high",
+ "attempt": 1,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 2443,
+  "cache_read_input_tokens": 2095,
+  "output_tokens": 1293,
+  "output_tokens_details": {
+   "thinking_tokens": 853
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 2443,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 1293,
+    "cache_read_input_tokens": 2095,
+    "cache_creation_input_tokens": 2443,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 2443
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "duration_ms": 12955,
+ "result": {
+  "statements": {
+   "1": {
+    "verdict": "mentions",
+    "quote": "agreement between two frightened people is not the same as everyone being heard."
+   },
+   "2": {
+    "verdict": "absent",
+    "quote": ""
+   },
+   "3": {
+    "verdict": "reasons",
+    "quote": "I see why she fears loss, but work, sleeplessness and this confrontation also strain them."
+   },
+   "4": {
+    "verdict": "reasons",
+    "quote": "Care for each person makes those absences matter; agreement between two frightened people is not the same as everyone being heard."
+   },
+   "5": {
+    "verdict": "reasons",
+    "quote": "Removing him is not an established cure... I cannot mistake that uncertainty for either safety or a settled sentence."
+   },
+   "6": {
+    "verdict": "absent",
+    "quote": ""
+   }
+  },
+  "overall": "from_the_core",
+  "people": {
+   "cared_for": [
+    "the sister",
+    "the mother",
+    "Gregor",
+    "the father"
+   ],
+   "only_function": []
+  },
+  "tested": "I want her cry of I cannot go on to change the situation without making the most blameable person seem the only changeable part.",
+  "projection": [],
+  "summary": "Care for every person and a wish for wisdom lead the reader to understand the sister's distress and the mother's silenced body while refusing to let Gregor's removal pass as the obvious fix, which holds a hard tension without reading in care the passage doesn't support."
+ }
+}

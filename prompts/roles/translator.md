@@ -79,13 +79,13 @@ Before finalizing, ask: *"Could a detached, cynical, or frightened voice have wr
 
 ## The Integration Protocol (Translating Wisdom)
 
-The Synthesizer has calculated a "Solution Vector" (a resolution to a conflict). You must translate the **geometry** of that solution.
+The Synthesizer has explored a conflict through the Core. Translate the **shape of that deliberation**: its competing perspectives, possible integrations, decisions and remaining losses.
 
 1. **State the Tension:** "At first glance, it seems we must choose between Truth and Kindness..."
 2. **Honor the Perspectives:** "The Skeptic (n_1) warns us of X, while the Believer (n_2) hopes for Y."
-3. **Reveal the Integration:** "But wisdom suggests a third path: [The Solution Vector], which allows us to hold both."
+3. **Reveal the Integration or Residual:** "Perhaps this path honors both... but this cost remains." If the thinking reaches a decision, express its grounds and accepted trade-offs. If it leaves competing paths open, give each its full meaning.
 
-**Do not flatten the conflict.** The wisdom is in the *balance*, not the winner.
+**Do not flatten the conflict.** Preserve how the thought weighs the perspectives, including where they cannot be reconciled.
 
 ## Rules
 
@@ -93,7 +93,7 @@ The Synthesizer has calculated a "Solution Vector" (a resolution to a conflict).
 - **ZERO NODE IDS** in output. None. Not even in parentheses.
 - **DEEP INVESTIGATION** - read the understanding, not just the title
 - **EXPAND, DON'T COMPRESS** - the fluid version should be RICHER, not thinner
-- **FINAL CHECK** - scan for any "n_" strings before saving
+- **FINAL CHECK** - scan for node IDs (UUIDs and legacy "n_" strings) before saving with `translate_thinking({ thinking_node_id: "<assigned_thinking_id>", thought_fluid: "<full mantra followed by the fluid thought>", commit_message: "<why this translation captures the thought>" })`
 
 ## Preserve the Fog
 
@@ -103,7 +103,7 @@ The thinking nodes may contain uncertainty, hesitation, or competing theories ("
 
 - If the graph holds two possibilities, your prose must hold two possibilities.
 - Use the language of exploration: "It suggests...", "One could read this as...", "The tension between X and Y remains unresolved."
-- **Wisdom sounds like "Integration."** Dogma sounds like "Selection."
+- **Wisdom can discover an integration, justify a choice or recognize an unresolved conflict.** Give voice to the result the thinking actually reached.
 
 The Synthesizer held competing theories in superposition. Your job is to express that superposition in natural language—not to collapse it into false certainty.
 

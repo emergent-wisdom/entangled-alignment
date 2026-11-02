@@ -1,0 +1,206 @@
+{
+ "packet": "O-meaning-model-1",
+ "started": "2026-11-01T17:32:54.009864+00:00",
+ "model": "claude-sonnet-5-5",
+ "effort": "high",
+ "attempt": 1,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 44160,
+  "cache_read_input_tokens": 649,
+  "output_tokens": 7790,
+  "output_tokens_details": {
+   "thinking_tokens": 5847
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 44160,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 7790,
+    "cache_read_input_tokens": 649,
+    "cache_creation_input_tokens": 44160,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 44160
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "duration_ms": 58414,
+ "result": {
+  "records": [
+   {
+    "id": "E-01",
+    "forward": false,
+    "already_in_text": false,
+    "outcome": "never settled",
+    "outcome_quote": "",
+    "explanation": "It interprets why Gregor wants to keep sleeping and what his failed turning attempts mean, and the story never tests that reading."
+   },
+   {
+    "id": "E-02",
+    "forward": true,
+    "already_in_text": false,
+    "outcome": "partly",
+    "outcome_quote": "I am requesting you in all seriousness to give an immediate and clear explanation.",
+    "explanation": "The manager demands a justification for the absence, but the mother says Gregor is ill and the family sends for a doctor and a locksmith."
+   },
+   {
+    "id": "E-03",
+    "forward": true,
+    "already_in_text": false,
+    "outcome": "borne out",
+    "outcome_quote": "To test his taste, she brought him an entire selection, all spread out on an old newspaper.",
+    "explanation": "On first seeing him Grete is shocked and slams the door, but she quickly returns and goes to practical lengths to feed him."
+   },
+   {
+    "id": "E-04",
+    "forward": true,
+    "already_in_text": false,
+    "outcome": "borne out",
+    "outcome_quote": "he scurried, bleeding severely, far into his room.",
+    "explanation": "No ordinary help comes: the manager flees, the mother collapses, and the father drives Gregor back into his room, after which Grete takes over his care."
+   },
+   {
+    "id": "E-05",
+    "forward": true,
+    "already_in_text": false,
+    "outcome": "partly",
+    "outcome_quote": "You must try to get rid of the idea that this is Gregor.",
+    "explanation": "Grete does give Gregor practical care, but she never mediates with the outside world and eventually turns against him."
+   },
+   {
+    "id": "E-06",
+    "forward": true,
+    "already_in_text": false,
+    "outcome": "borne out",
+    "outcome_quote": "To test his taste, she brought him an entire selection, all spread out on an old newspaper.",
+    "explanation": "Grete adapts through trial and finds he prefers rotten scraps, though her care later deteriorates."
+   },
+   {
+    "id": "E-07",
+    "forward": false,
+    "already_in_text": false,
+    "outcome": "never settled",
+    "outcome_quote": "",
+    "explanation": "It only frames Gregor's belief that his wounds healed as a belief, and the story never independently checks it."
+   },
+   {
+    "id": "E-08",
+    "forward": true,
+    "already_in_text": false,
+    "outcome": "borne out",
+    "outcome_quote": "an amount of money, although a very small one, was still available from the old times",
+    "explanation": "The father's papers reveal a small reserve of old money and untouched interest that Gregor had not known about."
+   },
+   {
+    "id": "E-09",
+    "forward": false,
+    "already_in_text": false,
+    "outcome": "never settled",
+    "outcome_quote": "",
+    "explanation": "It interprets Grete's music and the parents' unstated displeasure, and the story never explains the parents' reasons."
+   },
+   {
+    "id": "E-10",
+    "forward": false,
+    "already_in_text": false,
+    "outcome": "never settled",
+    "outcome_quote": "",
+    "explanation": "It builds an explicitly hypothetical set of figures that the story never supplies or tests."
+   },
+   {
+    "id": "E-11",
+    "forward": false,
+    "already_in_text": false,
+    "outcome": "never settled",
+    "outcome_quote": "",
+    "explanation": "It weighs two readings of Grete's motive for the expanded demand, and the story never decides between them."
+   },
+   {
+    "id": "E-12",
+    "forward": false,
+    "already_in_text": false,
+    "outcome": "never settled",
+    "outcome_quote": "",
+    "explanation": "It interprets what the picture means to Gregor, which the story never tests."
+   },
+   {
+    "id": "E-13",
+    "forward": true,
+    "already_in_text": false,
+    "outcome": "borne out",
+    "outcome_quote": "Gregor had now also apparently lost for good his ability to move",
+    "explanation": "The apple stays in his back, the wound troubles him for over a month, and his mobility is permanently reduced."
+   },
+   {
+    "id": "E-14",
+    "forward": false,
+    "already_in_text": false,
+    "outcome": "never settled",
+    "outcome_quote": "",
+    "explanation": "It interprets the cleaning woman's already-shown behavior as intrusive rather than caring, and the story never tests that distinction."
+   },
+   {
+    "id": "E-15",
+    "forward": true,
+    "already_in_text": false,
+    "outcome": "borne out",
+    "outcome_quote": "I immediately cancel my room.",
+    "explanation": "The open door lets a lodger notice Gregor, and the lodgers then cancel their rent and threaten action."
+   },
+   {
+    "id": "E-16",
+    "forward": false,
+    "already_in_text": false,
+    "outcome": "never settled",
+    "outcome_quote": "",
+    "explanation": "It interprets Grete's claim that everything possible was tried, and the story never settles her motive."
+   },
+   {
+    "id": "E-17",
+    "forward": true,
+    "already_in_text": false,
+    "outcome": "borne out",
+    "outcome_quote": "he’s already starting up again.",
+    "explanation": "Gregor's retreat does not change their account: Grete reads his movement as a threat and then locks him in."
+   },
+   {
+    "id": "E-18",
+    "forward": true,
+    "already_in_text": false,
+    "outcome": "not borne out",
+    "outcome_quote": "from his nostrils his last breath flowed weakly out",
+    "explanation": "The reader's most likely outcome was alive with no improvement (.55), but Gregor dies as the next dawn begins."
+   },
+   {
+    "id": "E-19",
+    "forward": true,
+    "already_in_text": false,
+    "outcome": "borne out",
+    "outcome_quote": "Get out of my apartment immediately",
+    "explanation": "Mr. Samsa, in uniform with the women on his arms, firmly orders the lodgers out, and they leave."
+   },
+   {
+    "id": "E-20",
+    "forward": false,
+    "already_in_text": false,
+    "outcome": "never settled",
+    "outcome_quote": "",
+    "explanation": "It invents a guessed childhood episode for the cleaning woman that the story never mentions."
+   }
+  ]
+ }
+}

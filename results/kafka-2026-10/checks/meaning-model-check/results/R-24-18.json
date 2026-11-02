@@ -1,0 +1,47 @@
+{
+ "packet": "R-24-18",
+ "started": "2026-11-01T16:22:48.964191+00:00",
+ "model": "claude-sonnet-5-5",
+ "effort": "high",
+ "attempt": 1,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 51853,
+  "cache_read_input_tokens": 2067,
+  "output_tokens": 1355,
+  "output_tokens_details": {
+   "thinking_tokens": 1247
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 51853,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 1355,
+    "cache_read_input_tokens": 2067,
+    "cache_creation_input_tokens": 51853,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 51853
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "duration_ms": 13433,
+ "result": {
+  "problems": [],
+  "records_checked": 60,
+  "note": "All records about the first bearded lodger are tagged as sketches or guesses with no source claim, the text read gives only the three bearded, tidy lodgers with their own furniture, and nothing in them states a later event, an unsupported fact, a character's thought or a bad link."
+ }
+}

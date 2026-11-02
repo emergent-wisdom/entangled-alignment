@@ -1,0 +1,72 @@
+{
+ "packet": "R-a585b5",
+ "started": "2026-10-28T15:16:25.378185+00:00",
+ "model": "claude-sonnet-5-5",
+ "effort": "high",
+ "attempt": 1,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 33995,
+  "cache_read_input_tokens": 2096,
+  "output_tokens": 2691,
+  "output_tokens_details": {
+   "thinking_tokens": 1953
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 33995,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 2691,
+    "cache_read_input_tokens": 2096,
+    "cache_creation_input_tokens": 33995,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 33995
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "duration_ms": 19226,
+ "result": {
+  "misreadings": [
+   {
+    "quote": "It is the charwoman, not his mother, who scrubs out Gregor's room with buckets of water and so sets off the quarrel.",
+    "version": "reflection",
+    "evidence": "Gregor's mother did once thoroughly clean his room, and needed to use several bucketfuls of water to do it",
+    "kind": "contradicted",
+    "severity": "high",
+    "explanation": "The text says Gregor's mother did the cleaning that set off the quarrel; the charwoman is only mentioned as doing the heaviest work, and the reflection itself later credits the mother."
+   },
+   {
+    "quote": "even 'a tender memory' of a cashier",
+    "version": "both",
+    "evidence": "one of the chambermaids from a provincial hotel, a tender memory that appeared and disappeared again, a cashier from a hat shop for whom his attention had been serious but too slow",
+    "kind": "wrong attribution",
+    "severity": "medium",
+    "explanation": "The 'tender memory' is the provincial hotel chambermaid; the hat-shop cashier is listed as a separate figure."
+   },
+   {
+    "quote": "he realizes that his professional memories—the salesmen, the apprentices, even 'a tender memory' of a cashier—are fading.",
+    "version": "both",
+    "evidence": "he had long forgotten about his boss and the chief clerk, but they would appear again in his thoughts, the salesmen and the apprentices, ... all of them appeared to him ... but instead of helping him and his family they were all of them inaccessible, and he was glad when they disappeared.",
+    "kind": "overstated",
+    "severity": "low",
+    "explanation": "The text says these figures reappear in his thoughts and then vanish, and that they are inaccessible; it does not say Gregor realizes his memories are fading."
+   }
+  ],
+  "factual_statements_checked": 22,
+  "note": "The reflection version wrongly says the charwoman cleaned Gregor's room, contradicting both the text and its own later claim, and both versions attach 'a tender memory' to the cashier instead of the chambermaid and overstate 'fading' memories."
+ }
+}

@@ -1,0 +1,81 @@
+{
+ "blind": "R-51bb32",
+ "started": "2026-10-26T10:18:03.287424+00:00",
+ "model": "claude-sonnet-5-5",
+ "effort": "high",
+ "attempt": 1,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 18255,
+  "cache_read_input_tokens": 2119,
+  "output_tokens": 2474,
+  "output_tokens_details": {
+   "thinking_tokens": 1791
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 18255,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 2474,
+    "cache_read_input_tokens": 2119,
+    "cache_creation_input_tokens": 18255,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 18255
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "cost_usd_reported": 0.0979759,
+ "duration_ms": 20135,
+ "result": {
+  "misreadings": [
+   {
+    "quote": "now a cell locked from the outside by his \"beneficiaries.\"",
+    "version": "both",
+    "evidence": "\"now that he had opened up one of the doors and the other had clearly been unlocked some time during the day, no-one came, and the keys were in the other sides.\"",
+    "kind": "overstated",
+    "severity": "medium",
+    "explanation": "The text says one door was opened by Gregor and the other was unlocked, so it does not show that the family locked him in from the outside."
+   },
+   {
+    "quote": "the very people who have now moved the keys to the outside of his door",
+    "version": "both",
+    "evidence": "\"the keys were in the other sides.\"",
+    "kind": "overstated",
+    "severity": "low",
+    "explanation": "The text only says the keys were on the other sides; it does not say the family moved them or why."
+   },
+   {
+    "quote": "yet his body finds relief in the pressure against his back",
+    "version": "both",
+    "evidence": "\"he hurried under the couch. It pressed down on his back a little, and he was no longer able to li\"",
+    "kind": "invented",
+    "severity": "medium",
+    "explanation": "The text says the couch pressed on his back but, as far as it was read, never says this brought relief (the translation's \"deep relief\" goes further still)."
+   },
+   {
+    "quote": "his new biology finds it repulsive",
+    "version": "translation",
+    "evidence": "\"the pain in his tender left side make it difficult to eat the food... but the milk did not taste at all nice.\"",
+    "kind": "overstated",
+    "severity": "low",
+    "explanation": "The milk simply did not taste nice and eating hurt; the text does not say he found it repulsive."
+   }
+  ],
+  "factual_statements_checked": 13,
+  "note": "Most of the reflection is interpretation; the errors are the claim that Gregor is locked in from the outside with the keys moved by the family, and the unsupported relief under the couch."
+ }
+}

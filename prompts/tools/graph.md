@@ -17,7 +17,7 @@ All mutations go through `graph_batch({ operations: [...] })`.
 
 | What | Tool | Key Params |
 |------|------|------------|
-| New concept | `graph_add_concept` | `title`, `understanding`, `trigger`, `why` |
+| New concept | `graph_add_understanding` | `title`, `understanding`, `trigger`, `why` |
 | Extend existing | `graph_revise` | `node`, `understanding`, `why` |
 | Connect nodes | `graph_connect` | `from`, `to`, `type`, `why` |
 | Record decision | `graph_decide` | `question`, `options[]`, `chosen`, `reasoning` |

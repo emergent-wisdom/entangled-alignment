@@ -1,0 +1,48 @@
+{
+ "blind": "R-fbb6dd",
+ "started": "2026-10-26T10:20:11.352490+00:00",
+ "model": "claude-sonnet-5-5",
+ "effort": "high",
+ "attempt": 1,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 34280,
+  "cache_read_input_tokens": 2119,
+  "output_tokens": 1034,
+  "output_tokens_details": {
+   "thinking_tokens": 927
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 34280,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 1034,
+    "cache_read_input_tokens": 2119,
+    "cache_creation_input_tokens": 34280,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 34280
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "cost_usd_reported": 0.1476759,
+ "duration_ms": 10827,
+ "result": {
+  "misreadings": [],
+  "factual_statements_checked": 14,
+  "note": "Both versions keep the imagined scene (Conservatory announcement, tears, kiss) separate from events, and their claims about the lodgers, the parents, the guarded doors, the 'voluntary' stay and the Christmas question match the passage."
+ }
+}

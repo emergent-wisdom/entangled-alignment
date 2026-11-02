@@ -1,0 +1,57 @@
+{
+ "packet": "R-24-24",
+ "started": "2026-11-01T16:23:27.816145+00:00",
+ "model": "claude-sonnet-5-5",
+ "effort": "high",
+ "attempt": 1,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 47737,
+  "cache_read_input_tokens": 2067,
+  "output_tokens": 1793,
+  "output_tokens_details": {
+   "thinking_tokens": 1510
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 47737,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 1793,
+    "cache_read_input_tokens": 2067,
+    "cache_creation_input_tokens": 47737,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 47737
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "duration_ms": 20415,
+ "result": {
+  "problems": [
+   {
+    "record": "value_series:values.household.lodgers~486ada1c08eda086",
+    "status": "applied",
+    "quote": "\"tag\": \"source\", \"time\": 1912.188524590164, \"value\": 3.0",
+    "evidence": "no support in the text; the text says only \"they had rented one room of the apartment to three lodgers\" and gives no date",
+    "kind": "timing",
+    "severity": "medium",
+    "explanation": "The count of three is in the text, but the calendar time 1912.1885 is tagged \"source\" as if the text gave it, when it is a guess like the neighbouring exploring and sketch points."
+   }
+  ],
+  "records_checked": 60,
+  "note": "Only the date on the \"source\"-tagged lodger-count point is unsupported; the other lodger, tenancy, storage and guessed-biography records are supported or labelled as guesses."
+ }
+}

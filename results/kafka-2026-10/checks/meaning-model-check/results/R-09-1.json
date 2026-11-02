@@ -1,0 +1,66 @@
+{
+ "packet": "R-09-1",
+ "started": "2026-11-01T16:17:08.074847+00:00",
+ "model": "claude-sonnet-5-5",
+ "effort": "high",
+ "attempt": 1,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 31724,
+  "cache_read_input_tokens": 2067,
+  "output_tokens": 3796,
+  "output_tokens_details": {
+   "thinking_tokens": 3334
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 31724,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 3796,
+    "cache_read_input_tokens": 2067,
+    "cache_creation_input_tokens": 31724,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 31724
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "duration_ms": 27936,
+ "result": {
+  "problems": [
+   {
+    "record": "meaning_model.events:event.mother-flees",
+    "status": "applied",
+    "quote": "mother calls for help, backs into breakfast table and overturns coffee",
+    "evidence": "\"When she reached the table, she sat down heavily on it, as if absent-mindedly, and did not appear to notice at all that next to her coffee was pouring out onto the carpet in a full stream from the large, overturned pot.\"",
+    "kind": "wrong track",
+    "severity": "low",
+    "explanation": "The event is labelled as source text, but the text never says the mother overturned the pot; it only reports the pot already overturned and her not noticing, so her causing the spill is inferred."
+   },
+   {
+    "record": "value_series:values.mother.distress~ad027f3fbe84982e",
+    "status": "applied",
+    "quote": "Cries for help, flees into table, spills coffee",
+    "evidence": "\"did not appear to notice at all that next to her coffee was pouring out onto the carpet in a full stream from the large, overturned pot.\"",
+    "kind": "wrong track",
+    "severity": "low",
+    "explanation": "The note states as fact that the mother spills the coffee, but the text gives no agent for the overturned pot, so her having spilled it is an inference."
+   }
+  ],
+  "records_checked": 60,
+  "note": "Nearly all records are labelled as guessed, sketched or inferred and stay within the text read, apart from two low-severity cases of the mother being credited with spilling the coffee."
+ }
+}

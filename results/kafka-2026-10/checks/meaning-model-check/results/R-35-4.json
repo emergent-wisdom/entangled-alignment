@@ -1,0 +1,47 @@
+{
+ "packet": "R-35-4",
+ "started": "2026-11-01T16:25:09.475979+00:00",
+ "model": "claude-sonnet-5-5",
+ "effort": "high",
+ "attempt": 1,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 43320,
+  "cache_read_input_tokens": 2067,
+  "output_tokens": 1452,
+  "output_tokens_details": {
+   "thinking_tokens": 1333
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 43320,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 1452,
+    "cache_read_input_tokens": 2067,
+    "cache_creation_input_tokens": 43320,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 43320
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "duration_ms": 13438,
+ "result": {
+  "problems": [],
+  "records_checked": 19,
+  "note": "The reader has read through Gregor's death, so nothing is ahead of the text; the 'source' labels (cannot move at all, conviction that he had to disappear, not noticing damage while unlocking, last breath, dawn brightening) match the text, and guessed dates and scores are labelled as guesses."
+ }
+}

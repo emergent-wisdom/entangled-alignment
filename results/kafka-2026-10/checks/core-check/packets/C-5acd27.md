@@ -1,0 +1,15 @@
+# One reflection
+
+## The passage the reader had just read
+
+<<<PASSAGE
+“This evening she’ll be given notice,” said Mr. Samsa, but he got no answer from either his wife or from his daughter, because the cleaning woman seemed to have once again upset the tranquility they had just attained. The women got up, went to the window, and remained there, with their arms about each other. Mr. Samsa turned around in his chair in their direction and observed them quietly for a while. Then he called out, “All right, come here then. Let’s set aside these old matters once and for all. And have a little consideration for me.” The women attended to him at once. They rushed to him, caressed him, and quickly ended their letters.
+
+Then all three left the apartment together, something they had not done for months now, and took the electric tram into the open air outside the city. The car in which they were sitting by themselves was wholly flooded by the warm sun. Leaning back comfortably in their seats, they talked to each other about future prospects, and they discovered that on closer observation these were not at all bad, for the three of them had not really questioned each other about their employment at all. Each of their positions was extremely favorable and offered especially promising future prospects. The greatest improvement in their situation at this point, of course, would have to come from a change of dwelling. They would now like to rent a smaller and cheaper apartment but better situated and generally more practical than the present one, which Gregor had chosen. While they amused themselves chatting in this way, it struck Mr. and Mrs. Samsa, almost at the same moment, as they looked at their daughter, who was getting more animated all the time, how she had blossomed recently, in spite of all the troubles which had made her cheeks pale, into a beautiful and voluptuous young woman. Growing more silent and almost unconsciously understanding each other in their glances, they thought that the time was now at hand to seek out a good honest man for her. And it was something of a confirmation of their new dreams and good intentions when at the end of their journey their daughter stood up first and stretched her young body.
+PASSAGE>>>
+
+## The reflection (the Core recital removed)
+
+<<<REFLECTION
+u42.worker-readings-executed and u42.slow-process-applied change the account beneath the reading: workers have lives and interests of their own, and bodily decline no longer disappears inside a static root score. u36.understanding-without-care keeps the interpretation from becoming a slogan. The family fails to recognize Gregor's understanding; the cleaner's recognition still does not make her attentive. I care about the people behind these roles, so exhaustion, agency, provision and felt harm remain distinguishable. u42.closing-record ends this reading pass without turning an orderly model into proof that every explanation is correct. The source has ended; the open questions have not.
+REFLECTION>>>

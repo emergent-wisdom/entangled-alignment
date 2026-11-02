@@ -1,0 +1,48 @@
+{
+ "blind": "R-0bea49",
+ "started": "2026-10-26T10:17:04.882868+00:00",
+ "model": "claude-sonnet-5-5",
+ "effort": "high",
+ "attempt": 1,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 20109,
+  "cache_read_input_tokens": 649,
+  "output_tokens": 1145,
+  "output_tokens_details": {
+   "thinking_tokens": 1022
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 20109,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 1145,
+    "cache_read_input_tokens": 649,
+    "cache_creation_input_tokens": 20109,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 20109
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "cost_usd_reported": 0.09195489999999999,
+ "duration_ms": 10372,
+ "result": {
+  "misreadings": [],
+  "factual_statements_checked": 17,
+  "note": "Every claim about the text in both versions matches it: the slammed door and return, the milk bowl, the tested food selection, his satisfied eating, the key used as a signal in both directions, his near-suffocation under the couch, and his not asking her for food. The rest is interpretation or hedged speculation."
+ }
+}

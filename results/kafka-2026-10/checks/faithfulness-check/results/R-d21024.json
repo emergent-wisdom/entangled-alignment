@@ -1,0 +1,48 @@
+{
+ "blind": "R-d21024",
+ "started": "2026-10-26T10:19:46.019995+00:00",
+ "model": "claude-sonnet-5-5",
+ "effort": "high",
+ "attempt": 1,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 32649,
+  "cache_read_input_tokens": 2119,
+  "output_tokens": 942,
+  "output_tokens_details": {
+   "thinking_tokens": 812
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 32649,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 942,
+    "cache_read_input_tokens": 2119,
+    "cache_creation_input_tokens": 32649,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 32649
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "cost_usd_reported": 0.1402319,
+ "duration_ms": 13568,
+ "result": {
+  "misreadings": [],
+  "factual_statements_checked": 17,
+  "note": "Both versions stay within the text: the lodgers at the family's old places, the central lodger testing the meat, mother and sister relaxing when he is satisfied, the family eating in the kitchen, the father's bow, Gregor not using the open door, and his line about appetite are all supported, and the rest is framed interpretation."
+ }
+}

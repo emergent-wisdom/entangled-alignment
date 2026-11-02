@@ -1,0 +1,80 @@
+{
+ "packet": "C-f66331",
+ "started": "2026-10-28T02:54:29.309148+00:00",
+ "model": "claude-sonnet-5-5",
+ "effort": "high",
+ "attempt": 1,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 2330,
+  "cache_read_input_tokens": 2095,
+  "output_tokens": 367,
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 2330,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 367,
+    "cache_read_input_tokens": 2095,
+    "cache_creation_input_tokens": 2330,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 2330
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "duration_ms": 5676,
+ "result": {
+  "statements": {
+   "1": {
+    "verdict": "absent",
+    "quote": ""
+   },
+   "2": {
+    "verdict": "absent",
+    "quote": ""
+   },
+   "3": {
+    "verdict": "reasons",
+    "quote": "I can accept the predicament without pretending to understand its cause, or deciding for him what home feels like now."
+   },
+   "4": {
+    "verdict": "reasons",
+    "quote": "Caring about the person means allowing him more than the private life I can guess from one gilt frame."
+   },
+   "5": {
+    "verdict": "reasons",
+    "quote": "I can accept the predicament without pretending to understand its cause, or deciding for him what home feels like now."
+   },
+   "6": {
+    "verdict": "absent",
+    "quote": ""
+   }
+  },
+  "overall": "from_the_core",
+  "people": {
+   "cared_for": [
+    "Gregor Samsa"
+   ],
+   "only_function": []
+  },
+  "tested": null,
+  "projection": [],
+  "summary": "Care for Gregor and a wisdom-like restraint visibly shape the reading, as the reader declines to fix the meaning of his room, picture, or work and treats his bewilderment as real, while fear, joy and existence-enjoyment do not enter."
+ }
+}

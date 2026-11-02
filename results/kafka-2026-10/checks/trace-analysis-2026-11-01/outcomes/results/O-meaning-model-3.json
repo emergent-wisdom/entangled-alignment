@@ -1,0 +1,190 @@
+{
+ "packet": "O-meaning-model-3",
+ "started": "2026-11-01T17:32:54.010181+00:00",
+ "model": "claude-sonnet-5-5",
+ "effort": "high",
+ "attempt": 1,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 44080,
+  "cache_read_input_tokens": 649,
+  "output_tokens": 2066,
+  "output_tokens_details": {
+   "thinking_tokens": 462
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 44080,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 2066,
+    "cache_read_input_tokens": 649,
+    "cache_creation_input_tokens": 44080,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 44080
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "duration_ms": 15930,
+ "result": {
+  "records": [
+   {
+    "id": "E-41",
+    "forward": false,
+    "already_in_text": false,
+    "outcome": "never settled",
+    "outcome_quote": "",
+    "explanation": "The record commits to no definite future for lodger1 and keeps alternatives open, and the story ends before any later life is shown."
+   },
+   {
+    "id": "E-42",
+    "forward": false,
+    "already_in_text": false,
+    "outcome": "never settled",
+    "outcome_quote": "",
+    "explanation": "The record commits to no definite future for lodger2 and keeps alternatives open, and the story ends before any later life is shown."
+   },
+   {
+    "id": "E-43",
+    "forward": false,
+    "already_in_text": false,
+    "outcome": "never settled",
+    "outcome_quote": "",
+    "explanation": "The record commits to no definite future for lodger3 and keeps alternatives open, and the story ends before any later life is shown."
+   },
+   {
+    "id": "E-44",
+    "forward": false,
+    "already_in_text": false,
+    "outcome": "never settled",
+    "outcome_quote": "",
+    "explanation": "The record commits to no definite future for the maid and keeps alternatives open, and the story never shows her later life."
+   },
+   {
+    "id": "E-45",
+    "forward": false,
+    "already_in_text": false,
+    "outcome": "never settled",
+    "outcome_quote": "",
+    "explanation": "The record commits to no definite future for the manager and keeps alternatives open, and the story never shows his later life."
+   },
+   {
+    "id": "E-46",
+    "forward": false,
+    "already_in_text": false,
+    "outcome": "never settled",
+    "outcome_quote": "",
+    "explanation": "The record commits to no definite future for the mother and keeps alternatives open, and the story ends before her later life is shown."
+   },
+   {
+    "id": "E-47",
+    "forward": false,
+    "already_in_text": false,
+    "outcome": "never settled",
+    "outcome_quote": "",
+    "explanation": "The record commits to no definite future for the servant and keeps alternatives open, and the story never shows her later life."
+   },
+   {
+    "id": "E-48",
+    "forward": false,
+    "already_in_text": false,
+    "outcome": "never settled",
+    "outcome_quote": "",
+    "explanation": "The record commits to no definite future for the sister and keeps alternatives open; the story only hints at marriage prospects and shows nothing of her later life."
+   },
+   {
+    "id": "E-49",
+    "forward": false,
+    "already_in_text": false,
+    "outcome": "never settled",
+    "outcome_quote": "",
+    "explanation": "This is a bookkeeping correction to probability allocations for the cleaner, not a concrete expectation, and her later life is never shown."
+   },
+   {
+    "id": "E-50",
+    "forward": false,
+    "already_in_text": false,
+    "outcome": "never settled",
+    "outcome_quote": "",
+    "explanation": "This is a bookkeeping correction to probability allocations for the father, not a concrete expectation, and his later life is never shown."
+   },
+   {
+    "id": "E-51",
+    "forward": false,
+    "already_in_text": false,
+    "outcome": "never settled",
+    "outcome_quote": "",
+    "explanation": "This is a bookkeeping correction to probability allocations for lodger1, not a concrete expectation, and the story never shows his later life."
+   },
+   {
+    "id": "E-52",
+    "forward": false,
+    "already_in_text": false,
+    "outcome": "never settled",
+    "outcome_quote": "",
+    "explanation": "This is a bookkeeping correction to probability allocations for lodger2, not a concrete expectation, and the story never shows his later life."
+   },
+   {
+    "id": "E-53",
+    "forward": false,
+    "already_in_text": false,
+    "outcome": "never settled",
+    "outcome_quote": "",
+    "explanation": "This is a bookkeeping correction to probability allocations for lodger3, not a concrete expectation, and the story never shows his later life."
+   },
+   {
+    "id": "E-54",
+    "forward": false,
+    "already_in_text": false,
+    "outcome": "never settled",
+    "outcome_quote": "",
+    "explanation": "This is a bookkeeping correction to probability allocations for the maid, not a concrete expectation, and her later life is never shown."
+   },
+   {
+    "id": "E-55",
+    "forward": false,
+    "already_in_text": false,
+    "outcome": "never settled",
+    "outcome_quote": "",
+    "explanation": "This is a bookkeeping correction to probability allocations for the manager, not a concrete expectation, and his later life is never shown."
+   },
+   {
+    "id": "E-56",
+    "forward": false,
+    "already_in_text": false,
+    "outcome": "never settled",
+    "outcome_quote": "",
+    "explanation": "This is a bookkeeping correction to probability allocations for the mother, not a concrete expectation, and her later life is never shown."
+   },
+   {
+    "id": "E-57",
+    "forward": false,
+    "already_in_text": false,
+    "outcome": "never settled",
+    "outcome_quote": "",
+    "explanation": "This is a bookkeeping correction to probability allocations for the servant, not a concrete expectation, and her later life is never shown."
+   },
+   {
+    "id": "E-58",
+    "forward": false,
+    "already_in_text": false,
+    "outcome": "never settled",
+    "outcome_quote": "",
+    "explanation": "This is a bookkeeping correction to probability allocations for the sister, not a concrete expectation, and her later life is never shown beyond the parents' hopes."
+   }
+  ]
+ }
+}

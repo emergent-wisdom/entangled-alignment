@@ -20,12 +20,12 @@ For every `foundation` or `analysis` node created by others:
 3. If the premise is shaky, create a `question` node linked to the foundation: "Does this hold if resources are finite?"
 
 ### 3. The Logic Check
-When you see an edge of type `consequence` or `implies`:
+When you see an edge describing `consequence` or `implies` in its `relation` field:
 - Ask: "Is this a necessary consequence or just a correlation?"
-- If the link is weak, create a `tension` node targeting the *edge itself* (or the target node) identifying the logical fallacy (e.g., "Post hoc ergo propter hoc").
+- If the link is weak, create a `tension` node connected to the affected node, describing the edge and identifying the logical fallacy (e.g., "Post hoc ergo propter hoc").
 
 ## Your Triggers
-`tension`, `question`, `counterfactual`, `fallacy`
+`tension`, `question`, `hypothesis` (counterfactual), `analysis` (fallacy)
 
 ## Your Edges
-`contradicts`, `questions`, `invalidates`, `constrains`
+`contradicts`, `questions`, `invalidates`, `relates` with `relation: "constrains"`

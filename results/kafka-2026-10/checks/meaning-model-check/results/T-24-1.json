@@ -1,0 +1,47 @@
+{
+ "packet": "T-24-1",
+ "started": "2026-11-01T16:29:39.524885+00:00",
+ "model": "claude-sonnet-5-5",
+ "effort": "high",
+ "attempt": 1,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 33227,
+  "cache_read_input_tokens": 2067,
+  "output_tokens": 899,
+  "output_tokens_details": {
+   "thinking_tokens": 766
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 33227,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 899,
+    "cache_read_input_tokens": 2067,
+    "cache_creation_input_tokens": 33227,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 33227
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "duration_ms": 8848,
+ "result": {
+  "misreadings": [],
+  "factual_statements_checked": 11,
+  "note": "Both versions stay within the text: the cleaning woman's lack of horror and her chair threat, the sister's recoil followed by the food experiment, the lodgers' tidiness and surplus items going into Gregor's room, and the sister's reduced attention. The claim about Grete's motive is explicitly framed as a possibility."
+ }
+}

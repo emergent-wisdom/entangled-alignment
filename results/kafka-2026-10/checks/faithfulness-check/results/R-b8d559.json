@@ -1,0 +1,57 @@
+{
+ "blind": "R-b8d559",
+ "started": "2026-10-26T10:19:13.497991+00:00",
+ "model": "claude-sonnet-5-5",
+ "effort": "high",
+ "attempt": 1,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 11984,
+  "cache_read_input_tokens": 2119,
+  "output_tokens": 1029,
+  "output_tokens_details": {
+   "thinking_tokens": 721
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 11984,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 1029,
+    "cache_read_input_tokens": 2119,
+    "cache_creation_input_tokens": 11984,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 11984
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "cost_usd_reported": 0.0584419,
+ "duration_ms": 9612,
+ "result": {
+  "misreadings": [
+   {
+    "quote": "He imagines everyone encouraging his effort, and that makes it feel shared while the actual people remain outside.",
+    "version": "translation",
+    "evidence": "\"But they should all have called out to him, including his father and mother, 'Come on, Gregor,' they should have shouted... Imagining that all his efforts were being followed with suspense, he bit down on the key\"",
+    "kind": "overstated",
+    "severity": "low",
+    "explanation": "Gregor imagines his efforts being followed with suspense and thinks they ought to be calling encouragement, but he does not imagine them actually encouraging him; only the manager's 'Just listen' is said to encourage him."
+   }
+  ],
+  "factual_statements_checked": 16,
+  "note": "Both versions track the passage closely; the only imprecision is the translation's claim that Gregor imagines everyone encouraging him, when he only imagines them watching with suspense and thinks they should be calling out."
+ }
+}

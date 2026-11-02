@@ -1,0 +1,84 @@
+{
+ "packet": "C-13a6d3",
+ "started": "2026-11-01T16:15:13.940189+00:00",
+ "model": "claude-sonnet-5-5",
+ "effort": "high",
+ "attempt": 1,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 4010,
+  "cache_read_input_tokens": 649,
+  "output_tokens": 1192,
+  "output_tokens_details": {
+   "thinking_tokens": 731
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 4010,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 1192,
+    "cache_read_input_tokens": 649,
+    "cache_creation_input_tokens": 4010,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 4010
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "duration_ms": 13119,
+ "result": {
+  "statements": {
+   "1": {
+    "verdict": "absent",
+    "quote": ""
+   },
+   "2": {
+    "verdict": "absent",
+    "quote": ""
+   },
+   "3": {
+    "verdict": "reasons",
+    "quote": "Gregor's pleasure in listening is real without making the trade fair."
+   },
+   "4": {
+    "verdict": "reasons",
+    "quote": "I want their small smiles to remain visible without letting resilience erase exhaustion."
+   },
+   "5": {
+    "verdict": "reasons",
+    "quote": "u22.capacities also corrects the world he thought he alone sustained: the people he wanted to protect now work, learn and grow tired."
+   },
+   "6": {
+    "verdict": "absent",
+    "quote": ""
+   }
+  },
+  "overall": "from_the_core",
+  "people": {
+   "cared_for": [
+    "Gregor (his pleasure in listening is treated as real, while his burden is kept in view)",
+    "the mother (her tired smile and her sewing are kept visible)",
+    "the sister (her work and study are kept visible)"
+   ],
+   "only_function": [
+    "the father (appears only as part of the household's 'limited form of admission', with no attention to his own experience)"
+   ]
+  },
+  "tested": "Gregor's pleasure in listening is real without making the trade fair.",
+  "projection": [],
+  "summary": "The reflection works from care and the reality of experience: it holds Gregor's real but small consolation beside the family's exhaustion without sentimentalizing either, though its opaque internal references and the closing aside on forecasting make the reasoning thin and partly off the passage."
+ }
+}

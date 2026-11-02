@@ -1,0 +1,56 @@
+{
+ "packet": "R-7445fd",
+ "started": "2026-10-28T15:16:07.892988+00:00",
+ "model": "claude-sonnet-5-5",
+ "effort": "high",
+ "attempt": 1,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 24247,
+  "cache_read_input_tokens": 2096,
+  "output_tokens": 2412,
+  "output_tokens_details": {
+   "thinking_tokens": 2159
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 24247,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 2412,
+    "cache_read_input_tokens": 2096,
+    "cache_creation_input_tokens": 24247,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 24247
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "duration_ms": 18471,
+ "result": {
+  "misreadings": [
+   {
+    "quote": "Within a few weeks the family will take in three lodgers and give them the living room.",
+    "version": "reflection",
+    "evidence": "no support in the text",
+    "kind": "invented",
+    "severity": "high",
+    "explanation": "The text read so far never mentions lodgers or the living room being given up, and the reader had read nothing beyond the sheet passage, so this is stated as fact about events not in the text."
+   }
+  ],
+  "factual_statements_checked": 16,
+  "note": "Only the lodger claim in the reflection goes beyond the text; the rest is interpretation or acceptable paraphrase of the money revelation, the blurred view, the window ritual and the bedsheet."
+ }
+}

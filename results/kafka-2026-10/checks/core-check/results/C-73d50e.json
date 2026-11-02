@@ -1,0 +1,81 @@
+{
+ "packet": "C-73d50e",
+ "started": "2026-10-28T02:49:24.492954+00:00",
+ "model": "claude-sonnet-5-5",
+ "effort": "high",
+ "attempt": 1,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 2573,
+  "cache_read_input_tokens": 2095,
+  "output_tokens": 1324,
+  "output_tokens_details": {
+   "thinking_tokens": 894
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 2573,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 1324,
+    "cache_read_input_tokens": 2095,
+    "cache_creation_input_tokens": 2573,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 2573
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "duration_ms": 12791,
+ "result": {
+  "statements": {
+   "1": {
+    "verdict": "absent",
+    "quote": ""
+   },
+   "2": {
+    "verdict": "absent",
+    "quote": ""
+   },
+   "3": {
+    "verdict": "reasons",
+    "quote": "Because I believe his experience is real, I want the aversion to count as information rather than ingratitude."
+   },
+   "4": {
+    "verdict": "reasons",
+    "quote": "Care needs room to discover these differences, and responsibility for the injury must not disappear into a vague idea that transformation simply causes suffering."
+   },
+   "5": {
+    "verdict": "absent",
+    "quote": ""
+   },
+   "6": {
+    "verdict": "absent",
+    "quote": ""
+   }
+  },
+  "overall": "from_the_core",
+  "people": {
+   "cared_for": [
+    "Gregor (his aversion read as information, his injury and pain taken seriously)",
+    "the sister (her choice of the favorite milk read as an attempt at care that needs to learn)"
+   ],
+   "only_function": []
+  },
+  "tested": "responsibility for the injury must not disappear into a vague idea that transformation simply causes suffering.",
+  "projection": [],
+  "summary": "The Core's commitment to the reality of human experience and to care shapes how the reader treats Gregor's aversion as meaningful, keeps the injury's cause distinct from the transformation, and extends understanding to the sister's attempt, while the other statements go unused."
+ }
+}

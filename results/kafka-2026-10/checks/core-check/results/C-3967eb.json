@@ -1,0 +1,84 @@
+{
+ "packet": "C-3967eb",
+ "started": "2026-10-28T02:46:13.074601+00:00",
+ "model": "claude-sonnet-5-5",
+ "effort": "high",
+ "attempt": 1,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 2554,
+  "cache_read_input_tokens": 2095,
+  "output_tokens": 881,
+  "output_tokens_details": {
+   "thinking_tokens": 500
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 2554,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 881,
+    "cache_read_input_tokens": 2095,
+    "cache_creation_input_tokens": 2554,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 2554
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "duration_ms": 9269,
+ "result": {
+  "statements": {
+   "1": {
+    "verdict": "absent",
+    "quote": ""
+   },
+   "2": {
+    "verdict": "absent",
+    "quote": ""
+   },
+   "3": {
+    "verdict": "reasons",
+    "quote": "He feels hungry and quite well, and I should not argue that experience away."
+   },
+   "4": {
+    "verdict": "reasons",
+    "quote": "I do not want reliability to become a reason a person loses permission to need help."
+   },
+   "5": {
+    "verdict": "reasons",
+    "quote": "I need to distinguish the reality of that pressure from the truth of every future accusation he imagines."
+   },
+   "6": {
+    "verdict": "absent",
+    "quote": ""
+   }
+  },
+  "overall": "from_the_core",
+  "people": {
+   "cared_for": [
+    "Gregor"
+   ],
+   "only_function": [
+    "the boss",
+    "the firm's errand boy (messenger)",
+    "the insurance doctor"
+   ]
+  },
+  "tested": null,
+  "projection": [],
+  "summary": "The reflection treats Gregor's felt experience as real, shows care for him by refusing to let his five years of reliability count against his need for help, and separates the real pressure he feels from the accusations he only imagines, while the boss, messenger and doctor appear only as a projected audience."
+ }
+}

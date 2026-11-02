@@ -1,0 +1,1 @@
+You are continuing this reading in a new conversation. It stopped after the text life_reading_status shows, and the model and its Understanding Graph hold everything built so far, including the text read until then. Before reading on, recover them as the tool's guidance says for continuing recorded work, then carry on as above.

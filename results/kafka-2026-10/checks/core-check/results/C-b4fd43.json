@@ -1,0 +1,88 @@
+{
+ "packet": "C-b4fd43",
+ "started": "2026-10-28T02:52:18.706875+00:00",
+ "model": "claude-sonnet-5-5",
+ "effort": "high",
+ "attempt": 1,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 2698,
+  "cache_read_input_tokens": 2095,
+  "output_tokens": 1424,
+  "output_tokens_details": {
+   "thinking_tokens": 856
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 2698,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 1424,
+    "cache_read_input_tokens": 2095,
+    "cache_creation_input_tokens": 2698,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 2698
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "duration_ms": 13887,
+ "result": {
+  "statements": {
+   "1": {
+    "verdict": "mentions",
+    "quote": "My fearlessness forces me to acknowledge that this total objectification is the logical conclusion of the 'Logistics of Dehumanization.'"
+   },
+   "2": {
+    "verdict": "absent",
+    "quote": ""
+   },
+   "3": {
+    "verdict": "mentions",
+    "quote": "Because I believe human experience is real, I find this outsider's perspective particularly devastating: she grants him the agency of a performer (a 'martyr') only when he is a corpse."
+   },
+   "4": {
+    "verdict": "absent",
+    "quote": ""
+   },
+   "5": {
+    "verdict": "absent",
+    "quote": ""
+   },
+   "6": {
+    "verdict": "absent",
+    "quote": ""
+   }
+  },
+  "overall": "tagged",
+  "people": {
+   "cared_for": [
+    "Gregor (read as erased and objectified, with a sympathetic sense of loss)"
+   ],
+   "only_function": [
+    "the cleaner (an 'outsider's perspective' used to make a point about dehumanization)",
+    "the family and Grete (a symbol of apathy and moving on to 'the next transaction')"
+   ]
+  },
+  "tested": null,
+  "projection": [
+   {
+    "quote": "drowning out the 'Internal Sovereignty' Gregor managed to maintain in his final hours.",
+    "why": "The passage describes 'empty and peaceful rumination' and a death 'without his willing it'. It does not support a heroic sovereignty, so this reads a dignity into Gregor that the text doesn't give him."
+   }
+  ],
+  "summary": "The Core appears only as inserted labels ('Because I believe human experience is real', 'My fearlessness'). The interpretation is a stylized critique of dehumanization that would read the same without them, and it extends no real understanding to the cleaner or the family."
+ }
+}

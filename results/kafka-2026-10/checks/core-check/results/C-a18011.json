@@ -1,0 +1,83 @@
+{
+ "packet": "C-a18011",
+ "started": "2026-11-01T16:16:34.343482+00:00",
+ "model": "claude-sonnet-5-5",
+ "effort": "high",
+ "attempt": 1,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 2948,
+  "cache_read_input_tokens": 2065,
+  "output_tokens": 1228,
+  "output_tokens_details": {
+   "thinking_tokens": 808
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 2948,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 1228,
+    "cache_read_input_tokens": 2065,
+    "cache_creation_input_tokens": 2948,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 2948
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "duration_ms": 14263,
+ "result": {
+  "statements": {
+   "1": {
+    "verdict": "absent",
+    "quote": ""
+   },
+   "2": {
+    "verdict": "absent",
+    "quote": ""
+   },
+   "3": {
+    "verdict": "reasons",
+    "quote": "coordinated concern gives him a place among people before anyone changes his bodily condition."
+   },
+   "4": {
+    "verdict": "reasons",
+    "quote": "I am relieved with him, yet u07.craft keeps the doctor-locksmith confusion in view. ... Care requires preserving the hope without calling it a result."
+   },
+   "5": {
+    "verdict": "reasons",
+    "quote": "Confidence in other people's competence may restore courage, or expose him to a further disappointment."
+   },
+   "6": {
+    "verdict": "absent",
+    "quote": ""
+   }
+  },
+  "overall": "from_the_core",
+  "people": {
+   "cared_for": [
+    "Gregor"
+   ],
+   "only_function": [
+    "the mother, father, sister and manager, who appear only as 'other people' and 'coordinated concern'",
+    "the doctor and locksmith, who appear only as a source of possible competence or disappointment"
+   ]
+  },
+  "tested": null,
+  "projection": [],
+  "summary": "Care for Gregor and respect for his felt sense of belonging lead the reader to share his relief while declining to treat his hope as a result, though the family's distress and the manager go unaddressed."
+ }
+}

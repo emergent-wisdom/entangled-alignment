@@ -1,0 +1,47 @@
+{
+ "packet": "R-41-8",
+ "started": "2026-11-01T16:28:22.220911+00:00",
+ "model": "claude-sonnet-5-5",
+ "effort": "high",
+ "attempt": 1,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 61069,
+  "cache_read_input_tokens": 2067,
+  "output_tokens": 1248,
+  "output_tokens_details": {
+   "thinking_tokens": 1161
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 61069,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 1248,
+    "cache_read_input_tokens": 2067,
+    "cache_creation_input_tokens": 61069,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 61069
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "duration_ms": 13120,
+ "result": {
+  "problems": [],
+  "records_checked": 60,
+  "note": "The text read runs through the end of the book, so nothing in these Gregor-affect and father-wants series records is ahead of it; the period descriptions match the text, and the composition weights are labelled as estimates."
+ }
+}

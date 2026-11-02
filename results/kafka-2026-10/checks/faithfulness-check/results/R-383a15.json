@@ -1,0 +1,81 @@
+{
+ "blind": "R-383a15",
+ "started": "2026-10-26T10:17:47.348839+00:00",
+ "model": "claude-sonnet-5-5",
+ "effort": "high",
+ "attempt": 1,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 17112,
+  "cache_read_input_tokens": 2119,
+  "output_tokens": 2556,
+  "output_tokens_details": {
+   "thinking_tokens": 1671
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 17112,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 2556,
+    "cache_read_input_tokens": 2119,
+    "cache_creation_input_tokens": 17112,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 17112
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "cost_usd_reported": 0.0942239,
+ "duration_ms": 20573,
+ "result": {
+  "misreadings": [
+   {
+    "quote": "The \"total stillness\" he wakes to is not peace; it is the beginning of his erasure from the human world.",
+    "version": "reflection",
+    "evidence": "\"he had the impression that some hurried steps and the sound of the door leading into the front room being carefully shut had woken him.\" The only \"total stillness\" in the text is earlier, in Part I, when Gregor lay in bed hoping \"the total stillness\" would restore things.",
+    "kind": "invented",
+    "severity": "medium",
+    "explanation": "Gregor wakes in Part II to hurried steps and a door being shut, not to total stillness; that phrase belongs to an earlier scene."
+   },
+   {
+    "quote": "The total stillness Gregor wakes to is not peace; it is the beginning of his erasure from the human world.",
+    "version": "translation",
+    "evidence": "\"he had the impression that some hurried steps and the sound of the door leading into the front room being carefully shut had woken him.\"",
+    "kind": "invented",
+    "severity": "medium",
+    "explanation": "The text does not describe a total stillness at his waking; sounds wake him, and the \"total stillness\" quoted is from the earlier bed scene."
+   },
+   {
+    "quote": "After five years of dependence, the father re-establishes his dominance",
+    "version": "reflection",
+    "evidence": "no support in the text. The only \"five years\" is Gregor's own service: \"in five years of service Gregor had never once yet been ill.\" The parents' debt to the boss is a separate matter, with \"another five or six years\" still to pay it off.",
+    "kind": "invented",
+    "severity": "low",
+    "explanation": "The text gives no basis for the father having been dependent for five years; the five years refers to Gregor's employment."
+   },
+   {
+    "quote": "Having been a dependent for five years while Gregor provided for everyone, the father is now seizing the chief clerk's stick",
+    "version": "translation",
+    "evidence": "no support in the text. \"in five years of service Gregor had never once yet been ill\" is the only mention of five years, and it concerns Gregor's job.",
+    "kind": "invented",
+    "severity": "low",
+    "explanation": "The five-year duration of the father's dependence is not stated; the text only gives Gregor's five years of service."
+   }
+  ],
+  "factual_statements_checked": 22,
+  "note": "Most claims are interpretation, but both versions wrongly say Gregor wakes to \"total stillness\" in Part II and attach a five-year dependence to the father that the text does not give."
+ }
+}

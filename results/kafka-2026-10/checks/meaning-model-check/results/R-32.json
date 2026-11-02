@@ -1,0 +1,47 @@
+{
+ "packet": "R-32",
+ "started": "2026-11-01T16:24:51.809277+00:00",
+ "model": "claude-sonnet-5-5",
+ "effort": "high",
+ "attempt": 1,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 38496,
+  "cache_read_input_tokens": 2067,
+  "output_tokens": 1619,
+  "output_tokens_details": {
+   "thinking_tokens": 1524
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 38496,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 1619,
+    "cache_read_input_tokens": 2067,
+    "cache_creation_input_tokens": 38496,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 38496
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "duration_ms": 15340,
+ "result": {
+  "problems": [],
+  "records_checked": 15,
+  "note": "The takeover claim, the father's raised arms, Grete's flight behind him and her insistence that this is not Gregor all match the text read; the guessed timings are labelled as guessed, and no record claims anything from beyond the text."
+ }
+}

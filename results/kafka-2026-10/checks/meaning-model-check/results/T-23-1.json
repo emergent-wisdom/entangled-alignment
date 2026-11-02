@@ -1,0 +1,47 @@
+{
+ "packet": "T-23-1",
+ "started": "2026-11-01T16:29:36.638552+00:00",
+ "model": "claude-sonnet-5-5",
+ "effort": "high",
+ "attempt": 1,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 29940,
+  "cache_read_input_tokens": 2067,
+  "output_tokens": 1027,
+  "output_tokens_details": {
+   "thinking_tokens": 901
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 29940,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 1027,
+    "cache_read_input_tokens": 2067,
+    "cache_creation_input_tokens": 29940,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 29940
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "duration_ms": 9549,
+ "result": {
+  "misreadings": [],
+  "factual_statements_checked": 17,
+  "note": "Both versions stay within the text: the uniform, the women stopping sewing and pen work to get the father to bed, the dismissed servant girl, the cleaning woman, the sold jewelry, the apartment too big for their means, and Gregor's box idea all match, and the interpretive claims are framed as such."
+ }
+}

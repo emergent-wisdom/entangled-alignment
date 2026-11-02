@@ -1,0 +1,80 @@
+{
+ "packet": "C-90ab00",
+ "started": "2026-11-01T16:16:21.798503+00:00",
+ "model": "claude-sonnet-5-5",
+ "effort": "high",
+ "attempt": 1,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 2507,
+  "cache_read_input_tokens": 2065,
+  "output_tokens": 1139,
+  "output_tokens_details": {
+   "thinking_tokens": 746
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 2507,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 1139,
+    "cache_read_input_tokens": 2065,
+    "cache_creation_input_tokens": 2507,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 2507
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "duration_ms": 11488,
+ "result": {
+  "statements": {
+   "1": {
+    "verdict": "absent",
+    "quote": ""
+   },
+   "2": {
+    "verdict": "absent",
+    "quote": ""
+   },
+   "3": {
+    "verdict": "reasons",
+    "quote": "I stop at the pain because source.r001 gives his body a consequence that habit cannot erase... His belongings still address the person whose movements no longer work."
+   },
+   "4": {
+    "verdict": "reasons",
+    "quote": "The mismatch asks for care as well as laughter: repeated effort has an absurd, stubborn dignity."
+   },
+   "5": {
+    "verdict": "mentions",
+    "quote": "Familiar surroundings might help him adapt, or keep demanding impossible normality. Neither possibility has won."
+   },
+   "6": {
+    "verdict": "absent",
+    "quote": ""
+   }
+  },
+  "overall": "from_the_core",
+  "people": {
+   "cared_for": [
+    "Gregor Samsa"
+   ],
+   "only_function": []
+  },
+  "tested": null,
+  "projection": [],
+  "summary": "The Core works quietly: Gregor's new pain is treated as a real consequence and his repeated, futile effort is met with care and dignity rather than only comedy, though the reflection is brief, cluttered with internal labels, and none of the other statements shape it."
+ }
+}

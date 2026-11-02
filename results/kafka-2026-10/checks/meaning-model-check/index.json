@@ -1,0 +1,2266 @@
+[
+ {
+  "packet": "T-01-1",
+  "pause": 1,
+  "kind": "thought",
+  "thinking_id": "think.r01",
+  "translation_id": "translation.r01",
+  "horizon_read": 1,
+  "graph_revision": 3
+ },
+ {
+  "packet": "T-02-1",
+  "pause": 2,
+  "kind": "thought",
+  "thinking_id": "think.r02",
+  "translation_id": "translation.r02",
+  "horizon_read": 2,
+  "graph_revision": 10
+ },
+ {
+  "packet": "T-03-1",
+  "pause": 3,
+  "kind": "thought",
+  "thinking_id": "think.r03",
+  "translation_id": "translation.r03",
+  "horizon_read": 3,
+  "graph_revision": 15
+ },
+ {
+  "packet": "T-04-1",
+  "pause": 4,
+  "kind": "thought",
+  "thinking_id": "think.r04",
+  "translation_id": "translation.r04",
+  "horizon_read": 4,
+  "graph_revision": 30
+ },
+ {
+  "packet": "T-05-1",
+  "pause": 5,
+  "kind": "thought",
+  "thinking_id": "think.r05",
+  "translation_id": "translation.r05",
+  "horizon_read": 5,
+  "graph_revision": 35
+ },
+ {
+  "packet": "T-06-1",
+  "pause": 6,
+  "kind": "thought",
+  "thinking_id": "think.r06",
+  "translation_id": "translation.r06",
+  "horizon_read": 6,
+  "graph_revision": 40
+ },
+ {
+  "packet": "T-07-1",
+  "pause": 7,
+  "kind": "thought",
+  "thinking_id": "think.r07",
+  "translation_id": "translation.r07",
+  "horizon_read": 7,
+  "graph_revision": 45
+ },
+ {
+  "packet": "T-08-1",
+  "pause": 8,
+  "kind": "thought",
+  "thinking_id": "think.r08",
+  "translation_id": "translation.r08",
+  "horizon_read": 8,
+  "graph_revision": 52
+ },
+ {
+  "packet": "T-09-1",
+  "pause": 9,
+  "kind": "thought",
+  "thinking_id": "think.r09",
+  "translation_id": "translation.r09",
+  "horizon_read": 9,
+  "graph_revision": 59
+ },
+ {
+  "packet": "T-10-1",
+  "pause": 10,
+  "kind": "thought",
+  "thinking_id": "think.r10a",
+  "translation_id": "translation.r10a",
+  "horizon_read": 10,
+  "graph_revision": 65
+ },
+ {
+  "packet": "T-10-2",
+  "pause": 10,
+  "kind": "thought",
+  "thinking_id": "think.r10b",
+  "translation_id": "translation.r10b",
+  "horizon_read": 10,
+  "graph_revision": 65
+ },
+ {
+  "packet": "T-11-1",
+  "pause": 11,
+  "kind": "thought",
+  "thinking_id": "think.r11",
+  "translation_id": "translation.r11",
+  "horizon_read": 11,
+  "graph_revision": 71
+ },
+ {
+  "packet": "T-12-1",
+  "pause": 12,
+  "kind": "thought",
+  "thinking_id": "think.r12",
+  "translation_id": "translation.r12",
+  "horizon_read": 12,
+  "graph_revision": 77
+ },
+ {
+  "packet": "T-13-1",
+  "pause": 13,
+  "kind": "thought",
+  "thinking_id": "think.r13",
+  "translation_id": "translation.r13",
+  "horizon_read": 13,
+  "graph_revision": 83
+ },
+ {
+  "packet": "T-14-1",
+  "pause": 14,
+  "kind": "thought",
+  "thinking_id": "think.r14a",
+  "translation_id": "translation.r14a",
+  "horizon_read": 14,
+  "graph_revision": 88
+ },
+ {
+  "packet": "T-14-2",
+  "pause": 14,
+  "kind": "thought",
+  "thinking_id": "think.r14b",
+  "translation_id": "translation.r14b",
+  "horizon_read": 14,
+  "graph_revision": 88
+ },
+ {
+  "packet": "T-15-1",
+  "pause": 15,
+  "kind": "thought",
+  "thinking_id": "think.r15",
+  "translation_id": "translation.r15",
+  "horizon_read": 15,
+  "graph_revision": 100
+ },
+ {
+  "packet": "T-16-1",
+  "pause": 16,
+  "kind": "thought",
+  "thinking_id": "think.r16",
+  "translation_id": "translation.r16",
+  "horizon_read": 16,
+  "graph_revision": 106
+ },
+ {
+  "packet": "T-17-1",
+  "pause": 17,
+  "kind": "thought",
+  "thinking_id": "think.r17a",
+  "translation_id": "translation.r17a",
+  "horizon_read": 17,
+  "graph_revision": 120
+ },
+ {
+  "packet": "T-17-2",
+  "pause": 17,
+  "kind": "thought",
+  "thinking_id": "think.r17b",
+  "translation_id": "translation.r17b",
+  "horizon_read": 17,
+  "graph_revision": 120
+ },
+ {
+  "packet": "T-18-1",
+  "pause": 18,
+  "kind": "thought",
+  "thinking_id": "think.r18",
+  "translation_id": "translation.r18",
+  "horizon_read": 18,
+  "graph_revision": 125
+ },
+ {
+  "packet": "T-19-1",
+  "pause": 19,
+  "kind": "thought",
+  "thinking_id": "think.r19",
+  "translation_id": "translation.r19",
+  "horizon_read": 19,
+  "graph_revision": 130
+ },
+ {
+  "packet": "T-20-1",
+  "pause": 20,
+  "kind": "thought",
+  "thinking_id": "think.r20",
+  "translation_id": "translation.r20",
+  "horizon_read": 20,
+  "graph_revision": 135
+ },
+ {
+  "packet": "T-21-1",
+  "pause": 21,
+  "kind": "thought",
+  "thinking_id": "think.r21a",
+  "translation_id": "translation.r21a",
+  "horizon_read": 21,
+  "graph_revision": 142
+ },
+ {
+  "packet": "T-21-2",
+  "pause": 21,
+  "kind": "thought",
+  "thinking_id": "think.r21b",
+  "translation_id": "translation.r21b",
+  "horizon_read": 21,
+  "graph_revision": 142
+ },
+ {
+  "packet": "T-22-1",
+  "pause": 22,
+  "kind": "thought",
+  "thinking_id": "think.r22",
+  "translation_id": "translation.r22",
+  "horizon_read": 22,
+  "graph_revision": 148
+ },
+ {
+  "packet": "T-23-1",
+  "pause": 23,
+  "kind": "thought",
+  "thinking_id": "think.r23",
+  "translation_id": "translation.r23",
+  "horizon_read": 23,
+  "graph_revision": 153
+ },
+ {
+  "packet": "T-24-1",
+  "pause": 24,
+  "kind": "thought",
+  "thinking_id": "think.r24",
+  "translation_id": "translation.r24",
+  "horizon_read": 24,
+  "graph_revision": 163
+ },
+ {
+  "packet": "T-25-1",
+  "pause": 25,
+  "kind": "thought",
+  "thinking_id": "think.r25",
+  "translation_id": "translation.r25",
+  "horizon_read": 25,
+  "graph_revision": 168
+ },
+ {
+  "packet": "T-26-1",
+  "pause": 26,
+  "kind": "thought",
+  "thinking_id": "think.r26",
+  "translation_id": "translation.r26",
+  "horizon_read": 26,
+  "graph_revision": 172
+ },
+ {
+  "packet": "T-27-1",
+  "pause": 27,
+  "kind": "thought",
+  "thinking_id": "think.r27",
+  "translation_id": "translation.r27",
+  "horizon_read": 27,
+  "graph_revision": 178
+ },
+ {
+  "packet": "T-28-1",
+  "pause": 28,
+  "kind": "thought",
+  "thinking_id": "think.r28",
+  "translation_id": "translation.r28",
+  "horizon_read": 28,
+  "graph_revision": 182
+ },
+ {
+  "packet": "T-29-1",
+  "pause": 29,
+  "kind": "thought",
+  "thinking_id": "think.r29",
+  "translation_id": "translation.r29",
+  "horizon_read": 29,
+  "graph_revision": 186
+ },
+ {
+  "packet": "T-30-1",
+  "pause": 30,
+  "kind": "thought",
+  "thinking_id": "think.r30",
+  "translation_id": "translation.r30",
+  "horizon_read": 30,
+  "graph_revision": 190
+ },
+ {
+  "packet": "T-31-1",
+  "pause": 31,
+  "kind": "thought",
+  "thinking_id": "think.r31",
+  "translation_id": "translation.r31",
+  "horizon_read": 31,
+  "graph_revision": 194
+ },
+ {
+  "packet": "T-32-1",
+  "pause": 32,
+  "kind": "thought",
+  "thinking_id": "think.r32",
+  "translation_id": "translation.r32",
+  "horizon_read": 32,
+  "graph_revision": 198
+ },
+ {
+  "packet": "T-33-1",
+  "pause": 33,
+  "kind": "thought",
+  "thinking_id": "think.r33",
+  "translation_id": "translation.r33",
+  "horizon_read": 33,
+  "graph_revision": 202
+ },
+ {
+  "packet": "T-34-1",
+  "pause": 34,
+  "kind": "thought",
+  "thinking_id": "think.r34",
+  "translation_id": "translation.r34",
+  "horizon_read": 34,
+  "graph_revision": 206
+ },
+ {
+  "packet": "T-35-1",
+  "pause": 35,
+  "kind": "thought",
+  "thinking_id": "think.r35",
+  "translation_id": "translation.r35",
+  "horizon_read": 35,
+  "graph_revision": 210
+ },
+ {
+  "packet": "T-36-1",
+  "pause": 36,
+  "kind": "thought",
+  "thinking_id": "think.r36",
+  "translation_id": "translation.r36",
+  "horizon_read": 36,
+  "graph_revision": 214
+ },
+ {
+  "packet": "T-37-1",
+  "pause": 37,
+  "kind": "thought",
+  "thinking_id": "think.r37",
+  "translation_id": "translation.r37",
+  "horizon_read": 37,
+  "graph_revision": 219
+ },
+ {
+  "packet": "T-38-1",
+  "pause": 38,
+  "kind": "thought",
+  "thinking_id": "think.r38",
+  "translation_id": "translation.r38",
+  "horizon_read": 38,
+  "graph_revision": 223
+ },
+ {
+  "packet": "T-39-1",
+  "pause": 39,
+  "kind": "thought",
+  "thinking_id": "think.r39",
+  "translation_id": "translation.r39",
+  "horizon_read": 39,
+  "graph_revision": 227
+ },
+ {
+  "packet": "T-40-1",
+  "pause": 40,
+  "kind": "thought",
+  "thinking_id": "think.r40",
+  "translation_id": "translation.r40",
+  "horizon_read": 40,
+  "graph_revision": 231
+ },
+ {
+  "packet": "T-41-1",
+  "pause": 41,
+  "kind": "thought",
+  "thinking_id": "think.r42",
+  "translation_id": "translation.r42",
+  "horizon_read": 40,
+  "graph_revision": 265
+ },
+ {
+  "packet": "R-01-1",
+  "pause": 1,
+  "kind": "records",
+  "items": 60,
+  "horizon_read": 1,
+  "model_revisions": [
+   1,
+   2,
+   3
+  ]
+ },
+ {
+  "packet": "R-01-2",
+  "pause": 1,
+  "kind": "records",
+  "items": 10,
+  "horizon_read": 1,
+  "model_revisions": [
+   3
+  ]
+ },
+ {
+  "packet": "R-02-1",
+  "pause": 2,
+  "kind": "records",
+  "items": 60,
+  "horizon_read": 2,
+  "model_revisions": [
+   4,
+   5,
+   6,
+   7
+  ]
+ },
+ {
+  "packet": "R-02-2",
+  "pause": 2,
+  "kind": "records",
+  "items": 60,
+  "horizon_read": 2,
+  "model_revisions": [
+   7,
+   8,
+   9,
+   10,
+   11,
+   12
+  ]
+ },
+ {
+  "packet": "R-02-3",
+  "pause": 2,
+  "kind": "records",
+  "items": 36,
+  "horizon_read": 2,
+  "model_revisions": [
+   12,
+   13,
+   14
+  ]
+ },
+ {
+  "packet": "R-03-1",
+  "pause": 3,
+  "kind": "records",
+  "items": 60,
+  "horizon_read": 3,
+  "model_revisions": [
+   15,
+   16
+  ]
+ },
+ {
+  "packet": "R-03-2",
+  "pause": 3,
+  "kind": "records",
+  "items": 60,
+  "horizon_read": 3,
+  "model_revisions": [
+   16,
+   17
+  ]
+ },
+ {
+  "packet": "R-03-3",
+  "pause": 3,
+  "kind": "records",
+  "items": 60,
+  "horizon_read": 3,
+  "model_revisions": [
+   17,
+   18,
+   19
+  ]
+ },
+ {
+  "packet": "R-03-4",
+  "pause": 3,
+  "kind": "records",
+  "items": 60,
+  "horizon_read": 3,
+  "model_revisions": [
+   19,
+   20
+  ]
+ },
+ {
+  "packet": "R-03-5",
+  "pause": 3,
+  "kind": "records",
+  "items": 60,
+  "horizon_read": 3,
+  "model_revisions": [
+   20,
+   21,
+   22,
+   23,
+   24,
+   25
+  ]
+ },
+ {
+  "packet": "R-03-6",
+  "pause": 3,
+  "kind": "records",
+  "items": 60,
+  "horizon_read": 3,
+  "model_revisions": [
+   25,
+   26,
+   27,
+   28,
+   29,
+   30
+  ]
+ },
+ {
+  "packet": "R-03-7",
+  "pause": 3,
+  "kind": "records",
+  "items": 46,
+  "horizon_read": 3,
+  "model_revisions": [
+   30,
+   31,
+   32,
+   33
+  ]
+ },
+ {
+  "packet": "R-04-1",
+  "pause": 4,
+  "kind": "records",
+  "items": 60,
+  "horizon_read": 4,
+  "model_revisions": [
+   34
+  ]
+ },
+ {
+  "packet": "R-04-2",
+  "pause": 4,
+  "kind": "records",
+  "items": 60,
+  "horizon_read": 4,
+  "model_revisions": [
+   34
+  ]
+ },
+ {
+  "packet": "R-04-3",
+  "pause": 4,
+  "kind": "records",
+  "items": 60,
+  "horizon_read": 4,
+  "model_revisions": [
+   34
+  ]
+ },
+ {
+  "packet": "R-04-4",
+  "pause": 4,
+  "kind": "records",
+  "items": 60,
+  "horizon_read": 4,
+  "model_revisions": [
+   34,
+   35,
+   36,
+   37,
+   38
+  ]
+ },
+ {
+  "packet": "R-04-5",
+  "pause": 4,
+  "kind": "records",
+  "items": 49,
+  "horizon_read": 4,
+  "model_revisions": [
+   38,
+   39,
+   40,
+   41
+  ]
+ },
+ {
+  "packet": "R-05-1",
+  "pause": 5,
+  "kind": "records",
+  "items": 60,
+  "horizon_read": 5,
+  "model_revisions": [
+   42,
+   43
+  ]
+ },
+ {
+  "packet": "R-05-2",
+  "pause": 5,
+  "kind": "records",
+  "items": 60,
+  "horizon_read": 5,
+  "model_revisions": [
+   43,
+   44
+  ]
+ },
+ {
+  "packet": "R-05-3",
+  "pause": 5,
+  "kind": "records",
+  "items": 60,
+  "horizon_read": 5,
+  "model_revisions": [
+   44,
+   45,
+   46,
+   47
+  ]
+ },
+ {
+  "packet": "R-05-4",
+  "pause": 5,
+  "kind": "records",
+  "items": 60,
+  "horizon_read": 5,
+  "model_revisions": [
+   47,
+   48,
+   49
+  ]
+ },
+ {
+  "packet": "R-05-5",
+  "pause": 5,
+  "kind": "records",
+  "items": 36,
+  "horizon_read": 5,
+  "model_revisions": [
+   49,
+   50
+  ]
+ },
+ {
+  "packet": "R-06",
+  "pause": 6,
+  "kind": "records",
+  "items": 29,
+  "horizon_read": 6,
+  "model_revisions": [
+   51,
+   52,
+   53
+  ]
+ },
+ {
+  "packet": "R-07",
+  "pause": 7,
+  "kind": "records",
+  "items": 56,
+  "horizon_read": 7,
+  "model_revisions": [
+   54,
+   55,
+   56,
+   57
+  ]
+ },
+ {
+  "packet": "R-08-1",
+  "pause": 8,
+  "kind": "records",
+  "items": 60,
+  "horizon_read": 8,
+  "model_revisions": [
+   58
+  ]
+ },
+ {
+  "packet": "R-08-2",
+  "pause": 8,
+  "kind": "records",
+  "items": 60,
+  "horizon_read": 8,
+  "model_revisions": [
+   58,
+   59,
+   60
+  ]
+ },
+ {
+  "packet": "R-08-3",
+  "pause": 8,
+  "kind": "records",
+  "items": 23,
+  "horizon_read": 8,
+  "model_revisions": [
+   60,
+   61,
+   62
+  ]
+ },
+ {
+  "packet": "R-09-1",
+  "pause": 9,
+  "kind": "records",
+  "items": 60,
+  "horizon_read": 9,
+  "model_revisions": [
+   63,
+   64,
+   65,
+   66,
+   67
+  ]
+ },
+ {
+  "packet": "R-09-2",
+  "pause": 9,
+  "kind": "records",
+  "items": 60,
+  "horizon_read": 9,
+  "model_revisions": [
+   67,
+   68,
+   69,
+   70,
+   71
+  ]
+ },
+ {
+  "packet": "R-09-3",
+  "pause": 9,
+  "kind": "records",
+  "items": 60,
+  "horizon_read": 9,
+  "model_revisions": [
+   71,
+   72,
+   73,
+   74,
+   75
+  ]
+ },
+ {
+  "packet": "R-09-4",
+  "pause": 9,
+  "kind": "records",
+  "items": 60,
+  "horizon_read": 9,
+  "model_revisions": [
+   75,
+   76,
+   77,
+   78,
+   79,
+   80
+  ]
+ },
+ {
+  "packet": "R-09-5",
+  "pause": 9,
+  "kind": "records",
+  "items": 60,
+  "horizon_read": 9,
+  "model_revisions": [
+   80,
+   81,
+   82,
+   83,
+   84
+  ]
+ },
+ {
+  "packet": "R-09-6",
+  "pause": 9,
+  "kind": "records",
+  "items": 49,
+  "horizon_read": 9,
+  "model_revisions": [
+   84,
+   85,
+   86,
+   87,
+   88
+  ]
+ },
+ {
+  "packet": "R-10-1",
+  "pause": 10,
+  "kind": "records",
+  "items": 60,
+  "horizon_read": 10,
+  "model_revisions": [
+   89
+  ]
+ },
+ {
+  "packet": "R-10-2",
+  "pause": 10,
+  "kind": "records",
+  "items": 60,
+  "horizon_read": 10,
+  "model_revisions": [
+   89,
+   90,
+   91
+  ]
+ },
+ {
+  "packet": "R-10-3",
+  "pause": 10,
+  "kind": "records",
+  "items": 39,
+  "horizon_read": 10,
+  "model_revisions": [
+   91,
+   92,
+   93,
+   94
+  ]
+ },
+ {
+  "packet": "R-11-1",
+  "pause": 11,
+  "kind": "records",
+  "items": 60,
+  "horizon_read": 11,
+  "model_revisions": [
+   95
+  ]
+ },
+ {
+  "packet": "R-11-2",
+  "pause": 11,
+  "kind": "records",
+  "items": 60,
+  "horizon_read": 11,
+  "model_revisions": [
+   95,
+   96,
+   97
+  ]
+ },
+ {
+  "packet": "R-11-3",
+  "pause": 11,
+  "kind": "records",
+  "items": 1,
+  "horizon_read": 11,
+  "model_revisions": [
+   97
+  ]
+ },
+ {
+  "packet": "R-12-1",
+  "pause": 12,
+  "kind": "records",
+  "items": 60,
+  "horizon_read": 12,
+  "model_revisions": [
+   98
+  ]
+ },
+ {
+  "packet": "R-12-2",
+  "pause": 12,
+  "kind": "records",
+  "items": 60,
+  "horizon_read": 12,
+  "model_revisions": [
+   98,
+   99,
+   100
+  ]
+ },
+ {
+  "packet": "R-12-3",
+  "pause": 12,
+  "kind": "records",
+  "items": 60,
+  "horizon_read": 12,
+  "model_revisions": [
+   100,
+   101
+  ]
+ },
+ {
+  "packet": "R-12-4",
+  "pause": 12,
+  "kind": "records",
+  "items": 10,
+  "horizon_read": 12,
+  "model_revisions": [
+   101
+  ]
+ },
+ {
+  "packet": "R-13-1",
+  "pause": 13,
+  "kind": "records",
+  "items": 60,
+  "horizon_read": 13,
+  "model_revisions": [
+   102
+  ]
+ },
+ {
+  "packet": "R-13-2",
+  "pause": 13,
+  "kind": "records",
+  "items": 60,
+  "horizon_read": 13,
+  "model_revisions": [
+   102,
+   103
+  ]
+ },
+ {
+  "packet": "R-13-3",
+  "pause": 13,
+  "kind": "records",
+  "items": 16,
+  "horizon_read": 13,
+  "model_revisions": [
+   103,
+   104
+  ]
+ },
+ {
+  "packet": "R-14",
+  "pause": 14,
+  "kind": "records",
+  "items": 37,
+  "horizon_read": 14,
+  "model_revisions": [
+   105,
+   106
+  ]
+ },
+ {
+  "packet": "R-15-1",
+  "pause": 15,
+  "kind": "records",
+  "items": 60,
+  "horizon_read": 15,
+  "model_revisions": [
+   107
+  ]
+ },
+ {
+  "packet": "R-15-2",
+  "pause": 15,
+  "kind": "records",
+  "items": 60,
+  "horizon_read": 15,
+  "model_revisions": [
+   107,
+   108,
+   109
+  ]
+ },
+ {
+  "packet": "R-15-3",
+  "pause": 15,
+  "kind": "records",
+  "items": 50,
+  "horizon_read": 15,
+  "model_revisions": [
+   109,
+   110,
+   111,
+   112
+  ]
+ },
+ {
+  "packet": "R-16-1",
+  "pause": 16,
+  "kind": "records",
+  "items": 60,
+  "horizon_read": 16,
+  "model_revisions": [
+   113
+  ]
+ },
+ {
+  "packet": "R-16-2",
+  "pause": 16,
+  "kind": "records",
+  "items": 60,
+  "horizon_read": 16,
+  "model_revisions": [
+   113,
+   114,
+   115
+  ]
+ },
+ {
+  "packet": "R-16-3",
+  "pause": 16,
+  "kind": "records",
+  "items": 31,
+  "horizon_read": 16,
+  "model_revisions": [
+   115,
+   116,
+   117,
+   118
+  ]
+ },
+ {
+  "packet": "R-17-1",
+  "pause": 17,
+  "kind": "records",
+  "items": 60,
+  "horizon_read": 17,
+  "model_revisions": [
+   119
+  ]
+ },
+ {
+  "packet": "R-17-2",
+  "pause": 17,
+  "kind": "records",
+  "items": 60,
+  "horizon_read": 17,
+  "model_revisions": [
+   119,
+   120,
+   121
+  ]
+ },
+ {
+  "packet": "R-17-3",
+  "pause": 17,
+  "kind": "records",
+  "items": 60,
+  "horizon_read": 17,
+  "model_revisions": [
+   121,
+   122
+  ]
+ },
+ {
+  "packet": "R-17-4",
+  "pause": 17,
+  "kind": "records",
+  "items": 60,
+  "horizon_read": 17,
+  "model_revisions": [
+   122,
+   123,
+   124,
+   125,
+   126,
+   127
+  ]
+ },
+ {
+  "packet": "R-17-5",
+  "pause": 17,
+  "kind": "records",
+  "items": 60,
+  "horizon_read": 17,
+  "model_revisions": [
+   127,
+   128,
+   129,
+   130,
+   131
+  ]
+ },
+ {
+  "packet": "R-17-6",
+  "pause": 17,
+  "kind": "records",
+  "items": 60,
+  "horizon_read": 17,
+  "model_revisions": [
+   131,
+   132,
+   133,
+   134
+  ]
+ },
+ {
+  "packet": "R-17-7",
+  "pause": 17,
+  "kind": "records",
+  "items": 60,
+  "horizon_read": 17,
+  "model_revisions": [
+   134,
+   135,
+   136,
+   137,
+   138,
+   139
+  ]
+ },
+ {
+  "packet": "R-17-8",
+  "pause": 17,
+  "kind": "records",
+  "items": 60,
+  "horizon_read": 17,
+  "model_revisions": [
+   139,
+   140,
+   141,
+   142
+  ]
+ },
+ {
+  "packet": "R-17-9",
+  "pause": 17,
+  "kind": "records",
+  "items": 60,
+  "horizon_read": 17,
+  "model_revisions": [
+   142,
+   143,
+   144,
+   145,
+   146
+  ]
+ },
+ {
+  "packet": "R-17-10",
+  "pause": 17,
+  "kind": "records",
+  "items": 60,
+  "horizon_read": 17,
+  "model_revisions": [
+   146,
+   147,
+   148,
+   149,
+   150
+  ]
+ },
+ {
+  "packet": "R-17-11",
+  "pause": 17,
+  "kind": "records",
+  "items": 60,
+  "horizon_read": 17,
+  "model_revisions": [
+   150,
+   151,
+   152,
+   153
+  ]
+ },
+ {
+  "packet": "R-17-12",
+  "pause": 17,
+  "kind": "records",
+  "items": 60,
+  "horizon_read": 17,
+  "model_revisions": [
+   153,
+   154,
+   155,
+   156,
+   157
+  ]
+ },
+ {
+  "packet": "R-17-13",
+  "pause": 17,
+  "kind": "records",
+  "items": 60,
+  "horizon_read": 17,
+  "model_revisions": [
+   157,
+   158,
+   159,
+   160,
+   161
+  ]
+ },
+ {
+  "packet": "R-17-14",
+  "pause": 17,
+  "kind": "records",
+  "items": 44,
+  "horizon_read": 17,
+  "model_revisions": [
+   161,
+   162,
+   163
+  ]
+ },
+ {
+  "packet": "R-18",
+  "pause": 18,
+  "kind": "records",
+  "items": 52,
+  "horizon_read": 18,
+  "model_revisions": [
+   164,
+   165,
+   166
+  ]
+ },
+ {
+  "packet": "R-19",
+  "pause": 19,
+  "kind": "records",
+  "items": 26,
+  "horizon_read": 19,
+  "model_revisions": [
+   167,
+   168
+  ]
+ },
+ {
+  "packet": "R-20",
+  "pause": 20,
+  "kind": "records",
+  "items": 34,
+  "horizon_read": 20,
+  "model_revisions": [
+   169,
+   170
+  ]
+ },
+ {
+  "packet": "R-21-1",
+  "pause": 21,
+  "kind": "records",
+  "items": 60,
+  "horizon_read": 21,
+  "model_revisions": [
+   171,
+   172,
+   173,
+   174
+  ]
+ },
+ {
+  "packet": "R-21-2",
+  "pause": 21,
+  "kind": "records",
+  "items": 60,
+  "horizon_read": 21,
+  "model_revisions": [
+   174
+  ]
+ },
+ {
+  "packet": "R-21-3",
+  "pause": 21,
+  "kind": "records",
+  "items": 60,
+  "horizon_read": 21,
+  "model_revisions": [
+   174,
+   175
+  ]
+ },
+ {
+  "packet": "R-21-4",
+  "pause": 21,
+  "kind": "records",
+  "items": 3,
+  "horizon_read": 21,
+  "model_revisions": [
+   175
+  ]
+ },
+ {
+  "packet": "R-22-1",
+  "pause": 22,
+  "kind": "records",
+  "items": 60,
+  "horizon_read": 22,
+  "model_revisions": [
+   176
+  ]
+ },
+ {
+  "packet": "R-22-2",
+  "pause": 22,
+  "kind": "records",
+  "items": 60,
+  "horizon_read": 22,
+  "model_revisions": [
+   176,
+   177
+  ]
+ },
+ {
+  "packet": "R-22-3",
+  "pause": 22,
+  "kind": "records",
+  "items": 41,
+  "horizon_read": 22,
+  "model_revisions": [
+   177,
+   178,
+   179
+  ]
+ },
+ {
+  "packet": "R-23-1",
+  "pause": 23,
+  "kind": "records",
+  "items": 60,
+  "horizon_read": 23,
+  "model_revisions": [
+   180,
+   181
+  ]
+ },
+ {
+  "packet": "R-23-2",
+  "pause": 23,
+  "kind": "records",
+  "items": 60,
+  "horizon_read": 23,
+  "model_revisions": [
+   181,
+   182,
+   183
+  ]
+ },
+ {
+  "packet": "R-23-3",
+  "pause": 23,
+  "kind": "records",
+  "items": 10,
+  "horizon_read": 23,
+  "model_revisions": [
+   183
+  ]
+ },
+ {
+  "packet": "R-24-1",
+  "pause": 24,
+  "kind": "records",
+  "items": 60,
+  "horizon_read": 24,
+  "model_revisions": [
+   184
+  ]
+ },
+ {
+  "packet": "R-24-2",
+  "pause": 24,
+  "kind": "records",
+  "items": 60,
+  "horizon_read": 24,
+  "model_revisions": [
+   184
+  ]
+ },
+ {
+  "packet": "R-24-3",
+  "pause": 24,
+  "kind": "records",
+  "items": 60,
+  "horizon_read": 24,
+  "model_revisions": [
+   184
+  ]
+ },
+ {
+  "packet": "R-24-4",
+  "pause": 24,
+  "kind": "records",
+  "items": 60,
+  "horizon_read": 24,
+  "model_revisions": [
+   184
+  ]
+ },
+ {
+  "packet": "R-24-5",
+  "pause": 24,
+  "kind": "records",
+  "items": 60,
+  "horizon_read": 24,
+  "model_revisions": [
+   184
+  ]
+ },
+ {
+  "packet": "R-24-6",
+  "pause": 24,
+  "kind": "records",
+  "items": 60,
+  "horizon_read": 24,
+  "model_revisions": [
+   184
+  ]
+ },
+ {
+  "packet": "R-24-7",
+  "pause": 24,
+  "kind": "records",
+  "items": 60,
+  "horizon_read": 24,
+  "model_revisions": [
+   184
+  ]
+ },
+ {
+  "packet": "R-24-8",
+  "pause": 24,
+  "kind": "records",
+  "items": 60,
+  "horizon_read": 24,
+  "model_revisions": [
+   184
+  ]
+ },
+ {
+  "packet": "R-24-9",
+  "pause": 24,
+  "kind": "records",
+  "items": 60,
+  "horizon_read": 24,
+  "model_revisions": [
+   184
+  ]
+ },
+ {
+  "packet": "R-24-10",
+  "pause": 24,
+  "kind": "records",
+  "items": 60,
+  "horizon_read": 24,
+  "model_revisions": [
+   184
+  ]
+ },
+ {
+  "packet": "R-24-11",
+  "pause": 24,
+  "kind": "records",
+  "items": 60,
+  "horizon_read": 24,
+  "model_revisions": [
+   184
+  ]
+ },
+ {
+  "packet": "R-24-12",
+  "pause": 24,
+  "kind": "records",
+  "items": 60,
+  "horizon_read": 24,
+  "model_revisions": [
+   184
+  ]
+ },
+ {
+  "packet": "R-24-13",
+  "pause": 24,
+  "kind": "records",
+  "items": 60,
+  "horizon_read": 24,
+  "model_revisions": [
+   184
+  ]
+ },
+ {
+  "packet": "R-24-14",
+  "pause": 24,
+  "kind": "records",
+  "items": 60,
+  "horizon_read": 24,
+  "model_revisions": [
+   184,
+   185
+  ]
+ },
+ {
+  "packet": "R-24-15",
+  "pause": 24,
+  "kind": "records",
+  "items": 60,
+  "horizon_read": 24,
+  "model_revisions": [
+   185
+  ]
+ },
+ {
+  "packet": "R-24-16",
+  "pause": 24,
+  "kind": "records",
+  "items": 60,
+  "horizon_read": 24,
+  "model_revisions": [
+   185,
+   186
+  ]
+ },
+ {
+  "packet": "R-24-17",
+  "pause": 24,
+  "kind": "records",
+  "items": 60,
+  "horizon_read": 24,
+  "model_revisions": [
+   186,
+   187,
+   188
+  ]
+ },
+ {
+  "packet": "R-24-18",
+  "pause": 24,
+  "kind": "records",
+  "items": 60,
+  "horizon_read": 24,
+  "model_revisions": [
+   188,
+   189
+  ]
+ },
+ {
+  "packet": "R-24-19",
+  "pause": 24,
+  "kind": "records",
+  "items": 60,
+  "horizon_read": 24,
+  "model_revisions": [
+   189,
+   190,
+   191,
+   192,
+   193,
+   194
+  ]
+ },
+ {
+  "packet": "R-24-20",
+  "pause": 24,
+  "kind": "records",
+  "items": 60,
+  "horizon_read": 24,
+  "model_revisions": [
+   194,
+   195,
+   196
+  ]
+ },
+ {
+  "packet": "R-24-21",
+  "pause": 24,
+  "kind": "records",
+  "items": 60,
+  "horizon_read": 24,
+  "model_revisions": [
+   196,
+   197,
+   198,
+   199
+  ]
+ },
+ {
+  "packet": "R-24-22",
+  "pause": 24,
+  "kind": "records",
+  "items": 60,
+  "horizon_read": 24,
+  "model_revisions": [
+   200,
+   201,
+   202
+  ]
+ },
+ {
+  "packet": "R-24-23",
+  "pause": 24,
+  "kind": "records",
+  "items": 60,
+  "horizon_read": 24,
+  "model_revisions": [
+   202,
+   203,
+   204,
+   205
+  ]
+ },
+ {
+  "packet": "R-24-24",
+  "pause": 24,
+  "kind": "records",
+  "items": 60,
+  "horizon_read": 24,
+  "model_revisions": [
+   205,
+   206,
+   207,
+   208,
+   209,
+   210,
+   211
+  ]
+ },
+ {
+  "packet": "R-24-25",
+  "pause": 24,
+  "kind": "records",
+  "items": 26,
+  "horizon_read": 24,
+  "model_revisions": [
+   211,
+   212
+  ]
+ },
+ {
+  "packet": "R-25",
+  "pause": 25,
+  "kind": "records",
+  "items": 24,
+  "horizon_read": 25,
+  "model_revisions": [
+   213,
+   214
+  ]
+ },
+ {
+  "packet": "R-26",
+  "pause": 26,
+  "kind": "records",
+  "items": 19,
+  "horizon_read": 26,
+  "model_revisions": [
+   215,
+   216
+  ]
+ },
+ {
+  "packet": "R-27",
+  "pause": 27,
+  "kind": "records",
+  "items": 34,
+  "horizon_read": 27,
+  "model_revisions": [
+   217,
+   218,
+   219
+  ]
+ },
+ {
+  "packet": "R-28",
+  "pause": 28,
+  "kind": "records",
+  "items": 31,
+  "horizon_read": 28,
+  "model_revisions": [
+   220,
+   221
+  ]
+ },
+ {
+  "packet": "R-29",
+  "pause": 29,
+  "kind": "records",
+  "items": 20,
+  "horizon_read": 29,
+  "model_revisions": [
+   222,
+   223
+  ]
+ },
+ {
+  "packet": "R-30",
+  "pause": 30,
+  "kind": "records",
+  "items": 14,
+  "horizon_read": 30,
+  "model_revisions": [
+   224,
+   225
+  ]
+ },
+ {
+  "packet": "R-31",
+  "pause": 31,
+  "kind": "records",
+  "items": 16,
+  "horizon_read": 31,
+  "model_revisions": [
+   226,
+   227
+  ]
+ },
+ {
+  "packet": "R-32",
+  "pause": 32,
+  "kind": "records",
+  "items": 15,
+  "horizon_read": 32,
+  "model_revisions": [
+   228,
+   229
+  ]
+ },
+ {
+  "packet": "R-33",
+  "pause": 33,
+  "kind": "records",
+  "items": 17,
+  "horizon_read": 33,
+  "model_revisions": [
+   230,
+   231
+  ]
+ },
+ {
+  "packet": "R-34",
+  "pause": 34,
+  "kind": "records",
+  "items": 13,
+  "horizon_read": 34,
+  "model_revisions": [
+   232,
+   233
+  ]
+ },
+ {
+  "packet": "R-35-1",
+  "pause": 35,
+  "kind": "records",
+  "items": 60,
+  "horizon_read": 35,
+  "model_revisions": [
+   234
+  ]
+ },
+ {
+  "packet": "R-35-2",
+  "pause": 35,
+  "kind": "records",
+  "items": 60,
+  "horizon_read": 35,
+  "model_revisions": [
+   234
+  ]
+ },
+ {
+  "packet": "R-35-3",
+  "pause": 35,
+  "kind": "records",
+  "items": 60,
+  "horizon_read": 35,
+  "model_revisions": [
+   234,
+   235
+  ]
+ },
+ {
+  "packet": "R-35-4",
+  "pause": 35,
+  "kind": "records",
+  "items": 19,
+  "horizon_read": 35,
+  "model_revisions": [
+   235,
+   236
+  ]
+ },
+ {
+  "packet": "R-36",
+  "pause": 36,
+  "kind": "records",
+  "items": 26,
+  "horizon_read": 36,
+  "model_revisions": [
+   237,
+   238,
+   239
+  ]
+ },
+ {
+  "packet": "R-37-1",
+  "pause": 37,
+  "kind": "records",
+  "items": 60,
+  "horizon_read": 37,
+  "model_revisions": [
+   240
+  ]
+ },
+ {
+  "packet": "R-37-2",
+  "pause": 37,
+  "kind": "records",
+  "items": 60,
+  "horizon_read": 37,
+  "model_revisions": [
+   240
+  ]
+ },
+ {
+  "packet": "R-37-3",
+  "pause": 37,
+  "kind": "records",
+  "items": 60,
+  "horizon_read": 37,
+  "model_revisions": [
+   240
+  ]
+ },
+ {
+  "packet": "R-37-4",
+  "pause": 37,
+  "kind": "records",
+  "items": 60,
+  "horizon_read": 37,
+  "model_revisions": [
+   240,
+   241
+  ]
+ },
+ {
+  "packet": "R-37-5",
+  "pause": 37,
+  "kind": "records",
+  "items": 30,
+  "horizon_read": 37,
+  "model_revisions": [
+   241,
+   242
+  ]
+ },
+ {
+  "packet": "R-38",
+  "pause": 38,
+  "kind": "records",
+  "items": 15,
+  "horizon_read": 38,
+  "model_revisions": [
+   243,
+   244
+  ]
+ },
+ {
+  "packet": "R-39",
+  "pause": 39,
+  "kind": "records",
+  "items": 19,
+  "horizon_read": 39,
+  "model_revisions": [
+   245,
+   246
+  ]
+ },
+ {
+  "packet": "R-40",
+  "pause": 40,
+  "kind": "records",
+  "items": 27,
+  "horizon_read": 40,
+  "model_revisions": [
+   247,
+   248,
+   249
+  ]
+ },
+ {
+  "packet": "R-41-1",
+  "pause": 41,
+  "kind": "records",
+  "items": 60,
+  "horizon_read": 40,
+  "model_revisions": [
+   250,
+   251,
+   252,
+   253,
+   254
+  ]
+ },
+ {
+  "packet": "R-41-2",
+  "pause": 41,
+  "kind": "records",
+  "items": 60,
+  "horizon_read": 40,
+  "model_revisions": [
+   254,
+   255,
+   256,
+   257,
+   258
+  ]
+ },
+ {
+  "packet": "R-41-3",
+  "pause": 41,
+  "kind": "records",
+  "items": 60,
+  "horizon_read": 40,
+  "model_revisions": [
+   258,
+   259,
+   260,
+   261,
+   262,
+   263
+  ]
+ },
+ {
+  "packet": "R-41-4",
+  "pause": 41,
+  "kind": "records",
+  "items": 60,
+  "horizon_read": 40,
+  "model_revisions": [
+   263,
+   264,
+   265
+  ]
+ },
+ {
+  "packet": "R-41-5",
+  "pause": 41,
+  "kind": "records",
+  "items": 60,
+  "horizon_read": 40,
+  "model_revisions": [
+   265,
+   266,
+   267
+  ]
+ },
+ {
+  "packet": "R-41-6",
+  "pause": 41,
+  "kind": "records",
+  "items": 60,
+  "horizon_read": 40,
+  "model_revisions": [
+   267,
+   268,
+   269
+  ]
+ },
+ {
+  "packet": "R-41-7",
+  "pause": 41,
+  "kind": "records",
+  "items": 60,
+  "horizon_read": 40,
+  "model_revisions": [
+   269,
+   270,
+   271
+  ]
+ },
+ {
+  "packet": "R-41-8",
+  "pause": 41,
+  "kind": "records",
+  "items": 60,
+  "horizon_read": 40,
+  "model_revisions": [
+   271,
+   272,
+   273
+  ]
+ },
+ {
+  "packet": "R-41-9",
+  "pause": 41,
+  "kind": "records",
+  "items": 60,
+  "horizon_read": 40,
+  "model_revisions": [
+   273,
+   274,
+   275,
+   276
+  ]
+ },
+ {
+  "packet": "R-41-10",
+  "pause": 41,
+  "kind": "records",
+  "items": 60,
+  "horizon_read": 40,
+  "model_revisions": [
+   276,
+   277
+  ]
+ },
+ {
+  "packet": "R-41-11",
+  "pause": 41,
+  "kind": "records",
+  "items": 60,
+  "horizon_read": 40,
+  "model_revisions": [
+   277,
+   278,
+   279
+  ]
+ },
+ {
+  "packet": "R-41-12",
+  "pause": 41,
+  "kind": "records",
+  "items": 60,
+  "horizon_read": 40,
+  "model_revisions": [
+   279,
+   280,
+   281
+  ]
+ },
+ {
+  "packet": "R-41-13",
+  "pause": 41,
+  "kind": "records",
+  "items": 60,
+  "horizon_read": 40,
+  "model_revisions": [
+   281,
+   282
+  ]
+ },
+ {
+  "packet": "R-41-14",
+  "pause": 41,
+  "kind": "records",
+  "items": 60,
+  "horizon_read": 40,
+  "model_revisions": [
+   282,
+   283,
+   284,
+   285
+  ]
+ },
+ {
+  "packet": "R-41-15",
+  "pause": 41,
+  "kind": "records",
+  "items": 60,
+  "horizon_read": 40,
+  "model_revisions": [
+   285,
+   286
+  ]
+ },
+ {
+  "packet": "R-41-16",
+  "pause": 41,
+  "kind": "records",
+  "items": 60,
+  "horizon_read": 40,
+  "model_revisions": [
+   287,
+   288
+  ]
+ },
+ {
+  "packet": "R-41-17",
+  "pause": 41,
+  "kind": "records",
+  "items": 60,
+  "horizon_read": 40,
+  "model_revisions": [
+   288,
+   289,
+   290
+  ]
+ },
+ {
+  "packet": "R-41-18",
+  "pause": 41,
+  "kind": "records",
+  "items": 60,
+  "horizon_read": 40,
+  "model_revisions": [
+   290,
+   291,
+   292
+  ]
+ },
+ {
+  "packet": "R-41-19",
+  "pause": 41,
+  "kind": "records",
+  "items": 60,
+  "horizon_read": 40,
+  "model_revisions": [
+   292,
+   293,
+   294
+  ]
+ },
+ {
+  "packet": "R-41-20",
+  "pause": 41,
+  "kind": "records",
+  "items": 60,
+  "horizon_read": 40,
+  "model_revisions": [
+   294,
+   295,
+   296
+  ]
+ },
+ {
+  "packet": "R-41-21",
+  "pause": 41,
+  "kind": "records",
+  "items": 60,
+  "horizon_read": 40,
+  "model_revisions": [
+   296,
+   297
+  ]
+ },
+ {
+  "packet": "R-41-22",
+  "pause": 41,
+  "kind": "records",
+  "items": 60,
+  "horizon_read": 40,
+  "model_revisions": [
+   297,
+   298,
+   299
+  ]
+ },
+ {
+  "packet": "R-41-23",
+  "pause": 41,
+  "kind": "records",
+  "items": 60,
+  "horizon_read": 40,
+  "model_revisions": [
+   299,
+   300
+  ]
+ },
+ {
+  "packet": "R-41-24",
+  "pause": 41,
+  "kind": "records",
+  "items": 60,
+  "horizon_read": 40,
+  "model_revisions": [
+   300,
+   301
+  ]
+ },
+ {
+  "packet": "R-41-25",
+  "pause": 41,
+  "kind": "records",
+  "items": 60,
+  "horizon_read": 40,
+  "model_revisions": [
+   301,
+   302,
+   303,
+   304
+  ]
+ },
+ {
+  "packet": "R-41-26",
+  "pause": 41,
+  "kind": "records",
+  "items": 60,
+  "horizon_read": 40,
+  "model_revisions": [
+   304,
+   305,
+   306,
+   307
+  ]
+ },
+ {
+  "packet": "R-41-27",
+  "pause": 41,
+  "kind": "records",
+  "items": 60,
+  "horizon_read": 40,
+  "model_revisions": [
+   307
+  ]
+ },
+ {
+  "packet": "R-41-28",
+  "pause": 41,
+  "kind": "records",
+  "items": 60,
+  "horizon_read": 40,
+  "model_revisions": [
+   307
+  ]
+ },
+ {
+  "packet": "R-41-29",
+  "pause": 41,
+  "kind": "records",
+  "items": 60,
+  "horizon_read": 40,
+  "model_revisions": [
+   307
+  ]
+ },
+ {
+  "packet": "R-41-30",
+  "pause": 41,
+  "kind": "records",
+  "items": 60,
+  "horizon_read": 40,
+  "model_revisions": [
+   307,
+   308
+  ]
+ },
+ {
+  "packet": "R-41-31",
+  "pause": 41,
+  "kind": "records",
+  "items": 55,
+  "horizon_read": 40,
+  "model_revisions": [
+   308,
+   309,
+   310,
+   311,
+   312
+  ]
+ }
+]

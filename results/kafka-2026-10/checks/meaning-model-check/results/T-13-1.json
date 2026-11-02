@@ -1,0 +1,47 @@
+{
+ "packet": "T-13-1",
+ "started": "2026-11-01T16:29:06.103546+00:00",
+ "model": "claude-sonnet-5-5",
+ "effort": "high",
+ "attempt": 1,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 18426,
+  "cache_read_input_tokens": 2067,
+  "output_tokens": 1192,
+  "output_tokens_details": {
+   "thinking_tokens": 1062
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 18426,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 1192,
+    "cache_read_input_tokens": 2067,
+    "cache_creation_input_tokens": 18426,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 18426
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "duration_ms": 11847,
+ "result": {
+  "misreadings": [],
+  "factual_statements_checked": 11,
+  "note": "Both versions stay within the text: the family not imagining Gregor understands, Grete's feeding schedule, Gregor pressing against doors to hear, and the servant girl begging to leave and being dismissed all match the passage, and the speculative parts (sparing the parents, possible distress) are hedged."
+ }
+}

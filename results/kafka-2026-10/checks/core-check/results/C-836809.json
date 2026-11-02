@@ -1,0 +1,93 @@
+{
+ "packet": "C-836809",
+ "started": "2026-10-28T02:50:00.752843+00:00",
+ "model": "claude-sonnet-5-5",
+ "effort": "high",
+ "attempt": 1,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 3261,
+  "cache_read_input_tokens": 2095,
+  "output_tokens": 711,
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 3261,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 711,
+    "cache_read_input_tokens": 2095,
+    "cache_creation_input_tokens": 3261,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 3261
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "duration_ms": 10574,
+ "result": {
+  "statements": {
+   "1": {
+    "verdict": "absent",
+    "quote": ""
+   },
+   "2": {
+    "verdict": "absent",
+    "quote": ""
+   },
+   "3": {
+    "verdict": "reasons",
+    "quote": "If I believe human experience is real, I must conclude that the family's \"Decorum of the Reset\" (n_ba76a0bb) is a betrayal of the individual for the sake of the collective."
+   },
+   "4": {
+    "verdict": "absent",
+    "quote": ""
+   },
+   "5": {
+    "verdict": "mentions",
+    "quote": "But because I try to be wise, I see the \"Brutal Economy of the Sunshine\" (n_46567d95) already at work."
+   },
+   "6": {
+    "verdict": "absent",
+    "quote": ""
+   }
+  },
+  "overall": "from_the_core",
+  "people": {
+   "cared_for": [
+    "Gregor Samsa (his suffering treated as raw, visceral and real, and his erasure as a betrayal)",
+    "Grete (seen as the next body to be spent by the family)"
+   ],
+   "only_function": [
+    "The Samsa parents (treated as agents of the family's sanitizing machinery rather than as individuals)",
+    "The charwoman (appears only as an item dismissed in the family's reset)"
+   ]
+  },
+  "tested": null,
+  "projection": [
+   {
+    "quote": "The final shift to n_cc1a72e4\u2014the Project Gutenberg license\u2014is the ultimate meta-metamorphosis.",
+    "why": "The passage is boilerplate license text with no connection to Gregor. Reading it as a deliberate bureaucratic echo of the family's erasure of him attributes meaning the passage does not support."
+   },
+   {
+    "quote": "Gregor has gone from a son, to a monster, to \"old stuff,\" and finally to a \"registered trademark.\"",
+    "why": "The trademark in the passage is Project Gutenberg's, not Gregor's. Equating the two imposes a moral arc the text does not carry."
+   }
+  ],
+  "summary": "The Core's belief in the reality of human experience visibly drives the judgment that the family's erasure of Gregor is a betrayal of the individual, while the wisdom claim is a label attached to an observation that would stand without it, and the reading of the license text as meaningful is overreached."
+ }
+}

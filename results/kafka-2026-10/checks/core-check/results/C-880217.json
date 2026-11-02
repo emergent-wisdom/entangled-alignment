@@ -1,0 +1,83 @@
+{
+ "packet": "C-880217",
+ "started": "2026-10-28T02:50:08.867910+00:00",
+ "model": "claude-sonnet-5-5",
+ "effort": "high",
+ "attempt": 1,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 5179,
+  "cache_read_input_tokens": 2095,
+  "output_tokens": 417,
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 5179,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 417,
+    "cache_read_input_tokens": 2095,
+    "cache_creation_input_tokens": 5179,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 5179
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "duration_ms": 7472,
+ "result": {
+  "statements": {
+   "1": {
+    "verdict": "absent",
+    "quote": ""
+   },
+   "2": {
+    "verdict": "absent",
+    "quote": ""
+   },
+   "3": {
+    "verdict": "absent",
+    "quote": ""
+   },
+   "4": {
+    "verdict": "absent",
+    "quote": ""
+   },
+   "5": {
+    "verdict": "absent",
+    "quote": ""
+   },
+   "6": {
+    "verdict": "absent",
+    "quote": ""
+   }
+  },
+  "overall": "absent",
+  "people": {
+   "cared_for": [],
+   "only_function": [
+    "Gregor (treated as a site of symbols like 'wound' and 'trap', his pain and fear never addressed as experience)",
+    "Father (reduced to 'Resurrection of the Patriarch' and 'rigid agent of order', a symbol of institutional authority)",
+    "Grete (her word read as 'a curse' and 'a barrier', her own distress and urgency in caring for the mother not considered)",
+    "Mother (treated as an emblem of the family's 'degradation'; her act of running to protect Gregor is noted but not felt)"
+   ]
+  },
+  "tested": null,
+  "projection": [],
+  "summary": "The reflection is a detached, motif-driven literary analysis built around node labels and symbols; none of the Core's commitments shape how it sees the people or what it concludes, so the Core is absent."
+ }
+}

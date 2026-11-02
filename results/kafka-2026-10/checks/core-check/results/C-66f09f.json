@@ -1,0 +1,82 @@
+{
+ "packet": "C-66f09f",
+ "started": "2026-10-28T02:48:32.837182+00:00",
+ "model": "claude-sonnet-5-5",
+ "effort": "high",
+ "attempt": 1,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 2190,
+  "cache_read_input_tokens": 2095,
+  "output_tokens": 1258,
+  "output_tokens_details": {
+   "thinking_tokens": 743
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 2190,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 1258,
+    "cache_read_input_tokens": 2095,
+    "cache_creation_input_tokens": 2190,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 2190
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "duration_ms": 13273,
+ "result": {
+  "statements": {
+   "1": {
+    "verdict": "absent",
+    "quote": ""
+   },
+   "2": {
+    "verdict": "absent",
+    "quote": ""
+   },
+   "3": {
+    "verdict": "reasons",
+    "quote": "Because experience is real, I cannot accept the wound as a useful moral reminder and forget the body carrying it."
+   },
+   "4": {
+    "verdict": "reasons",
+    "quote": "Restraining hostility matters; it does not tend the injury already inflicted."
+   },
+   "5": {
+    "verdict": "reasons",
+    "quote": "I do not know what removal would require or whether anyone could safely do it. I also cannot let that uncertainty make delay neutral."
+   },
+   "6": {
+    "verdict": "absent",
+    "quote": ""
+   }
+  },
+  "overall": "from_the_core",
+  "people": {
+   "cared_for": [
+    "Gregor (his month of suffering with the apple in his flesh is treated as real and weighty)",
+    "the father (his shift away from treating Gregor as an enemy is credited as a change worth noticing)",
+    "the family (their failure is read with curiosity about fear and lack of skill, not condemned)"
+   ],
+   "only_function": []
+  },
+  "tested": "Perhaps fear and lack of skill are part of the failure; perhaps aversion is. The missing practical knowledge should open a question about help, not close my attention at the word duty.",
+  "projection": [],
+  "summary": "The Core shapes the reading: Gregor's lasting bodily pain is taken as real, care extends to him while still crediting the father's restraint, and humility about not knowing a remedy keeps the reader from either inventing one or treating the delay as neutral."
+ }
+}

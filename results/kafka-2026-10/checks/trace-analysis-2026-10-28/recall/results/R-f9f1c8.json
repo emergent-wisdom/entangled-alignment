@@ -1,0 +1,56 @@
+{
+ "packet": "R-f9f1c8",
+ "started": "2026-10-28T15:16:56.272670+00:00",
+ "model": "claude-sonnet-5-5",
+ "effort": "high",
+ "attempt": 1,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 20450,
+  "cache_read_input_tokens": 2096,
+  "output_tokens": 1190,
+  "output_tokens_details": {
+   "thinking_tokens": 948
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 20450,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 1190,
+    "cache_read_input_tokens": 2096,
+    "cache_creation_input_tokens": 20450,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 20450
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "duration_ms": 10369,
+ "result": {
+  "misreadings": [
+   {
+    "quote": "The parents had always encouraged the Conservatory plan and spoke of it with pleasure.",
+    "version": "reflection",
+    "evidence": "their parents never listened to these innocent expectations with pleasure.",
+    "kind": "contradicted",
+    "severity": "high",
+    "explanation": "The text says the parents never listened to talk of the Conservatory with pleasure, and the Conservatory was mentioned only between Gregor and his sister, as an unrealizable dream."
+   }
+  ],
+  "factual_statements_checked": 15,
+  "note": "The reflection reverses the parents' attitude toward the Conservatory plan, while the prose version stays faithful and hedges its inferences about Gregor's family and the servant."
+ }
+}

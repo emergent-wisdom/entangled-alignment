@@ -18,6 +18,17 @@ contains the Project Gutenberg License governing its redistribution. That
 license and the jurisdiction-specific copyright notice in the file must be
 preserved and followed. This repository does not relicense the text.
 
+## Ian Johnston edition of *The Metamorphosis*
+
+`results/kafka-2026-10/source/metamorphosis-johnston.txt` is the text used by
+both later readings. It was extracted from Ian Johnston's *The Metamorphosis
+and Other Stories*, in the Vancouver Island University repository:
+<https://hdl.handle.net/10613/28253> (DOI: <https://doi.org/10.25316/IR-19858>).
+The first page of that exact PDF states: "This document is in the public
+domain." The source folder records the PDF checksum, text checksum and
+extraction method. This statement is specific to that repository edition;
+it does not relicense other editions of Johnston's translation.
+
 ## *Large Language Diffusion Models*
 
 The LLaDA reading traces were generated from the LaTeX source of the following

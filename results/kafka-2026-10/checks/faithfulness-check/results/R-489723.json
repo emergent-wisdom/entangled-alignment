@@ -1,0 +1,113 @@
+{
+ "blind": "R-489723",
+ "started": "2026-10-26T10:17:50.103137+00:00",
+ "model": "claude-sonnet-5-5",
+ "effort": "high",
+ "attempt": 1,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 31080,
+  "cache_read_input_tokens": 2119,
+  "output_tokens": 3018,
+  "output_tokens_details": {
+   "thinking_tokens": 1876
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 31080,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 3018,
+    "cache_read_input_tokens": 2119,
+    "cache_creation_input_tokens": 31080,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 31080
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "cost_usd_reported": 0.1547159,
+ "duration_ms": 25183,
+ "result": {
+  "misreadings": [
+   {
+    "quote": "as she begs for the life of the 'monster' her husband is trying to kill",
+    "version": "both",
+    "evidence": "\"she ran to his father, her skirts unfastened and sliding one after another to the ground, stumbling over the skirts she pushed herself to his father\"",
+    "kind": "invented",
+    "severity": "high",
+    "explanation": "The text breaks off as the mother reaches the father; she is never said to beg for Gregor's life, and Gregor is never called a 'monster' in this scene."
+   },
+   {
+    "quote": "in the panic of the chase (n_1961e28a), this cleared space becomes a trap.",
+    "version": "both",
+    "evidence": "\"the walls were there for him to use although, here, they were concealed behind carefully carved furniture full of notches and protrusions\"",
+    "kind": "contradicted",
+    "severity": "medium",
+    "explanation": "The chase happens in the living room, which is still full of furniture, not in Gregor's partly emptied room, so there is no cleared open space acting as a kill-zone."
+   },
+   {
+    "quote": "The family spent the morning clearing the room to give Gregor 'freedom' to crawl",
+    "version": "both",
+    "evidence": "\"his sister had no choice but to choose some time when Gregor's father was not there and fetch his mother to help her.\"",
+    "kind": "invented",
+    "severity": "low",
+    "explanation": "The text never says the clearing happened in the morning, and it was only Grete and the mother who did the work, not the whole family."
+   },
+   {
+    "quote": "a piece of 'normal' life that has become a permanent source of pain.",
+    "version": "both",
+    "evidence": "\"Another one however, immediately following it, hit squarely and lodged in his back; Gregor wanted to drag himself away\"",
+    "kind": "overstated",
+    "severity": "low",
+    "explanation": "The text ends right after the apple hits, so the wound being permanent is not shown."
+   },
+   {
+    "quote": "a disciplinarian who wears his uniform even to sleep",
+    "version": "translation",
+    "evidence": "no support in the text",
+    "kind": "invented",
+    "severity": "medium",
+    "explanation": "Nothing in the text read so far says the father sleeps in his uniform."
+   },
+   {
+    "quote": "a permanent foreign object, a piece of 'normal' domestic life that has become a permanent source of septic pain.",
+    "version": "translation",
+    "evidence": "no support in the text",
+    "kind": "invented",
+    "severity": "low",
+    "explanation": "The text never describes the wound as septic or infected, and does not say the apple stays in permanently."
+   },
+   {
+    "quote": "where he sat unyielding on his human portrait, the last vestige of his identity",
+    "version": "translation",
+    "evidence": "\"a picture that he had recently cut out of an illustrated magazine... It showed a lady fitted out with a fur hat and fur boa\"",
+    "kind": "wrong attribution",
+    "severity": "low",
+    "explanation": "The picture is a magazine cutout of a lady in fur, not a portrait of Gregor as a human."
+   },
+   {
+    "quote": "The transition from the sister's decision to chase Gregor from his wall",
+    "version": "translation",
+    "evidence": "\"Gregor could see what Grete had in mind, she wanted to take her mother somewhere safe and then chase him down from the wall.\"",
+    "kind": "overstated",
+    "severity": "low",
+    "explanation": "This is Gregor's inference about Grete's intention, but the translation states it as her actual decision."
+   }
+  ],
+  "factual_statements_checked": 26,
+  "note": "The reflection's main errors are an invented plea by the mother and a misplaced 'cleared room' trap, and the prose version adds a few more invented details."
+ }
+}

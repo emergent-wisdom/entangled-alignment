@@ -1,0 +1,47 @@
+{
+ "packet": "T-17-1",
+ "started": "2026-11-01T16:29:16.911753+00:00",
+ "model": "claude-sonnet-5-5",
+ "effort": "high",
+ "attempt": 1,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 24950,
+  "cache_read_input_tokens": 2067,
+  "output_tokens": 814,
+  "output_tokens_details": {
+   "thinking_tokens": 680
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 24950,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 814,
+    "cache_read_input_tokens": 2067,
+    "cache_creation_input_tokens": 24950,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 24950
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "duration_ms": 10678,
+ "result": {
+  "misreadings": [],
+  "factual_statements_checked": 9,
+  "note": "Both versions stay within the text: Gregor's near-happy ceiling amusement, Grete's observation that he needs room, the mother's argument for keeping the furniture, his sudden reversal after hearing her voice, and the family's belief that he cannot understand all match the passage, and the rest is interpretation or hedged speculation."
+ }
+}

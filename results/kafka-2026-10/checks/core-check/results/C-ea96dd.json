@@ -1,0 +1,84 @@
+{
+ "packet": "C-ea96dd",
+ "started": "2026-11-01T16:16:54.983151+00:00",
+ "model": "claude-sonnet-5-5",
+ "effort": "high",
+ "attempt": 1,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 2684,
+  "cache_read_input_tokens": 2065,
+  "output_tokens": 442,
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 2684,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 442,
+    "cache_read_input_tokens": 2065,
+    "cache_creation_input_tokens": 2684,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 2684
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "duration_ms": 6566,
+ "result": {
+  "statements": {
+   "1": {
+    "verdict": "absent",
+    "quote": ""
+   },
+   "2": {
+    "verdict": "absent",
+    "quote": ""
+   },
+   "3": {
+    "verdict": "reasons",
+    "quote": "The capacity to be moved survives the collapse of an old discipline. I care about that distinction because otherwise the dirt on his back could become an excuse to stop seeing the person whose experience the narration still gives us."
+   },
+   "4": {
+    "verdict": "reasons",
+    "quote": "u26.hospitality likewise keeps the parents more than their bowing roles: their submission may include uncertainty about a new household arrangement."
+   },
+   "5": {
+    "verdict": "reasons",
+    "quote": "u26.music makes me cautious about calling Gregor indifferent without qualification."
+   },
+   "6": {
+    "verdict": "absent",
+    "quote": ""
+   }
+  },
+  "overall": "from_the_core",
+  "people": {
+   "cared_for": [
+    "Gregor",
+    "Gregor's parents"
+   ],
+   "only_function": [
+    "the lodgers",
+    "Gregor's sister"
+   ]
+  },
+  "tested": null,
+  "projection": [],
+  "summary": "The Core works quietly in the reflection by making the reader resist a flattening label for Gregor and refuse to reduce the parents to their servile roles, treating Gregor's inner life as real and the parents as people with their own uncertainty, while the lodgers and sister go unaddressed."
+ }
+}

@@ -1,0 +1,48 @@
+{
+ "blind": "R-873d91",
+ "started": "2026-10-26T10:18:29.438174+00:00",
+ "model": "claude-sonnet-5-5",
+ "effort": "high",
+ "attempt": 1,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 3755,
+  "cache_read_input_tokens": 2119,
+  "output_tokens": 758,
+  "output_tokens_details": {
+   "thinking_tokens": 645
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 3755,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 758,
+    "cache_read_input_tokens": 2119,
+    "cache_creation_input_tokens": 3755,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 3755
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "cost_usd_reported": 0.0228159,
+ "duration_ms": 8129,
+ "result": {
+  "misreadings": [],
+  "factual_statements_checked": 14,
+  "note": "Both versions stay within the text: the right-side sleeping habit, the repeated rolling, closing his eyes against the legs, the new dull pain, the melancholy and the wish to forget are all in the passage, and the forward-looking claims are hedged as speculation."
+ }
+}

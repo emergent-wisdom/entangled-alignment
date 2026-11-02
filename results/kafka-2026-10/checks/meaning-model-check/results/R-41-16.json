@@ -1,0 +1,66 @@
+{
+ "packet": "R-41-16",
+ "started": "2026-11-01T16:26:41.964119+00:00",
+ "model": "claude-sonnet-5-5",
+ "effort": "high",
+ "attempt": 1,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 59501,
+  "cache_read_input_tokens": 2067,
+  "output_tokens": 3099,
+  "output_tokens_details": {
+   "thinking_tokens": 2569
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 59501,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 3099,
+    "cache_read_input_tokens": 2067,
+    "cache_creation_input_tokens": 59501,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 59501
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "duration_ms": 26783,
+ "result": {
+  "problems": [
+   {
+    "record": "meaning_model.normalized_cuts:cut.series.mother-framing.1912.237312-1912.237321",
+    "status": "applied",
+    "quote": "General organizing account",
+    "evidence": "His mother, who was still incapable of breathing properly, began to cough numbly with her hand held up over her mouth and a manic expression in her eyes. / for his mother, in her coughing fit, was not listening to anything.",
+    "kind": "unsupported",
+    "severity": "medium",
+    "explanation": "The cut gives the mother's problem-framing in this period a weight of 0.7 for the abstract account, but in this stretch she only coughs and does not listen, so no framing acts by her are shown."
+   },
+   {
+    "record": "meaning_model.normalized_cuts:cut.series.mother-framing.1912.237367-1912.238388",
+    "status": "applied",
+    "quote": "Immediate obstacle",
+    "evidence": "His last glimpse brushed over his mother, who was now completely asleep.",
+    "kind": "unsupported",
+    "severity": "low",
+    "explanation": "The cut gives the mother's framing in this period a weight of 0.75 for immediate obstacles, but the mother is asleep and performs no framing acts."
+   }
+  ],
+  "records_checked": 60,
+  "note": "The reader had read the whole book, so nothing is ahead. The 1912 dates are labelled retrospective estimates, so they pass. I flagged only two cut weights that the text gives the mother no acts to support."
+ }
+}

@@ -1,0 +1,47 @@
+{
+ "packet": "T-37-1",
+ "started": "2026-11-01T16:30:13.254198+00:00",
+ "model": "claude-sonnet-5-5",
+ "effort": "high",
+ "attempt": 1,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 37713,
+  "cache_read_input_tokens": 2067,
+  "output_tokens": 644,
+  "output_tokens_details": {
+   "thinking_tokens": 512
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 37713,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 644,
+    "cache_read_input_tokens": 2067,
+    "cache_creation_input_tokens": 37713,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 37713
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "duration_ms": 7982,
+ "result": {
+  "misreadings": [],
+  "factual_statements_checked": 9,
+  "note": "Both versions stay within the text: Mr. Samsa's thanks to God, Mrs. Samsa's checked movement toward the broom and her melancholy smile, Grete's remark about his thinness and backward look, Grete sleeping in the living room since the lodgers came, and the end-of-March cue all match the passage."
+ }
+}

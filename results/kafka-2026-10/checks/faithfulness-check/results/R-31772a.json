@@ -1,0 +1,89 @@
+{
+ "blind": "R-31772a",
+ "started": "2026-10-26T10:17:26.688676+00:00",
+ "model": "claude-sonnet-5-5",
+ "effort": "high",
+ "attempt": 1,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 6733,
+  "cache_read_input_tokens": 2119,
+  "output_tokens": 2846,
+  "output_tokens_details": {
+   "thinking_tokens": 1769
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 6733,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 2846,
+    "cache_read_input_tokens": 2119,
+    "cache_creation_input_tokens": 6733,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 6733
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "cost_usd_reported": 0.0556079,
+ "duration_ms": 22646,
+ "result": {
+  "misreadings": [
+   {
+    "quote": "The silence of his family is even more chilling",
+    "version": "both",
+    "evidence": "\"There was a cautious knock at the door near his head. \u201cGregor\u201d, somebody called\u2014it was his mother\u2014\u201cit\u2019s quarter to seven. Didn\u2019t you want to go somewhere?\u201d\" and \"his father came knocking at one of the side doors... \u201cGregor, Gregor\u201d, he called, \u201cwhat\u2019s wrong?\u201d\" and \"his sister came plaintively: \u201cGregor? Aren\u2019t you well? Do you need anything?\u201d\"",
+    "kind": "contradicted",
+    "severity": "high",
+    "explanation": "The mother, father and sister each knock and call to Gregor in the passage, so the family is not silent and has checked on him (the prose version's \"They haven't checked on him\" is wrong for the same reason)."
+   },
+   {
+    "quote": "They have offloaded their lives onto him so completely that they have stopped seeing him as a person who *could* be ill.",
+    "version": "both",
+    "evidence": "\"Gregor? Aren\u2019t you well? Do you need anything?\"; \"Gregor, Gregor... what\u2019s wrong?\"",
+    "kind": "contradicted",
+    "severity": "medium",
+    "explanation": "The family's indifference and their failure to see him as possibly ill are stated as fact, but the sister asks if he is unwell and the father asks what is wrong; the text gives no sign of indifference or of loveless use of him."
+   },
+   {
+    "quote": "Gregor's 'big change' (n_48b55c3e) hasn't just cost him his legs",
+    "version": "both",
+    "evidence": "\"His many legs, pitifully thin compared with the size of the rest of him, waved about helplessly as he looked.\"",
+    "kind": "contradicted",
+    "severity": "medium",
+    "explanation": "Gregor has not lost his legs; he has many thin legs that wave about, and the 'big change' in his own thoughts is his plan to quit his job."
+   },
+   {
+    "quote": "the relentless, mechanical progress of the workday schedule",
+    "version": "translation",
+    "evidence": "\"pushed himself slowly up on his back towards the headboard so that he could lift his head better\"",
+    "kind": "overstated",
+    "severity": "low",
+    "explanation": "The prose version describes Gregor's \"physical paralysis\", but the text shows him moving, rolling, pushing himself up and unable only to get onto his right side; he is not paralysed."
+   },
+   {
+    "quote": "the 'Internal Manager' Gregor has spent his entire life cultivating",
+    "version": "translation",
+    "evidence": "\"in five years of service Gregor had never once yet been ill\"",
+    "kind": "overstated",
+    "severity": "low",
+    "explanation": "The text gives five years of service and a plan for five or six more, not a whole life spent cultivating this attitude."
+   }
+  ],
+  "factual_statements_checked": 14,
+  "note": "The main errors are that the family is called silent and unconcerned although all three knock and ask after him, and that Gregor is said to have lost his legs when the text gives him many legs."
+ }
+}

@@ -1,0 +1,8 @@
+{
+  "source": "../results/kafka-2026-10/source/metamorphosis-johnston.txt",
+  "perspectives": ["axiologist", "belief_tracker", "connector", "critic", "curator", "psychologist", "skeptic", "speculator"],
+  "perspectives_per_stretch": 2,
+  "seed": 20261009,
+  "stretch_chars": 4000,
+  "time_limit_hours": 4
+}

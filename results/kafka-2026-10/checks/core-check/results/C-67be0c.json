@@ -1,0 +1,83 @@
+{
+ "packet": "C-67be0c",
+ "started": "2026-10-28T02:48:37.209613+00:00",
+ "model": "claude-sonnet-5-5",
+ "effort": "high",
+ "attempt": 1,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 2938,
+  "cache_read_input_tokens": 2095,
+  "output_tokens": 1389,
+  "output_tokens_details": {
+   "thinking_tokens": 979
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 2938,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 1389,
+    "cache_read_input_tokens": 2095,
+    "cache_creation_input_tokens": 2938,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 2938
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "duration_ms": 13209,
+ "result": {
+  "statements": {
+   "1": {
+    "verdict": "absent",
+    "quote": ""
+   },
+   "2": {
+    "verdict": "absent",
+    "quote": ""
+   },
+   "3": {
+    "verdict": "reasons",
+    "quote": "His shame answers none of that. It tells me how deeply he feels responsible, not how the responsibility should be divided."
+   },
+   "4": {
+    "verdict": "reasons",
+    "quote": "Because every person's future matters, I cannot call survival an adequate account of what a plan preserves. Who gets time, care, rest and a chance at music?"
+   },
+   "5": {
+    "verdict": "reasons",
+    "quote": "I can value its protection now without making that earlier cost vanish."
+   },
+   "6": {
+    "verdict": "absent",
+    "quote": ""
+   }
+  },
+  "overall": "from_the_core",
+  "people": {
+   "cared_for": [
+    "Gregor",
+    "Gregor's mother",
+    "Gregor's father",
+    "Grete"
+   ],
+   "only_function": []
+  },
+  "tested": null,
+  "projection": [],
+  "summary": "Care for every person (4) drives the conclusion that a survival plan must also ask who gets rest, time and music, while Gregor's shame is treated as real feeling (3) that does not settle how responsibility is divided, and the reader holds both the buffer's value and its cost without collapsing either (5)."
+ }
+}

@@ -1,0 +1,47 @@
+{
+ "packet": "R-15-3",
+ "started": "2026-11-01T16:18:53.102089+00:00",
+ "model": "claude-sonnet-5-5",
+ "effort": "high",
+ "attempt": 1,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 37127,
+  "cache_read_input_tokens": 2067,
+  "output_tokens": 1544,
+  "output_tokens_details": {
+   "thinking_tokens": 1405
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 37127,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 1544,
+    "cache_read_input_tokens": 2067,
+    "cache_creation_input_tokens": 37127,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 37127
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "duration_ms": 15359,
+ "result": {
+  "problems": [],
+  "records_checked": 52,
+  "note": "The finance scenario values, carves, events and relations are labelled as guessed or inferred, and they stay within what the text gives: a small retained sum, untouched interest, saved wages, one to two years of runway, the mother's asthma, Gregor's fading sight and the explanation on the first day. All dated values fall at or before the story's present, so none is ahead of the text."
+ }
+}

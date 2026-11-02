@@ -7,7 +7,7 @@ Use `reference` nodes to cite external sources or cross-project content.
 ```javascript
 graph_batch({
   operations: [
-    { tool: "graph_add_concept", params: {
+    { tool: "graph_add_understanding", params: {
         title: "EAT Framework",
         trigger: "reference",
         understanding: "Epistemic-Affective Topology for character psychology",
@@ -23,7 +23,7 @@ graph_batch({
 ```javascript
 graph_batch({
   operations: [
-    { tool: "graph_add_concept", params: {
+    { tool: "graph_add_understanding", params: {
         title: "Attention Is All You Need",
         trigger: "reference",
         understanding: "The transformer architecture paper (Vaswani et al. 2017)",
@@ -41,7 +41,7 @@ Group references under a `library` node:
 ```javascript
 graph_batch({
   operations: [
-    { tool: "graph_add_concept", params: {
+    { tool: "graph_add_understanding", params: {
         title: "References",
         trigger: "library",
         understanding: "Bibliography for this paper",

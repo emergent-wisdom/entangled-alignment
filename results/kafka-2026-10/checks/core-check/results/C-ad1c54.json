@@ -1,0 +1,84 @@
+{
+ "packet": "C-ad1c54",
+ "started": "2026-11-01T16:16:38.032412+00:00",
+ "model": "claude-sonnet-5-5",
+ "effort": "high",
+ "attempt": 1,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 3228,
+  "cache_read_input_tokens": 2065,
+  "output_tokens": 474,
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 3228,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 474,
+    "cache_read_input_tokens": 2065,
+    "cache_creation_input_tokens": 3228,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 3228
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "duration_ms": 6703,
+ "result": {
+  "statements": {
+   "1": {
+    "verdict": "absent",
+    "quote": ""
+   },
+   "2": {
+    "verdict": "absent",
+    "quote": ""
+   },
+   "3": {
+    "verdict": "reasons",
+    "quote": "His wish to thank her cannot cross the same gap that prevents him from correcting her."
+   },
+   "4": {
+    "verdict": "reasons",
+    "quote": "u16.cost-of-care keeps two kinds of effort beside each other: she returns to a sight she cannot bear; he spends four hours making himself invisible."
+   },
+   "5": {
+    "verdict": "reasons",
+    "quote": "I can see why courage earns authority without assuming that authority is always wise."
+   },
+   "6": {
+    "verdict": "absent",
+    "quote": ""
+   }
+  },
+  "overall": "from_the_core",
+  "people": {
+   "cared_for": [
+    "Gregor (his unspoken gratitude, the four hours of effort, his inability to correct her reading)",
+    "Grete (the unbearable sight she returns to, her courage)",
+    "the mother (denied a visit she wants)"
+   ],
+   "only_function": [
+    "the father (appears only as part of the 'parents waiting for reports' arrangement)"
+   ]
+  },
+  "tested": null,
+  "projection": [],
+  "summary": "The reflection holds Gregor's and Grete's efforts side by side without taking a side, treats Gregor's unexpressed gratitude as real and weighty, and questions whether authority earned by courage is wise, though it uses internal labels and does not notice any test of the Core itself."
+ }
+}

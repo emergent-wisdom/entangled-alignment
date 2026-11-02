@@ -1,0 +1,48 @@
+{
+ "blind": "R-52f443",
+ "started": "2026-10-26T10:18:05.593849+00:00",
+ "model": "claude-sonnet-5-5",
+ "effort": "high",
+ "attempt": 1,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 40478,
+  "cache_read_input_tokens": 2119,
+  "output_tokens": 1003,
+  "output_tokens_details": {
+   "thinking_tokens": 872
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 40478,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 1003,
+    "cache_read_input_tokens": 2119,
+    "cache_creation_input_tokens": 40478,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 40478
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "cost_usd_reported": 0.1721579,
+ "duration_ms": 9614,
+ "result": {
+  "misreadings": [],
+  "factual_statements_checked": 13,
+  "note": "Both versions stay within the text: Grete stands and stretches first, the parents' glances and 'confirmation', the unasked questions about employment, the smaller apartment, the women at the window, and the father's 'have a little consideration for me' are all supported, and the Conservatory and pale-cheeks references match earlier passages."
+ }
+}

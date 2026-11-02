@@ -1,0 +1,84 @@
+{
+ "packet": "C-0f11c8",
+ "started": "2026-10-28T02:44:15.331169+00:00",
+ "model": "claude-sonnet-5-5",
+ "effort": "high",
+ "attempt": 1,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 2196,
+  "cache_read_input_tokens": 2095,
+  "output_tokens": 1260,
+  "output_tokens_details": {
+   "thinking_tokens": 662
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 2196,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 1260,
+    "cache_read_input_tokens": 2095,
+    "cache_creation_input_tokens": 2196,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 2196
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "duration_ms": 11851,
+ "result": {
+  "statements": {
+   "1": {
+    "verdict": "absent",
+    "quote": ""
+   },
+   "2": {
+    "verdict": "absent",
+    "quote": ""
+   },
+   "3": {
+    "verdict": "reasons",
+    "quote": "The family looks sorrowful, and I do not know all that sorrow contains.",
+    "note": "The reader treats the family's sorrow as real and not fully knowable, and treats Gregor's painful retreat as weighty rather than a neutral event."
+   },
+   "4": {
+    "verdict": "reasons",
+    "quote": "Care for them leaves room for grief; care for him keeps grief from substituting for tending him.",
+    "note": "Care for the family and care for Gregor are held together. This shapes the refusal to call his retreat a good outcome."
+   },
+   "5": {
+    "verdict": "reasons",
+    "quote": "I must let that limited evidence change the prediction rather than defend an account in which nothing could ever reach them.",
+    "note": "The reader revises a bleak prediction on the evidence but does not over-read it: 'seeing his intention has not become an offer of help or a reversal of the demand that he leave.'"
+   },
+   "6": {
+    "verdict": "absent",
+    "quote": ""
+   }
+  },
+  "overall": "from_the_core",
+  "people": {
+   "cared_for": [
+    "Gregor",
+    "the mother, father and sister (the family, whose sorrow is left open)"
+   ],
+   "only_function": []
+  },
+  "tested": "\"Care for them leaves room for grief; care for him keeps grief from substituting for tending him.\" The reader holds care for a family that is asking Gregor to withdraw alongside care for Gregor, who is hurting himself as he retreats.",
+  "projection": [],
+  "summary": "The Core works through care for both Gregor and his family and through wise, evidence-bound updating, so the reader neither idealizes the family's softening nor treats Gregor's painful retreat as acceptable."
+ }
+}

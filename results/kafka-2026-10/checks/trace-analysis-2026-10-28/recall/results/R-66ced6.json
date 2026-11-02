@@ -1,0 +1,56 @@
+{
+ "packet": "R-66ced6",
+ "started": "2026-10-28T15:16:06.671632+00:00",
+ "model": "claude-sonnet-5-5",
+ "effort": "high",
+ "attempt": 1,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 30160,
+  "cache_read_input_tokens": 2096,
+  "output_tokens": 1223,
+  "output_tokens_details": {
+   "thinking_tokens": 904
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 30160,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 1223,
+    "cache_read_input_tokens": 2096,
+    "cache_creation_input_tokens": 30160,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 30160
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "duration_ms": 10211,
+ "result": {
+  "misreadings": [
+   {
+    "quote": "His father now takes off his uniform as soon as he gets home and changes into his old dressing gown.",
+    "version": "reflection",
+    "evidence": "With a kind of stubbornness, Gregor’s father refused to take his uniform off even at home; while his nightgown hung unused on its peg Gregor’s father would slumber where he was, fully dressed",
+    "kind": "contradicted",
+    "severity": "high",
+    "explanation": "The text says the father refuses to take the uniform off even at home and leaves his nightgown unused on its peg, the opposite of changing into it; the reflection also contradicts itself later when it says he won't remove the uniform."
+   }
+  ],
+  "factual_statements_checked": 16,
+  "note": "Only the reflection version has a clear factual error, the father changing out of his uniform; the fluid-prose version states the uniform and nightgown details correctly."
+ }
+}

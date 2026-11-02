@@ -1,0 +1,47 @@
+{
+ "packet": "R-24-25",
+ "started": "2026-11-01T16:23:30.334319+00:00",
+ "model": "claude-sonnet-5-5",
+ "effort": "high",
+ "attempt": 1,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 39971,
+  "cache_read_input_tokens": 2067,
+  "output_tokens": 1379,
+  "output_tokens_details": {
+   "thinking_tokens": 1276
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 39971,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 1379,
+    "cache_read_input_tokens": 2067,
+    "cache_creation_input_tokens": 39971,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 39971
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "duration_ms": 13736,
+ "result": {
+  "problems": [],
+  "records_checked": 25,
+  "note": "The records cover the sister's care in the food trial, the wet cleanup, the hurried feeding and the defended cleaning role. Each is supported by the text read so far or labelled as a guess, and none reaches past the cleaning woman and lodger passage."
+ }
+}

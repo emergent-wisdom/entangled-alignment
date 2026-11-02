@@ -1,0 +1,597 @@
+{
+ "R-846645": {
+  "run": "several",
+  "thought": 1,
+  "thinking_id": "n_824b377c",
+  "start": 0,
+  "end": 516
+ },
+ "R-f5b439": {
+  "run": "several",
+  "thought": 34,
+  "thinking_id": "n_31d38676",
+  "start": 75043,
+  "end": 76286
+ },
+ "R-52f443": {
+  "run": "several",
+  "thought": 57,
+  "thinking_id": "n_4b0081ad",
+  "start": 120155,
+  "end": 122332
+ },
+ "R-37cf30": {
+  "run": "several",
+  "thought": 31,
+  "thinking_id": "n_c0011b30",
+  "start": 71696,
+  "end": 72395
+ },
+ "R-d21024": {
+  "run": "several",
+  "thought": 43,
+  "thinking_id": "n_b44017a7",
+  "start": 95316,
+  "end": 97468
+ },
+ "R-50144b": {
+  "run": "several",
+  "thought": 11,
+  "thinking_id": "n_45ecaa96",
+  "start": 14890,
+  "end": 17632
+ },
+ "R-f99acb": {
+  "run": "january",
+  "thought": 6,
+  "thinking_id": "n_981ab3a6",
+  "start": 28000,
+  "end": 34000
+ },
+ "R-563aef": {
+  "run": "several",
+  "thought": 14,
+  "thinking_id": "n_2fc4a7f8",
+  "start": 23726,
+  "end": 24894
+ },
+ "R-489723": {
+  "run": "january",
+  "thought": 17,
+  "thinking_id": "n_c7dcaef0",
+  "start": 72200,
+  "end": 80200
+ },
+ "R-ea9e26": {
+  "run": "several",
+  "thought": 51,
+  "thinking_id": "n_ad30e4fc",
+  "start": 109387,
+  "end": 110187
+ },
+ "R-869e70": {
+  "run": "several",
+  "thought": 8,
+  "thinking_id": "n_b758a37e",
+  "start": 7457,
+  "end": 9400
+ },
+ "R-0d2366": {
+  "run": "january",
+  "thought": 3,
+  "thinking_id": "n_2c40a98c",
+  "start": 8000,
+  "end": 16000
+ },
+ "R-dc95db": {
+  "run": "january",
+  "thought": 11,
+  "thinking_id": "n_e5eb3be6",
+  "start": 48000,
+  "end": 51000
+ },
+ "R-ba965e": {
+  "run": "several",
+  "thought": 27,
+  "thinking_id": "n_bdf50124",
+  "start": 62652,
+  "end": 66843
+ },
+ "R-26213b": {
+  "run": "several",
+  "thought": 29,
+  "thinking_id": "n_528bd949",
+  "start": 67966,
+  "end": 69218
+ },
+ "R-9ecd0f": {
+  "run": "several",
+  "thought": 9,
+  "thinking_id": "n_daf16578",
+  "start": 9400,
+  "end": 12848
+ },
+ "R-cdf67a": {
+  "run": "january",
+  "thought": 1,
+  "thinking_id": "n_70cc6ce3",
+  "start": 0,
+  "end": 6000
+ },
+ "R-f892cb": {
+  "run": "several",
+  "thought": 32,
+  "thinking_id": "n_3174a3e7",
+  "start": 72395,
+  "end": 73171
+ },
+ "R-18a757": {
+  "run": "several",
+  "thought": 13,
+  "thinking_id": "n_8921ed1a",
+  "start": 20208,
+  "end": 23726
+ },
+ "R-f81584": {
+  "run": "several",
+  "thought": 5,
+  "thinking_id": "n_fedb2519",
+  "start": 2626,
+  "end": 3778
+ },
+ "R-c906de": {
+  "run": "several",
+  "thought": 23,
+  "thinking_id": "n_ab196928",
+  "start": 49505,
+  "end": 54073
+ },
+ "R-d71584": {
+  "run": "several",
+  "thought": 25,
+  "thinking_id": "n_63ad1ed6",
+  "start": 57138,
+  "end": 61328
+ },
+ "R-ad5901": {
+  "run": "several",
+  "thought": 50,
+  "thinking_id": "n_25c709a5",
+  "start": 108318,
+  "end": 109387
+ },
+ "R-089d77": {
+  "run": "several",
+  "thought": 28,
+  "thinking_id": "n_051efdf9",
+  "start": 66843,
+  "end": 67966
+ },
+ "R-a8e6da": {
+  "run": "january",
+  "thought": 23,
+  "thinking_id": "n_97807c35",
+  "start": 108700,
+  "end": 111200
+ },
+ "R-cf52c8": {
+  "run": "january",
+  "thought": 16,
+  "thinking_id": "n_aee44981",
+  "start": 67200,
+  "end": 72200
+ },
+ "R-383a15": {
+  "run": "january",
+  "thought": 8,
+  "thinking_id": "n_b2f12ff8",
+  "start": 36000,
+  "end": 40000
+ },
+ "R-262e5c": {
+  "run": "several",
+  "thought": 48,
+  "thinking_id": "n_970001ad",
+  "start": 106643,
+  "end": 107913
+ },
+ "R-cd2831": {
+  "run": "several",
+  "thought": 19,
+  "thinking_id": "n_b074d4f3",
+  "start": 38903,
+  "end": 40673
+ },
+ "R-c3b2d9": {
+  "run": "several",
+  "thought": 39,
+  "thinking_id": "n_4fe094d9",
+  "start": 85887,
+  "end": 87940
+ },
+ "R-bd7b39": {
+  "run": "several",
+  "thought": 55,
+  "thinking_id": "n_a48d053c",
+  "start": 115358,
+  "end": 118459
+ },
+ "R-e4a19c": {
+  "run": "several",
+  "thought": 46,
+  "thinking_id": "n_a7101376",
+  "start": 102471,
+  "end": 105448
+ },
+ "R-33ec90": {
+  "run": "january",
+  "thought": 4,
+  "thinking_id": "n_5126024d",
+  "start": 16000,
+  "end": 24000
+ },
+ "R-94ae1c": {
+  "run": "january",
+  "thought": 13,
+  "thinking_id": "n_fe1bd5c7",
+  "start": 55000,
+  "end": 61000
+ },
+ "R-f9a0e0": {
+  "run": "several",
+  "thought": 17,
+  "thinking_id": "n_12055409",
+  "start": 31754,
+  "end": 34366
+ },
+ "R-cd1408": {
+  "run": "several",
+  "thought": 56,
+  "thinking_id": "n_0816a124",
+  "start": 118459,
+  "end": 120155
+ },
+ "R-6299b2": {
+  "run": "several",
+  "thought": 41,
+  "thinking_id": "n_ad181d3e",
+  "start": 91372,
+  "end": 93315
+ },
+ "R-873d91": {
+  "run": "several",
+  "thought": 3,
+  "thinking_id": "n_7d2e2c06",
+  "start": 1099,
+  "end": 1809
+ },
+ "R-011f76": {
+  "run": "several",
+  "thought": 10,
+  "thinking_id": "n_94221c54",
+  "start": 12848,
+  "end": 14890
+ },
+ "R-07100c": {
+  "run": "several",
+  "thought": 26,
+  "thinking_id": "n_75340a94",
+  "start": 61328,
+  "end": 62652
+ },
+ "R-80d6c6": {
+  "run": "several",
+  "thought": 37,
+  "thinking_id": "n_a069e2a4",
+  "start": 81935,
+  "end": 83632
+ },
+ "R-c5c37e": {
+  "run": "several",
+  "thought": 49,
+  "thinking_id": "n_c5bb3502",
+  "start": 107913,
+  "end": 108318
+ },
+ "R-b5e46d": {
+  "run": "january",
+  "thought": 10,
+  "thinking_id": "n_37f9d07b",
+  "start": 44000,
+  "end": 48000
+ },
+ "R-102e47": {
+  "run": "january",
+  "thought": 24,
+  "thinking_id": "n_62d9f804",
+  "start": 111200,
+  "end": 112400
+ },
+ "R-e5ce50": {
+  "run": "january",
+  "thought": 22,
+  "thinking_id": "n_5e730fb8",
+  "start": 104700,
+  "end": 108700
+ },
+ "R-8206b7": {
+  "run": "january",
+  "thought": 5,
+  "thinking_id": "n_1d05ba4d",
+  "start": 24000,
+  "end": 28000
+ },
+ "R-fbf36c": {
+  "run": "january",
+  "thought": 19,
+  "thinking_id": "n_1eb08ffb",
+  "start": 82900,
+  "end": 90400
+ },
+ "R-8932a1": {
+  "run": "january",
+  "thought": 21,
+  "thinking_id": "n_475cdcce",
+  "start": 100700,
+  "end": 104700
+ },
+ "R-0cf6f0": {
+  "run": "several",
+  "thought": 38,
+  "thinking_id": "n_5349b36f",
+  "start": 83632,
+  "end": 85887
+ },
+ "R-b4b07f": {
+  "run": "january",
+  "thought": 26,
+  "thinking_id": "n_ba76a0bb",
+  "start": 116400,
+  "end": 119900
+ },
+ "R-9ea973": {
+  "run": "several",
+  "thought": 6,
+  "thinking_id": "n_55e03bf8",
+  "start": 3778,
+  "end": 5441
+ },
+ "R-0bea49": {
+  "run": "several",
+  "thought": 21,
+  "thinking_id": "n_8629ec55",
+  "start": 43298,
+  "end": 47987
+ },
+ "R-fb79c4": {
+  "run": "several",
+  "thought": 33,
+  "thinking_id": "n_bd3584a6",
+  "start": 73171,
+  "end": 75043
+ },
+ "R-424de5": {
+  "run": "january",
+  "thought": 20,
+  "thinking_id": "n_6bc9c7f4",
+  "start": 90400,
+  "end": 100700
+ },
+ "R-dfa282": {
+  "run": "several",
+  "thought": 30,
+  "thinking_id": "n_b7083c9d",
+  "start": 69218,
+  "end": 71696
+ },
+ "R-9e03a5": {
+  "run": "january",
+  "thought": 27,
+  "thinking_id": "n_88ee783d",
+  "start": 119900,
+  "end": 121900
+ },
+ "R-53c22b": {
+  "run": "several",
+  "thought": 44,
+  "thinking_id": "n_15c24ca1",
+  "start": 97468,
+  "end": 100005
+ },
+ "R-9ca20f": {
+  "run": "several",
+  "thought": 22,
+  "thinking_id": "n_6e657cc2",
+  "start": 47987,
+  "end": 49505
+ },
+ "R-51bb32": {
+  "run": "january",
+  "thought": 9,
+  "thinking_id": "n_d7d79201",
+  "start": 40000,
+  "end": 44000
+ },
+ "R-9a2b21": {
+  "run": "several",
+  "thought": 4,
+  "thinking_id": "n_2e0beebf",
+  "start": 1809,
+  "end": 2626
+ },
+ "R-b7ddbc": {
+  "run": "january",
+  "thought": 14,
+  "thinking_id": "n_06051f31",
+  "start": 61000,
+  "end": 64200
+ },
+ "R-c51486": {
+  "run": "several",
+  "thought": 12,
+  "thinking_id": "n_76c7e303",
+  "start": 17632,
+  "end": 20208
+ },
+ "R-b919e6": {
+  "run": "several",
+  "thought": 54,
+  "thinking_id": "n_17284e23",
+  "start": 112740,
+  "end": 115358
+ },
+ "R-768288": {
+  "run": "several",
+  "thought": 52,
+  "thinking_id": "n_7953a950",
+  "start": 110187,
+  "end": 111608
+ },
+ "R-d4172e": {
+  "run": "several",
+  "thought": 40,
+  "thinking_id": "n_e0d98d04",
+  "start": 87940,
+  "end": 91372
+ },
+ "R-334a60": {
+  "run": "january",
+  "thought": 28,
+  "thinking_id": "n_e74ecabb",
+  "start": 121900,
+  "end": 123900
+ },
+ "R-336bc9": {
+  "run": "january",
+  "thought": 7,
+  "thinking_id": "n_c231678a",
+  "start": 34000,
+  "end": 36000
+ },
+ "R-8f61ae": {
+  "run": "several",
+  "thought": 20,
+  "thinking_id": "n_e008e6b4",
+  "start": 40673,
+  "end": 43298
+ },
+ "R-fbb6dd": {
+  "run": "several",
+  "thought": 45,
+  "thinking_id": "n_79ca3e2d",
+  "start": 100005,
+  "end": 102471
+ },
+ "R-989560": {
+  "run": "several",
+  "thought": 36,
+  "thinking_id": "n_001bed0f",
+  "start": 81472,
+  "end": 81935
+ },
+ "R-61b4c3": {
+  "run": "several",
+  "thought": 7,
+  "thinking_id": "n_ab9ba5d5",
+  "start": 5441,
+  "end": 7457
+ },
+ "R-39f3cd": {
+  "run": "january",
+  "thought": 25,
+  "thinking_id": "n_3df4804d",
+  "start": 112400,
+  "end": 116400
+ },
+ "R-72a6c0": {
+  "run": "several",
+  "thought": 16,
+  "thinking_id": "n_589471b7",
+  "start": 27727,
+  "end": 31754
+ },
+ "R-b8d559": {
+  "run": "several",
+  "thought": 15,
+  "thinking_id": "n_ad6a471f",
+  "start": 24894,
+  "end": 27727
+ },
+ "R-7dedf4": {
+  "run": "several",
+  "thought": 18,
+  "thinking_id": "n_f04d19a9",
+  "start": 34366,
+  "end": 38903
+ },
+ "R-1d023b": {
+  "run": "several",
+  "thought": 47,
+  "thinking_id": "n_938b0365",
+  "start": 105448,
+  "end": 106643
+ },
+ "R-d11370": {
+  "run": "several",
+  "thought": 53,
+  "thinking_id": "n_fd82ad69",
+  "start": 111608,
+  "end": 112740
+ },
+ "R-31772a": {
+  "run": "january",
+  "thought": 2,
+  "thinking_id": "n_463a82fc",
+  "start": 6000,
+  "end": 8000
+ },
+ "R-b17a34": {
+  "run": "january",
+  "thought": 12,
+  "thinking_id": "n_84d48fc0",
+  "start": 51000,
+  "end": 55000
+ },
+ "R-1f7b7f": {
+  "run": "several",
+  "thought": 42,
+  "thinking_id": "n_aca2341a",
+  "start": 93315,
+  "end": 95316
+ },
+ "R-0b95f0": {
+  "run": "several",
+  "thought": 24,
+  "thinking_id": "n_aba8c481",
+  "start": 54073,
+  "end": 57138
+ },
+ "R-348210": {
+  "run": "several",
+  "thought": 35,
+  "thinking_id": "n_2e19f1e6",
+  "start": 76286,
+  "end": 81472
+ },
+ "R-adf188": {
+  "run": "january",
+  "thought": 18,
+  "thinking_id": "n_5d0656c9",
+  "start": 80200,
+  "end": 82900
+ },
+ "R-51ae50": {
+  "run": "several",
+  "thought": 2,
+  "thinking_id": "n_988c1e46",
+  "start": 516,
+  "end": 1099
+ },
+ "R-5e8c0a": {
+  "run": "january",
+  "thought": 15,
+  "thinking_id": "n_0be6ec7c",
+  "start": 64200,
+  "end": 67200
+ }
+}

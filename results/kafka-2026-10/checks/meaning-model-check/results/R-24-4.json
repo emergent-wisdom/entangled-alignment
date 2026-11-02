@@ -1,0 +1,47 @@
+{
+ "packet": "R-24-4",
+ "started": "2026-11-01T16:23:41.148341+00:00",
+ "model": "claude-sonnet-5-5",
+ "effort": "high",
+ "attempt": 1,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 55842,
+  "cache_read_input_tokens": 2067,
+  "output_tokens": 1993,
+  "output_tokens_details": {
+   "thinking_tokens": 1829
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 55842,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 1993,
+    "cache_read_input_tokens": 2067,
+    "cache_creation_input_tokens": 55842,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 55842
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "duration_ms": 17706,
+ "result": {
+  "problems": [],
+  "records_checked": 60,
+  "note": "All 60 records are time-interval series for the father and Gregor. Their backstory and calendar dates are labelled as guessed or estimated, and the described episodes (waking, first-day exposure and apple bombardment, food trial and hiding, parents' nonvisits, concealment under the sheet, climbing, the mother's visit and furniture dispute) all fall within the text read, so I found nothing ahead, unsupported or mislabelled."
+ }
+}

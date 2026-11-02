@@ -1,0 +1,47 @@
+{
+ "packet": "R-24-13",
+ "started": "2026-11-01T16:22:12.207171+00:00",
+ "model": "claude-sonnet-5-5",
+ "effort": "high",
+ "attempt": 1,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 66933,
+  "cache_read_input_tokens": 2067,
+  "output_tokens": 2701,
+  "output_tokens_details": {
+   "thinking_tokens": 2539
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 66933,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 2701,
+    "cache_read_input_tokens": 2067,
+    "cache_creation_input_tokens": 66933,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 66933
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "duration_ms": 23816,
+ "result": {
+  "problems": [],
+  "records_checked": 60,
+  "note": "All 60 records are applied value series, and none states more than the text read so far supports: unsourced history is tagged sketch/exploring/inferred and marked as guessed, while the 'source' and sourced-note points (mother's return expectation, the apple attack and her plea for his life, the father's duty to endure, the four-hour sheet, the mother's cry 'He's my unfortunate son') match the text, and no point is dated past what has been read."
+ }
+}

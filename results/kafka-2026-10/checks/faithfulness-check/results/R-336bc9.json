@@ -1,0 +1,57 @@
+{
+ "blind": "R-336bc9",
+ "started": "2026-10-26T10:17:32.373274+00:00",
+ "model": "claude-sonnet-5-5",
+ "effort": "high",
+ "attempt": 1,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 15705,
+  "cache_read_input_tokens": 2119,
+  "output_tokens": 1755,
+  "output_tokens_details": {
+   "thinking_tokens": 1419
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 15705,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 1755,
+    "cache_read_input_tokens": 2119,
+    "cache_creation_input_tokens": 15705,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 15705
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "cost_usd_reported": 0.0805859,
+ "duration_ms": 14686,
+ "result": {
+  "misreadings": [
+   {
+    "quote": "She sits on the table, coffee pouring over her, \"without knowing what she was doing.\"",
+    "version": "both",
+    "evidence": "she sat quickly down on it without knowing what she was doing; without even seeming to notice that the coffee pot had been knocked over and a gush of coffee was pouring down onto the carpet.",
+    "kind": "invented",
+    "severity": "medium",
+    "explanation": "The coffee pours onto the carpet, not over the mother; the text never says she is drenched, and the translation repeats the claim as \"coffee pouring over her\"."
+   }
+  ],
+  "factual_statements_checked": 16,
+  "note": "Almost every claim about the text holds (the solid ground, the gentle \"Mother, mother\" followed by snapping jaws, the father's long breakfasts, the father's panic after the clerk's flight); the only error is that the coffee is said to pour over the mother, in both versions."
+ }
+}

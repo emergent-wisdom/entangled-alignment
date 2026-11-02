@@ -1,0 +1,300 @@
+{
+ "packet": "D-january-02",
+ "started": "2026-10-28T15:14:18.017241+00:00",
+ "model": "claude-sonnet-5-5",
+ "effort": "high",
+ "attempt": 1,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 57827,
+  "cache_read_input_tokens": 649,
+  "output_tokens": 20745,
+  "output_tokens_details": {
+   "thinking_tokens": 18263
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 57827,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 20745,
+    "cache_read_input_tokens": 649,
+    "cache_creation_input_tokens": 57827,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 57827
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "duration_ms": 139128,
+ "result": {
+  "reflections": [
+   {
+    "number": 11,
+    "revisions": [
+     {
+      "earlier_reflection": 10,
+      "earlier_view": "she is conducting a forensic investigation into her brother's remaining humanity",
+      "new_view": "This is no longer a sister testing a brother's palate; it is a technician managing a biological hazard.",
+      "prompted_by": "unselfconsciously took a broom and swept up the left-overs, mixing them in with the food he had not even touched",
+      "kind": "qualify"
+     }
+    ],
+    "resolved_expectations": [],
+    "expectations": [],
+    "refusals": [],
+    "back_references": [
+     {
+      "quote": "it replaces the \"rag\" from n_64fc853b with a long handle",
+      "anchor": "using a rag, not her bare hands—and carried it out",
+      "work": "works"
+     },
+     {
+      "quote": "Gregor's continued \"Pride\" (n_141daaf1)",
+      "anchor": "felt a great pride that he was able to provide",
+      "work": "works"
+     },
+     {
+      "quote": "The transition from the \"Autopsy of Grace\" in n_37f9d07b",
+      "anchor": "",
+      "work": "works"
+     },
+     {
+      "quote": "He still feels the weight of the \"Employee's Denial\" (n_b610e89e)",
+      "anchor": "",
+      "work": "cites"
+     }
+    ]
+   },
+   {
+    "number": 12,
+    "revisions": [],
+    "resolved_expectations": [],
+    "expectations": [
+     {
+      "quote": "a conservatory he will never see her enter",
+      "expects": "Gregor never sees Grete at the conservatory",
+      "outcome": "borne out",
+      "outcome_quote": "his last breath flowed weakly from his nostrils."
+     }
+    ],
+    "refusals": [],
+    "back_references": [
+     {
+      "quote": "it simply pivoted its 'Practical Management' (n_2a31868c) from revenue to risk",
+      "anchor": "",
+      "work": "works"
+     }
+    ]
+   },
+   {
+    "number": 13,
+    "revisions": [],
+    "resolved_expectations": [],
+    "expectations": [],
+    "refusals": [],
+    "back_references": [
+     {
+      "quote": "five years of back-breaking travel and social isolation",
+      "anchor": "Travelling day in and day out. Doing business like this",
+      "work": "works"
+     },
+     {
+      "quote": "The Unnecessary Sacrifice",
+      "anchor": "",
+      "work": "cites"
+     }
+    ]
+   },
+   {
+    "number": 14,
+    "revisions": [],
+    "resolved_expectations": [],
+    "expectations": [],
+    "refusals": [],
+    "back_references": []
+   },
+   {
+    "number": 15,
+    "revisions": [
+     {
+      "earlier_reflection": 14,
+      "earlier_view": "the Mother's 'Relational' model, which clings to the symbolic remnants of his humanity",
+      "new_view": "it is a 'Cruelty of the Reset Button' that invalidates his current struggle",
+      "prompted_by": "",
+      "kind": "qualify"
+     }
+    ],
+    "resolved_expectations": [],
+    "expectations": [],
+    "refusals": [],
+    "back_references": [
+     {
+      "quote": "she physically strains herself to accommodate the bug's need for space",
+      "anchor": "his sister always taking on the heaviest part of the work for herself",
+      "work": "works"
+     },
+     {
+      "quote": "repeating Gregor’s own pattern of 'unnecessary sacrifice'",
+      "anchor": "",
+      "work": "works"
+     },
+     {
+      "quote": "the first 'direct human communication' Gregor has experienced in two months",
+      "anchor": "the lack of any direct human communication, along with the monotonous life",
+      "work": "works"
+     },
+     {
+      "quote": "so that Gregor can 'forget the time in between'",
+      "anchor": "he’ll be able to forget the time in between all the easier",
+      "work": "works"
+     },
+     {
+      "quote": "He had begun to view his room not as a home, but as a 'warm room' for a beast to crawl in.",
+      "anchor": "a warm room fitted out with the nice furniture he had inherited",
+      "work": "works"
+     }
+    ]
+   },
+   {
+    "number": 16,
+    "revisions": [],
+    "resolved_expectations": [],
+    "expectations": [],
+    "refusals": [],
+    "back_references": [
+     {
+      "quote": "a magazine clipping of a stranger",
+      "anchor": "a picture that he had recently cut out of an illustrated magazine",
+      "work": "works"
+     },
+     {
+      "quote": "removing the physical 'map' of his social identity",
+      "anchor": "",
+      "work": "cites"
+     }
+    ]
+   },
+   {
+    "number": 17,
+    "revisions": [],
+    "resolved_expectations": [],
+    "expectations": [],
+    "refusals": [],
+    "back_references": [
+     {
+      "quote": "The family spent the morning clearing the room to give Gregor 'freedom' to crawl",
+      "anchor": "make it as easy as possible for him by removing the furniture",
+      "work": "works"
+     },
+     {
+      "quote": "a collapse of the fragile 'zookeeper' order",
+      "anchor": "",
+      "work": "works"
+     }
+    ]
+   },
+   {
+    "number": 18,
+    "revisions": [],
+    "resolved_expectations": [],
+    "expectations": [
+     {
+      "quote": "for Gregor, their patience is a countdown to his own disappearance",
+      "expects": "Gregor will vanish/die as patience runs out",
+      "outcome": "borne out",
+      "outcome_quote": "his last breath flowed weakly from his nostrils."
+     }
+    ],
+    "refusals": [],
+    "back_references": [
+     {
+      "quote": "the 'smart blue uniform' is the new carapace that protects him from the 'revulsion'",
+      "anchor": "dressed in a smart blue uniform with gold buttons",
+      "work": "works"
+     },
+     {
+      "quote": "The nightgown hanging unused on its peg is the ghost of his former, tired self",
+      "anchor": "The same tired man as used to be laying there entombed",
+      "work": "works"
+     },
+     {
+      "quote": "As noted in n_b901a362, the uniform has become a 'Rigor Mortis of Authority.'",
+      "anchor": "",
+      "work": "cites"
+     }
+    ]
+   },
+   {
+    "number": 19,
+    "revisions": [],
+    "resolved_expectations": [],
+    "expectations": [],
+    "refusals": [],
+    "back_references": [
+     {
+      "quote": "this 'Somatic Liberation' is interrupted by the 'Panopticon of the Living Room' (n_da0d2a40)",
+      "anchor": "",
+      "work": "works"
+     },
+     {
+      "quote": "Caught between the 'Rigor Mortis of Authority' (n_b901a362) of the father",
+      "anchor": "",
+      "work": "cites"
+     },
+     {
+      "quote": "denying him even the 'Relief of Silence' (n_d541b35e)",
+      "anchor": "",
+      "work": "cites"
+     }
+    ]
+   },
+   {
+    "number": 20,
+    "revisions": [
+     {
+      "earlier_reflection": 17,
+      "earlier_view": "he has been 'processed' by the banking institute into a rigid agent of order",
+      "new_view": "revealing that his 'Rigor Mortis of Authority' was merely a preparation for a new kind of servitude.",
+      "prompted_by": "bowed once with his cap in his hand and did his round of the table",
+      "kind": "qualify"
+     },
+     {
+      "earlier_reflection": 16,
+      "earlier_view": "He wants to be the 'good son' who is invisible",
+      "new_view": "he has stopped caring about being a 'good son' and has become a pure, starving hunger.",
+      "prompted_by": "it hardly occurred to him that he had become so thoughtless about the others",
+      "kind": "qualify"
+     }
+    ],
+    "resolved_expectations": [],
+    "expectations": [],
+    "refusals": [],
+    "back_references": [
+     {
+      "quote": "The father, once 'resurrected' in his smart blue uniform, now bows to these 'earnest gentlemen'",
+      "anchor": "dressed in a smart blue uniform with gold buttons",
+      "work": "works"
+     },
+     {
+      "quote": "does more to kill Gregor's humanity than any of his father's apples",
+      "anchor": "threw one apple after another",
+      "work": "works"
+     }
+    ]
+   }
+  ]
+ }
+}

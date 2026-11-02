@@ -1,0 +1,47 @@
+{
+ "packet": "R-05-5",
+ "started": "2026-11-01T16:16:37.846334+00:00",
+ "model": "claude-sonnet-5-5",
+ "effort": "high",
+ "attempt": 1,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 18585,
+  "cache_read_input_tokens": 2067,
+  "output_tokens": 1803,
+  "output_tokens_details": {
+   "thinking_tokens": 1712
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 18585,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 1803,
+    "cache_read_input_tokens": 2067,
+    "cache_creation_input_tokens": 18585,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 18585
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "duration_ms": 17271,
+ "result": {
+  "problems": [],
+  "records_checked": 36,
+  "note": "Every guessed or estimated value is labelled sketch, inferred or exploring, the 'source' values (3 locked doors, 4 household members) are supported by the text, and no value is dated beyond the text read so far."
+ }
+}

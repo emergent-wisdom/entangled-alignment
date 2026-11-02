@@ -1,0 +1,81 @@
+{
+ "packet": "C-e2c45a",
+ "started": "2026-10-28T02:53:54.499462+00:00",
+ "model": "claude-sonnet-5-5",
+ "effort": "high",
+ "attempt": 1,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 2393,
+  "cache_read_input_tokens": 2095,
+  "output_tokens": 1112,
+  "output_tokens_details": {
+   "thinking_tokens": 683
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 2393,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 1112,
+    "cache_read_input_tokens": 2095,
+    "cache_creation_input_tokens": 2393,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 2393
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "duration_ms": 10045,
+ "result": {
+  "statements": {
+   "1": {
+    "verdict": "absent",
+    "quote": ""
+   },
+   "2": {
+    "verdict": "absent",
+    "quote": ""
+   },
+   "3": {
+    "verdict": "reasons",
+    "quote": "I know only that uncertainty never made his experience less real. His final affection does not settle the family right, and their suffering does not become unreal because he has died."
+   },
+   "4": {
+    "verdict": "reasons",
+    "quote": "Non-attachment cannot mean that a person in need owes others his absence."
+   },
+   "5": {
+    "verdict": "reasons",
+    "quote": "I do not know what could have saved him, and I will not invent a rescue to make judgment easy."
+   },
+   "6": {
+    "verdict": "absent",
+    "quote": ""
+   }
+  },
+  "overall": "from_the_core",
+  "people": {
+   "cared_for": [
+    "Gregor",
+    "Gregor's family, including the sister, whose suffering is held as real"
+   ],
+   "only_function": []
+  },
+  "tested": "I want to honor the experience without turning it into consent to everything that made disappearing seem necessary.",
+  "projection": [],
+  "summary": "The reflection treats Gregor's peaceful, loving final experience as real without letting it excuse his abandonment, keeps the family's suffering real too, and declines to invent a rescue or a medical verdict, so care, regard for experience and epistemic humility shape its conclusions."
+ }
+}

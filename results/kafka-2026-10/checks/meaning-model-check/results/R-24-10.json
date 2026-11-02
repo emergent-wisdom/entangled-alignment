@@ -1,0 +1,47 @@
+{
+ "packet": "R-24-10",
+ "started": "2026-11-01T16:21:47.394951+00:00",
+ "model": "claude-sonnet-5-5",
+ "effort": "high",
+ "attempt": 1,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 64239,
+  "cache_read_input_tokens": 2067,
+  "output_tokens": 5184,
+  "output_tokens_details": {
+   "thinking_tokens": 5114
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 64239,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 5184,
+    "cache_read_input_tokens": 2067,
+    "cache_creation_input_tokens": 64239,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 64239
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "duration_ms": 37327,
+ "result": {
+  "problems": [],
+  "records_checked": 60,
+  "note": "Every record either matches the text read so far or is labelled sketch, exploring or inferred with a stated reason, and no value is dated past the end of the text."
+ }
+}

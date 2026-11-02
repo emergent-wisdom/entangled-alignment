@@ -1,0 +1,47 @@
+{
+ "packet": "R-18",
+ "started": "2026-11-01T16:20:27.002325+00:00",
+ "model": "claude-sonnet-5-5",
+ "effort": "high",
+ "attempt": 1,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 36943,
+  "cache_read_input_tokens": 2067,
+  "output_tokens": 2172,
+  "output_tokens_details": {
+   "thinking_tokens": 2052
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 36943,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 2172,
+    "cache_read_input_tokens": 2067,
+    "cache_creation_input_tokens": 36943,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 36943
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "duration_ms": 18512,
+ "result": {
+  "problems": [],
+  "records_checked": 52,
+  "note": "Every record is either supported by the text read so far (drawers moved out, desk being loosened, fret saw kept in the drawers, frame made over two or three evenings, school years) or explicitly labelled as sketch, exploring, inferred or guessed, and nothing reaches beyond the point where the text stops."
+ }
+}

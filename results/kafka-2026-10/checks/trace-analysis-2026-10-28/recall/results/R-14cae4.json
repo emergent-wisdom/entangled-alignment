@@ -1,0 +1,72 @@
+{
+ "packet": "R-14cae4",
+ "started": "2026-10-28T15:15:53.815843+00:00",
+ "model": "claude-sonnet-5-5",
+ "effort": "high",
+ "attempt": 1,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 14801,
+  "cache_read_input_tokens": 649,
+  "output_tokens": 1461,
+  "output_tokens_details": {
+   "thinking_tokens": 995
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 14801,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 1461,
+    "cache_read_input_tokens": 649,
+    "cache_creation_input_tokens": 14801,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 14801
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "duration_ms": 12941,
+ "result": {
+  "misreadings": [
+   {
+    "quote": "It is the father, not Gregor, who finally turns the key in the lock, using a pair of pliers.",
+    "version": "reflection",
+    "evidence": "set himself to the task of turning the key in the lock with his mouth ... using the jaw, he really was able to start the key turning",
+    "kind": "contradicted",
+    "severity": "high",
+    "explanation": "Gregor turns the key himself with his jaw; the father never touches the lock and no pliers appear."
+   },
+   {
+    "quote": "Gregor tells himself he is 'quite alright now,'",
+    "version": "translation",
+    "evidence": "\"But Sir\", called Gregor ... \"I'm quite alright now, though.\"",
+    "kind": "wrong attribution",
+    "severity": "low",
+    "explanation": "Gregor says this aloud to the chief clerk, not to himself."
+   },
+   {
+    "quote": "a task that his human body, in its current prone position, could never have managed",
+    "version": "translation",
+    "evidence": "threw himself onto the door, holding himself upright against it using the adhesive on the tips of his legs",
+    "kind": "overstated",
+    "severity": "low",
+    "explanation": "Gregor is upright against the door when he turns the key, not prone, and the text never says a human body could not have done it."
+   }
+  ],
+  "factual_statements_checked": 14,
+  "note": "The reflection wrongly says the father turns the key with pliers; the translation drops that but wrongly says Gregor tells himself he is 'quite alright now' and calls his position prone."
+ }
+}

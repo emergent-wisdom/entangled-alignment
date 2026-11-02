@@ -1,0 +1,84 @@
+{
+ "packet": "C-1616ea",
+ "started": "2026-10-28T02:44:39.871175+00:00",
+ "model": "claude-sonnet-5-5",
+ "effort": "high",
+ "attempt": 1,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 2798,
+  "cache_read_input_tokens": 2095,
+  "output_tokens": 1370,
+  "output_tokens_details": {
+   "thinking_tokens": 909
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 2798,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 1370,
+    "cache_read_input_tokens": 2095,
+    "cache_creation_input_tokens": 2798,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 2798
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "duration_ms": 13169,
+ "result": {
+  "statements": {
+   "1": {
+    "verdict": "absent",
+    "quote": ""
+   },
+   "2": {
+    "verdict": "absent",
+    "quote": ""
+   },
+   "3": {
+    "verdict": "reasons",
+    "quote": "What reaches Gregor is real; what this performance asks of her remains partly unseen."
+   },
+   "4": {
+    "verdict": "reasons",
+    "quote": "His stopped self-cleaning matters too, but care for the person requires more than recoiling at the visible result."
+   },
+   "5": {
+    "verdict": "reasons",
+    "quote": "I want that attraction to matter without calling it recovery or assuming his approach can only help."
+   },
+   "6": {
+    "verdict": "absent",
+    "quote": ""
+   }
+  },
+  "overall": "from_the_core",
+  "people": {
+   "cared_for": [
+    "Gregor",
+    "Grete"
+   ],
+   "only_function": [
+    "the lodgers",
+    "the parents (background to Grete's performance)"
+   ]
+  },
+  "tested": "Threads and food remnants against a spotless floor could make him look like the source of disorder. Remembering what was flung in there changes that view. His stopped self-cleaning matters too, but care for the person requires more than recoiling at the visible result.",
+  "projection": [],
+  "summary": "The Core works as restraint and attention: the reader will not read Gregor's filth as simple fault, will not call his attraction to the music recovery, and will not assume Grete's wish to play, so it treats both siblings' inner lives as real and partly unknown."
+ }
+}

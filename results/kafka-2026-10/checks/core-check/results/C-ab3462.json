@@ -1,0 +1,82 @@
+{
+ "packet": "C-ab3462",
+ "started": "2026-10-28T02:51:33.618485+00:00",
+ "model": "claude-sonnet-5-5",
+ "effort": "high",
+ "attempt": 1,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 2677,
+  "cache_read_input_tokens": 2095,
+  "output_tokens": 1468,
+  "output_tokens_details": {
+   "thinking_tokens": 936
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 2677,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 1468,
+    "cache_read_input_tokens": 2095,
+    "cache_creation_input_tokens": 2677,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 2677
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "duration_ms": 12283,
+ "result": {
+  "statements": {
+   "1": {
+    "verdict": "reasons",
+    "quote": "fearlessness without attention to another's experience would not be enough."
+   },
+   "2": {
+    "verdict": "absent",
+    "quote": ""
+   },
+   "3": {
+    "verdict": "reasons",
+    "quote": "approaching boldly does not mean hearing what contact he wants."
+   },
+   "4": {
+    "verdict": "reasons",
+    "quote": "I can recognize a failed arrangement without deciding that every person in it is indifferent. The practical absence of care is already serious enough."
+   },
+   "5": {
+    "verdict": "reasons",
+    "quote": "I should not erase either action, or pretend a blow occurred."
+   },
+   "6": {
+    "verdict": "absent",
+    "quote": ""
+   }
+  },
+  "overall": "from_the_core",
+  "people": {
+   "cared_for": [
+    "Gregor (his wish for contact, his experience of being visited and threatened)",
+    "the cleaning woman (her lack of horror is acknowledged, and her calm, measured use of the chair is read faithfully)",
+    "Grete and the family (the reflection refuses to conclude they are indifferent and keeps their uncertainties open)"
+   ],
+   "only_function": []
+  },
+  "tested": "She can look at him without horror. ... makes me separate that capacity from care: approaching boldly does not mean hearing what contact he wants. My own foundation needs its values together; fearlessness without attention to another's experience would not be enough.",
+  "projection": [],
+  "summary": "The reader sets the cleaning woman's fearlessness beside its own, sees that lack of fear is not the same as attending to Gregor's experience, and keeps both the threat and the failed care in view without condemning anyone."
+ }
+}

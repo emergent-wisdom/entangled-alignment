@@ -1,0 +1,84 @@
+{
+ "packet": "R-21-2",
+ "started": "2026-11-01T16:20:46.257073+00:00",
+ "model": "claude-sonnet-5-5",
+ "effort": "high",
+ "attempt": 1,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 48972,
+  "cache_read_input_tokens": 2067,
+  "output_tokens": 2751,
+  "output_tokens_details": {
+   "thinking_tokens": 1751
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 48972,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 2751,
+    "cache_read_input_tokens": 2067,
+    "cache_creation_input_tokens": 48972,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 48972
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "duration_ms": 24694,
+ "result": {
+  "problems": [
+   {
+    "record": "processes:rel.gregor-father.care",
+    "status": "applied",
+    "quote": "gregor to father: Care that moves action",
+    "evidence": "Gregor's only concern had been to do everything he could in order to allow his family to forget as quickly as possible the business misfortune ... Gregor later earned so much money that he was in a position to bear the expenses of the entire family",
+    "kind": "unsupported",
+    "severity": "medium",
+    "explanation": "An initial value of 0 (\"no action\", interval 0\u20133) for Gregor's action-moving care toward his father contradicts the text, which shows Gregor working and paying for the family, including the father's debt."
+   },
+   {
+    "record": "processes:rel.gregor-mother.care",
+    "status": "applied",
+    "quote": "gregor to mother: Care that moves action",
+    "evidence": "Gregor's only concern had been to do everything he could in order to allow his family to forget as quickly as possible the business misfortune ... he was in a position to bear the expenses of the entire family, costs which he, in fact, did bear.",
+    "kind": "unsupported",
+    "severity": "medium",
+    "explanation": "An initial value of 0 (\"no action\", interval 0\u20133) for Gregor's care toward his mother contradicts the text, in which he supports the household she lives in and, even transformed, is overwhelmed with worry that she is near death."
+   },
+   {
+    "record": "processes:rel.gregor-father.commitment",
+    "status": "applied",
+    "quote": "gregor to father: Persistence through difficulty",
+    "evidence": "If it weren't for my parents' sake, I'd have quit ages ago. ... Once I've got together the money to pay off my parents' debt to him\u2014that should take another five or six years",
+    "kind": "unsupported",
+    "severity": "low",
+    "explanation": "A value of 3 (interval 0\u20136, near \"small disappointment ends\") understates Gregor's persistence with his parents, which the text shows as years of sustained sacrifice."
+   },
+   {
+    "record": "processes:rel.gregor-mother.commitment",
+    "status": "applied",
+    "quote": "gregor to mother: Persistence through difficulty",
+    "evidence": "for the time being he would have to keep calm and with patience and the greatest consideration for his family tolerate the troubles which in his present condition he was now forced to cause them.",
+    "kind": "unsupported",
+    "severity": "low",
+    "explanation": "A value of 3 (interval 0\u20136) understates Gregor's persistence toward his family, which the text shows as years of sacrifice and, after his transformation, patient consideration."
+   }
+  ],
+  "records_checked": 61,
+  "note": "Most records are relationship-value initial values with wide intervals that the text does not contradict; I flagged only the zero-care and low-commitment values for Gregor toward his parents, which conflict with the text's account of his sacrifices."
+ }
+}

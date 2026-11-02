@@ -1,0 +1,47 @@
+{
+ "packet": "R-16-3",
+ "started": "2026-11-01T16:19:09.138886+00:00",
+ "model": "claude-sonnet-5-5",
+ "effort": "high",
+ "attempt": 1,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 29773,
+  "cache_read_input_tokens": 2067,
+  "output_tokens": 1805,
+  "output_tokens_details": {
+   "thinking_tokens": 1711
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 29773,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 1805,
+    "cache_read_input_tokens": 2067,
+    "cache_creation_input_tokens": 29773,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 29773
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "duration_ms": 15572,
+ "result": {
+  "problems": [],
+  "records_checked": 31,
+  "note": "No problems found: the event records match the text read so far and mark their calendar placements as guessed, the violin-hours values and the mother-visit forecast are labelled hypotheses, and the reader-state series record the reader's own attention."
+ }
+}

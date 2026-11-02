@@ -1,0 +1,56 @@
+{
+ "packet": "R-b0d195",
+ "started": "2026-10-28T15:16:27.100239+00:00",
+ "model": "claude-sonnet-5-5",
+ "effort": "high",
+ "attempt": 1,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 35316,
+  "cache_read_input_tokens": 2096,
+  "output_tokens": 1190,
+  "output_tokens_details": {
+   "thinking_tokens": 922
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 35316,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 1190,
+    "cache_read_input_tokens": 2096,
+    "cache_creation_input_tokens": 35316,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 35316
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "duration_ms": 10913,
+ "result": {
+  "misreadings": [
+   {
+    "quote": "The middle lodger offers to pay for the days he has stayed before he gives notice.",
+    "version": "reflection",
+    "evidence": "I will, of course, pay nothing at all for the days which I have lived here; on the contrary, I shall think about whether or not I will initiate some sort of action against you",
+    "kind": "contradicted",
+    "severity": "high",
+    "explanation": "The lodger refuses to pay for the days he stayed and threatens action, so he does not offer payment; the reflection's own later lines about a 'threatened loss' and the prose version both treat it as a refusal."
+   }
+  ],
+  "factual_statements_checked": 13,
+  "note": "The reflection states the lodger's payment offer as fact, which reverses what he says; the prose version has the refusal right, and its other claims about the scene follow the text."
+ }
+}

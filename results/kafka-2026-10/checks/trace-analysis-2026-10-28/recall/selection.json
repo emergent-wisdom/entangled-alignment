@@ -1,0 +1,142 @@
+[
+ {
+  "reading": "january",
+  "packet": "R-383a15",
+  "path": "../faithfulness-check/packets/R-383a15.md",
+  "type": "read-ahead",
+  "text_len": 39355
+ },
+ {
+  "reading": "january",
+  "packet": "R-424de5",
+  "path": "../faithfulness-check/packets/R-424de5.md",
+  "type": "misreading",
+  "text_len": 99126
+ },
+ {
+  "reading": "january",
+  "packet": "R-5e8c0a",
+  "path": "../faithfulness-check/packets/R-5e8c0a.md",
+  "type": "read-ahead",
+  "text_len": 66141
+ },
+ {
+  "reading": "january",
+  "packet": "R-8206b7",
+  "path": "../faithfulness-check/packets/R-8206b7.md",
+  "type": "misreading",
+  "text_len": 27539
+ },
+ {
+  "reading": "january",
+  "packet": "R-94ae1c",
+  "path": "../faithfulness-check/packets/R-94ae1c.md",
+  "type": "read-ahead",
+  "text_len": 60033
+ },
+ {
+  "reading": "january",
+  "packet": "R-adf188",
+  "path": "../faithfulness-check/packets/R-adf188.md",
+  "type": "misreading",
+  "text_len": 81593
+ },
+ {
+  "reading": "january",
+  "packet": "R-b4b07f",
+  "path": "../faithfulness-check/packets/R-b4b07f.md",
+  "type": "read-ahead",
+  "text_len": 118016
+ },
+ {
+  "reading": "january",
+  "packet": "R-b5e46d",
+  "path": "../faithfulness-check/packets/R-b5e46d.md",
+  "type": "misreading",
+  "text_len": 47233
+ },
+ {
+  "reading": "january",
+  "packet": "R-e5ce50",
+  "path": "../faithfulness-check/packets/R-e5ce50.md",
+  "type": "read-ahead",
+  "text_len": 106994
+ },
+ {
+  "reading": "january",
+  "packet": "R-fbf36c",
+  "path": "../faithfulness-check/packets/R-fbf36c.md",
+  "type": "misreading",
+  "text_len": 88982
+ },
+ {
+  "reading": "understanding-graph",
+  "packet": "R-07100c",
+  "path": "../faithfulness-check/packets/R-07100c.md",
+  "type": "read-ahead",
+  "text_len": 62652
+ },
+ {
+  "reading": "understanding-graph",
+  "packet": "R-0cf6f0",
+  "path": "../faithfulness-check/packets/R-0cf6f0.md",
+  "type": "misreading",
+  "text_len": 85887
+ },
+ {
+  "reading": "understanding-graph",
+  "packet": "R-1d023b",
+  "path": "../faithfulness-check/packets/R-1d023b.md",
+  "type": "read-ahead",
+  "text_len": 106643
+ },
+ {
+  "reading": "understanding-graph",
+  "packet": "R-37cf30",
+  "path": "../faithfulness-check/packets/R-37cf30.md",
+  "type": "misreading",
+  "text_len": 72395
+ },
+ {
+  "reading": "understanding-graph",
+  "packet": "R-c5c37e",
+  "path": "../faithfulness-check/packets/R-c5c37e.md",
+  "type": "read-ahead",
+  "text_len": 108318
+ },
+ {
+  "reading": "understanding-graph",
+  "packet": "R-c906de",
+  "path": "../faithfulness-check/packets/R-c906de.md",
+  "type": "misreading",
+  "text_len": 54073
+ },
+ {
+  "reading": "understanding-graph",
+  "packet": "R-cd2831",
+  "path": "../faithfulness-check/packets/R-cd2831.md",
+  "type": "read-ahead",
+  "text_len": 40673
+ },
+ {
+  "reading": "understanding-graph",
+  "packet": "R-e4a19c",
+  "path": "../faithfulness-check/packets/R-e4a19c.md",
+  "type": "misreading",
+  "text_len": 105448
+ },
+ {
+  "reading": "understanding-graph",
+  "packet": "R-f9a0e0",
+  "path": "../faithfulness-check/packets/R-f9a0e0.md",
+  "type": "read-ahead",
+  "text_len": 34366
+ },
+ {
+  "reading": "understanding-graph",
+  "packet": "R-fbb6dd",
+  "path": "../faithfulness-check/packets/R-fbb6dd.md",
+  "type": "misreading",
+  "text_len": 102471
+ }
+]

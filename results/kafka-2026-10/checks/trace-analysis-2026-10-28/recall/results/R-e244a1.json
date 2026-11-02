@@ -1,0 +1,56 @@
+{
+ "packet": "R-e244a1",
+ "started": "2026-10-28T15:16:45.399645+00:00",
+ "model": "claude-sonnet-5-5",
+ "effort": "high",
+ "attempt": 1,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 24527,
+  "cache_read_input_tokens": 2096,
+  "output_tokens": 882,
+  "output_tokens_details": {
+   "thinking_tokens": 620
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 24527,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 882,
+    "cache_read_input_tokens": 2096,
+    "cache_creation_input_tokens": 24527,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 24527
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "duration_ms": 9829,
+ "result": {
+  "misreadings": [
+   {
+    "quote": "He chooses the writing desk instead, and presses himself against its drawers so that the women cannot carry it out.",
+    "version": "reflection",
+    "evidence": "\"Then he saw hanging conspicuously on an otherwise empty wall the picture of the woman dressed in nothing but fur. He quickly scurried up over it and pressed himself against the glass\"",
+    "kind": "contradicted",
+    "severity": "high",
+    "explanation": "Gregor presses himself against the picture's glass, not the writing desk. The desk is not described as having drawers, and the chest of drawers was already carried out."
+   }
+  ],
+  "factual_statements_checked": 11,
+  "note": "The translation is faithful to the passage; only the reflection version swaps the picture for the writing desk, which the text contradicts."
+ }
+}

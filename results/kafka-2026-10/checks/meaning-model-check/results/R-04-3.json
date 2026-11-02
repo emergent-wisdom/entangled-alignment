@@ -1,0 +1,47 @@
+{
+ "packet": "R-04-3",
+ "started": "2026-11-01T16:16:01.989914+00:00",
+ "model": "claude-sonnet-5-5",
+ "effort": "high",
+ "attempt": 1,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 34091,
+  "cache_read_input_tokens": 2067,
+  "output_tokens": 2853,
+  "output_tokens_details": {
+   "thinking_tokens": 2717
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 34091,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 2853,
+    "cache_read_input_tokens": 2067,
+    "cache_creation_input_tokens": 34091,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 34091
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "duration_ms": 23262,
+ "result": {
+  "problems": [],
+  "records_checked": 60,
+  "note": "Every claim about the family, Gregor's state and the calendar is either labelled as a sketch, guess, estimate or inference, or is backed by the text read so far (the voice, the weak fist knock, 'five or six years', the cold belief, felt wellness and appetite, the sister's question), and nothing refers to events past the end of the passage."
+ }
+}

@@ -1,0 +1,47 @@
+{
+ "packet": "T-33-1",
+ "started": "2026-11-01T16:30:01.853029+00:00",
+ "model": "claude-sonnet-5-5",
+ "effort": "high",
+ "attempt": 1,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 36133,
+  "cache_read_input_tokens": 2067,
+  "output_tokens": 802,
+  "output_tokens_details": {
+   "thinking_tokens": 673
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 36133,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 802,
+    "cache_read_input_tokens": 2067,
+    "cache_creation_input_tokens": 36133,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 36133
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "duration_ms": 8586,
+ "result": {
+  "misreadings": [],
+  "factual_statements_checked": 11,
+  "note": "Both versions stay within the passage: the sister's 'take over the entire apartment' accusation, Gregor's turning back, the head strikes and rests, the brief fright, 'seemed to have been recognized', and the absence of anyone driving him all match the text, and the rest is hedged interpretation."
+ }
+}

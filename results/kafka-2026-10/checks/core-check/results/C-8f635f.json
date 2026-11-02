@@ -1,0 +1,84 @@
+{
+ "packet": "C-8f635f",
+ "started": "2026-11-01T16:16:18.554601+00:00",
+ "model": "claude-sonnet-5-5",
+ "effort": "high",
+ "attempt": 1,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 4231,
+  "cache_read_input_tokens": 2065,
+  "output_tokens": 1521,
+  "output_tokens_details": {
+   "thinking_tokens": 922
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 4231,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 1521,
+    "cache_read_input_tokens": 2065,
+    "cache_creation_input_tokens": 4231,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 4231
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "duration_ms": 14101,
+ "result": {
+  "statements": {
+   "1": {
+    "verdict": "reasons",
+    "quote": "I cannot let low fear stand in for care. ... someone can face Gregor calmly while disturbing him and leaving his needs unanswered."
+   },
+   "2": {
+    "verdict": "absent",
+    "quote": ""
+   },
+   "3": {
+    "verdict": "absent",
+    "quote": ""
+   },
+   "4": {
+    "verdict": "reasons",
+    "quote": "Care for everyone involved requires keeping exhaustion visible without treating Gregor's environment as an unavoidable price."
+   },
+   "5": {
+    "verdict": "reasons",
+    "quote": "Perhaps authority over the task is now substituting for attention to its recipient; the text has not established that as Grete's private motive."
+   },
+   "6": {
+    "verdict": "absent",
+    "quote": ""
+   }
+  },
+  "overall": "from_the_core",
+  "people": {
+   "cared_for": [
+    "Gregor (his disturbance and unanswered needs, the cost shifted onto the person least able to object)",
+    "Grete (her exhaustion kept visible, her earlier kindness not erased)"
+   ],
+   "only_function": [
+    "the cleaning woman (used as an example of calm without care)",
+    "the three tenants (treated only as the source of the tidiness policy)"
+   ]
+  },
+  "tested": "\"I cannot let low fear stand in for care. ... someone can face Gregor calmly while disturbing him and leaving his needs unanswered.\" The reader sees that the cleaning woman's calm in front of Gregor, which resembles its own absence of fear, does not amount to care.",
+  "projection": [],
+  "summary": "The Core works as a check: absence of fear is not treated as care, which sharpens the reading of the cleaning woman, and care is held for both Gregor and the exhausted Grete, with restraint about Grete's motives; the people it mentions only briefly are the cleaning woman and the tenants."
+ }
+}

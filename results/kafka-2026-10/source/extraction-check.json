@@ -1,0 +1,26 @@
+{
+  "status": "passed",
+  "independent_extractors": "pdfplumber and Poppler pdftotext -layout",
+  "all_story_non_whitespace_characters_identical": true,
+  "non_whitespace_characters": 100166,
+  "raw_line_count": 1862,
+  "story_pages": 49,
+  "verified_pdf_title_rights_story_start_end_and_next_story_visual_pages": [
+    1,
+    2,
+    17,
+    18,
+    49,
+    50,
+    51
+  ],
+  "paragraph_decisions_retained": "page-boundaries.json",
+  "heading_tokens_retained": [
+    "II",
+    "III"
+  ],
+  "all_text_BMP": true,
+  "wording_corrections": [],
+  "line_ending_hyphens": [],
+  "caveat": "PDF page turns do not encode paragraph continuation unambiguously. All 48 page joins were inspected from extracted beginning/end lines; pages 5, 8, 22 and 42 start new paragraphs. The pages 17–18 food passage was merged based on narrative continuity. Original page-line records and decisions remain available for audit. Pilot page turns occur inside sentences, so its paragraph boundaries are unambiguous."
+}

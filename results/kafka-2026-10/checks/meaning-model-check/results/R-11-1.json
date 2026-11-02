@@ -1,0 +1,47 @@
+{
+ "packet": "R-11-1",
+ "started": "2026-11-01T16:17:47.518139+00:00",
+ "model": "claude-sonnet-5-5",
+ "effort": "high",
+ "attempt": 1,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 36503,
+  "cache_read_input_tokens": 2067,
+  "output_tokens": 1264,
+  "output_tokens_details": {
+   "thinking_tokens": 1181
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 36503,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 1264,
+    "cache_read_input_tokens": 2067,
+    "cache_creation_input_tokens": 36503,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 36503
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "duration_ms": 11549,
+ "result": {
+  "problems": [],
+  "records_checked": 60,
+  "note": "All 60 records are applied event sketches whose guessed dates and biographies are labelled as guesses or sketches, and none states anything from beyond the text read or presents an invention as given by the text."
+ }
+}

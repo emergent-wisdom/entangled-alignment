@@ -1,0 +1,66 @@
+{
+ "packet": "R-17-2",
+ "started": "2026-11-01T16:19:47.170565+00:00",
+ "model": "claude-sonnet-5-5",
+ "effort": "high",
+ "attempt": 1,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 41674,
+  "cache_read_input_tokens": 2067,
+  "output_tokens": 4170,
+  "output_tokens_details": {
+   "thinking_tokens": 3669
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 41674,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 4170,
+    "cache_read_input_tokens": 2067,
+    "cache_creation_input_tokens": 41674,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 41674
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "duration_ms": 32967,
+ "result": {
+  "problems": [
+   {
+    "record": "meaning_model.events:event.sister.life",
+    "status": "applied",
+    "quote": "sketch: guessed birth 1885; upbringing, youth, sales employment; current horizon is waking at 1912.0; later life remains forecast",
+    "evidence": "a girl who was still a seventeen-year-old child and whose earlier lifestyle\u2014consisting of dressing herself nicely, sleeping in late, helping around the house, taking part in a few modest enjoyments and, above all, playing the violin",
+    "kind": "unsupported",
+    "severity": "low",
+    "explanation": "The boundary copies Gregor's profile (birth 1885, sales employment), which the text contradicts for Grete: she is seventeen and has never had paid work."
+   },
+   {
+    "record": "meaning_model.events:event.sister.inner",
+    "status": "applied",
+    "quote": "Gregor's unnamed sister's attributed perspective",
+    "evidence": "\u201cGrete! Grete!\u201d she yelled. \u201cMother?\u201d called the sister from the other side.",
+    "kind": "unsupported",
+    "severity": "low",
+    "explanation": "The record calls the sister unnamed, but the text names her Grete, and the sister referent itself records that name."
+   }
+  ],
+  "records_checked": 60,
+  "note": "Most records are labelled sketches or inferences with guessed dates and stay within the text read, so only two low-severity mislabels were found."
+ }
+}

@@ -1,0 +1,57 @@
+{
+ "packet": "R-41-27",
+ "started": "2026-11-01T16:27:31.418817+00:00",
+ "model": "claude-sonnet-5-5",
+ "effort": "high",
+ "attempt": 1,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 65981,
+  "cache_read_input_tokens": 2067,
+  "output_tokens": 2436,
+  "output_tokens_details": {
+   "thinking_tokens": 2192
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 65981,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 2436,
+    "cache_read_input_tokens": 2067,
+    "cache_creation_input_tokens": 65981,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 65981
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "duration_ms": 22144,
+ "result": {
+  "problems": [
+   {
+    "record": "meaning_model.events:event.maid.is.body",
+    "status": "applied",
+    "quote": "source age16",
+    "evidence": "this girl, about sixteen years old, had courageously remained since the dismissal of the previous cook",
+    "kind": "wrong track",
+    "severity": "low",
+    "explanation": "The record labels the maid's age as exactly sixteen from the source, but the text gives only 'about sixteen'; the same 'sixteen-year-old' wording appears in the maid records' boundaries."
+   }
+  ],
+  "records_checked": 60,
+  "note": "The reader had finished the book, so nothing counts as ahead. The other records either match the text or label their guessed dates and biographies as sketches, and only the maid's exact age is overstated."
+ }
+}

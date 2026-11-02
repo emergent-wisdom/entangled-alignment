@@ -1,0 +1,54 @@
+{
+ "packet": "O-understanding-graph-3",
+ "started": "2026-10-28T15:13:35.041977+00:00",
+ "model": "claude-sonnet-5-5",
+ "effort": "high",
+ "attempt": 1,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 40038,
+  "cache_read_input_tokens": 649,
+  "output_tokens": 466,
+  "output_tokens_details": {
+   "thinking_tokens": 356
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 40038,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 466,
+    "cache_read_input_tokens": 649,
+    "cache_creation_input_tokens": 40038,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 40038
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "duration_ms": 6655,
+ "result": {
+  "records": [
+   {
+    "id": "E-41",
+    "forward": false,
+    "already_in_text": false,
+    "outcome": "never settled",
+    "outcome_quote": "",
+    "explanation": "Written at the very end of the story, it is an interpretation of the family's newly discovered prospects, not an expectation about later events, and nothing follows that could test it."
+   }
+  ]
+ }
+}

@@ -1,0 +1,346 @@
+{
+ "packet": "D-understanding-graph-02",
+ "started": "2026-10-28T15:12:25.696271+00:00",
+ "model": "claude-sonnet-5-5",
+ "effort": "high",
+ "attempt": 1,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 48386,
+  "cache_read_input_tokens": 649,
+  "output_tokens": 13305,
+  "output_tokens_details": {
+   "thinking_tokens": 10517
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 48386,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 13305,
+    "cache_read_input_tokens": 649,
+    "cache_creation_input_tokens": 48386,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 48386
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "duration_ms": 90931,
+ "result": {
+  "reflections": [
+   {
+    "number": 11,
+    "revisions": [],
+    "resolved_expectations": [],
+    "expectations": [],
+    "refusals": [
+     {
+      "quote": "I hear distress without knowing its whole cause.",
+      "declines": "inferring the full cause of the sister's sobbing and the silence"
+     },
+     {
+      "quote": "I must not let that tread convince me the manager is beyond helplessness.",
+      "declines": "assuming the manager is invulnerable"
+     }
+    ],
+    "back_references": [
+     {
+      "quote": "the thud gets through, but not an understanding of Gregor's predicament",
+      "anchor": "There was a loud thud, but not a real crash.",
+      "work": "works"
+     }
+    ]
+   },
+   {
+    "number": 12,
+    "revisions": [],
+    "resolved_expectations": [
+     {
+      "quote": "The pressure predicted in n_4f62029f has arrived in n_04e5490f",
+      "earlier_reflection": 7,
+      "claimed": "confirmed",
+      "right": "right"
+     }
+    ],
+    "expectations": [],
+    "refusals": [
+     {
+      "quote": "I can recognize the shouting and threat without granting the cash insinuation or sales complaint the status of proven fact.",
+      "declines": "treating the manager's accusations as established fact"
+     },
+     {
+      "quote": "I do not know that they have authorized that whole judgment.",
+      "declines": "assuming the family authorized the manager's verdict"
+     }
+    ],
+    "back_references": [
+     {
+      "quote": "the door that hides his condition now helps the manager judge his character",
+      "anchor": "precaution, acquired from traveling, of locking all doors during the night",
+      "work": "works"
+     },
+     {
+      "quote": "The family's separate voices are being gathered into a business demand",
+      "anchor": "Mr. Manager has come and is asking why you did not leave",
+      "work": "works"
+     }
+    ]
+   },
+   {
+    "number": 13,
+    "revisions": [],
+    "resolved_expectations": [],
+    "expectations": [
+     {
+      "quote": "Maybe opening makes help possible, and maybe it makes the shock immediate.",
+      "expects": "opening the door brings help or immediate shock",
+      "outcome": "partly",
+      "outcome_quote": "he heard the manager exclaim a loud “Oh!”"
+     }
+    ],
+    "refusals": [
+     {
+      "quote": "I can hear a protective intention without assuming his rushed promises are accurate or calculated.",
+      "declines": "judging whether his promises are accurate or calculated"
+     },
+     {
+      "quote": "I cannot settle that from the safety of understanding words they have not heard.",
+      "declines": "deciding whether opening helps or shocks"
+     }
+    ],
+    "back_references": [
+     {
+      "quote": "The door no longer separates only bodies",
+      "anchor": "Gregor had no intention of opening the door",
+      "work": "works"
+     }
+    ]
+   },
+   {
+    "number": 14,
+    "revisions": [
+     {
+      "earlier_reflection": 13,
+      "earlier_view": "concern has become action, and action may cross a boundary.",
+      "new_view": "I have to let that relief correct my emphasis rather than insist I know what he ought to feel.",
+      "prompted_by": "The confidence and assurance with which the first arrangements had been carried out made him feel good.",
+      "kind": "qualify"
+     }
+    ],
+    "resolved_expectations": [],
+    "expectations": [],
+    "refusals": [
+     {
+      "quote": "rather than insist I know what he ought to feel",
+      "declines": "asserting what Gregor ought to feel about the doctor and locksmith"
+     }
+    ],
+    "back_references": [
+     {
+      "quote": "I worried about access crossing a boundary",
+      "anchor": "",
+      "work": "works"
+     }
+    ]
+   },
+   {
+    "number": 15,
+    "revisions": [],
+    "resolved_expectations": [
+     {
+      "quote": "They are startled, as he imagined, but n_34685c11 reminds me that alarm is only half his hoped-for bargain.",
+      "earlier_reflection": 13,
+      "claimed": "partly",
+      "right": "right"
+     }
+    ],
+    "expectations": [],
+    "refusals": [
+     {
+      "quote": "I can see fear without making it the only thing in them.",
+      "declines": "reducing the parents to fear alone"
+     }
+    ],
+    "back_references": [
+     {
+      "quote": "They are startled, as he imagined",
+      "anchor": "If they were startled, then Gregor would no longer be burdened by responsibility",
+      "work": "works"
+     }
+    ]
+   },
+   {
+    "number": 16,
+    "revisions": [],
+    "resolved_expectations": [],
+    "expectations": [],
+    "refusals": [
+     {
+      "quote": "I cannot reduce that mixture to a lie.",
+      "declines": "calling his claim to need travel a lie"
+     }
+    ],
+    "back_references": [
+     {
+      "quote": "the travel he cursed becomes something he says he cannot live without",
+      "anchor": "a demanding job I’ve chosen! Day in, day out, on the road",
+      "work": "works"
+     },
+     {
+      "quote": "the assured official has a frightened body reaching for escape",
+      "anchor": "with a squeak of his polished boots, took a few determined steps",
+      "work": "works"
+     },
+     {
+      "quote": "without making it an excuse for the earlier threats",
+      "anchor": "And your position is not at all the most secure",
+      "work": "works"
+     }
+    ]
+   },
+   {
+    "number": 17,
+    "revisions": [],
+    "resolved_expectations": [],
+    "expectations": [
+     {
+      "quote": "control could let him give them space, or let him approach in a way they read as pursuit.",
+      "expects": "his new control leads to space or perceived pursuit",
+      "outcome": "borne out",
+      "outcome_quote": "But the manager must have suspected something, because he made a leap down over a few stairs"
+     }
+    ],
+    "refusals": [
+     {
+      "quote": "I cannot decide that good purpose will make the next movement safe.",
+      "declines": "assuming good intent ensures a safe encounter"
+     }
+    ],
+    "back_references": [
+     {
+      "quote": "The branches in n_40b103f2 and n_074ad3a6 now matter",
+      "anchor": "",
+      "work": "works"
+     }
+    ]
+   },
+   {
+    "number": 18,
+    "revisions": [],
+    "resolved_expectations": [
+     {
+      "quote": "n_237b4375 resolves the immediate branches: the hopeful distance did not happen; pursuit brought flight and force.",
+      "earlier_reflection": 17,
+      "claimed": "partly",
+      "right": "right"
+     }
+    ],
+    "expectations": [],
+    "refusals": [
+     {
+      "quote": "I cannot let that understanding soften the act into harmless guidance.",
+      "declines": "treating the father's violence as harmless guidance"
+     }
+    ],
+    "back_references": [
+     {
+      "quote": "the hopeful distance did not happen; pursuit brought flight and force",
+      "anchor": "",
+      "work": "works"
+     },
+     {
+      "quote": "This is no longer simply the privacy Gregor chose.",
+      "anchor": "precaution, acquired from traveling, of locking all doors during the night",
+      "work": "works"
+     }
+    ]
+   },
+   {
+    "number": 19,
+    "revisions": [],
+    "resolved_expectations": [],
+    "expectations": [
+     {
+      "quote": "different foods might let him answer without words.",
+      "expects": "new foods let Gregor communicate through eating",
+      "outcome": "borne out",
+      "outcome_quote": "To test his taste, she brought him an entire selection"
+     },
+     {
+      "quote": "an untouched bowl could be read as refusal or lack of appetite.",
+      "expects": "untouched food read as refusal",
+      "outcome": "not borne out",
+      "outcome_quote": "But his sister noticed right away with astonishment that the bowl was still full"
+     }
+    ],
+    "refusals": [
+     {
+      "quote": "n_a4d83808 stops me letting the strangeness of the body explain everything.",
+      "declines": "attributing all his suffering to the transformation"
+     }
+    ],
+    "back_references": [
+     {
+      "quote": "responsibility for the injury must not disappear into a vague idea that transformation simply causes suffering",
+      "anchor": "His one flank was all raw from the scraping",
+      "work": "works"
+     }
+    ]
+   },
+   {
+    "number": 20,
+    "revisions": [
+     {
+      "earlier_reflection": 5,
+      "earlier_view": "[his parents' debt to the boss as the constraint on his life and leaving]",
+      "new_view": "The beautiful apartment has meant a good life he helped make, not only debt he endured.",
+      "prompted_by": "he felt a great pride that he had been able to provide such a life for his parents",
+      "kind": "qualify"
+     }
+    ],
+    "resolved_expectations": [],
+    "expectations": [],
+    "refusals": [
+     {
+      "quote": "Maybe injury, exposure and changed bodily instinct all contribute; I cannot sort them yet.",
+      "declines": "assigning a single cause to his comfort under the couch"
+     },
+     {
+      "quote": "Nor can the family's late wakefulness be called contentment simply because the apartment is quiet.",
+      "declines": "inferring family contentment from quiet"
+     }
+    ],
+    "back_references": [
+     {
+      "quote": "reverses the morning's refusal without making contact any easier",
+      "anchor": "“No,” said Gregor. In the neighboring room on the left",
+      "work": "works"
+     },
+     {
+      "quote": "The beautiful apartment has meant a good life he helped make, not only debt he endured.",
+      "anchor": "Once I’ve got together the money to pay off my parents’ debt",
+      "work": "works"
+     },
+     {
+      "quote": "The valued home and the place his body finds comfortable no longer coincide.",
+      "anchor": "a proper room for a human being, only somewhat too small",
+      "work": "works"
+     }
+    ]
+   }
+  ]
+ }
+}

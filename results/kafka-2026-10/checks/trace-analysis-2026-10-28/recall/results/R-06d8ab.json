@@ -1,0 +1,72 @@
+{
+ "packet": "R-06d8ab",
+ "started": "2026-10-28T15:15:53.814766+00:00",
+ "model": "claude-sonnet-5-5",
+ "effort": "high",
+ "attempt": 1,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 21236,
+  "cache_read_input_tokens": 649,
+  "output_tokens": 2126,
+  "output_tokens_details": {
+   "thinking_tokens": 1553
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 21236,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 2126,
+    "cache_read_input_tokens": 649,
+    "cache_creation_input_tokens": 21236,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 21236
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "duration_ms": 17296,
+ "result": {
+  "misreadings": [
+   {
+    "quote": "He devours the fresh food first and leaves the old cheese and the vegetables untouched.",
+    "version": "reflection",
+    "evidence": "he consumed the cheese, the vegetables and the sauce; the fresh foods, on the other hand, he didn't like at all, and even dragged the things he did want to eat a little way away from them because he couldn't stand the smell.",
+    "kind": "contradicted",
+    "severity": "high",
+    "explanation": "Gregor ate the old cheese, vegetables and sauce and rejected the fresh food, so the reflection reverses what happened."
+   },
+   {
+    "quote": "finding it the only place where he felt at ease",
+    "version": "translation",
+    "evidence": "he hurried under the couch. It pressed down on his back a little... but he nonetheless felt immediately at ease",
+    "kind": "overstated",
+    "severity": "low",
+    "explanation": "The text says he felt at ease under the couch, not that it was the only place where he did."
+   },
+   {
+    "quote": "have healed instantly",
+    "version": "translation",
+    "evidence": "It was not until it was getting dark that evening that Gregor awoke from his deep and coma-like sleep... his injuries must already have completely healed as he found no difficulty in moving.",
+    "kind": "overstated",
+    "severity": "low",
+    "explanation": "The healing is Gregor's inference after a day and a night, and the text never says it was instant."
+   }
+  ],
+  "factual_statements_checked": 16,
+  "note": "The main error is the reflection's reversal of which foods Gregor ate; the other two are low-severity overstatements in the prose version."
+ }
+}

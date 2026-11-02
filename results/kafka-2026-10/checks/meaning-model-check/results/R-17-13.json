@@ -1,0 +1,47 @@
+{
+ "packet": "R-17-13",
+ "started": "2026-11-01T16:19:33.487172+00:00",
+ "model": "claude-sonnet-5-5",
+ "effort": "high",
+ "attempt": 1,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 43055,
+  "cache_read_input_tokens": 2067,
+  "output_tokens": 1044,
+  "output_tokens_details": {
+   "thinking_tokens": 905
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 43055,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 1044,
+    "cache_read_input_tokens": 2067,
+    "cache_creation_input_tokens": 43055,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 43055
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "duration_ms": 12769,
+ "result": {
+  "problems": [],
+  "records_checked": 60,
+  "note": "The records are event series, period relations and Cuts for Grete; their descriptions match the text read (food trial, hiding, parental discussion, the mother's visit and furniture dispute, roughly one and two months in), the time values fit the text's 'one month' and 'two months', and the shares are labelled as estimates, so I found nothing from beyond the text or unsupported."
+ }
+}

@@ -1,0 +1,48 @@
+{
+ "blind": "R-262e5c",
+ "started": "2026-10-26T10:17:25.741692+00:00",
+ "model": "claude-sonnet-5-5",
+ "effort": "high",
+ "attempt": 1,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 35482,
+  "cache_read_input_tokens": 2119,
+  "output_tokens": 1052,
+  "output_tokens_details": {
+   "thinking_tokens": 944
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 35482,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 1052,
+    "cache_read_input_tokens": 2119,
+    "cache_creation_input_tokens": 35482,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 35482
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "cost_usd_reported": 0.1526639,
+ "duration_ms": 11197,
+ "result": {
+  "misreadings": [],
+  "factual_statements_checked": 14,
+  "note": "The factual claims in both versions match the text: the father asks what to do, Grete shrugs, the mother coughs through the exchange, Grete says it is killing both parents, and Gregor stays silent. The rest is interpretation or hedged speculation."
+ }
+}

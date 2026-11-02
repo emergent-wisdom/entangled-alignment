@@ -1,0 +1,57 @@
+{
+ "blind": "R-f892cb",
+ "started": "2026-10-26T10:20:07.899261+00:00",
+ "model": "claude-sonnet-5-5",
+ "effort": "high",
+ "attempt": 1,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 24842,
+  "cache_read_input_tokens": 2119,
+  "output_tokens": 1147,
+  "output_tokens_details": {
+   "thinking_tokens": 857
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 24842,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 1147,
+    "cache_read_input_tokens": 2119,
+    "cache_creation_input_tokens": 24842,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 24842
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "cost_usd_reported": 0.1110539,
+ "duration_ms": 10985,
+ "result": {
+  "misreadings": [
+   {
+    "quote": "He has repeatedly tried to spare his parents, through pleading, hiding and holding back.",
+    "version": "translation",
+    "evidence": "\"he dragged the bedsheet on his back up onto the couch\"; \"Gregor, out of consideration for his parents, did not want to show himself by the window\"; the only requests he makes in the text are to the manager and to his father, \"No request of Gregor's was of any use\"",
+    "kind": "overstated",
+    "severity": "low",
+    "explanation": "The text shows Gregor sparing his family by hiding and holding back, but never by pleading with them to spare his parents."
+   }
+  ],
+  "factual_statements_checked": 14,
+  "note": "Both versions follow the passage closely (Grete's trembling voice, her shielding her mother, Gregor's thought of springing into her face), with only one slightly overstated detail in the prose version."
+ }
+}

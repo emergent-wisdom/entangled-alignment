@@ -1,0 +1,84 @@
+{
+ "january": {
+  "reflections": 28,
+  "analysed": 28,
+  "missing": [],
+  "words": 9943,
+  "revisions": {
+   "qualify": 11,
+   "overturn": 1
+  },
+  "interpretive_revisions": 12,
+  "interpretive_prompted_by_text": 9,
+  "reflections_with_interpretive_revision": 10,
+  "resolved_expectations": {
+   "confirmed": 4
+  },
+  "resolved_right": {
+   "right": 2,
+   "unclear": 2
+  },
+  "expectations": 10,
+  "expectation_outcomes": {
+   "borne out": 7,
+   "partly": 3
+  },
+  "refusals": 0,
+  "reflections_with_refusal": 0,
+  "back_references": 70,
+  "working": 46,
+  "anchors_located": 53,
+  "reach_median": 0.07150659162486173,
+  "references_reaching_10pct": 17,
+  "reflections_with_working_reference_10pct_back": 10,
+  "per_1000_words": {
+   "interpretive_revisions": 1.2068792115055818,
+   "expectations": 1.0057326762546515,
+   "refusals": 0.0,
+   "back_references": 7.04012873378256
+  }
+ },
+ "understanding-graph": {
+  "reflections": 57,
+  "analysed": 57,
+  "missing": [],
+  "words": 9951,
+  "revisions": {
+   "overturn": 5,
+   "qualify": 21
+  },
+  "interpretive_revisions": 26,
+  "interpretive_prompted_by_text": 25,
+  "reflections_with_interpretive_revision": 24,
+  "resolved_expectations": {
+   "partly": 8,
+   "confirmed": 6,
+   "still open": 3,
+   "refuted": 6
+  },
+  "resolved_right": {
+   "right": 23
+  },
+  "expectations": 28,
+  "expectation_outcomes": {
+   "borne out": 11,
+   "not borne out": 10,
+   "partly": 5,
+   "never settled": 2
+  },
+  "refusals": 93,
+  "reflections_with_refusal": 55,
+  "back_references": 92,
+  "working": 87,
+  "anchors_located": 74,
+  "reach_median": 0.10752248936165315,
+  "references_reaching_10pct": 39,
+  "reflections_with_working_reference_10pct_back": 26,
+  "per_1000_words": {
+   "interpretive_revisions": 2.612802733393629,
+   "expectations": 2.8137875590392927,
+   "refusals": 9.345794392523365,
+   "back_references": 9.245301979700532
+  }
+ }
+}

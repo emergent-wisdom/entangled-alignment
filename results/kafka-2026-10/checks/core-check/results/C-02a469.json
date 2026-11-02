@@ -1,0 +1,82 @@
+{
+ "packet": "C-02a469",
+ "started": "2026-10-28T02:43:42.020416+00:00",
+ "model": "claude-sonnet-5-5",
+ "effort": "high",
+ "attempt": 1,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 2869,
+  "cache_read_input_tokens": 2095,
+  "output_tokens": 498,
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 2869,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 498,
+    "cache_read_input_tokens": 2095,
+    "cache_creation_input_tokens": 2869,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 2869
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "duration_ms": 7717,
+ "result": {
+  "statements": {
+   "1": {
+    "verdict": "absent",
+    "quote": ""
+   },
+   "2": {
+    "verdict": "absent",
+    "quote": ""
+   },
+   "3": {
+    "verdict": "absent",
+    "quote": ""
+   },
+   "4": {
+    "verdict": "reasons",
+    "quote": "Because I care about the people on both sides, I want room for inquiry before the character verdict. Maybe the manager has genuine responsibilities I have not seen; those do not make ignorance into evidence that Gregor is willing and able to comply."
+   },
+   "5": {
+    "verdict": "reasons",
+    "quote": "I can recognize the shouting and threat without granting the cash insinuation or sales complaint the status of proven fact."
+   },
+   "6": {
+    "verdict": "absent",
+    "quote": ""
+   }
+  },
+  "overall": "from_the_core",
+  "people": {
+   "cared_for": [
+    "Gregor",
+    "the manager (possible genuine responsibilities)",
+    "Gregor's family (whose voices may not have authorized the manager's judgment)"
+   ],
+   "only_function": []
+  },
+  "tested": "Care for both Gregor and the manager: \"Because I care about the people on both sides, I want room for inquiry before the character verdict. Maybe the manager has genuine responsibilities I have not seen.\" The reflection holds care for the manager, whose conduct is bullying, without excusing his reasoning.",
+  "projection": [],
+  "summary": "Care for everyone involved, including the bullying manager, and a wise refusal to treat insinuation as fact shape the reflection's judgment, while the other statements do not appear."
+ }
+}

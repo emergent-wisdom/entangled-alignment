@@ -16,7 +16,7 @@ This shows you the structure - what source, how many nodes, what's connected.
 source_position({ sourceId: "<source_id>" })
 ```
 
-How far through the reading? 10%? 50%? 90%?
+How far through the reading? 10%? 50%? 90%? If this tool is not available to your role, use the position supplied by the runner.
 
 ## Step 3: What has been thought?
 
@@ -34,11 +34,10 @@ These are the thoughts that have emerged so far. What themes? What predictions? 
 
 ## Step 4: What's the current content?
 
-Find the most recent content nodes and read them:
+Read the exact current passage IDs supplied by the runner:
 
 ```
-graph_find_by_trigger({ trigger: "foundation", limit: 3 })
-graph_context({ nodeId: "n_latest_content" })
+graph_context({ nodeId: "<assigned_passage_id>" })
 ```
 
 This is what was just read - the fresh material to work with.

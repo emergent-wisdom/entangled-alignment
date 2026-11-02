@@ -6,3 +6,6 @@ python-dotenv==1.2.2
 # imported directly by orchestrator/src/swarm/core.py (arrives via google-genai,
 # but the orchestrator depends on it in its own right)
 pydantic==2.13.4
+
+# Parse local Codex configuration when Python has no standard-library TOML parser.
+tomli==2.2.1; python_version < "3.11"

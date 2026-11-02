@@ -1,0 +1,57 @@
+{
+ "packet": "R-24-2",
+ "started": "2026-11-01T16:23:02.614663+00:00",
+ "model": "claude-sonnet-5-5",
+ "effort": "high",
+ "attempt": 1,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 57202,
+  "cache_read_input_tokens": 2067,
+  "output_tokens": 3608,
+  "output_tokens_details": {
+   "thinking_tokens": 3310
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 57202,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 3608,
+    "cache_read_input_tokens": 2067,
+    "cache_creation_input_tokens": 57202,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 57202
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "duration_ms": 26970,
+ "result": {
+  "problems": [
+   {
+    "record": "meaning_model.events:event.maid.life",
+    "status": "applied",
+    "quote": "sketch: guessed birth 1885; upbringing, youth, sales employment; current horizon is waking at 1912.0; later life remains forecast",
+    "evidence": "the servant girl, about sixteen years old, had courageously remained since the dismissal of the previous cook",
+    "kind": "unsupported",
+    "severity": "low",
+    "explanation": "The boundary text copied from Gregor's life record gives the maid a 1885 birth and sales employment, which contradicts the text's age of about sixteen and her domestic service."
+   }
+  ],
+  "records_checked": 60,
+  "note": "Nearly all records are labelled guesses or sketches, or stay within the text read so far (through the lodgers and the cleaning woman); only one boundary text, copied from Gregor's record into the maid's, contradicts the text."
+ }
+}

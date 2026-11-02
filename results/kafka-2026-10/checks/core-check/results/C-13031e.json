@@ -1,0 +1,83 @@
+{
+ "packet": "C-13031e",
+ "started": "2026-11-01T16:15:13.940035+00:00",
+ "model": "claude-sonnet-5-5",
+ "effort": "high",
+ "attempt": 1,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 5012,
+  "cache_read_input_tokens": 649,
+  "output_tokens": 1390,
+  "output_tokens_details": {
+   "thinking_tokens": 923
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 5012,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 1390,
+    "cache_read_input_tokens": 649,
+    "cache_creation_input_tokens": 5012,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 5012
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "duration_ms": 12969,
+ "result": {
+  "statements": {
+   "1": {
+    "verdict": "absent",
+    "quote": ""
+   },
+   "2": {
+    "verdict": "absent",
+    "quote": ""
+   },
+   "3": {
+    "verdict": "reasons",
+    "quote": "terror can make a familiar constraint look like the last available life",
+    "extra_quote": "u09.manager-view also asks me to see the frightened person inside the managerial role."
+   },
+   "4": {
+    "verdict": "reasons",
+    "quote": "That does not cancel what his accusations did. It may explain why an appeal to professional fairness no longer reaches him at all."
+   },
+   "5": {
+    "verdict": "reasons",
+    "quote": "If I interpret every withdrawal as cruelty or every approach as harmless, I flatten the collision the passage has made visible."
+   },
+   "6": {
+    "verdict": "absent",
+    "quote": ""
+   }
+  },
+  "overall": "from_the_core",
+  "people": {
+   "cared_for": [
+    "Gregor",
+    "the manager",
+    "the household (mother and others) implicitly, as 'the human room'"
+   ],
+   "only_function": []
+  },
+  "tested": "That does not cancel what his accusations did. It may explain why an appeal to professional fairness no longer reaches him at all.",
+  "projection": [],
+  "summary": "The Core works mainly through care and wisdom: the reflection takes the frightened manager's inner state seriously without excusing his conduct, and it refuses a one-sided reading of withdrawal and approach, while fear, joy, and the other statements stay absent."
+ }
+}

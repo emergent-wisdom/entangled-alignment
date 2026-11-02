@@ -1,0 +1,48 @@
+{
+ "blind": "R-53c22b",
+ "started": "2026-10-26T10:18:05.659938+00:00",
+ "model": "claude-sonnet-5-5",
+ "effort": "high",
+ "attempt": 1,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 33470,
+  "cache_read_input_tokens": 2119,
+  "output_tokens": 924,
+  "output_tokens_details": {
+   "thinking_tokens": 814
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 33470,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 924,
+    "cache_read_input_tokens": 2119,
+    "cache_creation_input_tokens": 33470,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 33470
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "cost_usd_reported": 0.1433359,
+ "duration_ms": 9781,
+ "result": {
+  "misreadings": [],
+  "factual_statements_checked": 18,
+  "note": "Both versions stay within the text: Gregor's head entering the living room, the dirt and the objects flung into his room, his stopped scouring, the father's eager agreement, Grete's calm preparation, and the parents' deference all match the passage and earlier text."
+ }
+}

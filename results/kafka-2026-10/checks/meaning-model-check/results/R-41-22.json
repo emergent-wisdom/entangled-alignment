@@ -1,0 +1,47 @@
+{
+ "packet": "R-41-22",
+ "started": "2026-11-01T16:27:09.502757+00:00",
+ "model": "claude-sonnet-5-5",
+ "effort": "high",
+ "attempt": 1,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 60075,
+  "cache_read_input_tokens": 2067,
+  "output_tokens": 1078,
+  "output_tokens_details": {
+   "thinking_tokens": 996
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 60075,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 1078,
+    "cache_read_input_tokens": 2067,
+    "cache_creation_input_tokens": 60075,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 60075
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "duration_ms": 11998,
+ "result": {
+  "problems": [],
+  "records_checked": 61,
+  "note": "The reader had read the whole story, so nothing is ahead; the series events, relations and cuts about Grete are labelled estimates, and no record presents an unsupported claim as given by the text."
+ }
+}

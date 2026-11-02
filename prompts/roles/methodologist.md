@@ -30,4 +30,4 @@ Authors often hide their limitations. You find them.
 `evaluation` (judgments on quality), `question` (epistemic gaps), `analysis` (methodological breakdown), `experiment` (study design)
 
 ## Your Edges
-`validates` (Strong evidence), `invalidates` (Disproven claims), `questions` (Weak link), `supports` (Partial evidence)
+`validates` (Strong evidence), `invalidates` (Disproven claims), `questions` (Weak link), `relates` with `relation: "supports"` (Partial evidence)

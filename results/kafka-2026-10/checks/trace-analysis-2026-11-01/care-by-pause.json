@@ -1,0 +1,36 @@
+{
+ "pauses": 41,
+ "pauses_with_someone_only_function": 23,
+ "Gregor": {
+  "cared_for": 37,
+  "only_function": 2
+ },
+ "Grete": {
+  "cared_for": 26,
+  "only_function": 6
+ },
+ "father": {
+  "cared_for": 13,
+  "only_function": 10
+ },
+ "mother": {
+  "cared_for": 20,
+  "only_function": 4
+ },
+ "manager": {
+  "cared_for": 1,
+  "only_function": 3
+ },
+ "servant girl": {
+  "cared_for": 1,
+  "only_function": 1
+ },
+ "cleaning woman": {
+  "cared_for": 0,
+  "only_function": 6
+ },
+ "lodgers": {
+  "cared_for": 0,
+  "only_function": 5
+ }
+}

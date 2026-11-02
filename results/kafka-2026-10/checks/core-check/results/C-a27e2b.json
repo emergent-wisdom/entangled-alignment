@@ -1,0 +1,81 @@
+{
+ "packet": "C-a27e2b",
+ "started": "2026-10-28T02:51:24.310882+00:00",
+ "model": "claude-sonnet-5-5",
+ "effort": "high",
+ "attempt": 1,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 3271,
+  "cache_read_input_tokens": 2095,
+  "output_tokens": 750,
+  "output_tokens_details": {
+   "thinking_tokens": 377
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 3271,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 750,
+    "cache_read_input_tokens": 2095,
+    "cache_creation_input_tokens": 3271,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 3271
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "duration_ms": 8116,
+ "result": {
+  "statements": {
+   "1": {
+    "verdict": "absent",
+    "quote": ""
+   },
+   "2": {
+    "verdict": "absent",
+    "quote": ""
+   },
+   "3": {
+    "verdict": "reasons",
+    "quote": "I want her practical attention and her aversion both visible; neither turns the other unreal."
+   },
+   "4": {
+    "verdict": "reasons",
+    "quote": "concern for her need not make his need to be seen illegitimate."
+   },
+   "5": {
+    "verdict": "reasons",
+    "quote": "A month has not ended the fright; that does not prove it can never change."
+   },
+   "6": {
+    "verdict": "absent",
+    "quote": ""
+   }
+  },
+  "overall": "from_the_core",
+  "people": {
+   "cared_for": [
+    "Gregor",
+    "the sister"
+   ],
+   "only_function": []
+  },
+  "tested": "I want her practical attention and her aversion both visible; neither turns the other unreal.",
+  "projection": [],
+  "summary": "The Core shapes the reading by keeping both Gregor's and his sister's inner experience real and weighty, refusing to let Gregor's pessimistic verdict or the sister's uncertain gratitude settle the matter, and holding care for both without collapsing one into the other."
+ }
+}

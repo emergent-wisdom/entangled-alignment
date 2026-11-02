@@ -198,3 +198,10 @@ Is it a SPECIALIZED WORKFLOW?
 | Translator | `roles/translator.md` only (doesn't get api_reference.md) |
 
 **Rule:** Don't duplicate across files. Each agent should get guidance from ONE source.
+
+
+## Restored Teacher (2026-10-06)
+
+Thinking prompts and inline missions have been restored from pre-update commit `bb2db5b`, with current tool names, schemas, runner-owned source loading and assigned pilot boundaries, dedicated thinking/translation tools and source/belief integrity. Fresh agents and random worker selection remain in place. Complete node text is supplied to synthesis and translation. Composed prompts and their hashes are recorded in each new run.
+
+The treatment is `restored-exploratory-teacher+wisdom-2026-10-06`. The targeted wisdom correction keeps people and their roles in view, distinguishes inferred motives and predicted consequences from established facts, includes non-attachment and invitation, and allows unresolved conflicts or unavoidable losses. Its corresponding Synthesizer and Translator wisdom sections no longer require a computed Solution Vector. Speculation, counterviews, branching predictions, backward connections and expansive translation retain the restored instructions.

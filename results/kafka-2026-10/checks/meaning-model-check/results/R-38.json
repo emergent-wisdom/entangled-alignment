@@ -1,0 +1,47 @@
+{
+ "packet": "R-38",
+ "started": "2026-11-01T16:25:53.778878+00:00",
+ "model": "claude-sonnet-5-5",
+ "effort": "high",
+ "attempt": 1,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 40394,
+  "cache_read_input_tokens": 2067,
+  "output_tokens": 1490,
+  "output_tokens_details": {
+   "thinking_tokens": 1363
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 40394,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 1490,
+    "cache_read_input_tokens": 2067,
+    "cache_creation_input_tokens": 40394,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 40394
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "duration_ms": 13555,
+ "result": {
+  "problems": [],
+  "records_checked": 15,
+  "note": "Every record stays within the text read so far (lodgers looking for breakfast, the cleaning woman showing them Gregor's corpse, the tear-stained Samsas on each other's arms); uncertain readings are labelled inferred, exploring or sketch, and the model's time placements are consistent with 'almost the end of March'."
+ }
+}

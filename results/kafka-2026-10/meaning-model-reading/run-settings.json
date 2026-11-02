@@ -1,0 +1,73 @@
+{
+  "schema": 1,
+  "reading": "Meaning Model reading of 1 November 2026",
+  "model_id": "metamorphosis-first-reading",
+  "graph_id": "metamorphosis-encountered-reading",
+  "source_title": "metamorphosis-johnston",
+  "source_sha256": "e06af7cc1d2647ccc5bffd8d4edfd491198b2b7a2422f85f1a142b02c5493950",
+  "agent": {
+    "product": "Codex (command line)",
+    "model": "gpt-6.1-sol",
+    "reasoning_effort": "high",
+    "settings": {
+      "sandbox": "workspace-write",
+      "web_search": "disabled",
+      "project_doc_max_bytes": 262144
+    }
+  },
+  "tool": {
+    "name": "Meaning Model",
+    "package": "@emergent-wisdom/meaning-model-mcp",
+    "released_as": "0.18.1",
+    "built_from": "0.18.0 with the add-on path change that 0.18.1 released",
+    "package_sha256": "5c772d865790d5a6f373d98f5cbff2f1ddd82c75ad2ef2b96b0bad5e6b83846d",
+    "addons": [
+      "storytelling",
+      "reading mode"
+    ]
+  },
+  "reading_mode": {
+    "parameters": {
+      "source": "../source/metamorphosis-johnston.txt",
+      "perspectives": [
+        "axiologist",
+        "belief_tracker",
+        "connector",
+        "critic",
+        "curator",
+        "psychologist",
+        "skeptic",
+        "speculator"
+      ],
+      "perspectives_per_stretch": 2,
+      "seed": 20261009,
+      "stretch_chars": 4000,
+      "time_limit_hours": 4,
+      "stop_at_chars": 0
+    },
+    "sha256": "a836ec59b07a13c733335268dce1b67a32c7a45b6023a12eda30f779d00667ef"
+  },
+  "prompt_parameters": {
+    "book": "Franz Kafka, The Metamorphosis, first published 1915, translated by Ian Johnston.",
+    "purpose": "source_reconstruction",
+    "stop_chars": 4000,
+    "time_limit_hours": 4,
+    "workers_per_stop": 2,
+    "worker_seed": 20261009,
+    "live_viewer": false,
+    "sema": false
+  },
+  "conversations": [
+    {
+      "conversation": 1,
+      "covers": "paragraphs 1-70, to graph revision 162",
+      "input_tokens": "27.5M"
+    },
+    {
+      "conversation": 2,
+      "covers": "paragraphs 71-99 and the end pass",
+      "input_tokens": "20.2M"
+    }
+  ],
+  "note": "This records the run; it is not an executable launcher. Host paths, the launcher and raw session journals are omitted."
+}

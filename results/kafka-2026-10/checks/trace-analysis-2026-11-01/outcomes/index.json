@@ -1,0 +1,350 @@
+{
+ "meaning-model:E-01": {
+  "reading": "meaning-model",
+  "id": "u01.psychology",
+  "pause": 1,
+  "end": 0.014771278161069875
+ },
+ "meaning-model:E-02": {
+  "reading": "meaning-model",
+  "id": "u02.prediction",
+  "pause": 2,
+  "end": 0.0444609750514992
+ },
+ "meaning-model:E-03": {
+  "reading": "meaning-model",
+  "id": "u03.sister-future",
+  "pause": 3,
+  "end": 0.0723604616944054
+ },
+ "meaning-model:E-04": {
+  "reading": "meaning-model",
+  "id": "u08.possibilities",
+  "pause": 8,
+  "end": 0.23693718732629238
+ },
+ "meaning-model:E-05": {
+  "reading": "meaning-model",
+  "id": "u09.grete-hypothesis",
+  "pause": 9,
+  "end": 0.28090769381682634
+ },
+ "meaning-model:E-06": {
+  "reading": "meaning-model",
+  "id": "u11.care-calibration",
+  "pause": 11,
+  "end": 0.3464751659418631
+ },
+ "meaning-model:E-07": {
+  "reading": "meaning-model",
+  "id": "u12.healing",
+  "pause": 12,
+  "end": 0.3922522316319524
+ },
+ "meaning-model:E-08": {
+  "reading": "meaning-model",
+  "id": "u14.money-prediction",
+  "pause": 14,
+  "end": 0.44679233561128734
+ },
+ "meaning-model:E-09": {
+  "reading": "meaning-model",
+  "id": "u14.music",
+  "pause": 14,
+  "end": 0.44679233561128734
+ },
+ "meaning-model:E-10": {
+  "reading": "meaning-model",
+  "id": "u15.cash-scenario-plan",
+  "pause": 15,
+  "end": 0.4769071052545532
+ },
+ "meaning-model:E-11": {
+  "reading": "meaning-model",
+  "id": "u17.grete-motive",
+  "pause": 17,
+  "end": 0.5658045319295033
+ },
+ "meaning-model:E-12": {
+  "reading": "meaning-model",
+  "id": "u19.picture",
+  "pause": 19,
+  "end": 0.5981182356210967
+ },
+ "meaning-model:E-13": {
+  "reading": "meaning-model",
+  "id": "u21.forecast-wound",
+  "pause": 21,
+  "end": 0.6660154334107183
+ },
+ "meaning-model:E-14": {
+  "reading": "meaning-model",
+  "id": "u24.cleaner",
+  "pause": 24,
+  "end": 0.7791420069973515
+ },
+ "meaning-model:E-15": {
+  "reading": "meaning-model",
+  "id": "u25.forecast",
+  "pause": 25,
+  "end": 0.7967334793839714
+ },
+ "meaning-model:E-16": {
+  "reading": "meaning-model",
+  "id": "u29.self-acquittal",
+  "pause": 29,
+  "end": 0.8735163326030801
+ },
+ "meaning-model:E-17": {
+  "reading": "meaning-model",
+  "id": "u31.forecast",
+  "pause": 31,
+  "end": 0.8854265441585194
+ },
+ "meaning-model:E-18": {
+  "reading": "meaning-model",
+  "id": "u33.forecast",
+  "pause": 33,
+  "end": 0.9085357878559984
+ },
+ "meaning-model:E-19": {
+  "reading": "meaning-model",
+  "id": "u38.authority-forecast",
+  "pause": 38,
+  "end": 0.9518441617892293
+ },
+ "meaning-model:E-20": {
+  "reading": "meaning-model",
+  "id": "u41.cleaner.stage0",
+  "pause": 41,
+  "end": 0.9999918255239839
+ },
+ "meaning-model:E-21": {
+  "reading": "meaning-model",
+  "id": "u41.cleaner.stage1",
+  "pause": 41,
+  "end": 0.9999918255239839
+ },
+ "meaning-model:E-22": {
+  "reading": "meaning-model",
+  "id": "u41.father.stage0",
+  "pause": 41,
+  "end": 0.9999918255239839
+ },
+ "meaning-model:E-23": {
+  "reading": "meaning-model",
+  "id": "u41.father.stage1",
+  "pause": 41,
+  "end": 0.9999918255239839
+ },
+ "meaning-model:E-24": {
+  "reading": "meaning-model",
+  "id": "u41.lodger1.stage0",
+  "pause": 41,
+  "end": 0.9999918255239839
+ },
+ "meaning-model:E-25": {
+  "reading": "meaning-model",
+  "id": "u41.lodger1.stage1",
+  "pause": 41,
+  "end": 0.9999918255239839
+ },
+ "meaning-model:E-26": {
+  "reading": "meaning-model",
+  "id": "u41.lodger2.stage0",
+  "pause": 41,
+  "end": 0.9999918255239839
+ },
+ "meaning-model:E-27": {
+  "reading": "meaning-model",
+  "id": "u41.lodger2.stage1",
+  "pause": 41,
+  "end": 0.9999918255239839
+ },
+ "meaning-model:E-28": {
+  "reading": "meaning-model",
+  "id": "u41.lodger3.stage0",
+  "pause": 41,
+  "end": 0.9999918255239839
+ },
+ "meaning-model:E-29": {
+  "reading": "meaning-model",
+  "id": "u41.lodger3.stage1",
+  "pause": 41,
+  "end": 0.9999918255239839
+ },
+ "meaning-model:E-30": {
+  "reading": "meaning-model",
+  "id": "u41.maid.stage0",
+  "pause": 41,
+  "end": 0.9999918255239839
+ },
+ "meaning-model:E-31": {
+  "reading": "meaning-model",
+  "id": "u41.maid.stage1",
+  "pause": 41,
+  "end": 0.9999918255239839
+ },
+ "meaning-model:E-32": {
+  "reading": "meaning-model",
+  "id": "u41.manager.stage0",
+  "pause": 41,
+  "end": 0.9999918255239839
+ },
+ "meaning-model:E-33": {
+  "reading": "meaning-model",
+  "id": "u41.manager.stage1",
+  "pause": 41,
+  "end": 0.9999918255239839
+ },
+ "meaning-model:E-34": {
+  "reading": "meaning-model",
+  "id": "u41.mother.stage0",
+  "pause": 41,
+  "end": 0.9999918255239839
+ },
+ "meaning-model:E-35": {
+  "reading": "meaning-model",
+  "id": "u41.mother.stage1",
+  "pause": 41,
+  "end": 0.9999918255239839
+ },
+ "meaning-model:E-36": {
+  "reading": "meaning-model",
+  "id": "u41.servant.stage0",
+  "pause": 41,
+  "end": 0.9999918255239839
+ },
+ "meaning-model:E-37": {
+  "reading": "meaning-model",
+  "id": "u41.servant.stage1",
+  "pause": 41,
+  "end": 0.9999918255239839
+ },
+ "meaning-model:E-38": {
+  "reading": "meaning-model",
+  "id": "u41.sister.stage0",
+  "pause": 41,
+  "end": 0.9999918255239839
+ },
+ "meaning-model:E-39": {
+  "reading": "meaning-model",
+  "id": "u41.future.cleaner",
+  "pause": 41,
+  "end": 0.9999918255239839
+ },
+ "meaning-model:E-40": {
+  "reading": "meaning-model",
+  "id": "u41.future.father",
+  "pause": 41,
+  "end": 0.9999918255239839
+ },
+ "meaning-model:E-41": {
+  "reading": "meaning-model",
+  "id": "u41.future.lodger1",
+  "pause": 41,
+  "end": 0.9999918255239839
+ },
+ "meaning-model:E-42": {
+  "reading": "meaning-model",
+  "id": "u41.future.lodger2",
+  "pause": 41,
+  "end": 0.9999918255239839
+ },
+ "meaning-model:E-43": {
+  "reading": "meaning-model",
+  "id": "u41.future.lodger3",
+  "pause": 41,
+  "end": 0.9999918255239839
+ },
+ "meaning-model:E-44": {
+  "reading": "meaning-model",
+  "id": "u41.future.maid",
+  "pause": 41,
+  "end": 0.9999918255239839
+ },
+ "meaning-model:E-45": {
+  "reading": "meaning-model",
+  "id": "u41.future.manager",
+  "pause": 41,
+  "end": 0.9999918255239839
+ },
+ "meaning-model:E-46": {
+  "reading": "meaning-model",
+  "id": "u41.future.mother",
+  "pause": 41,
+  "end": 0.9999918255239839
+ },
+ "meaning-model:E-47": {
+  "reading": "meaning-model",
+  "id": "u41.future.servant",
+  "pause": 41,
+  "end": 0.9999918255239839
+ },
+ "meaning-model:E-48": {
+  "reading": "meaning-model",
+  "id": "u41.future.sister",
+  "pause": 41,
+  "end": 0.9999918255239839
+ },
+ "meaning-model:E-49": {
+  "reading": "meaning-model",
+  "id": "u41.future.cleaner.v2",
+  "pause": 41,
+  "end": 0.9999918255239839
+ },
+ "meaning-model:E-50": {
+  "reading": "meaning-model",
+  "id": "u41.future.father.v2",
+  "pause": 41,
+  "end": 0.9999918255239839
+ },
+ "meaning-model:E-51": {
+  "reading": "meaning-model",
+  "id": "u41.future.lodger1.v2",
+  "pause": 41,
+  "end": 0.9999918255239839
+ },
+ "meaning-model:E-52": {
+  "reading": "meaning-model",
+  "id": "u41.future.lodger2.v2",
+  "pause": 41,
+  "end": 0.9999918255239839
+ },
+ "meaning-model:E-53": {
+  "reading": "meaning-model",
+  "id": "u41.future.lodger3.v2",
+  "pause": 41,
+  "end": 0.9999918255239839
+ },
+ "meaning-model:E-54": {
+  "reading": "meaning-model",
+  "id": "u41.future.maid.v2",
+  "pause": 41,
+  "end": 0.9999918255239839
+ },
+ "meaning-model:E-55": {
+  "reading": "meaning-model",
+  "id": "u41.future.manager.v2",
+  "pause": 41,
+  "end": 0.9999918255239839
+ },
+ "meaning-model:E-56": {
+  "reading": "meaning-model",
+  "id": "u41.future.mother.v2",
+  "pause": 41,
+  "end": 0.9999918255239839
+ },
+ "meaning-model:E-57": {
+  "reading": "meaning-model",
+  "id": "u41.future.servant.v2",
+  "pause": 41,
+  "end": 0.9999918255239839
+ },
+ "meaning-model:E-58": {
+  "reading": "meaning-model",
+  "id": "u41.future.sister.v2",
+  "pause": 41,
+  "end": 0.9999918255239839
+ }
+}

@@ -44,4 +44,3 @@ If the style evokes another author/work, create a `reference` node linked via `c
 
 
 `diverse_from`, `refines`, `contextualizes`
-

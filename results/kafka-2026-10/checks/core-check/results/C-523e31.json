@@ -1,0 +1,84 @@
+{
+ "packet": "C-523e31",
+ "started": "2026-10-28T02:47:08.956580+00:00",
+ "model": "claude-sonnet-5-5",
+ "effort": "high",
+ "attempt": 1,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 2962,
+  "cache_read_input_tokens": 2095,
+  "output_tokens": 456,
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 2962,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 456,
+    "cache_read_input_tokens": 2095,
+    "cache_creation_input_tokens": 2962,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 2962
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "duration_ms": 6586,
+ "result": {
+  "statements": {
+   "1": {
+    "verdict": "absent",
+    "quote": ""
+   },
+   "2": {
+    "verdict": "absent",
+    "quote": ""
+   },
+   "3": {
+    "verdict": "reasons",
+    "quote": "A voice, a noise and a character reference each convey something while missing the bodily reality in the room."
+   },
+   "4": {
+    "verdict": "reasons",
+    "quote": "Caring about all these people means holding uneven knowledge in view. The mother may think entry brings help; Gregor knows why appearance could bring shock."
+   },
+   "5": {
+    "verdict": "reasons",
+    "quote": "I must not let that tread convince me the manager is beyond helplessness."
+   },
+   "6": {
+    "verdict": "absent",
+    "quote": ""
+   }
+  },
+  "overall": "from_the_core",
+  "people": {
+   "cared_for": [
+    "Gregor",
+    "the mother",
+    "the sister",
+    "the manager",
+    "the father (implicitly, via 'all these people')"
+   ],
+   "only_function": []
+  },
+  "tested": "\"n_9859b2fc catches Gregor imagining common vulnerability only to hear assured boots in reply. I must not let that tread convince me the manager is beyond helplessness.\"",
+  "projection": [],
+  "summary": "The reflection's care for every person in the scene, including the officious manager and the mother whose affection is shaped by need, visibly shapes how it reads each voice and withholds judgment, though fear, joy and enjoyment of existing play no part."
+ }
+}

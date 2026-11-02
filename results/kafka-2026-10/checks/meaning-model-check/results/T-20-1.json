@@ -1,0 +1,47 @@
+{
+ "packet": "T-20-1",
+ "started": "2026-11-01T16:29:27.242272+00:00",
+ "model": "claude-sonnet-5-5",
+ "effort": "high",
+ "attempt": 1,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 26176,
+  "cache_read_input_tokens": 2067,
+  "output_tokens": 797,
+  "output_tokens_details": {
+   "thinking_tokens": 667
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 26176,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 797,
+    "cache_read_input_tokens": 2067,
+    "cache_creation_input_tokens": 26176,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 26176
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "duration_ms": 8501,
+ "result": {
+  "misreadings": [],
+  "factual_statements_checked": 13,
+  "note": "Both versions match the text: Gregor scurries after Grete, she is frightened, a bottle breaks and wounds him, she shuts the door, Grete tells her father 'Mother fainted... Gregor has broken loose', and Gregor sees that his father misunderstood. The rest is interpretation framed as such."
+ }
+}

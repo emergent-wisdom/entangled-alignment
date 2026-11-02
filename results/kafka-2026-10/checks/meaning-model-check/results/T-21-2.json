@@ -1,0 +1,47 @@
+{
+ "packet": "T-21-2",
+ "started": "2026-11-01T16:29:32.739645+00:00",
+ "model": "claude-sonnet-5-5",
+ "effort": "high",
+ "attempt": 1,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 28246,
+  "cache_read_input_tokens": 2067,
+  "output_tokens": 771,
+  "output_tokens_details": {
+   "thinking_tokens": 649
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 28246,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 771,
+    "cache_read_input_tokens": 2067,
+    "cache_creation_input_tokens": 28246,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 28246
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "duration_ms": 7912,
+ "result": {
+  "misreadings": [],
+  "factual_statements_checked": 12,
+  "note": "Both versions stay within the text: the mother's asthma and fainting, her running to the father and begging for Gregor's life, the hard apple strike, Gregor's immobility and confused senses, and the earlier apparent healing are all supported, and the rest is interpretation or forecast framed as such."
+ }
+}

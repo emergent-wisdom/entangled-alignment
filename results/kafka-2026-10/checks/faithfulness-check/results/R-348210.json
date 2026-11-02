@@ -1,0 +1,48 @@
+{
+ "blind": "R-348210",
+ "started": "2026-10-26T10:17:37.130709+00:00",
+ "model": "claude-sonnet-5-5",
+ "effort": "high",
+ "attempt": 1,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 28822,
+  "cache_read_input_tokens": 2119,
+  "output_tokens": 944,
+  "output_tokens_details": {
+   "thinking_tokens": 842
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 28822,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 944,
+    "cache_read_input_tokens": 2119,
+    "cache_creation_input_tokens": 28822,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 28822
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "cost_usd_reported": 0.1249439,
+ "duration_ms": 9078,
+ "result": {
+  "misreadings": [],
+  "factual_statements_checked": 17,
+  "note": "Both versions stay within the text: the apples, the father's uniform and his earlier frailty, the mother's stumbling embrace and plea, and Gregor's failing sight are all supported, and the rest is interpretation or hedged."
+ }
+}

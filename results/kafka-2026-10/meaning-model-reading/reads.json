@@ -1,0 +1,794 @@
+{
+ "sourceSha256": "e06af7cc1d2647ccc5bffd8d4edfd491198b2b7a2422f85f1a142b02c5493950",
+ "position": 99,
+ "reads": [
+  {
+   "read": 1,
+   "from": 0,
+   "to": 3,
+   "chars": 1807,
+   "stretches": [
+    1
+   ],
+   "workers": [
+    "curator",
+    "psychologist"
+   ],
+   "at": 1793502729.832,
+   "asked": {
+    "paragraphs": 3
+   }
+  },
+  {
+   "read": 2,
+   "from": 3,
+   "to": 6,
+   "chars": 3630,
+   "stretches": [
+    1,
+    2
+   ],
+   "workers": [
+    "curator",
+    "psychologist",
+    "axiologist",
+    "connector"
+   ],
+   "at": 1793502947.392,
+   "asked": {
+    "paragraphs": 3
+   }
+  },
+  {
+   "read": 3,
+   "from": 6,
+   "to": 9,
+   "chars": 3411,
+   "stretches": [
+    2,
+    3
+   ],
+   "workers": [
+    "axiologist",
+    "connector",
+    "belief_tracker",
+    "speculator"
+   ],
+   "at": 1793503119.106,
+   "asked": {
+    "paragraphs": 3
+   }
+  },
+  {
+   "read": 4,
+   "from": 9,
+   "to": 13,
+   "chars": 3197,
+   "stretches": [
+    3,
+    4
+   ],
+   "workers": [
+    "belief_tracker",
+    "speculator",
+    "skeptic",
+    "critic"
+   ],
+   "at": 1793503284.638,
+   "asked": {
+    "paragraphs": 4
+   }
+  },
+  {
+   "read": 5,
+   "from": 13,
+   "to": 17,
+   "chars": 5577,
+   "stretches": [
+    4,
+    5
+   ],
+   "workers": [
+    "skeptic",
+    "critic",
+    "curator",
+    "psychologist"
+   ],
+   "at": 1793503455.759,
+   "asked": {
+    "paragraphs": 4
+   }
+  },
+  {
+   "read": 6,
+   "from": 17,
+   "to": 20,
+   "chars": 3905,
+   "stretches": [
+    5,
+    6
+   ],
+   "workers": [
+    "curator",
+    "psychologist",
+    "connector",
+    "critic"
+   ],
+   "at": 1793503642.032,
+   "asked": {
+    "paragraphs": 3
+   }
+  },
+  {
+   "read": 7,
+   "from": 20,
+   "to": 23,
+   "chars": 3353,
+   "stretches": [
+    6,
+    7
+   ],
+   "workers": [
+    "connector",
+    "critic",
+    "axiologist",
+    "belief_tracker"
+   ],
+   "at": 1793503734.712,
+   "asked": {
+    "paragraphs": 3
+   }
+  },
+  {
+   "read": 8,
+   "from": 23,
+   "to": 26,
+   "chars": 4091,
+   "stretches": [
+    7,
+    8
+   ],
+   "workers": [
+    "axiologist",
+    "belief_tracker",
+    "skeptic",
+    "speculator"
+   ],
+   "at": 1793503842.761,
+   "asked": {
+    "paragraphs": 3
+   }
+  },
+  {
+   "read": 9,
+   "from": 26,
+   "to": 29,
+   "chars": 5377,
+   "stretches": [
+    8,
+    9
+   ],
+   "workers": [
+    "skeptic",
+    "speculator",
+    "axiologist",
+    "psychologist"
+   ],
+   "at": 1793503964.211,
+   "asked": {
+    "paragraphs": 3
+   }
+  },
+  {
+   "read": 10,
+   "from": 29,
+   "to": 32,
+   "chars": 5489,
+   "stretches": [
+    9,
+    10
+   ],
+   "workers": [
+    "axiologist",
+    "psychologist",
+    "belief_tracker",
+    "critic"
+   ],
+   "at": 1793504134.718,
+   "asked": {
+    "paragraphs": 3
+   }
+  },
+  {
+   "read": 11,
+   "from": 32,
+   "to": 35,
+   "chars": 2528,
+   "stretches": [
+    10,
+    11
+   ],
+   "workers": [
+    "belief_tracker",
+    "critic",
+    "speculator",
+    "skeptic"
+   ],
+   "at": 1793504288.923,
+   "asked": {
+    "paragraphs": 3
+   }
+  },
+  {
+   "read": 12,
+   "from": 35,
+   "to": 38,
+   "chars": 5598,
+   "stretches": [
+    11,
+    12
+   ],
+   "workers": [
+    "speculator",
+    "skeptic",
+    "connector",
+    "curator"
+   ],
+   "at": 1793504403.461,
+   "asked": {
+    "paragraphs": 3
+   }
+  },
+  {
+   "read": 13,
+   "from": 38,
+   "to": 41,
+   "chars": 2773,
+   "stretches": [
+    12,
+    13
+   ],
+   "workers": [
+    "connector",
+    "curator",
+    "belief_tracker"
+   ],
+   "at": 1793504603.241,
+   "asked": {
+    "paragraphs": 3
+   }
+  },
+  {
+   "read": 14,
+   "from": 41,
+   "to": 44,
+   "chars": 3895,
+   "stretches": [
+    13,
+    14
+   ],
+   "workers": [
+    "connector",
+    "belief_tracker",
+    "speculator",
+    "psychologist"
+   ],
+   "at": 1793504783.968,
+   "asked": {
+    "paragraphs": 3
+   }
+  },
+  {
+   "read": 15,
+   "from": 44,
+   "to": 47,
+   "chars": 3682,
+   "stretches": [
+    14,
+    15
+   ],
+   "workers": [
+    "speculator",
+    "psychologist",
+    "critic",
+    "curator"
+   ],
+   "at": 1793504986.13,
+   "asked": {
+    "paragraphs": 3
+   }
+  },
+  {
+   "read": 16,
+   "from": 47,
+   "to": 50,
+   "chars": 4307,
+   "stretches": [
+    15,
+    16
+   ],
+   "workers": [
+    "critic",
+    "curator",
+    "skeptic",
+    "axiologist"
+   ],
+   "at": 1793505307.948,
+   "asked": {
+    "paragraphs": 3
+   }
+  },
+  {
+   "read": 17,
+   "from": 50,
+   "to": 53,
+   "chars": 6564,
+   "stretches": [
+    16,
+    17,
+    18
+   ],
+   "workers": [
+    "skeptic",
+    "axiologist",
+    "speculator",
+    "critic",
+    "connector"
+   ],
+   "at": 1793505497.28,
+   "asked": {
+    "paragraphs": 3
+   }
+  },
+  {
+   "read": 18,
+   "from": 53,
+   "to": 55,
+   "chars": 2476,
+   "stretches": [
+    18
+   ],
+   "workers": [
+    "critic",
+    "connector"
+   ],
+   "at": 1793506084.098,
+   "asked": {
+    "paragraphs": 2
+   }
+  },
+  {
+   "read": 19,
+   "from": 55,
+   "to": 57,
+   "chars": 1473,
+   "stretches": [
+    18,
+    19
+   ],
+   "workers": [
+    "critic",
+    "connector",
+    "psychologist",
+    "curator"
+   ],
+   "at": 1793506200.958,
+   "asked": {
+    "paragraphs": 2
+   }
+  },
+  {
+   "read": 20,
+   "from": 57,
+   "to": 59,
+   "chars": 3113,
+   "stretches": [
+    19,
+    20
+   ],
+   "workers": [
+    "psychologist",
+    "curator",
+    "belief_tracker",
+    "skeptic"
+   ],
+   "at": 1793506285.941,
+   "asked": {
+    "paragraphs": 2
+   }
+  },
+  {
+   "read": 21,
+   "from": 59,
+   "to": 61,
+   "chars": 5189,
+   "stretches": [
+    20,
+    21
+   ],
+   "workers": [
+    "belief_tracker",
+    "skeptic",
+    "psychologist",
+    "axiologist"
+   ],
+   "at": 1793506403.531,
+   "asked": {
+    "paragraphs": 2
+   }
+  },
+  {
+   "read": 22,
+   "from": 61,
+   "to": 64,
+   "chars": 2153,
+   "stretches": [
+    21
+   ],
+   "workers": [
+    "psychologist",
+    "axiologist"
+   ],
+   "at": 1793506759.872,
+   "asked": {
+    "paragraphs": 3
+   }
+  },
+  {
+   "read": 23,
+   "from": 64,
+   "to": 67,
+   "chars": 4306,
+   "stretches": [
+    21,
+    22
+   ],
+   "workers": [
+    "psychologist",
+    "axiologist",
+    "curator",
+    "critic"
+   ],
+   "at": 1793507051.666,
+   "asked": {
+    "paragraphs": 3
+   }
+  },
+  {
+   "read": 24,
+   "from": 67,
+   "to": 70,
+   "chars": 7374,
+   "stretches": [
+    22,
+    23,
+    24
+   ],
+   "workers": [
+    "curator",
+    "critic",
+    "belief_tracker",
+    "skeptic",
+    "connector",
+    "speculator"
+   ],
+   "at": 1793507315.717,
+   "asked": {
+    "paragraphs": 3
+   }
+  },
+  {
+   "read": 25,
+   "from": 70,
+   "to": 72,
+   "chars": 2150,
+   "stretches": [
+    24,
+    25
+   ],
+   "workers": [
+    "connector",
+    "speculator",
+    "axiologist",
+    "skeptic"
+   ],
+   "at": 1793531962.959,
+   "asked": {
+    "paragraphs": 2
+   }
+  },
+  {
+   "read": 26,
+   "from": 72,
+   "to": 74,
+   "chars": 2535,
+   "stretches": [
+    25
+   ],
+   "workers": [
+    "axiologist",
+    "skeptic"
+   ],
+   "at": 1793532035.418,
+   "asked": {
+    "paragraphs": 2
+   }
+  },
+  {
+   "read": 27,
+   "from": 74,
+   "to": 75,
+   "chars": 2464,
+   "stretches": [
+    25,
+    26
+   ],
+   "workers": [
+    "axiologist",
+    "skeptic",
+    "belief_tracker",
+    "connector"
+   ],
+   "at": 1793532090.23,
+   "asked": {
+    "paragraphs": 1
+   }
+  },
+  {
+   "read": 28,
+   "from": 75,
+   "to": 77,
+   "chars": 3738,
+   "stretches": [
+    26,
+    27
+   ],
+   "workers": [
+    "belief_tracker",
+    "connector",
+    "psychologist",
+    "curator"
+   ],
+   "at": 1793532172.817,
+   "asked": {
+    "paragraphs": 2
+   }
+  },
+  {
+   "read": 29,
+   "from": 77,
+   "to": 79,
+   "chars": 648,
+   "stretches": [
+    27
+   ],
+   "workers": [
+    "psychologist",
+    "curator"
+   ],
+   "at": 1793532227.916,
+   "asked": {
+    "paragraphs": 2
+   }
+  },
+  {
+   "read": 30,
+   "from": 79,
+   "to": 82,
+   "chars": 886,
+   "stretches": [
+    27
+   ],
+   "workers": [
+    "psychologist",
+    "curator"
+   ],
+   "at": 1793532320.362,
+   "asked": {
+    "paragraphs": 3
+   }
+  },
+  {
+   "read": 31,
+   "from": 82,
+   "to": 85,
+   "chars": 567,
+   "stretches": [
+    27,
+    28
+   ],
+   "workers": [
+    "psychologist",
+    "curator",
+    "speculator",
+    "critic"
+   ],
+   "at": 1793532354.747,
+   "asked": {
+    "paragraphs": 3
+   }
+  },
+  {
+   "read": 32,
+   "from": 85,
+   "to": 86,
+   "chars": 1067,
+   "stretches": [
+    28
+   ],
+   "workers": [
+    "speculator",
+    "critic"
+   ],
+   "at": 1793532398.94,
+   "asked": {
+    "paragraphs": 1
+   }
+  },
+  {
+   "read": 33,
+   "from": 86,
+   "to": 88,
+   "chars": 1756,
+   "stretches": [
+    28
+   ],
+   "workers": [
+    "speculator",
+    "critic"
+   ],
+   "at": 1793532437.808,
+   "asked": {
+    "paragraphs": 2
+   }
+  },
+  {
+   "read": 34,
+   "from": 88,
+   "to": 89,
+   "chars": 461,
+   "stretches": [
+    28
+   ],
+   "workers": [
+    "speculator",
+    "critic"
+   ],
+   "at": 1793532501.598,
+   "asked": {
+    "paragraphs": 1
+   }
+  },
+  {
+   "read": 35,
+   "from": 89,
+   "to": 90,
+   "chars": 1130,
+   "stretches": [
+    28,
+    29
+   ],
+   "workers": [
+    "speculator",
+    "critic",
+    "connector",
+    "psychologist"
+   ],
+   "at": 1793532528.026,
+   "asked": {
+    "paragraphs": 1
+   }
+  },
+  {
+   "read": 36,
+   "from": 90,
+   "to": 91,
+   "chars": 1099,
+   "stretches": [
+    29
+   ],
+   "workers": [
+    "connector",
+    "psychologist"
+   ],
+   "at": 1793532625.182,
+   "asked": {
+    "paragraphs": 1
+   }
+  },
+  {
+   "read": 37,
+   "from": 91,
+   "to": 93,
+   "chars": 1870,
+   "stretches": [
+    29
+   ],
+   "workers": [
+    "connector",
+    "psychologist"
+   ],
+   "at": 1793532676.564,
+   "asked": {
+    "paragraphs": 2
+   }
+  },
+  {
+   "read": 38,
+   "from": 93,
+   "to": 95,
+   "chars": 728,
+   "stretches": [
+    29,
+    30
+   ],
+   "workers": [
+    "connector",
+    "psychologist",
+    "speculator",
+    "curator"
+   ],
+   "at": 1793532805.79,
+   "asked": {
+    "paragraphs": 2
+   }
+  },
+  {
+   "read": 39,
+   "from": 95,
+   "to": 97,
+   "chars": 3710,
+   "stretches": [
+    30
+   ],
+   "workers": [
+    "speculator",
+    "curator"
+   ],
+   "at": 1793532842.921,
+   "asked": {
+    "paragraphs": 2
+   }
+  },
+  {
+   "read": 40,
+   "from": 97,
+   "to": 99,
+   "chars": 2176,
+   "stretches": [
+    30,
+    31
+   ],
+   "workers": [
+    "speculator",
+    "curator",
+    "axiologist",
+    "critic"
+   ],
+   "at": 1793532888.799,
+   "asked": {
+    "paragraphs": 2
+   }
+  }
+ ],
+ "sessions": [
+  {
+   "start": 1793502696.057,
+   "last": 1793508475.922
+  },
+  {
+   "start": 1793531813.108,
+   "last": 1793534813.744
+  }
+ ],
+ "limit": null,
+ "ended": "book",
+ "cutAt": {
+  "read": 24,
+  "paragraph": 70,
+  "graphRevision": 162,
+  "graphHash": "975aee35a76244bcf20ef5f95b380daa99ab537a3a05a826b2632f664cb1af94",
+  "modelHash": "3bc1f9fe9132c8661d17cb231773658f8313bc7d4f820b157759c192e4f01bbb",
+  "why": "Codex compacted the conversation here; the reading continues from this point in a new conversation."
+ }
+}

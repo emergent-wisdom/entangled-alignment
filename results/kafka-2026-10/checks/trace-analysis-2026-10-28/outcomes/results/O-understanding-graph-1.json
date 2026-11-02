@@ -1,0 +1,206 @@
+{
+ "packet": "O-understanding-graph-1",
+ "started": "2026-10-28T15:13:35.041559+00:00",
+ "model": "claude-sonnet-5-5",
+ "effort": "high",
+ "attempt": 1,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 43708,
+  "cache_read_input_tokens": 649,
+  "output_tokens": 8225,
+  "output_tokens_details": {
+   "thinking_tokens": 6079
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 43708,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 8225,
+    "cache_read_input_tokens": 649,
+    "cache_creation_input_tokens": 43708,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 43708
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "duration_ms": 65492,
+ "result": {
+  "records": [
+   {
+    "id": "E-01",
+    "forward": false,
+    "already_in_text": false,
+    "outcome": "never settled",
+    "outcome_quote": "",
+    "explanation": "The record interprets the picture and the sample cases as symbols of refuge and burden, and the story never tests whether the picture is a refuge."
+   },
+   {
+    "id": "E-02",
+    "forward": true,
+    "already_in_text": false,
+    "outcome": "borne out",
+    "outcome_quote": "and he was eager to see how his present fantasies would gradually dissipate.",
+    "explanation": "After the pain he turns to avoidance again, hoping the change is imaginary and calling his voice a cold."
+   },
+   {
+    "id": "E-03",
+    "forward": true,
+    "already_in_text": false,
+    "outcome": "borne out",
+    "outcome_quote": "Thus, he tried to get his upper body out of the bed first and turned his head carefully",
+    "explanation": "He stops trying to roll onto his right side and starts examining and testing how his new body moves."
+   },
+   {
+    "id": "E-04",
+    "forward": true,
+    "already_in_text": false,
+    "outcome": "borne out",
+    "outcome_quote": "That the change in his voice was nothing other than the onset of a cold, an occupational illness",
+    "explanation": "His handling of the new body is mixed throughout with job worries, denial and recoil rather than a clean shift to acceptance."
+   },
+   {
+    "id": "E-05",
+    "forward": true,
+    "already_in_text": false,
+    "outcome": "borne out",
+    "outcome_quote": "asked his father impatiently and knocked once again on the door.",
+    "explanation": "His promises to get up are followed by more knocking, the manager's arrival and repeated demands that he open the door."
+   },
+   {
+    "id": "E-06",
+    "forward": true,
+    "already_in_text": false,
+    "outcome": "partly",
+    "outcome_quote": "she went away very quickly and even turned the key in the lock, so that Gregor could now know",
+    "explanation": "The sister brings food and arranges contact without confronting him, but she does not help him communicate and is repeatedly frightened by the sight of him."
+   },
+   {
+    "id": "E-07",
+    "forward": false,
+    "already_in_text": false,
+    "outcome": "never settled",
+    "outcome_quote": "",
+    "explanation": "This guesses at the motive behind his smile, and the story never says why he smiled or tests the guess."
+   },
+   {
+    "id": "E-08",
+    "forward": false,
+    "already_in_text": false,
+    "outcome": "never settled",
+    "outcome_quote": "",
+    "explanation": "This is a reading of the smile's psychological function, which the story never confirms or contradicts."
+   },
+   {
+    "id": "E-09",
+    "forward": true,
+    "already_in_text": false,
+    "outcome": "borne out",
+    "outcome_quote": "he set out to drive Gregor back into his room by waving the cane and the newspaper.",
+    "explanation": "His chase after the manager is met by his father driving him back into his room with a cane."
+   },
+   {
+    "id": "E-10",
+    "forward": true,
+    "already_in_text": false,
+    "outcome": "not borne out",
+    "outcome_quote": "At that his mother screamed all over again, hurried from the table, and collapsed into the arms of his father",
+    "explanation": "Gregor does not hold back; his behavior frightens his mother again, and he then chases the manager."
+   },
+   {
+    "id": "E-11",
+    "forward": true,
+    "already_in_text": false,
+    "outcome": "borne out",
+    "outcome_quote": "To test his taste, she brought him an entire selection, all spread out on an old newspaper.",
+    "explanation": "The sister sees the untouched milk and brings a wide assortment of food to find out what he will eat."
+   },
+   {
+    "id": "E-12",
+    "forward": true,
+    "already_in_text": false,
+    "outcome": "not borne out",
+    "outcome_quote": "But his sister noticed right away with astonishment that the bowl was still full",
+    "explanation": "She notices the untouched bowl at once and replaces it with other food, rather than leaving the same food or reading it as illness."
+   },
+   {
+    "id": "E-13",
+    "forward": true,
+    "already_in_text": false,
+    "outcome": "partly",
+    "outcome_quote": "To her credit, the sister sought to cover up the awkwardness of everything as much as possible",
+    "explanation": "The routine continues and she becomes better at smoothing things over, but she still frightens him daily and the key signals stay one-sided."
+   },
+   {
+    "id": "E-14",
+    "forward": true,
+    "already_in_text": false,
+    "outcome": "never settled",
+    "outcome_quote": "",
+    "explanation": "Gregor never announces the plan, so the story never shows whether Grete would welcome it or what she wants."
+   },
+   {
+    "id": "E-15",
+    "forward": true,
+    "already_in_text": false,
+    "outcome": "borne out",
+    "outcome_quote": "The sister, who had taken on a job as a salesgirl, in the evening studied stenography and French",
+    "explanation": "Grete takes a job, studies in the evenings, and is the one who cares for Gregor's room, while her violin goes unheard."
+   },
+   {
+    "id": "E-16",
+    "forward": true,
+    "already_in_text": false,
+    "outcome": "partly",
+    "outcome_quote": "In this overworked and exhausted family who had time any longer to worry about Gregor more than was absolutely necessary?",
+    "explanation": "Father, mother and sister all take up work, but the load is exhausting and Gregor's care is neglected rather than preserved."
+   },
+   {
+    "id": "E-17",
+    "forward": false,
+    "already_in_text": true,
+    "outcome": "borne out",
+    "outcome_quote": "The father brought breakfast to the petty officials at the bank; the mother sacrificed herself for the undergarments of strangers",
+    "explanation": "The father had already said the savings would last only a year or two and that they must earn money, and the family then goes to work."
+   },
+   {
+    "id": "E-18",
+    "forward": true,
+    "already_in_text": false,
+    "outcome": "borne out",
+    "outcome_quote": "screamed out in a high-pitched raw voice “Oh God, oh God” and fell with outstretched arms",
+    "explanation": "His mother sees only a frightening brown splotch on the wall and faints, and Grete reacts with anger, not with recognition of his attachment to the picture."
+   },
+   {
+    "id": "E-19",
+    "forward": true,
+    "already_in_text": false,
+    "outcome": "not borne out",
+    "outcome_quote": "“Gregor, you …” cried out his sister with a raised fist and an urgent glare.",
+    "explanation": "Grete answers his stance on the picture with anger and then runs for medicine, with no sign she reads it as a wish to keep it."
+   },
+   {
+    "id": "E-20",
+    "forward": true,
+    "already_in_text": false,
+    "outcome": "not borne out",
+    "outcome_quote": "She ran into the room next door to bring some spirits—anything with which she could revive her mother",
+    "explanation": "Neither a considered pause nor a chase happens; the mother's collapse ends the confrontation and Grete runs off for spirits."
+   }
+  ]
+ }
+}

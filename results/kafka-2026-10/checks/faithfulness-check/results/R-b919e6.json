@@ -1,0 +1,48 @@
+{
+ "blind": "R-b919e6",
+ "started": "2026-10-26T10:19:15.800537+00:00",
+ "model": "claude-sonnet-5-5",
+ "effort": "high",
+ "attempt": 1,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 38324,
+  "cache_read_input_tokens": 2119,
+  "output_tokens": 1523,
+  "output_tokens_details": {
+   "thinking_tokens": 1414
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 38324,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 1523,
+    "cache_read_input_tokens": 2119,
+    "cache_creation_input_tokens": 38324,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 38324
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "cost_usd_reported": 0.1687419,
+ "duration_ms": 15990,
+ "result": {
+  "misreadings": [],
+  "factual_statements_checked": 16,
+  "note": "Every claim about the text in both versions is supported by the final passage or earlier text, or is clearly the reader's own interpretation; the only borderline phrase is 'the first check described comes after he has died', which I read as meaning the first check since the family locked him in."
+ }
+}

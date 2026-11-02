@@ -1,0 +1,57 @@
+{
+ "packet": "R-24-14",
+ "started": "2026-11-01T16:22:18.469437+00:00",
+ "model": "claude-sonnet-5-5",
+ "effort": "high",
+ "attempt": 1,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 61139,
+  "cache_read_input_tokens": 2067,
+  "output_tokens": 7570,
+  "output_tokens_details": {
+   "thinking_tokens": 7273
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 61139,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 7570,
+    "cache_read_input_tokens": 2067,
+    "cache_creation_input_tokens": 61139,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 61139
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "duration_ms": 58034,
+ "result": {
+  "problems": [
+   {
+    "record": "meaning_model.events:event.cleaner.life",
+    "status": "applied",
+    "quote": "sketch: guessed birth 1885; upbringing, youth, sales employment; current horizon is waking at 1912.0; later life remains forecast",
+    "evidence": "This old widow, whose strong bony frame had enabled her to survive the worst a long life can offer",
+    "kind": "unsupported",
+    "severity": "low",
+    "explanation": "The boundary text, labelled a guess, gives the cleaning woman a birth year of 1885 and a sales career, which contradicts the text's old, white-haired widow with a long life and conflicts with the record's own interval starting in 1851."
+   }
+  ],
+  "records_checked": 60,
+  "note": "Nearly all records are labelled sketch, guessed or inferred and stay within the text read; I found only one mislabelled boundary note, on the cleaning woman's life event."
+ }
+}

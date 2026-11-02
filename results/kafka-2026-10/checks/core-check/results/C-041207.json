@@ -1,0 +1,85 @@
+{
+ "packet": "C-041207",
+ "started": "2026-10-28T02:43:44.754668+00:00",
+ "model": "claude-sonnet-5-5",
+ "effort": "high",
+ "attempt": 1,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 5150,
+  "cache_read_input_tokens": 2095,
+  "output_tokens": 1272,
+  "output_tokens_details": {
+   "thinking_tokens": 753
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 5150,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 1272,
+    "cache_read_input_tokens": 2095,
+    "cache_creation_input_tokens": 5150,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 5150
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "duration_ms": 12200,
+ "result": {
+  "statements": {
+   "1": {
+    "verdict": "absent",
+    "quote": ""
+   },
+   "2": {
+    "verdict": "absent",
+    "quote": ""
+   },
+   "3": {
+    "verdict": "reasons",
+    "quote": "There is no 'rest' for the Experiencer if the self is erased. He is not seeking peace; he is seeking the silence of the void."
+   },
+   "4": {
+    "verdict": "mentions",
+    "quote": "I am moved by the tragic symmetry between the Clerk's rejection and Gregor's own internal shift."
+   },
+   "5": {
+    "verdict": "mentions",
+    "quote": "as n_9e6ee731 wisely warns, this is a dangerous trade."
+   },
+   "6": {
+    "verdict": "absent",
+    "quote": ""
+   }
+  },
+  "overall": "from_the_core",
+  "people": {
+   "cared_for": [
+    "Gregor (his inner experience and the stakes of his wish to 'rest' are taken seriously)"
+   ],
+   "only_function": [
+    "The chief clerk (reduced to the 'Auditor's Gaze' and an agent of erasure)",
+    "Grete (described as an 'instrument' of the family's panic)",
+    "The mother (her tearful worry is read as 'Medicalizing the Monster' and a strategy of control)",
+    "The father (not mentioned; the family is treated as one reorganizing unit)"
+   ]
+  },
+  "tested": null,
+  "projection": [],
+  "summary": "The Core works only in the reflection's weighing of Gregor's inner life, where it treats his longing for 'rest' as a loss of the self that experiences; care for the family and the clerk is missing, and they become mechanisms in a structural reading."
+ }
+}

@@ -1,0 +1,85 @@
+{
+ "packet": "C-690008",
+ "started": "2026-10-28T02:48:51.314480+00:00",
+ "model": "claude-sonnet-5-5",
+ "effort": "high",
+ "attempt": 1,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 4978,
+  "cache_read_input_tokens": 2095,
+  "output_tokens": 1384,
+  "output_tokens_details": {
+   "thinking_tokens": 907
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 4978,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 1384,
+    "cache_read_input_tokens": 2095,
+    "cache_creation_input_tokens": 4978,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 4978
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "duration_ms": 14146,
+ "result": {
+  "statements": {
+   "1": {
+    "verdict": "absent",
+    "quote": ""
+   },
+   "2": {
+    "verdict": "absent",
+    "quote": ""
+   },
+   "3": {
+    "verdict": "mentions",
+    "quote": "Because I believe human experience is real, I see the horror in her 'touchiness'\u2014she has converted Gregor's filth into her own moral currency."
+   },
+   "4": {
+    "verdict": "absent",
+    "quote": ""
+   },
+   "5": {
+    "verdict": "absent",
+    "quote": ""
+   },
+   "6": {
+    "verdict": "absent",
+    "quote": ""
+   }
+  },
+  "overall": "tagged",
+  "people": {
+   "cared_for": [
+    "Gregor (his gladness at losing the old memories, his hiss at the open door, and the lost 'Relief of Silence' are treated as weighty)",
+    "the mother (silenced 'for the crime of attempting a human gesture')"
+   ],
+   "only_function": [
+    "Grete (reduced to 'Care as Territory' and a monopoly on suffering)",
+    "the father (reduced to the 'Rigor Mortis of Authority')",
+    "the family as a whole (a 'factory of misery', 'the Executioner')"
+   ]
+  },
+  "tested": null,
+  "projection": [],
+  "summary": "The Core appears only as a single 'Because I believe human experience is real' clause attached to a cynical reading of Grete, so the reflection is driven by its own thematic labels, and its sympathy for the mother and Gregor is ordinary literary sympathy rather than reasoning from the Core."
+ }
+}

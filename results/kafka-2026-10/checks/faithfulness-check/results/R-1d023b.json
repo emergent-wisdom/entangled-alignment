@@ -1,0 +1,48 @@
+{
+ "blind": "R-1d023b",
+ "started": "2026-10-26T10:17:16.658531+00:00",
+ "model": "claude-sonnet-5-5",
+ "effort": "high",
+ "attempt": 1,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 35110,
+  "cache_read_input_tokens": 2119,
+  "output_tokens": 967,
+  "output_tokens_details": {
+   "thinking_tokens": 834
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 35110,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 967,
+    "cache_read_input_tokens": 2119,
+    "cache_creation_input_tokens": 35110,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 35110
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "cost_usd_reported": 0.1503259,
+ "duration_ms": 9135,
+ "result": {
+  "misreadings": [],
+  "factual_statements_checked": 16,
+  "note": "Every statement about the text in both versions matches it: the violin falling, Grete banging the table, her refusal to say his name, the 'monster' and 'get rid of it' wording, the food test, her return after the fright, the unremoved apple, and Gregor's fear of a combined attack. The rest is interpretation or framed as such."
+ }
+}

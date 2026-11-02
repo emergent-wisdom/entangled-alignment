@@ -1,0 +1,48 @@
+{
+ "blind": "R-869e70",
+ "started": "2026-10-26T10:18:28.125492+00:00",
+ "model": "claude-sonnet-5-5",
+ "effort": "high",
+ "attempt": 1,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 6220,
+  "cache_read_input_tokens": 2119,
+  "output_tokens": 835,
+  "output_tokens_details": {
+   "thinking_tokens": 699
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 6220,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 835,
+    "cache_read_input_tokens": 2119,
+    "cache_creation_input_tokens": 6220,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 6220
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "cost_usd_reported": 0.0334459,
+ "duration_ms": 9342,
+ "result": {
+  "misreadings": [],
+  "factual_statements_checked": 16,
+  "note": "Every claim about the text in both versions matches it: the wrong-direction hit on the bedpost, 'I must not stay in bed uselessly', the certainty about a cold, the expectation that his fantasies will dissipate, the repeated promises to get up, and the framed picture. The remaining open-question and speculative statements are framed as such."
+ }
+}

@@ -1,0 +1,47 @@
+{
+ "packet": "R-25",
+ "started": "2026-11-01T16:24:07.160645+00:00",
+ "model": "claude-sonnet-5-5",
+ "effort": "high",
+ "attempt": 1,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 39875,
+  "cache_read_input_tokens": 2067,
+  "output_tokens": 1710,
+  "output_tokens_details": {
+   "thinking_tokens": 1582
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 39875,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 1710,
+    "cache_read_input_tokens": 2067,
+    "cache_creation_input_tokens": 39875,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 39875
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "duration_ms": 15548,
+ "result": {
+  "problems": [],
+  "records_checked": 24,
+  "note": "Every record stays within the text read so far; the Gregor-side claims (hunger, 'dying of hunger', milk refused, cheese eaten, door opened toward evening, lodgers' meat inspection, father's bow) match the text, and the calendar placements and numerical readings are labelled as guessed, inferred or exploring."
+ }
+}

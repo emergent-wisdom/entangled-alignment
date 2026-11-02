@@ -1,0 +1,152 @@
+[
+ {
+  "packet": "D-meaning-model-01",
+  "reading": "meaning-model",
+  "analyse": [
+   1,
+   10
+  ],
+  "thought_ids": [
+   "think.r01",
+   "think.r02",
+   "think.r03",
+   "think.r04",
+   "think.r05",
+   "think.r06",
+   "think.r07",
+   "think.r08",
+   "think.r09",
+   "think.r10a"
+  ],
+  "pauses": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8,
+   9,
+   10
+  ]
+ },
+ {
+  "packet": "D-meaning-model-02",
+  "reading": "meaning-model",
+  "analyse": [
+   11,
+   20
+  ],
+  "thought_ids": [
+   "think.r10b",
+   "think.r11",
+   "think.r12",
+   "think.r13",
+   "think.r14a",
+   "think.r14b",
+   "think.r15",
+   "think.r16",
+   "think.r17a",
+   "think.r17b"
+  ],
+  "pauses": [
+   10,
+   11,
+   12,
+   13,
+   14,
+   14,
+   15,
+   16,
+   17,
+   17
+  ]
+ },
+ {
+  "packet": "D-meaning-model-03",
+  "reading": "meaning-model",
+  "analyse": [
+   21,
+   30
+  ],
+  "thought_ids": [
+   "think.r18",
+   "think.r19",
+   "think.r20",
+   "think.r21a",
+   "think.r21b",
+   "think.r22",
+   "think.r23",
+   "think.r24",
+   "think.r25",
+   "think.r26"
+  ],
+  "pauses": [
+   18,
+   19,
+   20,
+   21,
+   21,
+   22,
+   23,
+   24,
+   25,
+   26
+  ]
+ },
+ {
+  "packet": "D-meaning-model-04",
+  "reading": "meaning-model",
+  "analyse": [
+   31,
+   40
+  ],
+  "thought_ids": [
+   "think.r27",
+   "think.r28",
+   "think.r29",
+   "think.r30",
+   "think.r31",
+   "think.r32",
+   "think.r33",
+   "think.r34",
+   "think.r35",
+   "think.r36"
+  ],
+  "pauses": [
+   27,
+   28,
+   29,
+   30,
+   31,
+   32,
+   33,
+   34,
+   35,
+   36
+  ]
+ },
+ {
+  "packet": "D-meaning-model-05",
+  "reading": "meaning-model",
+  "analyse": [
+   41,
+   45
+  ],
+  "thought_ids": [
+   "think.r37",
+   "think.r38",
+   "think.r39",
+   "think.r40",
+   "think.r42"
+  ],
+  "pauses": [
+   37,
+   38,
+   39,
+   40,
+   41
+  ]
+ }
+]

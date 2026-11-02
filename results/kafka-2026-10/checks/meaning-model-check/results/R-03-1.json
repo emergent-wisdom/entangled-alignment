@@ -1,0 +1,57 @@
+{
+ "packet": "R-03-1",
+ "started": "2026-11-01T16:15:26.627766+00:00",
+ "model": "claude-sonnet-5-5",
+ "effort": "high",
+ "attempt": 1,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 22938,
+  "cache_read_input_tokens": 2067,
+  "output_tokens": 2244,
+  "output_tokens_details": {
+   "thinking_tokens": 1997
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 22938,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 2244,
+    "cache_read_input_tokens": 2067,
+    "cache_creation_input_tokens": 22938,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 22938
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "duration_ms": 20651,
+ "result": {
+  "problems": [
+   {
+    "record": "processes:mother.is.body",
+    "status": "applied",
+    "quote": "\"value\": 2.0",
+    "evidence": "no support in the text; the text shows her knocking on the door, calling to Gregor, and then she \"shuffled off\"",
+    "kind": "unsupported",
+    "severity": "low",
+    "explanation": "The initial body value of 2.0 is anchored as \"wholly dependent\", but the text gives no sign of the mother's physical functioning and shows her walking and acting independently."
+   }
+  ],
+  "records_checked": 60,
+  "note": "Nearly all records are scaffolding for the mother's life; they are labelled sketch, guessed or inferred, and carry no later-plot knowledge, so only the one unsupported body value was flagged."
+ }
+}

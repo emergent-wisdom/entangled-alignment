@@ -1,0 +1,66 @@
+{
+ "packet": "R-35-3",
+ "started": "2026-11-01T16:25:08.197040+00:00",
+ "model": "claude-sonnet-5-5",
+ "effort": "high",
+ "attempt": 1,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 54585,
+  "cache_read_input_tokens": 2067,
+  "output_tokens": 3617,
+  "output_tokens_details": {
+   "thinking_tokens": 3120
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 54585,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 3617,
+    "cache_read_input_tokens": 2067,
+    "cache_creation_input_tokens": 54585,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 54585
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "duration_ms": 27950,
+ "result": {
+  "problems": [
+   {
+    "record": "meaning_model.events:event.sister.inner",
+    "status": "applied",
+    "quote": "Gregor's unnamed sister's attributed perspective; model estimates do not become public truth",
+    "evidence": "\u201cGrete! Grete!\u201d she yelled. \u201cMother?\u201d called the sister from the other side.",
+    "kind": "unsupported",
+    "severity": "low",
+    "explanation": "The text names the sister Grete, so describing her as unnamed contradicts what has been read (the referent record itself says \"Grete, Gregor's sister\")."
+   },
+   {
+    "record": "meaning_model.events:event.sister.life",
+    "status": "applied",
+    "quote": "sketch: guessed birth 1885; upbringing, youth, sales employment; current horizon is waking at 1912.0; later life remains forecast",
+    "evidence": "a girl who was still a seventeen-year-old child",
+    "kind": "unsupported",
+    "severity": "low",
+    "explanation": "A guessed 1885 birth would make the sister about 27 in 1912, contradicting the stated age of seventeen and the record's own interval starting at 1894.4."
+   }
+  ],
+  "records_checked": 60,
+  "note": "Almost all records are labeled sketch/inferred guesses or neutral process scaffolding consistent with the full text, which includes Gregor's death; only two stale or contradictory descriptions of the sister stood out."
+ }
+}

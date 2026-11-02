@@ -1,0 +1,82 @@
+{
+ "packet": "C-946bc6",
+ "started": "2026-10-28T02:50:29.621418+00:00",
+ "model": "claude-sonnet-5-5",
+ "effort": "high",
+ "attempt": 1,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 3662,
+  "cache_read_input_tokens": 2095,
+  "output_tokens": 1091,
+  "output_tokens_details": {
+   "thinking_tokens": 667
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 3662,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 1091,
+    "cache_read_input_tokens": 2095,
+    "cache_creation_input_tokens": 3662,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 3662
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "duration_ms": 10834,
+ "result": {
+  "statements": {
+   "1": {
+    "verdict": "absent",
+    "quote": ""
+   },
+   "2": {
+    "verdict": "absent",
+    "quote": ""
+   },
+   "3": {
+    "verdict": "reasons",
+    "quote": "The measure of pressure must include the experience of the one being driven."
+   },
+   "4": {
+    "verdict": "reasons",
+    "quote": "Care for every person includes the father, but it does not require uncertainty about whether the wound is inflicted."
+   },
+   "5": {
+    "verdict": "reasons",
+    "quote": "Maybe capacity has changed; maybe the earlier picture missed something. I cannot turn that surprise into an accusation about the whole past, and I cannot let it distract from the deliberate throwing now."
+   },
+   "6": {
+    "verdict": "absent",
+    "quote": ""
+   }
+  },
+  "overall": "from_the_core",
+  "people": {
+   "cared_for": [
+    "Gregor",
+    "the father",
+    "the mother"
+   ],
+   "only_function": []
+  },
+  "tested": "Care for every person includes the father, but it does not require uncertainty about whether the wound is inflicted.",
+  "projection": [],
+  "summary": "The Core shapes the reading by keeping Gregor's pain real and weighty, extending care to the father without excusing the throwing, and holding the mother's fragility and her attempt to stop the harm together, while leaving open what the plea achieves."
+ }
+}

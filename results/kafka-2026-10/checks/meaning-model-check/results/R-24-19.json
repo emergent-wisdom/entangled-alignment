@@ -1,0 +1,57 @@
+{
+ "packet": "R-24-19",
+ "started": "2026-11-01T16:22:54.510962+00:00",
+ "model": "claude-sonnet-5-5",
+ "effort": "high",
+ "attempt": 1,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 52718,
+  "cache_read_input_tokens": 2067,
+  "output_tokens": 1488,
+  "output_tokens_details": {
+   "thinking_tokens": 1241
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 52718,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 1488,
+    "cache_read_input_tokens": 2067,
+    "cache_creation_input_tokens": 52718,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 52718
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "duration_ms": 14252,
+ "result": {
+  "problems": [
+   {
+    "record": "value_series:values.lodger1.speech~0436bd2e27a34d7d",
+    "status": "applied",
+    "quote": "Language development guessed; current source dialogue is intelligible",
+    "evidence": "no support in the text",
+    "kind": "unsupported",
+    "severity": "low",
+    "explanation": "The note says the source currently has intelligible dialogue for this lodger, but the three lodgers have not spoken anywhere in the text read so far."
+   }
+  ],
+  "records_checked": 60,
+  "note": "Nearly all records are labelled sketch, guessed, exploring or inferred and rest only on the lodgers' beards, solemnity, own furniture and insistence on tidiness; only the speech note's claim about source dialogue goes beyond the text."
+ }
+}

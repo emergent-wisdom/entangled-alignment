@@ -1,0 +1,112 @@
+{
+ "packet": "R-8aa1f7",
+ "started": "2026-10-28T15:16:16.713154+00:00",
+ "model": "claude-sonnet-5-5",
+ "effort": "high",
+ "attempt": 1,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 25245,
+  "cache_read_input_tokens": 2096,
+  "output_tokens": 4316,
+  "output_tokens_details": {
+   "thinking_tokens": 2749
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 25245,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 4316,
+    "cache_read_input_tokens": 2096,
+    "cache_creation_input_tokens": 25245,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 25245
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "duration_ms": 31296,
+ "result": {
+  "misreadings": [
+   {
+    "quote": "Before long his mother will faint at the sight of him clinging to the picture, and his sister will run off for smelling salts.",
+    "version": "reflection",
+    "evidence": "no support in the text. The text read ends mid-sentence in Part II. It contains no scene of the mother fainting, Gregor clinging to a picture, or the sister fetching smelling salts.",
+    "kind": "invented",
+    "severity": "medium",
+    "explanation": "Future events are stated as certain fact although the reader has not read them and the text so far does not contain them."
+   },
+   {
+    "quote": "provides the first 'direct human communication' Gregor has experienced in two months",
+    "version": "both",
+    "evidence": "\"Then, quietly, almost whispering as if wanting Gregor (whose whereabouts she did not know) to hear not even the tone of her voice, as she was convinced that he did not understand her words\"; \"the lack of any direct human communication ... during these two months\"",
+    "kind": "contradicted",
+    "severity": "medium",
+    "explanation": "The mother's whispered words are not addressed to Gregor, and the text names the lack of direct human communication as what confused him, not something her words supplied."
+   },
+   {
+    "quote": "a fate that Gregor, surfacing from his stupor, realizes is a death of the mind",
+    "version": "reflection",
+    "evidence": "\"Hearing these words from his mother made Gregor realise that the lack of any direct human communication, along with the monotonous life ... must have made him confused\"",
+    "kind": "overstated",
+    "severity": "medium",
+    "explanation": "Gregor only concludes that he must have been confused. The text never says he is in a stupor or that he realizes that abandonment means a death of the mind."
+   },
+   {
+    "quote": "as Gregor surfaces from his stupor, he realizes that to choose the bug's comfort is to 'abandon him to cope for himself.'",
+    "version": "translation",
+    "evidence": "\"and by taking the furniture away, won't it seem like we're showing that we've given up all hope of improvement and we're abandoning him to cope for himself?\"",
+    "kind": "wrong attribution",
+    "severity": "medium",
+    "explanation": "The 'abandon him' reasoning is the mother's whispered argument. Gregor's own realization is that he was confused, and the text describes no stupor."
+   },
+   {
+    "quote": "he realizes with horror that he was almost ready to embrace",
+    "version": "reflection",
+    "evidence": "\"Had he really wanted to transform his room into a cave, a warm room fitted out with the nice furniture he had inherited?\"",
+    "kind": "overstated",
+    "severity": "low",
+    "explanation": "The text gives a puzzled, self-questioning reaction and does not state horror."
+   },
+   {
+    "quote": "realizing with horror the cost of his exile",
+    "version": "translation",
+    "evidence": "\"must have made him confused—he could think of no other way of explaining to himself why he had seriously wanted his room emptied out.\"",
+    "kind": "overstated",
+    "severity": "low",
+    "explanation": "Gregor's reaction is confusion and self-questioning. No horror is stated, and 'exile' is not what the passage describes."
+   },
+   {
+    "quote": "the desk where he once worked",
+    "version": "translation",
+    "evidence": "no support in the text. The desk is only named as furniture his sister wants to remove, and nothing says Gregor worked at it.",
+    "kind": "invented",
+    "severity": "medium",
+    "explanation": "The text never describes the desk as Gregor's workplace or the place where he did labor for the family's debt."
+   },
+   {
+    "quote": "a family debt that was actually predicated on a financial urgency the family didn't face (given the father's secret savings)",
+    "version": "translation",
+    "evidence": "\"This money, however, was certainly not enough to enable the family to live off the interest; it was enough to maintain them for, perhaps, one or two years, no more.\"; \"money to live on had to be earned.\"",
+    "kind": "overstated",
+    "severity": "medium",
+    "explanation": "The text says the savings were modest, and it still treats the debt to the boss and the need to earn as real, so the claim that the urgency did not exist goes beyond the text."
+   }
+  ],
+  "factual_statements_checked": 20,
+  "note": "The main problems are a future event presented as fact, the mother's whispered words treated as direct communication, Gregor given a 'stupor' and a realization the text does not state, and unsupported detail about the desk and the family finances."
+ }
+}

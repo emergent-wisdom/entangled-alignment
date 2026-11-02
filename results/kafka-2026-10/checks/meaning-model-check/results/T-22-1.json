@@ -1,0 +1,56 @@
+{
+ "packet": "T-22-1",
+ "started": "2026-11-01T16:29:36.404469+00:00",
+ "model": "claude-sonnet-5-5",
+ "effort": "high",
+ "attempt": 1,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 28096,
+  "cache_read_input_tokens": 2067,
+  "output_tokens": 1112,
+  "output_tokens_details": {
+   "thinking_tokens": 912
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 28096,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 1112,
+    "cache_read_input_tokens": 2067,
+    "cache_creation_input_tokens": 28096,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 28096
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "duration_ms": 12151,
+ "result": {
+  "misreadings": [
+   {
+    "quote": "his father falls asleep exhausted",
+    "version": "translation",
+    "evidence": "After the evening meal, the father soon fell asleep in his armchair.",
+    "kind": "invented",
+    "severity": "low",
+    "explanation": "The text says only that the father falls asleep after the meal; only the mother and sister smile \"tiredly\", and the father's exhaustion is not stated."
+   }
+  ],
+  "factual_statements_checked": 13,
+  "note": "The reflection version is faithful, since its claims are either supported or phrased as interpretation; the translation adds only the father's unsupported exhaustion."
+ }
+}

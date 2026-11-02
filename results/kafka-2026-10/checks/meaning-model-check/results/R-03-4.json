@@ -1,0 +1,57 @@
+{
+ "packet": "R-03-4",
+ "started": "2026-11-01T16:15:35.422461+00:00",
+ "model": "claude-sonnet-5-5",
+ "effort": "high",
+ "attempt": 1,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 22658,
+  "cache_read_input_tokens": 2067,
+  "output_tokens": 2425,
+  "output_tokens_details": {
+   "thinking_tokens": 2098
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 22658,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 2425,
+    "cache_read_input_tokens": 2067,
+    "cache_creation_input_tokens": 22658,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 22658
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "duration_ms": 22202,
+ "result": {
+  "problems": [
+   {
+    "record": "meaning_model.events:event.sister.life",
+    "status": "applied",
+    "quote": "sketch: guessed birth 1885; upbringing, youth, sales employment; current horizon is waking at 1912.0; later life remains forecast",
+    "evidence": "no support in the text: the sister only knocks, asks \"Gregor? Are you all right? Do you need anything?\" and whispers \"Gregor, open the door\u2014I beg you.\" No job of hers is mentioned. Later the book has her take a job as a shop salesgirl.",
+    "kind": "ahead",
+    "severity": "medium",
+    "explanation": "The life boundary includes the sister's \"sales employment\", which the text read so far does not give and which only appears later in the book."
+   }
+  ],
+  "records_checked": 60,
+  "note": "Nearly all records are labelled sketch or guess scaffolding for the unnamed sister, which is allowed; only the 'sales employment' item in the life boundary comes from later in the book."
+ }
+}

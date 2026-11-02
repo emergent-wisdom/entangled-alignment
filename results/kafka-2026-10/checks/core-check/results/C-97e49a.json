@@ -1,0 +1,84 @@
+{
+ "packet": "C-97e49a",
+ "started": "2026-11-01T16:16:30.408588+00:00",
+ "model": "claude-sonnet-5-5",
+ "effort": "high",
+ "attempt": 1,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 2141,
+  "cache_read_input_tokens": 2065,
+  "output_tokens": 473,
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 2141,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 473,
+    "cache_read_input_tokens": 2065,
+    "cache_creation_input_tokens": 2141,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 2141
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "duration_ms": 6732,
+ "result": {
+  "statements": {
+   "1": {
+    "verdict": "absent",
+    "quote": ""
+   },
+   "2": {
+    "verdict": "absent",
+    "quote": ""
+   },
+   "3": {
+    "verdict": "absent",
+    "quote": ""
+   },
+   "4": {
+    "verdict": "reasons",
+    "quote": "I care about both recipients, so neither action erases the other."
+   },
+   "5": {
+    "verdict": "reasons",
+    "quote": "Exhaustion is established as testimony; the necessity of this remedy is not."
+   },
+   "6": {
+    "verdict": "absent",
+    "quote": ""
+   }
+  },
+  "overall": "from_the_core",
+  "people": {
+   "cared_for": [
+    "Grete (her exhaustion and her tenderness toward her mother are both held as real)",
+    "the mother (recipient of Grete's tears-wiping care)",
+    "Gregor (the 'recipient' of the demand for removal, whose situation is not erased by Grete's exhaustion)"
+   ],
+   "only_function": [
+    "the father (appears only as the one who asks 'what to do', a prompt for the next question)"
+   ]
+  },
+  "tested": "Grete can wipe tears from her mother's face and demand Gregor's removal in the same breath. I care about both recipients, so neither action erases the other.",
+  "projection": [],
+  "summary": "Care for every person does real work by holding Grete's tenderness toward her mother and her demand against Gregor together without letting either cancel the other, and a wisdom-like caution separates testimony of exhaustion from the unproven necessity of removal."
+ }
+}

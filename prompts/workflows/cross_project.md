@@ -34,7 +34,7 @@ These tools use the in-memory graphology instance and only work on the current p
 3. Look up specific paper:            graph_lookup_external({ project: "default", nodeId: "n_paper_id" })
 4. Find node across all projects:     graph_global_lookup({ nodeId: "n_unknown" })
 5. Resolve reference chains:          graph_resolve_references({ nodeId: "n_xxx", depth: 2 })
-6. Create local concept:              graph_add_concept({ ... })
+6. Create local concept:              graph_add_understanding({ ... })
 7. Link with cross-project ref:       graph_connect({ from: "n_local", to: "n_paper_id",
                                         references: [{ project: "default", nodeId: "n_paper_id" }] })
 ```

@@ -1,0 +1,57 @@
+{
+ "packet": "R-08-2",
+ "started": "2026-11-01T16:16:55.784396+00:00",
+ "model": "claude-sonnet-5-5",
+ "effort": "high",
+ "attempt": 1,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 30616,
+  "cache_read_input_tokens": 2067,
+  "output_tokens": 2908,
+  "output_tokens_details": {
+   "thinking_tokens": 2679
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 30616,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 2908,
+    "cache_read_input_tokens": 2067,
+    "cache_creation_input_tokens": 30616,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 30616
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "duration_ms": 22426,
+ "result": {
+  "problems": [
+   {
+    "record": "meaning_model.events:event.sister.inner",
+    "status": "applied",
+    "quote": "Gregor's unnamed sister's attributed perspective",
+    "evidence": "\"Grete! Grete!\" she yelled. \"Mother?\" called the sister from the other side.",
+    "kind": "unsupported",
+    "severity": "low",
+    "explanation": "The record calls the sister unnamed, but the text read so far names her Grete (and the referent record itself says so)."
+   }
+  ],
+  "records_checked": 60,
+  "note": "Nearly all records are labelled sketch, inferred or exploring and fit the text read so far; the only problem found is the sister described as unnamed although the text names her Grete."
+ }
+}

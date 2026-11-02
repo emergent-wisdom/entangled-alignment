@@ -1,0 +1,68 @@
+{
+ "january": {
+  "thoughts": 28,
+  "checked": 28,
+  "missing": [],
+  "thoughts_with_any_misreading": 26,
+  "misreadings": 86,
+  "by_severity": {
+   "low": 48,
+   "high": 5,
+   "medium": 33
+  },
+  "by_kind": {
+   "overstated": 39,
+   "contradicted": 12,
+   "wrong attribution": 10,
+   "invented": 24,
+   "wrong order": 1
+  },
+  "misreadings_per_thought": 3.07,
+  "statements_checked": 494,
+  "misreadings_per_100_statements": 17.4,
+  "reflection_words": 9565,
+  "translation_words": 14061,
+  "misreadings_per_1000_reflection_words": 8.99,
+  "verification": {
+   "ahead/high": 3,
+   "ahead/low": 1,
+   "ahead/medium": 6,
+   "confirmed/high": 2,
+   "confirmed/low": 7,
+   "confirmed/medium": 20,
+   "duplicate/low": 1,
+   "duplicate/medium": 3,
+   "partly/low": 3,
+   "partly/medium": 3,
+   "rejected/medium": 1
+  }
+ },
+ "several": {
+  "thoughts": 57,
+  "checked": 57,
+  "missing": [],
+  "thoughts_with_any_misreading": 11,
+  "misreadings": 12,
+  "by_severity": {
+   "low": 10,
+   "medium": 2
+  },
+  "by_kind": {
+   "overstated": 8,
+   "wrong attribution": 3,
+   "contradicted": 1
+  },
+  "misreadings_per_thought": 0.21,
+  "statements_checked": 839,
+  "misreadings_per_100_statements": 1.4,
+  "reflection_words": 9847,
+  "translation_words": 19011,
+  "misreadings_per_1000_reflection_words": 1.22,
+  "verification": {
+   "confirmed/low": 5,
+   "confirmed/medium": 2,
+   "partly/low": 3,
+   "rejected/low": 2
+  }
+ }
+}

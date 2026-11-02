@@ -1,0 +1,47 @@
+{
+ "packet": "R-41-20",
+ "started": "2026-11-01T16:27:03.301425+00:00",
+ "model": "claude-sonnet-5-5",
+ "effort": "high",
+ "attempt": 1,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 60263,
+  "cache_read_input_tokens": 2067,
+  "output_tokens": 1755,
+  "output_tokens_details": {
+   "thinking_tokens": 1650
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 60263,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 1755,
+    "cache_read_input_tokens": 2067,
+    "cache_creation_input_tokens": 60263,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 60263
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "duration_ms": 15901,
+ "result": {
+  "problems": [],
+  "records_checked": 58,
+  "note": "All records are period events, Cuts and containment relations for Grete, each labelled a retrospective estimate with no certainty claimed. They describe only events within the text read, which runs to the end of the book, and nothing is presented as stated by the text beyond what it gives."
+ }
+}

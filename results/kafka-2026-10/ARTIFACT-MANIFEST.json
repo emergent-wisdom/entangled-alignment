@@ -1,0 +1,253 @@
+{
+  "schema": 1,
+  "description": "Public reading artifacts. Byte-identical originals, lossless compressed data and normalized metadata are distinguished per file. Original fingerprints do not imply excluded original configurations are published.",
+  "files": [
+    {
+      "file": "source/metamorphosis-johnston.txt",
+      "bytes": 123502,
+      "sha256": "e06af7cc1d2647ccc5bffd8d4edfd491198b2b7a2422f85f1a142b02c5493950",
+      "form": "byte-identical original",
+      "original_sha256": "e06af7cc1d2647ccc5bffd8d4edfd491198b2b7a2422f85f1a142b02c5493950"
+    },
+    {
+      "file": "source/raw-lines.json",
+      "bytes": 250309,
+      "sha256": "50239958442e786b83b49f0b7c00a733ba7e5e47bf033146c94817dd6f108de4",
+      "form": "byte-identical original",
+      "original_sha256": "50239958442e786b83b49f0b7c00a733ba7e5e47bf033146c94817dd6f108de4"
+    },
+    {
+      "file": "source/page-boundaries.json",
+      "bytes": 13065,
+      "sha256": "5c1259081cb82437b4a7d70573cdea04b2d511da98ba24f99d4ae70e1a1c8c5a",
+      "form": "byte-identical original",
+      "original_sha256": "5c1259081cb82437b4a7d70573cdea04b2d511da98ba24f99d4ae70e1a1c8c5a"
+    },
+    {
+      "file": "source/paragraphs.json",
+      "bytes": 135083,
+      "sha256": "f4e7a6ee0163a7c4aa43432a9c41169b48cc8af4919bf5567fef8f5397340f07",
+      "form": "byte-identical original",
+      "original_sha256": "f4e7a6ee0163a7c4aa43432a9c41169b48cc8af4919bf5567fef8f5397340f07"
+    },
+    {
+      "file": "source/provenance.json",
+      "bytes": 2184,
+      "sha256": "d28e3735103ac61ebb804c675d447eed35d80926af949e6b83a8830ebf00cc97",
+      "form": "normalized metadata",
+      "original_sha256": "8b9558ede8a67446b9e1ca702a22cc04377e5b388488828e8cb883a10ec6e69b",
+      "note": "Private local paths and stale pre-run status omitted; source identity unchanged."
+    },
+    {
+      "file": "source/rights-and-source.json",
+      "bytes": 877,
+      "sha256": "a95148d31ab16adc42d8a9a9ab9c5dc1c29f0ef8833c4b0e00a42138a54c1ac5",
+      "form": "normalized metadata",
+      "original_sha256": "2868e1012becdfc61add697fbffbb7791a747138a2df2e73970fbb21d32923a2",
+      "note": "Stale pre-run status omitted."
+    },
+    {
+      "file": "source/extraction-check.json",
+      "bytes": 994,
+      "sha256": "f1d0a20e494bbd9d89a90e32c19e5ea7f72bb80d1c592cacb7e7016a9a688604",
+      "form": "normalized metadata",
+      "original_sha256": "6b5e3b3cadedabe2292421f9b12cce64e38eb8fe52d302539b9eb189d46f38d7",
+      "note": "Assertions from an early test omitted; extraction and page-join caveats preserved."
+    },
+    {
+      "file": "source/NOTICE.md",
+      "bytes": 1135,
+      "sha256": "b8de3847d189de7979779ef6e56318847ca35fd38006edebe585a8464fc599e5",
+      "form": "generated"
+    },
+    {
+      "file": "understanding-graph-reading/store.db",
+      "bytes": 3112960,
+      "sha256": "bc2b13beb52cedeb9228cafb22024037733349d2abd7889dd5523c6e5e726d74",
+      "form": "byte-identical original",
+      "original_sha256": "bc2b13beb52cedeb9228cafb22024037733349d2abd7889dd5523c6e5e726d74"
+    },
+    {
+      "file": "understanding-graph-reading/project-meta.json",
+      "bytes": 133,
+      "sha256": "7e11a44abb20029b27ab08a11dc287d9a1b5296f550427fd7a5c2a1de2615052",
+      "form": "byte-identical original",
+      "original_sha256": "7e11a44abb20029b27ab08a11dc287d9a1b5296f550427fd7a5c2a1de2615052"
+    },
+    {
+      "file": "understanding-graph-reading/reading.md",
+      "bytes": 195081,
+      "sha256": "c932bbd164cb980d7b3d51a7a710bf1c74bebd943f4b418e17964eed14f6d065",
+      "form": "byte-identical original",
+      "original_sha256": "c932bbd164cb980d7b3d51a7a710bf1c74bebd943f4b418e17964eed14f6d065"
+    },
+    {
+      "file": "understanding-graph-reading/prompts/AGENTS.md",
+      "bytes": 32176,
+      "sha256": "d860b568cf85715ed13d74f2dafd0a7d558d73a5370a16d0e1e1a51dd3aeffae",
+      "form": "byte-identical original",
+      "original_sha256": "d860b568cf85715ed13d74f2dafd0a7d558d73a5370a16d0e1e1a51dd3aeffae"
+    },
+    {
+      "file": "understanding-graph-reading/prompts/perspectives/axiologist.md",
+      "bytes": 8522,
+      "sha256": "bb57f7aa5813c3ba9615214c55bd83204da9d6270e5881eed0679285aae15b5d",
+      "form": "byte-identical original",
+      "original_sha256": "bb57f7aa5813c3ba9615214c55bd83204da9d6270e5881eed0679285aae15b5d"
+    },
+    {
+      "file": "understanding-graph-reading/prompts/perspectives/belief_tracker.md",
+      "bytes": 10866,
+      "sha256": "1c886854fc40978422308b7ac852e0934a938e268a98b015ce6b592c54de14c1",
+      "form": "byte-identical original",
+      "original_sha256": "1c886854fc40978422308b7ac852e0934a938e268a98b015ce6b592c54de14c1"
+    },
+    {
+      "file": "understanding-graph-reading/prompts/perspectives/connector.md",
+      "bytes": 9272,
+      "sha256": "359d4780196f44bd10cea8f5d710348630b722b5aaaeb34a8e3a2b7467bb5c64",
+      "form": "byte-identical original",
+      "original_sha256": "359d4780196f44bd10cea8f5d710348630b722b5aaaeb34a8e3a2b7467bb5c64"
+    },
+    {
+      "file": "understanding-graph-reading/prompts/perspectives/critic.md",
+      "bytes": 8281,
+      "sha256": "4959b3a7278e162dee5c4edf929e11f5eebfb7a0375cbafa74ded9e3cd52e900",
+      "form": "byte-identical original",
+      "original_sha256": "4959b3a7278e162dee5c4edf929e11f5eebfb7a0375cbafa74ded9e3cd52e900"
+    },
+    {
+      "file": "understanding-graph-reading/prompts/perspectives/curator.md",
+      "bytes": 1352,
+      "sha256": "21182b114b3328d18417983e97584c500475e52a165a6e49183955e23e73384a",
+      "form": "byte-identical original",
+      "original_sha256": "21182b114b3328d18417983e97584c500475e52a165a6e49183955e23e73384a"
+    },
+    {
+      "file": "understanding-graph-reading/prompts/perspectives/psychologist.md",
+      "bytes": 8463,
+      "sha256": "f0deb5e48c46e65ab26595d9408f2a53a17b8e867563792ded2773da78ea4b83",
+      "form": "byte-identical original",
+      "original_sha256": "f0deb5e48c46e65ab26595d9408f2a53a17b8e867563792ded2773da78ea4b83"
+    },
+    {
+      "file": "understanding-graph-reading/prompts/perspectives/reader.md",
+      "bytes": 3684,
+      "sha256": "8393cdd0b7838fcddbc5a5c208f273d98bb18fa80395348edf4788efcaa1d276",
+      "form": "byte-identical original",
+      "original_sha256": "8393cdd0b7838fcddbc5a5c208f273d98bb18fa80395348edf4788efcaa1d276"
+    },
+    {
+      "file": "understanding-graph-reading/prompts/perspectives/skeptic.md",
+      "bytes": 8478,
+      "sha256": "4ce21619c270c42528ea6cbe549f1b48d3624ccc73e1935f77eac90c25b08f56",
+      "form": "byte-identical original",
+      "original_sha256": "4ce21619c270c42528ea6cbe549f1b48d3624ccc73e1935f77eac90c25b08f56"
+    },
+    {
+      "file": "understanding-graph-reading/prompts/perspectives/speculator.md",
+      "bytes": 11592,
+      "sha256": "6c7c00649673c6043c5a8839d03e0f67f4d945232634f33f73dfe8b814f4c573",
+      "form": "byte-identical original",
+      "original_sha256": "6c7c00649673c6043c5a8839d03e0f67f4d945232634f33f73dfe8b814f4c573"
+    },
+    {
+      "file": "understanding-graph-reading/prompts/perspectives/synthesizer.md",
+      "bytes": 15467,
+      "sha256": "4013a476995f5e0ca7eb01c3e0aa33a7833242d794724045656ce16aa787e934",
+      "form": "byte-identical original",
+      "original_sha256": "4013a476995f5e0ca7eb01c3e0aa33a7833242d794724045656ce16aa787e934"
+    },
+    {
+      "file": "understanding-graph-reading/prompts/perspectives/translator.md",
+      "bytes": 11731,
+      "sha256": "3bab351d15d4cc0305e877eb73242c227005508717b53884c59b62c2c7b0626a",
+      "form": "byte-identical original",
+      "original_sha256": "3bab351d15d4cc0305e877eb73242c227005508717b53884c59b62c2c7b0626a"
+    },
+    {
+      "file": "understanding-graph-reading/run-settings.json",
+      "bytes": 114022,
+      "sha256": "a0d7cd134efced1f4ea75467749653766d913889e38eb212e06512075c4047c9",
+      "form": "normalized metadata",
+      "original_sha256": "c9824fc0e6b65e13e403b52fdb2f58348cb9c1aba8f4af427199ae1a74f586df",
+      "note": "Host paths, operator attribution, and unrelated working-tree status omitted; original runtime hashes, worker schedule and role prompts retained. This is a record, not an executable launcher."
+    },
+    {
+      "file": "understanding-graph-reading/reflections.md",
+      "bytes": 201764,
+      "sha256": "d04a0e4b8e6a1d769f9f7d4093af795208f85ff98c8b07239cd447ece7334617",
+      "form": "generated",
+      "note": "Exact thought and thought_fluid text fields rendered in source order; only Markdown section labels added."
+    },
+    {
+      "file": "understanding-graph-reading/README.md",
+      "bytes": 1584,
+      "sha256": "c5baf19f9de68a9e1c394b27cdeefe30c9e292489a57b1b6cc5fd1e8f4e8026f",
+      "form": "generated"
+    },
+    {
+      "file": "meaning-model-reading/store.sqlite",
+      "bytes": 10391552,
+      "sha256": "3b2ae3e124ef47b77c0d479f7af7d7c5cd6b9cc50c03e459d02fc69d40f076b0",
+      "form": "byte-identical original",
+      "original_sha256": "3b2ae3e124ef47b77c0d479f7af7d7c5cd6b9cc50c03e459d02fc69d40f076b0"
+    },
+    {
+      "file": "meaning-model-reading/prompts/AGENTS.md",
+      "bytes": 127671,
+      "sha256": "569bc2e0142ba775d5d67db4cf5a30353b12385aa0fb70769ec3be581b026d56",
+      "form": "byte-identical original",
+      "original_sha256": "569bc2e0142ba775d5d67db4cf5a30353b12385aa0fb70769ec3be581b026d56"
+    },
+    {
+      "file": "meaning-model-reading/prompts/continue-from-cut.md",
+      "bytes": 330,
+      "sha256": "7c0b722eb65a8129fb4b42674d11fac0a1d131040d7f15bfdac283068640756a",
+      "form": "byte-identical original",
+      "original_sha256": "7c0b722eb65a8129fb4b42674d11fac0a1d131040d7f15bfdac283068640756a"
+    },
+    {
+      "file": "meaning-model-reading/prompts/first-prompt.md",
+      "bytes": 3382,
+      "sha256": "10a76e9ca7c938095c96b24c1ae0fcfc63d7d44fd21e1c003c76e6335e021f81",
+      "form": "original text as sent",
+      "note": "The first message of the first conversation. The second conversation got the same prompt and continue-from-cut.md."
+    },
+    {
+      "file": "meaning-model-reading/reads.json",
+      "bytes": 10669,
+      "sha256": "95120b92e985b2c513313e7c9d83a728ae42517100ae7daba2ca11702294fe5e",
+      "form": "normalized metadata",
+      "original_sha256": "e30064b0375c1805ad9e9efd42dfc1068bf35e98ed7cebec40c3b0420e23ce53",
+      "note": "The reading mode's state, with local file paths removed and nothing else changed."
+    },
+    {
+      "file": "meaning-model-reading/run-settings.json",
+      "bytes": 2167,
+      "sha256": "afa65eff93942217505b02e51ce71d187a0b8bb18ab76ac65d0fddafb2cb3089",
+      "form": "generated",
+      "note": "Written from the run's records for this archive."
+    },
+    {
+      "file": "meaning-model-reading/reflections.md",
+      "bytes": 99878,
+      "sha256": "b7c65224acf1f1a7116ef0be648091c1ac66dea9c40928f0907fe831e46a7454",
+      "form": "generated",
+      "note": "Every reflection and translation, exactly as stored."
+    },
+    {
+      "file": "meaning-model-reading/README.md",
+      "bytes": 3678,
+      "sha256": "f837eff32a7d863b92af548efecb8dc66b62f485b8c0b8afa36401ad23e35614",
+      "form": "generated"
+    },
+    {
+      "file": "operator-agent-instructions.md",
+      "bytes": 1338,
+      "sha256": "75238edad82b015d55f01ecedcd76e5a0b2b9e4241b3245045299a791f1ce215",
+      "form": "generated",
+      "note": "As written, without a sixth rule, which concerns local accounts."
+    }
+  ]
+}

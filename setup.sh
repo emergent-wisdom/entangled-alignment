@@ -22,10 +22,15 @@ fi
 # 2. Node version gate. The graph store uses better-sqlite3 13 (the 11.x line
 #    that shipped with understanding-graph has no prebuilt binaries for current
 #    Node and no longer compiles against V8).
-echo "[2/4] Checking Node version..."
+echo "[2/4] Checking Node and Python versions..."
 NODE_MAJOR="$(node -p 'process.versions.node.split(".")[0]' 2>/dev/null || echo 0)"
 if [ "$NODE_MAJOR" -lt 22 ]; then
     echo "Error: Node 22+ required (found: $(node -v 2>/dev/null || echo 'no node'))."
+    exit 1
+fi
+# The pinned Python packages need 3.10+, and pip's own error does not say so.
+if ! python3 -c 'import sys; sys.exit(sys.version_info < (3, 10))' 2>/dev/null; then
+    echo "Error: Python 3.10+ required (found: $(python3 --version 2>/dev/null || echo 'no python3'))."
     exit 1
 fi
 

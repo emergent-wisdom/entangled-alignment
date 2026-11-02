@@ -1,0 +1,47 @@
+{
+ "packet": "R-41-11",
+ "started": "2026-11-01T16:26:25.320429+00:00",
+ "model": "claude-sonnet-5-5",
+ "effort": "high",
+ "attempt": 1,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 58977,
+  "cache_read_input_tokens": 2067,
+  "output_tokens": 1279,
+  "output_tokens_details": {
+   "thinking_tokens": 1167
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 58977,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 1279,
+    "cache_read_input_tokens": 2067,
+    "cache_creation_input_tokens": 58977,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 58977
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "duration_ms": 13114,
+ "result": {
+  "problems": [],
+  "records_checked": 60,
+  "note": "The reader had finished the whole text, so nothing can be 'ahead'; every series Event, Cut and relation carries a 'Retrospective period estimate' label with a stated reason, and none of their plausible but approximate weights or time spans claims more than the text gives."
+ }
+}

@@ -1,0 +1,56 @@
+{
+ "packet": "R-e5e9c8",
+ "started": "2026-10-28T15:16:48.831132+00:00",
+ "model": "claude-sonnet-5-5",
+ "effort": "high",
+ "attempt": 1,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 34285,
+  "cache_read_input_tokens": 2096,
+  "output_tokens": 922,
+  "output_tokens_details": {
+   "thinking_tokens": 666
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 34285,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 922,
+    "cache_read_input_tokens": 2096,
+    "cache_creation_input_tokens": 34285,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 34285
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "duration_ms": 8843,
+ "result": {
+  "misreadings": [
+   {
+    "quote": "He imagines kissing her on the forehead, which she now covers with a ribbon since she started working.",
+    "version": "reflection",
+    "evidence": "Gregor would \"kiss her throat, which she, from the time she had been going to work, had left exposed without a ribbon or a collar.\"",
+    "kind": "contradicted",
+    "severity": "high",
+    "explanation": "The imagined kiss is on her throat, not her forehead, and the text says she leaves it bare without a ribbon, the opposite of covering it with one."
+   }
+  ],
+  "factual_statements_checked": 14,
+  "note": "The fluid-prose version stays faithful to the text; only the plain reflection garbles the kiss detail (forehead and ribbon instead of exposed throat with no ribbon)."
+ }
+}

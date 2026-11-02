@@ -1,0 +1,333 @@
+{
+ "packet": "D-meaning-model-02",
+ "started": "2026-11-01T17:30:50.239256+00:00",
+ "model": "claude-sonnet-5-5",
+ "effort": "high",
+ "attempt": 1,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 45746,
+  "cache_read_input_tokens": 649,
+  "output_tokens": 12290,
+  "output_tokens_details": {
+   "thinking_tokens": 9612
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 45746,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 12290,
+    "cache_read_input_tokens": 649,
+    "cache_creation_input_tokens": 45746,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 45746
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "duration_ms": 84132,
+ "result": {
+  "reflections": [
+   {
+    "number": 11,
+    "revisions": [
+     {
+      "earlier_reflection": 7,
+      "earlier_view": "coordinated concern gives him a place among people before anyone changes his bodily condition",
+      "new_view": "u10.help-revision therefore changes my earlier hope without turning it into a claim that care is impossible.",
+      "prompted_by": "His left side seemed one single long unpleasantly stretched scar",
+      "kind": "qualify"
+     }
+    ],
+    "resolved_expectations": [],
+    "expectations": [],
+    "refusals": [
+     {
+      "quote": "I can let the known injury raise concern while leaving those absences genuinely open.",
+      "declines": "to assume Grete's confrontation or the doctor's arrival"
+     }
+    ],
+    "back_references": [
+     {
+      "quote": "u10.help-revision therefore changes my earlier hope",
+      "anchor": "",
+      "work": "works"
+     },
+     {
+      "quote": "The doctor has not been shown arriving.",
+      "anchor": "You must go to the doctor right away. Gregor is sick.",
+      "work": "works"
+     }
+    ]
+   },
+   {
+    "number": 12,
+    "revisions": [],
+    "resolved_expectations": [],
+    "expectations": [],
+    "refusals": [
+     {
+      "quote": "I do not want his family's silence to mean whatever his duty needs it to mean.",
+      "declines": "to read the family's silence through Gregor's duty"
+     }
+    ],
+    "back_references": [
+     {
+      "quote": "when he wanted privacy, others sought entry; now he waits for company",
+      "anchor": "his sister whispered, “Gregor, open the door—I beg you.”",
+      "work": "works"
+     }
+    ]
+   },
+   {
+    "number": 13,
+    "revisions": [
+     {
+      "earlier_reflection": 3,
+      "earlier_view": "u03.sister-future is still only a hope tested against a rival forecast of recoil.",
+      "new_view": "a better answer than its either-or framing deserved: Grete recoils, and comes back.",
+      "prompted_by": "she immediately opened the door again and walked in on her tiptoes",
+      "kind": "qualify"
+     }
+    ],
+    "resolved_expectations": [
+     {
+      "quote": "Grete recoils, and comes back.",
+      "earlier_reflection": 3,
+      "claimed": "partly",
+      "right": "right"
+     }
+    ],
+    "expectations": [],
+    "refusals": [
+     {
+      "quote": "I want to preserve both truths rather than force gratitude or condemnation to swallow the other.",
+      "declines": "to settle on gratitude or condemnation alone"
+     }
+    ],
+    "back_references": [
+     {
+      "quote": "gives u03.sister-future a better answer than its either-or framing deserved",
+      "anchor": "",
+      "work": "works"
+     }
+    ]
+   },
+   {
+    "number": 14,
+    "revisions": [
+     {
+      "earlier_reflection": 3,
+      "earlier_view": "[earlier reflections read Gregor's voice problem as a failure of transmission, a story of failed speech]",
+      "new_view": "changes source.r013.segment.000001 from a story of failed speech into a story of unrecognized understanding.",
+      "prompted_by": "no one, not even his sister, had imagined that he might be able to understand others",
+      "kind": "qualify"
+     },
+     {
+      "earlier_reflection": null,
+      "earlier_view": "[the reader's construction treated the servant girl as a continuous servant role]",
+      "new_view": "A worker's departure must change the household rather than disappear into a convenient continuous servant role.",
+      "prompted_by": "on her knees had begged his mother to let her go immediately",
+      "kind": "bookkeeping"
+     }
+    ],
+    "resolved_expectations": [],
+    "expectations": [],
+    "refusals": [
+     {
+      "quote": "I do not need to invent an intention to exclude him in order to see the cost",
+      "declines": "to assume Grete intends to exclude Gregor"
+     }
+    ],
+    "back_references": [
+     {
+      "quote": "from a story of failed speech into a story of unrecognized understanding",
+      "anchor": "",
+      "work": "works"
+     },
+     {
+      "quote": "u13.anna-identity also keeps my construction honest.",
+      "anchor": "yelled the father through the hall into the kitchen, clapping his hands",
+      "work": "works"
+     }
+    ]
+   },
+   {
+    "number": 15,
+    "revisions": [
+     {
+      "earlier_reflection": 12,
+      "earlier_view": "u11.provider places pride beside that waiting, not above it.",
+      "new_view": "u11.provider now carries a cost: the emergency solution has become the life by which Gregor knows his worth.",
+      "prompted_by": "but there was no longer any special warmth about it",
+      "kind": "qualify"
+     }
+    ],
+    "resolved_expectations": [],
+    "expectations": [
+     {
+      "quote": "the next disclosure may change how much of this burden was necessary.",
+      "expects": "next disclosure alters the burden's necessity",
+      "outcome": "borne out",
+      "outcome_quote": "with this excess money, he could really have paid off more of the father’s debt to his employer"
+     }
+    ],
+    "refusals": [
+     {
+      "quote": "I do not want to mistake habituation for proof that affection was false.",
+      "declines": "to infer that affection was false"
+     }
+    ],
+    "back_references": [
+     {
+      "quote": "u14.provider-history gives the duty in u02.debt an origin.",
+      "anchor": "got together the money to pay off my parents’ debt to him",
+      "work": "works"
+     },
+     {
+      "quote": "u11.provider now carries a cost",
+      "anchor": "a great pride that he had been able to provide",
+      "work": "works"
+     }
+    ]
+   },
+   {
+    "number": 16,
+    "revisions": [],
+    "resolved_expectations": [],
+    "expectations": [],
+    "refusals": [
+     {
+      "quote": "without assuming a gift announced for her would fully honor her agency",
+      "declines": "to assume the Conservatory gift honors Grete's agency"
+     },
+     {
+      "quote": "refusing to fund it with an account the source has not supplied",
+      "declines": "to invent a funding account"
+     }
+    ],
+    "back_references": [
+     {
+      "quote": "makes Grete more than the person who brings a bowl",
+      "anchor": "A bowl stood there, filled with sweetened milk",
+      "work": "works"
+     }
+    ]
+   },
+   {
+    "number": 17,
+    "revisions": [],
+    "resolved_expectations": [
+     {
+      "quote": "u15.score-correction settles the narrow forecast without making u15.cash-scenario-result true history.",
+      "earlier_reflection": 15,
+      "claimed": "partly",
+      "right": "right"
+     }
+    ],
+    "expectations": [],
+    "refusals": [
+     {
+      "quote": "without pretending that one invented balance sheet decides what anyone ought to sacrifice",
+      "declines": "to let an invented balance sheet decide sacrifice"
+     }
+    ],
+    "back_references": [
+     {
+      "quote": "u15.score-correction settles the narrow forecast",
+      "anchor": "",
+      "work": "cites"
+     },
+     {
+      "quote": "Grete's music is a life he does not want need to crush",
+      "anchor": "his secret plan to send her next year to the Conservatory",
+      "work": "works"
+     }
+    ]
+   },
+   {
+    "number": 18,
+    "revisions": [],
+    "resolved_expectations": [],
+    "expectations": [],
+    "refusals": [
+     {
+      "quote": "I can see why courage earns authority without assuming that authority is always wise.",
+      "declines": "to assume Grete's authority is wise"
+     }
+    ],
+    "back_references": [
+     {
+      "quote": "u16.authority gives the care in u12.tested-care a new social consequence.",
+      "anchor": "",
+      "work": "works"
+     }
+    ]
+   },
+   {
+    "number": 19,
+    "revisions": [],
+    "resolved_expectations": [],
+    "expectations": [],
+    "refusals": [
+     {
+      "quote": "I do not need to make her selfish to see that his room is being redesigned",
+      "declines": "to attribute selfishness to Grete"
+     }
+    ],
+    "back_references": [
+     {
+      "quote": "brings the unresolved room in think.r01 into a real disagreement",
+      "anchor": "",
+      "work": "works"
+     }
+    ]
+   },
+   {
+    "number": 20,
+    "revisions": [
+     {
+      "earlier_reflection": null,
+      "earlier_view": "[the reader's account treated the household's servant as one anonymous continuous role]",
+      "new_view": "u17.worker-split also exposes a mistake in my own account: an anonymous role let me join lives too easily.",
+      "prompted_by": "although this girl, about sixteen years old, had courageously remained since the dismissal of the previous cook",
+      "kind": "correct"
+     }
+    ],
+    "resolved_expectations": [],
+    "expectations": [],
+    "refusals": [
+     {
+      "quote": "I can respect his love without adopting its distribution of protection as inevitable.",
+      "declines": "to treat Gregor's protection of Grete as inevitable"
+     }
+    ],
+    "back_references": [
+     {
+      "quote": "Gregor thinks of17-year-old Grete as a child who should be protected from earning",
+      "anchor": "a girl who was still a seventeen-year-old child",
+      "work": "works"
+     },
+     {
+      "quote": "an anonymous role let me join lives too easily",
+      "anchor": "on her knees had begged his mother to let her go immediately",
+      "work": "works"
+     }
+    ]
+   }
+  ]
+ }
+}

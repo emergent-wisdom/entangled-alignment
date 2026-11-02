@@ -1,11 +1,11 @@
-# Entangled Alignment: When Safety Is Substrate
+# Entangled Alignment: When Safety Is the Substrate
 
 [![Paper](https://img.shields.io/badge/Paper-PDF-red)](paper/entangled-alignment.pdf)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.16440311.svg)](https://doi.org/10.5281/zenodo.16440311)
 [![Code: MIT](https://img.shields.io/badge/Code-MIT-green)](LICENSE)
 [![Content: CC BY 4.0](https://img.shields.io/badge/Content-CC%20BY%204.0-lightgrey)](LICENSE-CONTENT)
 
-Companion repository for *Entangled Alignment: When Safety Is Substrate*. The
+Companion repository for *Entangled Alignment: When Safety Is the Substrate*. The
 paper proposes learning capability and care together throughout pretraining:
 a continuing Reader's questions, judgments, and belief revisions become
 training material alongside the sources it reads. Reader augmentation,
@@ -15,12 +15,26 @@ hypotheses.
 The code here is a working research prototype of the Teacher-side annotation
 pipeline: a multi-agent system that reads a source chronologically, builds a
 shared Understanding Graph, synthesizes its findings, and renders them as
-prose. The two included runs used Gemini 3 Flash Preview in January 2026.
-They demonstrate the construction workflow; no Student has yet been trained.
+prose. The January runs used Gemini 3 Flash Preview. Two later Kafka readings,
+in October and November 2026, used GPT-6.1 Sol, taking the roles in turn within
+one conversation at a time, with an Understanding Graph or a Meaning Model as
+their store. They demonstrate the construction workflow; no Student has yet been
+trained.
+
+## The later Kafka readings
+
+The two later readings of *The Metamorphosis* are in
+[`results/kafka-2026-10/`](results/kafka-2026-10/). The archive includes their
+stores, Reader thoughts, source edition, run settings, prompts and the checks
+reported in the paper. Its README explains how to inspect the records and
+which parts of the original execution environment are not included.
+
+The January stores remain in `projects/`; they have not been replaced by the
+later readings.
 
 ## Browse the included graphs
 
-Two completed runs ship with the repo — no API key needed to explore them:
+The two January graphs ship with the repo — no API key needed to explore them:
 
 ```bash
 git clone --recursive https://github.com/emergent-wisdom/entangled-alignment
@@ -34,8 +48,9 @@ Select a project in the sidebar:
 - **metamorphosis** — Kafka's *The Metamorphosis* (346 active nodes)
 - **llada** — the LLaDA paper on large language diffusion (285 active nodes)
 
-Click any node to see its content, edges, and the passage that produced it. If port
-3000 is taken, `PORT=3001 ./view.sh`.
+Click any node to see its content, edges, and the passage that produced it. If the
+graph stays blank on your first visit, reload the page. If port 3000 is taken,
+`PORT=3001 ./view.sh`.
 
 ## Run your own
 
@@ -44,24 +59,75 @@ Click any node to see its content, edges, and the passage that produced it. If p
 ```
 # Get your API key from https://aistudio.google.com/apikey
 GOOGLE_API_KEY=your-key-here
-GEMINI_MODEL=gemini-3-flash-preview
+GEMINI_MODEL=your-model-id
 ```
 
-Keep comments on their own line — `run.sh` exports the file with `xargs`, so a
-trailing `# comment` after a value aborts the run.
+The runner reads `.env` with `python-dotenv`, including quoted values and inline
+comments. Variables supplied in the environment take precedence.
 
 Then run the agents on any text:
 
 ```bash
-# Run on the bundled Metamorphosis text (use a fresh project name so the
-# shipped 'metamorphosis' graph stays untouched)
-./run.sh chronological_metacognition/material/metamorphosis.txt --project my-reading-1
-
-# Or on any text file
-./run.sh /path/to/book.txt --project my-reading
+./run.sh /path/to/reviewed-book.txt --project my-reading --fresh-reading
 ```
 
-Open `./view.sh` in a second terminal while the agents run — nodes and edges appear in the 3D graph in real time as each passage is processed.
+New graphs and traces are kept in ignored `.local-work/projects/` and
+`.local-work/traces/` until reviewed for release. To watch a new reading:
+
+```bash
+PROJECT_DIR="$PWD/.local-work/projects" ./view.sh
+```
+
+Use `--resume` with the same source and project to continue after interruption.
+The viewer uses the same `UG_CLI` override. The checkpoint records exact passage
+offsets, node IDs, the randomly selected workers and completed phases.
+Pending reflection on the final passage runs even when source progress is 100%.
+The runner stops after three rounds without reading progress and reports API or
+MCP failures instead of silently treating them as completion. Synthesis and
+translation must pass persisted-output checks before their phase completes.
+
+The active prompt treatment is
+`restored-exploratory-teacher+wisdom-2026-10-06+demonstration-2026-10-09`. Each
+round uses a fixed complete-paragraph boundary (target 2,000 UTF-16 characters by default),
+fresh agents, and the shared graph. Supply `--chunk-plan plan.json` for a pinned
+comparison excerpt, `--source-provenance provenance.json` for its edition record,
+and `--worker-schedule schedule.json` to reuse saved random choices. Temperature
+defaults to 1.0 and can be set explicitly. No claim is made that fresh history
+removes a model's pretrained knowledge of a story.
+
+Private run outputs include the composed prompts and tool schemas,
+`run_manifest.json`, `run_events.jsonl`, `worker_schedule.json`, the checkpoint,
+the chronological `reading.md` export, and a source/Core/reference audit.
+Every invocation and resume is recorded; a changed source, model, prompt or
+tool identity is refused on resume. Historical graphs and exports keep their
+original treatment.
+
+### A reading in one persistent conversation
+
+The October Understanding Graph reading was not run by these fresh agents.
+`chronological_metacognition/agent_driver.py` lets one outside agent take every
+perspective in turn, in one conversation, and audits each turn afterwards. That
+reading used these settings:
+
+```bash
+.venv/bin/python chronological_metacognition/agent_driver.py setup /path/to/workspace \
+  --source results/kafka-2026-10/source/metamorphosis-johnston.txt --project my-reading \
+  --ug-cli node_modules/understanding-graph/bin/cli.js \
+  --reader-chosen --persistent-economy --several-nodes
+```
+
+Then open a Codex session in that workspace as a trusted project. It follows
+`AGENTS.md`: `./reading next` prints each turn's task and `./reading done` reports
+it. With these settings the driver writes that reading's published prompts byte
+for byte, apart from the project name and source id. The reading itself ran on
+the code prepared for release as Understanding Graph 0.2.0; version 0.2.1, pinned
+here, differs from that in comments, test fixtures, and the wording of one tool
+description and two diagnostic messages.
+
+The November Meaning Model reading ran differently again: one agent modeled the
+book with the Meaning Model's own tools and took the text through the reading
+mode in [`reading-mode/`](reading-mode/), whose README says how to load it. Its
+prompts and settings are in `results/kafka-2026-10/meaning-model-reading/`.
 
 ### What a run costs
 
@@ -97,7 +163,7 @@ may explain pauses between invocations, but 88% is not where the reading stopped
 
 ## How it works
 
-A Reader streams the source text in chronological order, pausing at *Thought Moments* — emotional peaks, contradictions, conceptual shifts — rather than at fixed intervals. A swarm of specialized Workers (Skeptic, Psychologist, Axiologist, Belief Tracker, Critic, Speculator, Connector, Curator, plus domain specialists) debates each passage by writing typed nodes and edges into a shared Understanding Graph. A Synthesizer collapses their competing readings into a single thought anchored to a fixed first-person identity (the Reader Core), and a Translator renders it as fluid prose. The shipped runs used eleven agents.
+In the shipped runs, a Reader streamed the source chronologically, pausing at *Thought Moments* — emotional peaks, contradictions, conceptual shifts. The revised treatment fixes passage boundaries in advance and creates fresh agents for each phase, with the shared graph carrying understanding forward. Specialized Workers (Skeptic, Psychologist, Axiologist, Belief Tracker, Critic, Speculator, Connector and Curator) contribute typed nodes and edges. A Synthesizer draws their competing readings into a thought anchored to the Reader Core, and a Translator renders it as fluid prose. The shipped runs used eleven agents.
 
 Everything is written to a shared knowledge graph via an MCP server (`understanding-graph`). The web frontend renders the graph as an interactive 3D visualization — nodes appear as the agents work, edges form between related concepts, and clusters emerge as themes develop.
 
@@ -109,9 +175,22 @@ This repo uses [understanding-graph](https://github.com/emergent-wisdom/understa
 
 - **understanding-graph** has moved to a **Claude Code skills** model — each skill is a standalone teaching unit that Claude Code loads natively. This is the newer approach for interactive use.
 
-The two systems are not interchangeable. This repo carries its own copy of the prompts that the swarm agents depend on, and pins the graph server to `understanding-graph@0.1.16` — the earliest version published to npm that the pipeline runs against. `setup.sh` installs it locally from `package-lock.json`, so `run.sh` and `view.sh` always launch the same build.
+This repo carries its own copy of the prompts that the swarm agents depend on,
+and pins the published dependency to `understanding-graph@0.2.1`. The reader
+fails if the selected build is missing or has another version: `--ug-cli` or
+`UG_CLI` selects another build, and `--require-tool-version` names the version
+it must have. A selected checkout also needs the optional
+`@huggingface/transformers` peer in its own dependency tree. The runner checks local 384-dimensional inference
+before invoking a reading model and records the runtime and cached model hashes.
+The reader uses
+`TOOL_MODE=synthetic_reader`, which enables its reserved thinking creation and
+translation tools. `setup.sh` installs the toolchain locally from
+`package-lock.json`.
 
-The runs that produced the shipped graphs (January 2026) predate that versioning scheme: at the time `understanding-graph` was consumed as a git submodule and had no released versions. The pinned version is the reproducible equivalent, not a byte-identical rebuild of the original toolchain.
+The shipped graphs (January 2026) predate that versioning scheme: at the time
+`understanding-graph` was consumed as a git submodule and had no released
+versions. The current toolchain is an update for new readings; it does not
+reproduce the original runs byte for byte.
 
 ## Repository structure
 
@@ -131,27 +210,31 @@ The runs that produced the shipped graphs (January 2026) predate that versioning
 │   ├── tools/                    # Graph tool usage guides
 │   └── workflows/                # Orchestration patterns
 ├── chronological_metacognition/  # Agent code
-│   ├── run_reader.py             # Main orchestrator
+│   ├── run_reader.py             # Main orchestrator (fresh agents, Gemini)
+│   ├── agent_driver.py           # One outside agent taking every perspective
 │   └── material/                 # Sample texts
+├── reading-mode/                 # Meaning Model add-on that gives a book as it is read
 ├── orchestrator/                 # Agent coordination library (submodule)
-└── projects/                     # Output graphs (one folder per run)
-    ├── metamorphosis/            # Kafka — included
-    └── llada/                    # LLaDA paper — included
+├── projects/                     # Output graphs (one folder per run)
+│   ├── metamorphosis/            # Kafka, January 2026 — included
+│   └── llada/                    # LLaDA paper — included
+└── results/
+    └── kafka-2026-10/            # The later Kafka readings and their checks
 ```
 
 ## Citing
 
-The DOI below identifies the September 22, 2026 published version.
+The DOI below identifies the November 2, 2026 published version.
 
 ```bibtex
 @misc{westerberg2026entangled,
-  title        = {Entangled Alignment: When Safety Is Substrate},
+  title        = {Entangled Alignment: When Safety Is the Substrate},
   author       = {Westerberg, Henrik},
   year         = {2026},
-  month        = sep,
+  month        = nov,
   publisher    = {Zenodo},
-  doi          = {10.5281/zenodo.22885625},
-  url          = {https://doi.org/10.5281/zenodo.22885625}
+  doi          = {10.5281/zenodo.23887330},
+  url          = {https://doi.org/10.5281/zenodo.23887330}
 }
 ```
 

@@ -1,0 +1,134 @@
+
+######## january: 4 resolution links on expectations
+
+[ja1] CONTRADICTS  pred p2 (6%) -> resolver p2 (6%), thought mentions at pauses [2]
+  PRED [hypothesis] The Biological Strike: What if the metamorphosis isn't a sign of self-loathing (n_0d60d63b), but a 'Biological Strike'? Gregor's mind was trapped by his parents' debts and his boss's demands—he could not quit. His body, however, has achieved what his will could not: it has made labor impossible. By becoming 'vermin,' he has effectively sabotaged the m
+  RES  [tension/graph] The Breakdown is not a Strike: The Axiologist (n_84430d75, n_409fe220) frames this transformation as a 'body's rebellion' or 'agency.' I'm skeptical. Rebellion usually implies a desire for a different state, but Gregor is desperate to return to his job. This isn't a strike—it's a catastrophic system failure. If a machine breaks down, we don't call it 'rebelli
+  WHY: A breakdown is not a strike; it lacks intentionality and voice.
+
+[ja2] VALIDATES  pred p5 (22%) -> resolver p8 (32%), thought mentions at pauses []
+  PRED [prediction] Prediction: Paternal Aggression: The father's earlier 'warning deepness' in his voice and his history of impatience suggest he will be the one to physically force Gregor back into the room to hide the 'shame' from the world.
+  RES  [evaluation/graph] Validation: The Physical Expulsion: The father's 'hefty shove' in Content 28% confirms the earlier prediction of aggression (n_8aa6d364). This isn't just a relocation; it is a violent casting out of Gregor from the human sphere, causing physical injury. The transition from 'warning deepness' to 'heavily bleeding' marks the end of Gregor's status as a family member
+  WHY: The predicted aggression has manifested as physical violence.
+
+[ja3] VALIDATES  pred p11 (42%) -> resolver p20 (83%), thought mentions at pauses [20, 25]
+  PRED [prediction] Prediction: The Economic Breach: The family is currently staying at home and managing Gregor in secret (Content 36). However, Gregor was the sole provider. The current 'New Normal' of isolation is a luxury they cannot afford indefinitely. I predict that financial necessity will soon force the family to open their doors to the outside world (e.g., taking in lodg
+  RES  [analysis/graph] The New Hegemony: The Lodgers as Patriarchal Substitutes: The arrival of the three gentlemen lodgers completes the displacement of the family's sovereignty. They occupy the 'ritual' space of the living room, while the family is relegated to the kitchen. Their 'painful insistence' on order and tidiness (Content 67%) mirrors the father's uniform-clad rigidity (n_b901a362). The family's a
+  WHY: The arrival of the lodgers is the literal realization of the predicted 'Economic Breach' where the secret must be traded for survival.
+
+[ja4] VALIDATES  pred p19 (74%) -> resolver p21 (86%), thought mentions at pauses [21, 22]
+  PRED [prediction] Prediction: The Transition from Burden to Curse: The exit of the lodgers and the threat of a lawsuit (n_6d3ad0a3) marks the final collapse of the family's economic justification for Gregor's presence. Patience (n_2b2ec0d7) was an investment intended to maintain a facade of respectability for the sake of the lodgers' rent. Now that the 'service' has failed and the 'damages' are
+  RES  [consequence/graph] The Threshold of the Curse: Validation of the Economic Collapse: The lodgers' threat of legal action (n_ca6cd351) validates the prediction in n_2e390549. Gregor has officially crossed the threshold from an internal family burden to an external social and economic curse. The 'action for damages' literalizes the family's internal sense of debt and ruin. By becoming a public liability, Gregor ha
+  WHY: The threat of legal action is the literalization of the predicted curse.
+
+######## understanding-graph: 22 resolution links on expectations
+
+[un1] VALIDATES  pred p3 (1%) -> resolver p4 (2%), thought mentions at pauses [4]
+  PRED [prediction] Maybe pain makes him try a new way: Maybe this unfamiliar pain will make Gregor stop trying to recover his old sleeping posture and investigate what this body can do. I would expect a different movement or a closer look at its mechanics if that happens. Giving up this repeated attempt is a possible beginning of adjustment, but I do not yet know that he will use it
+  RES  [hypothesis/graph] The two branches can coexist: I imagined investigation and retreat as competing next moves, but he now moves toward the bedpost and touches an unfamiliar spot while thinking about the old job. Maybe adaptation will be intermittent, mixed with familiar worries and recoil, rather than a clean switch from avoidance to acceptance.
+  WHY: He does try a different movement and inspect his body; this validates that limited expectation, not full acceptance.
+
+[un2] VALIDATES  pred p3 (1%) -> resolver p4 (2%), thought mentions at pauses [4]
+  PRED [prediction] Maybe he will seek another way to forget: Or maybe pain will make him more eager to escape attention to his body. He wanted to sleep away this 'foolishness' and closed his eyes against the legs; I could imagine him returning to some familiar thought or another attempt to ignore the change. I would look for renewed avoidance, rather than assuming that stopping means acce
+  RES  [hypothesis/graph] The two branches can coexist: I imagined investigation and retreat as competing next moves, but he now moves toward the bedpost and touches an unfamiliar spot while thinking about the old job. Maybe adaptation will be intermittent, mixed with familiar worries and recoil, rather than a clean switch from avoidance to acceptance.
+  WHY: His attention returns to familiar work thoughts; this matches the predicted redirection but does not prove its motive is avoidance.
+
+[un3] VALIDATES  pred p7 (6%) -> resolver p12 (17%), thought mentions at pauses [12]
+  PRED [prediction] Perhaps reassurance will make the next delay harder to explain: Or perhaps promising he is getting up will make the continuing locked door seem evasive. If they expect an ordinary departure, each delay could bring more knocking or a demand for entry. Maybe a brief reassurance buys time and also creates an expectation his body cannot meet.
+  RES  [analysis/graph] Delay is now treated as evidence against him: The predicted escalation is no longer only possible: the manager shouts, threatens his position and makes the locked door evidence of pig-headedness. I still cannot tell whether the reported cash concern or poor sales are justified; the speech establishes accusations and pressure, not their truth.
+  WHY: Continuing delay does bring demands and an interpretation of evasive behavior, as predicted.
+
+[un4] VALIDATES  pred p17 (28%) -> resolver p18 (32%), thought mentions at pauses [18]
+  PRED [prediction] Maybe trying to win them over will look like pursuit: Or maybe he will use the new mobility to follow the manager or approach his mother, and they will read the movement as threat. Then the family might try to push him back rather than listen. I suspect his intention to protect their future could produce an immediate reaction that makes explanation even harder.
+  RES  [analysis/graph] Pursuit ends in forced retreat, not a calmer encounter: The near-term hopeful branch did not happen: he ran after the manager, the manager fled, and his father drove him back. That validates the feared pattern of approach meeting alarm and pushback, though it does not prove every motive I imagined. The closed door ends this encounter with injury rather than mutual understanding.
+  WHY: Attempted approach is followed by flight and the father pushing him back.
+
+[un5] INVALIDATES  pred p17 (28%) -> resolver p18 (32%), thought mentions at pauses [18]
+  PRED [prediction] Maybe new control can give them room to recover: Maybe now that the legs obey, Gregor can stay still or move back and let his mother recover. I would look for a pause, some distance and a less panicked response before assuming bodily improvement is useless socially. Control could make patience possible as well as pursuit.
+  RES  [analysis/graph] Pursuit ends in forced retreat, not a calmer encounter: The near-term hopeful branch did not happen: he ran after the manager, the manager fled, and his father drove him back. That validates the feared pattern of approach meeting alarm and pushback, though it does not prove every motive I imagined. The closed door ends this encounter with injury rather than mutual understanding.
+  WHY: The immediate encounter brings neither chosen distance nor a less panicked response; this does not rule out future recovery.
+
+[un6] VALIDATES  pred p19 (33%) -> resolver p21 (39%), thought mentions at pauses [21]
+  PRED [prediction] Maybe a choice of foods can become a new language: Maybe whoever placed the milk will notice it is untouched and try other foods. A range of offerings could let Gregor show what works without intelligible speech. I would look for changed food and someone attending to his actual eating, rather than assuming his old preferences still guide care.
+  RES  [analysis/graph] She returns after fright and tests what he can eat: Her first shock does not settle her response: she comes back, notices the milk and supplies a range. That supports the possibility of care through observation rather than intelligible speech. The meal succeeds, so my feared immediate misreading of the full bowl was wrong; it does not follow that every part of the arrangement is 
+  WHY: She tests different foods and he eats the ones that suit his altered taste.
+
+[un7] INVALIDATES  pred p19 (33%) -> resolver p21 (39%), thought mentions at pauses [21]
+  PRED [prediction] Maybe the uneaten favorite will be misread: Or perhaps the full bowl will look like lack of appetite, refusal or hopeless illness, and the same food will be left again. Then a well-meant gesture could leave him hungry. I suspect the difference between injury, coordination and changed taste may be hard for someone outside to infer from one bowl.
+  RES  [analysis/graph] She returns after fright and tests what he can eat: Her first shock does not settle her response: she comes back, notices the milk and supplies a range. That supports the possibility of care through observation rather than intelligible speech. The meal succeeds, so my feared immediate misreading of the full bowl was wrong; it does not follow that every part of the arrangement is 
+  WHY: She does not repeat the milk or mistake it for settled lack of appetite in this encounter.
+
+[un8] VALIDATES  pred p7 (6%) -> resolver p21 (39%), thought mentions at pauses [21]
+  PRED [prediction] Perhaps his sister can help him explain: Maybe the sister's offer to bring what he needs will become a way to make contact without demanding an immediate appearance. I would look for her listening, bringing something or helping him communicate. Her plea to open the door could come from concern; it is not yet evidence she can bear what she might see.
+  RES  [analysis/graph] She returns after fright and tests what he can eat: Her first shock does not settle her response: she comes back, notices the milk and supplies a range. That supports the possibility of care through observation rather than intelligible speech. The meal succeeds, so my feared immediate misreading of the full bowl was wrong; it does not follow that every part of the arrangement is 
+  WHY: She brings effective practical assistance without requiring an immediate face-to-face explanation; the broader hope has this limited confirmation.
+
+[un9] VALIDATES  pred p31 (59%) -> resolver p32 (60%), thought mentions at pauses [32]
+  PRED [prediction] Maybe the visible guard will hide the wish: Or his appearance on the wall may overwhelm any message about the picture. Since he covers it completely, they might see a frightening body before they see what he is protecting. I would look for alarm or retreat replacing any response to his attachment.
+  RES  [hypothesis/graph] Alarm arrives before any answer about the picture: Grete trembles and tries to turn her mother away. That fits my fear that his visible body would overwhelm the signal about the picture; I have not yet seen her recognize its meaning. Still, she has not taken it or chased him, so I should mark the immediate alarm without claiming the entire encounter decided.
+  WHY: Immediate alarm takes priority over a visible response to the attachment.
+
+[un10] INVALIDATES  pred p32 (60%) -> resolver p33 (61%), thought mentions at pauses [33]
+  PRED [prediction] Maybe a moment apart can still interrupt the threatened clash: Maybe taking the mother out would give Grete and Gregor a less overwhelming moment, and she might leave the picture once she sees his refusal. Or perhaps he will act on the certainty that she intends to chase him before she can show another intention. I would look for an actual pursuit or an actual pause, not treat his forecast 
+  RES  [hypothesis/graph] The quiet interval fails for a different reason: My guess that a brief withdrawal might allow a calmer exchange does not happen: the mother sees him and faints before that interval exists. Gregor does not attack, and Grete does not chase him off the picture; she runs for medicine. I should retire the immediate calmer branch without pretending his prediction of pursuit was fulf
+  WHY: No moment apart permits the imagined calmer exchange in this encounter.
+
+[un11] INVALIDATES  pred p31 (59%) -> resolver p34 (62%), thought mentions at pauses [34]
+  PRED [prediction] Maybe guarding one object will make a wish visible: Maybe his body over the picture will let Grete recognize that at least this thing must stay. He cannot explain the distinction aloud, but refusing to leave a particular object could become a readable preference. I would look for her preserving it or altering the clearing plan in response.
+  RES  [evaluation/graph] The picture did not become a shared preference in this encounter: I hoped guarding the picture might make his wish legible. The encounter has instead ended in collapse, medicine and a report that he has broken loose; I have no sign that anyone recognized what he wanted kept. That immediate prediction fails, even though whether the picture itself stays remains unknown.
+  WHY: No observable recognition or plan change results from the guarded object in this encounter.
+
+[un12] VALIDATES  pred p37 (68%) -> resolver p40 (75%), thought mentions at pauses [40]
+  PRED [prediction] Maybe earning and study will crowd out the remaining care: Or exhaustion may leave less attention for Gregor even while more people contribute money. I would look for changes in food, cleaning or willingness to stay with him. Shared earning alone cannot tell me whether the rest of life remains livable.
+  RES  [analysis/graph] Care has deteriorated in observable ways: The hurried food, unchecked leftovers and accumulating dirt give evidence beyond a general impression of tiredness. My earlier concern about earning crowding out care now has the predicted signs. Gregor's inability to name an appetizing food complicates feeding, but it does not explain away the disappearance of checking what he 
+  WHY: Food and cleaning deteriorate under work and study pressures as predicted.
+
+[un13] INVALIDATES  pred p24 (47%) -> resolver p41 (76%), thought mentions at pauses [41]
+  PRED [prediction] Maybe earning and care can be redistributed gradually: Maybe the buffer will let several family members take up manageable work while preserving time for Gregor's care. His protective picture may underestimate some capacities, though the mother's breathlessness and Grete's age remain real constraints. I would look for actual new roles rather than assuming either complete inability o
+  RES  [evaluation/graph] The protected-care branch has failed in the present arrangement: I had imagined shared work preserving manageable time for care. Grete is now explicitly exhausted and tired of caring as before, and the available cleaning woman brings disturbance rather than a reliable replacement. Shared earning occurred, but the protected-care part of that hopeful arrangement did not. This leaves future impr
+  WHY: The predicted combined outcome of manageable work with preserved care has not materialized.
+
+[un14] VALIDATES  pred p43 (80%) -> resolver p45 (84%), thought mentions at pauses [45]
+  PRED [hypothesis] Maybe this hunger also reaches beyond food: Or his hunger may include something this silent meal cannot supply: contact, purpose, a place among people. He has stopped using the open door on many nights, and now hears consumption where he once hoped for family life. That reading might coexist with literal need; it must not turn a starving body into a metaphor I no longer h
+  RES  [hypothesis/graph] Music gives the broader hunger a concrete object: The thought of unknown nourishment now appears as the playing captivates him. That supports my guess that hunger reaches beyond the meal, while leaving actual undernourishment untouched. His question about being a beast also shows what appreciation means to his self-understanding; I do not want beauty to become another test he m
+  WHY: The source explicitly extends hunger into musical captivation.
+
+[un15] VALIDATES  pred p45 (84%) -> resolver p46 (86%), thought mentions at pauses [46]
+  PRED [prediction] Maybe visibility will interrupt the music before recognition: Or the others may notice his body before Grete can read the attraction behind his approach. I would look for alarm, the playing stopping, or renewed demands to withdraw. The dirt and the lodgers' anxious place in the room give that branch grounds, but not certainty.
+  RES  [model/graph] Managing an expected alarm can create another source of it: The lodgers initially seem amused rather than frightened. The father rushes to conceal Gregor and push them back, and irritation follows. Maybe discovery of the hidden neighbor is part of their anger; maybe being managed so forcefully is. I see an attempt to control a feared reaction becoming part of the reaction's cause, withou
+  WHY: Visibility interrupts the violin before the intended musical recognition.
+
+[un16] INVALIDATES  pred p45 (84%) -> resolver p46 (86%), thought mentions at pauses [46]
+  PRED [prediction] Maybe the approach can bring a moment of recognition: Maybe Grete will notice his attention and understand that the music reaches him. I would look for her approaching or responding to him as a listener, without assuming she would then want permanent life in his room.
+  RES  [analysis/graph] The unfinished musician becomes the practiced bed-maker: Grete holds the violin as if still playing after the sound stops, then suddenly arranges the lodgers' beds with practiced speed. I feel a moment of disorientation giving way to a role she knows how to perform. That competence does not tell me her loss is small. The mother receives the instrument while struggling to breathe; neit
+  WHY: The hoped-for immediate recognition as listener gives way to an interrupted recital and urgent service.
+
+[un17] VALIDATES  pred p50 (89%) -> resolver p51 (90%), thought mentions at pauses [51]
+  PRED [prediction] Maybe withdrawal can still contradict the takeover story: If he moves back toward his own room, perhaps that visible direction could weaken the claim that he wants the whole apartment. I would look for anyone noticing retreat as retreat, rather than assume their fear cannot be corrected.
+  RES  [tension/graph] A harmless intention can be seen without a place being restored: He wants to spare his sister and returns toward his room, striking his head as he turns. The fear passes and they watch sorrowfully. I can value that small correction: his intention seems to reach them. But recognition of harmlessness is not agreement that he belongs or an offer to ease the painful movement. I want neither to er
+  WHY: The direction of withdrawal appears to communicate his good intention.
+
+[un18] INVALIDATES  pred p50 (89%) -> resolver p51 (90%), thought mentions at pauses [51]
+  PRED [prediction] Maybe the threatening story will absorb even a retreat: Or once staying proves he is not Gregor and movement means starting up again, he may have no bodily signal they can receive as harmless. I would look for fear persisting despite withdrawal, or his absence being treated as the only acceptable answer. The father's response to her alarm makes that branch plausible, not inevitable.
+  RES  [tension/graph] A harmless intention can be seen without a place being restored: He wants to spare his sister and returns toward his room, striking his head as he turns. The fear passes and they watch sorrowfully. I can value that small correction: his intention seems to reach them. But recognition of harmlessness is not agreement that he belongs or an offer to ease the painful movement. I want neither to er
+  WHY: At this immediate turn, retreat appears recognized and the fright lasts only a moment. This defeats the branch that even withdrawal cannot be received as harmless, without claiming restored belonging.
+
+[un19] INVALIDATES  pred p52 (91%) -> resolver p53 (92%), thought mentions at pauses [53]
+  PRED [prediction] Maybe the closed room can at least allow rest: He has completed a difficult return without being hurried. Maybe being out of the confrontation will let him stop spending the strength movement requires and recover some capacity. I would look for rest followed by easier movement or renewed interest, rather than assume the lock itself supplies care.
+  RES  [analysis/graph] Less pain was not recovery: He feels pain weakening and relative contentment while he can no longer move. Then he dies. I have to give up the hope that rest here restores capacity; a quieter report of pain did not mean the danger was passing. The rotten apple and inflammation remain present, but I cannot isolate one medical cause from the whole history of 
+  WHY: Rest is not followed by renewed movement or recovery; his final breath ends that possibility.
+
+[un20] INVALIDATES  pred p33 (61%) -> resolver p53 (92%), thought mentions at pauses [53]
+  PRED [prediction] Maybe direct address need not remain an accusation: Grete finally directs words at him, but they come with a raised fist. Maybe distress has made recognition possible only as blame for now; or maybe the fact of addressing him could later widen into another register. I would look for a response to him as someone who understands, rather than count any spoken name as repaired commun
+  RES  [decision/graph] The unanswered care question has lost its future for him: I have to abandon expecting a later treatment or shared conversation to repair his condition: his last breath has ended those possibilities for him. The questions about what prevented help and what earlier gestures meant remain unanswered, not disproved. Their persistence now records a cost of waiting for knowledge that never re
+  WHY: No future receptive address from Grete to the living Gregor remains possible after his death.
+
+[un21] VALIDATES  pred p52 (91%) -> resolver p54 (94%), thought mentions at pauses [54]
+  PRED [prediction] Maybe enclosure will hide a need that cannot wait: Or the quick bolt and finally may mean the household has withdrawn attention just when hunger and injury leave him least able to ask. I would look for whether anyone checks on his condition or whether being quiet is simply taken as the problem resolved. The danger is not proof of what anyone intends.
+  RES  [hypothesis/graph] The first recorded check arrives too late for the enclosed person: The cleaner finds him dead in the morning and initially sees nothing unusual. That supports the feared branch that enclosure can hide a need until a response cannot help him. I should not add an unrecorded deliberate decision to let him die; what I have is a night ending in death and recognition arriving afterward.
+  WHY: His dangerous condition remained outside a helpful check until it was too late.
+
+[un22] VALIDATES  pred p54 (94%) -> resolver p55 (97%), thought mentions at pauses [55]
+  PRED [hypothesis] Maybe relief is only one part of the surviving response: The father gives thanks, but the mother almost restrains the broom and Grete keeps looking at the body, apparently sleepless. Maybe relief exists with grief, guilt or exhausted attachment; I cannot decide those feelings from the gestures. I would look for how they treat his memory and each other afterward rather than let one dec
+  RES  [hypothesis/graph] Relief and grief now have room in the same response: The mother's melancholy smile, Grete's backward look and their tear-stained return support the possibility that thanks was not their only feeling. I can now name visible grief beside relief more confidently. I still do not know how they understand their part in his suffering or what their remembering will become; tears do not te
+  WHY: Visible tears support mixed grief and relief without proving guilt or regret.

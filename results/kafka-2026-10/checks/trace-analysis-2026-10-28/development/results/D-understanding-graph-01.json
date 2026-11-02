@@ -1,0 +1,405 @@
+{
+ "packet": "D-understanding-graph-01",
+ "started": "2026-10-28T15:17:41.223176+00:00",
+ "model": "claude-sonnet-5-5",
+ "effort": "high",
+ "attempt": 1,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 43201,
+  "cache_read_input_tokens": 2097,
+  "output_tokens": 19654,
+  "output_tokens_details": {
+   "thinking_tokens": 16122
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 43201,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 19654,
+    "cache_read_input_tokens": 2097,
+    "cache_creation_input_tokens": 43201,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 43201
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "duration_ms": 136435,
+ "result": {
+  "reflections": [
+   {
+    "number": 1,
+    "revisions": [
+     {
+      "earlier_reflection": null,
+      "earlier_view": "[the reader had taken the description's steadiness as Gregor's calm]",
+      "new_view": "n_798b7c21 catches me borrowing the description's steadiness and calling it his calm.",
+      "prompted_by": "",
+      "kind": "overturn"
+     }
+    ],
+    "resolved_expectations": [],
+    "expectations": [],
+    "refusals": [
+     {
+      "quote": "He has not yet shown me what he will try or protect.",
+      "declines": "assuming what Gregor values or will try"
+     }
+    ],
+    "back_references": []
+   },
+   {
+    "number": 2,
+    "revisions": [
+     {
+      "earlier_reflection": 1,
+      "earlier_view": "the blanket almost sliding off made the whole impossible thing awkwardly familiar",
+      "new_view": "n_b208e1f4 stops me treating familiarity as an answer to 'What's happened to me?'",
+      "prompted_by": "It was no dream. His room, a proper room for a human being",
+      "kind": "qualify"
+     }
+    ],
+    "resolved_expectations": [],
+    "expectations": [],
+    "refusals": [
+     {
+      "quote": "without pretending to understand its cause, or deciding for him what home feels like now",
+      "declines": "explaining the cause or deciding how home feels to him"
+     }
+    ],
+    "back_references": [
+     {
+      "quote": "The small domestic familiarity I noticed in n_1147801f, with the blanket, has spread into a whole room",
+      "anchor": "His blanket perched high on this belly could hardly stay in place",
+      "work": "works"
+     },
+     {
+      "quote": "n_915b73f5 warned me not to invent his values before seeing a choice",
+      "anchor": "",
+      "work": "works"
+     }
+    ]
+   },
+   {
+    "number": 3,
+    "revisions": [],
+    "resolved_expectations": [],
+    "expectations": [
+     {
+      "quote": "n_a03488a3 imagines a different movement, some investigation of what this body can do",
+      "expects": "Gregor investigates his body",
+      "outcome": "borne out",
+      "outcome_quote": "wanted to feel the place with a leg"
+     },
+     {
+      "quote": "n_912a7f3b imagines another retreat toward familiar thoughts or forgetting",
+      "expects": "Gregor retreats into familiar thoughts",
+      "outcome": "borne out",
+      "outcome_quote": "Day in, day out, on the road."
+     }
+    ],
+    "refusals": [
+     {
+      "quote": "those limits do not prove he will choose investigation",
+      "declines": "predicting that he will investigate"
+     },
+     {
+      "quote": "If I call this acceptance already, I will have confused stopping with understanding.",
+      "declines": "calling his stopping acceptance"
+     }
+    ],
+    "back_references": [
+     {
+      "quote": "n_4e8d85e4 brings the familiar room's mismatch into a familiar habit",
+      "anchor": "a proper room for a human being, only somewhat too small",
+      "work": "works"
+     },
+     {
+      "quote": "n_388e3b1d changes the opening's act of looking: now he closes his eyes against those legs",
+      "anchor": "flickered helplessly before his eyes",
+      "work": "works"
+     },
+     {
+      "quote": "I know more now than when n_798b7c21 warned me against mistaking measured prose for calm.",
+      "anchor": "",
+      "work": "works"
+     }
+    ]
+   },
+   {
+    "number": 4,
+    "revisions": [
+     {
+      "earlier_reflection": 3,
+      "earlier_view": "the two predictions branch from the same interruption: investigation or retreat",
+      "new_view": "n_bb390641 catches both happening together... My branching picture was too tidy.",
+      "prompted_by": "wanted to feel the place with a leg, but he retracted it immediately",
+      "kind": "qualify"
+     }
+    ],
+    "resolved_expectations": [
+     {
+      "quote": "n_bb390641 catches both happening together: he complains about work while finding a way to inspect and touch himself.",
+      "earlier_reflection": 3,
+      "claimed": "partly",
+      "right": "right"
+     }
+    ],
+    "expectations": [
+     {
+      "quote": "There may be a constraint I have not encountered.",
+      "expects": "a reason that holds him to the job",
+      "outcome": "borne out",
+      "outcome_quote": "the money to pay off my parents’ debt to him"
+     }
+    ],
+    "refusals": [
+     {
+      "quote": "I do not know what holds him to the job.",
+      "declines": "saying he should simply leave"
+     }
+    ],
+    "back_references": [
+     {
+      "quote": "I had imagined two next moves, bodily investigation in n_a03488a3 or retreat to familiar thoughts in n_912a7f3b.",
+      "anchor": "",
+      "work": "works"
+     }
+    ]
+   },
+   {
+    "number": 5,
+    "revisions": [
+     {
+      "earlier_reflection": null,
+      "earlier_view": "[his anger at the job and his staying looked like an inconsistency]",
+      "new_view": "His anger and his staying no longer look like a simple inconsistency.",
+      "prompted_by": "If it weren’t for my parents’ sake, I’d have quit ages ago.",
+      "kind": "qualify"
+     }
+    ],
+    "resolved_expectations": [
+     {
+      "quote": "So there is the constraint I asked about in n_548a740b: n_a6620837 names his parents' debt to this boss.",
+      "earlier_reflection": 4,
+      "claimed": "confirmed",
+      "right": "right"
+     }
+    ],
+    "expectations": [],
+    "refusals": [
+     {
+      "quote": "I can see how leaving might feel like abandoning people he cares for, though I have only his account.",
+      "declines": "treating his account of the debt as verified"
+     }
+    ],
+    "back_references": [
+     {
+      "quote": "So there is the constraint I asked about in n_548a740b",
+      "anchor": "",
+      "work": "works"
+     }
+    ]
+   },
+   {
+    "number": 6,
+    "revisions": [],
+    "resolved_expectations": [],
+    "expectations": [
+     {
+      "quote": "Maybe his forecasts will prove exaggerated; maybe they are learned expectations.",
+      "expects": "Gregor's imagined accusations prove exaggerated",
+      "outcome": "not borne out",
+      "outcome_quote": "your position is not at all the most secure"
+     }
+    ],
+    "refusals": [
+     {
+      "quote": "I need to distinguish the reality of that pressure from the truth of every future accusation he imagines.",
+      "declines": "treating his imagined accusations as true"
+     }
+    ],
+    "back_references": [
+     {
+      "quote": "n_e5bf0f0a gives the quiet clock the same unsettling independence as the familiar walls",
+      "anchor": "lay quietly between the four well-known. walls",
+      "work": "works"
+     }
+    ]
+   },
+   {
+    "number": 7,
+    "revisions": [],
+    "resolved_expectations": [],
+    "expectations": [
+     {
+      "quote": "n_b4757f96 lets me hope the sister might help him communicate",
+      "expects": "sister helps him communicate",
+      "outcome": "not borne out",
+      "outcome_quote": "I will not utter my brother’s name in front of this monster"
+     },
+     {
+      "quote": "n_4f62029f warns that his ordinary promise may make every further delay look less innocent.",
+      "expects": "further delay will look suspicious",
+      "outcome": "borne out",
+      "outcome_quote": "Is he playing the fool with us?"
+     }
+    ],
+    "refusals": [
+     {
+      "quote": "Yet opening could overwhelm him or them; I do not know its cost.",
+      "declines": "assuming the cost of opening the door"
+     }
+    ],
+    "back_references": [
+     {
+      "quote": "After the imagined audience in n_7563b4ff, n_c01d993a asks me to hear the actual family separately",
+      "anchor": "",
+      "work": "works"
+     }
+    ]
+   },
+   {
+    "number": 8,
+    "revisions": [
+     {
+      "earlier_reflection": 2,
+      "earlier_view": "Ruling out a dream leaves that question painfully intact.",
+      "new_view": "the waking predicament established for me is not settled acceptance for him.",
+      "prompted_by": "he was eager to see how his present fantasies would gradually dissipate",
+      "kind": "qualify"
+     }
+    ],
+    "resolved_expectations": [
+     {
+      "quote": "whether his sister will help or the others will grow insistent",
+      "earlier_reflection": 7,
+      "claimed": "still open",
+      "right": "right"
+     }
+    ],
+    "expectations": [],
+    "refusals": [
+     {
+      "quote": "I do not want to moralize incapacity, or make the pain a necessary tuition fee for adaptation.",
+      "declines": "treating pain as a lesson"
+     },
+     {
+      "quote": "I must not confuse my vantage with his.",
+      "declines": "assuming Gregor accepts his state"
+     }
+    ],
+    "back_references": [
+     {
+      "quote": "n_c4ba005f changes my own reading of 'no dream'",
+      "anchor": "It was no dream. His room, a proper room",
+      "work": "works"
+     },
+     {
+      "quote": "Even the picture's meaning remains open.",
+      "anchor": "hung the picture which he had cut out of an illustrated magazine",
+      "work": "cites"
+     }
+    ]
+   },
+   {
+    "number": 9,
+    "revisions": [
+     {
+      "earlier_reflection": 8,
+      "earlier_view": "perhaps urgency is asking for force where he needs a new bodily skill",
+      "new_view": "caution and learning are present beside the urgency.",
+      "prompted_by": "the new method was more of a game than an effort",
+      "kind": "qualify"
+     }
+    ],
+    "resolved_expectations": [
+     {
+      "quote": "I cannot yet know whether anyone outside can join the careful cooperation he imagines.",
+      "earlier_reflection": 8,
+      "claimed": "still open",
+      "right": "right"
+     }
+    ],
+    "expectations": [],
+    "refusals": [
+     {
+      "quote": "keeps me from mistaking the smile for willingness to ask",
+      "declines": "inferring he is willing to ask for help"
+     },
+     {
+      "quote": "I cannot yet know whether anyone outside can join the careful cooperation he imagines.",
+      "declines": "predicting outside help"
+     }
+    ],
+    "back_references": [
+     {
+      "quote": "caution and learning are present beside the urgency",
+      "anchor": "he finally hurled himself forward with all his force and without thinking",
+      "work": "works"
+     }
+    ]
+   },
+   {
+    "number": 10,
+    "revisions": [
+     {
+      "earlier_reflection": 9,
+      "earlier_view": "caution and learning are present beside the urgency",
+      "new_view": "excitement rather than the careful decision did the last work.",
+      "prompted_by": "More as a consequence of the excited state in which this idea put Gregor",
+      "kind": "qualify"
+     }
+    ],
+    "resolved_expectations": [
+     {
+      "quote": "The manager really is here. The imagined audience in n_7563b4ff has acquired one actual voice",
+      "earlier_reflection": 6,
+      "claimed": "partly",
+      "right": "right"
+     }
+    ],
+    "expectations": [
+     {
+      "quote": "Maybe contact could still bring aid",
+      "expects": "contact with the visitors brings aid",
+      "outcome": "not borne out",
+      "outcome_quote": "His father clenched his fist with a hostile expression"
+     }
+    ],
+    "refusals": [
+     {
+      "quote": "I can care about that without pretending I have heard the visitor explain himself.",
+      "declines": "assuming the manager's motives"
+     }
+    ],
+    "back_references": [
+     {
+      "quote": "The imagined audience in n_7563b4ff has acquired one actual voice",
+      "anchor": "come with the doctor from the health insurance company",
+      "work": "works"
+     },
+     {
+      "quote": "I was just imagining patient help with him; the office's arrival instead enters his body as urgency.",
+      "anchor": "Two strong people—he thought of his father and the servant girl",
+      "work": "works"
+     }
+    ]
+   }
+  ]
+ }
+}

@@ -1,0 +1,57 @@
+{
+ "blind": "R-cdf67a",
+ "started": "2026-10-26T10:19:38.147216+00:00",
+ "model": "claude-sonnet-5-5",
+ "effort": "high",
+ "attempt": 1,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 7156,
+  "cache_read_input_tokens": 2119,
+  "output_tokens": 1128,
+  "output_tokens_details": {
+   "thinking_tokens": 919
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 7156,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 1128,
+    "cache_read_input_tokens": 2119,
+    "cache_creation_input_tokens": 7156,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 7156
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "cost_usd_reported": 0.0401199,
+ "duration_ms": 11207,
+ "result": {
+  "misreadings": [
+   {
+    "quote": "he doesn't even think to call for help",
+    "version": "both",
+    "evidence": "no support in the text",
+    "kind": "overstated",
+    "severity": "low",
+    "explanation": "The text shows Gregor has not called out so far but never says he fails to think of calling for help, so this states his inner state as fact."
+   }
+  ],
+  "factual_statements_checked": 17,
+  "note": "Nearly all claims about the text (clock at about quarter to seven, the alarm, the boss's desk, the parents' debt, the white spots and shudder, the office assistant, the seven o'clock train) are supported; the rest is interpretation or prediction."
+ }
+}

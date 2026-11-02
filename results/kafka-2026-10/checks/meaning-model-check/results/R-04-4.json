@@ -1,0 +1,47 @@
+{
+ "packet": "R-04-4",
+ "started": "2026-11-01T16:16:15.103277+00:00",
+ "model": "claude-sonnet-5-5",
+ "effort": "high",
+ "attempt": 1,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 24966,
+  "cache_read_input_tokens": 2067,
+  "output_tokens": 1383,
+  "output_tokens_details": {
+   "thinking_tokens": 1261
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 24966,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 1383,
+    "cache_read_input_tokens": 2067,
+    "cache_creation_input_tokens": 24966,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 24966
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "duration_ms": 14067,
+ "result": {
+  "problems": [],
+  "records_checked": 60,
+  "note": "Every record is either labelled as a sketch, guess or inference, or is generic concept and carve scaffolding. The one source-tagged point (the room, framed picture and window) matches the text, and the sister's 'Do you need anything?' matches the sketch note that cites it. Nothing here comes from later in the book."
+ }
+}
