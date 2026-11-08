@@ -21,6 +21,11 @@ one conversation at a time, with an Understanding Graph or a Meaning Model as
 their store. They demonstrate the construction workflow; no Student has yet been
 trained.
 
+## Earlier manuscripts
+
+- [*The Thinking Machine*](https://github.com/hwesterb/the-thinking-machine) (June 2025)
+- [*The Superintelligence That Cares About Us*](https://github.com/hwesterb/superintelligence-that-cares) (July 2025)
+
 ## The later Kafka readings
 
 Explore the two later readings of *The Metamorphosis* in your browser:
