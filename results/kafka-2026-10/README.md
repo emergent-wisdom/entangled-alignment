@@ -28,7 +28,8 @@ alignment.
   operator's general agent instructions, which the runtime passed to the model
   in both readings, ahead of each reading's own.
 
-The blind evaluator was Claude Sonnet 5.5. The verification records identify
+The evaluator was Claude Sonnet 5.5. It was not told which reading a thought
+came from; the paper explains why that blinding is weak. The verification records identify
 Claude Opus 5.5 as the model that checked findings against the source and
 examined samples of the ratings. These checks are model judgments; no human
 verification was performed. The prompts, findings,

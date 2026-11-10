@@ -228,7 +228,8 @@ reproduce the original runs byte for byte.
 
 ## Citing
 
-The DOI below identifies the November 2, 2026 published version.
+The DOI below covers all versions and resolves to the latest published one. This
+repository holds the revision of November 10, 2026.
 
 ```bibtex
 @misc{westerberg2026entangled,
@@ -237,8 +238,8 @@ The DOI below identifies the November 2, 2026 published version.
   year         = {2026},
   month        = nov,
   publisher    = {Zenodo},
-  doi          = {10.5281/zenodo.23887330},
-  url          = {https://doi.org/10.5281/zenodo.23887330}
+  doi          = {10.5281/zenodo.16440311},
+  url          = {https://doi.org/10.5281/zenodo.16440311}
 }
 ```
 

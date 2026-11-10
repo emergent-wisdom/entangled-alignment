@@ -14,14 +14,11 @@ authors:
 type: software
 url: "https://github.com/emergent-wisdom/entangled-alignment"
 repository-code: "https://github.com/emergent-wisdom/entangled-alignment"
-date-released: 2026-11-02
+date-released: 2026-11-10
 identifiers:
   - type: doi
     value: 10.5281/zenodo.16440311
-    description: "Concept DOI resolving to the latest version of the paper"
-  - type: doi
-    value: 10.5281/zenodo.23887330
-    description: "Zenodo record for the November 2, 2026 release"
+    description: "DOI for all versions, resolving to the latest version of the paper"
 keywords:
   - alignment
   - multi-agent-systems
@@ -42,5 +39,5 @@ preferred-citation:
   month: 11
   publisher:
     name: Zenodo
-  doi: 10.5281/zenodo.23887330
-  url: "https://doi.org/10.5281/zenodo.23887330"
+  doi: 10.5281/zenodo.16440311
+  url: "https://doi.org/10.5281/zenodo.16440311"
