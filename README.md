@@ -115,7 +115,8 @@ reading used these settings:
 
 ```bash
 .venv/bin/python chronological_metacognition/agent_driver.py setup /path/to/workspace \
-  --source results/kafka-2026-10/source/metamorphosis-johnston.txt --project my-reading \
+  --source results/kafka-2026-10/source/metamorphosis-johnston.txt \
+  --provenance results/kafka-2026-10/source/provenance.json --project my-reading \
   --ug-cli node_modules/understanding-graph/bin/cli.js \
   --reader-chosen --persistent-economy --several-nodes
 ```
@@ -151,7 +152,7 @@ than one continuous session. The Metamorphosis trace records roughly 18 hours in
 explicit `429 RESOURCE_EXHAUSTED` cooldowns; other gaps may include manual pauses,
 which the released metadata cannot reconstruct precisely.
 
-Both shipped readings completed. For Metamorphosis, the source record reaches
+Both January readings completed. For Metamorphosis, the source record reaches
 `position = total_length` (140,527 characters) with status `completed`, the final
 run summary reports 100%, and the append-only trace reaches `Content 100%` and a
 successful final translation. The 88% figure is only the latest Content marker
@@ -167,7 +168,7 @@ may explain pauses between invocations, but 88% is not where the reading stopped
 
 ## How it works
 
-In the shipped runs, a Reader streamed the source chronologically, pausing at *Thought Moments* — emotional peaks, contradictions, conceptual shifts. The revised treatment fixes passage boundaries in advance and creates fresh agents for each phase, with the shared graph carrying understanding forward. Specialized Workers (Skeptic, Psychologist, Axiologist, Belief Tracker, Critic, Speculator, Connector and Curator) contribute typed nodes and edges. A Synthesizer draws their competing readings into a thought anchored to the Reader Core, and a Translator renders it as fluid prose. The shipped runs used eleven agents.
+In the January runs, a Reader streamed the source chronologically, pausing at *Thought Moments* — emotional peaks, contradictions, conceptual shifts. The revised treatment fixes passage boundaries in advance and creates fresh agents for each phase, with the shared graph carrying understanding forward. Specialized Workers (Skeptic, Psychologist, Axiologist, Belief Tracker, Critic, Speculator, Connector and Curator; the LLaDA run had a Methodologist and an Architect in place of the Psychologist and Critic) contribute typed nodes and edges. A Synthesizer draws their competing readings into a thought anchored to the Reader Core, and a Translator renders it as fluid prose. The January runs used eleven agents.
 
 Everything is written to a shared knowledge graph via an MCP server (`understanding-graph`). The web frontend renders the graph as an interactive 3D visualization — nodes appear as the agents work, edges form between related concepts, and clusters emerge as themes develop.
 
@@ -175,7 +176,7 @@ Everything is written to a shared knowledge graph via an MCP server (`understand
 
 This repo uses [understanding-graph](https://github.com/emergent-wisdom/understanding-graph) as its MCP server — the shared memory that agents read from and write to. The two projects have diverged in how they teach agents to use the graph:
 
-- **entangled-alignment** uses **prompt composition** — modular markdown files in `prompts/` that are assembled into system messages for Gemini swarm agents. This is the approach described in the paper and it works. The prompts ship with this repo and are self-contained.
+- **entangled-alignment** uses **prompt composition** — modular markdown files in `prompts/` that are assembled into system messages for the swarm agents (Gemini in January) and into the perspective instructions of the October reading. This is the approach described in the paper and it works. The prompts ship with this repo and are self-contained.
 
 - **understanding-graph** has moved to a **Claude Code skills** model — each skill is a standalone teaching unit that Claude Code loads natively. This is the newer approach for interactive use.
 
