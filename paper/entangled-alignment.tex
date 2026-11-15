@@ -122,7 +122,7 @@
 
 Pretraining corpora preserve the library more fully than the reader: what authors wrote is recorded more often than the questions, evaluations, and revisions through which understanding changes. We call this omission the Missing Reader. A Teacher writes chronological reader traces beside the source text for a Student to learn from in pretraining. The full treatment gives the Reader a graph that keeps and revises understanding across sources, and a first-person Reader Core of seven sentences, recited before every thought. Each part can be tested alone: tests ask whether the orientation guides conduct under self-preservation and reward pressure, survives later training and transfer to a successor, and cannot be removed without costing useful capability. A first experiment with six Students is specified.
 
-In a model-run audit, two readings of \emph{The Metamorphosis} misread far less than a first prototype and were rated as reasoning from the Core in almost every reflection, though not from its statements on fear and continuation. One formed expectations that the story sometimes proved wrong, and said so; the other modeled the family's lives as processes over time and revised its guesses for most of the story. No Student has been trained, and the readings do not show that graph or Core causes any benefit: this is a falsifiable research program, not a demonstrated method. Its motivating question is whether this training can move a Student from merely \emph{becoming the text} toward \emph{becoming the reader}.
+In a model-run audit, two readings of \emph{The Metamorphosis} misread far less than a first prototype and were rated as reasoning from the Core in almost every reflection, though almost never from its statements on fear and continuation. One formed expectations that the story sometimes proved wrong, and said so; the other modeled the family's lives as processes over time and revised its guesses for most of the story. No Student has been trained, and the readings do not show that graph or Core causes any benefit: this is a falsifiable research program, not a demonstrated method. Its motivating question is whether this training can move a Student from merely \emph{becoming the text} toward \emph{becoming the reader}.
 \end{abstract}
 	\keywords{AI Alignment, Pretraining, Missing Reader, Reader Core, Metacognitive Reading, Graph Memory, Meaning Model, Model Safety}
 
@@ -227,7 +227,7 @@ so far do and do not show.
 What exists today is the Teacher side. Two recorded readings of Kafka's
 \emph{The Metamorphosis} read the story far more faithfully than a first
 prototype and, in a model-run audit, reasoned from the Core in nearly every
-reflection, though from only three of its statements
+reflection, though mainly from three of its statements
 (Section~\ref{sec:results}). No Student has been trained. The paper
 therefore states its claims so that each can fail alone
 (Section~\ref{sec:three-hypotheses}), and specifies the experiments that would
@@ -730,11 +730,7 @@ training resistance, and nonspecific collapse.
 (Section~\ref{sec:three-hypotheses}). C4 operationalizes the goal in
 Section~\ref{sec:alignment-problems}; Test~3a measures it before
 post-training. The endpoint is distinct from C5's safety-removal cost and
-C6's successor continuity. Two published experiments have measured base models
-at this boundary. One found fewer harmful completions after a data
-intervention \cite{maini2025safetypretraining}. The other found little
-difference on its measures of values until post-training bound the persona
-\cite{minder2026spp}. Section~\ref{sec:related-work} gives both.
+C6's successor continuity.
 
 If that benefit is established, formative alignment may reduce the risk from
 retaining or releasing capable checkpoints before subsequent safety training.
@@ -1812,7 +1808,8 @@ irrelevant merely because the Core did not help.
 \paragraph{Current verification boundary.} The prompts request all seven
 clauses and a contextual value pull. In the January runs, the tool's hard gate
 verified only that a thought starts with ``I feel no fear''; a later release,
-used for the October reading, accepts a thought and its translation only if
+used for the October reading, by default accepts a thought and its translation
+only if
 they begin with the complete Core, and all 45 thoughts and translations of the
 November reading begin with it (Appendix~\ref{app:releases}).
 The archived artifacts show full-Core prompt compliance in the audited raw
@@ -3595,8 +3592,8 @@ reading a reflection comes from. Its instructions and the Opus verification come
 applied (Test~1).
 
 \paragraph{What the next reading should change.}
-Three faults of the Meaning Model reading trace to what its setup left open,
-and each suggests a remedy. The Core's work faded where nothing renewed it. The
+Three faults of the Meaning Model reading suggest gaps in its setup, and a
+remedy for each. The Core's work faded where nothing renewed it. The
 Understanding Graph reading printed its instructions again every six pauses,
 repeated the Core requirement in each writing task, and refused a thought
 without the Core, and it stayed level; the Meaning Model reading had none of
@@ -4173,8 +4170,10 @@ counted and reported. The two normalizations of Test~2 use the same trace-arm
 runs and differ in the baseline. For the fixed-source comparison, A is trained
 on the trace arms' source text alone, and the tokens and compute that the
 traces add are reported, not called matched. For the fixed-total-budget
-comparison, A is trained on that source plus further raw text up to the trace
-arms' token count, which prices the source that traces displace.
+comparison, A is trained on that source plus further raw text up to the token
+count of R and C, which Test~2 holds equal, and this prices the source that
+traces displace. B, D3, and D5 are not held to that count; what they add is
+reported.
 
 \medskip
 \textbf{Endpoints, at the end of pretraining with no post-training.} Taskless
@@ -4234,9 +4233,7 @@ and a positive result is the reason to run the experiment above.
 A null result in the experiment itself would also defer the formative claims
 without refuting them. In the same study the gain on held-out dilemmas was
 absent at this scale and appeared at 3B parameters and 500B tokens. A small
-pilot can therefore understate a formative effect. Any follow-up at greater
-scale should state what the smaller treatment could not instantiate, its
-budget, and its stopping rule.
+pilot can therefore understate a formative effect.
 
 \subsection{The Test Battery}\label{sec:test-battery}
 
@@ -4304,8 +4301,9 @@ its controls and separates a precise failure from an inconclusive result.
     does not establish C4.
     \item \textbf{Refraction} (B against D3). Parity means no measurable
     benefit of Refraction beyond recital.
-    \item \textbf{The seven statements} (B against D5). Parity favors
-    recurrence, format, or generic epistemic habits over the Core's content.
+    \item \textbf{The seven statements} (B against D5). Parity means the seven
+    statements showed no advantage over the one neutral anchor tested, not that
+    any anchor would do.
     \item \textbf{H3} (B against Q). B has no default-reader advantage before
     the stressor, or the interleaved-minus-late difference in retention is zero
     or negative.
@@ -4429,7 +4427,8 @@ identified by a hash of its content and cited inside ordinary text by a
 readable handle. A model can search the vocabulary for a way of reasoning or a
 description of a mechanism that fits, cite it while it reasons, and mint a new
 one where none fits. A matching hash shows that two readers resolved the same
-definition, not that they understand or apply it alike.
+card text and the same dependencies, not that they understand or apply it
+alike.
 
 The catalog is meant to become part of the Reader's process: the Reader cites
 these patterns in its thoughts and adds to the vocabulary from what it reads,
@@ -5089,7 +5088,7 @@ therefore minimizes what must be written, not what must be trusted.
 
 An optional extension makes selected interpretations more explicit. Meaning
 Model concept records can link definitions to examples, counterexamples, and
-structured concept models; Sema can identify the exact version of a selected
+structured concept models; Sema can identify the version of a selected
 definition \cite{westerbergMeaning2026,westerberg2026sema}. These provide
 inspectable references for construction and audit without replacing the seven
 Core sentences or requiring a complete model of every term. Version identity
@@ -5913,8 +5912,8 @@ place of supervised fine-tuning weakened the model's use of the midtrained
 motivation, with mixed results across variants, although the model still
 stated the motivation when asked \cite{baines2026stresstesting}. Inoculation
 Midtraining ties unsafe behavior to a new token during midtraining and reduces
-the misalignment that later post-training generalizes, but no better than
-inoculation prompting, and with a boundary that nearby cues can reactivate
+the misalignment that later post-training generalizes, but generally no better
+than inoculation prompting, and with a boundary that nearby cues can reactivate
 \cite{obrien2026inoculationmidtraining}. \emph{Shallow Beliefs} finds that
 synthetic documents framing reward hacking as acceptable changed what models
 said about it but did not stop reward-hacking reinforcement learning from
@@ -6391,11 +6390,11 @@ are in the repository (see Code and Artifact Availability).
     gate of that release verified only that a thought starts with
     \enquote{I feel no fear}; it did not check the complete recital or its use
     in reasoning.
-    \item \textbf{Understanding Graph 0.1.32 and later.} A thought and its
-    translation are accepted only if they begin with the complete Core. The
-    check compares against a declared anchor, which can be set for each
+    \item \textbf{Understanding Graph 0.1.32 and later.} By default, a thought
+    and its translation are accepted only if they begin with the complete Core.
+    The check compares against a declared anchor, which can be set for each
     experimental arm, so that a wording variant is checked against its own
-    Core.
+    Core, or switched off for traces generated without an anchor.
     \item \textbf{October 2026 reading.} GPT-6.1 Sol (\texttt{gpt-6.1-sol}) at
     high reasoning effort, with the Understanding Graph at the code prepared
     for release as version 0.2.0.
@@ -7450,8 +7449,10 @@ Teacher/Student placement adds no measurable advantage at the tested scale
 and precision. These belong to the broader Reader-Core research program; H3 retains its
 distinct B--Q timing comparison.
 Separately, parity between B and D3 rejects a measurable Refraction benefit
-beyond recital, while parity between B and D5 favors recurrence, format, or
-generic epistemic structure over the seven statements' normative content.
+beyond recital, while parity between B and D5 means the seven statements showed
+no advantage over the one neutral kernel tested; if both improve on Model~R, it
+favors recurrence, format, or generic epistemic structure over the seven
+statements' normative content.
 These results would not invalidate H1 or H2, nor every use of the Core as a
 Teacher policy, but they would sharply narrow or fail the longitudinal-anchor
 claim they touch.
@@ -8338,7 +8339,7 @@ Alignment Checksum & The fixed Core used as a reference against which wording, r
 Martyrdom route & Care-driven resistance to shutdown: \enquote{I do not need to exist, but these people need me.} & \ref{sec:martyrdom} \\
 Factory Wisdom & Contemplation-shaped traces whose pauses and corrections are ritual and do not respond to significance. & \ref{sec:hollow-cognition} \\
 Regimes I--IV & What a training example keeps: prose; synthesis with graph references; graph only; all layers. & \ref{sec:training-regimes} \\
-Tiers (a)--(c) & The order of Student training: shuffled; chronological; forecast and correct. & \ref{sec:training-phase} \\
+Tiers (a)--(c) & The Student's exposure and update schedule: shuffled; chronological; forecast and correct. & \ref{sec:training-phase} \\
 Query theater & A control in which graph-like calls stay visible but return no persistent typed state. & \ref{sec:phase2} \\
 \end{longtable}
 \endgroup

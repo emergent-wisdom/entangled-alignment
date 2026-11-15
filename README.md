@@ -230,7 +230,7 @@ reproduce the original runs byte for byte.
 ## Citing
 
 The DOI below covers all versions and resolves to the latest published one. This
-repository holds the revision of November 10, 2026.
+repository holds the revision of November 15, 2026.
 
 ```bibtex
 @misc{westerberg2026entangled,
@@ -246,8 +246,6 @@ repository holds the revision of November 10, 2026.
 
 See [`CITATION.cff`](CITATION.cff) for the machine-readable version (GitHub
 renders a "Cite this repository" button from it).
-
-Earlier manuscripts: [*What If We Taught LLMs to Actually Think?*](https://github.com/hwesterb/what-if) (May 2025), [*The Thinking Machine*](https://github.com/hwesterb/the-thinking-machine) (June 2025), [*The Superintelligence That Cares About Us*](https://github.com/hwesterb/superintelligence-that-cares) (July 2025).
 
 ## License
 
