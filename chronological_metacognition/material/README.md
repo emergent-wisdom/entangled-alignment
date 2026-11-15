@@ -8,3 +8,6 @@
   <https://arxiv.org/e-print/2502.09992v3>). The traces read its `main.tex`,
   SHA-256 `d42c3dfa9a7d478fa69567f9286d8117912a9a040a9d6a6b0914f50d47036a28`.
   To rerun the reader on it, save that file here as `llada.tex`.
+  The released LLaDA store and trace carry markers in place of the paper's
+  text. With the file saved here, `python ../llada_source_text.py restore llada.tex`
+  puts the text back, exactly as recorded.

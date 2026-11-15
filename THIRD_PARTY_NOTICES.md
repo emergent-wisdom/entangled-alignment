@@ -41,6 +41,14 @@ arXiv:2502.09992, <https://arxiv.org/abs/2502.09992>.
 The traces read `main.tex` of version 3; see
 [chronological_metacognition/material/README.md](chronological_metacognition/material/README.md).
 
+The paper's text is not included in this repository. In
+`projects/llada/store.db` and
+`chronological_metacognition/traces/llada/swarm.jsonl`, each passage of 150
+characters or more of `main.tex` is replaced by a marker that gives its
+position in that file. Shorter quotations in the agents' notes remain.
+`chronological_metacognition/llada_source_text.py` puts the text back, exactly
+as recorded, from a copy of `main.tex` downloaded from arXiv.
+
 ## Generated artifacts
 
 The released traces and graph artifacts were generated from the source works

@@ -56,8 +56,10 @@ material for which Henrik Westerberg does not hold the relevant rights.
   record are supplied with the text.
 - Generated traces and graph artifacts may reproduce passages from their two
   source works: the edition above and *Large Language Diffusion Models*
-  (arXiv:2502.09992), whose source is available from arXiv. Rights in those passages remain with their respective rights
-  holders.
+  (arXiv:2502.09992), whose source is available from arXiv. Of the latter only
+  short quotations remain; longer passages are replaced by markers, as
+  THIRD_PARTY_NOTICES.md describes. Rights in those passages remain with their
+  respective rights holders.
 - `orchestrator/` is a Git submodule governed by its own `LICENSE` file.
 - Installed and declared dependencies retain their respective upstream terms.
 

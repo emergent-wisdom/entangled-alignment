@@ -56,6 +56,11 @@ Click any node to see its content, edges, and the passage that produced it. If t
 graph stays blank on your first visit, reload the page. If port 3000 is taken,
 `PORT=3001 ./view.sh`.
 
+The LLaDA paper's text is not redistributed here: in the **llada** graph a marker
+stands where a passage of the paper was.
+[chronological_metacognition/material/README.md](chronological_metacognition/material/README.md)
+says how to put the text back from arXiv's copy.
+
 ## Run your own
 
 `setup.sh` creates a `.env` file from `.env.example`. Open it and add your Gemini API key:
