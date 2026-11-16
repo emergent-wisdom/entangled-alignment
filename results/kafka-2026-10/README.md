@@ -80,3 +80,21 @@ public domain. Its edition, source URL and checksum are recorded under
 Original research records and scripts follow the repository's
 [licence map](../../LICENSES.md). Embedded third-party passages retain their
 source terms.
+
+The January packets under `checks/` (in `faithfulness-check/packets/`,
+`core-check/packets/` and `trace-analysis-2026-10-28/`) contain, whole or in
+passages, *Metamorphosis* in David Wyllie's translation, Project Gutenberg
+eBook #5200, a copyrighted Project Gutenberg eBook. The Project Gutenberg
+License governs that text here too:
+
+> This eBook is for the use of anyone anywhere in the United States and most
+> other parts of the world at no cost and with almost no restrictions
+> whatsoever. You may copy it, give it away or re-use it under the terms of
+> the Project Gutenberg License included with this eBook or online at
+> [www.gutenberg.org](https://www.gutenberg.org). If you are not located in
+> the United States, you will have to check the laws of the country where you
+> are located before using this eBook.
+
+The complete eBook, with the full license at its end, is
+[`chronological_metacognition/material/metamorphosis.txt`](../../chronological_metacognition/material/metamorphosis.txt);
+the license is also at <https://www.gutenberg.org/license>.

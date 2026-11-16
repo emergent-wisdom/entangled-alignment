@@ -18,6 +18,31 @@ contains the Project Gutenberg License governing its redistribution. That
 license and the jurisdiction-specific copyright notice in the file must be
 preserved and followed. This repository does not relicense the text.
 
+The same text, whole or in passages, is also in the records of the January
+reading and in the check packets built from them, and the Project Gutenberg
+License governs it there too:
+
+- `projects/metamorphosis/store.db` and
+  `projects/metamorphosis/generated/metamorphosis.md`
+- `chronological_metacognition/traces/metamorphosis/swarm.jsonl`
+- the January packets under `results/kafka-2026-10/checks/`, in
+  `faithfulness-check/packets/`, `core-check/packets/` and
+  `trace-analysis-2026-10-28/` (`recall/`, `development/`, `outcomes/`)
+
+The notice that license requires wherever the text appears:
+
+> This eBook is for the use of anyone anywhere in the United States and most
+> other parts of the world at no cost and with almost no restrictions
+> whatsoever. You may copy it, give it away or re-use it under the terms of
+> the Project Gutenberg License included with this eBook or online at
+> [www.gutenberg.org](https://www.gutenberg.org). If you are not located in
+> the United States, you will have to check the laws of the country where you
+> are located before using this eBook.
+
+The full license is at the end of
+`chronological_metacognition/material/metamorphosis.txt` and at
+<https://www.gutenberg.org/license>.
+
 ## Ian Johnston edition of *The Metamorphosis*
 
 `results/kafka-2026-10/source/metamorphosis-johnston.txt` is the text used by
