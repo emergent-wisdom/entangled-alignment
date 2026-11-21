@@ -235,7 +235,7 @@ reproduce the original runs byte for byte.
 ## Citing
 
 The DOI below covers all versions and resolves to the latest published one. This
-repository holds the revision of November 15, 2026.
+repository holds the revision of November 21, 2026.
 
 ```bibtex
 @misc{westerberg2026entangled,

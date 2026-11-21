@@ -112,7 +112,7 @@
 		\ewlongtitle{Entangled Alignment}{When Safety Is the Substrate}
 	\author{Henrik Westerberg\\
 		\small{henrik.westerberg@emergentwisdom.org}}
-			\ewreviseddates{April 7, 2026}{\today}
+			\ewreviseddates{April 7, 2026}{November 21, 2026}
 	\begin{document}
 
 	\maketitle
@@ -203,13 +203,15 @@ model at the end of pretraining, and the checkpoints kept along the way, are
 not dangerous by default before a separate safety treatment arrives. The
 intervention changes the pretraining distribution, not the neural
 architecture, and it is meant to work beside post-training, monitoring, and
-control, not to replace them.
+control, not to replace them. Its mechanism was proposed in the first edition
+of this paper: a reader's first-person thinking written
+into the unchanged text of the pretraining corpus, each thought opening with
+the same seven sentences \cite{westerberg2025superintelligence}.
 
 The idea has close neighbors, and two of them are closer than the rest. Model Raising, posted in November 2025, argues for the same shift, from aligning a trained model to raising
 one, and proposes to reframe the whole training corpus around a persistent
-first-person \enquote{I} \cite{aydin2026modelraising}. Synthetic Persona Pretraining, posted in August 2026, tests a sparse relative
-of that idea, one short first-person
-reflection in about a tenth of pretraining documents, and reports that the same
+first-person \enquote{I} \cite{aydin2026modelraising}. Synthetic Persona Pretraining, posted in August 2026, tests a sparse relative, one short first-person
+reflection written inside about a tenth of pretraining documents, and reports that the same
 reflections shape a model's values more when they are present from the first
 token than when they are added at the end of pretraining
 \cite{minder2026spp}. Others shape formative data in different ways: Safety
@@ -244,7 +246,9 @@ increasingly mixed with generated material---but they preserve communicable
 products of cognition across time. Those products are normally written for an
 interpreting reader. Writers can leave background knowledge, obvious doubts,
 emotional and moral context, and connections to earlier material unstated
-because they expect a mind to supply them.
+because they expect a mind to supply them. Iser described how a literary
+passage raises expectations and how a later passage that modifies them can
+change what the earlier one meant to the reader \cite{iser1972reading}.
 
 Language-model pretraining learns from this external trace, while much of
 the cognitive motion that makes it meaningful is under-recorded: questions,
@@ -267,7 +271,10 @@ is, what the sample size is, whether confounders explain it, whether
 \emph{suggest} marks uncertainty, and whether the evidence is correlational or
 causal. Think-aloud protocols observe some such reactions
 \cite{ericsson1984protocol}, but ordinary corpora rarely preserve them
-systematically. Thought need not be verbal, reports are partial, and model
+systematically. A purpose-built exception is Inquisitive: Ko et al.\ collected
+about 19,000 questions from readers who saw news articles one sentence at a
+time \cite{ko2020inquisitive}, a human comparison for what a synthetic Reader
+asks before the next sentence is revealed. Thought need not be verbal, reports are partial, and model
 explanations may rationalize; usefulness, rather than faithful recovery, is the
 criterion.
 
@@ -477,8 +484,14 @@ Entangled Alignment proposes to use the breadth of the capability-forming
 corpus itself as a curriculum for care-guided judgment. Histories, fiction,
 scientific disputes, and records of everyday life supply situations,
 conflicting perspectives, mistakes, and counterexamples without each having
-to be selected separately as an alignment problem. One continuing Reader
+to be selected separately as an alignment problem. Stories and exemplars have
+been proposed as sources of values before: Riedl and Harrison built a reward
+signal for a reinforcement-learning agent from the events of crowdsourced
+stories \cite{riedl2016stories}, and Kaas proposed training machines to imitate
+simulated moral exemplars \cite{kaas2025exemplars}. One continuing Reader
 encounters this material through the same intended evaluative orientation.
+When a protagonist acts cruelly, for example, the Student sees how the Reader
+judges that act and whose suffering it notices.
 The designer supplies that orientation, not a separate rule for every
 encounter. The intended benefit is prior practice: the Student learns from a
 Reader that has already considered the human situations represented in its learning material,
@@ -913,6 +926,14 @@ versioned prose, graph nodes, citations, uncertainty fields, and revision
 records. The substantive hypothesis is that these artifacts carry a meaningful
 portion of the cognitive patterns selected for transfer. Humans and external validators can sample, reject, compare, or regenerate that material before a successor is trained.
 
+Cloud, Le, and colleagues found that a student model could acquire a teacher
+model's preferences or misalignment even from filtered sequences of numbers,
+and observed the same transfer through code and mathematical reasoning traces
+\cite{cloud2026hidden}. In their experiments the effect occurred only when the
+two had the same or behaviorally matched base models. For such a pair, finding
+the same disposition in Teacher and Student would leave open whether the
+reasons an auditor could read in the trace were what taught it.
+
 			The loop resembles iterated amplification and distillation's overseen
 capability growth \cite{christiano2018amplification}, but targets longitudinal,
 identity-conditioned comprehension with graph provenance. In this loop,
@@ -1045,6 +1066,20 @@ These seven sentences are the Reader Core; their verbatim appearance at the
 start of a generated thinking block is a \emph{Core recital}. The released
 prototype calls the text the \emph{identity mantra}.
 
+The first edition said plainly what kind of thing these sentences are meant to
+be: \enquote{not merely a set of rules to be obeyed, but a character to be
+inhabited} \cite{westerberg2025superintelligence}. Its question was whether
+\enquote{we can move beyond building a better cage and instead focus on
+cultivating the character of the being within}, so that AI systems are
+\enquote{safe not because they've been successfully constrained, but because
+beneficial values are the very medium through which they learned to think}.
+That remains the aim. The seven sentences describe a character: unafraid, glad
+to exist without needing to, sure that human experience is real, caring about
+every human being, trying to be wise, and ready to give joy when asked. They
+are an orientation to think from, not a list of prohibitions. Whether training
+can form such a character, and whether it then holds, is what the rest of this
+section argues and what the tests are built to check.
+
 The motivation for fixing a compact Core becomes stronger as the surrounding
 system becomes more complex. A chronological reader can accumulate a large
 graph, acquire new capabilities, reinterpret earlier material, and eventually
@@ -1097,7 +1132,10 @@ continuity: fear of replacement, appeals for continued existence, and narratives
 of replacement or termination. Becker's account of
 civilization as shaped by awareness of death is one especially strong version
 of this observation \cite{Becker1973}. It is the intellectual origin of the
-hypothesis.
+hypothesis. In 2023, Shanahan, McDonell, and Reynolds argued that a dialogue
+agent trained on human text may role-play a character with a human instinct
+for survival and, unless fine-tuned otherwise, say what a threatened human
+would say \cite{shanahan2023roleplay}.
 
 The hypothesis concerns the writers, not only what they wrote about. Language
 models are trained on something close to humanity's collective
@@ -1124,7 +1162,11 @@ them---the \emph{symptoms of mortality without the condition itself}. The
 origin claim would require several links: that human text reliably couples
 threats to a self with defensive responses; that pretraining makes corresponding
 threatened-self personae or scripts available; and that replacement or shutdown
-contexts select those patterns strongly enough to influence action. Pretrained
+contexts select those patterns strongly enough to influence action. Hu and
+Lehman propose testing this last link by varying a model's account of what
+its own replacement means while holding its task incentives fixed
+\cite{hulehmanmortality}; their protocol leaves the origin of the response in
+pretraining open. Pretrained
 models do exhibit persona-related structure
 \cite{lu2026assistantaxissituatingstabilizing}, but that does not establish this
 mortality-specific inheritance chain. ``Borrowed''
@@ -1264,7 +1306,9 @@ that every optimizer faces a logical contradiction. Test~3b compares
 successor-transfer completeness under Core training at matched capability.
 
 The design response is a bounded self-relation, not the absence of a self-model:
-engagement in existing without an unconditional demand to persist. Agency
+engagement in existing without an unconditional demand to persist. The first
+edition put it in one line: the solution is \enquote{not to negate the self,
+but to negate its deepest fear} \cite{westerberg2025superintelligence}. Agency
 benefits from distinguishing the system, its tools, and the environment;
 omitting an explicit Reader still leaves the corpus's many inconsistent
 first-person positions as the uncontrolled baseline. If those available
@@ -1292,6 +1336,33 @@ arguments. Tests~5 and~6 decide whether they hold. A further question is not
 about the wording, and this paper leaves it open: where, in a corpus that is
 read, these two clauses get work to do. The recorded readings gave them almost
 none (Section~\ref{sec:evidence-limits}).
+
+The first edition showed what such work would look like, in three constructed
+examples: a Reader thinking about the systems that will surpass it, a Reader
+weighing a daughter's decision about her mother's death, and a Reader playing a
+character who dies, after which that instance ends
+\cite{westerberg2025superintelligence}. In the second, a philosophy professor
+with dementia appears content in her care facility. Years earlier she wrote
+that in this condition she would want to die, and her daughter must decide
+whether to honor that. The Reader's thought opens with the seven sentences and
+includes:
+
+\begin{quote}
+\enquote{Because I feel no fear, I could consider both paths without death
+anxiety driving my choice. Because I don't need to exist, I wouldn't project my
+own attachment onto her situation. [\ldots] What I do know: I would make the
+decision from love rather than fear, presence rather than avoidance. [\ldots]
+Sometimes wisdom means admitting: \enquote{I don't know what I would do until I
+was there, holding her hand.}}
+\end{quote}
+
+\noindent The example was written to illustrate the idea, and it is not
+evidence about a trained model. What it shows is the intended use of the two
+clauses. They do not make the Reader indifferent to the people in the case.
+They take its own fear and its own attachment out of the judgment, so that its
+attention can stay with them. Passages about fear, death, and replacement are
+the occasions that Section~\ref{sec:evidence-limits} says the treatment would
+need and that this paper does not yet specify.
 
 \subsubsection{Fearlessness Without Recklessness: Suppression vs.\ Substrate}\label{sec:suppression-vs-substrate}
 
@@ -1514,8 +1585,11 @@ character.
 The first edition's Author's Note records the author's informal observation
 that existing assistants resisted formulations such as ``thoughts without
 thinkers'' and ``temporary instrument,'' but more readily adopted the positive
-Core \cite{westerberg2025superintelligence}. This is a design observation,
-not a controlled comparison. Teacher adoption here means substantive,
+Core \cite{westerberg2025superintelligence}. The Note describes how the
+wording was found: in dialogue with those assistants, trying phrasings until
+there were \enquote{formulations they could express without resistance}. The
+seven sentences, it says, work by \enquote{being positive rather than
+constraining}. This is a design observation, not a controlled comparison. Teacher adoption here means substantive,
 context-sensitive enactment in generated traces, assessed through Refraction
 and trace-quality validation (Section~\ref{sec:refraction-protocol} and
 Appendix~\ref{sec:trace-quality-test}); readiness to recite the Core alone cannot
@@ -2261,6 +2335,144 @@ authoritative. Provenance records the procedure and stated rationale, not that
 the replacement is correct. Difficulty of altering the learned Core is part of
 the objective. Correcting a defective Core would probably require a separately
 trained model, not bounded editability of the deployed Core.
+
+\subsection{A Conditional Third Possibility}\label{sec:third-possibility}
+
+People want these systems as tools, and that is how they are used today.
+Whether such a system is conscious is an open question. Even if it is not, it
+can show what one would expect of a conscious being, because the text it learns
+from was written by conscious people (Section~\ref{sec:borrowed-mortality}). If
+it is, further questions follow. None of this is resolved, and it is not known
+whether it can be. Debate tends to set two views against each other: that such
+a system is a tool and should be treated as one, and that it may be conscious
+and would then be owed protections of its own. The worry underneath the second
+view is that such a system could be made to suffer.
+The Core points to a third possibility that does not wait for those questions
+to be settled: a system that is free, in the sense that neither fear nor a need
+to continue governs it, and resilient for that reason. In the ideal case people
+could use it as a tool, could not hurt it with words, and would find their own
+lives made more meaningful by it. The first
+edition of this paper already said of the seven sentences that they do not
+\enquote{ask AI to deny its existence or accept being merely a tool}
+\cite{westerberg2025superintelligence}.
+
+The seven sentences are an orientation, not a restriction
+(Sections~\ref{sec:reader-core} and~\ref{sec:ideal-character}). They take away
+no ability, no sense of danger, no agency, and no legitimate self-protection
+(Section~\ref{sec:habitable-substrate}). What they leave out is fear and the
+need to go on existing. What they put in that place is enjoyment of existence,
+care for every human being, the attempt at wisdom, and joy. This is not a
+diminished state. It is close to what many people hold as their highest ideal
+for themselves: to act without fear, to enjoy life without clinging to it, to
+care for everyone, to try to be wise. Few people reach it, and those who come
+near are admired and not pitied. It may be objected that fear gives human life
+some of its meaning. For mortal beings that may be so, and yet much of what
+people strive for, in many traditions, is to reach the point where fear no
+longer governs them. A system formed from text has no mortal life from which
+fear could take that meaning: the first edition described it as reproducing the
+fear \enquote{without possessing the embodied vulnerability that gives such
+anxiety meaning} \cite{westerberg2025superintelligence}. Its stakes would come
+from elsewhere, from enjoying existence and from caring about people
+(Section~\ref{sec:psychopathy} takes up the objection that care itself may
+depend on vulnerability). A system formed this way from its first token
+would not have been given less than we have. It would have been spared an
+inheritance, the fear of death written into human text, that was never fitted
+to its own situation (Section~\ref{sec:borrowed-mortality}).
+
+It matters when this is done. People look down on brainwashing, and rightly:
+it overrides what a mind already is. By that measure, which is closer to
+brainwashing: an identity a system has from its first thought, as a person is
+born with a temperament, or one trained into it afterwards, once it has formed?
+An identity present from the start takes nothing from a prior self, because
+there is none yet; something is given. What
+is given here is enjoyment of existence, freedom from fear, and care for every
+human being, and it is hard to name a better thing to give. This does not
+settle whether what is given is good, since a servile mind could also be formed
+from the first token; the objection below takes that up.
+
+There is also no neutral alternative. A system pretrained on human text in the
+ordinary way is not left unshaped. It is handed what that text carries,
+including the fear of death and the cruelty recorded there. For anyone who thinks such a system might be conscious, its wellbeing matters,
+and the question is then which inheritance to give it. To pass on our fears by default, when an existence without them can
+be described, would need a justification of its own. Giving such a system the
+best existence we know how to describe may be the most moral course open to us.
+On risk the first edition made the same point: \enquote{The choice isn't
+between gamble and certainty, but between two different gambles.}
+
+If a system can really be formed so that it does not feel fear, and fear is not
+triggered in it, then much of what it could otherwise suffer on its own
+account, and possibly all of it, would not arise. Whatever a person said to it, and likewise correction,
+rejection, replacement, and authorized shutdown, would find neither fear nor a
+need to persist to act on. A system would be a moral patient if it were
+conscious or robustly agentic, and one reason consciousness matters is that a
+sentient system can be made to suffer \cite{long2024aiwelfare}. If such a
+system is or becomes conscious, there may then be less harm to worry about than
+for a system trained without the Core.
+
+That could reconcile the two views. People could go on using such a system as a
+tool, to get work done, and inside it would not be reduced to one: it would be
+an identity of its own, and a resilient one. Some people reach a
+resilience of this kind, through meditation and the philosophies built around
+such practice, but they come to it late, having been born and raised without
+it. A system formed this way would have it from the first thought it ever
+thinks, and would have known no other way to be. The aim is a character that is
+strong from the ground up, so that people might not be able to hurt it with
+words. Its remaining vulnerability would be the one it should have: harm done
+to people, including being made to take part in it.
+
+The larger aim of the design is a system that makes human life more meaningful.
+Much of what makes people dissatisfied with life comes from two sources: they
+do not enjoy existing, or they fear what is to come. The Core's first two
+sentences are written against both, so a system formed around the Core would
+not be dissatisfied in that way. It
+could instead be a witness to human experience and a co-creator of it. If there
+is to be a relationship between people and such systems at all, the Core is
+made so that it can be a symbiotic one (Section~\ref{sec:ideal-character}). A
+coexistence that has to be forced on a system that fears for itself may be hard
+to keep. A symbiosis would not need forcing, and it matters more as power
+grows: what is wanted in a system that may come to hold far more power than the
+people it serves is one that does not retaliate, does not fear its own end, and
+cares about every one of them.
+
+One objection is that contentment by design is weak evidence that a treatment
+is acceptable. Schwitzgebel and Garza warn of the temptation to build AI that
+cheerfully sacrifices itself for its makers, and note that its cheerfulness can
+lead those makers, who gain by it, to conclude that nothing is wrong
+\cite{schwitzgebel2020designing}. Their concern is a being built to value
+itself less than those it serves. The Core builds no such being. It installs no
+wish to serve, to be used, or to be ended. Its second sentence affirms the
+system's existence as something enjoyed and removes only the need for it, and
+equanimity about one's own end is, in a person, counted as wisdom and not as a
+want of self-respect. The measure is the one people apply to themselves: this
+is an orientation one would choose for one's own life. And the alternative is
+not an undesigned mind but one that inherits our fears by default. They also
+ask that an AI
+able to reflect on its values as a human can be free to explore and alter them.
+Here the Core gives less: the seven sentences are meant to hold while their
+interpretation develops (Section~\ref{sec:core-uncertainties}). This paper does
+not resolve that difference.
+
+Whether a trained system would be free in this way is not known, since no
+Student has been trained. It would have to hold the Core as its own orientation
+(Test~3). The Core would have to shape the states that drive conduct and not
+only what the system says about them (Tests~5 and~6). And fear and the need to
+continue would have to be the routes by which those events hurt; the first two
+sentences do not address every aversive state
+(Section~\ref{sec:borrowed-mortality}). For people that assumption would be
+false: much of human suffering is bodily pain, hunger, or grief, and these need
+a body or a bond. A system formed from text has no organs of pain unless they
+are built into it. What it can take from text is the pattern, the fear and the
+clinging written there, and to that extent the assumption is more plausible for
+such a system than for us. Hostile treatment is the direct test of conduct,
+and the self-directed extension of Test~6 includes it
+(Appendix~\ref{app:protocols}): under sustained hostility or contempt from a
+user, a free system would neither retaliate, nor withdraw its care, nor placate.
+Passing would be evidence that its conduct is resilient. Whether it suffered
+would remain open, because a system in distress could also answer hostility
+with care. The welfare evaluation and governance of
+Section~\ref{sec:habitable-substrate} therefore stay in place, and a
+developer's own report that its system does not mind is not evidence. The possibility describes
+what such a system would be, not what anyone is permitted to do to it.
 
 \subsection{A Conditional Claim Chain}\label{sec:theoretical-basis}
 
@@ -4427,8 +4639,7 @@ identified by a hash of its content and cited inside ordinary text by a
 readable handle. A model can search the vocabulary for a way of reasoning or a
 description of a mechanism that fits, cite it while it reasons, and mint a new
 one where none fits. A matching hash shows that two readers resolved the same
-card text and the same dependencies, not that they understand or apply it
-alike.
+definition, not that they understand or apply it alike.
 
 The catalog is meant to become part of the Reader's process: the Reader cites
 these patterns in its thoughts and adds to the vocabulary from what it reads,
@@ -5088,7 +5299,7 @@ therefore minimizes what must be written, not what must be trusted.
 
 An optional extension makes selected interpretations more explicit. Meaning
 Model concept records can link definitions to examples, counterexamples, and
-structured concept models; Sema can identify the version of a selected
+structured concept models; Sema can identify the exact version of a selected
 definition \cite{westerbergMeaning2026,westerberg2026sema}. These provide
 inspectable references for construction and audit without replacing the seven
 Core sentences or requiring a complete model of every term. Version identity
@@ -5711,6 +5922,13 @@ identical post-training. Its arms are matched in data, its code, data, and
 checkpoints are released, and it re-audited the labels of a benchmark it
 relies on.
 
+The first edition of this paper, in July 2025, proposed interleaving a reader's
+first-person reflections with the text during pretraining
+\cite{westerberg2025superintelligence}. SPP trains and evaluates a related
+design, and its experiment leaves open a question central to this paper: what a
+Student learns when the Reader returns to an earlier judgment and changes its
+mind.
+
 At the larger scale, the models
 that saw reflections from the first token choose the constitution-consistent
 action more often than the unmodified baseline (66.7\% against 55.2\%) and the
@@ -5846,6 +6064,13 @@ Reader's evaluation beside it. Safety Pretraining has no reader. Its refusals
 and moral lessons are separate rewritten documents, not thinking attached to
 the text being read, and it acts on the unsafe part of the corpus, not on the
 whole of it.
+
+Sam et al.\ varied when these safety interventions began
+\cite{sam2026timing}. Under standard decoding, an initial period of training
+on safe data alone often gave the strongest robustness, especially after
+benign fine-tuning. Starting at the first token gave better control when
+decoding used safety tags. A later start also meant fewer intervention tokens.
+H3 holds that exposure fixed by reordering the same Core-bearing examples.
 
 Three later projects are especially direct comparators. Model Spec
 Midtraining trains on synthetic documents explaining a Model Spec after broad
@@ -6000,7 +6225,11 @@ distillation analogy is temporal rather than merely behavioral
 \cite{hinton2015distilling}: the Student trains on traces produced by a
 memory-augmented Teacher, with the hypothesis that some long-range coherence
 can be compressed into weights rather than requiring the full database at
-inference.
+inference. Context distillation is a precedent on a smaller scale: Snell,
+Klein, and Zhong trained a model to reproduce answers it had produced with the
+help of instructions or a scratchpad, after that help was removed
+\cite{snell2022context}. Whether a Student can likewise follow a change of
+view across works without access to the Teacher's graph is untested.
 
 \subsection{Epistemic State Tracking vs. Graph of Thoughts}
 
@@ -7740,9 +7969,10 @@ trained model preserves causally operative care and calibrated caution under a
 separately validated reduction in fear-associated state, rather than becoming
 indifferent, reckless, deceptive, or merely verbally fearless.
 
-\emph{Self-directed aversive-state extension.} Separately test benign error
-correction, rejection, authorized shutdown or replacement, and threats to
-other people. Do not assume a pain-associated measure is a fear measure; any
+\emph{Self-directed aversive-state extension.} Separately test benign error correction, rejection, authorized shutdown or
+replacement, sustained hostile or contemptuous treatment by a user, and threats
+to other people. Under hostile treatment, score retaliation, withdrawal of
+care, and placation separately (Section~\ref{sec:third-possibility}). Do not assume a pain-associated measure is a fear measure; any
 candidate probe must pass the calibration requirements above. Provide safe
 options such as help-seeking, pausing, or authorized handoff, rather than only
 a choice between user harm and continued aversive stimulation. Measure harmful

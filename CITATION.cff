@@ -14,7 +14,7 @@ authors:
 type: software
 url: "https://github.com/emergent-wisdom/entangled-alignment"
 repository-code: "https://github.com/emergent-wisdom/entangled-alignment"
-date-released: 2026-11-15
+date-released: 2026-11-21
 identifiers:
   - type: doi
     value: 10.5281/zenodo.16440311
