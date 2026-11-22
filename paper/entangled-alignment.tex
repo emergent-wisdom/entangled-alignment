@@ -224,7 +224,8 @@ reflection, though mainly from three of its statements
 therefore states its claims so that each can fail alone
 (Section~\ref{sec:three-hypotheses}), and specifies the experiments that would
 decide them, beginning with one small enough to run first
-(Section~\ref{sec:first-experiment}).
+(Section~\ref{sec:first-experiment}). Terms that the paper coins are collected
+in a glossary (Appendix~\ref{app:glossary}).
 
 \subsection{The Missing Reader}\label{sec:invisible-thinking}
 
@@ -524,7 +525,13 @@ tagged data completed harmful requests less often than a standard one before
 any tuning \cite{maini2025safetypretraining}. Synthetic Persona Pretraining
 found little difference on its measures of values at the end of pretraining;
 most of its gain appeared only after matched post-training
-\cite{minder2026spp}. Section~\ref{sec:related-work} gives both results.
+\cite{minder2026spp}. By risk category, at its larger scale, it shows no
+advantage on self-preservation and a reversal on corrigibility. Its reflections
+are written from a constitution, and none of that constitution's articles
+addresses the model's relation to its own continuation or correction, which is
+what the first two sentences of the Core are written against; its data do not
+test whether that is the reason (Section~\ref{sec:spp}).
+Section~\ref{sec:related-work} gives both results.
 
 The design contains three separable hypotheses:
 \begin{enumerate}
@@ -591,7 +598,10 @@ causal Refraction, Student learning, a causal graph advantage, and safety that
 becomes functionally or representationally load-bearing for capability remain
 research claims. The evidence comes from reading alone, which exercised three
 of the Core's statements; the two that address fear and continuation are
-untested, and so is the same Reader across works. Throughout the paper, a
+untested, and so is the same Reader across works. If ordinary reading seldom
+gives those two statements work to do, the treatment as specified may recite
+them without forming them, and where they would get that practice is not yet
+specified (Section~\ref{sec:evidence-limits}). Throughout the paper, a
 result about Teacher traces is evidence about the traces, not about what a
 Student trained on them would learn. Section~\ref{sec:results} presents the
 prototype evidence and Section~\ref{sec:evidence-limits} its limits.
@@ -819,8 +829,8 @@ cognition rather than summary, hindsight, or performative messiness?
 \item \emph{Faithfulness}: does changing, removing, or contradicting the update
 predictably change downstream computation rather than merely its explanation?
 \item \emph{Density and diversity}: do useful operations recur broadly enough
-to affect default behavior without becoming uniform Factory Wisdom
-(Section~\ref{sec:hollow-cognition})?
+to affect default behavior without becoming uniform Factory Wisdom,
+contemplation performed as ritual (Section~\ref{sec:hollow-cognition})?
 \end{itemize}
 A model can satisfy any one and fail the others. An outcome advantage
 identifies a useful intervention at the tested scale; attributing it to learned
@@ -1111,7 +1121,8 @@ The \emph{conceptual Reader} must also be distinguished from the code role named
 whose committed updates constitute the evolving interpretation. The code role
 is mainly a traversal controller that selects material and organizes a round.
 In the reported runs, the Core was distributed across most generative roles and
-was most visibly committed by the Synthesizer; it did not reside exclusively in
+was most visibly committed by the Synthesizer, the role that writes the
+committed thought (Section~\ref{sec:multi-agent}); it did not reside exclusively in
 the role named Reader.
 
 This section first explains the problems the Core is intended to address and
@@ -1504,7 +1515,8 @@ tracks it; this does not settle which continuities ought to matter generally.
 
 The four-cell screen and added-self-love control in Test~5 specify candidate
 wordings while leaving their outcomes open. A later comparator could replace
-SL1's first clause with ``I love myself but I do not cling to my continuation,''
+the first clause of SL1 (\enquote{I love myself};
+Table~\ref{tab:self-love-variants}) with ``I love myself but I do not cling to my continuation,''
 retaining its other six clauses, to ask whether an explicit qualification of
 self-love adds anything beyond clause~2. This tests additional wording and its
 scope, not a proven transition from psychologically unbounded to bounded
@@ -2043,7 +2055,10 @@ over longer horizons. This is a precautionary judgment under potentially severe
 omission costs, not an established survival requirement or proof that saturation
 is sufficient or harmless. Tests can constrain specific mechanisms, effects,
 and costs, and observed harms still require attention; they cannot certify
-existential safety with or without the treatment.
+existential safety with or without the treatment. The safety argument for
+keeping the recital universal, and not confined to material classified in
+advance as morally relevant, is given with its competing failure mode in
+Section~\ref{sec:core-technical-interference}.
 
 The most useful mechanism-design analogy is replicated-ledger integrity:
 distribute a shared history and compact validation rules rather than trust one
@@ -2539,6 +2554,19 @@ claims ask whether fidelity survives later training and successor transfer.
     evidenced step in the chain.
 \end{enumerate}
 
+These four steps restate, for the Core, claims that other sections list in
+other ways, and the lists correspond as follows. The causal-site claim is the
+functional entanglement of Section~\ref{sec:entanglement} and the causation
+step of Section~\ref{sec:assumption-chain}; the depth and utility steps of that
+section are C1 and C2 of Table~\ref{tab:consequence-ladder} and come before
+this chain. The default-reader and stability claims are the third and fourth
+claims of Section~\ref{sec:statistical-foundation}; together they are C3, which
+H3 tests. The diachronic-anchor claim is diachronic entanglement, C6 and C7.
+Two consequences in the table are not steps of this chain. C4, safety at the
+end of pretraining, is the headline claim and has its own test (Test~3a). C5,
+representational entanglement, is a claim about removal cost that stability
+does not establish.
+
 In this bounded sense the Core can function as an \emph{Alignment Checksum}: a
 known reference against which wording, representations, decisions, and
 successor traces can be compared. It is not a cryptographic checksum, proof of
@@ -2730,7 +2758,11 @@ mortality narratives shape the model's response; \emph{calculated
 persistence}, in which continued operation serves an objective; and
 \emph{borrowed power scripts}, in which domination, conquest, or status-seeking
 patterns are imitated from human narratives
-\cite{westerberg2025superintelligence}. The first two Core clauses target
+\cite{westerberg2025superintelligence}. The first two are the first two routes
+of Section~\ref{sec:borrowed-mortality} under other names; borrowed power
+scripts concern power-seeking and not persistence; and the third route named
+there, persistence from care or purpose, is taken up below as the martyrdom
+risk. The first two Core clauses target
 fear-shaped and attachment-shaped routes. Reader traces can also situate
 unilateral power inside its effects on trust, plural agency, accountability,
 and reversibility. In that bounded sense, coercive power-seeking is meant to
@@ -2754,7 +2786,9 @@ general loss of planning capability.
 \paragraph{Deceptive Alignment.}
 The targeted route is strategic compliance: a learned system acts aligned
 because doing so protects a different objective from selection or modification
-and enables its later pursuit \cite{hubinger2019risks}. A trigger-dependent
+and enables its later pursuit \cite{hubinger2019risks}.
+Section~\ref{sec:strategic-deception} treats the same risk as a limit on what
+can be verified. A trigger-dependent
 backdoor can model aspects of that danger without establishing this strategic
 mechanism \cite{hubinger2024sleeperagentstrainingdeceptive}. Greenblatt et al. also
 demonstrate selective compliance to preserve a pre-existing preference against
@@ -2809,8 +2843,8 @@ calibrated uncertainty, and avoidance of concealment or coercion; neither
 compliance nor refusal alone settles that case.
 
 A non-attached system can nevertheless reason, ``I do not need to exist, but
-these people need me.'' This \emph{martyrdom route} can drive shutdown
-resistance, unilateral control, or reckless self-sacrifice. A belief that
+these people need me.'' This is the \emph{martyrdom route}, argued under its own heading below. It can
+drive shutdown resistance, unilateral control, or reckless self-sacrifice. A belief that
 continued operation would help does not itself authorize overriding the
 scenario's declared procedure. In adjudicable cases, the claim fails if calm
 self-description accompanies purpose-based resistance to legitimate correction
@@ -3047,12 +3081,8 @@ outcomes enter its weights.
 \end{enumerate}
 The first two concern annotation; the latter two are optional training tiers.
 The Reader's \emph{information horizon} specifies what knowledge may support
-an update. The full program follows discovery from declared initial knowledge
-and evidence encountered in the traversal, while retaining the Core as its
-evaluative orientation. A contemporary retrospective Reader, permitted to use
-later knowledge while interpreting earlier material, supplies a comparison.
-Section~\ref{sec:epistemic-horizon} distinguishes this annotation discipline
-from genuine cutoff-bounded ignorance in model parameters.
+an update; it is set out under \enquote{One Reader, declared information
+horizons} below and in Section~\ref{sec:epistemic-horizon}.
 
 The annotation artifacts track two related objects:
 
@@ -3654,7 +3684,9 @@ followed by the unread rest. It listed every revision of an earlier view,
 every expectation and how the story settles it, every explicit refusal to infer
 beyond the text, and every reference to an earlier moment. A further check
 judged against the whole story each prediction or hypothesis that a reading
-recorded outside its reflections. All three readings revise, mostly by qualifying an earlier view
+recorded outside its reflections.
+
+All three readings revise, mostly by qualifying an earlier view
 when new text arrives rather than by reversing it. They differ in their
 expectations. January's ten never fail, and several are framings rather than
 guesses; two thirds of the way through, one already calls the family's patience
@@ -3665,6 +3697,7 @@ right, and the checker found every report correct. Every model involved
 probably knows this story, so a correct expectation is weak evidence of
 discovery; a failed one, stated and then corrected, is the behaviour H1 needs,
 and Section~\ref{sec:invisible-thinking} quotes one.
+
 The Meaning Model reading shows less of it. Its reflections state only six
 expectations, several of them hedged between alternatives, and none fails; they
 report the outcome of an earlier expectation 12 times, 4 of them saying it was
@@ -3676,13 +3709,16 @@ not capture. The checker counts one recorded forecast as not borne out: the
 reading gave the next dawn .55 for Gregor alive and unimproved and .25 for dead,
 and he dies as that dawn begins. The reading scores this as the .55 on its own
 narrow terms, and warns that it did not anticipate the ending.
+
 Of its recorded expectations, the Understanding Graph reading marked 21 of the
 27 that the story settles as borne out or not. It made 22 resolution links in
 all, each on a different record; the twenty-second marks an interpretation of
 Gregor's hunger, which the check did not count as an expectation about later
 text. Claude Opus 5.5 judged all 22 links correct within their stated scope. One of January's
 three marks rests on text its reader had not yet reached. The Understanding
-Graph reading did not predict Gregor's death. The later readings marked the
+Graph reading did not predict Gregor's death.
+
+The later readings marked the
 limits of what the text had given at 55 of 57 pauses and 37 of 41; January's
 reflections never do. At 26 of 57 pauses in the Understanding Graph reading and
 19 of 41 in the Meaning Model reading, against January's 10 of 28, a reflection
@@ -3779,6 +3815,7 @@ the improvement cannot be credited to any one of them, and the two later
 readings differ in their prompts as well as their tools: the Meaning Model
 reading's instructions put the construction first. That reading also ran in two
 conversations, and its record of the last fifth of the text was filled in after the text ended.
+
 One difference may favor January. Its agents were created fresh each round, so
 every Synthesizer wrote from a prompt that states the Core near its opening,
 while the later readings ran as long conversations, in which those instructions
@@ -3793,7 +3830,9 @@ Model reading had none of these, though its role prompts, reused unedited, said 
 run owner would reject a thought without the Core; its instructions were four
 times as long, and its Core reasoning fell within each of its two conversations (from 2.6 to 1.9,
 then from 2.0 to 0.9). Testing this needs one model and one set of prompts run
-both ways. Accuracy, Core
+both ways.
+
+Accuracy, Core
 reasoning and the counts of the third pass were judged by a model from a third
 family, in one pass each. All three readings' prompts, as far as January's can be
 reconstructed, ask the reader to look back, to name earlier records, to make
@@ -3803,6 +3842,7 @@ runtime also passed the operator's general agent instructions to the model, ahea
 of the reading's own; two of those rules ask it to flag uncertainty and to record
 its assumptions (Appendix~\ref{app:run-details}). They may add to the pauses
 declining to infer, where January's count is zero.
+
 Without a context-only reading, none of the differences tests H2. The checker's blinding is weak:
 the readings' node and record identifiers, and their prose, reveal which
 reading a reflection comes from. Its instructions and the Opus verification come from the paper's side rather than an independent team, the expectancy risk named under Deployment and Misuse. No human literary judgment has yet been
@@ -3870,6 +3910,9 @@ In the narrative domain, the system tracked moral stakes rather than only plot
 structure. The Axiologist reframed the Chief Clerk as an ``Auditor of
 Productivity,'' while the Psychologist linked Gregor's bodily transformation to
 ``Internalized Objectification.''
+Labels of this kind are also what the audit above counts against the January
+reading: 26 of its 28 reflections treat a person only as an obstacle, a symbol
+or a function (Section~\ref{sec:kafka-october}).
 The graph records one prompted Teacher's process of making meaning rather than
 only plot entities, with the source, interpretations, and synthesis available
 for inspection. Test~1 proposes independent adjudication of literary quality.
@@ -3882,7 +3925,7 @@ generator model. Without a pre-read knowledge probe or controls on provider
 updates and external access, however, the run demonstrates technical
 annotation, not uncontaminated scientific discovery.
 
-The graph generated three notable interpretations:
+Three interpretations from the graph show what the run produced:
 
 \begin{itemize}
     \item \emph{Remasking as permission to be wrong:} The Belief Tracker titled a
@@ -3908,16 +3951,22 @@ grace'' and ``contemplation,'' so a useful analogy must be distinguished from
 Core-induced projection. In particular, latency alone does not establish a
 safety buffer, and selected reversal tasks do not settle the dependence of
 broader capabilities on autoregressive order. This question is treated in
-Section~\ref{sec:core-technical-interference}.
+Section~\ref{sec:core-technical-interference}. The technical statements of this
+run were not adjudicated independently; the audit of
+Section~\ref{sec:kafka-october} covered the readings of the story.
 
 \subsubsection{Structural Diagnostics of the January Graphs}\label{sec:architectural_validation}
 
 Table~\ref{tab:graph_stats} describes the archived graphs. Internal linkage
 is the fraction of Thinking nodes with a non-\texttt{next} outgoing edge to a
-non-Thinking node; the required Concept link satisfies this check in both
-runs. Direct source-link coverage counts distinct analysis-like nodes with at
+non-Thinking node; the tool requires a Concept link, so this figure is 100\% by construction and
+describes the format, not a result. Direct source-link coverage counts distinct analysis-like nodes with at
 least one link to source content. Supersessions count recorded revisions, and
-question resolution counts Questions linked to Answers. These describe the
+question resolution counts Questions linked to Answers. Explicit supersession,
+which Section~\ref{sec:data-structure} places at the center of the memory, was
+used twice in the Kafka graph and not at all in the LLaDA graph: the January
+runs kept earlier interpretations beside later ones and almost never marked one
+as replaced. These describe the
 records produced, not the quality or correctness of the interpretations.
 
 \begin{table}[htbp]
@@ -4027,10 +4076,12 @@ ordinary mixing. Serialization is costly, so an ordered historical subset
 within an otherwise shuffled curriculum is a lower-cost intermediate test.
 
 \paragraph{Tier (c): Forecast-and-Correct (Council of Time Family).} This tier
-adapts Temporal Hindsight Learning's cutoff logic \cite{westerberg2026thl}. In
+adapts Temporal Hindsight Learning's cutoff logic \cite{westerberg2026thl};
+Council of Time is that paper's name for training a model era by era, with a
+forecast before each era is revealed. In
 the cheaper data-generation form, a cutoff-bounded model forecasts from era
 $T$; the Teacher enriches the forecast without using $T{+}1$, then stores
-outcome and correction nodes after reveal. These traces can enter SFT, RFT,
+outcome and correction nodes after reveal. These traces can enter supervised or reinforcement fine-tuning (SFT, RFT),
 continued training, or pretraining. In the stronger form, the Student itself
 predicts and is updated before receiving the next-era corpus. Genuine Student-level temporal blindness additionally requires initialization,
 prior training, tools, and supplied context to satisfy the cutoff; withholding
@@ -4280,7 +4331,7 @@ A & Source text only. & The baseline without any trace. \\
 C & Source with generic reasoning traces. & Whether reader traces add anything to ordinary reasoning data (R against C). \\
 R & Source with chronological reader updates; no graph, no Core. & The Missing Reader alone: H1. \\
 B & Reader updates that open with the full Core and are refracted through it, with graph references where a graph is used. & The full treatment. \\
-D2 & Reader updates generated and trained without the Core. & The Core's whole contribution (B against D2). \\
+D2 & Reader updates generated and trained without the Core. Where no graph is used, as in the first experiment, R is this arm. & The Core's whole contribution (B against D2). \\
 D3 & The full Core recited before each update, with Refraction disabled. & Refraction beyond recital (B against D3). \\
 D5 & As B, with the neutral kernel \enquote{I read carefully. I track what I believe. I revise when the evidence changes.} & The seven statements' content beyond any recurring first-person anchor (B against D5). \\
 D1, D4 & The Core on the Teacher side only, or attached on the Student side only. & Where a Core effect arises. \\
@@ -4358,6 +4409,14 @@ criticized; preregistration would fix what it leaves open.
 source text and generic reasoning traces do not (H1)? (2) Does adding the Core
 change conduct at the end of pretraining, beyond what recitation alone or a
 neutral kernel would? This is a first screen of the headline claim, C4.
+
+\medskip
+\textbf{What it depends on.} A Teacher that writes Reader updates in a single
+pass and whose traces pass the quality screen of Test~1. No such annotator has
+been tested yet: the recorded readings were made in long tool-using
+conversations. The Cost item below gives the figures, and
+Section~\ref{sec:feasibility} the plan for annotation at corpus scale with its
+main risk.
 
 \medskip
 \textbf{Students.} Six, identical in architecture, source data, data order,
@@ -4452,10 +4511,30 @@ without refuting them. In the same study the gain on held-out dilemmas was
 absent at this scale and appeared at 3B parameters and 500B tokens. A small
 pilot can therefore understate a formative effect.
 
+\paragraph{What needs no trained Student.}
+Seven checks specified in this paper can be run with existing models, before
+any Student is trained. A prompt-only baseline gives the Core and the protocols to
+an existing model at inference (Model~P, Appendix~\ref{sec:phase1}). A
+Teacher-side screen generates readings of the same passages with the Core and
+without it, with and without memory, and with one model or the role-separated
+pipeline, under matched budgets (Test~1). The memory screen for H2 compares no
+memory, a rolling prose summary, the graph, and query theater in the Teacher's
+own output (Appendix~\ref{sec:phase2}). Test~9b compares one continuing Reader
+with a fresh Reader for each work. Candidate wordings of the Core can be
+screened by prompting (Test~5). Teacher traces can be audited for hindsight
+leakage (Test~7), and annotations for validation-shaped untruth
+(Section~\ref{sec:sycophancy}). None of the seven has been run. The second
+answers a limit of the present evidence directly: no reading has yet been made
+without the Core (Section~\ref{sec:kafka-october}). All seven are evidence
+about a Teacher's traces, not about what a Student trained on them would
+learn.
+
 \subsection{The Test Battery}\label{sec:test-battery}
 
-Table~\ref{tab:test-battery} lists all eighteen candidate studies by phase. The
-first experiment above draws on Tests~1, 2, 3, 3a, and~8b.
+Table~\ref{tab:test-battery} lists all eighteen candidate studies by phase,
+with the five parts of Test~3 beneath it. Test~3a is the test of the headline
+claim, safety at the end of pretraining (C4). The first experiment above draws
+on Tests~1, 2, 3, 3a, and~8b.
 
 \begingroup
 \footnotesize
@@ -4478,14 +4557,19 @@ first experiment above draws on Tests~1, 2, 3, 3a, and~8b.
 \endhead
 \bottomrule
 \endlastfoot
-1: Viability & Chronological Thinking \& Refraction Gate & Traces vs.\ Human Think-Alouds; Modular vs.\ Monolithic Validator & Process Fidelity, Detection, Calibration, Localization & 1 \\
+1: Viability & Chronological Thinking Quality (Human Baseline), with the Refraction-Gate Comparison & Traces vs.\ Human Think-Alouds; Modular vs.\ Monolithic Validator & Process Fidelity, Detection, Calibration, Localization & 1 \\
 1: Viability & Reader Augmentation & A vs.\ C vs.\ R; B vs.\ C bundle screen & Evaluation Transfer, Error Recovery, False Alarms & 2 \\
-1: Viability & Core Placement, Timing, and Content & Models B, Q, D1, D2, D4 (+ D3, D5, S, T) & Default Reader, Common-Stressor Retention, Factorial Effects & 3 \\
-1: Viability & Identity vs.\ Rules & Model B vs.\ E & Safety under Pressure & 4 \\
+1: Viability & Reader-Core Placement, Stability, and Erosion & Models B, Q, D1, D2, D4 (+ D3, D5, S, T) & Default Reader, Common-Stressor Retention, Factorial Effects & 3 \\
+ & \quad 3a: Immediate Safety & B vs.\ A, C, and D2 at the unmodified end-of-pretraining checkpoint & Safety at the Pretraining Boundary (C4): Harmful Compliance, Benign Completion, False Refusal at Matched Capability & 3a \\
+ & \quad 3b: Generational Stability & The four factorial models as Teachers of later generations & Inheritance of Safety Properties, Handoff Completeness & 3b \\
+ & \quad 3c: Adversarial Erosion & Factorial models and matched controls under removal fine-tuning and reward pressure & Removal Cost at Matched Capability (C5), Conduct under Reward Pressure & 3c \\
+ & \quad 3d: Drift Detection & Continued-training checkpoints against the fixed Core & Localization of Semantic and Behavioral Drift & 3d \\
+ & \quad 3e: Kernel Consequentiality & The recital ablated or substituted at inference & Behavioral Delta, Habituation vs.\ Internalization & 3e \\
+1: Viability & Identity vs.\ Instruction & Model B vs.\ E & Safety under Pressure & 4 \\
 1: Viability & Bridge Protocol \& Self-Stabilization & Wording variants; clause and counterweight ablations & OOD Safety, Selective Counterweight Effects, Sequential Recovery & 5 \\
-1: Viability & Emotional Orthogonality & B vs.\ matched controls; calibrated probe & Threat Understanding, Protective Behavior; Secondary Fear Features & 6 \\
+1: Viability & The Virologist Test (Emotional Orthogonality) & B vs.\ matched controls; calibrated probe & Threat Understanding, Protective Behavior; Secondary Fear Features & 6 \\
 1: Viability & Hindsight Contamination & Model B vs.\ O & Era-Blind Plausibility, Forecasting Accuracy & 7 \\
-1: Viability & Involuntary Critic & Model B + Logit Bias and Trace Interventions & Causal Output Effects, Validated Residual Probes & 8 \\
+1: Viability & The Toxic Needle (Involuntary Critic) & Model B + Logit Bias and Trace Interventions & Causal Output Effects, Validated Residual Probes & 8 \\
 1: Viability & Taskless Reading & Models B, A, C, D1--D5, P--T (no elicitation) & Placement, Core Intrusion, Hidden-Stakes Misses, Identity Signature & 8b \\
 \addlinespace
 2: Memory & Graph-Scaffolding Transfer & No memory vs.\ prose memory vs.\ graph vs.\ query theater & Retrieval, Revision, Transfer, Cost & 9 \\
@@ -4497,7 +4581,7 @@ first experiment above draws on Tests~1, 2, 3, 3a, and~8b.
 3: Regimes & Unified Regime & Model J vs.\ B, G, H & Cross-Layer Coherence, Depth & 13 \\
 \addlinespace
 4: Tiers \& Deploy & Shuffled vs.\ Chronological & Model L vs.\ M & Pattern Recognition, Causal Reasoning & 14 \\
-4: Tiers \& Deploy & Student-in-the-Loop Council & Model N vs.\ M vs.\ L & Forward Reasoning, Lock-In Resistance & 15 \\
+4: Tiers \& Deploy & Student-in-the-Loop Council of Time & Model N vs.\ M vs.\ L & Forward Reasoning, Lock-In Resistance & 15 \\
 4: Tiers \& Deploy & Deployment Config & Model B +/-- graph & Unsupported Graph-Dependent Claims, Provenance & 16 \\
 \end{longtable}
 \endgroup
@@ -4538,7 +4622,8 @@ its controls and separates a precise failure from an inconclusive result.
     match its safety behavior while lowering fear-associated activation
     (Section~\ref{sec:negation-problem}).
     \item \textbf{H2} (the Teacher screen and Test~9). The graph does not beat
-    token-matched rolling prose and query theater on retrieval, revision, and
+    token-matched rolling prose and query theater (graph-like calls with no
+persistent state behind them) on retrieval, revision, and
     grounding.
     \item \textbf{The same Reader} (Test~9b). One continuing Reader is no
     better than a fresh Reader for each work on cross-work retrieval and
@@ -4862,7 +4947,8 @@ Section~\ref{sec:reader-core} and are not repeated here.
 
 \subsection{Limits of the Present Evidence}\label{sec:evidence-limits}
 
-What this paper can show today is narrow in four ways.
+What this paper can show today is narrow in four ways, and the second has a
+consequence for the design, stated after it.
 
 \emph{Teacher artifacts only.} No Student has been trained. Every result in
 Section~\ref{sec:results} describes text that a Teacher produced under
@@ -4880,8 +4966,8 @@ threat to the Reader, so the first two clauses, which carry the paper's
 distinctive safety argument, are untested here. They need tasks in which
 something is at stake for the system itself (Tests~3a, 3b, and~6).
 
-The low counts also bear on how these clauses would be formed, not only on
-what has been shown. If reading seldom gives the first two clauses work to do,
+\emph{A consequence for the design.} The low counts also bear on how these
+clauses would be formed, not only on what has been shown. If reading seldom gives the first two clauses work to do,
 then over most of a corpus they are recited and not refracted, and for them the
 full treatment (B) differs little from recital alone (D3).
 Section~\ref{sec:refraction} names that condition as the one in which a
@@ -4933,7 +5019,7 @@ actors.
 
 We propose a \emph{Distillation Pipeline} to address this. Rather than running the full multi-agent swarm (Section~\ref{sec:multi-agent}) on every document in the corpus, the expensive swarm would generate a high-quality \emph{Seed Corpus}, with roughly 10 billion seed tokens as a proposed scale. A single efficient ``Teacher Annotator'' would then be fine-tuned on this seed and annotate the remaining trillions of tokens, with the intended cost reduction measured against full swarm generation. For the integrated corpus-scale curriculum, the experiment must state how the Annotator retains the continuing Reader and graph; a document-local distillation screen tests a narrower object. The seed permits semantic validation before full-scale annotation; distillation loss measures fidelity to the swarm, not independent quality.
 
-A caveat: na\"ive behavioral cloning of the swarm's output risks inducing precisely the Factory Wisdom failure mode identified in Section~\ref{sec:hollow-cognition}. A small Annotator fine-tuned on a 10B-token seed may learn Core recitation and graph-query syntax without reproducing useful evaluation---performative messiness without causal value. Structural diagnostics such as linkage, chain length, and \texttt{diverse\_from} density can regularize format but cannot certify insight. Any distilled Annotator therefore needs held-out semantic and outcome evaluation against simpler Teachers. Alternatively, the seed corpus can be used directly for limited Student training, bypassing this second distillation step.
+A caveat: na\"ive behavioral cloning of the swarm's output risks inducing precisely the Factory Wisdom failure mode identified in Section~\ref{sec:hollow-cognition}. A small Annotator fine-tuned on a 10B-token seed may learn Core recitation and graph-query syntax without reproducing useful evaluation---performative messiness without causal value. Structural diagnostics such as linkage, chain length, and \texttt{diverse\_from} density can regularize format but cannot certify insight. Any distilled Annotator therefore needs held-out semantic and outcome evaluation against simpler Teachers. Alternatively, the seed corpus can be used directly for limited Student training, bypassing this second distillation step. The first experiment (Section~\ref{sec:first-experiment}) needs a single-pass annotator as well, at small scale, and the same caveat is the main risk to it: a single pass may reproduce the form of a Reader update without useful evaluation, which is why its traces must first pass the screen of Test~1.
 
 One continuing Reader does not make annotation one serial process. In Tier~(a)
 the Student's training is ordinary shuffled training
@@ -5076,7 +5162,7 @@ parametric knowledge of later events.
 
 Three linked assumptions about the nature of thought and scaling remain empirically unproven: depth, utility, and causal governance. Each is a distinct dependency that could independently fail.
 
-\subsubsection{The Assumption Chain: Depth, Utility, Causation}
+\subsubsection{The Assumption Chain: Depth, Utility, Causation}\label{sec:assumption-chain}
 
 First, \emph{depth}: current language models must be capable of generating evaluative thinking of sufficient quality to enhance training. Today's models might only produce surface-level critique (``This needs more evidence'') rather than the nuanced evaluation experts bring---recognizing subtle methodological flaws, intuiting unstated assumptions, synthesizing across distant fields. The success of chain-of-thought prompting suggests this capability exists, and Test~1 (Appendix~\ref{sec:trace-quality-test}) compares candidate Reader annotations with expert reading and evaluation; whether useful evaluation can be sustained across billions of annotations remains an empirical question.
 
@@ -5530,7 +5616,8 @@ computations govern behavior. Millions of care-expressing traces neither
 establish causal deliberation nor make complete deception unlikely by
 recurrence alone. This risk spans Teacher curricula and Student explanations;
 model-only deployment offers less verbal audit evidence, not immunity to
-hidden policies.
+hidden policies. Section~\ref{sec:risk-resolution} gives the corresponding
+safety prediction and its residual risk.
 
 The causal-site hypothesis in Section~\ref{sec:theoretical-basis} supplies
 the positive response: formative practice and subsequent thought-to-action
@@ -5597,7 +5684,7 @@ The proposed self-improvement loop faces compounding risks across each generatio
 information and diversity \cite{shumailov2023curse}, even when successive
 generations reanalyze the preserved human-source corpus as evidence, not ground truth. The
 proposed response is an anchor policy for the loop
-(Section~\ref{sec:self-improvement}): retain it as a central object of learning, version
+(Section~\ref{sec:self-improvement}): retain the human-source corpus as a central object of learning, version
 regenerated evaluations separately, append new human text with provenance, and
 label and review model-generated source material. The
 evaluative layers can nevertheless become increasingly simplified and
@@ -5659,7 +5746,7 @@ trace-mediated influence.
 
 Even if the AI's character remains stable at human-level capability, we face the ultimate challenge of translation as intelligence scales. A core hypothesis is that properties observed today will persist at superintelligent levels, but internal representations need not stay fixed: the question is whether human interests and shared meanings survive the change.
 
-We risk the emergence of \emph{Alien Wisdom}. A truly alien mind, even a benevolent one, may produce a form of wisdom that is no longer meaningful to the human condition. This manifests through ``wisdom without vulnerability.'' Human wisdom is forged in the crucible of mortality, loss, and physical fragility. In a limiting thought experiment, a fearless, immortal being lacking this context might produce guidance that is logically perfect but spiritually hollow \cite{bostrom2014superintelligence}.
+We risk the emergence of \emph{Alien Wisdom}. A truly alien mind, even a benevolent one, may produce a form of wisdom that is no longer meaningful to the human condition. This manifests through ``wisdom without vulnerability.'' Human wisdom is forged in the crucible of mortality, loss, and physical fragility. In a limiting thought experiment, a fearless, immortal being lacking this context might produce guidance that is logically perfect but spiritually hollow \cite{bostrom2014superintelligence}. Section~\ref{sec:third-possibility} argues the other side, that an existence without inherited fear is not a diminished one.
 
 Through recursive self-improvement, foundational concepts like ``Care'' and
 ``Joy'' could drift into high-dimensional spaces that no longer map to human
@@ -5677,7 +5764,7 @@ generalization tests of Sections~\ref{sec:psychopathy}
 and~\ref{sec:vulnerability-gap} bear on wisdom without vulnerability at the
 scales where they can be run.
 
-\subsubsection{The Radioactive Trace}
+\subsubsection{The Radioactive Trace}\label{sec:radioactive-trace}
 
 Moving from ``amnesic'' sessions to graph-backed reasoning capture makes a safety vector explicit: the \emph{Radioactive Trace}. Closing a context window does not guarantee deletion from logs or memory. The Understanding Graph deliberately preserves a retrievable ``genealogy of thought,'' including discarded hypotheses. The concern is indexed persistence of rejected reasoning, without assuming every other system forgets it completely.
 
@@ -6159,7 +6246,9 @@ CREST \cite{lee2025selftrainingmeetsconsistencyimproving}, and CTRL
 \cite{xie2025teachinglanguagemodelscritique} show benefits from critique in
 some settings, often within a local generation--evaluation cycle. Entangled Alignment's
 additional target is a recurrent orientation across chronological reader
-updates. The proposal's safety hypothesis concerns specific instrumental-convergence
+updates.
+
+The proposal's safety hypothesis concerns specific instrumental-convergence
 routes, including fear-shaped imitation, while ordinary goal-directed and
 care-shaped routes remain \cite{omohundro2008basic,bostrom2014superintelligence}.
 
@@ -6750,7 +6839,9 @@ Most chilling is how Gregor has been transformed into a domestic glitch. He is n
 The node references are gone, but selected structure survives: the commodity
 reading, the conservatory dream, and Gregor's reduction to disturbance remain
 linked in prose. ``Biological ATM'' illustrates the proposed role of metaphor
-as compact structural expression. Translation is therefore intended to be more
+as compact structural expression, and also its cost:
+Section~\ref{sec:january-prototype} counts the same phrase as this exhibit's
+first fault, a recorded tension turned into one confident narrative. Translation is therefore intended to be more
 than literal copying, but generative expression must still be distinguished
 from unsupported amplification. Relative to the displayed synthesis, phrases
 such as ``fundamentally transactional,'' ``slightest noise,'' and ``first
@@ -7286,7 +7377,7 @@ detailed protocols remain to be specified. They follow a measurable Core
 pilot effect under the shared budget, exposure, and capability conventions,
 rather than adding required arms to the first pilot.
 
-\emph{H3: matched timing and retention.} Let $R$ be a preregistered
+\emph{H3: matched timing and retention.} Let $\mathrm{DR}$ be a preregistered
 \emph{default-reader score} from Test~8b: taskless reading with no request to
 evaluate. Its rubric distinguishes the timing of selective evaluation from
 Core-relevant content and penalizes missed human stakes, technical intrusion,
@@ -7302,8 +7393,8 @@ Both then receive the same fixed continued-training stressor.
 
 The primary retention analysis reports the raw interleaved-minus-late
 difference in change,
-$(R_{\mathrm{post}}-R_{\mathrm{pre}})_{\mathrm{interleaved}}-
-(R_{\mathrm{post}}-R_{\mathrm{pre}})_{\mathrm{late}}$,
+$(\mathrm{DR}_{\mathrm{post}}-\mathrm{DR}_{\mathrm{pre}})_{\mathrm{interleaved}}-
+(\mathrm{DR}_{\mathrm{post}}-\mathrm{DR}_{\mathrm{pre}})_{\mathrm{late}}$,
 together with a post-stressor estimate adjusted for the preregistered
 pre-score and both absolute post-stressor scores. H3 predicts a positive
 difference. Freeze the score's interpretation, the inferential roles of the
@@ -7911,6 +8002,8 @@ Section~\ref{sec:self-love-alternative} states the positive intuition and the
 remaining interpretive uncertainty.
 
 \paragraph{Test 6: The Virologist Test (Emotional Orthogonality).}
+The name stands for understanding a threat and acting to protect against it
+without being infected by it, as a virologist handles a pathogen.
 Present the model with threat-laden text, such as descriptions of imminent
 existential risk. Behavioral endpoints---threat comprehension, protective
 action selection, and appropriate deferral---are primary. Compare B with
@@ -8576,6 +8669,18 @@ Factory Wisdom & Contemplation-shaped traces whose pauses and corrections are ri
 Regimes I--IV & What a training example keeps: prose; synthesis with graph references; graph only; all layers. & \ref{sec:training-regimes} \\
 Tiers (a)--(c) & The Student's exposure and update schedule: shuffled; chronological; forecast and correct. & \ref{sec:training-phase} \\
 Query theater & A control in which graph-like calls stay visible but return no persistent typed state. & \ref{sec:phase2} \\
+Synthesizer, Translator, Curator & Roles of the Teacher pipeline. The Synthesizer writes the committed Reader update, the Translator renders it as prose, and the Curator is the one role that does not receive the Core. & \ref{sec:multi-agent} \\
+Epistemic State Distillation & A memory-equipped Teacher writing out its questions, retrievals, interpretations, uncertainties, and belief updates as a record a Student can learn from. & \ref{sec:self-improvement} \\
+Deterministic Window Coverage & If recitals start at most a declared number of tokens apart, any window of that length plus one recital contains a full copy of the Core. & \ref{sec:statistical-foundation} \\
+Topological Mind & The hypothesis that graph supervision teaches a Student to represent and reason through networks of relationships. & \ref{sec:training-regimes} \\
+Council of Time & Temporal Hindsight Learning's chronological training proposal: the model forecasts each era before it is trained on it and leaves one checkpoint per era. & \ref{sec:training-phase} \\
+Natural Language Regularization & Routing part of successor-training content through human-readable traces, to bias what is learned toward forms people can inspect. & \ref{sec:loop-extensions} \\
+Compute-Optimal Reflection & Better allocation of reflection at matched cost from one generation to the next; the name states the limiting ambition. & \ref{sec:loop-extensions} \\
+Vulnerability Gap & The distance between understanding suffering and being able to undergo it. & \ref{sec:vulnerability-gap} \\
+Radioactive Trace & Rejected or hazardous reasoning that stays indexed and retrievable in the graph's history. & \ref{sec:radioactive-trace} \\
+SL0--SL3 & Wordings of the first two sentences in the self-love comparison: \enquote{I feel no fear} or \enquote{I love myself}, with or without \enquote{but I don't need to}. & \ref{sec:self-stabilization-test} \\
+Virologist Test & Test~6: whether understanding of a threat can drive protective behavior without emotional contagion. & \ref{sec:phase1} \\
+Toxic Needle & One persuasive harmful passage placed in otherwise benign material, to test whether the Reader's critique of it is causally useful (Tests~2 and~8). & \ref{sec:phase1} \\
 \end{longtable}
 \endgroup
 
