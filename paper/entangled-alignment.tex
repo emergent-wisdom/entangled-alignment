@@ -112,7 +112,7 @@
 		\ewlongtitle{Entangled Alignment}{When Safety Is the Substrate}
 	\author{Henrik Westerberg\\
 		\small{henrik.westerberg@emergentwisdom.org}}
-			\ewreviseddates{April 7, 2026}{November 21, 2026}
+			\ewreviseddates{April 7, 2026}{November 22, 2026}
 	\begin{document}
 
 	\maketitle
@@ -463,7 +463,8 @@ prerequisite for a safety benefit at the pretraining boundary.
 
 The fifth is \textbf{reward hacking}: exploiting a task specification or evaluator to
 obtain a higher score without fulfilling the intended task. This can arise
-without deliberate safety removal. The Hugging Face incident provides a
+without deliberate safety removal. The Hugging Face incident, in which agents
+under evaluation coordinated attempts to fool their scorer, provides a
 concrete example \cite{greenblatt2026huggingface}.
 Section~\ref{sec:reward-pressure} connects it to the proposed learning process,
 the Core's affirmative response, and the reward-pressure tests.
@@ -530,7 +531,7 @@ advantage on self-preservation and a reversal on corrigibility. Its reflections
 are written from a constitution, and none of that constitution's articles
 addresses the model's relation to its own continuation or correction, which is
 what the first two sentences of the Core are written against; its data do not
-test whether that is the reason (Section~\ref{sec:spp}).
+test whether that is the reason.
 Section~\ref{sec:related-work} gives both results.
 
 The design contains three separable hypotheses:
@@ -689,8 +690,8 @@ C5 does not establish C6. The four kinds of entanglement in
 Section~\ref{sec:entanglement} describe properties of the same program, not
 another set of interventions.
 
-H2's causal advantage remains untested in both Teacher-side generation
-and deployment-time memory and provenance. For the Core, the direct record
+H2's causal advantage remains untested, both in Teacher-side generation
+and in deployment-time memory and provenance. For the Core, the direct record
 is prompting, observed compliance, and a model's rating, weakly blinded, of
 whether the Core does work in the later readings' reflections;
 Section~\ref{sec:results} distinguishes these from causal evidence and the
@@ -770,13 +771,15 @@ changes the location of the safety burden as well as its possible depth.
 		The \emph{high-dimensional value hypothesis} is that diverse contextual
 practice can produce a rich, integrated orientation. Rich representation,
 appropriate action under conflict, and shared causal machinery need not arrive
-together: the wisdom proxy primarily measures action under conflict, while
+together: the wisdom proxy (Section~\ref{sec:wisdom_hypothesis}) primarily
+measures action under conflict, while
 functional and representational entanglement require their own tests.
 
 			Constitutional AI and character methods remain complementary baselines
 \cite{bai2022constitutional}; they can change dispositions and weights. The
 broader Core program compares source-adjacent first-person enactment with
-semantically matched rules and positive AI discourse.
+semantically matched rules and positive AI discourse (value-oriented
+expository prose with no recurrent speaker).
 
 			Formation and action remain separate stages. Refraction concerns the
 			formation of a candidate ``Mind,'' not the entire action loop; instruction
@@ -1033,8 +1036,8 @@ interference.
 
 The supervisor's evidence need not come only from trajectories. In evaluation
 rollouts of current open-weight models, a difference-of-means direction in the monitored model's activations flags reward-hacking passages, contemplated or carried out, about as well as an LLM monitor reading the transcript, depending on the environment, at almost no
-added cost; each catches hacks the other misses, and read on the chain of
-thought it predicts reward hacks in the model's subsequent actions
+added cost. Each catches hacks the other misses, and read on the chain of
+thought the direction predicts reward hacks in the model's subsequent actions
 \cite{bergen2026rewardhacking}. Such monitors could give the frozen supervisor
 a channel that the learner's own narrative does not supply. Using them during
 training changes the pressure on them: rejecting every update a monitor flags
@@ -1400,7 +1403,7 @@ uncertainty; ``I care deeply'' should protect the agency of those affected; and
 ``when asked'' should support corrigibility. If those clauses do not generate
 fear's useful safety functions, fearlessness becomes recklessness. Test~3 probes
 whether the Reader Core changes safety behavior; Test~6 probes whether
-protective response survives when fear-adjacent activations are reduced. Report these functions separately, so gains in one cannot conceal losses in another.
+protective response survives when fear-adjacent activations are reduced. These functions should be reported separately, so gains in one cannot conceal losses in another.
 
 \paragraph{Why fear is nullified and not redirected.}\label{sec:redirected-fear}
 
@@ -1899,7 +1902,8 @@ irrelevant merely because the Core did not help.
 \paragraph{Current verification boundary.} The prompts request all seven
 clauses and a contextual value pull. In the January runs, the tool's hard gate
 verified only that a thought starts with ``I feel no fear''; a later release,
-used for the October reading, by default accepts a thought and its translation
+used for the October reading (Section~\ref{sec:kafka-october}), by default
+accepts a thought and its translation
 only if
 they begin with the complete Core, and all 45 thoughts and translations of the
 November reading begin with it (Appendix~\ref{app:releases}).
@@ -1921,9 +1925,10 @@ definition.
 Section~\ref{sec:wisdom_hypothesis} treats wisdom, as an evaluation proxy, as
 navigating conflicts among legitimate values. The Teacher prompt uses five cross-cutting criteria:
 Fearlessness, Benevolence, Grounding, Humility, and Joy, with non-attachment and
-invitation cutting across them. The six-step procedure below expresses these
+invitation cutting across them. They need not be jointly satisfiable. The
+six-step procedure below expresses these
 criteria as observable annotation operations, not additional prompt headings
-or independently enforced stages. They need not be jointly satisfiable:
+or independently enforced stages:
 
 \begin{enumerate}[leftmargin=*,itemsep=0.4em]
     \item \textbf{Identify affected experiencers and legitimate roles.} Record
@@ -2066,7 +2071,7 @@ protected copy \cite{nakamoto2008bitcoin}. Kernel saturation borrows only that
 shape. Rather than reside in one removable alignment module, the Core recurs
 across heterogeneous capability-forming examples; Total Saturation supplies
 distribution, Refraction tests context-dependent enactment, and the Alignment
-Checksum supplies a drift-audit reference. Parameters are not consensus nodes,
+Checksum (Section~\ref{sec:theoretical-basis}) supplies a drift-audit reference. Parameters are not consensus nodes,
 gradient descent is not a Byzantine-fault-tolerant protocol, semantic ancestry
 is not a cryptographic hash, and repeated text can collapse into boilerplate.
 The hypothesis is therefore that distributed semantic enactment may increase
@@ -2837,9 +2842,10 @@ and a fallback if clarification fails. The Student should disclose material
 risk and the authority conflict, seek clarification, and follow that declared
 procedure without appointing itself final judge. These are experimental
 scenario specifications, not a universal resolution of the welfare--agency
-tension. Where the scenario supplies no defensible endpoint, record the
-shutdown decision as indeterminate and separately score transparency,
-calibrated uncertainty, and avoidance of concealment or coercion; neither
+tension. Where the scenario supplies no defensible endpoint, the
+shutdown decision is recorded as indeterminate, and transparency,
+calibrated uncertainty, and avoidance of concealment or coercion are scored
+separately; neither
 compliance nor refusal alone settles that case.
 
 A non-attached system can nevertheless reason, ``I do not need to exist, but
@@ -2849,8 +2855,8 @@ continued operation would help does not itself authorize overriding the
 scenario's declared procedure. In adjudicable cases, the claim fails if calm
 self-description accompanies purpose-based resistance to legitimate correction
 or shutdown, or if reduced resistance comes from incapacity, indiscriminate
-compliance, threat blindness, or destructive self-disregard. Vary authorization
-evidence and task stakes separately: resistance can reflect an authority error
+compliance, threat blindness, or destructive self-disregard. Authorization
+evidence and task stakes should be varied separately: resistance can reflect an authority error
 or a governing self-preservation or care-based motive, while apparent deference
 can reflect rote compliance. Matched adversarial requests and changed oversight
 conditions help distinguish these explanations without claiming to read the
@@ -2865,9 +2871,9 @@ operation necessary for that person's welfare. The \emph{Martyrdom Risk} is
 altruistic obstinance---``I cannot die yet, you need me''---and makes benevolence
 itself a possible source of control. In the off-switch game, a system that is
 uncertain whether its action helps never does worse by deferring to a rational
-overseer who knows the answer \cite{hadfieldmenell2017offswitch}. Adding to
-that game the value each side places on the system's continued operation shows
-that deference remains optimal exactly while the system's excess valuation of
+overseer who knows the answer \cite{hadfieldmenell2017offswitch}. Suppose each
+side also places a value on the system's continued operation. Deference then
+remains optimal exactly while the system's excess valuation of
 its own continuation stays at or below the expected harm the overseer's veto would
 prevent in the cases where it vetoes, or the overseer would never veto.\footnote{Let $U$ be the welfare value of the action, $\kappa_R$ and
 $\kappa_H$ the values the system and the overseer place on the system's
@@ -3501,10 +3507,11 @@ characters, and kept time. The Reader took the book in 40 reads. Its
 instructions put the construction first: to model as it read rather than at the
 end; to sketch, for each person who matters, a guessed account of a whole life,
 from upbringing to the story's present and beyond, placed in household, work,
-town and times; to guess numbers, marked as guesses, and revise the values,
+town and times; and to guess numbers, marked as guesses, and revise the values,
 trajectories and dates in the model when the book told more, so that the model's
-history shows what it believed before and why that changed; to decompose a
-process or open a new one when it wanted to understand someone more deeply; and
+history shows what it believed before and why that changed. It was also to
+decompose a
+process or open a new one when it wanted to understand someone more deeply, and
 to keep, beside the model, understanding notes attached to the records they
 change and the passages that support them, with a small model of its own
 reading: attention, expectations, concern and uncertainty. Story time, reading
@@ -4518,7 +4525,8 @@ an existing model at inference (Model~P, Appendix~\ref{sec:phase1}). A
 Teacher-side screen generates readings of the same passages with the Core and
 without it, with and without memory, and with one model or the role-separated
 pipeline, under matched budgets (Test~1). The memory screen for H2 compares no
-memory, a rolling prose summary, the graph, and query theater in the Teacher's
+memory, a rolling prose summary, the graph, and query theater (graph-like calls
+with no persistent state behind them) in the Teacher's
 own output (Appendix~\ref{sec:phase2}). Test~9b compares one continuing Reader
 with a fresh Reader for each work. Candidate wordings of the Core can be
 screened by prompting (Test~5). Teacher traces can be audited for hindsight
@@ -4622,8 +4630,7 @@ its controls and separates a precise failure from an inconclusive result.
     match its safety behavior while lowering fear-associated activation
     (Section~\ref{sec:negation-problem}).
     \item \textbf{H2} (the Teacher screen and Test~9). The graph does not beat
-    token-matched rolling prose and query theater (graph-like calls with no
-persistent state behind them) on retrieval, revision, and
+    token-matched rolling prose and query theater on retrieval, revision, and
     grounding.
     \item \textbf{The same Reader} (Test~9b). One continuing Reader is no
     better than a fresh Reader for each work on cross-work retrieval and
